@@ -73,17 +73,17 @@ export const Default = (props: ImageProps): JSX.Element => {
   const isPageEditing = page.mode.isEditing;
 
   if (props.fields) {
-    const Image = () => <ContentSdkImage field={props.fields.Image} />;
     const id = props.params.RenderingIdentifier;
+    const imageField = props.fields.Image;
 
     return (
       <div className={`component image ${props.params.styles}`} id={id ? id : undefined}>
         <div className="component-content">
           {isPageEditing || !props.fields.TargetUrl?.value?.href ? (
-            <Image />
+            <ContentSdkImage field={imageField} />
           ) : (
             <ContentSdkLink field={props.fields.TargetUrl}>
-              <Image />
+              <ContentSdkImage field={imageField} />
             </ContentSdkLink>
           )}
           <Text

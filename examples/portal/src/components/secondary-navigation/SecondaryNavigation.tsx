@@ -1,7 +1,8 @@
 'use client';
 
 import { useState, type JSX } from 'react';
-import {
+import type {
+  SecondaryNavigationFields,
   SecondaryNavigationPage,
   SecondaryNavigationProps,
 } from '@/components/secondary-navigation/secondary-navigation.props';
@@ -12,69 +13,73 @@ import { ChevronDownIcon } from '@radix-ui/react-icons';
 import { cn } from '@/lib/utils';
 import { NoDataFallback } from '@/utils/NoDataFallback';
 
-export const Default: React.FC<SecondaryNavigationProps> = (props) => {
-  const { fields } = props;
+type SecondaryNavigationFieldsData = SecondaryNavigationFields['fields'];
+
+function renderSecondaryNavChildren(childItems: SecondaryNavigationPage[]): JSX.Element {
+  return (
+    <NavigationMenu.List className="mt-2 flex list-none flex-col items-start gap-2">
+      {childItems.map((child, index) => {
+        const title = child.navigationTitle?.jsonValue.value || child.title?.jsonValue.value;
+
+        return (
+          <NavigationMenu.Item key={index}>
+            <Button asChild variant="link" className="font-bold">
+              <NextLink href={child.url?.href || ''} className=" p-2" prefetch={false}>
+                {title}
+              </NextLink>
+            </Button>
+          </NavigationMenu.Item>
+        );
+      })}
+    </NavigationMenu.List>
+  );
+}
+
+function SecondaryNavigationContent({
+  className,
+  fields,
+}: {
+  className?: string;
+  fields: SecondaryNavigationFieldsData;
+}): JSX.Element {
   const { datasource } = fields?.data ?? {};
   const { parent, children } = datasource ?? {};
 
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-
-  const renderChildren = (childItems: SecondaryNavigationPage[]) => {
-    return (
-      <NavigationMenu.List className="mt-2 flex list-none flex-col items-start gap-2">
-        {childItems.map((child, index) => {
-          const title = child.navigationTitle?.jsonValue.value || child.title?.jsonValue.value;
+  return (
+    <NavigationMenu.Root className={cn('relative justify-center', className)} orientation="vertical">
+      <NavigationMenu.List className="m-0 flex list-none flex-col gap-2 pl-0">
+        {parent?.children?.results?.map((item, index) => {
+          const isParent = datasource?.id == item.id;
+          const title = item.navigationTitle?.jsonValue.value || item.title?.jsonValue.value;
 
           return (
             <NavigationMenu.Item key={index}>
-              <Button asChild variant="link" className="font-bold">
-                <NextLink href={child.url?.href || ''} className=" p-2" prefetch={false}>
+              <Button asChild variant="link" className="justify-start">
+                <NextLink
+                  href={item.url?.href || ''}
+                  className="hover:bg-accent-6 box-border inline-block w-full  p-2 px-4 font-bold"
+                >
                   {title}
                 </NextLink>
               </Button>
+              {isParent && children?.results && renderSecondaryNavChildren(children.results)}
             </NavigationMenu.Item>
           );
         })}
       </NavigationMenu.List>
-    );
-  };
+    </NavigationMenu.Root>
+  );
+}
 
-  const Content = (props: { className?: string }): JSX.Element => {
-    const { className } = props;
+export const Default: React.FC<SecondaryNavigationProps> = (props) => {
+  const { fields } = props;
 
-    return (
-      <NavigationMenu.Root
-        className={cn('relative justify-center', className)}
-        orientation="vertical"
-      >
-        <NavigationMenu.List className="m-0 flex list-none flex-col gap-2 pl-0">
-          {parent.children?.results?.map((item, index) => {
-            const isParent = datasource.id == item.id;
-            const title = item.navigationTitle?.jsonValue.value || item.title?.jsonValue.value;
-
-            return (
-              <NavigationMenu.Item key={index}>
-                <Button asChild variant="link" className="justify-start">
-                  <NextLink
-                    href={item.url?.href || ''}
-                    className="hover:bg-accent-6 box-border inline-block w-full  p-2 px-4 font-bold"
-                  >
-                    {title}
-                  </NextLink>
-                </Button>
-                {isParent && renderChildren(children.results)}
-              </NavigationMenu.Item>
-            );
-          })}
-        </NavigationMenu.List>
-      </NavigationMenu.Root>
-    );
-  };
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   if (fields) {
     return (
       <>
-        <Content className="hidden sm:block" />
+        <SecondaryNavigationContent className="hidden sm:block" fields={fields} />
 
         {/* Mobile Dropdown */}
         <div className="relative block sm:hidden">
@@ -90,7 +95,7 @@ export const Default: React.FC<SecondaryNavigationProps> = (props) => {
           </button>
           {isOpen && (
             <div className="border-accent-6 absolute top-full flex w-full flex-col rounded-bl-md rounded-br-md border border-t-0 bg-[color:var(--color-background)]">
-              <Content />
+              <SecondaryNavigationContent fields={fields} />
             </div>
           )}
         </div>
