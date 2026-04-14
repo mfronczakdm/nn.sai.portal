@@ -16,7 +16,7 @@ export type AuthPanelFields = {
   logo: ImageField;
   loginButtonText: Field<string>;
   logoutButtonText: Field<string>;
-  usernameLabel: Field<string>;
+  userNameLabel: Field<string>;
   passwordLabel: Field<string>;
   /**
    * Optional copy when credentials fail. If omitted, only non-text cues (border + aria) indicate failure.

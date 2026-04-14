@@ -139,7 +139,7 @@ const AuthPanelInner: React.FC<AuthPanelProps> = (props) => {
             <form className="space-y-4" onSubmit={handleCredentialsLogin}>
               <div className="space-y-2">
                 <Label htmlFor="authpanel-username">
-                  <Text field={fields.usernameLabel} tag="span" />
+                  <Text field={fields.userNameLabel} tag="span" />
                 </Label>
                 <Input
                   id="authpanel-username"
