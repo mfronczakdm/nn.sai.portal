@@ -27,6 +27,15 @@
       "buildCommand": "build",
       "runCommand": "next:start"
     },
+    "portal": {
+      "path": "./examples/portal",
+      "nodeVersion": "24.14.1",
+      "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
+      "enabled": true,
+      "type": "sxa",
+      "buildCommand": "build",
+      "runCommand": "next:start"
+    },
     "kit-nextjs-location-starter": {
       "path": "./examples/kit-nextjs-location-finder",
       "nodeVersion": "24.14.1",
