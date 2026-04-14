@@ -1,0 +1,53 @@
+---
+ID: "427ed81c-0abe-48af-8bdd-c6670d4ff997"
+Parent: "875e30d2-2da2-4940-9619-bd334844ae18"
+Template: "4eb24890-61ec-4283-8c61-c55a86d1fe2a"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Alaris/Add Products/Products/Terra/Data/Image Gallery 1"
+Languages:
+  - Language: en
+    Versions:
+      - Version: 1
+        Fields:
+          - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+            Hint: __Created
+            Value: 20250321T182818Z
+          - ID: "45324e3c-4e19-41d7-9497-bdcde2228eb1"
+            Hint: image2
+            Value: |
+              <image mediaid="F76AB4B8-9973-42F5-B8F0-9925A3963877" />
+          - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+            Hint: __Owner
+            Value: |
+              sitecore\Admin
+          - ID: "58d5ed64-d50a-4ea7-ba39-f5d2e98c7c3e"
+            Hint: title
+            Value: "Adventure Redefined"
+          - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+            Hint: __Created by
+            Value: |
+              sitecore\Admin
+          - ID: "69a878be-bdf4-4509-a304-238b0a24bac4"
+            Hint: image4
+            Value: |
+              <image mediaid="65385841-6ae3-489c-a1cd-1ab9236bdc57" />
+          - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+            Hint: __Revision
+            Value: "9bf70719-d507-4f17-b765-b6381a23a2ed"
+          - ID: "a5a74a19-c942-421c-9ff5-c3116fcffa0d"
+            Hint: image1
+            Value: |
+              <image mediaid="DB422FCB-809B-43BD-B8BF-D3EA332FEB98" />
+          - ID: "a7be6790-3f1a-43fc-94bb-302604c97081"
+            Hint: description
+            Value: "Experience the ultimate off-road adventure with Terra's intelligent TrailSense AI and rugged capability designed for every terrain."
+          - ID: "b293c09d-fd8e-4eee-97bd-0f30f3f4ca10"
+            Hint: image3
+            Value: |
+              <image mediaid="7d2baee6-8c25-4cce-bfe8-149e95de021d" />
+          - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+            Hint: __Updated by
+            Value: |
+              sitecore\Admin
+          - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+            Hint: __Updated
+            Value: 20250321T182818Z

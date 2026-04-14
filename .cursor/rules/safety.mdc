@@ -1,0 +1,59 @@
+---
+description: Safety rules to prevent editing compiled artifacts and generated files
+alwaysApply: true
+globs: []
+---
+
+# Safety Rules
+
+## Do Not Edit Compiled Artifacts
+
+Never edit compiled or generated files:
+- **Node modules**: `node_modules/` contains installed packages
+- **Build outputs**: `.next/`, `dist/`, `out/`, `build/` are generated during build
+- **Cache directories**: `.cache/`, `.sitecore/` (except component-map.ts)
+- **Lock files**: `package-lock.json`, `yarn.lock`, `pnpm-lock.yaml`
+- **Source maps**: `*.js.map`, `*.css.map`, `*.d.ts.map`
+
+## Do Not Edit Configuration Files
+
+Avoid modifying sensitive configuration:
+- **Sitecore configs**: `scjssconfig.json`, `.sitecore/user.json`
+- **Docker files**: `Dockerfile`, `docker-compose*.yml`
+- **CI/CD configs**: `.github/workflows/`, deployment configurations
+
+## Do Not Edit Package Files
+
+Never modify package artifacts:
+- **Sitecore packages**: `*.itempackage`, `*.sicpackage`
+- **Archive files**: `*.tgz`, `*.tar.gz`, `*.zip`
+- **Binary files**: `*.exe`, `*.dll`, `*.obj`
+
+## Do Not Edit Environment Files
+
+Never commit or edit sensitive environment files:
+- **Local environment**: `.env.local`, `.env.*.local`
+- **Secret files**: `*.deploysecret.config`
+- **User-specific configs**: `.sitecore/user.json`
+
+## Source Files Only
+
+Focus editing on:
+- **Source code**: `.ts`, `.tsx`, `.js`, `.jsx` files in `src/`
+- **Configuration**: `next.config.js`, `tsconfig.json`, `package.json`
+- **Documentation**: `README.md`, `CONTRIBUTING.md`
+- **Styles**: `.css`, `.scss` files
+- **Component maps**: `.sitecore/component-map.ts`
+
+## When in Doubt
+
+If unsure whether to edit a file:
+1. Check if it's in `node_modules/` - never edit
+2. Check if it's generated during build - never edit
+3. Check if it contains secrets - never edit
+4. Ask yourself: "Did I create this file?" - if no, be cautious
+
+Referenced:
+@.gitignore
+@.cursorignore
+@examples/*/package.json

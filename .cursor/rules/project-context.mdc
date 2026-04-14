@@ -1,0 +1,126 @@
+---
+description: XM Cloud Starter repository context and constraints
+alwaysApply: true
+globs: []
+---
+
+# Project Context
+
+## Repository Overview
+
+This is the **XM Cloud Front End Application Starter Kits** repository containing multiple Next.js starter applications and SPA examples for Sitecore XM Cloud development.
+
+Repository Structure:
+- `/examples/` - Contains starter front-end applications (Next.js and SPA)
+- `/authoring/` - Sitecore content items, templates, and deployment configurations  
+- `/local-containers/` - Docker setup for local development environments
+- `xmcloud.build.json` - Primary configuration for XM Cloud deployment
+
+## Starter Applications
+
+Available Examples:
+- `basic-nextjs` - Simple Next.js starter with basic XM Cloud integration
+- `kit-nextjs-article-starter` - **Solterra & Co.** - Editorial-style template for lifestyle brands
+- `kit-nextjs-location-finder` - **Alaris** - Car brand template with location finder functionality
+- `kit-nextjs-product-listing` - **SYNC** - Product-focused template for audio gear companies
+- `kit-nextjs-skate-park` - Simple demo site showcasing component examples
+- `basic-spa` - SPA starter kit with Angular and Node proxy
+
+Each starter demonstrates:
+- Tailwind-based styling with Shadcn/ui components
+- Personalized homepage via URL parameters
+- Modular component architecture with variants
+- Localization support for English (en) and Canadian English (en-CA)
+
+## Technology Stack
+
+Core Technologies:
+- **Next.js 14+** - React framework with App Router and Pages Router support
+- **TypeScript** - Strict type safety throughout all components
+- **Sitecore XM Cloud** - Headless content management and delivery
+- **Sitecore Content SDK** - Modern SDK for XM Cloud integration
+- **Tailwind CSS** - Utility-first CSS with container queries (@container)
+- **Shadcn/ui** - Modern component library with accessibility features
+
+Additional Libraries:
+- **Framer Motion** - Animation library for interactive components
+- **Lucide React** - Icon library for consistent iconography  
+- **next-localization** - Internationalization with dictionary support
+- **change-case** - String case transformation utilities
+
+Development Tools:
+- **Docker** - Containerized local development with Sitecore CM
+- **Node.js LTS** - JavaScript runtime environment
+- **npm** - Package management across all starter applications
+
+## Development Principles
+
+Multi-Starter Architecture:
+- Each example is a standalone application
+- Shared patterns and conventions across all starters
+- Independent deployment and development workflows
+- Common XM Cloud integration patterns
+
+Content-First Development:
+- Components are designed around Sitecore data structures
+- Field-driven rendering with proper fallbacks
+- Support for both connected and disconnected development modes
+- Proper handling of content authoring scenarios
+
+## Constraints and Guidelines
+
+Starter Independence:
+- Each starter is a standalone application. Copy shared utilities and components into the starter; do not create shared packages or symlinks across starters. Each starter can be run and maintained independently.
+
+File Organization:
+- Each starter maintains its own `src/` directory structure
+- Shared utilities should be copied, not shared (no monorepo linking)
+- Configuration files specific to each starter application
+- Independent package.json for each example
+
+Development Workflow:
+
+DMZ git flow will be implemented in the future to support better development practices, scaling, efficiency and developer productivity.
+Below is an outline of the planned workflow and processes that will be followed:
+
+- Has a shared main repo (`upstream repository`) with two key branches: `main` and `dmz`
+- Each contributor uses their own fork as their workspace
+- Feature branches are sourced from `main` but Pull Requests (PRs) with changes are merged to `dmz` branch 
+- `main` branch in the `upstream repository` is always clean (deployable, branchable and reliable). It does not accept PRs created by developers.
+- Developers should push changes to feature branches in their own fork and then create PRs to `dmz` branch in the `upstream repository`.  
+- PRs are merged by reviewers to the `dmz` branch after review and validation. Conflicts should be resolved by rebasing onto main. 
+- Once a PR has been merged into `dmz` branch the code changes are validated through an automated full build of the `dmz` branch `HEAD` in the Continous Integration server.  
+- The `dmz` branch acts as a staging/integration branch and once sevearl chnages are integrated and tested in the `dmz` branch they can be manually merged to the `main` branch using merge commits (usually at the end of 1 or 2 weeks)
+- If the build fails, the changes are or issues are found in the `dmz` branch during integration, the problamatic commits can be reverted
+
+- Each starter can be developed independently in its own directory
+- Copy `.env.remote.example` to `.env.local` for local development
+- Required environment variables: `SITECORE_EDGE_CONTEXT_ID`, `NEXT_PUBLIC_DEFAULT_SITE_NAME`, `SITECORE_EDITING_SECRET`
+- Docker containers available for full local Sitecore development stack
+
+Local Development Setup:
+```bash
+# Navigate to any starter
+cd examples/kit-nextjs-article-starter
+
+# Copy environment template
+cp .env.remote.example .env.local
+
+# Edit .env.local with your XM Cloud values
+# Install dependencies and start
+npm install
+npm run dev
+```
+
+Deployment:
+- Uses `xmcloud.build.json` for rendering host configuration
+- Each starter can be enabled/disabled for deployment via `enabled` flag
+- Supports multiple rendering hosts in single repository
+- Automatic editing host creation when split deployment is disabled
+- Environment-specific configuration through XM Cloud Deploy Portal
+
+Referenced:
+@examples/
+@xmcloud.build.json
+@authoring/
+@local-containers/

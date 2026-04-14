@@ -1,0 +1,229 @@
+---
+description: Next.js specific patterns and best practices for XM Cloud starter development
+alwaysApply: false
+globs:
+  - "next.config.js"
+  - "src/pages/**"
+  - "src/app/**"
+  - "**/middleware.ts"
+  - "**/*page*.tsx"
+  - "**/*layout*.tsx"
+---
+
+# Next.js Development Patterns
+
+## Configuration
+
+Next.js Config:
+- Configure i18n for multi-language XM Cloud sites
+- Set up proper image domains for XM Cloud media
+- Implement rewrites for XM Cloud API routes
+- Configure webpack for SCSS and other assets
+- Set up proper build optimization
+
+```javascript
+// next.config.js pattern
+const nextConfig = {
+  i18n: {
+    locales: ['en', 'en-CA'],
+    defaultLocale: process.env.DEFAULT_LANGUAGE || 'en',
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'edge*.**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'xmc-*.**',
+      },
+    ],
+  },
+  async rewrites() {
+    return [
+      {
+        source: '/robots.txt',
+        destination: '/api/robots',
+      },
+      {
+        source: '/sitemap.xml',
+        destination: '/api/sitemap',
+      },
+    ];
+  },
+};
+```
+
+Environment Variables:
+- Use NEXT_PUBLIC_ prefix for client-side variables
+- Validate required environment variables at build time
+- Use different .env files for different environments
+- Never commit sensitive environment variables
+
+## Pages and Routing
+
+Catch-All Routes:
+- Use `[...path].tsx` for XM Cloud page routing
+- Handle both single and multi-segment paths
+- Implement proper 404 handling for non-existent items
+- Support preview mode for content authors
+
+```typescript
+// [...path].tsx pattern
+export async function getServerSideProps(context: GetServerSidePropsContext) {
+  const path = Array.isArray(context.params?.path) 
+    ? context.params.path.join('/')
+    : context.params?.path || '/';
+    
+  const locale = context.locale || 'en';
+  
+  try {
+    const layoutData = await layoutService.getRouteData(path, locale);
+    
+    if (!layoutData.sitecore.route) {
+      return { notFound: true };
+    }
+    
+    return { 
+      props: { 
+        layoutData,
+        notFound: false 
+      } 
+    };
+  } catch (error) {
+    console.error(`Error fetching route data for ${path}:`, error);
+    return { notFound: true };
+  }
+}
+```
+
+Static Generation:
+- Use ISR (Incremental Static Regeneration) for XM Cloud content
+- Implement proper revalidation strategies
+- Handle dynamic paths with getStaticPaths
+- Consider build time vs. runtime performance trade-offs
+
+## API Routes
+
+XM Cloud Integration:
+- Create API routes for XM Cloud services
+- Handle authentication and authorization properly
+- Implement proper error handling and logging
+- Cache responses when appropriate
+
+```typescript
+// api/robots.ts pattern
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  try {
+    const robotsContent = await robotsService.getRobots();
+    
+    res.setHeader('Content-Type', 'text/plain');
+    res.status(200).send(robotsContent);
+  } catch (error) {
+    console.error('Error generating robots.txt:', error);
+    res.status(500).send('Error generating robots.txt');
+  }
+}
+```
+
+## Middleware
+
+XM Cloud Editing:
+- Handle editing mode detection
+- Implement proper cookie handling for XM Cloud
+- Set up redirects for content authors
+- Support preview mode functionality
+
+```typescript
+// middleware.ts pattern
+export function middleware(request: NextRequest) {
+  const { pathname } = request.nextUrl;
+  
+  // Handle XM Cloud editing mode
+  if (request.cookies.get('sc_mode')?.value === 'edit') {
+    // Redirect to editing host
+    const editingUrl = new URL(pathname, process.env.EDITING_HOST_URL);
+    return NextResponse.redirect(editingUrl);
+  }
+  
+  return NextResponse.next();
+}
+```
+
+## Performance Optimization
+
+Image Optimization:
+- Always use NextImage component from ContentSDK for XM Cloud media as it supports inline editing in editor mode and uses Image component from next internally
+- Configure proper image domains and sizes
+- Implement lazy loading for below-fold images
+- Use proper alt text from XM Cloud fields
+
+Code Splitting:
+- Use dynamic imports for large components
+- Implement route-based code splitting
+- Lazy load non-critical functionality
+- Optimize bundle size with proper imports
+
+Caching:
+- Implement proper caching headers for XM Cloud content
+- Use ISR for frequently updated content
+- Cache API responses appropriately
+- Consider CDN caching strategies
+
+## Development Patterns
+
+TypeScript Integration:
+- Use proper TypeScript configuration
+- Define types for XM Cloud data structures
+- Implement proper type guards for runtime validation
+- Use strict mode for better type safety
+
+Error Handling:
+- Implement proper error boundaries
+- Handle XM Cloud API errors gracefully
+- Provide meaningful error messages to users
+- Log errors appropriately for debugging
+
+Testing:
+- Write tests for page components and API routes
+- Mock XM Cloud services in tests
+- Test error scenarios and edge cases
+- Use proper test data that matches XM Cloud structures
+
+## App Router (Next.js 13+)
+
+Server Components:
+- Use Server Components for XM Cloud data fetching
+- Implement proper loading and error handling
+- Handle streaming for better user experience
+- Use Client Components only when necessary
+
+Layout Files:
+- Create proper layout hierarchy
+- Handle XM Cloud navigation and footer
+- Implement proper SEO meta tags
+- Support multi-language layouts
+
+## Deployment
+
+Build Optimization:
+- Optimize for XM Cloud deployment environment
+- Handle environment-specific configurations
+- Implement proper health checks
+- Monitor build performance and size
+
+XM Cloud Integration:
+- Configure proper rendering host settings
+- Handle XM Cloud deployment pipelines
+- Implement proper monitoring and logging
+- Support blue-green deployment patterns
+
+Referenced:
+@examples/kit-nextjs-article-starter/next.config.js
+@examples/kit-nextjs-location-finder/src/pages/
+@examples/kit-nextjs-product-listing/src/middleware.ts
+@examples/basic-nextjs/src/pages/api/

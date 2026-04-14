@@ -1,0 +1,44 @@
+﻿---
+ID: "93589f93-e277-460d-8d16-5fdcbaba9192"
+Parent: "275f1e79-c5e0-4202-9924-b4024fe44626"
+Template: "ccea3863-e5cc-4c75-8296-5b5ca47010fa"
+Path: "/sitecore/templates/Project/click-click-launch/Components/Promos/MultiPromoTabs/__Standard Values/PromoTabItem 2"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "627e1178-0e7b-485b-b2d5-817c42964a3b"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250807T134703Z
+    - ID: "2c13f52a-6d13-4688-92f7-ecafe6c718e9"
+      Hint: title
+      Value: PromoTabItem 2
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{12FFAC4C-565F-4C9A-B63E-7F77E96B4D1F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "7cbcff94-526c-410e-b1e7-f7e34ba5a334"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250807T134703Z

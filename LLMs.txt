@@ -1,0 +1,170 @@
+# LLM Guidance for XM Cloud Starter Applications
+
+## Project Context
+XM Cloud Front End Application Starter Kits repository with multiple Next.js and SPA examples for Sitecore XM Cloud development. Each starter demonstrates headless CMS patterns with modern React/TypeScript architecture.
+
+## Core Technologies
+- Next.js 14+ (App Router/Pages Router)
+- TypeScript (strict mode)
+- Sitecore XM Cloud (headless CMS)
+- Sitecore Content SDK (@sitecore-content-sdk/nextjs)
+- Tailwind CSS (utility-first, container queries)
+- Shadcn/ui (accessible component library)
+- Framer Motion (animations)
+- React Hook Form + Zod (form validation)
+
+## Architecture Principles
+
+### Component-Driven Development
+- Locality of Behavior pattern
+- Single component file with multiple variants
+- Export named variants: Default, ThreeUp, Slider, etc.
+- Component directories use kebab-case
+- TypeScript interfaces for all props and fields
+
+### Sitecore Integration Patterns
+- Always validate fields?.data?.datasource existence
+- Use NoDataFallback component for missing data
+- Handle both editing and preview modes
+- Safe destructuring with fallbacks
+- Optional chaining for field access
+
+### Performance Best Practices
+- Use 'use client' directive only when needed
+- Implement React.memo for expensive components
+- Respect prefers-reduced-motion for animations
+- Optimize images with Next.js Image component
+- Use proper loading states and error boundaries
+
+### Security Standards
+- Sanitize all user inputs and CMS content
+- Validate data at component boundaries
+- Use environment variables for configuration
+- Never log sensitive information
+- Implement proper CSP headers
+
+### Accessibility Requirements
+- Semantic HTML elements
+- Proper ARIA attributes
+- Keyboard navigation support
+- Screen reader compatibility
+- Color contrast compliance
+- Focus management for interactive components
+
+## Code Quality Standards
+
+### TypeScript Usage
+- Strict mode enabled
+- Explicit types over 'any'
+- Discriminated unions for complex state
+- Export types at module boundaries
+- Proper interfaces for XM Cloud data
+
+### Naming Conventions
+- Components: PascalCase (Hero, ProductListing)
+- Variables: camelCase (isActive, handleClick)
+- Constants: UPPER_SNAKE_CASE (DEFAULT_TIMEOUT)
+- Files: kebab-case directories, PascalCase components
+- Boolean variables: is/has/can/should prefixes
+
+### Import Organization
+- External libraries first
+- Internal modules second
+- Relative imports last
+- Group by functionality
+- Use barrel exports (index.ts) for clean APIs
+
+## Sitecore Content SDK Guidelines
+
+### Client-Safe Imports
+```typescript
+// ✅ Safe for components
+import { Text, RichText, Image, useSitecore } from '@sitecore-content-sdk/nextjs';
+```
+
+### Server-Only Imports
+```typescript
+// ❌ Never in client components
+import { defineConfig } from '@sitecore-content-sdk/nextjs/config';
+```
+
+### Field Handling Patterns
+```typescript
+// ✅ Safe field access
+{title?.jsonValue && <Text field={title.jsonValue} tag="h1" />}
+
+// ✅ Safe destructuring
+const { data: { datasource } = {} } = fields || {};
+```
+
+## Error Handling Strategy
+- Fail fast with clear, actionable messages
+- Provide context in error messages
+- Handle edge cases with guard clauses
+- Use custom error classes for domain errors
+- Implement proper error boundaries
+- Log errors appropriately for debugging
+
+## Testing Approach
+- Test component behavior, not implementation
+- Mock Sitecore services in unit tests
+- Test error scenarios and edge cases
+- Use proper test data matching XM Cloud structures
+- Implement integration tests for critical paths
+
+## Styling Guidelines
+- Tailwind utility-first approach
+- Container queries (@container) for responsive design
+- Shadcn/ui for consistent components
+- Mobile-first responsive design
+- Consistent design tokens
+- Accessibility-first styling
+
+## Development Workflow
+- Each starter is independent (no monorepo linking)
+- Copy shared utilities between starters
+- Use .env.remote.example as template
+- Docker containers for local Sitecore development
+- Independent deployment per starter
+
+## Safety Rules
+- Never edit node_modules/, .next/, dist/, build/
+- Never modify package-lock.json, yarn.lock
+- Never commit .env.local files
+- Never edit compiled artifacts
+- Focus only on src/ files and configuration
+
+## Multi-Starter Context
+Repository contains 6 starter applications:
+- basic-nextjs: Simple XM Cloud integration
+- kit-nextjs-article-starter: Editorial template (Solterra & Co.)
+- kit-nextjs-location-finder: Car brand template (Alaris)
+- kit-nextjs-product-listing: Product template (SYNC)
+- kit-nextjs-skate-park: Demo components
+- basic-spa: Angular SPA with Node proxy
+
+Each follows same patterns but maintains unique functionality and design.
+
+## Environment Configuration
+Required variables:
+- SITECORE_EDGE_CONTEXT_ID
+- NEXT_PUBLIC_DEFAULT_SITE_NAME
+- SITECORE_EDITING_SECRET
+- NEXT_PUBLIC_SITECORE_EDGE_CONTEXT_ID
+
+## Performance Optimization
+- Next.js Image component for optimized images
+- ISR patterns for XM Cloud content
+- Dynamic imports for code splitting
+- Proper caching strategies
+- Bundle size optimization with tree shaking
+
+When generating code:
+1. Always validate Sitecore datasource existence
+2. Use TypeScript strict mode patterns
+3. Implement proper error handling
+4. Follow accessibility guidelines
+5. Use Tailwind utility classes
+6. Respect component architecture patterns
+7. Handle both editing and preview modes
+8. Implement safe destructuring patterns

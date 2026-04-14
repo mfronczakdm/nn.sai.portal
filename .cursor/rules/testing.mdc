@@ -1,0 +1,209 @@
+---
+description: Testing strategies and patterns for XM Cloud starter applications
+alwaysApply: false
+globs:
+  - "**/*.test.ts"
+  - "**/*.test.tsx"
+  - "**/*.spec.ts"
+  - "**/*.spec.tsx"
+  - "**/jest.config.js"
+  - "**/vitest.config.ts"
+---
+
+# Testing Patterns
+
+## Testing Strategy
+
+Component Testing:
+- Test component rendering with various XM Cloud field configurations
+- Mock XM Cloud services and API calls
+- Test error scenarios (missing fields, API failures)
+- Verify proper handling of editing vs. preview modes
+- Test responsive behavior and accessibility
+
+Integration Testing:
+- Test complete page rendering with XM Cloud data
+- Verify API route functionality
+- Test middleware behavior for XM Cloud integration
+- Validate environment variable handling
+- Test deployment and build processes
+
+## Testing Tools
+
+Recommended Stack:
+- **Jest** or **Vitest** for unit testing
+- **React Testing Library** for component testing
+- **MSW (Mock Service Worker)** for API mocking
+- **Playwright** or **Cypress** for E2E testing
+- **Storybook** for component documentation and testing
+
+XM Cloud Mocking:
+- Create mock data that matches XM Cloud field structures
+- Mock layout service responses
+- Simulate both connected and disconnected modes
+- Test with various content scenarios
+
+```typescript
+// Mock XM Cloud field data
+const mockHeroFields = {
+  title: { value: 'Test Hero Title', editable: false },
+  subtitle: { value: 'Test Hero Subtitle', editable: false },
+  backgroundImage: {
+    value: {
+      src: '/test-image.jpg',
+      alt: 'Test Image',
+      width: 1200,
+      height: 600,
+    },
+    editable: false,
+  },
+};
+```
+
+## Component Testing Patterns
+
+Field Validation Testing:
+- Test components with missing fields
+- Test components with empty field values
+- Test components with various field types
+- Verify proper fallback rendering
+
+```typescript
+// Component test example
+describe('Hero Component', () => {
+  it('renders with all fields present', () => {
+    render(<Hero fields={mockHeroFields} />);
+    
+    expect(screen.getByText('Test Hero Title')).toBeInTheDocument();
+    expect(screen.getByText('Test Hero Subtitle')).toBeInTheDocument();
+    expect(screen.getByRole('img')).toHaveAttribute('alt', 'Test Image');
+  });
+  
+  it('handles missing fields gracefully', () => {
+    render(<Hero fields={{}} />);
+    
+    expect(screen.getByText(/content not configured/i)).toBeInTheDocument();
+  });
+});
+```
+
+## API Testing
+
+XM Cloud API Mocking:
+- Mock layout service responses
+- Test error handling for API failures
+- Verify proper caching behavior
+- Test authentication and authorization
+
+```typescript
+// API route test example
+import { createMocks } from 'node-mocks-http';
+import handler from '../pages/api/robots';
+
+describe('/api/robots', () => {
+  it('returns robots.txt content', async () => {
+    const { req, res } = createMocks({
+      method: 'GET',
+    });
+    
+    await handler(req, res);
+    
+    expect(res._getStatusCode()).toBe(200);
+    expect(res._getHeaders()['content-type']).toBe('text/plain');
+  });
+});
+```
+
+## E2E Testing
+
+Page Testing:
+- Test complete user journeys
+- Verify XM Cloud content rendering
+- Test navigation and routing
+- Validate responsive design
+- Test accessibility compliance
+
+Performance Testing:
+- Test page load times
+- Verify image optimization
+- Test bundle size impact
+- Monitor Core Web Vitals
+
+```typescript
+// Playwright E2E test example
+test('homepage loads and displays content', async ({ page }) => {
+  await page.goto('/');
+  
+  // Wait for XM Cloud content to load
+  await page.waitForSelector('[data-testid="hero-component"]');
+  
+  // Verify content is displayed
+  await expect(page.locator('h1')).toBeVisible();
+  await expect(page.locator('nav')).toBeVisible();
+});
+```
+
+## Test Data Management
+
+XM Cloud Test Data:
+- Create realistic test data that matches XM Cloud structures
+- Use factories for generating test data
+- Maintain test data consistency across tests
+- Update test data when XM Cloud schemas change
+
+```typescript
+// Test data factory
+export const createMockLayoutData = (overrides = {}) => ({
+  sitecore: {
+    context: {
+      pageEditing: false,
+      language: 'en',
+      site: { name: 'test-site' },
+    },
+    route: {
+      name: 'Test Page',
+      displayName: 'Test Page',
+      fields: {},
+      placeholders: {},
+      ...overrides,
+    },
+  },
+});
+```
+
+## Testing Commands
+
+Package Scripts:
+- `npm test` - Run unit tests
+- `npm run test:watch` - Run tests in watch mode
+- `npm run test:coverage` - Run tests with coverage report
+- `npm run test:e2e` - Run end-to-end tests
+- `npm run test:ci` - Run all tests in CI mode
+
+Coverage Requirements:
+- Tests should be comprehensive enough to cover business logic and to validate that sites and componenets are working as intended
+- Ensure different rendering options and  scenarios are considered such as Design Library, Page Editor, Preview mode, Hosted Vercel Sites and Local Deployments
+- Test error scenarios and edge cases
+- Maintain test quality over quantity
+
+## Continuous Integration
+
+CI/CD Testing:
+- Run all tests on pull requests
+- Generate coverage reports
+- Test against multiple Node.js versions
+- Validate build processes
+- Check for accessibility violations
+
+Quality Gates:
+- All tests must pass before merging
+- Coverage thresholds must be met
+- No linting errors allowed
+- Performance budgets must be maintained
+- Security scans must pass
+
+Referenced:
+@examples/kit-nextjs-article-starter/src/components/
+@examples/kit-nextjs-location-finder/src/components/
+@examples/kit-nextjs-product-listing/src/components/
+@examples/basic-nextjs/src/

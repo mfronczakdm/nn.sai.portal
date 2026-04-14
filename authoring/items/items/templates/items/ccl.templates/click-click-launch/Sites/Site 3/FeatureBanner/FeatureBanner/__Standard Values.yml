@@ -1,0 +1,41 @@
+﻿---
+ID: "ad9ab04d-6782-4ff9-90d8-72ab53e2b17d"
+Parent: "0079bae6-9c74-4c6b-b52e-b46f5b3ce31d"
+Template: "0079bae6-9c74-4c6b-b52e-b46f5b3ce31d"
+Path: "/sitecore/templates/Project/click-click-launch/Sites/Site 3/FeatureBanner/FeatureBanner/__Standard Values"
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: "{4507E405-6110-4E56-AF58-27B65B58268F}"
+- ID: "ca9b9f52-4fb0-4f87-a79f-24dea62cda65"
+  Hint: __Default workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "c1dfe8f4-528c-477a-a9b7-32521e512187"
+Languages:
+- Language: en
+  Versions:
+  - Version: 2
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240426T201657Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "560532ed-bc44-4140-ac90-93c6d20b0934"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\anton.kechashin@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250717T135032Z

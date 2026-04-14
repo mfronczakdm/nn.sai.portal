@@ -1,0 +1,204 @@
+---
+description: Code style, vibe-coding principles, and quality standards for XM Cloud starters
+alwaysApply: true
+globs: []
+---
+
+# Code Style
+
+## Vibe-Coding Principles
+
+Core Philosophy:
+- Write clean, modular, and idiomatic code
+- Prefer declarative over imperative patterns
+- Make code readable and self-documenting
+- TypeScript-first development approach
+- Component-driven architecture with XM Cloud integration
+
+Code Organization:
+- Use modern JavaScript/TypeScript features
+- Export public types at module boundaries
+- Prefer pure functions and thin wrappers
+- No top-level side effects (except page entry points)
+- Modular architecture with clear separation of concerns
+
+## Code Quality Standards
+
+TypeScript Usage:
+- Enable strict mode in all projects
+- Prefer explicit types over `any`
+- Use discriminated unions for complex state
+- Export types at module boundaries for reusability
+- Define proper interfaces for XM Cloud data structures
+
+Functional Programming:
+- Prefer pure functions where possible
+- Use immutable data patterns
+- Avoid side effects in business logic
+- Compose small, focused functions
+- Use React hooks appropriately
+
+Readability:
+- Use descriptive variable and function names
+- Keep functions small and focused (single responsibility)
+- Prefer self-documenting code over extensive comments
+- Use consistent naming patterns across all starters
+
+## Component Development
+
+React Best Practices:
+- Use functional components with hooks
+- Implement proper prop validation with TypeScript
+- Handle loading and error states explicitly
+- Use React.memo for performance optimization when needed
+- Follow React 18+ patterns and concurrent features
+
+XM Cloud Component Patterns:
+- Always validate field existence before rendering
+- Provide meaningful fallbacks for missing content
+- Use Sitecore field components for proper rendering
+- Handle both editing and preview modes
+- Implement proper error boundaries
+- Handle destructuring, undefined errors and null values in datasource and field values gracefully
+
+```typescript
+// Good component pattern
+import { Text, Image, useSitecore } from '@sitecore-content-sdk/nextjs';
+
+interface HeroProps {
+  fields: {
+    data?: {
+      datasource?: {
+        title?: { jsonValue?: Field };
+        subtitle?: { jsonValue?: Field };
+        backgroundImage?: { jsonValue?: Field };
+      };
+    };
+  };
+}
+
+export default function Hero({ fields }: HeroProps) {
+  const { page } = useSitecore();
+  const { isEditing } = page.mode;
+
+  if (!fields) {
+    return <div>Hero content not configured</div>;
+  }
+
+  // Handle destructuring errors with safe fallbacks
+  const { data } = fields || {};
+  const { datasource } = data || {};
+  const { title, subtitle, backgroundImage } = datasource || {};
+
+  return (
+    <section className="hero">
+      {/* Show field components in editing mode even if no content */}
+      {(title?.jsonValue?.value || isEditing) && <Text field={title?.jsonValue} tag="h1" />}
+      {(subtitle?.jsonValue?.value || isEditing) && <Text field={subtitle?.jsonValue} tag="p" />}
+      {(backgroundImage?.jsonValue?.value?.src || isEditing) && (
+        <Image field={backgroundImage?.jsonValue} />
+      )}
+    </section>
+  );
+}
+```
+
+### Safe Destructuring Examples
+
+```typescript
+// ✅ Safe destructuring with fallbacks
+const { titleRequired, descriptionOptional } = fields || {};
+
+// ✅ Safe nested destructuring
+const { data: { datasource } = {} } = fields || {};
+
+// ✅ Safe field access with optional chaining
+field={fields.data?.datasource?.title?.jsonValue}
+
+// ❌ Unsafe - can throw destructuring errors
+const { title } = fields.data.datasource; // Error if fields.data is null
+
+// ❌ Unsafe - can throw undefined errors  
+field={fields.data.datasource.title.jsonValue} // Error if any part is null/undefined
+```
+
+## Error Handling
+
+Error Strategy:
+- Fail fast with clear, actionable messages
+- Provide context in error messages
+- Use custom error classes for domain-specific errors
+- Handle edge cases explicitly with guard clauses
+- Log errors appropriately for debugging
+
+XM Cloud Error Patterns:
+- Handle missing datasource gracefully
+- Provide fallback content for failed API calls
+- Implement proper error boundaries for component failures
+- Handle both connected and disconnected mode errors
+
+Security:
+- Sanitize user inputs and XM Cloud content
+- Validate data at boundaries
+- Never log sensitive information
+- Use environment variables for all configuration
+- Implement proper CSP headers
+
+## Development Workflow
+
+Styling:
+- Use Tailwind CSS for consistent styling across starters
+- Follow utility-first CSS principles
+- Use Shadcn/ui components for common UI elements
+- Implement responsive design patterns
+- Maintain consistent design tokens
+
+Testing:
+- Write tests for component behavior, not implementation
+- Mock XM Cloud services in unit tests
+- Test error scenarios and edge cases
+- Use proper test data that matches XM Cloud structures
+- Implement integration tests for critical paths
+
+Imports:
+- Use relative imports for local modules
+- Group imports logically (external, internal, relative)
+- Use barrel exports (index.ts) for clean APIs
+- Avoid deep import paths
+- Use consistent import ordering
+
+Lint and Format:
+- Keep ESLint + Prettier passing at all times
+- Follow configured style rules consistently
+- Use automated formatting on save
+- Address linting warnings promptly
+- Maintain consistent code style across all starters
+
+## Performance Considerations
+
+Next.js Optimization:
+- Use Next.js Image component for optimized images
+- Implement proper ISR patterns for XM Cloud content
+- Use dynamic imports for code splitting
+- Optimize bundle size with tree shaking
+- Implement proper caching strategies
+
+React Performance:
+- Use useCallback and useMemo appropriately
+- Implement proper key props for list rendering
+- Avoid unnecessary re-renders
+- Use React.lazy for component lazy loading
+- Profile performance in development mode
+
+XM Cloud Performance:
+- Cache XM Cloud API responses appropriately
+- Use proper loading states for content fetching
+- Implement error boundaries to prevent cascade failures
+- Consider content freshness vs. performance trade-offs
+- Use proper GraphQL query optimization
+
+Referenced:
+@examples/kit-nextjs-article-starter/src/components/
+@examples/kit-nextjs-location-finder/src/components/
+@examples/kit-nextjs-product-listing/src/components/
+@examples/basic-nextjs/src/
