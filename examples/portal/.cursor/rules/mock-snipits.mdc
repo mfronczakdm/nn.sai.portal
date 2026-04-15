@@ -1,0 +1,74 @@
+---
+description: Rules for generating and storing static HTML snippets for Sitecore mock content organized by industry
+globs:
+  - "**/mock-snippets/**"
+alwaysApply: true
+---
+
+# Mock HTML Snippet Rules
+
+## Purpose
+These snippets are used for Sitecore content population only.
+They are NOT part of the actual Next.js application.
+
+## Output Requirements
+- Generate STATIC HTML only (no React, JSX, or imports)
+- No JavaScript or interactivity
+- Use semantic HTML where possible
+- Keep code clean, minimal, and properly indented
+- Add a descriptive HTML comment at the top of each snippet
+
+## Styling
+- Use Tailwind CSS classes
+- Follow shadcn/ui design patterns:
+  - rounded-2xl containers
+  - subtle borders and shadows
+  - clean typography hierarchy
+  - consistent spacing (p-4, p-6, gap-4, etc.)
+
+## Folder Structure
+- All snippets must be stored in: /mock-snippets/
+- Snippets are organized by industry:
+  - /mock-snippets/finserv/
+  - /mock-snippets/manufacturing/
+  - /mock-snippets/healthcare/
+
+- DO NOT create additional nested folders
+- Each snippet is a single `.html` file inside the appropriate industry folder
+
+## Naming Convention
+- File names should describe the page or component clearly:
+  <page-or-component-name>.html
+
+Examples:
+- my-accounts-page.html
+- account-summary-card.html
+- recent-transactions.html
+- product-listing.html
+
+## Industry Routing Logic
+When generating a snippet:
+- Infer the correct industry folder from the user request
+  - "finserv", "banking", "accounts" → /finserv/
+  - "manufacturing", "inventory", "supply chain" → /manufacturing/
+  - "healthcare", "patients", "appointments" → /healthcare/
+
+- If the industry is explicitly mentioned, ALWAYS use that folder
+- If unclear, ask for clarification instead of guessing
+
+## Content Guidelines
+- Use realistic, industry-appropriate mock data
+  - Finserv → accounts, balances, transactions
+  - Manufacturing → inventory, orders, production status
+  - Healthcare → patients, appointments, records
+
+- Keep content easy to edit later
+- Avoid unnecessary wrapper elements
+
+## Behavior
+When asked to create a snippet:
+1. Determine the correct industry folder
+2. Generate the HTML snippet
+3. Suggest the correct file path:
+   /mock-snippets/<industry>/<file-name>.html
+4. Ensure it follows all rules above
