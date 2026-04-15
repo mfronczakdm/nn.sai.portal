@@ -4,31 +4,18 @@ import { render, screen } from '@testing-library/react';
 import { createComponentProps } from '@/__tests__/test-utils/testHelpers';
 import { mockPageEditing } from '@/__tests__/test-utils/mockPage';
 
-jest.mock('@/utils/NoDataFallback', () => ({
-  NoDataFallback: ({ componentName }: { componentName: string }) => (
-    <div data-testid="no-data-fallback">
-      {componentName} requires a datasource item assigned. Please assign a datasource item to edit the
-      content.
-    </div>
-  ),
-}));
+import type {
+  PortalPageDetailFields,
+  PortalPageDetailProps,
+} from '@/components/portal-page-detail/portal-page-detail.props';
 
-import { Default as PortalPageDetail } from '@/components/portal-page-detail/PortalPageDetail';
-
-const baseFields = {
-  data: {
-    datasource: {
-      title: { jsonValue: { value: 'Orders', editable: false } },
-      subtitle: { jsonValue: { value: 'Recent activity', editable: false } },
-      body: {
-        jsonValue: {
-          value: '<p>Demo <strong>HTML</strong> body.</p>',
-          editable: false,
-        },
-      },
-    },
-  },
-};
+function portalDetailProps(partial: Partial<PortalPageDetailProps>): PortalPageDetailProps {
+  return {
+    ...createComponentProps({}),
+    fields: {},
+    ...partial,
+  } as PortalPageDetailProps;
+}
 
 jest.mock('@sitecore-content-sdk/nextjs', () => ({
   useSitecore: jest.fn(() => ({
@@ -51,7 +38,7 @@ jest.mock('@sitecore-content-sdk/nextjs', () => ({
     className,
   }: {
     field?: { value?: string };
-    tag?: keyof JSX.IntrinsicElements;
+    tag?: React.ElementType;
     className?: string;
   }) => {
     if (!field?.value?.trim()) return null;
@@ -66,15 +53,20 @@ jest.mock('@sitecore-content-sdk/nextjs', () => ({
   },
 }));
 
+import { Default as PortalPageDetail } from '@/components/portal-page-detail/PortalPageDetail';
+
+const baseFields = {
+  title: { value: 'Orders', editable: false },
+  subtitle: { value: 'Recent activity', editable: false },
+  body: {
+    value: '<p>Demo <strong>HTML</strong> body.</p>',
+    editable: false,
+  },
+};
+
 describe('PortalPageDetail', () => {
-  it('renders title, subtitle, and HTML body from datasource', () => {
-    render(
-      <PortalPageDetail
-        {...createComponentProps({
-          fields: baseFields,
-        })}
-      />,
-    );
+  it('renders title, subtitle, and HTML body from flat fields', () => {
+    render(<PortalPageDetail {...portalDetailProps({ fields: baseFields })} />);
 
     expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Orders');
     expect(screen.getByText('Recent activity')).toBeInTheDocument();
@@ -83,17 +75,12 @@ describe('PortalPageDetail', () => {
     expect(body?.innerHTML).toContain('<strong>HTML</strong>');
   });
 
-  it('shows NoDataFallback when datasource is missing', () => {
-    render(
-      <PortalPageDetail
-        {...createComponentProps({
-          fields: { data: {} },
-        })}
-      />,
-    );
+  it('renders nothing inside article when no field values and not editing', () => {
+    const { container } = render(<PortalPageDetail {...portalDetailProps({ fields: {} })} />);
 
-    expect(screen.getByTestId('no-data-fallback')).toBeInTheDocument();
-    expect(screen.getByText(/Portal Page Detail requires a datasource/i)).toBeInTheDocument();
+    const article = container.querySelector('[data-component="portal-page-detail"]');
+    expect(article).toBeInTheDocument();
+    expect(article?.querySelector('h1')).toBeNull();
   });
 });
 
@@ -130,16 +117,12 @@ describe('PortalPageDetail (editing)', () => {
   it('still renders field chrome when values are empty', () => {
     render(
       <PortalPageDetail
-        {...createComponentProps({
+        {...portalDetailProps({
           fields: {
-            data: {
-              datasource: {
-                title: { jsonValue: { value: '', editable: true } },
-                subtitle: { jsonValue: { value: '', editable: true } },
-                body: { jsonValue: { value: '', editable: true } },
-              },
-            },
-          },
+            title: { value: '', editable: true },
+            subtitle: { value: '', editable: true },
+            body: { value: '', editable: true },
+          } as PortalPageDetailFields,
         })}
       />,
     );

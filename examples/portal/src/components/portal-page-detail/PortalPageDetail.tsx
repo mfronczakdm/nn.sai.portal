@@ -4,34 +4,32 @@ import type React from 'react';
 import { RichText, Text, useSitecore } from '@sitecore-content-sdk/nextjs';
 
 import { cn } from '@/lib/utils';
-import { NoDataFallback } from '@/utils/NoDataFallback';
 
 import type { PortalPageDetailProps } from './portal-page-detail.props';
 
 /**
- * Demo-friendly detail block: title, subtitle, and HTML body from a datasource item.
- * Assign a datasource on the rendering in Experience Editor.
+ * Detail block: optional title/subtitle and rich HTML `body`, using the same flat `fields`
+ * contract as Portal Hub (fields live on the rendering, not `fields.data.datasource`).
  */
 export const Default: React.FC<PortalPageDetailProps> = (props) => {
   const { fields, params } = props;
   const { page } = useSitecore();
   const isEditing = page.mode.isEditing;
 
-  const datasource = fields?.data?.datasource;
-  if (!datasource) {
-    return <NoDataFallback componentName="Portal Page Detail" />;
-  }
+  const title = fields?.title;
+  const subtitle = fields?.subtitle;
+  const body = fields?.body;
 
-  const { title, subtitle, body } = datasource;
-
-  const hasTitle = Boolean(title?.jsonValue?.value?.trim());
-  const hasSubtitle = Boolean(subtitle?.jsonValue?.value?.trim());
-  const hasBody = Boolean(body?.jsonValue?.value?.trim());
+  const hasTitle = Boolean(title?.value?.trim());
+  const hasSubtitle = Boolean(subtitle?.value?.trim());
+  const hasBody = Boolean(body?.value?.trim());
 
   return (
     <article
       className={cn(
-        'portal-page-detail mx-auto w-full max-w-4xl px-4 py-8 md:px-6 md:py-10',
+        // Full width of the Sitecore placeholder so embedded layout HTML (e.g. flex dashboards) is not
+        // squeezed or offset; use params.styles from CM if you need a max-width text column.
+        'portal-page-detail w-full max-w-full min-w-0 px-4 py-8 md:px-6 md:py-10',
         params?.styles,
       )}
       data-component="portal-page-detail"
@@ -40,24 +38,24 @@ export const Default: React.FC<PortalPageDetailProps> = (props) => {
         <Text
           tag="h1"
           className="font-heading text-foreground mb-3 text-balance text-3xl font-semibold tracking-tight md:text-4xl"
-          field={title?.jsonValue}
+          field={title}
         />
       )}
       {(hasSubtitle || isEditing) && (
         <Text
           tag="p"
           className="text-muted-foreground mb-8 text-pretty text-lg md:text-xl"
-          field={subtitle?.jsonValue}
+          field={subtitle}
         />
       )}
       {(hasBody || isEditing) && (
         <div
           className={cn(
-            'portal-page-detail__body text-foreground prose prose-neutral max-w-none dark:prose-invert',
-            'prose-headings:font-semibold prose-p:leading-relaxed prose-a:text-primary',
+            // not-prose: avoid typography plugin rules on nested flex/grid (common cause of drift in RTE HTML).
+            'portal-page-detail__body text-foreground not-prose w-full max-w-full min-w-0',
           )}
         >
-          <RichText field={body?.jsonValue} />
+          <RichText field={body} />
         </div>
       )}
     </article>

@@ -1,25 +1,21 @@
-import type { Field } from '@sitecore-content-sdk/nextjs';
+import type { Field, RichTextField } from '@sitecore-content-sdk/nextjs';
 
 import type { ComponentProps } from '@/lib/component-props';
 
 /**
- * Datasource item fields (template **Portal Page Detail** in Sitecore).
+ * Fields on the **Portal Page Detail** rendering (same pattern as Portal Hub / Auth Panel —
+ * authored on the rendering or inherited; no separate datasource item required).
  *
- * Recommended field types:
- * - `title` — Single-Line Text
+ * - `title` — Single-Line Text (optional)
  * - `subtitle` — Single-Line Text (optional)
- * - `body` — Rich Text (HTML authored in Sitecore; rendered via Content SDK `RichText`)
+ * - `body` — Rich Text (HTML; rendered with Content SDK `RichText`)
  */
-export type PortalPageDetailDatasource = {
-  title?: { jsonValue?: Field<string> };
-  subtitle?: { jsonValue?: Field<string> };
-  body?: { jsonValue?: Field<string> };
+export type PortalPageDetailFields = {
+  title?: Field<string>;
+  subtitle?: Field<string>;
+  body?: RichTextField;
 };
 
 export type PortalPageDetailProps = ComponentProps & {
-  fields: {
-    data?: {
-      datasource?: PortalPageDetailDatasource;
-    };
-  };
+  fields: PortalPageDetailFields;
 };
