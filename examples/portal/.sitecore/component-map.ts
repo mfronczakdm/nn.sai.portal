@@ -114,6 +114,11 @@ import * as ProductListingCarddev from 'src/components/product-listing/ProductLi
 import * as ProductListing from 'src/components/product-listing/ProductListing';
 import * as productlistingprops from 'src/components/product-listing/product-listing.props';
 import * as productlistingdictionary from 'src/components/product-listing/product-listing.dictionary';
+import * as PortalPageDetail from 'src/components/portal-page-detail/PortalPageDetail';
+import * as portalpagedetailprops from 'src/components/portal-page-detail/portal-page-detail.props';
+import * as PortalHubViewclient from 'src/components/portal-hub/PortalHubView.client';
+import * as PortalHub from 'src/components/portal-hub/PortalHub';
+import * as portalhubprops from 'src/components/portal-hub/portal-hub.props';
 import * as portaldev from 'src/components/portal/portal.dev';
 import * as PageHeaderFiftyFiftydev from 'src/components/page-header/PageHeaderFiftyFifty.dev';
 import * as PageHeaderDefaultdev from 'src/components/page-header/PageHeaderDefault.dev';
@@ -378,6 +383,11 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['ProductListingCard', { ...ProductListingCarddev }],
   ['ProductListing', { ...ProductListing, componentType: 'client' }],
   ['product-listing', { ...productlistingprops, ...productlistingdictionary }],
+  ['PortalPageDetail', { ...PortalPageDetail, componentType: 'client' }],
+  ['portal-page-detail', { ...portalpagedetailprops }],
+  ['PortalHubView', { ...PortalHubViewclient }],
+  ['PortalHub', { ...PortalHub }],
+  ['portal-hub', { ...portalhubprops }],
   ['portal', { ...portaldev }],
   ['PageHeaderFiftyFifty', { ...PageHeaderFiftyFiftydev }],
   ['PageHeaderDefault', { ...PageHeaderDefaultdev }],

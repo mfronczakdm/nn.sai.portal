@@ -61,6 +61,8 @@ import * as ProductListingThreeUpdev from 'src/components/product-listing/Produc
 import * as ProductListingSliderdev from 'src/components/product-listing/ProductListingSlider.dev';
 import * as ProductListingDefaultdev from 'src/components/product-listing/ProductListingDefault.dev';
 import * as ProductListing from 'src/components/product-listing/ProductListing';
+import * as PortalPageDetail from 'src/components/portal-page-detail/PortalPageDetail';
+import * as PortalHubViewclient from 'src/components/portal-hub/PortalHubView.client';
 import * as portaldev from 'src/components/portal/portal.dev';
 import * as PageHeaderFiftyFiftydev from 'src/components/page-header/PageHeaderFiftyFifty.dev';
 import * as PageHeaderDefaultdev from 'src/components/page-header/PageHeaderDefault.dev';
@@ -183,6 +185,8 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['ProductListingSlider', { ...ProductListingSliderdev }],
   ['ProductListingDefault', { ...ProductListingDefaultdev }],
   ['ProductListing', { ...ProductListing }],
+  ['PortalPageDetail', { ...PortalPageDetail }],
+  ['PortalHubView', { ...PortalHubViewclient }],
   ['portal', { ...portaldev }],
   ['PageHeaderFiftyFifty', { ...PageHeaderFiftyFiftydev }],
   ['PageHeaderDefault', { ...PageHeaderDefaultdev }],
