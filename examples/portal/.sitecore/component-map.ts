@@ -183,6 +183,8 @@ import * as communitiesdev from 'src/components/icon/svg/communities.dev';
 import * as arrowuprightdev from 'src/components/icon/svg/arrow-up-right.dev';
 import * as arrowrightdev from 'src/components/icon/svg/arrow-right.dev';
 import * as arrowleftdev from 'src/components/icon/svg/arrow-left.dev';
+import * as HtmlSnippetBlock from 'src/components/html-snippet-block/HtmlSnippetBlock';
+import * as htmlsnippetblockprops from 'src/components/html-snippet-block/html-snippet-block.props';
 import * as HeroImageRightdev from 'src/components/hero/HeroImageRight.dev';
 import * as HeroImageBottomInsetdev from 'src/components/hero/HeroImageBottomInset.dev';
 import * as HeroImageBottomdev from 'src/components/hero/HeroImageBottom.dev';
@@ -450,6 +452,8 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['arrow-up-right', { ...arrowuprightdev }],
   ['arrow-right', { ...arrowrightdev }],
   ['arrow-left', { ...arrowleftdev }],
+  ['HtmlSnippetBlock', { ...HtmlSnippetBlock, componentType: 'client' }],
+  ['html-snippet-block', { ...htmlsnippetblockprops }],
   ['HeroImageRight', { ...HeroImageRightdev }],
   ['HeroImageBottomInset', { ...HeroImageBottomInsetdev }],
   ['HeroImageBottom', { ...HeroImageBottomdev }],

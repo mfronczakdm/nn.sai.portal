@@ -6,24 +6,12 @@ import { eventsPlugin } from '@sitecore-content-sdk/events';
 import { analyticsBrowserAdapter, analyticsPlugin } from '@sitecore-content-sdk/analytics-core';
 import config from 'sitecore.config';
 
-const Bootstrap = ({
-  siteName,
-  isPreviewMode,
-}: {
-  siteName: string;
-  isPreviewMode: boolean;
-}): JSX.Element | null => {
+const Bootstrap = ({ siteName }: { siteName: string }): JSX.Element | null => {
   useEffect(() => {
-    if (process.env.NODE_ENV === 'development') {
-      console.debug('Browser Events SDK is not initialized in development environment');
-      return;
-    }
-
-    if (isPreviewMode) {
-      console.debug('Browser Events SDK is not initialized in edit and preview modes');
-      return;
-    }
-
+    // Initialize whenever Edge is configured. Sitecore EditingScripts and form-related
+    // client code use the events SDK (e.g. triggerView / readyFormSubmit); skipping init
+    // in development previously caused [IE-002] SDK not initialized after navigation
+    // (e.g. post-login). Page-level VIEW events stay gated in CdpPageView (normal mode).
     if (config.api.edge?.clientContextId) {
       initContentSdk({
         config: {
@@ -45,7 +33,7 @@ const Bootstrap = ({
     } else {
       console.error('Client Edge API settings missing from configuration');
     }
-  }, [siteName, isPreviewMode]);
+  }, [siteName]);
 
   return null;
 };

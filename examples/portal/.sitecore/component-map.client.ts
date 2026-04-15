@@ -91,6 +91,7 @@ import * as ImageGallery from 'src/components/image-gallery/ImageGallery';
 import * as ImageWrapperclient from 'src/components/image/ImageWrapper.client';
 import * as imageoptimizationcontext from 'src/components/image/image-optimization.context';
 import * as Icon from 'src/components/icon/Icon';
+import * as HtmlSnippetBlock from 'src/components/html-snippet-block/HtmlSnippetBlock';
 import * as HeroImageRightdev from 'src/components/hero/HeroImageRight.dev';
 import * as HeroImageBottomInsetdev from 'src/components/hero/HeroImageBottomInset.dev';
 import * as HeroImageBottomdev from 'src/components/hero/HeroImageBottom.dev';
@@ -214,6 +215,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['ImageWrapper', { ...ImageWrapperclient }],
   ['image-optimization', { ...imageoptimizationcontext }],
   ['Icon', { ...Icon }],
+  ['HtmlSnippetBlock', { ...HtmlSnippetBlock }],
   ['HeroImageRight', { ...HeroImageRightdev }],
   ['HeroImageBottomInset', { ...HeroImageBottomInsetdev }],
   ['HeroImageBottom', { ...HeroImageBottomdev }],
