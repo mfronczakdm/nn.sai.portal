@@ -264,6 +264,11 @@ import * as Carddev from 'src/components/card/Card.dev';
 import * as ButtonComponent from 'src/components/button-component/ButtonComponent';
 import * as Breadcrumbs from 'src/components/breadcrumbs/Breadcrumbs';
 import * as breadcrumbsprops from 'src/components/breadcrumbs/breadcrumbs.props';
+import * as types from 'src/components/BlogListing/types';
+import * as BlogPagination from 'src/components/BlogListing/BlogPagination';
+import * as BlogListing from 'src/components/BlogListing/BlogListing';
+import * as BlogCard from 'src/components/BlogListing/BlogCard';
+import * as bloglistingquery from 'src/components/BlogListing/blog-listing.query';
 import * as BackgroundThumbnaildev from 'src/components/background-thumbnail/BackgroundThumbnail.dev';
 import * as AuthPanel from 'src/components/auth-panel/AuthPanel';
 import * as authpanelprops from 'src/components/auth-panel/auth-panel.props';
@@ -528,6 +533,11 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['ButtonComponent', { ...ButtonComponent }],
   ['Breadcrumbs', { ...Breadcrumbs }],
   ['breadcrumbs', { ...breadcrumbsprops }],
+  ['types', { ...types }],
+  ['BlogPagination', { ...BlogPagination, componentType: 'client' }],
+  ['BlogListing', { ...BlogListing }],
+  ['BlogCard', { ...BlogCard }],
+  ['blog-listing', { ...bloglistingquery }],
   ['BackgroundThumbnail', { ...BackgroundThumbnaildev }],
   ['AuthPanel', { ...AuthPanel, componentType: 'client' }],
   ['auth-panel', { ...authpanelprops }],
