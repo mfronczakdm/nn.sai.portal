@@ -26,7 +26,7 @@ type HeaderSTProps = ComponentProps & {
   fields: Fields;
 };
 
-const navLinkClass = 'block p-4 font-[family-name:var(--font-accent)] font-medium';
+const navLinkClass = 'block p-4 font-[family-name:var(--font-body)] text-secondary-foreground font-normal';
 
 export const Default = (props: HeaderSTProps) => {
   const { fields } = props;
@@ -36,7 +36,7 @@ export const Default = (props: HeaderSTProps) => {
       <div className="flex justify-between items-start">
         <Link
           href="/"
-          className="relative flex justify-center items-center grow-0 shrink-0 w-24 lg:w-32 h-24 lg:h-32 p-4 lg:p-6 bg-primary z-100"
+          className="relative flex justify-center items-center grow-0 shrink-0 w-24 lg:w-32 h-24 lg:h-32 p-4 lg:p-6 bg-transparent z-100"
           prefetch={false}
         >
           <ContentSdkImage field={props.fields?.Logo} className="w-full h-full object-contain" />
@@ -107,7 +107,7 @@ export const Default = (props: HeaderSTProps) => {
                   <ContentSdkLink
                     field={fields?.CartLink}
                     prefetch={false}
-                    className="block p-4"
+                    className="block p-4 text-secondary-foreground"
                   >
                     <FontAwesomeIcon icon={faShoppingCart} width={24} height={24} />
                   </ContentSdkLink>

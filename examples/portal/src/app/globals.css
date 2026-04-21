@@ -15,10 +15,13 @@
 
 @layer base {
   html {
-    font-family: 'Open Sans', 'Segoe UI', SegueUI, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --font-body: var(--font-open-sans), 'Open Sans', 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --font-heading: var(--font-open-sans), 'Open Sans', 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --font-accent: var(--font-open-sans), 'Open Sans', 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: var(--font-body);
     font-size: 1rem;
     line-height: 1.5;
-    font-weight: 400;
+    font-weight: 300;
     color: var(--color-brand-black);
   }
 
@@ -39,6 +42,7 @@
   h6,
   .h6 {
     font-family: var(--font-heading);
+    font-weight: 600;
     @apply leading-normal;
 
     span {
@@ -228,4 +232,16 @@ main {
 
 .partial-editing-mode header {
   @apply static mb-0 overflow-hidden;
+}
+
+/* Brand palette overrides (BCBS-style blues; primary used for buttons and CTAs) */
+@theme {
+  --color-primary: #328ac9;
+  --color-primary-foreground: #ffffff;
+  --color-primary-hover: #2b78b3;
+  --color-secondary: #e3eef6;
+  --color-secondary-foreground: #133454;
+  --color-secondary-hover: #d2e4f2;
+  --color-accent: #328ac9;
+  --color-accent-foreground: #ffffff;
 }

@@ -54,7 +54,7 @@ export const SearchBox = ({ searchLink }: { searchLink: LinkField }) => {
         <ContentSdkLink
           field={searchLink}
           prefetch={false}
-          className="block p-4 font-[family-name:var(--font-accent)] font-medium"
+          className="block p-4 font-[family-name:var(--font-body)] text-secondary-foreground font-normal"
           onClick={(e) => {
             e.preventDefault();
             setIsVisible(!isVisible);
@@ -63,7 +63,7 @@ export const SearchBox = ({ searchLink }: { searchLink: LinkField }) => {
       ) : (
         <button
           type="button"
-          className="block p-4 font-[family-name:var(--font-accent)] font-medium w-full text-left"
+          className="block p-4 font-[family-name:var(--font-body)] text-secondary-foreground font-normal w-full text-left"
           onClick={() => setIsVisible(!isVisible)}
           aria-label={t(DICTIONARY_KEYS.SEARCH_LABEL) || 'Search'}
         >
