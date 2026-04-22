@@ -36,6 +36,47 @@ jest.mock('@sitecore-content-sdk/nextjs', () => ({
     if (!field?.value) return null;
     return React.createElement(Tag, { className }, field.value);
   },
+  DateField: ({
+    field,
+    render,
+  }: {
+    field?: { value?: string };
+    render: (date: Date) => React.ReactNode;
+  }) => {
+    if (!field?.value) return null;
+    return <>{render(new Date(field.value))}</>;
+  },
+}));
+
+jest.mock('next-intl', () => ({
+  useTranslations: () => (key: string) => {
+    const labels: Record<string, string> = {
+      Demo1_ArticleHeader_BackToNewsLabel: 'Back to news',
+      Demo1_ArticleHeader_AuthorLabel: 'Author',
+    };
+    return labels[key] || key;
+  },
+}));
+
+jest.mock('../../components/icon/Icon', () => ({
+  __esModule: true,
+  Default: () => <svg data-testid="icon-arrow" />,
+}));
+
+jest.mock('../../components/ui/button', () => ({
+  Button: ({
+    children,
+    onClick,
+    className,
+  }: {
+    children?: React.ReactNode;
+    onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+    className?: string;
+  }) => (
+    <button type="button" className={className} onClick={onClick} data-testid="article-header-back">
+      {children}
+    </button>
+  ),
 }));
 
 // Mock Avatar and Badge and Toaster UI components to avoid complex dependencies
@@ -85,20 +126,6 @@ jest.mock('../../components/floating-dock/floating-dock.dev', () => ({
         </button>
       ))}
     </div>
-  ),
-}));
-
-jest.mock('../../components/button-component/ButtonComponent', () => ({
-  ButtonBase: ({
-    buttonLink,
-    className,
-  }: {
-    buttonLink?: { value?: { href?: string; text?: string } };
-    className?: string;
-  }) => (
-    <a href={buttonLink?.value?.href} className={className} data-testid="button-base">
-      {buttonLink?.value?.text}
-    </a>
   ),
 }));
 
@@ -317,6 +344,8 @@ describe('ArticleHeader', () => {
 
     render(<ArticleHeader {...propsWithAuthor} />);
 
+    expect(screen.getByText('Author')).toBeInTheDocument();
+
     // Verify avatar section renders
     expect(screen.getByTestId('avatar')).toBeInTheDocument();
 
@@ -337,7 +366,7 @@ describe('ArticleHeader', () => {
   it('renders display date when provided', () => {
     render(<ArticleHeader {...fullProps} />);
 
-    expect(screen.getByText('2025-10-01')).toBeInTheDocument();
+    expect(screen.getByText('October 1, 2025')).toBeInTheDocument();
   });
 
   it('renders eyebrow badge when provided', () => {

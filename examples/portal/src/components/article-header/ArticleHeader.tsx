@@ -1,23 +1,27 @@
 'use client';
 
 import type React from 'react';
-import { useState, useEffect, useRef, useMemo } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Facebook, Linkedin, Twitter, Link, Check, Mail } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { Text } from '@sitecore-content-sdk/nextjs';
+import { Text, DateField } from '@sitecore-content-sdk/nextjs';
 import { NoDataFallback } from '@/utils/NoDataFallback';
 import type { ArticleHeaderProps } from './article-header.props';
 import { Badge } from '@/components/ui/badge';
 import { Default as ImageWrapper } from '@/components/image/ImageWrapper.dev';
-import { ButtonBase } from '../button-component/ButtonComponent';
+import { Button } from '@/components/ui/button';
 import { FloatingDock } from '@/components/floating-dock/floating-dock.dev';
 import { useToast } from '@/hooks/use-toast';
 import { Toaster } from '@/components/ui/toaster';
-import { generateArticleSchema } from '@/lib/structured-data/schema';
+import { useTranslations } from 'next-intl';
+import { dictionaryKeys } from '@/variables/dictionary';
+import { formatDateInUTC } from '@/utils/date-utils';
+import { Default as Icon } from '@/components/icon/Icon';
 import { StructuredData } from '@/components/structured-data/StructuredData';
+import { generateArticleSchema, generatePersonSchema } from '@/lib/structured-data/schema';
 
-export const Default: React.FC<ArticleHeaderProps> = ({ fields, externalFields }) => {
+export const Default: React.FC<ArticleHeaderProps> = ({ fields, externalFields, page }) => {
   const { imageRequired, eyebrowOptional } = fields;
   const { pageHeaderTitle, pageReadTime, pageDisplayDate, pageAuthor } = externalFields || {};
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -28,34 +32,12 @@ export const Default: React.FC<ArticleHeaderProps> = ({ fields, externalFields }
   const [copySuccess, setCopySuccess] = useState(false);
   const [forceCollapse] = useState(true);
   const copyNotificationRef = useRef<HTMLDivElement>(null);
-
-  // Generate JSON-LD structured data for article (must be at top level)
-  const articleSchema = useMemo(() => {
-    const headline = pageHeaderTitle?.value || '';
-    const image = imageRequired?.value?.src || '';
-    const datePublished = pageDisplayDate?.value || '';
-    const authorName = pageAuthor?.value?.personFirstName?.value && pageAuthor?.value?.personLastName?.value
-      ? `${pageAuthor.value.personFirstName.value} ${pageAuthor.value.personLastName.value}`
-      : undefined;
-    const authorImage = pageAuthor?.value?.personProfileImage?.value?.src;
-    const authorJobTitle = pageAuthor?.value?.personJobTitle?.value;
-
-    return generateArticleSchema({
-      headline,
-      image: image ? [image] : undefined,
-      datePublished,
-      author: authorName
-        ? {
-            name: authorName,
-            image: authorImage,
-            jobTitle: authorJobTitle,
-          }
-        : undefined,
-      publisher: {
-        name: 'SYNC',
-      },
-    });
-  }, [pageHeaderTitle, imageRequired, pageDisplayDate, pageAuthor]);
+  const isPageEditing = page.mode.isEditing;
+  const t = useTranslations();
+  const dictionary = {
+    ARTICLE_HEADER_BACKTONEWS: t(dictionaryKeys.ARTICLE_HEADER_BACKTONEWS),
+    ARTICLE_HEADER_AUTHOR_LABEL: t(dictionaryKeys.ARTICLE_HEADER_AUTHOR_LABEL),
+  };
 
   useEffect(() => {
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -72,7 +54,6 @@ export const Default: React.FC<ArticleHeaderProps> = ({ fields, externalFields }
     const handleMouseMove = (e: MouseEvent) => {
       if (!headerRef.current) return;
 
-      // Use requestAnimationFrame to optimize performance
       cancelAnimationFrame(animationFrameId);
       animationFrameId = requestAnimationFrame(() => {
         const rect = headerRef.current!.getBoundingClientRect();
@@ -122,11 +103,10 @@ export const Default: React.FC<ArticleHeaderProps> = ({ fields, externalFields }
           navigator.clipboard
             .writeText(window.location.href)
             .then(() => {
-              // Show toast notification
               toast({
                 title: 'Link copied!',
                 description: 'The link has been copied to your clipboard.',
-                duration: 3000, // Explicitly set duration
+                duration: 3000,
               });
 
               setCopySuccess(true);
@@ -199,144 +179,200 @@ export const Default: React.FC<ArticleHeaderProps> = ({ fields, externalFields }
       },
     ];
 
+    const authorPerson = pageAuthor?.value;
+    const authorName =
+      authorPerson?.personFirstName?.value && authorPerson?.personLastName?.value
+        ? `${authorPerson.personFirstName.value} ${authorPerson.personLastName.value}`.trim()
+        : '';
+
+    const articleSchema = pageHeaderTitle?.value
+      ? generateArticleSchema({
+          headline: pageHeaderTitle.value,
+          description: pageHeaderTitle.value,
+          image: imageRequired?.value?.src ? [imageRequired.value.src] : undefined,
+          datePublished: pageDisplayDate?.value
+            ? new Date(String(pageDisplayDate.value)).toISOString()
+            : undefined,
+          dateModified: pageDisplayDate?.value
+            ? new Date(String(pageDisplayDate.value)).toISOString()
+            : undefined,
+          author: authorName
+            ? {
+                name: authorName,
+                image: authorPerson?.personProfileImage?.value?.src,
+                jobTitle: authorPerson?.personJobTitle?.value,
+              }
+            : undefined,
+          publisher: {
+            name: 'SYNC',
+          },
+          url: typeof window !== 'undefined' ? window.location.href : undefined,
+        })
+      : null;
+
+    const personSchema =
+      authorPerson && authorName
+        ? generatePersonSchema({
+            name: authorName,
+            jobTitle: authorPerson.personJobTitle?.value,
+            image: authorPerson.personProfileImage?.value?.src,
+          })
+        : null;
+
+    const publishedDateISO = pageDisplayDate?.value
+      ? new Date(String(pageDisplayDate.value)).toISOString()
+      : undefined;
+
+    const titleText = pageHeaderTitle?.value || 'Article header image';
+
     return (
       <>
-        {/* JSON-LD structured data for article */}
-        <StructuredData id="article-schema" data={articleSchema} />
+        {articleSchema && <StructuredData id="article-schema" data={articleSchema} />}
+        {personSchema && <StructuredData id="author-person-schema" data={personSchema} />}
         <header
           className={cn('@container article-header relative mb-[86px] overflow-hidden')}
           ref={headerRef}
         >
-          <article className="  relative z-0 h-[auto] overflow-hidden bg-black" itemScope itemType="https://schema.org/Article">
-            {/* Background Image with Parallax */}
-            <figure
-              className="z-5 absolute inset-0 h-[120%] w-[120%] bg-cover bg-center opacity-70 transition-transform duration-200 ease-out"
-              style={parallaxStyle}
-            >
-              <ImageWrapper
-                image={imageRequired}
-                alt={pageHeaderTitle?.value || 'Article header image'}
-                className="h-full w-full object-cover"
-                priority
-                sizes="(max-width: 768px) 100vw, 800px"
-                ref={imageRef}
-                itemProp="image"
-              />
-            </figure>
-            {/* Blur overlay - separate for better performance */}
-            <div className="absolute inset-0 backdrop-blur-md"></div>
-            {/* White Section */}
-            {/* in order to be fully responsive the hight of this section needs to be half of the height of the image */}
-            <div className="@xs:h-[125px] @sm:h-[150px] @md:h-[140px] @lg:h-[140px] absolute bottom-0 h-[90px] w-full  bg-white"></div>
+          <article itemScope={true} itemType="https://schema.org/Article">
+            <div className="relative z-0 h-[auto] overflow-hidden bg-black">
+              <div
+                className="z-5 absolute inset-0 h-[120%] w-[120%] bg-cover bg-center opacity-70 transition-transform duration-200 ease-out"
+                style={parallaxStyle}
+              >
+                <ImageWrapper
+                  image={imageRequired}
+                  alt={titleText}
+                  className="h-full w-full object-cover"
+                  wrapperClass="h-full w-full"
+                  priority
+                  sizes="(max-width: 768px) 100vw, 800px"
+                  ref={imageRef}
+                />
+              </div>
+              <div className="absolute inset-0 backdrop-blur-md"></div>
+              <div
+                data-component="white-bar"
+                className="@xs:h-[125px] @sm:h-[150px] @md:h-[140px] @lg:h-[90px] @xl:h-[180px] absolute bottom-0 h-[90px] w-full  bg-white"
+              ></div>
 
-            {/* Content */}
-            <div className="z-1 @md:gap-[200px] @md:pb-0 relative mx-auto flex h-full flex-col justify-between p-0 pb-6 pt-[220px]">
-              <div className="flex flex-col">
-                {/* Back Button */}
-                <ButtonBase
-                  buttonLink={{ value: { href: '/news', text: 'Back to news' } }}
-                  className="absolute left-0 top-[41px] mb-8 inline-flex items-center text-white/90 transition-colors hover:text-white"
-                  icon={{ value: 'arrow-left' }}
-                  variant="link"
-                  iconPosition="leading"
-                />
-                {/* Category Badge */}
-                {eyebrowOptional && (
-                  <Badge className="bg-accent text-accent-foreground hover:bg-accent font-body mx-auto  mb-4 inline-block text-[14px] font-medium tracking-tighter">
-                    <Text field={eyebrowOptional} />
-                  </Badge>
-                )}
-                {/* Title */}
-                <Text
-                  tag="h1"
-                  className="@md:text-[62px] @md:mb-0 font-heading line-height-[69px] mx-auto max-w-4xl text-pretty px-6 text-center text-4xl font-normal tracking-tighter text-white antialiased"
-                  field={pageHeaderTitle}
-                  itemProp="headline"
-                />
-                {/* Read Time and Date - Centered */}
-                {(pageReadTime || pageDisplayDate) && (
-                  <div className="@md:flex-row mb-8 flex flex-col items-center justify-center space-x-2 text-center text-white/70">
-                    {pageReadTime && (
-                      <Text
-                        tag="span"
-                        field={pageReadTime}
-                        className="@md:inline-block block text-pretty antialiased"
-                      />
+              <div className="z-10 @md:pb-0 relative mx-auto flex h-full flex-col justify-between gap-12 p-0 pb-6 pt-[120px]">
+                <div className="flex flex-col">
+                  <Button
+                    className="absolute left-0 top-[41px] mb-8 inline-flex items-center text-white transition-colors hover:text-white"
+                    variant="link"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      window.history.back();
+                    }}
+                  >
+                    <Icon iconName="arrow-left" className="ml-2" />
+                    {!dictionary.ARTICLE_HEADER_BACKTONEWS && isPageEditing ? (
+                      <div
+                        className="relative rounded-2xl border border-red-400 bg-red-100 px-3 py-2 text-red-700"
+                        role="alert"
+                      >
+                        <span className="block sm:inline">
+                          Dictionary Entry is Missing for {dictionaryKeys.ARTICLE_HEADER_BACKTONEWS}
+                        </span>
+                      </div>
+                    ) : (
+                      dictionary.ARTICLE_HEADER_BACKTONEWS
                     )}
-                    {pageReadTime && pageDisplayDate && (
-                      <span className="@md:inline-block hidden text-pretty antialiased">•</span>
-                    )}
-                    {pageDisplayDate && (
-                      <time itemProp="datePublished" dateTime={pageDisplayDate?.value || undefined}>
+                  </Button>
+                  {(eyebrowOptional?.value || isPageEditing) && eyebrowOptional && (
+                    <Badge className="bg-accent text-accent-foreground hover:bg-accent font-body mx-auto  mb-4 inline-block text-[14px] font-medium tracking-tighter">
+                      <Text field={eyebrowOptional} />
+                    </Badge>
+                  )}
+                  <Text
+                    tag="h1"
+                    className="@md:text-[62px] @md:mb-0 font-heading line-height-[69px] mx-auto max-w-4xl text-pretty px-6 text-center text-4xl font-normal tracking-tighter text-white"
+                    field={pageHeaderTitle}
+                  />
+                  {(pageReadTime?.value || pageDisplayDate?.value || isPageEditing) && (
+                    <div className="@md:flex-row @xl:px-8 mb-8 flex flex-col items-center justify-center space-x-2 px-4 text-center text-sm text-white subpixel-antialiased">
+                      {(pageReadTime?.value || isPageEditing) && pageReadTime && (
                         <Text
                           tag="span"
-                          field={pageDisplayDate}
-                          className="@md:inline-block block text-pretty antialiased"
-                        />
-                      </time>
-                    )}
-                  </div>
-                )}
-              </div>
-              <div className="@md:grid @md:max-w-screen-3xl @md:mx-auto @md:w-full @md:gap-8 @md:grid-cols-12 mx-6 mb-auto grid grid-cols-2 items-start justify-between">
-                {pageAuthor && (
-                  <div className="@md:col-span-3 @md:justify-end @md:pt-4 @md:h-[250px] @md:items-start col-span-1 flex h-[auto] items-center justify-center gap-4 p-6 pb-6">
-                    <Avatar>
-                      <AvatarImage
-                        src={pageAuthor?.value?.personProfileImage?.value?.src}
-                        alt={`${pageAuthor?.value?.personFirstName?.value} ${pageAuthor?.value?.personLastName?.value}`}
-                      />
-                      <AvatarFallback>{`${pageAuthor?.value?.personFirstName?.value} ${pageAuthor?.value?.personLastName?.value}`}</AvatarFallback>
-                    </Avatar>
-                    <div className="relative">
-                      <p className="text-pretty font-medium text-white antialiased">
-                        {pageAuthor?.value?.personFirstName?.value}{' '}
-                        {pageAuthor?.value?.personLastName?.value}
-                      </p>
-                      {pageAuthor?.value?.personJobTitle && (
-                        <Text
-                          tag={'p'}
-                          field={pageAuthor?.value?.personJobTitle}
-                          className="text-pretty text-sm text-white/70 antialiased"
+                          field={pageReadTime}
+                          className="@md:inline-block block text-pretty"
                         />
                       )}
+                      {((pageReadTime?.value && pageDisplayDate?.value) || isPageEditing) && (
+                        <span className="@md:inline-block hidden text-pretty">•</span>
+                      )}
+                      {pageDisplayDate?.value && (
+                        <time
+                          dateTime={publishedDateISO}
+                          itemProp="datePublished"
+                          className="@md:inline-block block text-pretty"
+                        >
+                          <DateField
+                            tag="span"
+                            field={pageDisplayDate}
+                            render={(date) => formatDateInUTC(String(date))}
+                          />
+                        </time>
+                      )}
                     </div>
-                  </div>
-                )}
-
-                {/* Share Section - Mobile Only */}
-                <div className="@md:hidden col-span-1 flex h-[auto] items-center justify-center gap-4 p-6 pb-6">
-                  <p className="@md:mb-2 m-0 flex items-center justify-center text-pretty font-medium text-white antialiased">
-                    Share
-                  </p>
-                  <FloatingDock items={links} forceCollapse={forceCollapse} />
+                  )}
                 </div>
+                <div className="@lg:grid @lg:max-w-screen-3xl @lg:mx-auto @lg:w-full @lg:gap-8 @lg:grid-cols-12 mx-6 mb-auto grid grid-cols-2 items-start justify-between">
+                  <div className="@lg:col-span-3 @lg:justify-end @lg:pt-4 @lg:h-[250px] @lg:items-start col-span-1 flex h-[auto] flex-wrap items-center justify-center gap-4 p-6 subpixel-antialiased">
+                    {authorPerson && (
+                      <div className="grid gap-y-3">
+                        <p className="flex min-h-10 flex-col justify-center text-sm text-white">
+                          {dictionary.ARTICLE_HEADER_AUTHOR_LABEL}
+                        </p>
+                        <Avatar>
+                          <AvatarImage
+                            src={authorPerson.personProfileImage?.value?.src}
+                            alt={`${authorPerson.personFirstName?.value} ${authorPerson.personLastName?.value}`}
+                          />
+                          <AvatarFallback>{`${authorPerson.personFirstName?.value} ${authorPerson.personLastName?.value}`}</AvatarFallback>
+                        </Avatar>
+                        <div className="relative">
+                          <p className="text-pretty font-medium text-white">
+                            {authorPerson.personFirstName?.value} {authorPerson.personLastName?.value}
+                          </p>
+                          {authorPerson.personJobTitle && (
+                            <Text tag="p" field={authorPerson.personJobTitle} className="text-pretty text-sm text-white" />
+                          )}
+                        </div>
+                      </div>
+                    )}
+                  </div>
 
-                {/* Featured Image */}
-                <figure className="@md:col-span-6 relative z-10 col-span-2 mx-auto flex aspect-[16/9] w-full max-w-[800px] justify-center overflow-hidden rounded-[24px]">
-                  <ImageWrapper
-                    image={imageRequired}
-                    alt={pageHeaderTitle?.value || 'Article header image'}
-                    className="object-cover"
-                    priority
-                    sizes="(max-width: 768px) 100vw, 800px"
-                    ref={imageRef}
-                    itemProp="image"
-                  />
-                </figure>
+                  <div className="@lg:hidden col-span-1 flex h-[auto] items-center justify-center gap-4 p-6">
+                    <p className="@lg:mb-2 m-0 flex items-center justify-center text-pretty text-sm font-medium text-white subpixel-antialiased">
+                      Share
+                    </p>
+                    <FloatingDock items={links} forceCollapse={forceCollapse} />
+                  </div>
 
-                {/* Share Section - Desktop Only */}
-                <div className="@md:col-span-3 @md:justify-start @md:pt-4 @md:h-[250px] @md:items-start @md:flex hidden h-[auto] items-center justify-center gap-4 p-6 pb-6">
-                  <p className="@md:mt-2 m-0 mb-2 flex items-center justify-center text-pretty font-medium text-white antialiased">
-                    Share
-                  </p>
-                  <FloatingDock items={links} forceCollapse={forceCollapse} />
+                  <figure className="@lg:col-span-6 relative z-10 col-span-2 mx-auto flex aspect-[16/9] w-full max-w-[800px] justify-center overflow-hidden rounded-[24px]">
+                    <ImageWrapper
+                      image={imageRequired}
+                      alt={titleText}
+                      className="h-full w-full object-cover "
+                      wrapperClass="w-full relative"
+                      priority
+                      sizes="(max-width: 768px) 100vw, 800px"
+                      ref={imageRef}
+                    />
+                  </figure>
+
+                  <div className="@lg:col-span-3 @lg:justify-start @lg:pt-4 @lg:h-[250px] @lg:items-start @lg:flex hidden h-[auto] items-center justify-center gap-4 p-6">
+                    <p className="@lg:mt-2 m-0 mb-2 flex items-center justify-center text-pretty text-sm font-medium text-white subpixel-antialiased">
+                      Share
+                    </p>
+                    <FloatingDock items={links} forceCollapse={forceCollapse} />
+                  </div>
                 </div>
               </div>
             </div>
+            <div ref={copyNotificationRef} className="sr-only" aria-live="polite"></div>
           </article>
-          {/* Screen reader notification */}
-          <div ref={copyNotificationRef} className="sr-only" aria-live="polite"></div>
         </header>
         <Toaster />
       </>

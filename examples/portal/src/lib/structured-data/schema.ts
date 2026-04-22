@@ -185,6 +185,7 @@ export function generateArticleSchema(article: {
   };
   description?: string;
   articleBody?: string;
+  url?: string;
 }): JsonLdValue {
   const schema: { [key: string]: JsonLdValue } = {
     '@context': 'https://schema.org',
@@ -238,6 +239,53 @@ export function generateArticleSchema(article: {
 
   if (article.articleBody) {
     schema.articleBody = article.articleBody as JsonLdValue;
+  }
+
+  if (article.url) {
+    schema.url = article.url as JsonLdValue;
+    schema.mainEntityOfPage = {
+      '@type': 'WebPage',
+      '@id': article.url,
+    } as JsonLdValue;
+  }
+
+  return schema as JsonLdValue;
+}
+
+/**
+ * Generate Person schema.org structured data
+ */
+export interface PersonSchemaProps {
+  name: string;
+  jobTitle?: string;
+  image?: string;
+  url?: string;
+  sameAs?: string[];
+}
+
+export function generatePersonSchema(props: PersonSchemaProps): JsonLdValue {
+  const { name, jobTitle, image, url, sameAs } = props;
+
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name,
+  } as { [key: string]: JsonLdValue };
+
+  if (jobTitle) {
+    schema.jobTitle = jobTitle;
+  }
+
+  if (image) {
+    schema.image = image;
+  }
+
+  if (url) {
+    schema.url = url;
+  }
+
+  if (sameAs && sameAs.length > 0) {
+    schema.sameAs = sameAs;
   }
 
   return schema as JsonLdValue;

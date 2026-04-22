@@ -122,7 +122,9 @@ import * as Carousel from 'src/components/carousel/Carousel';
 import * as cardspotlightdev from 'src/components/card-spotlight/card-spotlight.dev';
 import * as BlogPagination from 'src/components/BlogListing/BlogPagination';
 import * as AuthPanel from 'src/components/auth-panel/AuthPanel';
+import * as ArticleListing from 'src/components/article-listing/ArticleListing';
 import * as ArticleHeader from 'src/components/article-header/ArticleHeader';
+import * as ArticleContent from 'src/components/article-content/ArticleContent';
 import * as AnimatedSectiondev from 'src/components/animated-section/AnimatedSection.dev';
 import * as AlertBannerdev from 'src/components/alert-banner/AlertBanner.dev';
 
@@ -246,7 +248,9 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['card-spotlight', { ...cardspotlightdev }],
   ['BlogPagination', { ...BlogPagination }],
   ['AuthPanel', { ...AuthPanel }],
+  ['ArticleListing', { ...ArticleListing }],
   ['ArticleHeader', { ...ArticleHeader }],
+  ['ArticleContent', { ...ArticleContent }],
   ['AnimatedSection', { ...AnimatedSectiondev }],
   ['AlertBanner', { ...AlertBannerdev }],
 ]);

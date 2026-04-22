@@ -10,12 +10,14 @@ import { GlobalFooterDictionaryKeys } from '@/components/global-footer/global-fo
 import { HeroDictionaryKeys } from '@/components/hero/hero.dictionary';
 import { SubmitInfoFormDictionaryKeys } from '@/components/forms/submitinfo/submit-info-form.dictionary';
 import { ProductListingDictionaryKeys } from '@/components/product-listing/product-listing.dictionary';
+import { ArticleHeaderDictionaryKeys } from '@/components/article-header/article-header.dictionary';
 
 export const dictionaryKeys = {
   ...GlobalFooterDictionaryKeys,
   ...HeroDictionaryKeys,
   ...SubmitInfoFormDictionaryKeys,
   ...ProductListingDictionaryKeys,
+  ...ArticleHeaderDictionaryKeys,
 };
 
 export const mockDictionary = (dictionary: Record<string, string>): Record<string, string> => {

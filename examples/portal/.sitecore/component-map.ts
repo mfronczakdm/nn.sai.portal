@@ -272,8 +272,13 @@ import * as bloglistingquery from 'src/components/BlogListing/blog-listing.query
 import * as BackgroundThumbnaildev from 'src/components/background-thumbnail/BackgroundThumbnail.dev';
 import * as AuthPanel from 'src/components/auth-panel/AuthPanel';
 import * as authpanelprops from 'src/components/auth-panel/auth-panel.props';
+import * as ArticleListing from 'src/components/article-listing/ArticleListing';
+import * as articlelistingprops from 'src/components/article-listing/article-listing.props';
 import * as ArticleHeader from 'src/components/article-header/ArticleHeader';
 import * as articleheaderprops from 'src/components/article-header/article-header.props';
+import * as articleheaderdictionary from 'src/components/article-header/article-header.dictionary';
+import * as ArticleContent from 'src/components/article-content/ArticleContent';
+import * as articlecontentprops from 'src/components/article-content/article-content.props';
 import * as AnimatedSectiondev from 'src/components/animated-section/AnimatedSection.dev';
 import * as animatedsectionprops from 'src/components/animated-section/animated-section.props';
 import * as AlertBannerdev from 'src/components/alert-banner/AlertBanner.dev';
@@ -541,8 +546,12 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['BackgroundThumbnail', { ...BackgroundThumbnaildev }],
   ['AuthPanel', { ...AuthPanel, componentType: 'client' }],
   ['auth-panel', { ...authpanelprops }],
+  ['ArticleListing', { ...ArticleListing, componentType: 'client' }],
+  ['article-listing', { ...articlelistingprops }],
   ['ArticleHeader', { ...ArticleHeader, componentType: 'client' }],
-  ['article-header', { ...articleheaderprops }],
+  ['article-header', { ...articleheaderprops, ...articleheaderdictionary }],
+  ['ArticleContent', { ...ArticleContent, componentType: 'client' }],
+  ['article-content', { ...articlecontentprops }],
   ['AnimatedSection', { ...AnimatedSectiondev }],
   ['animated-section', { ...animatedsectionprops }],
   ['AlertBanner', { ...AlertBannerdev }],
