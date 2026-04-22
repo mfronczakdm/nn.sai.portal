@@ -279,6 +279,7 @@ import * as articleheaderprops from 'src/components/article-header/article-heade
 import * as articleheaderdictionary from 'src/components/article-header/article-header.dictionary';
 import * as ArticleContent from 'src/components/article-content/ArticleContent';
 import * as articlecontentprops from 'src/components/article-content/article-content.props';
+import * as articlecontentfields from 'src/components/article-content/article-content.fields';
 import * as AnimatedSectiondev from 'src/components/animated-section/AnimatedSection.dev';
 import * as animatedsectionprops from 'src/components/animated-section/animated-section.props';
 import * as AlertBannerdev from 'src/components/alert-banner/AlertBanner.dev';
@@ -551,7 +552,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['ArticleHeader', { ...ArticleHeader, componentType: 'client' }],
   ['article-header', { ...articleheaderprops, ...articleheaderdictionary }],
   ['ArticleContent', { ...ArticleContent, componentType: 'client' }],
-  ['article-content', { ...articlecontentprops }],
+  ['article-content', { ...articlecontentprops, ...articlecontentfields }],
   ['AnimatedSection', { ...AnimatedSectiondev }],
   ['animated-section', { ...animatedsectionprops }],
   ['AlertBanner', { ...AlertBannerdev }],
