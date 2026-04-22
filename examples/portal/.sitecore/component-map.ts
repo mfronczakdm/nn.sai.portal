@@ -38,8 +38,6 @@ import * as ColumnSplitter from 'src/components/sxa/ColumnSplitter';
 import * as ButtonNavigationclient from 'src/components/sxa/ButtonNavigation.client';
 import * as SubscriptionBanner from 'src/components/subscription-banner/SubscriptionBanner';
 import * as subscriptionbannerprops from 'src/components/subscription-banner/subscription-banner.props';
-import * as DownloadList from 'src/components/download-list/DownloadList';
-import * as downloadlistprops from 'src/components/download-list/download-list.props';
 import * as SubmissionFormDefaultdev from 'src/components/submission-form/SubmissionFormDefault.dev';
 import * as SubmissionFormCentereddev from 'src/components/submission-form/SubmissionFormCentered.dev';
 import * as SubmissionForm from 'src/components/submission-form/SubmissionForm';
@@ -221,6 +219,9 @@ import * as FooterNavigationCalloutdev from 'src/components/footer-navigation-ca
 import * as footernavigationcalloutprops from 'src/components/footer-navigation-callout/footer-navigation-callout.props';
 import * as floatingdockdev from 'src/components/floating-dock/floating-dock.dev';
 import * as Flexdev from 'src/components/flex/Flex.dev';
+import * as DownloadList from 'src/components/download-list/DownloadList';
+import * as downloadlistprops from 'src/components/download-list/download-list.props';
+import * as downloadlistfields from 'src/components/download-list/download-list.fields';
 import * as CtaBanner from 'src/components/cta-banner/CtaBanner';
 import * as ctabannerprops from 'src/components/cta-banner/cta-banner.props';
 import * as ContentSdkRichText from 'src/components/content-sdk-rich-text/ContentSdkRichText';
@@ -278,6 +279,7 @@ import * as ArticleListing from 'src/components/article-listing/ArticleListing';
 import * as articlelistingprops from 'src/components/article-listing/article-listing.props';
 import * as ArticleHeader from 'src/components/article-header/ArticleHeader';
 import * as articleheaderprops from 'src/components/article-header/article-header.props';
+import * as articleheaderfields from 'src/components/article-header/article-header.fields';
 import * as articleheaderdictionary from 'src/components/article-header/article-header.dictionary';
 import * as ArticleContent from 'src/components/article-content/ArticleContent';
 import * as articlecontentprops from 'src/components/article-content/article-content.props';
@@ -325,8 +327,6 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['ButtonNavigation', { ...ButtonNavigationclient }],
   ['SubscriptionBanner', { ...SubscriptionBanner, componentType: 'client' }],
   ['subscription-banner', { ...subscriptionbannerprops }],
-  ['DownloadList', { ...DownloadList, componentType: 'client' }],
-  ['download-list', { ...downloadlistprops }],
   ['SubmissionFormDefault', { ...SubmissionFormDefaultdev }],
   ['SubmissionFormCentered', { ...SubmissionFormCentereddev }],
   ['SubmissionForm', { ...SubmissionForm }],
@@ -499,6 +499,8 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['footer-navigation-callout', { ...footernavigationcalloutprops }],
   ['floating-dock', { ...floatingdockdev }],
   ['Flex', { ...Flexdev }],
+  ['DownloadList', { ...DownloadList, componentType: 'client' }],
+  ['download-list', { ...downloadlistprops, ...downloadlistfields }],
   ['CtaBanner', { ...CtaBanner }],
   ['cta-banner', { ...ctabannerprops }],
   ['ContentSdkRichText', { ...ContentSdkRichText }],
@@ -554,7 +556,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['ArticleListing', { ...ArticleListing, componentType: 'client' }],
   ['article-listing', { ...articlelistingprops }],
   ['ArticleHeader', { ...ArticleHeader, componentType: 'client' }],
-  ['article-header', { ...articleheaderprops, ...articleheaderdictionary }],
+  ['article-header', { ...articleheaderprops, ...articleheaderfields, ...articleheaderdictionary }],
   ['ArticleContent', { ...ArticleContent, componentType: 'client' }],
   ['article-content', { ...articlecontentprops, ...articlecontentfields }],
   ['AnimatedSection', { ...AnimatedSectiondev }],

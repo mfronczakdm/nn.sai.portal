@@ -26,7 +26,7 @@ export type AuthorItemFields = {
   jobTitle: Field<string>;
 };
 
-interface ArticleHeaderFields {
+export interface ArticleHeaderFields {
   imageRequired?: ImageField | JsonWrappedImageField;
   eyebrowOptional?: Field<string>;
   pageDisplayDate?: Field<string>;

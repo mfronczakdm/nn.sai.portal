@@ -35,6 +35,28 @@ type Props = {
   [key: string]: any;
 };
 
+/** Clone and drop keys we set explicitly on NextImage (avoids unused destructure bindings). */
+function peelRestForNextImage(rest: Record<string, unknown>): {
+  restWithoutBlur: Record<string, unknown>;
+  blurDataURLRest: unknown;
+} {
+  const restWithoutBlur = { ...rest };
+  const blurDataURLRest = restWithoutBlur.blurDataURL;
+  delete restWithoutBlur.priority;
+  delete restWithoutBlur.loading;
+  delete restWithoutBlur.fetchPriority;
+  delete restWithoutBlur.blurDataURL;
+  return { restWithoutBlur, blurDataURLRest };
+}
+
+function peelValueForNextImage(value: Record<string, unknown>): Record<string, unknown> {
+  const imageValueRest = { ...value };
+  delete imageValueRest.priority;
+  delete imageValueRest.loading;
+  delete imageValueRest.fetchPriority;
+  return imageValueRest;
+}
+
 export default function ClientImage({ image, className, sizes, priority, ...rest }: Props) {
   const { page } = useSitecore();
   const { isEditing, isPreview } = page.mode;
@@ -77,18 +99,8 @@ export default function ClientImage({ image, className, sizes, priority, ...rest
   // Set fetchPriority="high" for LCP images to reduce resource load delay
   const imageFetchPriority: 'high' | 'low' | 'auto' = shouldPrioritize ? 'high' : 'auto';
 
-  // Extract props that must not be forwarded blindly to NextImage / conflict with image.value
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const {
-    priority: _restPriority,
-    loading: _restLoading,
-    fetchPriority: _restFetchPriority,
-    blurDataURL: blurDataURLRest,
-    ...restWithoutBlur
-  } = rest;
-  const imageValueProps = (image?.value as ImageProps) || {};
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { priority: _imageValuePriority, loading: _imageValueLoading, fetchPriority: _imageValueFetchPriority, ...imageValueRest } = imageValueProps;
+  const { restWithoutBlur, blurDataURLRest } = peelRestForNextImage(rest as Record<string, unknown>);
+  const imageValueRest = peelValueForNextImage((image?.value as ImageProps) || ({} as ImageProps));
 
   // Next.js only accepts a tiny data URL for blur placeholders — never pass the image `src` here.
   const useBlurPlaceholder =
