@@ -65,6 +65,38 @@ describe('ImageWrapper Component', () => {
     expect(screen.getByTestId('next-image')).toBeInTheDocument();
   });
 
+  it('unwraps GraphQL-style { jsonValue: ImageField } so the image renders', () => {
+    render(
+      <ImageOptimizationContext.Provider value={{ unoptimized: false }}>
+        <ImageWrapper image={{ jsonValue: mockImage }} className="custom-class" />
+      </ImageOptimizationContext.Provider>
+    );
+
+    expect(screen.getByTestId('next-image')).toBeInTheDocument();
+  });
+
+  it('uses value.href as src when src is missing (Sitecore media)', () => {
+    const hrefOnly = {
+      value: {
+        href: 'https://example.com/media-by-href.jpg',
+        alt: 'Media',
+        width: 800,
+        height: 600,
+      },
+    };
+
+    render(
+      <ImageOptimizationContext.Provider value={{ unoptimized: false }}>
+        <ImageWrapper image={hrefOnly} className="custom-class" />
+      </ImageOptimizationContext.Provider>
+    );
+
+    expect(screen.getByTestId('next-image')).toHaveAttribute(
+      'src',
+      'https://example.com/media-by-href.jpg',
+    );
+  });
+
   it('renders nothing when image is not provided and not editing', () => {
     const { container } = render(
       <ImageOptimizationContext.Provider value={{ unoptimized: false }}>

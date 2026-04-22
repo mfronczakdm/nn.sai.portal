@@ -179,6 +179,39 @@ describe('ArticleHeader', () => {
     expect(screen.getAllByTestId('image-wrapper').length).toBeGreaterThanOrEqual(1);
   });
 
+  it('resolves hero image from fields.data.datasource (GraphQL layout)', () => {
+    const layoutProps = {
+      ...minimalProps,
+      fields: {
+        data: {
+          datasource: {
+            imageRequired: fullProps.fields.imageRequired,
+          },
+          externalFields: {},
+        },
+      },
+    };
+    render(<ArticleHeader {...layoutProps} />);
+    const imgs = screen.getAllByTestId('image-wrapper');
+    expect(imgs[0]).toHaveAttribute('src', '/image.jpg');
+  });
+
+  it('shows eyebrow from datasource field Eyebrow', () => {
+    const layoutProps = {
+      ...minimalProps,
+      fields: {
+        data: {
+          datasource: {
+            Eyebrow: { value: 'Insights' },
+          },
+          externalFields: {},
+        },
+      },
+    };
+    render(<ArticleHeader {...layoutProps} />);
+    expect(screen.getByTestId('badge')).toHaveTextContent('Insights');
+  });
+
   it('renders minimal content when minimal props provided', () => {
     render(<ArticleHeader {...minimalProps} />);
 

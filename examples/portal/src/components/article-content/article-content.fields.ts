@@ -63,8 +63,9 @@ function readNestedFieldBag(bag: unknown): Partial<ArticleContentFields> {
 
 function flatFieldsWithoutData(fields: unknown): Record<string, unknown> {
   if (!fields || typeof fields !== 'object') return {};
-  const { data: _data, ...rest } = fields as { data?: unknown } & Record<string, unknown>;
-  return rest;
+  const obj = { ...(fields as Record<string, unknown>) };
+  delete obj.data;
+  return obj;
 }
 
 function hasLayoutData(fields: unknown): fields is { data: { datasource?: unknown; externalFields?: unknown } } {

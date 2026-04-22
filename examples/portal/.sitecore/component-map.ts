@@ -38,6 +38,8 @@ import * as ColumnSplitter from 'src/components/sxa/ColumnSplitter';
 import * as ButtonNavigationclient from 'src/components/sxa/ButtonNavigation.client';
 import * as SubscriptionBanner from 'src/components/subscription-banner/SubscriptionBanner';
 import * as subscriptionbannerprops from 'src/components/subscription-banner/subscription-banner.props';
+import * as DownloadList from 'src/components/download-list/DownloadList';
+import * as downloadlistprops from 'src/components/download-list/download-list.props';
 import * as SubmissionFormDefaultdev from 'src/components/submission-form/SubmissionFormDefault.dev';
 import * as SubmissionFormCentereddev from 'src/components/submission-form/SubmissionFormCentered.dev';
 import * as SubmissionForm from 'src/components/submission-form/SubmissionForm';
@@ -323,6 +325,8 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['ButtonNavigation', { ...ButtonNavigationclient }],
   ['SubscriptionBanner', { ...SubscriptionBanner, componentType: 'client' }],
   ['subscription-banner', { ...subscriptionbannerprops }],
+  ['DownloadList', { ...DownloadList, componentType: 'client' }],
+  ['download-list', { ...downloadlistprops }],
   ['SubmissionFormDefault', { ...SubmissionFormDefaultdev }],
   ['SubmissionFormCentered', { ...SubmissionFormCentereddev }],
   ['SubmissionForm', { ...SubmissionForm }],

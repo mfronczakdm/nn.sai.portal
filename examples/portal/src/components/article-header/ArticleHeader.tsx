@@ -20,9 +20,12 @@ import { formatDateInUTC } from '@/utils/date-utils';
 import { Default as Icon } from '@/components/icon/Icon';
 import { StructuredData } from '@/components/structured-data/StructuredData';
 import { generateArticleSchema, generatePersonSchema } from '@/lib/structured-data/schema';
+import { normalizeImageFieldSrc, unwrapImageField } from '@/lib/sitecore-image-field';
+import { resolveArticleHeaderFields } from './article-header.fields';
 
 export const Default: React.FC<ArticleHeaderProps> = ({ fields, externalFields, page }) => {
-  const { imageRequired, eyebrowOptional } = fields;
+  const { imageRequired, eyebrowOptional } = resolveArticleHeaderFields(fields);
+  const heroImage = normalizeImageFieldSrc(unwrapImageField(imageRequired));
   const { pageHeaderTitle, pageReadTime, pageDisplayDate, pageAuthor } = externalFields || {};
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const headerRef = useRef<HTMLDivElement>(null);
@@ -71,7 +74,7 @@ export const Default: React.FC<ArticleHeaderProps> = ({ fields, externalFields, 
   }, []);
 
   if (fields) {
-    const parallaxStyle = imageRequired?.value?.src
+    const parallaxStyle = heroImage?.value?.src
       ? {
           transform: prefersReducedMotion
             ? 'none'
@@ -189,7 +192,7 @@ export const Default: React.FC<ArticleHeaderProps> = ({ fields, externalFields, 
       ? generateArticleSchema({
           headline: pageHeaderTitle.value,
           description: pageHeaderTitle.value,
-          image: imageRequired?.value?.src ? [imageRequired.value.src] : undefined,
+          image: heroImage?.value?.src ? [heroImage.value.src] : undefined,
           datePublished: pageDisplayDate?.value
             ? new Date(String(pageDisplayDate.value)).toISOString()
             : undefined,
@@ -240,10 +243,12 @@ export const Default: React.FC<ArticleHeaderProps> = ({ fields, externalFields, 
                 style={parallaxStyle}
               >
                 <ImageWrapper
-                  image={imageRequired}
+                  image={heroImage}
                   alt={titleText}
                   className="h-full w-full object-cover"
-                  wrapperClass="h-full w-full"
+                  wrapperClass="relative h-full w-full"
+                  width={1920}
+                  height={1080}
                   priority
                   sizes="(max-width: 768px) 100vw, 800px"
                   ref={imageRef}
@@ -352,10 +357,12 @@ export const Default: React.FC<ArticleHeaderProps> = ({ fields, externalFields, 
 
                   <figure className="@lg:col-span-6 relative z-10 col-span-2 mx-auto flex aspect-[16/9] w-full max-w-[800px] justify-center overflow-hidden rounded-[24px]">
                     <ImageWrapper
-                      image={imageRequired}
+                      image={heroImage}
                       alt={titleText}
                       className="h-full w-full object-cover "
-                      wrapperClass="w-full relative"
+                      wrapperClass="relative h-full w-full"
+                      width={1920}
+                      height={1080}
                       priority
                       sizes="(max-width: 768px) 100vw, 800px"
                       ref={imageRef}

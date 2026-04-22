@@ -1,6 +1,7 @@
 import { Field, ImageField, LinkField } from '@sitecore-content-sdk/nextjs';
 
 import { ComponentProps } from '@/lib/component-props';
+import type { JsonWrappedImageField } from '@/lib/sitecore-image-field';
 
 interface ArticleHeaderParams {
   [key: string]: any; // eslint-disable-line
@@ -26,7 +27,7 @@ export type AuthorItemFields = {
 };
 
 interface ArticleHeaderFields {
-  imageRequired?: ImageField;
+  imageRequired?: ImageField | JsonWrappedImageField;
   eyebrowOptional?: Field<string>;
   pageDisplayDate?: Field<string>;
   pageAuthor?: Field<string>;
@@ -39,9 +40,17 @@ interface ArticleHeaderExternalFields {
   pageAuthor?: { value: PersonItem };
 }
 
+/** Layout / GraphQL shape used by PageHeader and Content SDK (`fields.data.datasource`). */
+export type ArticleHeaderFieldsFromLayout = {
+  data: {
+    datasource?: Partial<ArticleHeaderFields>;
+    externalFields?: unknown;
+  };
+};
+
 export interface ArticleHeaderProps extends ComponentProps {
   params: ArticleHeaderParams;
-  fields: ArticleHeaderFields;
+  fields: ArticleHeaderFields | ArticleHeaderFieldsFromLayout;
   externalFields: ArticleHeaderExternalFields;
 }
 
