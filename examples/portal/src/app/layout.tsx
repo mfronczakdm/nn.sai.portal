@@ -1,18 +1,17 @@
 import './globals.css';
 
-import { Open_Sans } from 'next/font/google';
+import { Inter } from 'next/font/google';
 
-const openSans = Open_Sans({
-  weight: ['300', '400', '500', '600'],
-  variable: '--font-open-sans',
+const inter = Inter({
   subsets: ['latin', 'latin-ext'],
+  variable: '--font-inter',
   display: 'swap',
   preload: true,
 });
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={openSans.variable} suppressHydrationWarning>
+    <html lang="en" className={inter.variable} suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://edge-platform.sitecorecloud.io" />
         <link rel="icon" href="/favicon.ico" />

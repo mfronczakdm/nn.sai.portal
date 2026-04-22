@@ -41,7 +41,7 @@ export const MiniCart = ({ cartLink }: { cartLink: LinkField }) => {
         `}
       >
         <div className="pt-18 p-8 lg:pt-8">
-          <h2 className="mb-4 uppercase">{t(DICTIONARY_KEYS.MINI_CART_LABEL) || 'Your Cart'}</h2>
+          <h2 className="mb-4">{t(DICTIONARY_KEYS.MINI_CART_LABEL) || 'Your Cart'}</h2>
           <p className="mb-8">
             {t(DICTIONARY_KEYS.CART_EMPTY_LABEL) || 'Your cart is currently empty.'}
           </p>

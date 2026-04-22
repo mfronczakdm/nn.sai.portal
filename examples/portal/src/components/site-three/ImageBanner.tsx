@@ -25,7 +25,7 @@ export const Default = (props: ImageBannerProps) => {
     <section className={`relative py-16 ${props.params?.styles || ''}`} data-class-change>
       <div className="container px-4 mx-auto">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl lg:text-5xl uppercase mb-6">
+          <h2 className="text-2xl lg:text-5xl mb-6">
             <ContentSdkText field={props.fields?.Title} />
           </h2>
           <div className="text-lg">
@@ -70,7 +70,7 @@ export const Grid = (props: ImageBannerProps) => {
     <section className={`relative py-16 ${props.params?.styles || ''}`} data-class-change>
       <div className="container px-4 mx-auto">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl lg:text-5xl uppercase mb-6">
+          <h2 className="text-2xl lg:text-5xl mb-6">
             <ContentSdkText field={props.fields?.Title} />
           </h2>
           <div className="text-lg">
@@ -114,7 +114,7 @@ export const FullWidthRow = (props: ImageBannerProps) => {
     <section className={`relative py-16 ${props.params?.styles || ''}`} data-class-change>
       <div className="container px-4 mx-auto">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl lg:text-5xl uppercase mb-6">
+          <h2 className="text-2xl lg:text-5xl mb-6">
             <ContentSdkText field={props.fields?.Title} />
           </h2>
           <div className="text-lg">
@@ -158,7 +158,7 @@ export const SingleRowGrid = (props: ImageBannerProps) => {
     <section className={`relative py-16 ${props.params?.styles || ''}`} data-class-change>
       <div className="container px-4 mx-auto">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl lg:text-5xl uppercase mb-6">
+          <h2 className="text-2xl lg:text-5xl mb-6">
             <ContentSdkText field={props.fields?.Title} />
           </h2>
           <div className="text-lg">
@@ -202,7 +202,7 @@ export const Stacked = (props: ImageBannerProps) => {
     <section className={`relative py-16 ${props.params?.styles || ''}`} data-class-change>
       <div className="container px-4 mx-auto">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl lg:text-5xl uppercase mb-6">
+          <h2 className="text-2xl lg:text-5xl mb-6">
             <ContentSdkText field={props.fields?.Title} />
           </h2>
           <div className="text-lg">

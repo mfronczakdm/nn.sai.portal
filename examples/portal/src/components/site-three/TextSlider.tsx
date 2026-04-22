@@ -67,14 +67,14 @@ export const Default = (props: TextSliderProps) => {
       {/* hidden div - used to calculate repeats */}
       <h2
         ref={measureRef}
-        className="absolute top-0 invisible whitespace-nowrap uppercase text-3xl lg:text-7xl"
+        className="absolute top-0 invisible whitespace-nowrap text-3xl lg:text-7xl"
       >
         {phrase}
       </h2>
       {/* In editing mode, we want to show the text as is */}
       {(ready || page.mode.isEditing) && (
         <div
-          className="flex absolute top-1/2 -translate-y-1/2 animate-marquee will-change-transform whitespace-nowrap uppercase"
+          className="flex absolute top-1/2 -translate-y-1/2 animate-marquee will-change-transform whitespace-nowrap"
           style={{
             animationDuration: `${(Array(repeatCount).fill(phrase).join('').length / 5).toFixed(
               2

@@ -6,33 +6,11 @@ import { Field, ImageField, Page, AppPlaceholder } from '@sitecore-content-sdk/n
 import Scripts from 'src/Scripts';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import Providers from 'src/Providers';
-import { IBM_Plex_Sans, IBM_Plex_Mono } from 'next/font/google';
-import localFont from 'next/font/local';
+import { IBM_Plex_Mono } from 'next/font/google';
 import { DesignLibraryApp } from '@sitecore-content-sdk/nextjs';
 import componentMap from '.sitecore/component-map';
 import { generateOrganizationSchema, generateWebSiteSchema } from 'src/lib/structured-data/schema';
 import { StructuredData } from 'src/components/structured-data/StructuredData';
-
-const heading = localFont({
-  src: [
-    {
-      path: './assets/fonts/Boldonse-Regular.ttf',
-      weight: '400',
-      style: 'normal',
-    },
-  ],
-  variable: '--font-heading',
-  display: 'swap',
-  preload: true,
-});
-
-const body = IBM_Plex_Sans({
-  weight: ['400', '500', '600'],
-  variable: '--font-body',
-  subsets: ['latin', 'latin-ext'],
-  display: 'swap',
-  preload: true,
-});
 
 const accent = IBM_Plex_Mono({
   weight: ['400', '500', '600'],
@@ -83,7 +61,7 @@ const Layout = ({ page, baseUrl: baseUrlProp }: LayoutProps): JSX.Element => {
   const isPartialDesignEditing = route?.templateName === 'Partial Design';
   const mainClassPartialDesignEditing = isPartialDesignEditing ? 'partial-editing-mode' : '';
   const mainClassPageEditing = isEditing ? 'editing-mode' : 'prod-mode';
-  const classNamesMain = `${mainClassPageEditing} ${mainClassPartialDesignEditing} ${accent.variable} ${body.variable} ${heading.variable} main-layout`;
+  const classNamesMain = `${mainClassPageEditing} ${mainClassPartialDesignEditing} ${accent.variable} main-layout`;
 
   // Generate JSON-LD structured data for Organization and WebSite (use request-derived baseUrl when provided)
   const baseUrl = baseUrlProp ?? process.env.NEXT_PUBLIC_SITE_URL ?? '';

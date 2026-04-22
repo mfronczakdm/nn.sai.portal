@@ -349,7 +349,7 @@ export const HeaderSecondaryLinks = (props: LinkListProps): JSX.Element => {
 
     return (
       <div className={`flex flex-col gap-2 ${styles}`} id={id ? id : undefined} data-class-change>
-        <h2 className="text-sm font-(family-name:--font-accent) font-medium text-secondary-foreground uppercase">
+        <h2 className="text-sm font-(family-name:--font-accent) font-medium text-secondary-foreground">
           <Text field={datasource?.field?.title} />
         </h2>
         <ul className="flex flex-col gap-1">{list}</ul>

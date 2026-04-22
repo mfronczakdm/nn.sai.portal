@@ -32,21 +32,27 @@ export const Default = (props: HeaderSTProps) => {
   const { fields } = props;
 
   return (
-    <section className={`${props.params?.styles}`} data-class-change>
-      <div className="flex justify-between items-start">
+    <section
+      className={`sticky top-0 z-30 w-full border-b border-border/30 bg-background shadow-sm ${props.params?.styles ?? ''}`}
+      data-class-change
+    >
+      <div className="mx-auto flex w-full max-w-[100rem] items-center justify-between gap-4 px-4 sm:px-6 lg:gap-8 lg:px-8">
         <Link
           href="/"
-          className="relative flex justify-center items-center grow-0 shrink-0 w-24 lg:w-32 h-24 lg:h-32 p-4 lg:p-6 bg-transparent z-100"
+          className="relative z-10 flex shrink-0 grow-0 items-center justify-center self-stretch px-1 py-2 sm:px-2 lg:px-3 lg:py-3"
           prefetch={false}
         >
-          <ContentSdkImage field={props.fields?.Logo} className="w-full h-full object-contain" />
+          <ContentSdkImage
+            field={props.fields?.Logo}
+            className="h-14 w-auto object-contain sm:h-16 lg:h-20 max-w-[min(100%,300px)] sm:max-w-[min(100%,380px)] lg:max-w-[min(100%,460px)]"
+          />
         </Link>
 
         <div
-          className="relative flex [.partial-editing-mode_&]:flex-col-reverse justify-between items-start gap-10 grow max-w-7xl lg:px-4 bg-background"
+          className="relative flex min-h-[3.5rem] grow [.partial-editing-mode_&]:flex-col-reverse lg:min-h-[4.5rem] lg:max-w-7xl lg:flex-1 lg:items-center lg:justify-between lg:gap-10 lg:px-4"
           role="navigation"
         >
-          <ul className="hidden lg:flex flex-row lg:[.partial-editing-mode_&]:!flex-col text-left bg-background">
+          <ul className="hidden lg:flex flex-row lg:[.partial-editing-mode_&]:!flex-col text-left">
             <AppPlaceholder
               name={`header-navigation-${props.params?.DynamicPlaceholderId}`}
               rendering={props.rendering}

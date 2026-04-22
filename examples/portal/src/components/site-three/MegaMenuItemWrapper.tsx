@@ -78,7 +78,7 @@ export const MegaMenuBackButton = ({ menuId, children }: MegaMenuBackButtonProps
 
   return (
     <div
-      className="lg:hidden flex gap-4 items-center text-sm text-secondary-foreground **:font-(family-name:--font-heading) uppercase cursor-pointer"
+      className="lg:hidden flex gap-4 items-center text-sm text-secondary-foreground **:font-(family-name:--font-heading) cursor-pointer"
       onClick={() => setIsVisible(false)}
     >
       {children}

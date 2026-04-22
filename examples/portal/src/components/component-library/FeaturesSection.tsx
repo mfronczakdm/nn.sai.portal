@@ -1374,7 +1374,7 @@ export const FeaturesSection21 = (props: FeatureSectionProps): JSX.Element => {
     >
       <div className="container mx-auto">
         <div className={`fade-section fade-up ${isVisibleText ? 'is-visible' : ''}`} ref={textRef}>
-          <p className="text-xs font-semibold tracking-widest uppercase mb-4">
+          <p className="text-xs font-semibold tracking-widest mb-4">
             <ContentSdkText field={datasource.tagLine?.jsonValue} />
           </p>
           <h2 className="text-5xl font-medium">
@@ -1526,7 +1526,7 @@ export const FeaturesSection23 = (props: FeatureSectionProps): JSX.Element => {
             className={`fade-section fade-up ${isVisibleText ? 'is-visible' : ''}`}
             ref={textRef}
           >
-            <p className="text-xs font-semibold tracking-widest uppercase mb-4">
+            <p className="text-xs font-semibold tracking-widest mb-4">
               <ContentSdkText field={datasource.tagLine?.jsonValue} />
             </p>
             <h2 className="text-5xl font-medium mb-6">
@@ -1591,7 +1591,7 @@ export const FeaturesSection24 = (props: FeatureSectionProps): JSX.Element => {
             className={`fade-section fade-up ${isVisibleText ? 'is-visible' : ''}`}
             ref={textRef}
           >
-            <p className="text-xs font-semibold tracking-widest uppercase mb-4">
+            <p className="text-xs font-semibold tracking-widest mb-4">
               <ContentSdkText field={datasource.tagLine?.jsonValue} />
             </p>
             <h2 className="text-5xl font-medium mb-6">

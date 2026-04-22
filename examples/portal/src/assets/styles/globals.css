@@ -66,9 +66,9 @@
   --figma-automations-hero: Hero 1;
   --figma-automations-navigation: Style 1;
   --figma-automations-multipromo: Multi 1;
-  --font-family-heading: 'heading', 'heading Fallback';
-  --font-family-body: 'IBM Plex Sans', 'IBM Plex Sans Fallback';
-  --font-family-accent: 'IBM Plex Mono', 'IBM Plex Mono Fallback';
+  --font-family-heading: var(--font-inter), 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-family-body: var(--font-inter), 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-family-accent: var(--font-accent, var(--font-inter)), 'Inter', ui-sans-serif, system-ui, sans-serif;
   --font-size-xs: 12px;
   --font-size-sm: 14px;
   --font-size-base: 16px;

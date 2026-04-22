@@ -48,7 +48,7 @@ const PromoItem = ({ isHorizontal, ...promo }: PromoItemProps) => {
         className="w-full h-full aspect-square object-cover shadow-2xl"
       />
       <div>
-        <h3 className="text-xl lg:text-2xl mb-2 uppercase">
+        <h3 className="text-xl lg:text-2xl mb-2">
           <ContentSdkText field={heading?.jsonValue} />
         </h3>
         <p className="lg:text-lg mb-2">
@@ -76,7 +76,7 @@ export const Default = (props: MultiPromoProps) => {
       <section className={`relative ${props.params?.styles || ''}`} data-class-change>
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="mb-6 text-2xl lg:text-5xl uppercase">
+            <h2 className="mb-6 text-2xl lg:text-5xl">
               <ContentSdkText field={datasource?.title?.jsonValue} />
             </h2>
             <p className="text-lg">
@@ -111,7 +111,7 @@ export const Stacked = (props: MultiPromoProps) => {
         <div className="relative container mx-auto px-4 py-16 z-10">
           <div className={`${parentBasedGridClasses}`}>
             <div className="lg:[.multipromo-3-2_&]:col-start-1 lg:[.multipromo-2-3_&]:col-start-2 lg:col-start-2 [.multipromo-2-3_&]:text-right">
-              <h2 className="mb-6 text-2xl lg:text-5xl uppercase">
+              <h2 className="mb-6 text-2xl lg:text-5xl">
                 <ContentSdkText field={datasource?.title?.jsonValue} />
               </h2>
               <p className="text-lg">
@@ -149,7 +149,7 @@ export const SingleColumn = (props: MultiPromoProps) => {
       <section className={`relative ${props.params?.styles || ''}`} data-class-change>
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-2xl mb-16">
-            <h2 className="mb-6 text-2xl lg:text-5xl uppercase">
+            <h2 className="mb-6 text-2xl lg:text-5xl">
               <ContentSdkText field={datasource?.title?.jsonValue} />
             </h2>
             <p className="text-lg">

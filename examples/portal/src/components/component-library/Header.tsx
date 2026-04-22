@@ -70,7 +70,7 @@ const HeaderTemplate = (props: HeaderTemplateProps) => {
           ref={domRef}
         >
           <div>
-            <p className="text-xs font-semibold tracking-widest uppercase mb-4">
+            <p className="text-xs font-semibold tracking-widest mb-4">
               <ContentSdkText field={props.fields.Tagline} />
             </p>
             <h1 className="text-5xl font-medium mb-6">
@@ -163,7 +163,7 @@ export const Header9 = (props: HeaderProps) => {
           ref={domRef}
         >
           <div>
-            <p className="text-xs font-semibold tracking-widest uppercase mb-4">
+            <p className="text-xs font-semibold tracking-widest mb-4">
               <ContentSdkText field={props.fields.Tagline} />
             </p>
             <h1 className="text-6xl font-medium mb-6">
@@ -206,7 +206,7 @@ export const Header10 = (props: HeaderProps) => {
     <section className={`relative py-24 px-4 ${props.params.styles}`} data-class-change>
       <div className={`container mx-auto`}>
         <div className="max-w-3xl">
-          <p className="text-xs font-semibold tracking-widest uppercase mb-4">
+          <p className="text-xs font-semibold tracking-widest mb-4">
             <ContentSdkText field={props.fields.Tagline} />
           </p>
           <h2 className="text-4xl font-bold mb-6">

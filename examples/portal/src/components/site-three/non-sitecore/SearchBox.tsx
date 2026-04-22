@@ -83,7 +83,7 @@ export const SearchBox = ({ searchLink }: { searchLink: LinkField }) => {
         `}
       >
         <div className="pt-18 p-8 lg:pt-8">
-          <h2 className="mb-4 uppercase">{t(DICTIONARY_KEYS.SEARCH_LABEL) || 'Search'}</h2>
+          <h2 className="mb-4">{t(DICTIONARY_KEYS.SEARCH_LABEL) || 'Search'}</h2>
           <div className="flex gap-4">
             <input
               type="text"

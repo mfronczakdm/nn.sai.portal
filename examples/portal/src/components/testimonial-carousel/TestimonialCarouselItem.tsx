@@ -23,7 +23,7 @@ export const Default: React.FC<TestimonialCarouselItemProps> = (props) => {
             </svg>
             <Text
               tag="p"
-              className="text-primary text-sm font-semibold uppercase tracking-wide"
+              className="text-primary text-sm font-semibold tracking-wide"
               field={testimonialAttribution.jsonValue}
             />
           </div>

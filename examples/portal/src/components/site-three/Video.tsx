@@ -34,7 +34,7 @@ export function Default({ fields, params }: VideoComponentProps) {
     return (
       <section className={`relative lg:mt-16 lg:py-16 ${params.styles}`} data-class-change>
         <div className="container grid lg:grid-cols-2 gap-4 lg:gap-16 px-4 py-12 lg:py-16 mx-auto text-center lg:text-left">
-          <h3 className="text-xl lg:text-3xl leading-loose tracking-tight uppercase">
+          <h3 className="text-xl lg:text-3xl leading-loose tracking-tight">
             <ContentSdkText field={fields.title} />
           </h3>
           <div className="text-base lg:text-lg leading-8 tracking-normal">
@@ -68,7 +68,7 @@ export function TextCenter({ fields, params }: VideoComponentProps) {
     return (
       <section className={`relative ${params.styles}`} data-class-change>
         <div className="flex flex-col items-center gap-4 max-w-3xl px-4 py-12 lg:py-16 mx-auto text-center">
-          <h3 className="lg:px-10 text-xl lg:text-3xl leading-loose tracking-normal uppercase">
+          <h3 className="lg:px-10 text-xl lg:text-3xl leading-loose tracking-normal">
             <ContentSdkText field={fields.title} />
           </h3>
           <div className="text-base lg:text-lg leading-8 tracking-normal">

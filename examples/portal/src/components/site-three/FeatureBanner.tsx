@@ -48,7 +48,7 @@ export const Default = (props: FeatureBannerProps) => {
     <section className={`py-16 ${props?.params?.styles}`} data-class-change>
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row justify-between items-center gap-8 py-12 border-t border-b border-border">
-          <h2 className="text-2xl lg:text-5xl uppercase">
+          <h2 className="text-2xl lg:text-5xl">
             <ContentSdkText field={datasource?.title?.jsonValue} />
           </h2>
           <div className="flex flex-wrap lg:flex-nowrap justify-center items-start gap-8">
@@ -72,7 +72,7 @@ export const Vertical = (props: FeatureBannerProps) => {
     <section className={`py-16 ${props?.params?.styles}`} data-class-change>
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center gap-8 lg:gap-12 py-12 border-t border-b border-border">
-          <h2 className="text-2xl lg:text-5xl uppercase">
+          <h2 className="text-2xl lg:text-5xl">
             <ContentSdkText field={datasource?.title?.jsonValue} />
           </h2>
           <div className="flex flex-wrap lg:flex-nowrap justify-center items-start gap-10">
@@ -100,7 +100,7 @@ export const Accent = (props: FeatureBannerProps) => {
       <div className="bg-primary">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row justify-between items-center gap-8 py-12">
-            <h2 className="text-2xl lg:text-5xl uppercase">
+            <h2 className="text-2xl lg:text-5xl">
               <ContentSdkText field={datasource?.title?.jsonValue} />
             </h2>
             <div className="flex flex-wrap lg:flex-nowrap justify-center items-start gap-8">

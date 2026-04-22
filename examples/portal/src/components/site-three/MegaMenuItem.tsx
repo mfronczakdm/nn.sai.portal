@@ -82,7 +82,7 @@ export const Default = (props: MegaMenuItemProps) => {
             {t(DICTIONARY_KEYS.BACK_BUTTON_LABEL) || 'Back'}
           </MegaMenuBackButton>
 
-          <div className="text-2xl **:font-(family-name:--font-heading) uppercase pb-8">
+          <div className="text-2xl **:font-(family-name:--font-heading) pb-8">
             <AppPlaceholder
               name={`mega-menu-item-primary-links-${props.params?.DynamicPlaceholderId}`}
               rendering={props.rendering}
