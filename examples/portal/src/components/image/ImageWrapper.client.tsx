@@ -54,6 +54,8 @@ function peelValueForNextImage(value: Record<string, unknown>): Record<string, u
   delete imageValueRest.priority;
   delete imageValueRest.loading;
   delete imageValueRest.fetchPriority;
+  delete imageValueRest.src;
+  delete imageValueRest.alt;
   return imageValueRest;
 }
 
@@ -106,19 +108,25 @@ export default function ClientImage({ image, className, sizes, priority, ...rest
   const useBlurPlaceholder =
     typeof blurDataURLRest === 'string' && blurDataURLRest.startsWith('data:image');
 
+  const altFromRest =
+    typeof restWithoutBlur.alt === 'string' ? restWithoutBlur.alt.trim() : '';
+  const altText = altFromRest || String(image?.value?.alt ?? '');
+
   return (
     <NextImage
       ref={ref}
-      {...imageValueRest}
+      {...(imageValueRest as Partial<ImageProps>)}
       className={className}
       unoptimized={isUnoptimized}
       loader={isPicsum ? placeholderImageLoader : undefined}
       {...(useBlurPlaceholder
-        ? { placeholder: 'blur' as const, blurDataURL: blurDataURLRest }
+        ? { placeholder: 'blur' as const, blurDataURL: blurDataURLRest as string }
         : {})}
       sizes={sizes}
       {...(!image?.value?.width && isSvg ? { width: 16, height: 16 } : {})}
-      {...restWithoutBlur}
+      {...(restWithoutBlur as Partial<ImageProps>)}
+      src={src}
+      alt={altText}
       priority={imagePriority}
       fetchPriority={imageFetchPriority}
     />
