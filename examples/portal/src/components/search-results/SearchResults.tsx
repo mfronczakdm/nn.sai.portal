@@ -2,6 +2,7 @@
 
 import type { Dispatch, FC, SetStateAction } from 'react';
 import { useCallback, useEffect, useMemo, useState } from 'react';
+import Image from 'next/image';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import {
   ArrowUpRight,
@@ -88,7 +89,7 @@ const popularSearches = [
   'prior authorization',
   'find a doctor',
   'HSA vs FSA',
-  'mental health coverage',
+  'health of america',
   'EOB explained',
 ];
 
@@ -108,8 +109,8 @@ const featuredAnswers: FeaturedAnswer[] = [
     question: 'HSA vs FSA — what is the difference?',
     answer:
       'An HSA is paired with a qualified high-deductible plan and rolls over year to year. An FSA is offered through an employer and often has a “use it or lose it” rule for unused funds unless your plan allows rollover or grace periods.',
-    learnMoreHref: 'https://www.bcbs.com/the-health-of-america',
-    learnMoreLabel: 'Explore member resources',
+    learnMoreHref: 'https://www.bcbs.com/understanding-health-insurance',
+    learnMoreLabel: 'Understanding health insurance',
   },
   {
     id: 'fa-eob',
@@ -131,164 +132,174 @@ const featuredAnswers: FeaturedAnswer[] = [
   },
 ];
 
-const cardImage = (id: string) => `https://picsum.photos/seed/bcbs-${id}/800/520`;
+/** Unsplash — healthcare & benefits imagery for BCBS.com-style demo cards. */
+function unsplashPhoto(path: string) {
+  return `https://images.unsplash.com/${path}?auto=format&fit=crop&w=800&h=520&q=80`;
+}
+
+const defaultCardImage = unsplashPhoto('photo-1576091160399-112ba8d25d1d');
 
 const searchCatalog: SearchResultItem[] = [
   {
     id: '1',
-    imageSrc: cardImage('1'),
+    imageSrc: unsplashPhoto('photo-1576091160399-112ba8d25d1d'),
     isNew: true,
-    title: 'Understanding your health insurance coverage',
+    title: 'Understanding health insurance (BCBS.com)',
     description:
-      'Key terms like deductible, copay, coinsurance, and out-of-pocket maximum — and how they work together.',
+      'How deductibles, copays, coinsurance, and out-of-pocket maximums work — the same concepts members see explained on bcbs.com.',
     href: 'https://www.bcbs.com/understanding-health-insurance',
     contentType: 'article',
     topics: ['coverage', 'costs'],
     audiences: ['members'],
-    dateLabel: 'Updated 2025',
-    breadcrumb: ['Members', 'Coverage basics'],
-    matchTerms: ['benefits', 'deductible', 'copay'],
+    dateLabel: 'Member guide',
+    breadcrumb: ['Understanding health insurance', 'Basics'],
+    matchTerms: ['benefits', 'deductible', 'copay', 'bcbs', 'blue cross'],
   },
   {
     id: '2',
-    imageSrc: cardImage('2'),
+    imageSrc: unsplashPhoto('photo-1551288049-bebda4e38f71'),
     isNew: true,
     title: 'The Health of America Report®',
     description:
-      'Data-driven insights on affordability, access, and trends shaping healthcare in communities nationwide.',
+      'BCBS-commissioned research on affordability, chronic conditions, and access — aligned with the public Health of America hub on bcbs.com.',
     href: 'https://www.bcbs.com/the-health-of-america',
     contentType: 'tool',
     topics: ['news', 'about'],
     audiences: ['members', 'employers', 'brokers'],
-    dateLabel: 'Research hub',
-    breadcrumb: ['Insights', 'Research'],
+    dateLabel: 'Research',
+    breadcrumb: ['The Health of America', 'Data & insights'],
+    matchTerms: ['health of america', 'research', 'affordability', 'trends'],
   },
   {
     id: '3',
-    imageSrc: cardImage('3'),
+    imageSrc: unsplashPhoto('photo-1519494026892-80bbd2d6fd0d'),
     title: 'Healthcare access & health equity',
     description:
-      'How Blue Cross and Blue Shield companies are working to improve access to affordable, quality care.',
+      'How Blue Cross and Blue Shield companies advance equitable access to care — mirroring the Healthcare access themes on bcbs.com.',
     href: 'https://www.bcbs.com/healthcare-access',
     contentType: 'article',
     topics: ['care', 'about'],
     audiences: ['members', 'providers'],
-    breadcrumb: ['Our impact', 'Access'],
+    breadcrumb: ['Healthcare access', 'Equity'],
+    matchTerms: ['access', 'equity', 'community health', 'medicaid'],
   },
   {
     id: '4',
-    imageSrc: cardImage('4'),
-    title: 'Newsroom: industry updates and announcements',
+    imageSrc: unsplashPhoto('photo-1504711434969-e33886168f5c'),
+    title: 'BCBS.com Newsroom',
     description:
-      'Press releases, statements, and stories about innovation, policy, and community health programs.',
+      'Press releases, statements on federal policy, and stories about BCBS innovation and community programs — as published on bcbs.com/news.',
     href: 'https://www.bcbs.com/news',
     contentType: 'news',
     topics: ['news'],
     audiences: ['employers', 'brokers', 'providers'],
-    dateLabel: 'Latest',
-    breadcrumb: ['Company', 'News'],
+    dateLabel: 'Newsroom',
+    breadcrumb: ['News', 'Company updates'],
+    matchTerms: ['press', 'policy', 'announcement', 'advocacy'],
   },
   {
     id: '5',
-    imageSrc: cardImage('5'),
-    title: 'Employer solutions: benefits strategy',
+    imageSrc: unsplashPhoto('photo-1600880292203-757bb62b4baf'),
+    title: 'Employers: health benefits & workforce health',
     description:
-      'Resources for designing competitive benefits, controlling trend, and supporting workforce health.',
+      'Strategy, trend, and plan design topics for HR and benefits leaders — aligned with the Employers section of bcbs.com.',
     href: 'https://www.bcbs.com/employers',
     contentType: 'plan',
     topics: ['costs', 'coverage'],
     audiences: ['employers', 'brokers'],
-    breadcrumb: ['Employers', 'Solutions'],
-    matchTerms: ['self funded', 'level funded'],
+    breadcrumb: ['Employers', 'Benefits strategy'],
+    matchTerms: ['self funded', 'level funded', 'workplace', 'hr'],
   },
   {
     id: '6',
-    imageSrc: cardImage('6'),
-    title: 'Broker & consultant resources',
+    imageSrc: unsplashPhoto('photo-1521791136064-7986c2920216'),
+    title: 'Brokers & consultants: tools and plan highlights',
     description:
-      'Sales support, plan highlights, and educational materials to help clients choose the right coverage.',
+      'Materials to support renewals, RFPs, and client education — consistent with bcbs.com resources for brokers and consultants.',
     href: 'https://www.bcbs.com/brokers',
     contentType: 'form',
     topics: ['coverage'],
     audiences: ['brokers'],
-    breadcrumb: ['Brokers', 'Resources'],
+    breadcrumb: ['Brokers', 'Sales support'],
+    matchTerms: ['consultant', 'rfp', 'renewal', 'proposal'],
   },
   {
     id: '7',
-    imageSrc: cardImage('7'),
-    title: 'Clinical programs & care management',
+    imageSrc: unsplashPhoto('photo-1576091160550-2173dba999ef'),
+    title: 'Healthcare professionals & clinical collaboration',
     description:
-      'Programs that help members navigate complex conditions, transitions of care, and high-value networks.',
+      'Care management, quality, and network programs for clinicians and systems — reflecting bcbs.com provider-facing content.',
     href: 'https://www.bcbs.com/providers',
     contentType: 'article',
     topics: ['care'],
     audiences: ['providers', 'members'],
-    breadcrumb: ['Providers', 'Programs'],
-    matchTerms: ['prior authorization', 'utilization'],
+    breadcrumb: ['Providers', 'Clinical programs'],
+    matchTerms: ['prior authorization', 'utilization', 'value based care', 'hospital'],
   },
   {
     id: '8',
-    imageSrc: cardImage('8'),
-    title: 'Wellness & prevention: staying healthy year-round',
+    imageSrc: unsplashPhoto('photo-1571019613454-1cb2f99b2d8b'),
+    title: 'Wellness, prevention & healthy living',
     description:
-      'Preventive care benefits, screenings, vaccines, and lifestyle programs often available at no additional cost.',
+      'Preventive benefits, screenings, and lifestyle support many BCBS plans emphasize — tied to member wellness content on bcbs.com.',
     href: 'https://www.bcbs.com/understanding-health-insurance',
     contentType: 'article',
     topics: ['wellness', 'coverage'],
     audiences: ['members'],
-    breadcrumb: ['Members', 'Wellness'],
-    matchTerms: ['screening', 'vaccine', 'prevention'],
+    breadcrumb: ['Members', 'Prevention'],
+    matchTerms: ['screening', 'vaccine', 'prevention', 'fitness', 'mental health'],
   },
   {
     id: '9',
-    imageSrc: cardImage('9'),
-    title: 'Prescription drug coverage overview',
+    imageSrc: unsplashPhoto('photo-1587854692152-cbe660dbde88'),
+    title: 'Pharmacy & prescription drug benefits',
     description:
-      'Formularies, tiers, specialty medications, and how to estimate what you will pay at the pharmacy.',
+      'Formularies, tiers, specialty drugs, and pharmacy spend — how BCBS members navigate Rx coverage (see bcbs.com insurance basics).',
     href: 'https://www.bcbs.com/understanding-health-insurance',
     contentType: 'plan',
     topics: ['costs', 'care'],
     audiences: ['members'],
     breadcrumb: ['Members', 'Pharmacy'],
-    matchTerms: ['rx', 'drug', 'formulary'],
+    matchTerms: ['rx', 'drug', 'formulary', 'specialty pharmacy'],
   },
   {
     id: '10',
-    imageSrc: cardImage('10'),
-    title: 'Federal policy & advocacy',
+    imageSrc: unsplashPhoto('photo-1589829545856-d10d557cf95f'),
+    title: 'Federal policy, legislation & BCBS advocacy',
     description:
-      'BCBS perspectives on regulations and legislation that affect coverage stability and affordability.',
+      'How proposed rules and laws affect coverage and affordability — the type of policy perspective BCBS shares via bcbs.com and the Newsroom.',
     href: 'https://www.bcbs.com/news',
     contentType: 'news',
     topics: ['news', 'about'],
     audiences: ['employers', 'brokers'],
-    breadcrumb: ['Advocacy', 'Policy'],
+    breadcrumb: ['Advocacy', 'Federal policy'],
+    matchTerms: ['legislation', 'affordable care', 'cms', 'regulation'],
   },
   {
     id: '11',
-    imageSrc: cardImage('11'),
-    title: 'Find care: choosing a primary care clinician',
+    imageSrc: unsplashPhoto('photo-1505751172876-fa1923c5c528'),
+    title: 'Find a doctor, compare quality & network care',
     description:
-      'What to look for in a PCP, how referrals work in some plan types, and how to compare quality signals.',
+      'Choosing in-network clinicians, PCPs, and specialists — aligned with bcbs.com guidance on healthcare access and finding care.',
     href: 'https://www.bcbs.com/healthcare-access',
     contentType: 'provider',
     topics: ['care'],
     audiences: ['members'],
     breadcrumb: ['Members', 'Find care'],
-    matchTerms: ['doctor', 'pcp', 'specialist'],
+    matchTerms: ['doctor', 'pcp', 'specialist', 'network', 'telehealth'],
   },
   {
     id: '12',
-    imageSrc: cardImage('12'),
-    title: 'Transparency & billing: questions members ask most',
+    imageSrc: unsplashPhoto('photo-1450101499163-c8848c66ca85'),
+    title: 'Claims, EOBs & billing transparency',
     description:
-      'Surprise billing protections, good faith estimates, and where to go when a claim does not look right.',
+      'Reading an EOB, surprise-billing protections, and good-faith estimates — topics BCBS covers under understanding health insurance on bcbs.com.',
     href: 'https://www.bcbs.com/understanding-health-insurance',
     contentType: 'article',
     topics: ['costs'],
     audiences: ['members'],
-    breadcrumb: ['Members', 'Billing'],
-    matchTerms: ['surprise bill', 'no surprises'],
+    breadcrumb: ['Members', 'Claims & billing'],
+    matchTerms: ['surprise bill', 'no surprises', 'eob', 'claim'],
   },
 ];
 
@@ -502,13 +513,19 @@ function FacetSection({
 }
 
 function ResultCard({ item }: { item: SearchResultItem }) {
-  const img = item.imageSrc ?? cardImage(item.id);
+  const img = item.imageSrc ?? defaultCardImage;
   const rows = itemAttributeRows(item);
   return (
     <article className="group flex flex-col overflow-hidden rounded-default border border-border/80 bg-card shadow-sm transition-shadow hover:shadow-md">
       <a href={item.href} target="_blank" rel="noopener noreferrer" className="flex flex-1 flex-col text-inherit no-underline">
         <div className="relative aspect-[16/10] w-full overflow-hidden bg-muted">
-          <img src={img} alt="" className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]" />
+          <Image
+            src={img}
+            alt=""
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
+            className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+          />
           {item.isNew ? (
             <span className="absolute left-2 top-2 rounded-sm bg-primary px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-primary-foreground shadow">
               New
