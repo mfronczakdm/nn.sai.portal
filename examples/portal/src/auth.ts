@@ -55,7 +55,7 @@ export const authConfig = {
       if (user?.id) {
         token.sub = user.id;
       }
-      if (user?.taxonomy) {
+      if (user && typeof user.taxonomy === 'string' && user.taxonomy) {
         token.taxonomy = user.taxonomy;
       }
       return token;
@@ -64,7 +64,7 @@ export const authConfig = {
       if (session.user && token.sub) {
         session.user.id = token.sub;
       }
-      if (session.user && token.taxonomy) {
+      if (session.user && typeof token.taxonomy === 'string' && token.taxonomy) {
         session.user.taxonomy = token.taxonomy;
       }
       return session;
