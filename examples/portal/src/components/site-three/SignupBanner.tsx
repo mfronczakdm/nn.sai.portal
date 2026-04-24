@@ -137,9 +137,6 @@ export const BackgroundPrimary = (props: SignupBannerProps) => {
       className={`relative bg-primary overflow-hidden py-8 px-4 ${props.params.styles}`}
       data-class-change
     >
-      <div className="absolute bottom-8 lg:top-1/2 left-0 lg:-left-[16%] lg:-translate-y-1/2 bg-sound-waves bg-repeat lg:bg-no-repeat lg:bg-contain bg-center w-full h-20 lg:w-2/5 lg:h-auto lg:aspect-3/1"></div>
-      <div className="hidden lg:block absolute top-0 lg:top-1/2 right-0 lg:-right-[16%] lg:-translate-y-1/2 bg-sound-waves bg-repeat lg:bg-no-repeat lg:bg-contain bg-center w-1/2 lg:w-2/5 aspect-3/1"></div>
-
       <div className="relative container mx-auto pb-28 lg:py-16 text-center h-full flex flex-col justify-center z-20">
         <div className="lg:w-1/2 max-w-[38rem] mx-auto">
           <h3 className="lg:text-5xl text-2xl mb-4">
@@ -179,11 +176,11 @@ export const BackgroundDark = (props: SignupBannerProps) => {
 
   return (
     <section className={`relative bg-black py-8 px-4 ${props.params.styles}`} data-class-change>
-      <div className="absolute h-20 lg:h-auto bottom-8 left-0 right-0 lg:inset-0 mask-add mask-[var(--background-image-sound-waves),var(--background-image-sound-waves)] mask-[position:center] lg:mask-[position:-27%_50%,127%_50%] mask-size-[contain] lg:mask-size-[40%] lg:mask-no-repeat bg-primary z-10">
+      <div className="absolute inset-0 z-10 overflow-hidden">
         {fields?.Image && (
           <ContentSdkImage
             field={fields.Image}
-            className="w-full h-full object-cover mix-blend-multiply"
+            className="h-full w-full object-cover mix-blend-multiply"
           />
         )}
       </div>

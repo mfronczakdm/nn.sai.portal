@@ -103,7 +103,6 @@ export const Default = (props: FooterSTProps) => {
           />
         </div>
       </div>
-      <div className="h-20 lg:h-40 bg-sound-waves bg-contain bg-repeat bg-center my-12 lg:my-16"></div>
       <div className="container mx-auto px-4">
         <div className="flex flex-col gap-4 items-center lg:flex-row lg:justify-between">
           <SocialLinks fields={props.fields} />
@@ -154,7 +153,6 @@ export const LogoLeft = (props: FooterSTProps) => {
           </div>
         </div>
       </div>
-      <div className="h-10 lg:h-20 bg-sound-waves bg-[length:auto_200%] bg-repeat bg-top bg-center-x mt-12 lg:mt-16"></div>
     </section>
   );
 };
@@ -166,7 +164,6 @@ export const LogoRight = (props: FooterSTProps) => {
       style={{ backgroundImage: 'url("/footer-texture.webp")' }}
       data-class-change
     >
-      <div className="h-10 lg:h-20 bg-sound-waves bg-[length:auto_200%] bg-repeat bg-bottom bg-center-x mb-12 lg:mb-16"></div>
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2">
           <h2 className="lg:order-2 text-4xl lg:text-7xl mb-10 lg:mb-0 lg:text-right">
@@ -209,7 +206,6 @@ export const Centered = (props: FooterSTProps) => {
       style={{ backgroundImage: 'url("/footer-texture.webp")' }}
       data-class-change
     >
-      <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 h-20 lg:h-40 bg-sound-waves bg-contain bg-repeat bg-center filter invert opacity-75 z-10"></div>
       <div className="relative container mx-auto px-4 z-20">
         <div className="grid lg:grid-cols-3 lg:gap-4">
           <h2 className="text-4xl lg:text-5xl mb-10 lg:mb-0">
