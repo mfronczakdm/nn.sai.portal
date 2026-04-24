@@ -8,9 +8,8 @@ import {
   AppPlaceholder,
 } from '@sitecore-content-sdk/nextjs';
 import Link from 'next/link';
-import { SearchResults } from '@/components/search-results/SearchResults';
-
 import { MiniCart } from './non-sitecore/MiniCart';
+import { SearchBox } from './non-sitecore/SearchBox';
 import { ComponentProps } from 'lib/component-props';
 import componentMap from '.sitecore/component-map';
 import { MobileMenuWrapper } from './MobileMenuWrapper';
@@ -72,7 +71,7 @@ export const Default = (props: HeaderSTProps) => {
               </li>
               <li className="mr-auto lg:mr-0">
                 {props.params.showSearchBox ? (
-                  <SearchResults triggerClassName={navLinkClass} triggerLabel={fields?.SearchLink?.value?.text || 'Search'} />
+                  <SearchBox searchLink={fields?.SearchLink} />
                 ) : (
                   <ContentSdkLink
                     field={fields?.SearchLink}

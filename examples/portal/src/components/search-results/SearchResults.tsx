@@ -1,26 +1,26 @@
 'use client';
 
-import type { FC } from 'react';
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import FocusTrap from 'focus-trap-react';
+import type { Dispatch, FC, SetStateAction } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import {
   ArrowUpRight,
   ChevronDown,
-  Filter,
+  FileText,
+  Heart,
   Loader2,
   Search,
   Sparkles,
+  Users,
   X,
 } from 'lucide-react';
 
-import { useToggleWithClickOutside } from '@/hooks/useToggleWithClickOutside';
-import { cn } from '@/lib/utils';
+import type { ComponentProps } from '@/lib/component-props';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
-import { ScrollArea } from '@/components/ui/scroll-area';
-import { Separator } from '@/components/ui/separator';
+import { cn } from '@/lib/utils';
 
 /**
  * ——— Editable search data (links, Q&A, facets) ———
@@ -44,6 +44,10 @@ type SearchResultItem = {
   dateLabel?: string;
   breadcrumb?: string[];
   matchTerms?: string[];
+  /** Card hero image (editable per result) */
+  imageSrc?: string;
+  /** BCBS blue “new” ribbon on the card image */
+  isNew?: boolean;
 };
 
 type FeaturedAnswer = {
@@ -127,9 +131,13 @@ const featuredAnswers: FeaturedAnswer[] = [
   },
 ];
 
+const cardImage = (id: string) => `https://picsum.photos/seed/bcbs-${id}/800/520`;
+
 const searchCatalog: SearchResultItem[] = [
   {
     id: '1',
+    imageSrc: cardImage('1'),
+    isNew: true,
     title: 'Understanding your health insurance coverage',
     description:
       'Key terms like deductible, copay, coinsurance, and out-of-pocket maximum — and how they work together.',
@@ -143,6 +151,8 @@ const searchCatalog: SearchResultItem[] = [
   },
   {
     id: '2',
+    imageSrc: cardImage('2'),
+    isNew: true,
     title: 'The Health of America Report®',
     description:
       'Data-driven insights on affordability, access, and trends shaping healthcare in communities nationwide.',
@@ -155,6 +165,7 @@ const searchCatalog: SearchResultItem[] = [
   },
   {
     id: '3',
+    imageSrc: cardImage('3'),
     title: 'Healthcare access & health equity',
     description:
       'How Blue Cross and Blue Shield companies are working to improve access to affordable, quality care.',
@@ -166,6 +177,7 @@ const searchCatalog: SearchResultItem[] = [
   },
   {
     id: '4',
+    imageSrc: cardImage('4'),
     title: 'Newsroom: industry updates and announcements',
     description:
       'Press releases, statements, and stories about innovation, policy, and community health programs.',
@@ -178,6 +190,7 @@ const searchCatalog: SearchResultItem[] = [
   },
   {
     id: '5',
+    imageSrc: cardImage('5'),
     title: 'Employer solutions: benefits strategy',
     description:
       'Resources for designing competitive benefits, controlling trend, and supporting workforce health.',
@@ -190,6 +203,7 @@ const searchCatalog: SearchResultItem[] = [
   },
   {
     id: '6',
+    imageSrc: cardImage('6'),
     title: 'Broker & consultant resources',
     description:
       'Sales support, plan highlights, and educational materials to help clients choose the right coverage.',
@@ -201,6 +215,7 @@ const searchCatalog: SearchResultItem[] = [
   },
   {
     id: '7',
+    imageSrc: cardImage('7'),
     title: 'Clinical programs & care management',
     description:
       'Programs that help members navigate complex conditions, transitions of care, and high-value networks.',
@@ -213,6 +228,7 @@ const searchCatalog: SearchResultItem[] = [
   },
   {
     id: '8',
+    imageSrc: cardImage('8'),
     title: 'Wellness & prevention: staying healthy year-round',
     description:
       'Preventive care benefits, screenings, vaccines, and lifestyle programs often available at no additional cost.',
@@ -225,6 +241,7 @@ const searchCatalog: SearchResultItem[] = [
   },
   {
     id: '9',
+    imageSrc: cardImage('9'),
     title: 'Prescription drug coverage overview',
     description:
       'Formularies, tiers, specialty medications, and how to estimate what you will pay at the pharmacy.',
@@ -237,6 +254,7 @@ const searchCatalog: SearchResultItem[] = [
   },
   {
     id: '10',
+    imageSrc: cardImage('10'),
     title: 'Federal policy & advocacy',
     description:
       'BCBS perspectives on regulations and legislation that affect coverage stability and affordability.',
@@ -248,6 +266,7 @@ const searchCatalog: SearchResultItem[] = [
   },
   {
     id: '11',
+    imageSrc: cardImage('11'),
     title: 'Find care: choosing a primary care clinician',
     description:
       'What to look for in a PCP, how referrals work in some plan types, and how to compare quality signals.',
@@ -260,6 +279,7 @@ const searchCatalog: SearchResultItem[] = [
   },
   {
     id: '12',
+    imageSrc: cardImage('12'),
     title: 'Transparency & billing: questions members ask most',
     description:
       'Surprise billing protections, good faith estimates, and where to go when a claim does not look right.',
@@ -274,11 +294,9 @@ const searchCatalog: SearchResultItem[] = [
 
 export type SearchResultsProps = {
   className?: string;
-  /** Visible label on the header control */
-  triggerLabel?: string;
-  /** Additional classes for the header trigger (match your nav link styling) */
-  triggerClassName?: string;
-  /** Seed the search field when the panel opens */
+  /** When true, ignores `?q=` and uses `initialQuery` only (e.g. previews) */
+  disableUrlSync?: boolean;
+  /** Used when `disableUrlSync` is true */
   initialQuery?: string;
 };
 
@@ -331,6 +349,33 @@ function selectFeaturedAnswer(query: string): FeaturedAnswer | null {
   return best?.fa ?? null;
 }
 
+function itemMetadataLine(item: SearchResultItem): string {
+  const type = searchFacetLabels.contentType[item.contentType];
+  const when = item.dateLabel ?? 'Resource';
+  const trail = item.breadcrumb?.length ? item.breadcrumb.join(' · ') : '';
+  return trail ? `${type} · ${when} · ${trail}` : `${type} · ${when}`;
+}
+
+function itemAttributeRows(item: SearchResultItem) {
+  return [
+    {
+      label: 'Content type',
+      value: searchFacetLabels.contentType[item.contentType],
+      Icon: FileText,
+    },
+    {
+      label: 'Topic',
+      value: item.topics.map((t) => searchFacetLabels.topic[t]).join(', '),
+      Icon: Heart,
+    },
+    {
+      label: 'Audience',
+      value: item.audiences.map((a) => searchFacetLabels.audience[a]).join(', '),
+      Icon: Users,
+    },
+  ];
+}
+
 const contentTypes = Object.keys(searchFacetLabels.contentType) as SearchContentType[];
 const topics = Object.keys(searchFacetLabels.topic) as SearchTopic[];
 const audiences = Object.keys(searchFacetLabels.audience) as SearchAudience[];
@@ -339,6 +384,9 @@ function SearchFacetsPanel({
   selectedTypes,
   selectedTopics,
   selectedAudiences,
+  countsTypes,
+  countsTopics,
+  countsAudiences,
   onToggleType,
   onToggleTopic,
   onToggleAudience,
@@ -348,6 +396,9 @@ function SearchFacetsPanel({
   selectedTypes: Set<SearchContentType>;
   selectedTopics: Set<SearchTopic>;
   selectedAudiences: Set<SearchAudience>;
+  countsTypes: Record<SearchContentType, number>;
+  countsTopics: Record<SearchTopic, number>;
+  countsAudiences: Record<SearchAudience, number>;
   onToggleType: (key: SearchContentType) => void;
   onToggleTopic: (key: SearchTopic) => void;
   onToggleAudience: (key: SearchAudience) => void;
@@ -355,8 +406,8 @@ function SearchFacetsPanel({
   clearFilters: () => void;
 }) {
   return (
-    <div className="rounded-default border border-border/80 bg-card p-1 shadow-sm">
-      <div className="flex items-center justify-between px-3 py-2">
+    <div className="rounded-default border border-border/80 bg-card shadow-sm">
+      <div className="flex items-center justify-between border-b border-border/60 px-4 py-3">
         <span className="text-sm font-semibold text-secondary-foreground">Refine results</span>
         {activeFilterCount > 0 ? (
           <Button type="button" variant="ghost" size="sm" className="h-8 text-primary" onClick={clearFilters}>
@@ -364,62 +415,68 @@ function SearchFacetsPanel({
           </Button>
         ) : null}
       </div>
-      <Separator />
-      <ScrollArea className="max-h-[min(70vh,32rem)] pr-2">
-        <div className="px-3 pb-2">
-          <FacetSection title="Content type">
-            <div className="flex flex-col gap-2.5">
-              {contentTypes.map((key) => (
-                <label
-                  key={key}
-                  className="flex cursor-pointer items-start gap-2.5 text-sm text-foreground/90"
-                >
-                  <Checkbox
-                    checked={selectedTypes.has(key)}
-                    onCheckedChange={() => onToggleType(key)}
-                    className="mt-0.5"
-                  />
+      <div className="max-h-[min(70vh,40rem)] overflow-y-auto px-2">
+        <FacetSection title="Content type">
+          <div className="flex flex-col gap-2.5">
+            {contentTypes.map((key) => (
+              <label
+                key={key}
+                className="flex cursor-pointer items-start gap-2.5 text-sm text-foreground/90"
+              >
+                <Checkbox
+                  checked={selectedTypes.has(key)}
+                  onCheckedChange={() => onToggleType(key)}
+                  className="mt-0.5 border-primary data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground"
+                />
+                <span className="flex flex-1 flex-wrap items-baseline justify-between gap-x-1">
                   <span>{searchFacetLabels.contentType[key]}</span>
-                </label>
-              ))}
-            </div>
-          </FacetSection>
-          <FacetSection title="Topic">
-            <div className="flex flex-col gap-2.5">
-              {topics.map((key) => (
-                <label
-                  key={key}
-                  className="flex cursor-pointer items-start gap-2.5 text-sm text-foreground/90"
-                >
-                  <Checkbox
-                    checked={selectedTopics.has(key)}
-                    onCheckedChange={() => onToggleTopic(key)}
-                    className="mt-0.5"
-                  />
+                  <span className="text-xs tabular-nums text-muted-foreground">({countsTypes[key]})</span>
+                </span>
+              </label>
+            ))}
+          </div>
+        </FacetSection>
+        <FacetSection title="Topic">
+          <div className="flex flex-col gap-2.5">
+            {topics.map((key) => (
+              <label
+                key={key}
+                className="flex cursor-pointer items-start gap-2.5 text-sm text-foreground/90"
+              >
+                <Checkbox
+                  checked={selectedTopics.has(key)}
+                  onCheckedChange={() => onToggleTopic(key)}
+                  className="mt-0.5 border-primary data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground"
+                />
+                <span className="flex flex-1 flex-wrap items-baseline justify-between gap-x-1">
                   <span>{searchFacetLabels.topic[key]}</span>
-                </label>
-              ))}
-            </div>
-          </FacetSection>
-          <FacetSection title="Audience" defaultOpen={false}>
-            <div className="flex flex-col gap-2.5">
-              {audiences.map((key) => (
-                <label
-                  key={key}
-                  className="flex cursor-pointer items-start gap-2.5 text-sm text-foreground/90"
-                >
-                  <Checkbox
-                    checked={selectedAudiences.has(key)}
-                    onCheckedChange={() => onToggleAudience(key)}
-                    className="mt-0.5"
-                  />
+                  <span className="text-xs tabular-nums text-muted-foreground">({countsTopics[key]})</span>
+                </span>
+              </label>
+            ))}
+          </div>
+        </FacetSection>
+        <FacetSection title="Audience" defaultOpen={false}>
+          <div className="flex flex-col gap-2.5">
+            {audiences.map((key) => (
+              <label
+                key={key}
+                className="flex cursor-pointer items-start gap-2.5 text-sm text-foreground/90"
+              >
+                <Checkbox
+                  checked={selectedAudiences.has(key)}
+                  onCheckedChange={() => onToggleAudience(key)}
+                  className="mt-0.5 border-primary data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground"
+                />
+                <span className="flex flex-1 flex-wrap items-baseline justify-between gap-x-1">
                   <span>{searchFacetLabels.audience[key]}</span>
-                </label>
-              ))}
-            </div>
-          </FacetSection>
-        </div>
-      </ScrollArea>
+                  <span className="text-xs tabular-nums text-muted-foreground">({countsAudiences[key]})</span>
+                </span>
+              </label>
+            ))}
+          </div>
+        </FacetSection>
+      </div>
     </div>
   );
 }
@@ -435,33 +492,88 @@ function FacetSection({
 }) {
   return (
     <Collapsible defaultOpen={defaultOpen} className="border-b border-border/60 py-3 last:border-b-0">
-      <CollapsibleTrigger className="flex w-full items-center justify-between gap-2 py-1 text-left text-sm font-semibold text-secondary-foreground outline-none [&[data-state=open]_svg]:rotate-180">
+      <CollapsibleTrigger className="flex w-full items-center justify-between gap-2 py-2 text-left text-[11px] font-bold uppercase tracking-wider text-secondary-foreground outline-none [&[data-state=open]_svg]:rotate-180">
         {title}
         <ChevronDown className="size-4 shrink-0 text-primary transition-transform duration-200" />
       </CollapsibleTrigger>
-      <CollapsibleContent className="pt-2">{children}</CollapsibleContent>
+      <CollapsibleContent className="pt-1">{children}</CollapsibleContent>
     </Collapsible>
+  );
+}
+
+function ResultCard({ item }: { item: SearchResultItem }) {
+  const img = item.imageSrc ?? cardImage(item.id);
+  const rows = itemAttributeRows(item);
+  return (
+    <article className="group flex flex-col overflow-hidden rounded-default border border-border/80 bg-card shadow-sm transition-shadow hover:shadow-md">
+      <a href={item.href} target="_blank" rel="noopener noreferrer" className="flex flex-1 flex-col text-inherit no-underline">
+        <div className="relative aspect-[16/10] w-full overflow-hidden bg-muted">
+          <img src={img} alt="" className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]" />
+          {item.isNew ? (
+            <span className="absolute left-2 top-2 rounded-sm bg-primary px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-primary-foreground shadow">
+              New
+            </span>
+          ) : null}
+        </div>
+        <div className="flex flex-1 flex-col px-4 pb-4 pt-3">
+          <p className="text-xs text-muted-foreground">
+            {itemMetadataLine(item)
+              .split(' · ')
+              .map((part, i) => (
+                <span key={`${part}-${i}`}>
+                  {i > 0 ? <span className="mx-1 text-border">|</span> : null}
+                  {part}
+                </span>
+              ))}
+          </p>
+          <h3 className="mt-2 text-lg font-semibold leading-snug text-secondary-foreground group-hover:text-primary">
+            {item.title}
+          </h3>
+          <ul className="mt-3 space-y-2 text-sm">
+            {rows.map(({ label, value, Icon }) => (
+              <li key={label} className="flex gap-2">
+                <span className="mt-0.5 flex size-7 shrink-0 items-center justify-center rounded-full bg-secondary text-primary">
+                  <Icon className="size-3.5" aria-hidden />
+                </span>
+                <span>
+                  <span className="font-semibold text-secondary-foreground">{label}: </span>
+                  <span className="text-foreground/85">{value}</span>
+                </span>
+              </li>
+            ))}
+          </ul>
+          <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary">
+            Read more
+            <ArrowUpRight className="size-3.5" aria-hidden />
+          </span>
+        </div>
+      </a>
+    </article>
   );
 }
 
 export const SearchResults: FC<SearchResultsProps> = ({
   className,
-  triggerLabel = 'Search',
-  triggerClassName,
+  disableUrlSync = false,
   initialQuery = '',
 }) => {
-  const { isVisible, setIsVisible, ref } = useToggleWithClickOutside<HTMLDivElement>(false);
-  const [query, setQuery] = useState(initialQuery);
-  const [draft, setDraft] = useState(initialQuery);
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const qFromUrl = searchParams.get('q') ?? '';
+
+  const [query, setQuery] = useState(() =>
+    disableUrlSync ? normalizeQuery(initialQuery) : normalizeQuery(qFromUrl)
+  );
+  const [draft, setDraft] = useState(() => (disableUrlSync ? initialQuery : qFromUrl));
   const [sort, setSort] = useState<SortMode>('relevance');
   const [isSearching, setIsSearching] = useState(false);
-  const inputRef = useRef<HTMLInputElement>(null);
 
   const [selectedTypes, setSelectedTypes] = useState<Set<SearchContentType>>(new Set());
   const [selectedTopics, setSelectedTopics] = useState<Set<SearchTopic>>(new Set());
   const [selectedAudiences, setSelectedAudiences] = useState<Set<SearchAudience>>(new Set());
 
-  const toggle = useCallback(<T extends string>(set: React.Dispatch<React.SetStateAction<Set<T>>>, v: T) => {
+  const toggle = useCallback(<T extends string>(set: Dispatch<SetStateAction<Set<T>>>, v: T) => {
     set((prev) => {
       const next = new Set(prev);
       if (next.has(v)) next.delete(v);
@@ -471,27 +583,54 @@ export const SearchResults: FC<SearchResultsProps> = ({
   }, []);
 
   useEffect(() => {
-    if (!isVisible) return;
-    const prev = document.body.style.overflow;
-    document.body.style.overflow = 'hidden';
-    return () => {
-      document.body.style.overflow = prev;
-    };
-  }, [isVisible]);
+    if (disableUrlSync) return;
+    setDraft(qFromUrl);
+    setQuery(normalizeQuery(qFromUrl));
+  }, [disableUrlSync, qFromUrl]);
 
   useEffect(() => {
-    if (!isVisible) return;
-    setDraft(query);
-    const t = window.setTimeout(() => inputRef.current?.focus(), 50);
-    return () => window.clearTimeout(t);
-  }, [isVisible, query]);
-
-  useEffect(() => {
-    if (!isVisible) return;
     setIsSearching(true);
-    const t = window.setTimeout(() => setIsSearching(false), 220);
+    const t = window.setTimeout(() => setIsSearching(false), 200);
     return () => window.clearTimeout(t);
-  }, [query, selectedTypes, selectedTopics, selectedAudiences, sort, isVisible]);
+  }, [query, selectedTypes, selectedTopics, selectedAudiences, sort]);
+
+  const queryMatched = useMemo(
+    () => searchCatalog.filter((item) => itemMatchesQuery(item, query)),
+    [query]
+  );
+
+  const countsTypes = useMemo(() => {
+    const base = queryMatched.filter((item) => {
+      if (selectedTopics.size && !item.topics.some((t) => selectedTopics.has(t))) return false;
+      if (selectedAudiences.size && !item.audiences.some((a) => selectedAudiences.has(a))) return false;
+      return true;
+    });
+    return Object.fromEntries(
+      contentTypes.map((k) => [k, base.filter((i) => i.contentType === k).length])
+    ) as Record<SearchContentType, number>;
+  }, [queryMatched, selectedTopics, selectedAudiences]);
+
+  const countsTopics = useMemo(() => {
+    const base = queryMatched.filter((item) => {
+      if (selectedTypes.size && !selectedTypes.has(item.contentType)) return false;
+      if (selectedAudiences.size && !item.audiences.some((a) => selectedAudiences.has(a))) return false;
+      return true;
+    });
+    return Object.fromEntries(
+      topics.map((k) => [k, base.filter((i) => i.topics.includes(k)).length])
+    ) as Record<SearchTopic, number>;
+  }, [queryMatched, selectedTypes, selectedAudiences]);
+
+  const countsAudiences = useMemo(() => {
+    const base = queryMatched.filter((item) => {
+      if (selectedTypes.size && !selectedTypes.has(item.contentType)) return false;
+      if (selectedTopics.size && !item.topics.some((t) => selectedTopics.has(t))) return false;
+      return true;
+    });
+    return Object.fromEntries(
+      audiences.map((k) => [k, base.filter((i) => i.audiences.includes(k)).length])
+    ) as Record<SearchAudience, number>;
+  }, [queryMatched, selectedTypes, selectedTopics]);
 
   const filtered = useMemo(() => {
     const q = normalizeQuery(query);
@@ -532,19 +671,44 @@ export const SearchResults: FC<SearchResultsProps> = ({
     setSelectedAudiences(new Set());
   };
 
-  const runSearch = () => {
-    setQuery(normalizeQuery(draft));
-  };
+  const syncUrl = useCallback(
+    (qRaw: string) => {
+      if (disableUrlSync) return;
+      const trimmed = qRaw.trim();
+      const params = new URLSearchParams(searchParams.toString());
+      if (trimmed) params.set('q', trimmed);
+      else params.delete('q');
+      const qs = params.toString();
+      router.replace(qs ? `${pathname}?${qs}` : pathname, { scroll: false });
+    },
+    [disableUrlSync, pathname, router, searchParams]
+  );
+
+  const runSearch = useCallback(() => {
+    const trimmed = draft.trim();
+    setQuery(normalizeQuery(trimmed));
+    syncUrl(trimmed);
+  }, [draft, syncUrl]);
 
   const applyPopular = (term: string) => {
     setDraft(term);
     setQuery(normalizeQuery(term));
+    syncUrl(term);
+  };
+
+  const clearSearchField = () => {
+    setDraft('');
+    setQuery('');
+    syncUrl('');
   };
 
   const facetPanelProps = {
     selectedTypes,
     selectedTopics,
     selectedAudiences,
+    countsTypes,
+    countsTopics,
+    countsAudiences,
     onToggleType: (key: SearchContentType) => toggle(setSelectedTypes, key),
     onToggleTopic: (key: SearchTopic) => toggle(setSelectedTopics, key),
     onToggleAudience: (key: SearchAudience) => toggle(setSelectedAudiences, key),
@@ -552,305 +716,232 @@ export const SearchResults: FC<SearchResultsProps> = ({
     clearFilters,
   };
 
-  return (
-    <div ref={ref} className={cn('relative', className)}>
-      <button
-        type="button"
-        className={cn(
-          'block w-full p-4 text-left font-[family-name:var(--font-body)] font-normal text-secondary-foreground outline-none transition-colors hover:text-primary lg:w-auto',
-          triggerClassName
-        )}
-        aria-expanded={isVisible}
-        aria-haspopup="dialog"
-        onClick={() => setIsVisible((v) => !v)}
-      >
-        {triggerLabel}
-      </button>
+  const displayHeading = draft.trim() || qFromUrl.trim();
 
-      <div
-        className={cn(
-          'fixed inset-x-0 top-14 z-40 flex max-h-[calc(100dvh-3.5rem)] flex-col border-t border-border/40 bg-background/95 backdrop-blur-md transition-all duration-300 ease-out lg:absolute lg:inset-x-auto lg:left-1/2 lg:top-full lg:mt-2 lg:max-h-[min(85vh,820px)] lg:w-[min(100vw-2rem,72rem)] lg:-translate-x-1/2 lg:rounded-default lg:border lg:border-border/60 lg:shadow-xl',
-          isVisible ? 'pointer-events-auto translate-y-0 opacity-100' : 'pointer-events-none -translate-y-2 opacity-0'
-        )}
-        role="dialog"
-        aria-modal="true"
-        aria-label="Site search"
-      >
-        {isVisible ? (
-          <FocusTrap
-            focusTrapOptions={{
-              allowOutsideClick: true,
-              initialFocus: false,
-              fallbackFocus: '#search-results-panel',
-            }}
-          >
-            <div id="search-results-panel" className="flex min-h-0 flex-1 flex-col overflow-hidden">
-              <div className="relative border-b border-border/50 bg-secondary/40 px-4 py-4 sm:px-6">
+  return (
+    <section
+      className={cn('min-h-[60vh] bg-background pb-16 pt-6 sm:pt-8', className)}
+      aria-label="Search results"
+    >
+      <div className="mx-auto w-full max-w-[100rem] px-4 sm:px-6 lg:px-8">
+        <div className="rounded-default border border-border/70 bg-secondary/40 p-4 sm:p-5">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+            <div className="relative min-w-0 flex-1">
+              <Search
+                className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-primary"
+                aria-hidden
+              />
+              <input
+                type="search"
+                value={draft}
+                onChange={(e) => setDraft(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') {
+                    e.preventDefault();
+                    runSearch();
+                  }
+                }}
+                placeholder="Search articles, plans, tools, and news…"
+                className="h-12 w-full rounded-default border border-border bg-background pl-10 pr-10 text-sm text-foreground shadow-sm outline-none ring-primary/25 placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/25"
+                autoComplete="off"
+              />
+              {draft ? (
                 <button
                   type="button"
-                  className="absolute right-3 top-3 hidden rounded-default p-2 text-muted-foreground transition-colors hover:bg-background hover:text-foreground lg:inline-flex"
-                  aria-label="Close search"
-                  onClick={() => setIsVisible(false)}
+                  className="absolute right-2 top-1/2 -translate-y-1/2 rounded-default p-1.5 text-muted-foreground hover:bg-muted hover:text-foreground"
+                  aria-label="Clear search"
+                  onClick={clearSearchField}
                 >
-                  <X className="size-5" />
+                  <X className="size-4" />
                 </button>
-                <div className="flex flex-col gap-3 pr-10 sm:flex-row sm:items-center">
-                  <div className="relative flex-1">
-                    <Search
-                      className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-primary"
-                      aria-hidden
-                    />
-                    <input
-                      ref={inputRef}
-                      type="search"
-                      value={draft}
-                      onChange={(e) => setDraft(e.target.value)}
-                      onKeyDown={(e) => {
-                        if (e.key === 'Enter') {
-                          e.preventDefault();
-                          runSearch();
-                        }
-                      }}
-                      placeholder="Search articles, plans, tools, and news…"
-                      className={cn(
-                        'h-11 w-full rounded-default border border-border bg-background pl-10 pr-10 text-sm text-foreground shadow-sm outline-none ring-primary/30 placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/25'
-                      )}
-                      autoComplete="off"
-                    />
-                    {draft ? (
-                      <button
-                        type="button"
-                        className="absolute right-2 top-1/2 -translate-y-1/2 rounded-default p-1.5 text-muted-foreground hover:bg-muted hover:text-foreground"
-                        aria-label="Clear search"
-                        onClick={() => {
-                          setDraft('');
-                          setQuery('');
-                        }}
-                      >
-                        <X className="size-4" />
-                      </button>
-                    ) : null}
-                  </div>
-                  <div className="flex shrink-0 gap-2">
-                    <Button type="button" className="h-11 min-w-[5.5rem]" onClick={runSearch}>
-                      Search
-                    </Button>
-                    <Button
-                      type="button"
-                      variant="outline"
-                      size="icon"
-                      className="h-11 border-border text-secondary-foreground lg:hidden"
-                      aria-label="Close search"
-                      onClick={() => setIsVisible(false)}
-                    >
-                      <X className="size-4" />
-                    </Button>
-                  </div>
-                </div>
-                <div className="mt-3 flex flex-wrap items-center gap-2">
-                  <span className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
-                    Popular
-                  </span>
-                  {popularSearches.map((term) => (
-                    <button
-                      key={term}
-                      type="button"
-                      onClick={() => applyPopular(term)}
-                      className="rounded-full border border-border/80 bg-background px-3 py-1 text-xs font-medium text-secondary-foreground transition-colors hover:border-primary/40 hover:bg-secondary"
-                    >
-                      {term}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              <div className="flex min-h-0 flex-1 flex-col overflow-hidden lg:flex-row">
-                <aside className="hidden w-[min(100%,280px)] shrink-0 border-r border-border/50 bg-background p-4 lg:block">
-                  <SearchFacetsPanel {...facetPanelProps} />
-                </aside>
-
-                <main className="flex min-h-0 min-w-0 flex-1 flex-col overflow-hidden">
-                  <div className="border-b border-border/40 px-4 py-3 sm:px-6 lg:hidden">
-                    <Collapsible>
-                      <CollapsibleTrigger className="flex w-full items-center justify-center gap-2 rounded-default border border-border bg-secondary/30 px-3 py-2 text-sm font-semibold text-secondary-foreground">
-                        <Filter className="size-4 text-primary" />
-                        Filters
-                        {activeFilterCount > 0 ? (
-                          <Badge variant="secondary" className="ml-1 rounded-full">
-                            {activeFilterCount}
-                          </Badge>
-                        ) : null}
-                        <ChevronDown className="size-4 opacity-60" />
-                      </CollapsibleTrigger>
-                      <CollapsibleContent className="pt-3">
-                        <SearchFacetsPanel {...facetPanelProps} />
-                      </CollapsibleContent>
-                    </Collapsible>
-                  </div>
-
-                  <ScrollArea className="min-h-0 flex-1">
-                    <div className="space-y-4 px-4 py-4 sm:px-6 sm:py-6">
-                      {featured ? (
-                        <section
-                          className="relative overflow-hidden rounded-default border border-primary/25 bg-gradient-to-br from-secondary via-background to-secondary/60 p-5 shadow-sm"
-                          aria-labelledby="search-qa-heading"
-                        >
-                          <div className="absolute right-0 top-0 size-32 rounded-full bg-primary/5 blur-2xl" />
-                          <div className="relative flex items-start gap-3">
-                            <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/15 text-primary">
-                              <Sparkles className="size-5" aria-hidden />
-                            </div>
-                            <div className="min-w-0 flex-1 space-y-2">
-                              <p
-                                id="search-qa-heading"
-                                className="text-xs font-semibold uppercase tracking-wide text-primary"
-                              >
-                                Quick answer
-                              </p>
-                              <h2 className="text-lg font-semibold leading-snug text-secondary-foreground">
-                                {featured.question}
-                              </h2>
-                              <p className="text-sm leading-relaxed text-foreground/85">{featured.answer}</p>
-                              <a
-                                href={featured.learnMoreHref}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center gap-1 text-sm font-semibold text-primary hover:underline"
-                              >
-                                {featured.learnMoreLabel ?? 'Learn more'}
-                                <ArrowUpRight className="size-3.5" aria-hidden />
-                              </a>
-                            </div>
-                          </div>
-                        </section>
-                      ) : null}
-
-                      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-                        <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                          {isSearching ? (
-                            <Loader2 className="size-4 animate-spin text-primary" aria-hidden />
-                          ) : null}
-                          <span>
-                            <strong className="font-semibold text-foreground">{filtered.length}</strong>{' '}
-                            {filtered.length === 1 ? 'result' : 'results'}
-                            {normalizeQuery(query) ? (
-                              <>
-                                {' '}
-                                for &ldquo;
-                                <span className="text-foreground">{query.trim() || draft.trim()}</span>
-                                &rdquo;
-                              </>
-                            ) : (
-                              ' — browse or use filters'
-                            )}
-                          </span>
-                        </div>
-                        <label className="flex items-center gap-2 text-sm text-secondary-foreground">
-                          <span className="sr-only">Sort by</span>
-                          <span className="hidden sm:inline">Sort</span>
-                          <select
-                            value={sort}
-                            onChange={(e) => setSort(e.target.value as SortMode)}
-                            className="h-9 rounded-default border border-border bg-background px-2 text-sm outline-none ring-primary/20 focus:ring-2"
-                          >
-                            <option value="relevance">Best match</option>
-                            <option value="az">Title A–Z</option>
-                          </select>
-                        </label>
-                      </div>
-
-                      {activeFilterCount > 0 ? (
-                        <div className="flex flex-wrap gap-2">
-                          {[...selectedTypes].map((key) => (
-                            <Badge
-                              key={`t-${key}`}
-                              variant="secondary"
-                              className="cursor-pointer gap-1 pr-1.5 hover:bg-secondary/80"
-                              onClick={() => toggle(setSelectedTypes, key)}
-                            >
-                              {searchFacetLabels.contentType[key]}
-                              <X className="size-3" aria-hidden />
-                            </Badge>
-                          ))}
-                          {[...selectedTopics].map((key) => (
-                            <Badge
-                              key={`tp-${key}`}
-                              variant="secondary"
-                              className="cursor-pointer gap-1 pr-1.5 hover:bg-secondary/80"
-                              onClick={() => toggle(setSelectedTopics, key)}
-                            >
-                              {searchFacetLabels.topic[key]}
-                              <X className="size-3" aria-hidden />
-                            </Badge>
-                          ))}
-                          {[...selectedAudiences].map((key) => (
-                            <Badge
-                              key={`a-${key}`}
-                              variant="secondary"
-                              className="cursor-pointer gap-1 pr-1.5 hover:bg-secondary/80"
-                              onClick={() => toggle(setSelectedAudiences, key)}
-                            >
-                              {searchFacetLabels.audience[key]}
-                              <X className="size-3" aria-hidden />
-                            </Badge>
-                          ))}
-                        </div>
-                      ) : null}
-
-                      <ul className="space-y-3 pb-8">
-                        {filtered.map((item) => (
-                          <li key={item.id}>
-                            <a
-                              href={item.href}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="group block rounded-default border border-border/70 bg-card p-4 shadow-sm transition-all hover:border-primary/35 hover:shadow-md"
-                            >
-                              <div className="flex flex-wrap items-center gap-2">
-                                <Badge variant="outline" className="border-primary/30 text-xs text-primary">
-                                  {searchFacetLabels.contentType[item.contentType]}
-                                </Badge>
-                                {item.dateLabel ? (
-                                  <span className="text-xs text-muted-foreground">{item.dateLabel}</span>
-                                ) : null}
-                              </div>
-                              {item.breadcrumb?.length ? (
-                                <p className="mt-2 text-xs text-muted-foreground">
-                                  {item.breadcrumb.join(' · ')}
-                                </p>
-                              ) : null}
-                              <h3 className="mt-1 flex items-start justify-between gap-2 text-base font-semibold text-secondary-foreground group-hover:text-primary">
-                                <span className="min-w-0">{item.title}</span>
-                                <ArrowUpRight
-                                  className="mt-0.5 size-4 shrink-0 text-primary opacity-0 transition-opacity group-hover:opacity-100"
-                                  aria-hidden
-                                />
-                              </h3>
-                              <p className="mt-2 text-sm leading-relaxed text-foreground/80">{item.description}</p>
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
-
-                      {filtered.length === 0 ? (
-                        <div className="rounded-default border border-dashed border-border bg-muted/30 px-6 py-10 text-center">
-                          <p className="text-sm font-medium text-secondary-foreground">No matches for that combination.</p>
-                          <p className="mt-1 text-sm text-muted-foreground">
-                            Try clearing filters or a shorter phrase like &ldquo;coverage&rdquo; or &ldquo;news&rdquo;.
-                          </p>
-                          <Button type="button" variant="secondary" className="mt-4" onClick={clearFilters}>
-                            Clear filters
-                          </Button>
-                        </div>
-                      ) : null}
-                    </div>
-                  </ScrollArea>
-                </main>
-              </div>
+              ) : null}
             </div>
-          </FocusTrap>
-        ) : null}
+            <Button type="button" className="h-12 shrink-0 px-8" onClick={runSearch}>
+              Search
+            </Button>
+          </div>
+          <div className="mt-4 flex flex-wrap items-center gap-2 border-t border-border/50 pt-4">
+            <span className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Popular</span>
+            {popularSearches.map((term) => (
+              <button
+                key={term}
+                type="button"
+                onClick={() => applyPopular(term)}
+                className="rounded-full border border-border/80 bg-background px-3 py-1 text-xs font-medium text-secondary-foreground transition-colors hover:border-primary/40 hover:bg-card"
+              >
+                {term}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <header className="mt-10">
+          <h1 className="text-2xl font-semibold tracking-tight text-secondary-foreground sm:text-3xl">
+            {normalizeQuery(query) ? (
+              <>
+                Showing results for <span className="text-primary">&ldquo;{displayHeading}&rdquo;</span>
+              </>
+            ) : (
+              'Search resources'
+            )}
+          </h1>
+          <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+            Use the filters to narrow by content type, topic, or audience. Counts reflect how many items match your
+            search and other active filters.
+          </p>
+        </header>
+
+        <div className="mt-10 flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-12">
+          <aside className="w-full shrink-0 lg:sticky lg:top-28 lg:w-[min(100%,20rem)] xl:w-80">
+            <div className="hidden lg:block">
+              <SearchFacetsPanel {...facetPanelProps} />
+            </div>
+            <div className="lg:hidden">
+              <Collapsible defaultOpen={false}>
+                <CollapsibleTrigger className="flex w-full items-center justify-center gap-2 rounded-default border border-border bg-card px-4 py-3 text-sm font-semibold text-secondary-foreground shadow-sm">
+                  Filters
+                  {activeFilterCount > 0 ? (
+                    <Badge variant="secondary" className="rounded-full">
+                      {activeFilterCount}
+                    </Badge>
+                  ) : null}
+                  <ChevronDown className="size-4 text-primary opacity-80" />
+                </CollapsibleTrigger>
+                <CollapsibleContent className="pt-3">
+                  <SearchFacetsPanel {...facetPanelProps} />
+                </CollapsibleContent>
+              </Collapsible>
+            </div>
+          </aside>
+
+          <main className="min-w-0 flex-1">
+            {featured ? (
+              <section
+                className="relative overflow-hidden rounded-default border border-primary/25 bg-gradient-to-br from-secondary via-background to-secondary/60 p-5 shadow-sm"
+                aria-labelledby="search-qa-heading"
+              >
+                <div className="absolute right-0 top-0 size-40 rounded-full bg-primary/5 blur-3xl" />
+                <div className="relative flex items-start gap-3">
+                  <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/15 text-primary">
+                    <Sparkles className="size-5" aria-hidden />
+                  </div>
+                  <div className="min-w-0 flex-1 space-y-2">
+                    <p id="search-qa-heading" className="text-xs font-bold uppercase tracking-wider text-primary">
+                      Quick answer
+                    </p>
+                    <h2 className="text-lg font-semibold leading-snug text-secondary-foreground">{featured.question}</h2>
+                    <p className="text-sm leading-relaxed text-foreground/85">{featured.answer}</p>
+                    <a
+                      href={featured.learnMoreHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-sm font-semibold text-primary hover:underline"
+                    >
+                      {featured.learnMoreLabel ?? 'Learn more'}
+                      <ArrowUpRight className="size-3.5" aria-hidden />
+                    </a>
+                  </div>
+                </div>
+              </section>
+            ) : null}
+
+            <div
+              className={cn(
+                'flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between',
+                featured ? 'mt-8' : 'mt-0'
+              )}
+            >
+              <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                {isSearching ? <Loader2 className="size-4 shrink-0 animate-spin text-primary" aria-hidden /> : null}
+                <span>
+                  <strong className="font-semibold text-foreground">{filtered.length}</strong>{' '}
+                  {filtered.length === 1 ? 'result' : 'results'}
+                  {normalizeQuery(query) ? (
+                    <>
+                      {' '}
+                      for &ldquo;<span className="text-foreground">{displayHeading}</span>&rdquo;
+                    </>
+                  ) : (
+                    ' — browse the catalog or add filters'
+                  )}
+                </span>
+              </div>
+              <label className="flex items-center gap-2 text-sm text-secondary-foreground">
+                <span className="sr-only">Sort by</span>
+                <span className="hidden sm:inline">Sort</span>
+                <select
+                  value={sort}
+                  onChange={(e) => setSort(e.target.value as SortMode)}
+                  className="h-9 rounded-default border border-border bg-background px-2 text-sm outline-none ring-primary/20 focus:ring-2"
+                >
+                  <option value="relevance">Best match</option>
+                  <option value="az">Title A–Z</option>
+                </select>
+              </label>
+            </div>
+
+            {activeFilterCount > 0 ? (
+              <div className="mt-4 flex flex-wrap gap-2">
+                {[...selectedTypes].map((key) => (
+                  <Badge
+                    key={`t-${key}`}
+                    variant="secondary"
+                    className="cursor-pointer gap-1 pr-1.5 hover:bg-secondary/80"
+                    onClick={() => toggle(setSelectedTypes, key)}
+                  >
+                    {searchFacetLabels.contentType[key]}
+                    <X className="size-3" aria-hidden />
+                  </Badge>
+                ))}
+                {[...selectedTopics].map((key) => (
+                  <Badge
+                    key={`tp-${key}`}
+                    variant="secondary"
+                    className="cursor-pointer gap-1 pr-1.5 hover:bg-secondary/80"
+                    onClick={() => toggle(setSelectedTopics, key)}
+                  >
+                    {searchFacetLabels.topic[key]}
+                    <X className="size-3" aria-hidden />
+                  </Badge>
+                ))}
+                {[...selectedAudiences].map((key) => (
+                  <Badge
+                    key={`a-${key}`}
+                    variant="secondary"
+                    className="cursor-pointer gap-1 pr-1.5 hover:bg-secondary/80"
+                    onClick={() => toggle(setSelectedAudiences, key)}
+                  >
+                    {searchFacetLabels.audience[key]}
+                    <X className="size-3" aria-hidden />
+                  </Badge>
+                ))}
+              </div>
+            ) : null}
+
+            {filtered.length > 0 ? (
+              <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
+                {filtered.map((item) => (
+                  <ResultCard key={item.id} item={item} />
+                ))}
+              </div>
+            ) : (
+              <div className="mt-10 rounded-default border border-dashed border-border bg-muted/30 px-6 py-12 text-center">
+                <p className="text-sm font-medium text-secondary-foreground">No matches for that combination.</p>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  Try clearing filters or a shorter phrase like &ldquo;coverage&rdquo; or &ldquo;news&rdquo;.
+                </p>
+                <Button type="button" variant="secondary" className="mt-5" onClick={clearFilters}>
+                  Clear filters
+                </Button>
+              </div>
+            )}
+          </main>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
+
+export const Default = (props: ComponentProps) => (
+  <SearchResults className={typeof props.params?.styles === 'string' ? props.params.styles : undefined} />
+);

@@ -122,10 +122,10 @@ jest.mock('../../components/site-three/non-sitecore/MiniCart', () => ({
   ),
 }));
 
-jest.mock('../../components/search-results/SearchResults', () => ({
-  SearchResults: ({ triggerLabel }: any) => (
-    <div data-testid="search-results" data-trigger-label={triggerLabel}>
-      Search Results Component
+jest.mock('../../components/site-three/non-sitecore/SearchBox', () => ({
+  SearchBox: ({ searchLink }: any) => (
+    <div data-testid="search-box" data-search-link={searchLink?.value?.href}>
+      Search Box Component
     </div>
   ),
 }));
@@ -197,8 +197,8 @@ describe('HeaderST Component', () => {
       // With search box enabled
       render(<HeaderSTDefault {...headerSTPropsSearchBoxOnly} />);
 
-      expect(screen.getByTestId('search-results')).toBeInTheDocument();
-      expect(screen.getByTestId('search-results')).toHaveAttribute('data-trigger-label', 'Search');
+      expect(screen.getByTestId('search-box')).toBeInTheDocument();
+      expect(screen.getByTestId('search-box')).toHaveAttribute('data-search-link', '/search');
 
       // With search box disabled, should show link instead
       const { rerender } = render(<HeaderSTDefault {...headerSTPropsSearchBoxOnly} />);
@@ -371,7 +371,7 @@ describe('HeaderST Component', () => {
       render(<HeaderSTDefault {...propsWithoutSearchBox} />);
 
       // Should default to showing link instead of search box
-      expect(screen.queryByTestId('search-results')).not.toBeInTheDocument();
+      expect(screen.queryByTestId('search-box')).not.toBeInTheDocument();
     });
 
     it('handles missing showMiniCart parameter', () => {
