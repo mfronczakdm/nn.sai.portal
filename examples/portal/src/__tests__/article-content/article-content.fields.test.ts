@@ -110,4 +110,17 @@ describe('mergeArticleContentFields', () => {
     );
     expect(merged.pageTitle?.value).toBe('From route');
   });
+
+  it('resolves ArticleBody rich text field', () => {
+    const merged = mergeArticleContentFields(
+      {
+        ...base(),
+        fields: {
+          ArticleBody: { value: '<p>Body HTML</p>' } as Field<string>,
+        },
+      },
+      false,
+    );
+    expect(merged.ArticleBody?.value).toBe('<p>Body HTML</p>');
+  });
 });

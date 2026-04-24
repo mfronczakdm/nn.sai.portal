@@ -8,6 +8,7 @@ const FIELD_KEYS: (keyof ArticleContentFields)[] = [
   'pageHeaderTitle',
   'pageSummary',
   'pageSubtitle',
+  'ArticleBody',
 ];
 
 /** Accept legacy Sitecore / layout keys until templates and queries are fully renamed. */
@@ -17,6 +18,7 @@ const MIGRATION_ALIASES: Record<keyof ArticleContentFields, readonly string[]> =
   pageHeaderTitle: ['pageHeaderTitle', 'HeaderTitle'],
   pageSummary: ['pageSummary', 'Summary'],
   pageSubtitle: ['pageSubtitle', 'Subtitle'],
+  ArticleBody: ['ArticleBody'],
 };
 
 function hasText(field?: { value?: string | null }) {

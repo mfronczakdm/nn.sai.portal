@@ -1,7 +1,7 @@
 'use client';
 
 import type React from 'react';
-import { Text } from '@sitecore-content-sdk/nextjs';
+import { RichText, Text } from '@sitecore-content-sdk/nextjs';
 
 import { cn } from '@/lib/utils';
 
@@ -15,16 +15,15 @@ function hasText(field?: { value?: string | null }) {
 export const Default: React.FC<ArticleContentProps> = (props) => {
   const { params, page } = props;
   const isEditing = page.mode.isEditing;
-  const { pageTitle, pageShortTitle, pageHeaderTitle, pageSummary, pageSubtitle } = mergeArticleContentFields(
-    props,
-    isEditing,
-  );
+  const { pageTitle, pageShortTitle, pageHeaderTitle, pageSummary, pageSubtitle, ArticleBody } =
+    mergeArticleContentFields(props, isEditing);
 
   const hasPageHeaderTitle = hasText(pageHeaderTitle);
   const hasPageTitle = hasText(pageTitle);
   const hasPageShortTitle = hasText(pageShortTitle);
   const hasPageSubtitle = hasText(pageSubtitle);
   const hasPageSummary = hasText(pageSummary);
+  const hasArticleBody = Boolean(ArticleBody?.value?.trim());
 
   const primaryHeadline = hasPageHeaderTitle ? pageHeaderTitle : pageTitle;
   const showSecondaryPageTitle =
@@ -40,6 +39,7 @@ export const Default: React.FC<ArticleContentProps> = (props) => {
     hasPageTitle ||
     hasPageSubtitle ||
     hasPageSummary ||
+    hasArticleBody ||
     isEditing;
 
   if (!hasRenderableBlock) {
@@ -108,6 +108,17 @@ export const Default: React.FC<ArticleContentProps> = (props) => {
                 field={pageSummary}
                 className="text-foreground/90 font-body text-pretty whitespace-pre-wrap text-base leading-[1.75] md:text-lg md:leading-[1.7]"
               />
+            </div>
+          )}
+
+          {(hasArticleBody || isEditing) && ArticleBody && (
+            <div
+              className={cn(
+                'article-content__body text-foreground not-prose w-full max-w-3xl min-w-0',
+                (hasPageSummary || isEditing) && pageSummary && 'pt-6 md:pt-8',
+              )}
+            >
+              <RichText field={ArticleBody} />
             </div>
           )}
         </div>
