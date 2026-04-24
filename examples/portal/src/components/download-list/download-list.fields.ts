@@ -133,11 +133,50 @@ function normalizeFeaturedRows(raw: unknown): unknown[] {
   return [];
 }
 
+// FeaturedContent / multilist first; else datasource `children` (LinkList-style GraphQL).
 function pickFeaturedRaw(flat: Record<string, unknown>, ds: Record<string, unknown>): unknown {
-  const keys = ['featuredContent', 'FeaturedContent'] as const;
+  const featuredKeys = ['featuredContent', 'FeaturedContent'] as const;
+  for (const bag of [flat, ds]) {
+    for (const key of featuredKeys) {
+      if (bag[key] != null) return bag[key];
+    }
+  }
+  const childKeys = ['children', 'Children'] as const;
+  for (const bag of [flat, ds]) {
+    for (const key of childKeys) {
+      if (bag[key] != null) return bag[key];
+    }
+  }
+  return undefined;
+}
+
+function pickDownloadContentRaw(flat: Record<string, unknown>, ds: Record<string, unknown>): unknown {
+  const keys = ['DownloadContent', 'downloadContent'] as const;
   for (const bag of [flat, ds]) {
     for (const key of keys) {
       if (bag[key] != null) return bag[key];
+    }
+  }
+  return undefined;
+}
+
+/** Reads GraphQL document text from the Download Content field (single- or multi-line / GraphQL field shapes). */
+export function extractGraphqlQueryFromDownloadContentField(downloadContent: unknown): string | undefined {
+  if (downloadContent == null) return undefined;
+  if (typeof downloadContent === 'string') {
+    const t = downloadContent.trim();
+    return t || undefined;
+  }
+  const unwrapped = unwrapTextField(downloadContent as Field<string> | { jsonValue?: Field<string> });
+  if (unwrapped?.value != null && typeof unwrapped.value === 'string') {
+    const t = unwrapped.value.trim();
+    return t || undefined;
+  }
+  if (typeof downloadContent === 'object' && downloadContent !== null && 'value' in downloadContent) {
+    const v = (downloadContent as { value?: unknown }).value;
+    if (typeof v === 'string') {
+      const t = v.trim();
+      return t || undefined;
     }
   }
   return undefined;
@@ -152,12 +191,15 @@ export function resolveDownloadListFields(rawFields: unknown): DownloadListField
   const { title, subtitle } = pickTitleSubtitle(flat, ds);
   const merged = { ...ds, ...flat } as DownloadListFields;
   const featuredRaw = pickFeaturedRaw(flat, ds);
+  const downloadContentRaw = pickDownloadContentRaw(flat, ds);
 
   return {
     ...merged,
     title: title ?? merged.title,
     subtitle: subtitle ?? merged.subtitle,
     featuredContent: featuredRaw ?? merged.featuredContent,
+    DownloadContent: downloadContentRaw ?? merged.DownloadContent,
+    downloadContent: downloadContentRaw ?? merged.downloadContent,
   };
 }
 

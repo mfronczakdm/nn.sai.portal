@@ -1,13 +1,18 @@
 'use client';
 
 import type { FC } from 'react';
+import { useEffect, useState } from 'react';
 import { Download, FileArchive, FileSpreadsheet, FileText } from 'lucide-react';
 import { Link as ContentSdkLink, Text } from '@sitecore-content-sdk/nextjs';
 import type { LinkField } from '@sitecore-content-sdk/nextjs';
 
 import { cn } from '@/lib/utils';
 
-import { extractDownloadLinks, resolveDownloadListFields } from './download-list.fields';
+import {
+  extractDownloadLinks,
+  extractGraphqlQueryFromDownloadContentField,
+  resolveDownloadListFields,
+} from './download-list.fields';
 import type { DownloadListProps } from './download-list.props';
 
 function displayNameForLink(link: LinkField): string {
@@ -39,12 +44,67 @@ function renderFileGlyph(href: string, className: string) {
   return <FileText {...iconProps} />;
 }
 
+type PlanAssetsApiResponse = { fileNames?: string[] };
+
 export const Default: FC<DownloadListProps> = ({ fields, page }) => {
   const resolved = resolveDownloadListFields(fields);
   const links = extractDownloadLinks(resolved.featuredContent);
   const { isEditing } = page.mode;
 
-  if (!isEditing && links.length === 0) {
+  const downloadGraphqlQuery =
+    extractGraphqlQueryFromDownloadContentField(resolved.DownloadContent) ??
+    extractGraphqlQueryFromDownloadContentField(resolved.downloadContent);
+
+  const [planAssetFileNames, setPlanAssetFileNames] = useState<string[]>([]);
+  const [planAssetsFailed, setPlanAssetsFailed] = useState(false);
+  const [planAssetsFetched, setPlanAssetsFetched] = useState(false);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    if (!downloadGraphqlQuery) {
+      setPlanAssetFileNames([]);
+      setPlanAssetsFailed(false);
+      setPlanAssetsFetched(true);
+      return () => {
+        cancelled = true;
+      };
+    }
+
+    setPlanAssetsFetched(false);
+    fetch('/api/download-list/plan-assets', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ query: downloadGraphqlQuery }),
+    })
+      .then(async (r) => {
+        const json = (await r.json()) as PlanAssetsApiResponse;
+        if (!r.ok) throw new Error('plan-assets');
+        return json;
+      })
+      .then((json) => {
+        if (cancelled) return;
+        const names = json.fileNames;
+        setPlanAssetFileNames(Array.isArray(names) ? names : []);
+        setPlanAssetsFailed(false);
+      })
+      .catch(() => {
+        if (!cancelled) {
+          setPlanAssetFileNames([]);
+          setPlanAssetsFailed(true);
+        }
+      })
+      .finally(() => {
+        if (!cancelled) setPlanAssetsFetched(true);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [downloadGraphqlQuery]);
+
+  const hasPlanAssets = planAssetFileNames.length > 0;
+
+  if (!isEditing && links.length === 0 && planAssetsFetched && !hasPlanAssets) {
     return null;
   }
 
@@ -72,11 +132,39 @@ export const Default: FC<DownloadListProps> = ({ fields, page }) => {
           />
         )}
 
-        {links.length === 0 && isEditing && (
+        {!planAssetsFetched && links.length === 0 && !isEditing && (
+          <p className="text-muted-foreground mb-4 text-sm">Loading plan documents…</p>
+        )}
+
+        {links.length === 0 && !hasPlanAssets && planAssetsFetched && isEditing && (
           <p className="text-muted-foreground rounded-lg border border-dashed border-border bg-muted/30 p-4 text-sm">
-            Add items to <strong>FeaturedContent</strong> (each with a general / external link) to list
-            downloads here.
+            Add <strong>child items</strong> under this Download List (each with a general / external link),
+            or use <strong>FeaturedContent</strong>, to list downloads here.
           </p>
+        )}
+
+        {planAssetsFailed && isEditing && (
+          <p className="text-muted-foreground mb-4 rounded-lg border border-dashed border-border bg-muted/30 p-4 text-sm">
+            Plan asset GraphQL failed. Check the <strong>DownloadContent</strong> query, set{' '}
+            <code className="text-xs">BCBS_GRAPHQL_ENDPOINT</code> and <code className="text-xs">BCBS_GRAPHQL_TOKEN</code>{' '}
+            on the server, and review logs.
+          </p>
+        )}
+
+        {hasPlanAssets && (
+          <ul
+            className="mb-8 flex flex-col gap-0 rounded-xl border border-border bg-card shadow-sm"
+            aria-label="Plan documents from directory"
+          >
+            {planAssetFileNames.map((fileName, index) => (
+              <PlanAssetFileNameRow
+                key={fileName}
+                fileName={fileName}
+                isFirst={index === 0}
+                isLast={index === planAssetFileNames.length - 1}
+              />
+            ))}
+          </ul>
         )}
 
         {links.length > 0 && (
@@ -96,6 +184,31 @@ export const Default: FC<DownloadListProps> = ({ fields, page }) => {
     </section>
   );
 };
+
+function PlanAssetFileNameRow({
+  fileName,
+  isFirst,
+  isLast,
+}: {
+  fileName: string;
+  isFirst: boolean;
+  isLast: boolean;
+}) {
+  return (
+    <li
+      className={cn(
+        'border-border flex items-center gap-3 border-b p-4 text-sm last:border-b-0',
+        isFirst && 'rounded-t-xl',
+        isLast && 'rounded-b-xl',
+      )}
+    >
+      <span className="text-muted-foreground shrink-0" aria-hidden>
+        {renderFileGlyph(fileName, 'size-5')}
+      </span>
+      <span className="text-foreground min-w-0 flex-1 font-medium">{fileName}</span>
+    </li>
+  );
+}
 
 function DownloadRow({
   link,

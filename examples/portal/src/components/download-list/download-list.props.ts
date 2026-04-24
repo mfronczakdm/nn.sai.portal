@@ -9,8 +9,17 @@ export interface DownloadListParams {
 export interface DownloadListFields {
   title?: Field<string>;
   subtitle?: Field<string>;
-  /** Multilist / GraphQL list of items with general links — see `download-list.fields.ts`. */
+  /**
+   * Row source (either works):
+   * - `featuredContent` / multilist-style list, or
+   * - `children` on the datasource (child items with a general / external link), LinkList-style.
+   * @see `download-list.fields.ts`
+   */
   featuredContent?: unknown;
+  children?: unknown;
+  /** GraphQL query text (Sitecore GraphQL field); executed server-side via plan-assets API. */
+  DownloadContent?: Field<string> | unknown;
+  downloadContent?: Field<string> | unknown;
 }
 
 export type DownloadListFieldsFromLayout = {
