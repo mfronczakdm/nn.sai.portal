@@ -95,6 +95,32 @@ const popularSearches = [
 
 const featuredAnswers: FeaturedAnswer[] = [
   {
+    id: 'fa-claim-denial',
+    triggeredWhenQueryIncludes: ['claim denial', 'denied claim', 'claim denied', 'denial', 'appeal'],
+    question: 'What is a claim denial, and what can I do next?',
+    answer:
+      'A claim denial means your plan determined a service or charge is not payable as submitted — often due to coding, eligibility, network, or medical‑policy reasons. Review the denial notice and EOB, gather records your plan requests, and use the appeals or reconsideration process outlined in your member materials if you disagree.',
+    learnMoreHref: 'https://www.bcbs.com/understanding-health-insurance',
+    learnMoreLabel: 'Claims & member rights',
+  },
+  {
+    id: 'fa-ma',
+    triggeredWhenQueryIncludes: [
+      'medicare advantage',
+      'medicare',
+      'advantage',
+      'medicare part c',
+      'part c',
+      'ma plan',
+      'mapd',
+    ],
+    question: 'What is Medicare Advantage (Part C)?',
+    answer:
+      'Medicare Advantage is an alternative way to get Medicare Part A and Part B benefits through a private plan (such as an HMO or PPO) that contracts with Medicare. Plans often bundle drug coverage and extra benefits; networks and cost‑sharing differ from Original Medicare, so compare premiums, copays, and covered providers each year.',
+    learnMoreHref: 'https://www.bcbs.com/understanding-health-insurance',
+    learnMoreLabel: 'Medicare & plan basics',
+  },
+  {
     id: 'fa-pa',
     triggeredWhenQueryIncludes: ['prior', 'authorization', 'pre auth', 'precert'],
     question: 'What is prior authorization?',
@@ -293,13 +319,170 @@ const searchCatalog: SearchResultItem[] = [
     imageSrc: unsplashPhoto('photo-1450101499163-c8848c66ca85'),
     title: 'Claims, EOBs & billing transparency',
     description:
-      'Reading an EOB, surprise-billing protections, and good-faith estimates — topics BCBS covers under understanding health insurance on bcbs.com.',
+      'Reading an EOB, understanding a claim denial or partial denial, surprise-billing protections, and good-faith estimates — topics BCBS covers under understanding health insurance on bcbs.com.',
     href: 'https://www.bcbs.com/understanding-health-insurance',
     contentType: 'article',
     topics: ['costs'],
     audiences: ['members'],
     breadcrumb: ['Members', 'Claims & billing'],
-    matchTerms: ['surprise bill', 'no surprises', 'eob', 'claim'],
+    matchTerms: ['surprise bill', 'no surprises', 'eob', 'claim', 'denial', 'appeal'],
+  },
+  {
+    id: '13',
+    imageSrc: unsplashPhoto('photo-1576091160399-112ba8d25d1d'),
+    title: 'How to read a claim denial code',
+    description:
+      'Carrier reason codes explain why a claim denial was issued and what documentation may resolve it — use them with your provider’s billing office and your plan’s portal.',
+    href: 'https://www.bcbs.com/understanding-health-insurance',
+    contentType: 'article',
+    topics: ['costs', 'care'],
+    audiences: ['members', 'providers'],
+    breadcrumb: ['Claims', 'Denials'],
+    matchTerms: ['denial code', 'claim', 'reconsideration', 'clinical review'],
+  },
+  {
+    id: '14',
+    imageSrc: unsplashPhoto('photo-1589829545856-d10d557cf95f'),
+    title: 'Appealing a claim denial: timelines & levels',
+    description:
+      'Most plans use structured appeal levels after an initial claim denial; note deadlines, required forms, and independent review rights in your benefit booklet.',
+    href: 'https://www.bcbs.com/understanding-health-insurance',
+    contentType: 'form',
+    topics: ['costs', 'coverage'],
+    audiences: ['members'],
+    breadcrumb: ['Members', 'Appeals'],
+    matchTerms: ['appeal', 'claim denial', 'external review', 'grievance'],
+  },
+  {
+    id: '15',
+    imageSrc: unsplashPhoto('photo-1576091160550-2173dba999ef'),
+    title: 'Prior auth vs claim denial: avoiding confusion',
+    description:
+      'A prior authorization denial stops service before it happens; a claim denial applies after care is billed — each has different paperwork and next steps.',
+    href: 'https://www.bcbs.com/providers',
+    contentType: 'article',
+    topics: ['care', 'costs'],
+    audiences: ['members', 'providers'],
+    breadcrumb: ['Providers', 'Authorizations'],
+    matchTerms: ['prior auth', 'claim', 'denial', 'precert'],
+  },
+  {
+    id: '16',
+    imageSrc: unsplashPhoto('photo-1504711434969-e33886168f5c'),
+    title: 'Surprise bills, denials & the No Surprises Act',
+    description:
+      'When out-of-network emergency or air-ambulance claims are denied or balanced-billed, federal protections may apply — pair this with your state rules and EOB notes.',
+    href: 'https://www.bcbs.com/understanding-health-insurance',
+    contentType: 'news',
+    topics: ['costs', 'news'],
+    audiences: ['members', 'employers'],
+    breadcrumb: ['Policy', 'Surprise billing'],
+    matchTerms: ['no surprises', 'claim', 'denial', 'air ambulance'],
+  },
+  {
+    id: '17',
+    imageSrc: unsplashPhoto('photo-1587854692152-cbe660dbde88'),
+    title: 'Pharmacy claim denials & formulary exceptions',
+    description:
+      'Drug claims can be denied for formulary, quantity limits, or step therapy — your prescriber can request an exception when medically appropriate.',
+    href: 'https://www.bcbs.com/understanding-health-insurance',
+    contentType: 'plan',
+    topics: ['costs', 'care'],
+    audiences: ['members'],
+    breadcrumb: ['Pharmacy', 'Denials'],
+    matchTerms: ['rx claim', 'denial', 'formulary', 'prior authorization'],
+  },
+  {
+    id: '18',
+    imageSrc: unsplashPhoto('photo-1519494026892-80bbd2d6fd0d'),
+    title: 'Medicare Advantage vs Original Medicare',
+    description:
+      'Compare Medicare Advantage (Part C) networks, copays, and out-of-pocket caps with Original Medicare plus supplemental coverage before you enroll or switch.',
+    href: 'https://www.bcbs.com/understanding-health-insurance',
+    contentType: 'article',
+    topics: ['coverage', 'costs'],
+    audiences: ['members', 'brokers'],
+    breadcrumb: ['Medicare', 'Plan choice'],
+    matchTerms: ['medicare advantage', 'part c', 'supplement', 'open enrollment'],
+  },
+  {
+    id: '19',
+    imageSrc: unsplashPhoto('photo-1551288049-bebda4e38f71'),
+    title: 'Medicare Advantage star ratings & quality',
+    description:
+      'CMS star ratings summarize Medicare Advantage plan performance on outcomes and experience — use them alongside provider directories and drug coverage.',
+    href: 'https://www.bcbs.com/the-health-of-america',
+    contentType: 'tool',
+    topics: ['coverage', 'about'],
+    audiences: ['members', 'brokers'],
+    dateLabel: 'Guide',
+    breadcrumb: ['Medicare', 'Quality'],
+    matchTerms: ['medicare advantage', 'cms stars', 'part c', 'quality'],
+  },
+  {
+    id: '20',
+    imageSrc: unsplashPhoto('photo-1571019613454-1cb2f99b2d8b'),
+    title: 'Dual-eligible & Medicare Advantage D‑SNP basics',
+    description:
+      'Some Medicare Advantage plans serve people who also have Medicaid (D‑SNPs) with care coordination — eligibility and benefits vary by county and contract.',
+    href: 'https://www.bcbs.com/healthcare-access',
+    contentType: 'plan',
+    topics: ['coverage', 'care'],
+    audiences: ['members', 'brokers'],
+    breadcrumb: ['Medicare Advantage', 'Dual eligible'],
+    matchTerms: ['dsnp', 'medicare advantage', 'medicaid', 'part c'],
+  },
+  {
+    id: '21',
+    imageSrc: unsplashPhoto('photo-1521791136064-7986c2920216'),
+    title: 'Medicare Advantage open enrollment periods',
+    description:
+      'AEP, MA OEP, and special enrollment events govern when you can join or change Medicare Advantage coverage — missing a window can delay effective dates.',
+    href: 'https://www.bcbs.com/understanding-health-insurance',
+    contentType: 'article',
+    topics: ['coverage'],
+    audiences: ['members', 'brokers'],
+    breadcrumb: ['Medicare Advantage', 'Enrollment'],
+    matchTerms: ['aep', 'ma oep', 'medicare advantage', 'special enrollment'],
+  },
+  {
+    id: '22',
+    imageSrc: unsplashPhoto('photo-1587854692152-cbe660dbde88'),
+    title: 'Medicare Advantage prescription (MAPD) coverage',
+    description:
+      'Most Medicare Advantage enrollees choose a MAPD plan with Part D embedded — compare tiers, mail order, and preferred pharmacies each year.',
+    href: 'https://www.bcbs.com/understanding-health-insurance',
+    contentType: 'plan',
+    topics: ['costs', 'care'],
+    audiences: ['members'],
+    breadcrumb: ['Medicare Advantage', 'Drug coverage'],
+    matchTerms: ['mapd', 'part d', 'medicare advantage', 'formulary'],
+  },
+  {
+    id: '23',
+    imageSrc: unsplashPhoto('photo-1505751172876-fa1923c5c528'),
+    title: 'Travel & out-of-area care on Medicare Advantage',
+    description:
+      'Medicare Advantage plans use networks; understand urgent/emergency rules, visitor/travel benefits, and prior notification before you leave your service area.',
+    href: 'https://www.bcbs.com/healthcare-access',
+    contentType: 'article',
+    topics: ['coverage', 'care'],
+    audiences: ['members'],
+    breadcrumb: ['Medicare Advantage', 'Network'],
+    matchTerms: ['travel', 'urgent care', 'medicare advantage', 'network'],
+  },
+  {
+    id: '24',
+    imageSrc: unsplashPhoto('photo-1600880292203-757bb62b4baf'),
+    title: 'Employer retiree coverage & Medicare Advantage',
+    description:
+      'Retiree carve-outs sometimes steer to Medicare Advantage or group Medicare options — align HR communications with individual Medicare rights and disclosures.',
+    href: 'https://www.bcbs.com/employers',
+    contentType: 'plan',
+    topics: ['coverage', 'costs'],
+    audiences: ['employers', 'brokers'],
+    breadcrumb: ['Employers', 'Medicare Advantage'],
+    matchTerms: ['retiree', 'medicare advantage', 'group medicare', 'part c'],
   },
 ];
 
@@ -390,6 +573,9 @@ function itemAttributeRows(item: SearchResultItem) {
 const contentTypes = Object.keys(searchFacetLabels.contentType) as SearchContentType[];
 const topics = Object.keys(searchFacetLabels.topic) as SearchTopic[];
 const audiences = Object.keys(searchFacetLabels.audience) as SearchAudience[];
+
+/** Client-side page size for the result grid (3 columns × 3 rows at xl). */
+const RESULTS_PAGE_SIZE = 9;
 
 function SearchFacetsPanel({
   selectedTypes,
@@ -589,6 +775,7 @@ export const SearchResults: FC<SearchResultsProps> = ({
   const [selectedTypes, setSelectedTypes] = useState<Set<SearchContentType>>(new Set());
   const [selectedTopics, setSelectedTopics] = useState<Set<SearchTopic>>(new Set());
   const [selectedAudiences, setSelectedAudiences] = useState<Set<SearchAudience>>(new Set());
+  const [resultsPage, setResultsPage] = useState(1);
 
   const toggle = useCallback(<T extends string>(set: Dispatch<SetStateAction<Set<T>>>, v: T) => {
     set((prev) => {
@@ -609,6 +796,10 @@ export const SearchResults: FC<SearchResultsProps> = ({
     setIsSearching(true);
     const t = window.setTimeout(() => setIsSearching(false), 200);
     return () => window.clearTimeout(t);
+  }, [query, selectedTypes, selectedTopics, selectedAudiences, sort]);
+
+  useEffect(() => {
+    setResultsPage(1);
   }, [query, selectedTypes, selectedTopics, selectedAudiences, sort]);
 
   const queryMatched = useMemo(
@@ -676,6 +867,17 @@ export const SearchResults: FC<SearchResultsProps> = ({
     }
     return sorted;
   }, [query, selectedTypes, selectedTopics, selectedAudiences, sort]);
+
+  const resultsTotalPages = Math.max(1, Math.ceil(filtered.length / RESULTS_PAGE_SIZE));
+  const safeResultsPage = Math.min(resultsPage, resultsTotalPages);
+  const pagedResults = useMemo(() => {
+    const start = (safeResultsPage - 1) * RESULTS_PAGE_SIZE;
+    return filtered.slice(start, start + RESULTS_PAGE_SIZE);
+  }, [filtered, safeResultsPage]);
+
+  useEffect(() => {
+    if (resultsPage > resultsTotalPages) setResultsPage(resultsTotalPages);
+  }, [resultsPage, resultsTotalPages]);
 
   const featured = useMemo(() => selectFeaturedAnswer(query), [query]);
 
@@ -936,11 +1138,56 @@ export const SearchResults: FC<SearchResultsProps> = ({
             ) : null}
 
             {filtered.length > 0 ? (
-              <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
-                {filtered.map((item) => (
-                  <ResultCard key={item.id} item={item} />
-                ))}
-              </div>
+              <>
+                <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
+                  {pagedResults.map((item) => (
+                    <ResultCard key={item.id} item={item} />
+                  ))}
+                </div>
+                {filtered.length > RESULTS_PAGE_SIZE ? (
+                  <nav
+                    className="mt-8 flex flex-col items-stretch justify-between gap-4 border-t border-border/60 pt-6 sm:flex-row sm:items-center"
+                    aria-label="Paged search results"
+                  >
+                    <p className="text-sm text-muted-foreground">
+                      Showing{' '}
+                      <span className="font-semibold tabular-nums text-foreground">
+                        {(safeResultsPage - 1) * RESULTS_PAGE_SIZE + 1}
+                      </span>
+                      –
+                      <span className="font-semibold tabular-nums text-foreground">
+                        {Math.min(safeResultsPage * RESULTS_PAGE_SIZE, filtered.length)}
+                      </span>{' '}
+                      of <span className="font-semibold tabular-nums text-foreground">{filtered.length}</span>
+                    </p>
+                    <div className="flex flex-wrap items-center gap-2">
+                      <Button
+                        type="button"
+                        variant="outline"
+                        size="sm"
+                        className="min-w-[5.5rem]"
+                        disabled={safeResultsPage <= 1}
+                        onClick={() => setResultsPage((p) => Math.max(1, p - 1))}
+                      >
+                        Previous
+                      </Button>
+                      <span className="px-2 text-sm tabular-nums text-secondary-foreground">
+                        Page {safeResultsPage} of {resultsTotalPages}
+                      </span>
+                      <Button
+                        type="button"
+                        variant="outline"
+                        size="sm"
+                        className="min-w-[5.5rem]"
+                        disabled={safeResultsPage >= resultsTotalPages}
+                        onClick={() => setResultsPage((p) => Math.min(resultsTotalPages, p + 1))}
+                      >
+                        Next
+                      </Button>
+                    </div>
+                  </nav>
+                ) : null}
+              </>
             ) : (
               <div className="mt-10 rounded-default border border-dashed border-border bg-muted/30 px-6 py-12 text-center">
                 <p className="text-sm font-medium text-secondary-foreground">No matches for that combination.</p>
