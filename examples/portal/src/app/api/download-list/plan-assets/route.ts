@@ -1,9 +1,14 @@
 import { NextResponse } from 'next/server';
 
+import { auth } from '@/auth';
 import {
   assertDownloadListGraphqlQueryOk,
   fetchPlanAssetFileNamesForGraphqlQuery,
 } from '@/lib/download-list-bcbs-assets';
+import {
+  DOWNLOAD_LIST_TAXONOMY_VARIABLE,
+  downloadListQueryUsesTaxonomyVariable,
+} from '@/lib/download-list-graphql-session';
 
 type PostBody = { query?: unknown };
 
@@ -25,8 +30,19 @@ export async function POST(request: Request): Promise<NextResponse> {
     return NextResponse.json({ fileNames: [] });
   }
 
+  const needsTaxonomy = downloadListQueryUsesTaxonomyVariable(query);
+  let variables: Record<string, string> | undefined;
+  if (needsTaxonomy) {
+    const session = await auth();
+    const taxonomy = session?.user?.taxonomy?.trim();
+    if (!taxonomy) {
+      return NextResponse.json({ fileNames: [], error: 'missing_taxonomy' });
+    }
+    variables = { [DOWNLOAD_LIST_TAXONOMY_VARIABLE]: taxonomy };
+  }
+
   try {
-    const fileNames = await fetchPlanAssetFileNamesForGraphqlQuery(query);
+    const fileNames = await fetchPlanAssetFileNamesForGraphqlQuery(query, variables);
     return NextResponse.json({ fileNames });
   } catch (e) {
     console.error('[api/download-list/plan-assets]', e);

@@ -2,6 +2,7 @@
 
 import type { FC } from 'react';
 import { useEffect, useState } from 'react';
+import { useSession } from 'next-auth/react';
 import { Download, FileArchive, FileSpreadsheet, FileText } from 'lucide-react';
 import { Link as ContentSdkLink, Text } from '@sitecore-content-sdk/nextjs';
 import type { LinkField } from '@sitecore-content-sdk/nextjs';
@@ -44,12 +45,15 @@ function renderFileGlyph(href: string, className: string) {
   return <FileText {...iconProps} />;
 }
 
-type PlanAssetsApiResponse = { fileNames?: string[] };
+type PlanAssetsApiResponse = { fileNames?: string[]; error?: string };
 
 export const Default: FC<DownloadListProps> = ({ fields, page }) => {
+  const { data: session, status: sessionStatus } = useSession();
   const resolved = resolveDownloadListFields(fields);
   const links = extractDownloadLinks(resolved.featuredContent);
   const { isEditing } = page.mode;
+
+  const sessionTaxonomy = session?.user?.taxonomy ?? '';
 
   const downloadGraphqlQuery =
     extractGraphqlQueryFromDownloadContentField(resolved.DownloadContent) ??
@@ -57,6 +61,7 @@ export const Default: FC<DownloadListProps> = ({ fields, page }) => {
 
   const [planAssetFileNames, setPlanAssetFileNames] = useState<string[]>([]);
   const [planAssetsFailed, setPlanAssetsFailed] = useState(false);
+  const [planAssetsMissingTaxonomy, setPlanAssetsMissingTaxonomy] = useState(false);
   const [planAssetsFetched, setPlanAssetsFetched] = useState(false);
 
   useEffect(() => {
@@ -65,7 +70,15 @@ export const Default: FC<DownloadListProps> = ({ fields, page }) => {
     if (!downloadGraphqlQuery) {
       setPlanAssetFileNames([]);
       setPlanAssetsFailed(false);
+      setPlanAssetsMissingTaxonomy(false);
       setPlanAssetsFetched(true);
+      return () => {
+        cancelled = true;
+      };
+    }
+
+    if (sessionStatus === 'loading') {
+      setPlanAssetsFetched(false);
       return () => {
         cancelled = true;
       };
@@ -86,11 +99,13 @@ export const Default: FC<DownloadListProps> = ({ fields, page }) => {
         if (cancelled) return;
         const names = json.fileNames;
         setPlanAssetFileNames(Array.isArray(names) ? names : []);
+        setPlanAssetsMissingTaxonomy(json.error === 'missing_taxonomy');
         setPlanAssetsFailed(false);
       })
       .catch(() => {
         if (!cancelled) {
           setPlanAssetFileNames([]);
+          setPlanAssetsMissingTaxonomy(false);
           setPlanAssetsFailed(true);
         }
       })
@@ -100,7 +115,7 @@ export const Default: FC<DownloadListProps> = ({ fields, page }) => {
     return () => {
       cancelled = true;
     };
-  }, [downloadGraphqlQuery]);
+  }, [downloadGraphqlQuery, sessionTaxonomy, sessionStatus]);
 
   const hasPlanAssets = planAssetFileNames.length > 0;
 
@@ -140,6 +155,14 @@ export const Default: FC<DownloadListProps> = ({ fields, page }) => {
           <p className="text-muted-foreground rounded-lg border border-dashed border-border bg-muted/30 p-4 text-sm">
             Add <strong>child items</strong> under this Download List (each with a general / external link),
             or use <strong>FeaturedContent</strong>, to list downloads here.
+          </p>
+        )}
+
+        {planAssetsMissingTaxonomy && isEditing && (
+          <p className="text-muted-foreground mb-4 rounded-lg border border-dashed border-border bg-muted/30 p-4 text-sm">
+            This query uses <code className="text-xs">$taxonomy</code>. Sign in with a profile that includes{' '}
+            <strong>taxonomy</strong> (see NextAuth session), or remove <code className="text-xs">$taxonomy</code> from the
+            query for anonymous previews.
           </p>
         )}
 

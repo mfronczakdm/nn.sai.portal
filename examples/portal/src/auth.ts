@@ -21,10 +21,12 @@ const credentialsProvider = Credentials({
     }
 
     if (username === expectedUser && password === expectedPass) {
+      const taxonomy = process.env.AUTH_DEMO_TAXONOMY?.trim();
       return {
         id: username,
         name: username,
         email: `${username}@users.invalid`,
+        ...(taxonomy ? { taxonomy } : {}),
       };
     }
 
@@ -53,11 +55,17 @@ export const authConfig = {
       if (user?.id) {
         token.sub = user.id;
       }
+      if (user?.taxonomy) {
+        token.taxonomy = user.taxonomy;
+      }
       return token;
     },
     session({ session, token }) {
       if (session.user && token.sub) {
         session.user.id = token.sub;
+      }
+      if (session.user && token.taxonomy) {
+        session.user.taxonomy = token.taxonomy;
       }
       return session;
     },

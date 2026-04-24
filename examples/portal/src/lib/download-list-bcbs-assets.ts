@@ -41,7 +41,22 @@ export function assertDownloadListGraphqlQueryOk(query: string): string | null {
   return null;
 }
 
-export async function fetchPlanAssetFileNamesForGraphqlQuery(query: string): Promise<string[]> {
+function buildGraphqlRequestBody(
+  query: string,
+  variables?: Record<string, unknown> | null,
+): Record<string, unknown> {
+  const trimmed = query.trim();
+  const body: Record<string, unknown> = { query: trimmed };
+  if (variables && Object.keys(variables).length > 0) {
+    body.variables = variables;
+  }
+  return body;
+}
+
+export async function fetchPlanAssetFileNamesForGraphqlQuery(
+  query: string,
+  variables?: Record<string, unknown> | null,
+): Promise<string[]> {
   const url = process.env.BCBS_GRAPHQL_ENDPOINT?.trim();
   const token = process.env.BCBS_GRAPHQL_TOKEN?.trim();
   const validation = assertDownloadListGraphqlQueryOk(query);
@@ -55,7 +70,7 @@ export async function fetchPlanAssetFileNamesForGraphqlQuery(query: string): Pro
       'Content-Type': 'application/json',
       'X-GQL-tOKEN': token,
     },
-    body: JSON.stringify({ query: query.trim() }),
+    body: JSON.stringify(buildGraphqlRequestBody(query, variables)),
     cache: 'no-store',
   });
 
