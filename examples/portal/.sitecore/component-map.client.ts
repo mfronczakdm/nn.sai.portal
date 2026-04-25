@@ -32,6 +32,7 @@ import * as FeatureBanner from 'src/components/site-three/FeatureBanner';
 import * as AccordionBlock from 'src/components/site-three/AccordionBlock';
 import * as SearchBox from 'src/components/site-three/non-sitecore/SearchBox';
 import * as MiniCart from 'src/components/site-three/non-sitecore/MiniCart';
+import * as DemoUserSwitcher from 'src/components/site-three/non-sitecore/DemoUserSwitcher';
 import * as SecondaryNavigation from 'src/components/secondary-navigation/SecondaryNavigation';
 import * as SearchResults from 'src/components/search-results/SearchResults';
 import * as SearchExperienceLoadMore from 'src/components/search-experience/SearchExperience.LoadMore';
@@ -163,6 +164,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['AccordionBlock', { ...AccordionBlock }],
   ['SearchBox', { ...SearchBox }],
   ['MiniCart', { ...MiniCart }],
+  ['DemoUserSwitcher', { ...DemoUserSwitcher }],
   ['SecondaryNavigation', { ...SecondaryNavigation }],
   ['SearchResults', { ...SearchResults }],
   ['SearchExperience', { ...SearchExperienceLoadMore, ...SearchExperience }],

@@ -10,6 +10,7 @@ import {
 import Link from 'next/link';
 import { MiniCart } from './non-sitecore/MiniCart';
 import { SearchBox } from './non-sitecore/SearchBox';
+import { DemoUserSwitcher } from './non-sitecore/DemoUserSwitcher';
 import { ComponentProps } from 'lib/component-props';
 import componentMap from '.sitecore/component-map';
 import { MobileMenuWrapper } from './MobileMenuWrapper';
@@ -62,6 +63,9 @@ export const Default = (props: HeaderSTProps) => {
           </ul>
           <div className="basis-full lg:basis-auto lg:ml-auto">
             <ul className="flex">
+              <li className="hidden items-center px-2 lg:flex">
+                <DemoUserSwitcher />
+              </li>
               <li className="hidden lg:block">
                 <ContentSdkLink
                   field={fields?.SupportLink}

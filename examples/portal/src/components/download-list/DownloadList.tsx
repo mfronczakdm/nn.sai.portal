@@ -8,6 +8,7 @@ import { Link as ContentSdkLink, Text } from '@sitecore-content-sdk/nextjs';
 import type { LinkField } from '@sitecore-content-sdk/nextjs';
 
 import { cn } from '@/lib/utils';
+import { DEMO_TAXONOMY_CHANGE_EVENT, DEMO_TAXONOMY_STORAGE_KEY } from '@/lib/demo-taxonomy';
 
 import {
   extractDownloadLinks,
@@ -63,6 +64,19 @@ export const Default: FC<DownloadListProps> = ({ fields, page }) => {
   const [planAssetsFailed, setPlanAssetsFailed] = useState(false);
   const [planAssetsMissingTaxonomy, setPlanAssetsMissingTaxonomy] = useState(false);
   const [planAssetsFetched, setPlanAssetsFetched] = useState(false);
+  const [taxonomy, setTaxonomy] = useState('');
+
+  useEffect(() => {
+    const readTaxonomy = () => {
+      setTaxonomy(window.localStorage.getItem(DEMO_TAXONOMY_STORAGE_KEY) ?? '');
+    };
+
+    readTaxonomy();
+    window.addEventListener(DEMO_TAXONOMY_CHANGE_EVENT, readTaxonomy);
+    return () => {
+      window.removeEventListener(DEMO_TAXONOMY_CHANGE_EVENT, readTaxonomy);
+    };
+  }, []);
 
   useEffect(() => {
     let cancelled = false;
@@ -88,7 +102,7 @@ export const Default: FC<DownloadListProps> = ({ fields, page }) => {
     fetch('/api/download-list/plan-assets', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ query: downloadGraphqlQuery }),
+      body: JSON.stringify({ query: downloadGraphqlQuery, taxonomy }),
     })
       .then(async (r) => {
         const json = (await r.json()) as PlanAssetsApiResponse;
@@ -115,7 +129,7 @@ export const Default: FC<DownloadListProps> = ({ fields, page }) => {
     return () => {
       cancelled = true;
     };
-  }, [downloadGraphqlQuery, sessionTaxonomy, sessionStatus]);
+  }, [downloadGraphqlQuery, sessionTaxonomy, sessionStatus, taxonomy]);
 
   const hasPlanAssets = planAssetFileNames.length > 0;
 

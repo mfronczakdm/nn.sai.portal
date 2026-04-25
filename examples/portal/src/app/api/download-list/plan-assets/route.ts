@@ -10,7 +10,7 @@ import {
   downloadListQueryUsesTaxonomyVariable,
 } from '@/lib/download-list-graphql-session';
 
-type PostBody = { query?: unknown };
+type PostBody = { query?: unknown; taxonomy?: unknown };
 
 /** Proxies plan-asset GraphQL so the token stays on the server. Body: `{ query: string }` from DownloadContent. */
 export async function POST(request: Request): Promise<NextResponse> {
@@ -33,8 +33,9 @@ export async function POST(request: Request): Promise<NextResponse> {
   const needsTaxonomy = downloadListQueryUsesTaxonomyVariable(query);
   let variables: Record<string, string> | undefined;
   if (needsTaxonomy) {
+    const taxonomyFromBody = typeof body.taxonomy === 'string' ? body.taxonomy.trim() : '';
     const session = await auth();
-    const taxonomy = session?.user?.taxonomy?.trim();
+    const taxonomy = taxonomyFromBody || session?.user?.taxonomy?.trim();
     if (!taxonomy) {
       return NextResponse.json({ fileNames: [], error: 'missing_taxonomy' });
     }
