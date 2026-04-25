@@ -17,6 +17,7 @@ import {
 } from 'lucide-react';
 
 import type { ComponentProps } from '@/lib/component-props';
+import { DEMO_TAXONOMY_CHANGE_EVENT, DEMO_TAXONOMY_STORAGE_KEY } from '@/lib/demo-taxonomy';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
@@ -34,6 +35,9 @@ type SearchTopic = 'coverage' | 'costs' | 'care' | 'wellness' | 'news' | 'about'
 
 type SearchAudience = 'members' | 'employers' | 'brokers' | 'providers';
 
+/** Demo plan keys aligned with `DemoUserSwitcher` / `$taxonomy` values */
+type DemoPlanTaxonomy = 'BCBS of California' | 'BCBS of Illinois' | 'BCBS of Massachusetts';
+
 type SearchResultItem = {
   id: string;
   title: string;
@@ -49,6 +53,8 @@ type SearchResultItem = {
   imageSrc?: string;
   /** BCBS blue “new” ribbon on the card image */
   isNew?: boolean;
+  /** When set, relevance is boosted for searches while this demo plan user is selected */
+  demoPlanTaxonomy?: DemoPlanTaxonomy;
 };
 
 type FeaturedAnswer = {
@@ -161,6 +167,92 @@ const featuredAnswers: FeaturedAnswer[] = [
 /** Unsplash — healthcare & benefits imagery for BCBS.com-style demo cards. */
 function unsplashPhoto(path: string) {
   return `https://images.unsplash.com/${path}?auto=format&fit=crop&w=800&h=520&q=80`;
+}
+
+function parseDemoPlanTaxonomy(raw: string | undefined | null): DemoPlanTaxonomy | null {
+  const t = raw?.trim();
+  if (t === 'BCBS of California' || t === 'BCBS of Illinois' || t === 'BCBS of Massachusetts') {
+    return t;
+  }
+  return null;
+}
+
+function supplementalResultsForDemoPlan(plan: DemoPlanTaxonomy): SearchResultItem[] {
+  const state =
+    plan === 'BCBS of California'
+      ? 'California'
+      : plan === 'BCBS of Illinois'
+        ? 'Illinois'
+        : 'Massachusetts';
+
+  const planShort =
+    plan === 'BCBS of California'
+      ? 'Blue Cross of California'
+      : plan === 'BCBS of Illinois'
+        ? 'Blue Cross and Blue Shield of Illinois'
+        : 'Blue Cross Blue Shield of Massachusetts';
+
+  const code = plan === 'BCBS of California' ? 'ca' : plan === 'BCBS of Illinois' ? 'il' : 'ma';
+
+  return [
+    {
+      id: `demo-${code}-claim-1`,
+      imageSrc: unsplashPhoto('photo-1450101499163-c8848c66ca85'),
+      isNew: true,
+      demoPlanTaxonomy: plan,
+      title: `${state} — Claim denial member guide: codes, timelines & appeals`,
+      description: `${planShort}-specific steps after a claim denial in ${state}, including where to upload documents, typical reconsideration windows, and how to request an external review when applicable.`,
+      href: 'https://www.bcbs.com/understanding-health-insurance',
+      contentType: 'article',
+      topics: ['costs', 'coverage'],
+      audiences: ['members'],
+      dateLabel: `${state} plan office`,
+      breadcrumb: ['Claims & billing', `${state} members`],
+      matchTerms: ['claim denial', 'appeal', 'reconsideration', 'eob', 'denial'],
+    },
+    {
+      id: `demo-${code}-claim-2`,
+      imageSrc: unsplashPhoto('photo-1576091160550-2173dba999ef'),
+      demoPlanTaxonomy: plan,
+      title: `${state} provider & member toolkit: resolving claim denials faster`,
+      description: `Coordinated billing tips for ${state} members working with local providers after a claim denial — prior auth records, coding fixes, and plan-specific forms from ${planShort}.`,
+      href: 'https://www.bcbs.com/providers',
+      contentType: 'form',
+      topics: ['costs', 'care'],
+      audiences: ['members', 'providers'],
+      breadcrumb: ['Providers', `${state} denials`],
+      matchTerms: ['claim denial', 'claim', 'denial', 'prior auth', 'billing'],
+    },
+    {
+      id: `demo-${code}-ma-1`,
+      imageSrc: unsplashPhoto('photo-1519494026892-80bbd2d6fd0d'),
+      isNew: true,
+      demoPlanTaxonomy: plan,
+      title: `${state} Medicare Advantage overview: networks, copays & drug tiers`,
+      description: `How ${planShort} structures Medicare Advantage (Part C) in ${state} — comparing HMO/PPO access, embedded Part D, and what to verify during Annual Enrollment.`,
+      href: 'https://www.bcbs.com/understanding-health-insurance',
+      contentType: 'article',
+      topics: ['coverage', 'costs'],
+      audiences: ['members', 'brokers'],
+      dateLabel: `${state} Medicare`,
+      breadcrumb: ['Medicare Advantage', `${state}`],
+      matchTerms: ['medicare advantage', 'part c', 'mapd', 'enrollment', 'aep'],
+    },
+    {
+      id: `demo-${code}-ma-2`,
+      imageSrc: unsplashPhoto('photo-1551288049-bebda4e38f71'),
+      demoPlanTaxonomy: plan,
+      title: `${state} Medicare Advantage quality & care management highlights`,
+      description: `State-focused summary of Medicare Advantage care programs available through ${planShort} in ${state}, including chronic-condition support and how star ratings compare to national benchmarks.`,
+      href: 'https://www.bcbs.com/the-health-of-america',
+      contentType: 'tool',
+      topics: ['coverage', 'about'],
+      audiences: ['members', 'brokers'],
+      dateLabel: 'Guide',
+      breadcrumb: ['Medicare Advantage', `${state} quality`],
+      matchTerms: ['medicare advantage', 'part c', 'cms stars', 'dual eligible'],
+    },
+  ];
 }
 
 const defaultCardImage = unsplashPhoto('photo-1576091160399-112ba8d25d1d');
@@ -500,7 +592,7 @@ function normalizeQuery(q: string): string {
   return q.toLowerCase().trim().replace(/\s+/g, ' ');
 }
 
-function relevanceScore(item: SearchResultItem, q: string): number {
+function relevanceScore(item: SearchResultItem, q: string, activeDemoPlan: DemoPlanTaxonomy | null): number {
   const n = normalizeQuery(q);
   if (!n) return 0;
   const words = n.split(' ').filter(Boolean);
@@ -514,6 +606,9 @@ function relevanceScore(item: SearchResultItem, q: string): number {
     if (desc.includes(w)) score += 2;
     if (crumbs.includes(w)) score += 1;
     if (extra.includes(w)) score += 3;
+  }
+  if (activeDemoPlan && item.demoPlanTaxonomy === activeDemoPlan) {
+    score += 25;
   }
   return score;
 }
@@ -776,6 +871,25 @@ export const SearchResults: FC<SearchResultsProps> = ({
   const [selectedTopics, setSelectedTopics] = useState<Set<SearchTopic>>(new Set());
   const [selectedAudiences, setSelectedAudiences] = useState<Set<SearchAudience>>(new Set());
   const [resultsPage, setResultsPage] = useState(1);
+  const [demoTaxonomyRaw, setDemoTaxonomyRaw] = useState('');
+
+  useEffect(() => {
+    const readTaxonomy = () => {
+      setDemoTaxonomyRaw(typeof window !== 'undefined' ? (window.localStorage.getItem(DEMO_TAXONOMY_STORAGE_KEY) ?? '') : '');
+    };
+    readTaxonomy();
+    window.addEventListener(DEMO_TAXONOMY_CHANGE_EVENT, readTaxonomy);
+    return () => {
+      window.removeEventListener(DEMO_TAXONOMY_CHANGE_EVENT, readTaxonomy);
+    };
+  }, []);
+
+  const activeDemoPlan = useMemo(() => parseDemoPlanTaxonomy(demoTaxonomyRaw), [demoTaxonomyRaw]);
+
+  const activeCatalog = useMemo(() => {
+    if (!activeDemoPlan) return searchCatalog;
+    return [...supplementalResultsForDemoPlan(activeDemoPlan), ...searchCatalog];
+  }, [activeDemoPlan]);
 
   const toggle = useCallback(<T extends string>(set: Dispatch<SetStateAction<Set<T>>>, v: T) => {
     set((prev) => {
@@ -803,8 +917,8 @@ export const SearchResults: FC<SearchResultsProps> = ({
   }, [query, selectedTypes, selectedTopics, selectedAudiences, sort]);
 
   const queryMatched = useMemo(
-    () => searchCatalog.filter((item) => itemMatchesQuery(item, query)),
-    [query]
+    () => activeCatalog.filter((item) => itemMatchesQuery(item, query)),
+    [activeCatalog, query]
   );
 
   const countsTypes = useMemo(() => {
@@ -842,7 +956,7 @@ export const SearchResults: FC<SearchResultsProps> = ({
 
   const filtered = useMemo(() => {
     const q = normalizeQuery(query);
-    let list = searchCatalog.filter((item) => itemMatchesQuery(item, q));
+    let list = activeCatalog.filter((item) => itemMatchesQuery(item, q));
 
     if (selectedTypes.size) {
       list = list.filter((item) => selectedTypes.has(item.contentType));
@@ -859,14 +973,14 @@ export const SearchResults: FC<SearchResultsProps> = ({
       sorted.sort((a, b) => a.title.localeCompare(b.title));
     } else {
       sorted.sort((a, b) => {
-        const ra = relevanceScore(a, q);
-        const rb = relevanceScore(b, q);
+        const ra = relevanceScore(a, q, activeDemoPlan);
+        const rb = relevanceScore(b, q, activeDemoPlan);
         if (rb !== ra) return rb - ra;
         return a.title.localeCompare(b.title);
       });
     }
     return sorted;
-  }, [query, selectedTypes, selectedTopics, selectedAudiences, sort]);
+  }, [activeCatalog, activeDemoPlan, query, selectedTypes, selectedTopics, selectedAudiences, sort]);
 
   const resultsTotalPages = Math.max(1, Math.ceil(filtered.length / RESULTS_PAGE_SIZE));
   const safeResultsPage = Math.min(resultsPage, resultsTotalPages);
