@@ -1,0 +1,27 @@
+﻿---
+ID: "64bb9eab-fe6b-49ea-8e88-5270fa0395f7"
+Parent: "b1d3322d-fdf3-46da-b512-39af3364e455"
+Template: "b1d3322d-fdf3-46da-b512-39af3364e455"
+Path: /sitecore/templates/Project/Portal/Rendering Parameters/Auth/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260414T203620Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b9fa5287-5ab8-4e69-b446-e17bb06b06c2"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260414T203621Z

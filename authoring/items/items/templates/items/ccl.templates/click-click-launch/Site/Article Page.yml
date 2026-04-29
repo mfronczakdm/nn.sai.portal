@@ -20,6 +20,47 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r>
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+            l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
+            <r
+              uid="{1E24F50F-ECAD-4925-B028-654B93A1652E}"
+              id="{E80C2A78-FCC2-4D32-8EC5-4133F608BE5C}"
+              par="backgroundColor&amp;excludeTopMargin=1&amp;inset&amp;CSSStyles&amp;DynamicPlaceholderId=2"
+              ph="headless-main" />
+            <r
+              uid="{75B94739-C82C-4BEC-978D-C2811C31B09A}"
+              id="{3F9CCCB1-7BD7-4245-A3E9-91ED43575D98}"
+              par="excludeTopMargin&amp;CSSStyles&amp;DynamicPlaceholderId=4&amp;Styles=%7B417CFF95-A3B6-4A1D-B10A-D41D449CE5FA%7D%7C%7BAE80F34C-96EF-4B45-8028-78EE7FB5B559%7D%7C%7BEF966498-A54E-44F1-80B4-917F0535B239%7D"
+              ph="headless-main" />
+            <r
+              uid="{E3602665-E6C8-4A63-B397-C4A4BD09DD59}"
+              id="{E80C2A78-FCC2-4D32-8EC5-4133F608BE5C}"
+              par="backgroundColor=secondary&amp;excludeTopMargin&amp;inset&amp;CSSStyles&amp;DynamicPlaceholderId=6"
+              ph="headless-main" />
+            <r
+              uid="{EE5191AB-D41F-4FD4-A46D-3DB95BA6EBA2}"
+              ds="local:/Data/Article Header"
+              id="{DD6C6E80-1458-4276-B753-001691C8841C}"
+              par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=3"
+              ph="/headless-main/container-fullbleed-2" />
+            <r
+              uid="{D5047C48-4899-4E9B-AC74-3D047C742DD4}"
+              ds="local:/Data/CTA Banner"
+              id="{3332F59B-F5F3-44DF-B66E-2811C31AEB3C}"
+              par="colorScheme&amp;CSSStyles&amp;DynamicPlaceholderId=7"
+              ph="/headless-main/container-fullbleed-6" />
+            <r
+              uid="{A3CC9DEF-F78A-4747-AFA5-59D4121C144C}"
+              id="{B1136CF1-94BE-468C-B78D-9BE212AF5428}"
+              par="CSSStyles"
+              ph="/headless-main/container-seventy-4" />
+          </d>
+        </r>
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20240304T202210Z
@@ -33,11 +74,11 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "901c227e-74ab-4505-859a-2cf1e7eb4b33"
+      Value: "bb349daf-4837-4652-9d9a-770627876969"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\Admin
+        sitecore\mark.fronczak@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250402T155816Z
+      Value: 20260424T135638Z
