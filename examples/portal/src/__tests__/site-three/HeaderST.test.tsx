@@ -11,6 +11,7 @@ import {
   headerSTPropsLongText,
   headerSTPropsSearchBoxOnly,
   headerSTPropsMiniCartOnly,
+  headerSTPropsReverseTheme,
   headerSTPropsSpecialChars,
 } from './HeaderST.mockProps';
 
@@ -169,6 +170,14 @@ describe('HeaderST Component', () => {
 
       const section = document.querySelector('section[data-class-change]');
       expect(section).toHaveClass('bg-primary', 'text-white', 'custom-header-class');
+    });
+
+    it('applies dark nav row when ReverseTheme rendering parameter is enabled', () => {
+      render(<HeaderSTDefault {...headerSTPropsReverseTheme} />);
+
+      const navRow = document.querySelector('[data-header-st-nav-row="reverse"]');
+      expect(navRow).toBeInTheDocument();
+      expect(navRow).toHaveClass('bg-primary', 'text-primary-foreground');
     });
 
     it('renders navigation placeholder with correct props', () => {

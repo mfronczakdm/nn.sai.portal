@@ -152,6 +152,25 @@ export const headerSTPropsMiniCartOnly = {
   },
 };
 
+/** Rendering parameter ReverseTheme (dark second row) enabled */
+export const headerSTPropsReverseTheme = {
+  rendering: { componentName: 'HeaderST' },
+  params: {
+    styles: 'bg-white shadow-sm',
+    showSearchBox: 'true',
+    showMiniCart: 'true',
+    DynamicPlaceholderId: 'main-nav',
+    ReverseTheme: '1',
+  },
+  page: mockPage,
+  fields: {
+    Logo: createMockImageField('/images/sync-logo.svg', 'SYNC Audio Logo'),
+    SupportLink: createMockLinkField('/support', 'Support'),
+    SearchLink: createMockLinkField('/search', 'Search Products'),
+    CartLink: createMockLinkField('/cart', 'Shopping Cart'),
+  },
+};
+
 // Mock props with special characters
 export const headerSTPropsSpecialChars = {
   rendering: { componentName: 'HeaderST' },
