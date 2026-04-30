@@ -125,9 +125,7 @@ export const Default = (props: HeaderSTProps) => {
         <div
           className={cn(
             'hidden w-full min-w-0 border-t border-border/30 lg:block',
-            isReverseTheme
-              ? 'bg-primary text-primary-foreground [&_a]:!text-primary-foreground [&_button]:!text-primary-foreground [&_a:hover]:opacity-90 [&_button:hover]:opacity-90'
-              : 'bg-transparent'
+            isReverseTheme ? 'bg-primary' : 'bg-transparent'
           )}
           data-header-st-nav-row={isReverseTheme ? 'reverse' : undefined}
         >
@@ -135,7 +133,9 @@ export const Default = (props: HeaderSTProps) => {
             <ul
               className={cn(
                 'm-0 flex list-none flex-row items-center justify-start gap-0 p-0 text-left [.partial-editing-mode_&]:!flex-col',
-                'min-h-0 py-1 lg:min-h-[3rem] lg:py-2'
+                'min-h-0 py-1 lg:min-h-[3rem] lg:py-2',
+                isReverseTheme &&
+                  'text-primary-foreground [&>li>a]:!text-primary-foreground [&>li>a:hover]:opacity-90'
               )}
             >
               <AppPlaceholder

@@ -177,7 +177,10 @@ describe('HeaderST Component', () => {
 
       const navRow = document.querySelector('[data-header-st-nav-row="reverse"]');
       expect(navRow).toBeInTheDocument();
-      expect(navRow).toHaveClass('bg-primary', 'text-primary-foreground');
+      expect(navRow).toHaveClass('bg-primary');
+      const navList = navRow?.querySelector('ul');
+      expect(navList).toBeTruthy();
+      expect(navList).toHaveClass('text-primary-foreground');
     });
 
     it('renders navigation placeholder with correct props', () => {

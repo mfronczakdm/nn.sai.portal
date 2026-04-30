@@ -60,7 +60,8 @@ export const MegaMenuContent = ({ menuId, children }: MegaMenuContentProps) => {
             ? 'opacity-100 translate-x-0 lg:translate-y-0 pointer-events-auto'
             : 'opacity-0 translate-x-full lg:translate-x-0 lg:translate-y-2 pointer-events-none'
         }
-        bg-background transition-all duration-300 ease-in-out
+        bg-background text-foreground [&_a]:!text-foreground [&_button]:!text-foreground
+        transition-all duration-300 ease-in-out
         [.partial-editing-mode_&]:!static [.partial-editing-mode_&]:!opacity-100 [.partial-editing-mode_&]:!translate-0 [.partial-editing-mode_&]:!pointer-events-auto`}
     >
       {children}
