@@ -35,6 +35,7 @@ import * as MiniCart from 'src/components/site-three/non-sitecore/MiniCart';
 import * as DemoUserSwitcher from 'src/components/site-three/non-sitecore/DemoUserSwitcher';
 import * as SecondaryNavigation from 'src/components/secondary-navigation/SecondaryNavigation';
 import * as SearchResults from 'src/components/search-results/SearchResults';
+import * as SearchResultscopy from 'src/components/search-results/SearchResults copy';
 import * as SearchExperienceLoadMore from 'src/components/search-experience/SearchExperience.LoadMore';
 import * as SearchExperience from 'src/components/search-experience/SearchExperience';
 import * as useSearchField from 'src/components/search-experience/search-components/useSearchField';
@@ -167,6 +168,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['DemoUserSwitcher', { ...DemoUserSwitcher }],
   ['SecondaryNavigation', { ...SecondaryNavigation }],
   ['SearchResults', { ...SearchResults }],
+  ['SearchResults copy', { ...SearchResultscopy }],
   ['SearchExperience', { ...SearchExperienceLoadMore, ...SearchExperience }],
   ['useSearchField', { ...useSearchField }],
   ['useRouter', { ...useRouter }],

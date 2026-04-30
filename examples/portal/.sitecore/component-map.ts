@@ -70,6 +70,8 @@ import * as sitemetadataprops from 'src/components/site-metadata/site-metadata.p
 import * as SecondaryNavigation from 'src/components/secondary-navigation/SecondaryNavigation';
 import * as secondarynavigationprops from 'src/components/secondary-navigation/secondary-navigation.props';
 import * as SearchResults from 'src/components/search-results/SearchResults';
+import * as SearchResultscopy from 'src/components/search-results/SearchResults copy';
+import * as data from 'src/components/search-results/data';
 import * as SearchExperienceLoadMore from 'src/components/search-experience/SearchExperience.LoadMore';
 import * as SearchExperience from 'src/components/search-experience/SearchExperience';
 import * as useSearchField from 'src/components/search-experience/search-components/useSearchField';
@@ -361,6 +363,8 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['SecondaryNavigation', { ...SecondaryNavigation, componentType: 'client' }],
   ['secondary-navigation', { ...secondarynavigationprops }],
   ['SearchResults', { ...SearchResults, componentType: 'client' }],
+  ['SearchResults copy', { ...SearchResultscopy, componentType: 'client' }],
+  ['data', { ...data }],
   ['SearchExperience', { ...SearchExperienceLoadMore, ...SearchExperience, componentType: 'client' }],
   ['useSearchField', { ...useSearchField, componentType: 'client' }],
   ['useRouter', { ...useRouter, componentType: 'client' }],

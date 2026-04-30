@@ -6,13 +6,14 @@ import Image from 'next/image';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import {
   ArrowUpRight,
+  BookOpen,
   ChevronDown,
   FileText,
-  Heart,
   Loader2,
+  Package,
   Search,
   Sparkles,
-  Users,
+  Wrench,
   X,
 } from 'lucide-react';
 
@@ -24,788 +25,66 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 import { cn } from '@/lib/utils';
 
-/**
- * ——— Editable search data (links, Q&A, facets) ———
- * In-memory search matches title, description, breadcrumb labels, and matchTerms.
- */
-
-type SearchContentType = 'article' | 'plan' | 'provider' | 'news' | 'form' | 'tool';
-
-type SearchTopic = 'coverage' | 'costs' | 'care' | 'wellness' | 'news' | 'about';
-
-type SearchAudience = 'members' | 'employers' | 'brokers' | 'providers';
-
-/** Demo role keys aligned with `DemoUserSwitcher` / localStorage taxonomy values */
-type DemoUserTaxonomy = 'Maintenance Engineer' | 'Engineering Consultant' | 'Plant Technician';
-
-type SearchResultItem = {
-  id: string;
-  title: string;
-  description: string;
-  href: string;
-  contentType: SearchContentType;
-  topics: SearchTopic[];
-  audiences: SearchAudience[];
-  dateLabel?: string;
-  breadcrumb?: string[];
-  matchTerms?: string[];
-  /** Card hero image (editable per result) */
-  imageSrc?: string;
-  /** Highlight ribbon on the card image */
-  isNew?: boolean;
-  /** When set, relevance is boosted while this demo user role is selected */
-  demoUserTaxonomy?: DemoUserTaxonomy;
-};
-
-type FeaturedAnswer = {
-  id: string;
-  triggeredWhenQueryIncludes: string[];
-  question: string;
-  answer: string;
-  learnMoreHref: string;
-  learnMoreLabel?: string;
-};
-
-const searchFacetLabels = {
-  contentType: {
-    article: 'Articles & guides',
-    plan: 'Plans & benefits',
-    provider: 'Find care / providers',
-    news: 'Newsroom',
-    form: 'Forms & documents',
-    tool: 'Tools & calculators',
-  },
-  topic: {
-    coverage: 'Coverage & eligibility',
-    costs: 'Costs & billing',
-    care: 'Care & treatment',
-    wellness: 'Wellness & prevention',
-    news: 'Industry news',
-    about: 'About Blue Cross',
-  },
-  audience: {
-    members: 'Members',
-    employers: 'Employers',
-    brokers: 'Brokers & consultants',
-    providers: 'Healthcare professionals',
-  },
-} as const;
-
-const popularSearches = [
-  'prior authorization',
-  'find a doctor',
-  'HSA vs FSA',
-  'health of america',
-  'EOB explained',
-];
-
-const featuredAnswers: FeaturedAnswer[] = [
-  {
-    id: 'fa-claim-denial',
-    triggeredWhenQueryIncludes: ['claim denial', 'denied claim', 'claim denied', 'denial', 'appeal'],
-    question: 'What is a claim denial, and what can I do next?',
-    answer:
-      'A claim denial means your plan determined a service or charge is not payable as submitted — often due to coding, eligibility, network, or medical‑policy reasons. Review the denial notice and EOB, gather records your plan requests, and use the appeals or reconsideration process outlined in your member materials if you disagree.',
-    learnMoreHref: 'https://www.bcbs.com/understanding-health-insurance',
-    learnMoreLabel: 'Claims & member rights',
-  },
-  {
-    id: 'fa-ma',
-    triggeredWhenQueryIncludes: [
-      'medicare advantage',
-      'medicare',
-      'advantage',
-      'medicare part c',
-      'part c',
-      'ma plan',
-      'mapd',
-    ],
-    question: 'What is Medicare Advantage (Part C)?',
-    answer:
-      'Medicare Advantage is an alternative way to get Medicare Part A and Part B benefits through a private plan (such as an HMO or PPO) that contracts with Medicare. Plans often bundle drug coverage and extra benefits; networks and cost‑sharing differ from Original Medicare, so compare premiums, copays, and covered providers each year.',
-    learnMoreHref: 'https://www.bcbs.com/understanding-health-insurance',
-    learnMoreLabel: 'Medicare & plan basics',
-  },
-  {
-    id: 'fa-pa',
-    triggeredWhenQueryIncludes: ['prior', 'authorization', 'pre auth', 'precert'],
-    question: 'What is prior authorization?',
-    answer:
-      'Prior authorization means your health plan reviews certain services, prescriptions, or procedures before they are covered. It helps ensure care is medically necessary and covered under your benefits.',
-    learnMoreHref: 'https://www.bcbs.com/understanding-health-insurance',
-    learnMoreLabel: 'Understanding health insurance',
-  },
-  {
-    id: 'fa-hsa',
-    triggeredWhenQueryIncludes: ['hsa', 'fsa', 'flexible spending', 'health savings'],
-    question: 'HSA vs FSA — what is the difference?',
-    answer:
-      'An HSA is paired with a qualified high-deductible plan and rolls over year to year. An FSA is offered through an employer and often has a “use it or lose it” rule for unused funds unless your plan allows rollover or grace periods.',
-    learnMoreHref: 'https://www.bcbs.com/understanding-health-insurance',
-    learnMoreLabel: 'Understanding health insurance',
-  },
-  {
-    id: 'fa-eob',
-    triggeredWhenQueryIncludes: ['eob', 'explanation of benefits', 'claim', 'bill'],
-    question: 'How do I read an Explanation of Benefits (EOB)?',
-    answer:
-      'Your EOB is not a bill. It summarizes what your provider billed, what your plan allowed, what was paid, and what you may still owe the provider based on your benefits.',
-    learnMoreHref: 'https://www.bcbs.com/understanding-health-insurance',
-    learnMoreLabel: 'Insurance basics',
-  },
-  {
-    id: 'fa-network',
-    triggeredWhenQueryIncludes: ['network', 'out of network', 'ppo', 'hmo', 'find a doctor', 'doctor'],
-    question: 'Why does network matter for costs?',
-    answer:
-      'In-network providers contract with your plan for negotiated rates. Out-of-network care may cost more or not be covered depending on your plan type and benefits.',
-    learnMoreHref: 'https://www.bcbs.com/healthcare-access',
-    learnMoreLabel: 'Healthcare access',
-  },
-];
-
-/** Unsplash — industrial / instrumentation imagery for demo cards. */
-function unsplashPhoto(path: string) {
-  return `https://images.unsplash.com/${path}?auto=format&fit=crop&w=800&h=520&q=80`;
-}
-
-function parseDemoUserTaxonomy(raw: string | undefined | null): DemoUserTaxonomy | null {
-  const t = raw?.trim();
-  if (t === 'Maintenance Engineer' || t === 'Engineering Consultant' || t === 'Plant Technician') {
-    return t;
-  }
-  return null;
-}
-
-const dwyerOmegaBaseHref = 'https://www.dwyeromega.com/';
-
-function supplementalResultsForDemoUserTaxonomy(plan: DemoUserTaxonomy): SearchResultItem[] {
-  const code =
-    plan === 'Maintenance Engineer' ? 'me' : plan === 'Engineering Consultant' ? 'ec' : 'pt';
-
-  const rows: Omit<SearchResultItem, 'id' | 'demoUserTaxonomy'>[] =
-    plan === 'Maintenance Engineer'
-      ? [
-          {
-            imageSrc: unsplashPhoto('photo-1581091226825-a6a2a5aee158'),
-            isNew: true,
-            title: 'Maintenance Engineer — CMMS work orders & instrument calibration windows',
-            description:
-              'Close the loop between rounds data and calibration due dates for gauges, transmitters, and switches — aligned with preventive maintenance programs common in process plants.',
-            href: dwyerOmegaBaseHref,
-            contentType: 'article',
-            topics: ['costs', 'coverage'],
-            audiences: ['members'],
-            dateLabel: 'Field guide',
-            breadcrumb: ['Maintenance', 'Calibration'],
-            matchTerms: ['calibration', 'cmms', 'preventive maintenance', 'instrument', 'schedule'],
-          },
-          {
-            imageSrc: unsplashPhoto('photo-1504917595217-d002cbf56fc7'),
-            title: 'Shutdown prep: isolation, tagging & verification for control loops',
-            description:
-              'Step-by-step checks before energizing or de-energizing loops that use pressure, flow, or level instrumentation — reduce rework during outages.',
-            href: dwyerOmegaBaseHref,
-            contentType: 'form',
-            topics: ['care', 'costs'],
-            audiences: ['members', 'providers'],
-            dateLabel: 'Checklist',
-            breadcrumb: ['Maintenance', 'Shutdown'],
-            matchTerms: ['shutdown', 'lockout', 'loop', 'instrumentation', 'verification'],
-          },
-          {
-            imageSrc: unsplashPhoto('photo-1582719478250-c89cae4dc85b'),
-            isNew: true,
-            title: 'Troubleshooting erratic readings: wiring, grounding & sensor placement',
-            description:
-              'Field playbook for distinguishing wiring issues from sensor drift or process upset — includes quick tests for DP and electronic transmitters.',
-            href: dwyerOmegaBaseHref,
-            contentType: 'tool',
-            topics: ['coverage', 'care'],
-            audiences: ['members', 'brokers'],
-            dateLabel: 'Toolkit',
-            breadcrumb: ['Support', 'Diagnostics'],
-            matchTerms: ['troubleshoot', 'transmitter', 'grounding', 'sensor', 'dp'],
-          },
-          {
-            imageSrc: unsplashPhoto('photo-1565043666747-69f6646db940'),
-            title: 'Spare strategy for critical measurement points',
-            description:
-              'How to stock and rotate spares for switches, gauges, and transmitters without over-inventorying — ties to reliability-centered maintenance goals.',
-            href: dwyerOmegaBaseHref,
-            contentType: 'plan',
-            topics: ['costs', 'about'],
-            audiences: ['employers', 'brokers'],
-            dateLabel: 'Reliability',
-            breadcrumb: ['Operations', 'Spares'],
-            matchTerms: ['spare parts', 'inventory', 'reliability', 'measurement', 'stock'],
-          },
-        ]
-      : plan === 'Engineering Consultant'
-        ? [
-            {
-              imageSrc: unsplashPhoto('photo-1581092160562-40aa08f11460'),
-              isNew: true,
-              title: 'Engineering Consultant — specifying DP instruments for HVAC & cleanroom',
-              description:
-                'Application notes on range selection, accuracy classes, and installation effects when specifying differential pressure for filtration and pressurization systems.',
-              href: dwyerOmegaBaseHref,
-              contentType: 'article',
-              topics: ['coverage', 'costs'],
-              audiences: ['brokers', 'employers'],
-              dateLabel: 'Application note',
-              breadcrumb: ['Design', 'HVAC'],
-              matchTerms: ['differential pressure', 'specification', 'cleanroom', 'hvac', 'engineering'],
-            },
-            {
-              imageSrc: unsplashPhoto('photo-1504328345606-18bbc8c9d7d1'),
-              title: 'Energy audits: flow measurement points that pay back fastest',
-              description:
-                'Prioritize metering locations for steam, compressed air, and hydronic loops — improve ROI on efficiency projects with better baseline data.',
-              href: dwyerOmegaBaseHref,
-              contentType: 'tool',
-              topics: ['costs', 'wellness'],
-              audiences: ['employers', 'brokers'],
-              dateLabel: 'Guide',
-              breadcrumb: ['Efficiency', 'Flow'],
-              matchTerms: ['energy audit', 'flow meter', 'steam', 'compressed air', 'baseline'],
-            },
-            {
-              imageSrc: unsplashPhoto('photo-1513828583688-c52646db42da'),
-              title: 'Commissioning packages: test records & as-built instrumentation lists',
-              description:
-                'Templates consultants can adapt for turnover documentation — loop folders, calibration certificates, and red-line drawings for process skids.',
-              href: dwyerOmegaBaseHref,
-              contentType: 'form',
-              topics: ['coverage', 'about'],
-              audiences: ['brokers', 'providers'],
-              dateLabel: 'Templates',
-              breadcrumb: ['Commissioning', 'Documentation'],
-              matchTerms: ['commissioning', 'as-built', 'loop folder', 'calibration certificate', 'turnover'],
-            },
-            {
-              imageSrc: unsplashPhoto('photo-1531297484001-80022131f5a1'),
-              title: 'Process optimization: pairing measurement with control valve health',
-              description:
-                'Use differential pressure trends across strainers and coils to catch fouling early — pairs well with distributed control narratives for retrofits.',
-              href: dwyerOmegaBaseHref,
-              contentType: 'article',
-              topics: ['care', 'news'],
-              audiences: ['employers', 'providers'],
-              dateLabel: 'Insight',
-              breadcrumb: ['Process', 'Optimization'],
-              matchTerms: ['process optimization', 'control valve', 'differential pressure', 'fouling', 'retrofit'],
-            },
-          ]
-        : [
-            {
-              imageSrc: unsplashPhoto('photo-1581092918056-0c4c1ac51795'),
-              isNew: true,
-              title: 'Plant Technician — daily rounds: gauges, switches & transmitters',
-              description:
-                'A concise route sheet for verifying local indicators against control room values and flagging drift before it becomes downtime.',
-              href: dwyerOmegaBaseHref,
-              contentType: 'form',
-              topics: ['care', 'coverage'],
-              audiences: ['members', 'providers'],
-              dateLabel: 'Route sheet',
-              breadcrumb: ['Operations', 'Rounds'],
-              matchTerms: ['rounds', 'gauge', 'transmitter', 'plant', 'technician'],
-            },
-            {
-              imageSrc: unsplashPhoto('photo-1581092162384-8987c1d64718'),
-              title: 'Safe line breaks: depressurize, verify zero energy, then isolate',
-              description:
-                'Field card for technicians working on process lines with pressure switches and block-and-bleed arrangements — emphasizes verification steps.',
-              href: dwyerOmegaBaseHref,
-              contentType: 'article',
-              topics: ['care', 'costs'],
-              audiences: ['members'],
-              dateLabel: 'Safety',
-              breadcrumb: ['Safety', 'Line break'],
-              matchTerms: ['line break', 'depressure', 'isolation', 'safety', 'zero energy'],
-            },
-            {
-              imageSrc: unsplashPhoto('photo-1565514020163-395f34250af5'),
-              title: 'Leak detection on compressed air and hydronic circuits',
-              description:
-                'Ultrasonic and soap-bubble basics plus when to upgrade to permanent leak monitors — reduce utility waste on rotating shifts.',
-              href: dwyerOmegaBaseHref,
-              contentType: 'tool',
-              topics: ['wellness', 'costs'],
-              audiences: ['members', 'employers'],
-              dateLabel: 'How-to',
-              breadcrumb: ['Utilities', 'Leak detection'],
-              matchTerms: ['leak', 'compressed air', 'hydronic', 'ultrasonic', 'utility'],
-            },
-            {
-              imageSrc: unsplashPhoto('photo-1489515217757-5fd1be406fef'),
-              title: 'Handoff to maintenance: what to log when an alarm clears',
-              description:
-                'Structured notes that help the next shift reproduce context — alarm tag, setpoint, corrective action, and instrument tag references.',
-              href: dwyerOmegaBaseHref,
-              contentType: 'news',
-              topics: ['about', 'care'],
-              audiences: ['providers', 'members'],
-              dateLabel: 'Shift log',
-              breadcrumb: ['Operations', 'Handoff'],
-              matchTerms: ['alarm', 'handoff', 'shift log', 'instrument tag', 'maintenance'],
-            },
-          ];
-
-  return rows.map((row, i) => ({
-    ...row,
-    id: `demo-${code}-${i + 1}`,
-    demoUserTaxonomy: plan,
-  }));
-}
-
-const defaultCardImage = unsplashPhoto('photo-1576091160399-112ba8d25d1d');
-
-const searchCatalog: SearchResultItem[] = [
-  {
-    id: '1',
-    imageSrc: unsplashPhoto('photo-1576091160399-112ba8d25d1d'),
-    isNew: true,
-    title: 'Understanding health insurance (BCBS.com)',
-    description:
-      'How deductibles, copays, coinsurance, and out-of-pocket maximums work — the same concepts members see explained on bcbs.com.',
-    href: 'https://www.bcbs.com/understanding-health-insurance',
-    contentType: 'article',
-    topics: ['coverage', 'costs'],
-    audiences: ['members'],
-    dateLabel: 'Member guide',
-    breadcrumb: ['Understanding health insurance', 'Basics'],
-    matchTerms: ['benefits', 'deductible', 'copay', 'bcbs', 'blue cross'],
-  },
-  {
-    id: '2',
-    imageSrc: unsplashPhoto('photo-1551288049-bebda4e38f71'),
-    isNew: true,
-    title: 'The Health of America Report®',
-    description:
-      'BCBS-commissioned research on affordability, chronic conditions, and access — aligned with the public Health of America hub on bcbs.com.',
-    href: 'https://www.bcbs.com/the-health-of-america',
-    contentType: 'tool',
-    topics: ['news', 'about'],
-    audiences: ['members', 'employers', 'brokers'],
-    dateLabel: 'Research',
-    breadcrumb: ['The Health of America', 'Data & insights'],
-    matchTerms: ['health of america', 'research', 'affordability', 'trends'],
-  },
-  {
-    id: '3',
-    imageSrc: unsplashPhoto('photo-1519494026892-80bbd2d6fd0d'),
-    title: 'Healthcare access & health equity',
-    description:
-      'How Blue Cross and Blue Shield companies advance equitable access to care — mirroring the Healthcare access themes on bcbs.com.',
-    href: 'https://www.bcbs.com/healthcare-access',
-    contentType: 'article',
-    topics: ['care', 'about'],
-    audiences: ['members', 'providers'],
-    breadcrumb: ['Healthcare access', 'Equity'],
-    matchTerms: ['access', 'equity', 'community health', 'medicaid'],
-  },
-  {
-    id: '4',
-    imageSrc: unsplashPhoto('photo-1504711434969-e33886168f5c'),
-    title: 'BCBS.com Newsroom',
-    description:
-      'Press releases, statements on federal policy, and stories about BCBS innovation and community programs — as published on bcbs.com/news.',
-    href: 'https://www.bcbs.com/news',
-    contentType: 'news',
-    topics: ['news'],
-    audiences: ['employers', 'brokers', 'providers'],
-    dateLabel: 'Newsroom',
-    breadcrumb: ['News', 'Company updates'],
-    matchTerms: ['press', 'policy', 'announcement', 'advocacy'],
-  },
-  {
-    id: '5',
-    imageSrc: unsplashPhoto('photo-1600880292203-757bb62b4baf'),
-    title: 'Employers: health benefits & workforce health',
-    description:
-      'Strategy, trend, and plan design topics for HR and benefits leaders — aligned with the Employers section of bcbs.com.',
-    href: 'https://www.bcbs.com/employers',
-    contentType: 'plan',
-    topics: ['costs', 'coverage'],
-    audiences: ['employers', 'brokers'],
-    breadcrumb: ['Employers', 'Benefits strategy'],
-    matchTerms: ['self funded', 'level funded', 'workplace', 'hr'],
-  },
-  {
-    id: '6',
-    imageSrc: unsplashPhoto('photo-1521791136064-7986c2920216'),
-    title: 'Brokers & consultants: tools and plan highlights',
-    description:
-      'Materials to support renewals, RFPs, and client education — consistent with bcbs.com resources for brokers and consultants.',
-    href: 'https://www.bcbs.com/brokers',
-    contentType: 'form',
-    topics: ['coverage'],
-    audiences: ['brokers'],
-    breadcrumb: ['Brokers', 'Sales support'],
-    matchTerms: ['consultant', 'rfp', 'renewal', 'proposal'],
-  },
-  {
-    id: '7',
-    imageSrc: unsplashPhoto('photo-1576091160550-2173dba999ef'),
-    title: 'Healthcare professionals & clinical collaboration',
-    description:
-      'Care management, quality, and network programs for clinicians and systems — reflecting bcbs.com provider-facing content.',
-    href: 'https://www.bcbs.com/providers',
-    contentType: 'article',
-    topics: ['care'],
-    audiences: ['providers', 'members'],
-    breadcrumb: ['Providers', 'Clinical programs'],
-    matchTerms: ['prior authorization', 'utilization', 'value based care', 'hospital'],
-  },
-  {
-    id: '8',
-    imageSrc: unsplashPhoto('photo-1571019613454-1cb2f99b2d8b'),
-    title: 'Wellness, prevention & healthy living',
-    description:
-      'Preventive benefits, screenings, and lifestyle support many BCBS plans emphasize — tied to member wellness content on bcbs.com.',
-    href: 'https://www.bcbs.com/understanding-health-insurance',
-    contentType: 'article',
-    topics: ['wellness', 'coverage'],
-    audiences: ['members'],
-    breadcrumb: ['Members', 'Prevention'],
-    matchTerms: ['screening', 'vaccine', 'prevention', 'fitness', 'mental health'],
-  },
-  {
-    id: '9',
-    imageSrc: unsplashPhoto('photo-1587854692152-cbe660dbde88'),
-    title: 'Pharmacy & prescription drug benefits',
-    description:
-      'Formularies, tiers, specialty drugs, and pharmacy spend — how BCBS members navigate Rx coverage (see bcbs.com insurance basics).',
-    href: 'https://www.bcbs.com/understanding-health-insurance',
-    contentType: 'plan',
-    topics: ['costs', 'care'],
-    audiences: ['members'],
-    breadcrumb: ['Members', 'Pharmacy'],
-    matchTerms: ['rx', 'drug', 'formulary', 'specialty pharmacy'],
-  },
-  {
-    id: '10',
-    imageSrc: unsplashPhoto('photo-1589829545856-d10d557cf95f'),
-    title: 'Federal policy, legislation & BCBS advocacy',
-    description:
-      'How proposed rules and laws affect coverage and affordability — the type of policy perspective BCBS shares via bcbs.com and the Newsroom.',
-    href: 'https://www.bcbs.com/news',
-    contentType: 'news',
-    topics: ['news', 'about'],
-    audiences: ['employers', 'brokers'],
-    breadcrumb: ['Advocacy', 'Federal policy'],
-    matchTerms: ['legislation', 'affordable care', 'cms', 'regulation'],
-  },
-  {
-    id: '11',
-    imageSrc: unsplashPhoto('photo-1505751172876-fa1923c5c528'),
-    title: 'Find a doctor, compare quality & network care',
-    description:
-      'Choosing in-network clinicians, PCPs, and specialists — aligned with bcbs.com guidance on healthcare access and finding care.',
-    href: 'https://www.bcbs.com/healthcare-access',
-    contentType: 'provider',
-    topics: ['care'],
-    audiences: ['members'],
-    breadcrumb: ['Members', 'Find care'],
-    matchTerms: ['doctor', 'pcp', 'specialist', 'network', 'telehealth'],
-  },
-  {
-    id: '12',
-    imageSrc: unsplashPhoto('photo-1450101499163-c8848c66ca85'),
-    title: 'Claims, EOBs & billing transparency',
-    description:
-      'Reading an EOB, understanding a claim denial or partial denial, surprise-billing protections, and good-faith estimates — topics BCBS covers under understanding health insurance on bcbs.com.',
-    href: 'https://www.bcbs.com/understanding-health-insurance',
-    contentType: 'article',
-    topics: ['costs'],
-    audiences: ['members'],
-    breadcrumb: ['Members', 'Claims & billing'],
-    matchTerms: ['surprise bill', 'no surprises', 'eob', 'claim', 'denial', 'appeal'],
-  },
-  {
-    id: '13',
-    imageSrc: unsplashPhoto('photo-1576091160399-112ba8d25d1d'),
-    title: 'How to read a claim denial code',
-    description:
-      'Carrier reason codes explain why a claim denial was issued and what documentation may resolve it — use them with your provider’s billing office and your plan’s portal.',
-    href: 'https://www.bcbs.com/understanding-health-insurance',
-    contentType: 'article',
-    topics: ['costs', 'care'],
-    audiences: ['members', 'providers'],
-    breadcrumb: ['Claims', 'Denials'],
-    matchTerms: ['denial code', 'claim', 'reconsideration', 'clinical review'],
-  },
-  {
-    id: '14',
-    imageSrc: unsplashPhoto('photo-1589829545856-d10d557cf95f'),
-    title: 'Appealing a claim denial: timelines & levels',
-    description:
-      'Most plans use structured appeal levels after an initial claim denial; note deadlines, required forms, and independent review rights in your benefit booklet.',
-    href: 'https://www.bcbs.com/understanding-health-insurance',
-    contentType: 'form',
-    topics: ['costs', 'coverage'],
-    audiences: ['members'],
-    breadcrumb: ['Members', 'Appeals'],
-    matchTerms: ['appeal', 'claim denial', 'external review', 'grievance'],
-  },
-  {
-    id: '15',
-    imageSrc: unsplashPhoto('photo-1576091160550-2173dba999ef'),
-    title: 'Prior auth vs claim denial: avoiding confusion',
-    description:
-      'A prior authorization denial stops service before it happens; a claim denial applies after care is billed — each has different paperwork and next steps.',
-    href: 'https://www.bcbs.com/providers',
-    contentType: 'article',
-    topics: ['care', 'costs'],
-    audiences: ['members', 'providers'],
-    breadcrumb: ['Providers', 'Authorizations'],
-    matchTerms: ['prior auth', 'claim', 'denial', 'precert'],
-  },
-  {
-    id: '16',
-    imageSrc: unsplashPhoto('photo-1504711434969-e33886168f5c'),
-    title: 'Surprise bills, denials & the No Surprises Act',
-    description:
-      'When out-of-network emergency or air-ambulance claims are denied or balanced-billed, federal protections may apply — pair this with your state rules and EOB notes.',
-    href: 'https://www.bcbs.com/understanding-health-insurance',
-    contentType: 'news',
-    topics: ['costs', 'news'],
-    audiences: ['members', 'employers'],
-    breadcrumb: ['Policy', 'Surprise billing'],
-    matchTerms: ['no surprises', 'claim', 'denial', 'air ambulance'],
-  },
-  {
-    id: '17',
-    imageSrc: unsplashPhoto('photo-1587854692152-cbe660dbde88'),
-    title: 'Pharmacy claim denials & formulary exceptions',
-    description:
-      'Drug claims can be denied for formulary, quantity limits, or step therapy — your prescriber can request an exception when medically appropriate.',
-    href: 'https://www.bcbs.com/understanding-health-insurance',
-    contentType: 'plan',
-    topics: ['costs', 'care'],
-    audiences: ['members'],
-    breadcrumb: ['Pharmacy', 'Denials'],
-    matchTerms: ['rx claim', 'denial', 'formulary', 'prior authorization'],
-  },
-  {
-    id: '18',
-    imageSrc: unsplashPhoto('photo-1519494026892-80bbd2d6fd0d'),
-    title: 'Medicare Advantage vs Original Medicare',
-    description:
-      'Compare Medicare Advantage (Part C) networks, copays, and out-of-pocket caps with Original Medicare plus supplemental coverage before you enroll or switch.',
-    href: 'https://www.bcbs.com/understanding-health-insurance',
-    contentType: 'article',
-    topics: ['coverage', 'costs'],
-    audiences: ['members', 'brokers'],
-    breadcrumb: ['Medicare', 'Plan choice'],
-    matchTerms: ['medicare advantage', 'part c', 'supplement', 'open enrollment'],
-  },
-  {
-    id: '19',
-    imageSrc: unsplashPhoto('photo-1551288049-bebda4e38f71'),
-    title: 'Medicare Advantage star ratings & quality',
-    description:
-      'CMS star ratings summarize Medicare Advantage plan performance on outcomes and experience — use them alongside provider directories and drug coverage.',
-    href: 'https://www.bcbs.com/the-health-of-america',
-    contentType: 'tool',
-    topics: ['coverage', 'about'],
-    audiences: ['members', 'brokers'],
-    dateLabel: 'Guide',
-    breadcrumb: ['Medicare', 'Quality'],
-    matchTerms: ['medicare advantage', 'cms stars', 'part c', 'quality'],
-  },
-  {
-    id: '20',
-    imageSrc: unsplashPhoto('photo-1571019613454-1cb2f99b2d8b'),
-    title: 'Dual-eligible & Medicare Advantage D‑SNP basics',
-    description:
-      'Some Medicare Advantage plans serve people who also have Medicaid (D‑SNPs) with care coordination — eligibility and benefits vary by county and contract.',
-    href: 'https://www.bcbs.com/healthcare-access',
-    contentType: 'plan',
-    topics: ['coverage', 'care'],
-    audiences: ['members', 'brokers'],
-    breadcrumb: ['Medicare Advantage', 'Dual eligible'],
-    matchTerms: ['dsnp', 'medicare advantage', 'medicaid', 'part c'],
-  },
-  {
-    id: '21',
-    imageSrc: unsplashPhoto('photo-1521791136064-7986c2920216'),
-    title: 'Medicare Advantage open enrollment periods',
-    description:
-      'AEP, MA OEP, and special enrollment events govern when you can join or change Medicare Advantage coverage — missing a window can delay effective dates.',
-    href: 'https://www.bcbs.com/understanding-health-insurance',
-    contentType: 'article',
-    topics: ['coverage'],
-    audiences: ['members', 'brokers'],
-    breadcrumb: ['Medicare Advantage', 'Enrollment'],
-    matchTerms: ['aep', 'ma oep', 'medicare advantage', 'special enrollment'],
-  },
-  {
-    id: '22',
-    imageSrc: unsplashPhoto('photo-1587854692152-cbe660dbde88'),
-    title: 'Medicare Advantage prescription (MAPD) coverage',
-    description:
-      'Most Medicare Advantage enrollees choose a MAPD plan with Part D embedded — compare tiers, mail order, and preferred pharmacies each year.',
-    href: 'https://www.bcbs.com/understanding-health-insurance',
-    contentType: 'plan',
-    topics: ['costs', 'care'],
-    audiences: ['members'],
-    breadcrumb: ['Medicare Advantage', 'Drug coverage'],
-    matchTerms: ['mapd', 'part d', 'medicare advantage', 'formulary'],
-  },
-  {
-    id: '23',
-    imageSrc: unsplashPhoto('photo-1505751172876-fa1923c5c528'),
-    title: 'Travel & out-of-area care on Medicare Advantage',
-    description:
-      'Medicare Advantage plans use networks; understand urgent/emergency rules, visitor/travel benefits, and prior notification before you leave your service area.',
-    href: 'https://www.bcbs.com/healthcare-access',
-    contentType: 'article',
-    topics: ['coverage', 'care'],
-    audiences: ['members'],
-    breadcrumb: ['Medicare Advantage', 'Network'],
-    matchTerms: ['travel', 'urgent care', 'medicare advantage', 'network'],
-  },
-  {
-    id: '24',
-    imageSrc: unsplashPhoto('photo-1600880292203-757bb62b4baf'),
-    title: 'Employer retiree coverage & Medicare Advantage',
-    description:
-      'Retiree carve-outs sometimes steer to Medicare Advantage or group Medicare options — align HR communications with individual Medicare rights and disclosures.',
-    href: 'https://www.bcbs.com/employers',
-    contentType: 'plan',
-    topics: ['coverage', 'costs'],
-    audiences: ['employers', 'brokers'],
-    breadcrumb: ['Employers', 'Medicare Advantage'],
-    matchTerms: ['retiree', 'medicare advantage', 'group medicare', 'part c'],
-  },
-];
+import {
+  brands,
+  categories,
+  contentTypes,
+  getDefaultCardImage,
+  itemMatchesQuery,
+  itemMetadataLine,
+  itemVisibleForDemoUser,
+  normalizeQuery,
+  parseDemoUserTaxonomy,
+  popularSearches,
+  relevanceScore,
+  RESULTS_PAGE_SIZE,
+  searchCatalog,
+  searchFacetLabels,
+  selectAiSearchInsight,
+  supplementalResultsForDemoUserTaxonomy,
+  type SearchBrand,
+  type SearchCategory,
+  type SearchContentType,
+  type SearchResultItem,
+} from './data';
 
 export type SearchResultsProps = {
   className?: string;
-  /** When true, ignores `?q=` and uses `initialQuery` only (e.g. previews) */
   disableUrlSync?: boolean;
-  /** Used when `disableUrlSync` is true */
   initialQuery?: string;
 };
 
 type SortMode = 'relevance' | 'az';
 
-function normalizeQuery(q: string): string {
-  return q.toLowerCase().trim().replace(/\s+/g, ' ');
-}
-
-function relevanceScore(item: SearchResultItem, q: string, activeDemoUserTaxonomy: DemoUserTaxonomy | null): number {
-  const n = normalizeQuery(q);
-  if (!n) return 0;
-  const words = n.split(' ').filter(Boolean);
-  const title = item.title.toLowerCase();
-  const desc = item.description.toLowerCase();
-  const crumbs = (item.breadcrumb ?? []).join(' ').toLowerCase();
-  const extra = (item.matchTerms ?? []).join(' ').toLowerCase();
-  let score = 0;
-  for (const w of words) {
-    if (title.includes(w)) score += 5;
-    if (desc.includes(w)) score += 2;
-    if (crumbs.includes(w)) score += 1;
-    if (extra.includes(w)) score += 3;
-  }
-  if (activeDemoUserTaxonomy && item.demoUserTaxonomy === activeDemoUserTaxonomy) {
-    score += 25;
-  }
-  return score;
-}
-
-function itemMatchesQuery(item: SearchResultItem, q: string): boolean {
-  const n = normalizeQuery(q);
-  if (!n) return true;
-  const hay = [
-    item.title,
-    item.description,
-    ...(item.breadcrumb ?? []),
-    ...(item.matchTerms ?? []),
-  ]
-    .join(' ')
-    .toLowerCase();
-  return n.split(' ').filter(Boolean).every((w) => hay.includes(w));
-}
-
-function selectFeaturedAnswer(query: string): FeaturedAnswer | null {
-  const n = normalizeQuery(query);
-  if (n.length < 2) return null;
-  let best: { fa: FeaturedAnswer; score: number } | null = null;
-  for (const fa of featuredAnswers) {
-    const score = fa.triggeredWhenQueryIncludes.filter((t) => n.includes(t.toLowerCase())).length;
-    if (score > 0 && (!best || score > best.score)) best = { fa, score };
-  }
-  return best?.fa ?? null;
-}
-
-function itemMetadataLine(item: SearchResultItem): string {
-  const type = searchFacetLabels.contentType[item.contentType];
-  const when = item.dateLabel ?? 'Resource';
-  const trail = item.breadcrumb?.length ? item.breadcrumb.join(' · ') : '';
-  return trail ? `${type} · ${when} · ${trail}` : `${type} · ${when}`;
-}
-
-function itemAttributeRows(item: SearchResultItem) {
-  return [
-    {
-      label: 'Content type',
-      value: searchFacetLabels.contentType[item.contentType],
-      Icon: FileText,
-    },
-    {
-      label: 'Topic',
-      value: item.topics.map((t) => searchFacetLabels.topic[t]).join(', '),
-      Icon: Heart,
-    },
-    {
-      label: 'Audience',
-      value: item.audiences.map((a) => searchFacetLabels.audience[a]).join(', '),
-      Icon: Users,
-    },
-  ];
-}
-
-const contentTypes = Object.keys(searchFacetLabels.contentType) as SearchContentType[];
-const topics = Object.keys(searchFacetLabels.topic) as SearchTopic[];
-const audiences = Object.keys(searchFacetLabels.audience) as SearchAudience[];
-
-/** Client-side page size for the result grid (3 columns × 3 rows at xl). */
-const RESULTS_PAGE_SIZE = 9;
-
 function SearchFacetsPanel({
   selectedTypes,
-  selectedTopics,
-  selectedAudiences,
+  selectedCategories,
+  selectedBrands,
   countsTypes,
-  countsTopics,
-  countsAudiences,
+  countsCategories,
+  countsBrands,
   onToggleType,
-  onToggleTopic,
-  onToggleAudience,
+  onToggleCategory,
+  onToggleBrand,
   activeFilterCount,
   clearFilters,
 }: {
   selectedTypes: Set<SearchContentType>;
-  selectedTopics: Set<SearchTopic>;
-  selectedAudiences: Set<SearchAudience>;
+  selectedCategories: Set<SearchCategory>;
+  selectedBrands: Set<SearchBrand>;
   countsTypes: Record<SearchContentType, number>;
-  countsTopics: Record<SearchTopic, number>;
-  countsAudiences: Record<SearchAudience, number>;
+  countsCategories: Record<SearchCategory, number>;
+  countsBrands: Record<SearchBrand, number>;
   onToggleType: (key: SearchContentType) => void;
-  onToggleTopic: (key: SearchTopic) => void;
-  onToggleAudience: (key: SearchAudience) => void;
+  onToggleCategory: (key: SearchCategory) => void;
+  onToggleBrand: (key: SearchBrand) => void;
   activeFilterCount: number;
   clearFilters: () => void;
 }) {
   return (
-    <div className="rounded-default border border-border/80 bg-card shadow-sm">
-      <div className="flex items-center justify-between border-b border-border/60 px-4 py-3">
-        <span className="text-sm font-semibold text-secondary-foreground">Refine results</span>
+    <div className="rounded-2xl border border-border/70 bg-card/95 shadow-sm ring-1 ring-black/[0.03] backdrop-blur-sm dark:ring-white/[0.06]">
+      <div className="flex items-center justify-between border-b border-border/60 px-4 py-3.5">
+        <span className="text-sm font-semibold tracking-tight text-foreground">Refine results</span>
         {activeFilterCount > 0 ? (
           <Button type="button" variant="ghost" size="sm" className="h-8 text-primary" onClick={clearFilters}>
             Clear all
@@ -833,41 +112,41 @@ function SearchFacetsPanel({
             ))}
           </div>
         </FacetSection>
-        <FacetSection title="Topic">
+        <FacetSection title="Product family">
           <div className="flex flex-col gap-2.5">
-            {topics.map((key) => (
+            {categories.map((key) => (
               <label
                 key={key}
                 className="flex cursor-pointer items-start gap-2.5 text-sm text-foreground/90"
               >
                 <Checkbox
-                  checked={selectedTopics.has(key)}
-                  onCheckedChange={() => onToggleTopic(key)}
+                  checked={selectedCategories.has(key)}
+                  onCheckedChange={() => onToggleCategory(key)}
                   className="mt-0.5 border-primary data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground"
                 />
                 <span className="flex flex-1 flex-wrap items-baseline justify-between gap-x-1">
-                  <span>{searchFacetLabels.topic[key]}</span>
-                  <span className="text-xs tabular-nums text-muted-foreground">({countsTopics[key]})</span>
+                  <span>{searchFacetLabels.category[key]}</span>
+                  <span className="text-xs tabular-nums text-muted-foreground">({countsCategories[key]})</span>
                 </span>
               </label>
             ))}
           </div>
         </FacetSection>
-        <FacetSection title="Audience" defaultOpen={false}>
+        <FacetSection title="Brand" defaultOpen={false}>
           <div className="flex flex-col gap-2.5">
-            {audiences.map((key) => (
+            {brands.map((key) => (
               <label
                 key={key}
                 className="flex cursor-pointer items-start gap-2.5 text-sm text-foreground/90"
               >
                 <Checkbox
-                  checked={selectedAudiences.has(key)}
-                  onCheckedChange={() => onToggleAudience(key)}
+                  checked={selectedBrands.has(key)}
+                  onCheckedChange={() => onToggleBrand(key)}
                   className="mt-0.5 border-primary data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground"
                 />
                 <span className="flex flex-1 flex-wrap items-baseline justify-between gap-x-1">
-                  <span>{searchFacetLabels.audience[key]}</span>
-                  <span className="text-xs tabular-nums text-muted-foreground">({countsAudiences[key]})</span>
+                  <span>{searchFacetLabels.brand[key]}</span>
+                  <span className="text-xs tabular-nums text-muted-foreground">({countsBrands[key]})</span>
                 </span>
               </label>
             ))}
@@ -889,7 +168,7 @@ function FacetSection({
 }) {
   return (
     <Collapsible defaultOpen={defaultOpen} className="border-b border-border/60 py-3 last:border-b-0">
-      <CollapsibleTrigger className="flex w-full items-center justify-between gap-2 py-2 text-left text-[11px] font-bold uppercase tracking-wider text-secondary-foreground outline-none [&[data-state=open]_svg]:rotate-180">
+      <CollapsibleTrigger className="flex w-full items-center justify-between gap-2 py-2 text-left text-[11px] font-bold uppercase tracking-wider text-muted-foreground outline-none [&[data-state=open]_svg]:rotate-180">
         {title}
         <ChevronDown className="size-4 shrink-0 text-primary transition-transform duration-200" />
       </CollapsibleTrigger>
@@ -898,55 +177,81 @@ function FacetSection({
   );
 }
 
+const contentTypeIcons: Record<SearchContentType, typeof Package> = {
+  product: Package,
+  featuredArticle: BookOpen,
+  technicalResource: Wrench,
+  productManual: FileText,
+};
+
+function ctaLabel(item: SearchResultItem): string {
+  switch (item.contentType) {
+    case 'product':
+      return 'View product';
+    case 'featuredArticle':
+      return 'Read article';
+    case 'technicalResource':
+      return 'Open resource';
+    case 'productManual':
+      return 'View manual';
+    default:
+      return 'Open';
+  }
+}
+
 function ResultCard({ item }: { item: SearchResultItem }) {
-  const img = item.imageSrc ?? defaultCardImage;
-  const rows = itemAttributeRows(item);
+  const img = item.imageSrc ?? getDefaultCardImage();
+  const Icon = contentTypeIcons[item.contentType];
+  const meta = itemMetadataLine(item);
+  const brandLine = item.brands.map((b) => searchFacetLabels.brand[b]).join(' · ');
+
   return (
-    <article className="group flex flex-col overflow-hidden rounded-default border border-border/80 bg-card shadow-sm transition-shadow hover:shadow-md">
-      <a href={item.href} target="_blank" rel="noopener noreferrer" className="flex flex-1 flex-col text-inherit no-underline">
+    <article className="group flex flex-col overflow-hidden rounded-2xl border border-border/70 bg-card shadow-sm ring-1 ring-black/[0.03] transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/25 hover:shadow-md dark:ring-white/[0.05]">
+      <a
+        href={item.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex flex-1 flex-col text-inherit no-underline"
+      >
         <div className="relative aspect-[16/10] w-full overflow-hidden bg-muted">
           <Image
             src={img}
             alt=""
             fill
             sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
-            className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+            className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
           />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-80" />
           {item.isNew ? (
-            <span className="absolute left-2 top-2 rounded-sm bg-primary px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-primary-foreground shadow">
+            <span className="absolute left-3 top-3 rounded-full bg-primary px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-primary-foreground shadow">
               New
             </span>
           ) : null}
+          <div className="absolute bottom-3 left-3 right-3 flex flex-wrap items-center justify-between gap-2">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-background/90 px-2.5 py-1 text-[11px] font-medium text-foreground shadow-sm backdrop-blur">
+              <Icon className="size-3.5 text-primary" aria-hidden />
+              {searchFacetLabels.contentType[item.contentType]}
+            </span>
+            {item.priceLabel ? (
+              <span className="rounded-full bg-primary/95 px-2.5 py-1 text-[11px] font-semibold text-primary-foreground shadow">
+                {item.priceLabel}
+              </span>
+            ) : null}
+          </div>
         </div>
-        <div className="flex flex-1 flex-col px-4 pb-4 pt-3">
-          <p className="text-xs text-muted-foreground">
-            {itemMetadataLine(item)
-              .split(' · ')
-              .map((part, i) => (
-                <span key={`${part}-${i}`}>
-                  {i > 0 ? <span className="mx-1 text-border">|</span> : null}
-                  {part}
-                </span>
-              ))}
-          </p>
-          <h3 className="mt-2 text-lg font-semibold leading-snug text-secondary-foreground group-hover:text-primary">
+        <div className="flex flex-1 flex-col px-4 pb-4 pt-3.5">
+          <p className="line-clamp-2 text-xs leading-relaxed text-muted-foreground">{meta}</p>
+          <h3 className="mt-2 line-clamp-2 text-base font-semibold leading-snug tracking-tight text-foreground group-hover:text-primary">
             {item.title}
           </h3>
-          <ul className="mt-3 space-y-2 text-sm">
-            {rows.map(({ label, value, Icon }) => (
-              <li key={label} className="flex gap-2">
-                <span className="mt-0.5 flex size-7 shrink-0 items-center justify-center rounded-full bg-secondary text-primary">
-                  <Icon className="size-3.5" aria-hidden />
-                </span>
-                <span>
-                  <span className="font-semibold text-secondary-foreground">{label}: </span>
-                  <span className="text-foreground/85">{value}</span>
-                </span>
-              </li>
-            ))}
-          </ul>
+          <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-muted-foreground">{item.description}</p>
+          <div className="mt-3 flex flex-wrap gap-2 text-[11px] text-muted-foreground">
+            <span className="rounded-md bg-secondary/80 px-2 py-0.5 font-medium text-secondary-foreground">
+              {brandLine}
+            </span>
+          </div>
           <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary">
-            Read more
+            {ctaLabel(item)}
             <ArrowUpRight className="size-3.5" aria-hidden />
           </span>
         </div>
@@ -973,8 +278,8 @@ export const SearchResults: FC<SearchResultsProps> = ({
   const [isSearching, setIsSearching] = useState(false);
 
   const [selectedTypes, setSelectedTypes] = useState<Set<SearchContentType>>(new Set());
-  const [selectedTopics, setSelectedTopics] = useState<Set<SearchTopic>>(new Set());
-  const [selectedAudiences, setSelectedAudiences] = useState<Set<SearchAudience>>(new Set());
+  const [selectedCategories, setSelectedCategories] = useState<Set<SearchCategory>>(new Set());
+  const [selectedBrands, setSelectedBrands] = useState<Set<SearchBrand>>(new Set());
   const [resultsPage, setResultsPage] = useState(1);
   const [demoTaxonomyRaw, setDemoTaxonomyRaw] = useState('');
 
@@ -992,8 +297,10 @@ export const SearchResults: FC<SearchResultsProps> = ({
   const activeDemoUserTaxonomy = useMemo(() => parseDemoUserTaxonomy(demoTaxonomyRaw), [demoTaxonomyRaw]);
 
   const activeCatalog = useMemo(() => {
-    if (!activeDemoUserTaxonomy) return searchCatalog;
-    return [...supplementalResultsForDemoUserTaxonomy(activeDemoUserTaxonomy), ...searchCatalog];
+    const merged = activeDemoUserTaxonomy
+      ? [...supplementalResultsForDemoUserTaxonomy(activeDemoUserTaxonomy), ...searchCatalog]
+      : searchCatalog;
+    return merged.filter((item) => itemVisibleForDemoUser(item, activeDemoUserTaxonomy));
   }, [activeDemoUserTaxonomy]);
 
   const toggle = useCallback(<T extends string>(set: Dispatch<SetStateAction<Set<T>>>, v: T) => {
@@ -1013,13 +320,13 @@ export const SearchResults: FC<SearchResultsProps> = ({
 
   useEffect(() => {
     setIsSearching(true);
-    const t = window.setTimeout(() => setIsSearching(false), 200);
+    const t = window.setTimeout(() => setIsSearching(false), 220);
     return () => window.clearTimeout(t);
-  }, [query, selectedTypes, selectedTopics, selectedAudiences, sort]);
+  }, [query, selectedTypes, selectedCategories, selectedBrands, sort]);
 
   useEffect(() => {
     setResultsPage(1);
-  }, [query, selectedTypes, selectedTopics, selectedAudiences, sort]);
+  }, [query, selectedTypes, selectedCategories, selectedBrands, sort]);
 
   const queryMatched = useMemo(
     () => activeCatalog.filter((item) => itemMatchesQuery(item, query)),
@@ -1028,36 +335,36 @@ export const SearchResults: FC<SearchResultsProps> = ({
 
   const countsTypes = useMemo(() => {
     const base = queryMatched.filter((item) => {
-      if (selectedTopics.size && !item.topics.some((t) => selectedTopics.has(t))) return false;
-      if (selectedAudiences.size && !item.audiences.some((a) => selectedAudiences.has(a))) return false;
+      if (selectedCategories.size && !item.categories.some((c) => selectedCategories.has(c))) return false;
+      if (selectedBrands.size && !item.brands.some((b) => selectedBrands.has(b))) return false;
       return true;
     });
     return Object.fromEntries(
       contentTypes.map((k) => [k, base.filter((i) => i.contentType === k).length])
     ) as Record<SearchContentType, number>;
-  }, [queryMatched, selectedTopics, selectedAudiences]);
+  }, [queryMatched, selectedCategories, selectedBrands]);
 
-  const countsTopics = useMemo(() => {
+  const countsCategories = useMemo(() => {
     const base = queryMatched.filter((item) => {
       if (selectedTypes.size && !selectedTypes.has(item.contentType)) return false;
-      if (selectedAudiences.size && !item.audiences.some((a) => selectedAudiences.has(a))) return false;
+      if (selectedBrands.size && !item.brands.some((b) => selectedBrands.has(b))) return false;
       return true;
     });
     return Object.fromEntries(
-      topics.map((k) => [k, base.filter((i) => i.topics.includes(k)).length])
-    ) as Record<SearchTopic, number>;
-  }, [queryMatched, selectedTypes, selectedAudiences]);
+      categories.map((k) => [k, base.filter((i) => i.categories.includes(k)).length])
+    ) as Record<SearchCategory, number>;
+  }, [queryMatched, selectedTypes, selectedBrands]);
 
-  const countsAudiences = useMemo(() => {
+  const countsBrands = useMemo(() => {
     const base = queryMatched.filter((item) => {
       if (selectedTypes.size && !selectedTypes.has(item.contentType)) return false;
-      if (selectedTopics.size && !item.topics.some((t) => selectedTopics.has(t))) return false;
+      if (selectedCategories.size && !item.categories.some((c) => selectedCategories.has(c))) return false;
       return true;
     });
     return Object.fromEntries(
-      audiences.map((k) => [k, base.filter((i) => i.audiences.includes(k)).length])
-    ) as Record<SearchAudience, number>;
-  }, [queryMatched, selectedTypes, selectedTopics]);
+      brands.map((k) => [k, base.filter((i) => i.brands.includes(k)).length])
+    ) as Record<SearchBrand, number>;
+  }, [queryMatched, selectedTypes, selectedCategories]);
 
   const filtered = useMemo(() => {
     const q = normalizeQuery(query);
@@ -1066,11 +373,11 @@ export const SearchResults: FC<SearchResultsProps> = ({
     if (selectedTypes.size) {
       list = list.filter((item) => selectedTypes.has(item.contentType));
     }
-    if (selectedTopics.size) {
-      list = list.filter((item) => item.topics.some((t) => selectedTopics.has(t)));
+    if (selectedCategories.size) {
+      list = list.filter((item) => item.categories.some((c) => selectedCategories.has(c)));
     }
-    if (selectedAudiences.size) {
-      list = list.filter((item) => item.audiences.some((a) => selectedAudiences.has(a)));
+    if (selectedBrands.size) {
+      list = list.filter((item) => item.brands.some((b) => selectedBrands.has(b)));
     }
 
     const sorted = [...list];
@@ -1085,7 +392,7 @@ export const SearchResults: FC<SearchResultsProps> = ({
       });
     }
     return sorted;
-  }, [activeCatalog, activeDemoUserTaxonomy, query, selectedTypes, selectedTopics, selectedAudiences, sort]);
+  }, [activeCatalog, activeDemoUserTaxonomy, query, selectedTypes, selectedCategories, selectedBrands, sort]);
 
   const resultsTotalPages = Math.max(1, Math.ceil(filtered.length / RESULTS_PAGE_SIZE));
   const safeResultsPage = Math.min(resultsPage, resultsTotalPages);
@@ -1098,15 +405,17 @@ export const SearchResults: FC<SearchResultsProps> = ({
     if (resultsPage > resultsTotalPages) setResultsPage(resultsTotalPages);
   }, [resultsPage, resultsTotalPages]);
 
-  const featured = useMemo(() => selectFeaturedAnswer(query), [query]);
+  const aiInsight = useMemo(
+    () => selectAiSearchInsight(query, activeDemoUserTaxonomy),
+    [query, activeDemoUserTaxonomy]
+  );
 
-  const activeFilterCount =
-    selectedTypes.size + selectedTopics.size + selectedAudiences.size;
+  const activeFilterCount = selectedTypes.size + selectedCategories.size + selectedBrands.size;
 
   const clearFilters = () => {
     setSelectedTypes(new Set());
-    setSelectedTopics(new Set());
-    setSelectedAudiences(new Set());
+    setSelectedCategories(new Set());
+    setSelectedBrands(new Set());
   };
 
   const syncUrl = useCallback(
@@ -1142,31 +451,35 @@ export const SearchResults: FC<SearchResultsProps> = ({
 
   const facetPanelProps = {
     selectedTypes,
-    selectedTopics,
-    selectedAudiences,
+    selectedCategories,
+    selectedBrands,
     countsTypes,
-    countsTopics,
-    countsAudiences,
+    countsCategories,
+    countsBrands,
     onToggleType: (key: SearchContentType) => toggle(setSelectedTypes, key),
-    onToggleTopic: (key: SearchTopic) => toggle(setSelectedTopics, key),
-    onToggleAudience: (key: SearchAudience) => toggle(setSelectedAudiences, key),
+    onToggleCategory: (key: SearchCategory) => toggle(setSelectedCategories, key),
+    onToggleBrand: (key: SearchBrand) => toggle(setSelectedBrands, key),
     activeFilterCount,
     clearFilters,
   };
 
   const displayHeading = draft.trim() || qFromUrl.trim();
+  const personaLabel = activeDemoUserTaxonomy ?? 'All personas';
 
   return (
     <section
-      className={cn('min-h-[60vh] bg-background pb-16 pt-6 sm:pt-8', className)}
+      className={cn(
+        'min-h-[60vh] bg-gradient-to-b from-background via-background to-secondary/25 pb-16 pt-6 sm:pt-8',
+        className
+      )}
       aria-label="Search results"
     >
       <div className="mx-auto w-full max-w-[100rem] px-4 sm:px-6 lg:px-8">
-        <div className="rounded-default border border-border/70 bg-secondary/40 p-4 sm:p-5">
+        <div className="rounded-2xl border border-border/60 bg-card/80 p-4 shadow-sm ring-1 ring-black/[0.04] backdrop-blur-md dark:bg-card/50 dark:ring-white/[0.06] sm:p-5">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
             <div className="relative min-w-0 flex-1">
               <Search
-                className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-primary"
+                className="pointer-events-none absolute left-3.5 top-1/2 size-4 -translate-y-1/2 text-primary"
                 aria-hidden
               />
               <input
@@ -1179,14 +492,14 @@ export const SearchResults: FC<SearchResultsProps> = ({
                     runSearch();
                   }
                 }}
-                placeholder="Search articles, plans, tools, and news…"
-                className="h-12 w-full rounded-default border border-border bg-background pl-10 pr-10 text-sm text-foreground shadow-sm outline-none ring-primary/25 placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/25"
+                placeholder="Search products, articles, manuals, and technical resources…"
+                className="h-12 w-full rounded-xl border border-border/80 bg-background pl-11 pr-10 text-sm text-foreground shadow-inner outline-none ring-primary/20 placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/20"
                 autoComplete="off"
               />
               {draft ? (
                 <button
                   type="button"
-                  className="absolute right-2 top-1/2 -translate-y-1/2 rounded-default p-1.5 text-muted-foreground hover:bg-muted hover:text-foreground"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 rounded-lg p-1.5 text-muted-foreground hover:bg-muted hover:text-foreground"
                   aria-label="Clear search"
                   onClick={clearSearchField}
                 >
@@ -1194,7 +507,7 @@ export const SearchResults: FC<SearchResultsProps> = ({
                 </button>
               ) : null}
             </div>
-            <Button type="button" className="h-12 shrink-0 px-8" onClick={runSearch}>
+            <Button type="button" className="h-12 shrink-0 rounded-xl px-8 font-semibold shadow-sm" onClick={runSearch}>
               Search
             </Button>
           </div>
@@ -1205,7 +518,7 @@ export const SearchResults: FC<SearchResultsProps> = ({
                 key={term}
                 type="button"
                 onClick={() => applyPopular(term)}
-                className="rounded-full border border-border/80 bg-background px-3 py-1 text-xs font-medium text-secondary-foreground transition-colors hover:border-primary/40 hover:bg-card"
+                className="rounded-full border border-border/70 bg-background px-3 py-1.5 text-xs font-medium text-secondary-foreground transition-colors hover:border-primary/35 hover:bg-primary/5 hover:text-primary"
               >
                 {term}
               </button>
@@ -1214,29 +527,37 @@ export const SearchResults: FC<SearchResultsProps> = ({
         </div>
 
         <header className="mt-10">
-          <h1 className="text-2xl font-semibold tracking-tight text-secondary-foreground sm:text-3xl">
-            {normalizeQuery(query) ? (
-              <>
-                Showing results for <span className="text-primary">&ldquo;{displayHeading}&rdquo;</span>
-              </>
-            ) : (
-              'Search resources'
-            )}
-          </h1>
-          <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
-            Use the filters to narrow by content type, topic, or audience. Counts reflect how many items match your
-            search and other active filters.
-          </p>
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <p className="text-xs font-medium uppercase tracking-widest text-primary/90">Dwyer Omega</p>
+              <h1 className="mt-1 text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
+                {normalizeQuery(query) ? (
+                  <>
+                    Results for <span className="text-primary">&ldquo;{displayHeading}&rdquo;</span>
+                  </>
+                ) : (
+                  'Instrument search'
+                )}
+              </h1>
+              <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+                Faceted navigation mirrors a modern commerce experience: filter by content type, product family, and
+                brand. Switch the demo user to see different personalized rows and AI guidance.
+              </p>
+            </div>
+            <div className="rounded-xl border border-dashed border-primary/25 bg-primary/5 px-3 py-2 text-xs text-muted-foreground">
+              <span className="font-semibold text-foreground">Demo persona:</span> {personaLabel}
+            </div>
+          </div>
         </header>
 
-        <div className="mt-10 flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-12">
-          <aside className="w-full shrink-0 lg:sticky lg:top-28 lg:w-[min(100%,20rem)] xl:w-80">
+        <div className="mt-10 flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-10">
+          <aside className="w-full shrink-0 lg:sticky lg:top-28 lg:w-[min(100%,19rem)] xl:w-72">
             <div className="hidden lg:block">
               <SearchFacetsPanel {...facetPanelProps} />
             </div>
             <div className="lg:hidden">
               <Collapsible defaultOpen={false}>
-                <CollapsibleTrigger className="flex w-full items-center justify-center gap-2 rounded-default border border-border bg-card px-4 py-3 text-sm font-semibold text-secondary-foreground shadow-sm">
+                <CollapsibleTrigger className="flex w-full items-center justify-center gap-2 rounded-2xl border border-border bg-card px-4 py-3 text-sm font-semibold text-secondary-foreground shadow-sm">
                   Filters
                   {activeFilterCount > 0 ? (
                     <Badge variant="secondary" className="rounded-full">
@@ -1253,29 +574,34 @@ export const SearchResults: FC<SearchResultsProps> = ({
           </aside>
 
           <main className="min-w-0 flex-1">
-            {featured ? (
+            {aiInsight ? (
               <section
-                className="relative overflow-hidden rounded-default border border-primary/25 bg-gradient-to-br from-secondary via-background to-secondary/60 p-5 shadow-sm"
-                aria-labelledby="search-qa-heading"
+                className="relative overflow-hidden rounded-2xl border border-violet-500/20 bg-gradient-to-br from-violet-500/[0.08] via-background to-cyan-500/[0.06] p-5 shadow-sm ring-1 ring-violet-500/10"
+                aria-labelledby="ai-insight-heading"
               >
-                <div className="absolute right-0 top-0 size-40 rounded-full bg-primary/5 blur-3xl" />
-                <div className="relative flex items-start gap-3">
-                  <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/15 text-primary">
+                <div className="pointer-events-none absolute -right-16 -top-16 size-56 rounded-full bg-gradient-to-br from-violet-500/20 to-transparent blur-2xl" />
+                <div className="relative flex flex-col gap-3 sm:flex-row sm:items-start">
+                  <div className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-violet-600 to-cyan-600 text-white shadow-md">
                     <Sparkles className="size-5" aria-hidden />
                   </div>
                   <div className="min-w-0 flex-1 space-y-2">
-                    <p id="search-qa-heading" className="text-xs font-bold uppercase tracking-wider text-primary">
-                      Quick answer
+                    <p id="ai-insight-heading" className="text-[11px] font-bold uppercase tracking-[0.2em] text-violet-700 dark:text-violet-300">
+                      AI suggestion
                     </p>
-                    <h2 className="text-lg font-semibold leading-snug text-secondary-foreground">{featured.question}</h2>
-                    <p className="text-sm leading-relaxed text-foreground/85">{featured.answer}</p>
+                    <h2 className="text-lg font-semibold leading-snug tracking-tight text-foreground">{aiInsight.headline}</h2>
+                    <p className="text-sm leading-relaxed text-muted-foreground">{aiInsight.body}</p>
+                    <ul className="list-inside list-disc space-y-1 text-sm text-foreground/90 marker:text-primary">
+                      {aiInsight.bullets.map((b) => (
+                        <li key={b}>{b}</li>
+                      ))}
+                    </ul>
                     <a
-                      href={featured.learnMoreHref}
+                      href={aiInsight.learnMoreHref}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1 text-sm font-semibold text-primary hover:underline"
                     >
-                      {featured.learnMoreLabel ?? 'Learn more'}
+                      {aiInsight.learnMoreLabel ?? 'Learn more'}
                       <ArrowUpRight className="size-3.5" aria-hidden />
                     </a>
                   </div>
@@ -1286,7 +612,7 @@ export const SearchResults: FC<SearchResultsProps> = ({
             <div
               className={cn(
                 'flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between',
-                featured ? 'mt-8' : 'mt-0'
+                aiInsight ? 'mt-8' : 'mt-0'
               )}
             >
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
@@ -1300,7 +626,7 @@ export const SearchResults: FC<SearchResultsProps> = ({
                       for &ldquo;<span className="text-foreground">{displayHeading}</span>&rdquo;
                     </>
                   ) : (
-                    ' — browse the catalog or add filters'
+                    ' — search or pick a popular term'
                   )}
                 </span>
               </div>
@@ -1310,7 +636,7 @@ export const SearchResults: FC<SearchResultsProps> = ({
                 <select
                   value={sort}
                   onChange={(e) => setSort(e.target.value as SortMode)}
-                  className="h-9 rounded-default border border-border bg-background px-2 text-sm outline-none ring-primary/20 focus:ring-2"
+                  className="h-9 rounded-lg border border-border bg-background px-2 text-sm outline-none ring-primary/20 focus:ring-2"
                 >
                   <option value="relevance">Best match</option>
                   <option value="az">Title A–Z</option>
@@ -1324,32 +650,32 @@ export const SearchResults: FC<SearchResultsProps> = ({
                   <Badge
                     key={`t-${key}`}
                     variant="secondary"
-                    className="cursor-pointer gap-1 pr-1.5 hover:bg-secondary/80"
+                    className="cursor-pointer gap-1 rounded-full pr-1.5 hover:bg-secondary/80"
                     onClick={() => toggle(setSelectedTypes, key)}
                   >
                     {searchFacetLabels.contentType[key]}
                     <X className="size-3" aria-hidden />
                   </Badge>
                 ))}
-                {[...selectedTopics].map((key) => (
+                {[...selectedCategories].map((key) => (
                   <Badge
-                    key={`tp-${key}`}
+                    key={`c-${key}`}
                     variant="secondary"
-                    className="cursor-pointer gap-1 pr-1.5 hover:bg-secondary/80"
-                    onClick={() => toggle(setSelectedTopics, key)}
+                    className="cursor-pointer gap-1 rounded-full pr-1.5 hover:bg-secondary/80"
+                    onClick={() => toggle(setSelectedCategories, key)}
                   >
-                    {searchFacetLabels.topic[key]}
+                    {searchFacetLabels.category[key]}
                     <X className="size-3" aria-hidden />
                   </Badge>
                 ))}
-                {[...selectedAudiences].map((key) => (
+                {[...selectedBrands].map((key) => (
                   <Badge
-                    key={`a-${key}`}
+                    key={`b-${key}`}
                     variant="secondary"
-                    className="cursor-pointer gap-1 pr-1.5 hover:bg-secondary/80"
-                    onClick={() => toggle(setSelectedAudiences, key)}
+                    className="cursor-pointer gap-1 rounded-full pr-1.5 hover:bg-secondary/80"
+                    onClick={() => toggle(setSelectedBrands, key)}
                   >
-                    {searchFacetLabels.audience[key]}
+                    {searchFacetLabels.brand[key]}
                     <X className="size-3" aria-hidden />
                   </Badge>
                 ))}
@@ -1384,7 +710,7 @@ export const SearchResults: FC<SearchResultsProps> = ({
                         type="button"
                         variant="outline"
                         size="sm"
-                        className="min-w-[5.5rem]"
+                        className="min-w-[5.5rem] rounded-lg"
                         disabled={safeResultsPage <= 1}
                         onClick={() => setResultsPage((p) => Math.max(1, p - 1))}
                       >
@@ -1397,7 +723,7 @@ export const SearchResults: FC<SearchResultsProps> = ({
                         type="button"
                         variant="outline"
                         size="sm"
-                        className="min-w-[5.5rem]"
+                        className="min-w-[5.5rem] rounded-lg"
                         disabled={safeResultsPage >= resultsTotalPages}
                         onClick={() => setResultsPage((p) => Math.min(resultsTotalPages, p + 1))}
                       >
@@ -1408,12 +734,13 @@ export const SearchResults: FC<SearchResultsProps> = ({
                 ) : null}
               </>
             ) : (
-              <div className="mt-10 rounded-default border border-dashed border-border bg-muted/30 px-6 py-12 text-center">
+              <div className="mt-10 rounded-2xl border border-dashed border-border bg-muted/25 px-6 py-12 text-center">
                 <p className="text-sm font-medium text-secondary-foreground">No matches for that combination.</p>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  Try clearing filters or a shorter phrase like &ldquo;coverage&rdquo; or &ldquo;news&rdquo;.
+                  Try clearing filters or a phrase like &ldquo;Pressure regulators&rdquo;, &ldquo;Data loggers&rdquo;, or
+                  &ldquo;IIoT&rdquo;.
                 </p>
-                <Button type="button" variant="secondary" className="mt-5" onClick={clearFilters}>
+                <Button type="button" variant="secondary" className="mt-5 rounded-lg" onClick={clearFilters}>
                   Clear filters
                 </Button>
               </div>
