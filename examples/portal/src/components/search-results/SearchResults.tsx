@@ -35,8 +35,8 @@ type SearchTopic = 'coverage' | 'costs' | 'care' | 'wellness' | 'news' | 'about'
 
 type SearchAudience = 'members' | 'employers' | 'brokers' | 'providers';
 
-/** Demo plan keys aligned with `DemoUserSwitcher` / `$taxonomy` values */
-type DemoPlanTaxonomy = 'BCBS of California' | 'BCBS of Illinois' | 'BCBS of Massachusetts';
+/** Demo role keys aligned with `DemoUserSwitcher` / localStorage taxonomy values */
+type DemoUserTaxonomy = 'Maintenance Engineer' | 'Engineering Consultant' | 'Plant Technician';
 
 type SearchResultItem = {
   id: string;
@@ -51,10 +51,10 @@ type SearchResultItem = {
   matchTerms?: string[];
   /** Card hero image (editable per result) */
   imageSrc?: string;
-  /** BCBS blue “new” ribbon on the card image */
+  /** Highlight ribbon on the card image */
   isNew?: boolean;
-  /** When set, relevance is boosted for searches while this demo plan user is selected */
-  demoPlanTaxonomy?: DemoPlanTaxonomy;
+  /** When set, relevance is boosted while this demo user role is selected */
+  demoUserTaxonomy?: DemoUserTaxonomy;
 };
 
 type FeaturedAnswer = {
@@ -164,95 +164,200 @@ const featuredAnswers: FeaturedAnswer[] = [
   },
 ];
 
-/** Unsplash — healthcare & benefits imagery for BCBS.com-style demo cards. */
+/** Unsplash — industrial / instrumentation imagery for demo cards. */
 function unsplashPhoto(path: string) {
   return `https://images.unsplash.com/${path}?auto=format&fit=crop&w=800&h=520&q=80`;
 }
 
-function parseDemoPlanTaxonomy(raw: string | undefined | null): DemoPlanTaxonomy | null {
+function parseDemoUserTaxonomy(raw: string | undefined | null): DemoUserTaxonomy | null {
   const t = raw?.trim();
-  if (t === 'BCBS of California' || t === 'BCBS of Illinois' || t === 'BCBS of Massachusetts') {
+  if (t === 'Maintenance Engineer' || t === 'Engineering Consultant' || t === 'Plant Technician') {
     return t;
   }
   return null;
 }
 
-function supplementalResultsForDemoPlan(plan: DemoPlanTaxonomy): SearchResultItem[] {
-  const state =
-    plan === 'BCBS of California'
-      ? 'California'
-      : plan === 'BCBS of Illinois'
-        ? 'Illinois'
-        : 'Massachusetts';
+const dwyerOmegaBaseHref = 'https://www.dwyeromega.com/';
 
-  const planShort =
-    plan === 'BCBS of California'
-      ? 'Blue Cross of California'
-      : plan === 'BCBS of Illinois'
-        ? 'Blue Cross and Blue Shield of Illinois'
-        : 'Blue Cross Blue Shield of Massachusetts';
+function supplementalResultsForDemoUserTaxonomy(plan: DemoUserTaxonomy): SearchResultItem[] {
+  const code =
+    plan === 'Maintenance Engineer' ? 'me' : plan === 'Engineering Consultant' ? 'ec' : 'pt';
 
-  const code = plan === 'BCBS of California' ? 'ca' : plan === 'BCBS of Illinois' ? 'il' : 'ma';
+  const rows: Omit<SearchResultItem, 'id' | 'demoUserTaxonomy'>[] =
+    plan === 'Maintenance Engineer'
+      ? [
+          {
+            imageSrc: unsplashPhoto('photo-1581091226825-a6a2a5aee158'),
+            isNew: true,
+            title: 'Maintenance Engineer — CMMS work orders & instrument calibration windows',
+            description:
+              'Close the loop between rounds data and calibration due dates for gauges, transmitters, and switches — aligned with preventive maintenance programs common in process plants.',
+            href: dwyerOmegaBaseHref,
+            contentType: 'article',
+            topics: ['costs', 'coverage'],
+            audiences: ['members'],
+            dateLabel: 'Field guide',
+            breadcrumb: ['Maintenance', 'Calibration'],
+            matchTerms: ['calibration', 'cmms', 'preventive maintenance', 'instrument', 'schedule'],
+          },
+          {
+            imageSrc: unsplashPhoto('photo-1504917595217-d002cbf56fc7'),
+            title: 'Shutdown prep: isolation, tagging & verification for control loops',
+            description:
+              'Step-by-step checks before energizing or de-energizing loops that use pressure, flow, or level instrumentation — reduce rework during outages.',
+            href: dwyerOmegaBaseHref,
+            contentType: 'form',
+            topics: ['care', 'costs'],
+            audiences: ['members', 'providers'],
+            dateLabel: 'Checklist',
+            breadcrumb: ['Maintenance', 'Shutdown'],
+            matchTerms: ['shutdown', 'lockout', 'loop', 'instrumentation', 'verification'],
+          },
+          {
+            imageSrc: unsplashPhoto('photo-1582719478250-c89cae4dc85b'),
+            isNew: true,
+            title: 'Troubleshooting erratic readings: wiring, grounding & sensor placement',
+            description:
+              'Field playbook for distinguishing wiring issues from sensor drift or process upset — includes quick tests for DP and electronic transmitters.',
+            href: dwyerOmegaBaseHref,
+            contentType: 'tool',
+            topics: ['coverage', 'care'],
+            audiences: ['members', 'brokers'],
+            dateLabel: 'Toolkit',
+            breadcrumb: ['Support', 'Diagnostics'],
+            matchTerms: ['troubleshoot', 'transmitter', 'grounding', 'sensor', 'dp'],
+          },
+          {
+            imageSrc: unsplashPhoto('photo-1565043666747-69f6646db940'),
+            title: 'Spare strategy for critical measurement points',
+            description:
+              'How to stock and rotate spares for switches, gauges, and transmitters without over-inventorying — ties to reliability-centered maintenance goals.',
+            href: dwyerOmegaBaseHref,
+            contentType: 'plan',
+            topics: ['costs', 'about'],
+            audiences: ['employers', 'brokers'],
+            dateLabel: 'Reliability',
+            breadcrumb: ['Operations', 'Spares'],
+            matchTerms: ['spare parts', 'inventory', 'reliability', 'measurement', 'stock'],
+          },
+        ]
+      : plan === 'Engineering Consultant'
+        ? [
+            {
+              imageSrc: unsplashPhoto('photo-1581092160562-40aa08f11460'),
+              isNew: true,
+              title: 'Engineering Consultant — specifying DP instruments for HVAC & cleanroom',
+              description:
+                'Application notes on range selection, accuracy classes, and installation effects when specifying differential pressure for filtration and pressurization systems.',
+              href: dwyerOmegaBaseHref,
+              contentType: 'article',
+              topics: ['coverage', 'costs'],
+              audiences: ['brokers', 'employers'],
+              dateLabel: 'Application note',
+              breadcrumb: ['Design', 'HVAC'],
+              matchTerms: ['differential pressure', 'specification', 'cleanroom', 'hvac', 'engineering'],
+            },
+            {
+              imageSrc: unsplashPhoto('photo-1504328345606-18bbc8c9d7d1'),
+              title: 'Energy audits: flow measurement points that pay back fastest',
+              description:
+                'Prioritize metering locations for steam, compressed air, and hydronic loops — improve ROI on efficiency projects with better baseline data.',
+              href: dwyerOmegaBaseHref,
+              contentType: 'tool',
+              topics: ['costs', 'wellness'],
+              audiences: ['employers', 'brokers'],
+              dateLabel: 'Guide',
+              breadcrumb: ['Efficiency', 'Flow'],
+              matchTerms: ['energy audit', 'flow meter', 'steam', 'compressed air', 'baseline'],
+            },
+            {
+              imageSrc: unsplashPhoto('photo-1513828583688-c52646db42da'),
+              title: 'Commissioning packages: test records & as-built instrumentation lists',
+              description:
+                'Templates consultants can adapt for turnover documentation — loop folders, calibration certificates, and red-line drawings for process skids.',
+              href: dwyerOmegaBaseHref,
+              contentType: 'form',
+              topics: ['coverage', 'about'],
+              audiences: ['brokers', 'providers'],
+              dateLabel: 'Templates',
+              breadcrumb: ['Commissioning', 'Documentation'],
+              matchTerms: ['commissioning', 'as-built', 'loop folder', 'calibration certificate', 'turnover'],
+            },
+            {
+              imageSrc: unsplashPhoto('photo-1531297484001-80022131f5a1'),
+              title: 'Process optimization: pairing measurement with control valve health',
+              description:
+                'Use differential pressure trends across strainers and coils to catch fouling early — pairs well with distributed control narratives for retrofits.',
+              href: dwyerOmegaBaseHref,
+              contentType: 'article',
+              topics: ['care', 'news'],
+              audiences: ['employers', 'providers'],
+              dateLabel: 'Insight',
+              breadcrumb: ['Process', 'Optimization'],
+              matchTerms: ['process optimization', 'control valve', 'differential pressure', 'fouling', 'retrofit'],
+            },
+          ]
+        : [
+            {
+              imageSrc: unsplashPhoto('photo-1581092918056-0c4c1ac51795'),
+              isNew: true,
+              title: 'Plant Technician — daily rounds: gauges, switches & transmitters',
+              description:
+                'A concise route sheet for verifying local indicators against control room values and flagging drift before it becomes downtime.',
+              href: dwyerOmegaBaseHref,
+              contentType: 'form',
+              topics: ['care', 'coverage'],
+              audiences: ['members', 'providers'],
+              dateLabel: 'Route sheet',
+              breadcrumb: ['Operations', 'Rounds'],
+              matchTerms: ['rounds', 'gauge', 'transmitter', 'plant', 'technician'],
+            },
+            {
+              imageSrc: unsplashPhoto('photo-1581092162384-8987c1d64718'),
+              title: 'Safe line breaks: depressurize, verify zero energy, then isolate',
+              description:
+                'Field card for technicians working on process lines with pressure switches and block-and-bleed arrangements — emphasizes verification steps.',
+              href: dwyerOmegaBaseHref,
+              contentType: 'article',
+              topics: ['care', 'costs'],
+              audiences: ['members'],
+              dateLabel: 'Safety',
+              breadcrumb: ['Safety', 'Line break'],
+              matchTerms: ['line break', 'depressure', 'isolation', 'safety', 'zero energy'],
+            },
+            {
+              imageSrc: unsplashPhoto('photo-1565514020163-395f34250af5'),
+              title: 'Leak detection on compressed air and hydronic circuits',
+              description:
+                'Ultrasonic and soap-bubble basics plus when to upgrade to permanent leak monitors — reduce utility waste on rotating shifts.',
+              href: dwyerOmegaBaseHref,
+              contentType: 'tool',
+              topics: ['wellness', 'costs'],
+              audiences: ['members', 'employers'],
+              dateLabel: 'How-to',
+              breadcrumb: ['Utilities', 'Leak detection'],
+              matchTerms: ['leak', 'compressed air', 'hydronic', 'ultrasonic', 'utility'],
+            },
+            {
+              imageSrc: unsplashPhoto('photo-1489515217757-5fd1be406fef'),
+              title: 'Handoff to maintenance: what to log when an alarm clears',
+              description:
+                'Structured notes that help the next shift reproduce context — alarm tag, setpoint, corrective action, and instrument tag references.',
+              href: dwyerOmegaBaseHref,
+              contentType: 'news',
+              topics: ['about', 'care'],
+              audiences: ['providers', 'members'],
+              dateLabel: 'Shift log',
+              breadcrumb: ['Operations', 'Handoff'],
+              matchTerms: ['alarm', 'handoff', 'shift log', 'instrument tag', 'maintenance'],
+            },
+          ];
 
-  return [
-    {
-      id: `demo-${code}-claim-1`,
-      imageSrc: unsplashPhoto('photo-1450101499163-c8848c66ca85'),
-      isNew: true,
-      demoPlanTaxonomy: plan,
-      title: `${state} — Claim denial member guide: codes, timelines & appeals`,
-      description: `${planShort}-specific steps after a claim denial in ${state}, including where to upload documents, typical reconsideration windows, and how to request an external review when applicable.`,
-      href: 'https://www.bcbs.com/understanding-health-insurance',
-      contentType: 'article',
-      topics: ['costs', 'coverage'],
-      audiences: ['members'],
-      dateLabel: `${state} plan office`,
-      breadcrumb: ['Claims & billing', `${state} members`],
-      matchTerms: ['claim denial', 'appeal', 'reconsideration', 'eob', 'denial'],
-    },
-    {
-      id: `demo-${code}-claim-2`,
-      imageSrc: unsplashPhoto('photo-1576091160550-2173dba999ef'),
-      demoPlanTaxonomy: plan,
-      title: `${state} provider & member toolkit: resolving claim denials faster`,
-      description: `Coordinated billing tips for ${state} members working with local providers after a claim denial — prior auth records, coding fixes, and plan-specific forms from ${planShort}.`,
-      href: 'https://www.bcbs.com/providers',
-      contentType: 'form',
-      topics: ['costs', 'care'],
-      audiences: ['members', 'providers'],
-      breadcrumb: ['Providers', `${state} denials`],
-      matchTerms: ['claim denial', 'claim', 'denial', 'prior auth', 'billing'],
-    },
-    {
-      id: `demo-${code}-ma-1`,
-      imageSrc: unsplashPhoto('photo-1519494026892-80bbd2d6fd0d'),
-      isNew: true,
-      demoPlanTaxonomy: plan,
-      title: `${state} Medicare Advantage overview: networks, copays & drug tiers`,
-      description: `How ${planShort} structures Medicare Advantage (Part C) in ${state} — comparing HMO/PPO access, embedded Part D, and what to verify during Annual Enrollment.`,
-      href: 'https://www.bcbs.com/understanding-health-insurance',
-      contentType: 'article',
-      topics: ['coverage', 'costs'],
-      audiences: ['members', 'brokers'],
-      dateLabel: `${state} Medicare`,
-      breadcrumb: ['Medicare Advantage', `${state}`],
-      matchTerms: ['medicare advantage', 'part c', 'mapd', 'enrollment', 'aep'],
-    },
-    {
-      id: `demo-${code}-ma-2`,
-      imageSrc: unsplashPhoto('photo-1551288049-bebda4e38f71'),
-      demoPlanTaxonomy: plan,
-      title: `${state} Medicare Advantage quality & care management highlights`,
-      description: `State-focused summary of Medicare Advantage care programs available through ${planShort} in ${state}, including chronic-condition support and how star ratings compare to national benchmarks.`,
-      href: 'https://www.bcbs.com/the-health-of-america',
-      contentType: 'tool',
-      topics: ['coverage', 'about'],
-      audiences: ['members', 'brokers'],
-      dateLabel: 'Guide',
-      breadcrumb: ['Medicare Advantage', `${state} quality`],
-      matchTerms: ['medicare advantage', 'part c', 'cms stars', 'dual eligible'],
-    },
-  ];
+  return rows.map((row, i) => ({
+    ...row,
+    id: `demo-${code}-${i + 1}`,
+    demoUserTaxonomy: plan,
+  }));
 }
 
 const defaultCardImage = unsplashPhoto('photo-1576091160399-112ba8d25d1d');
@@ -592,7 +697,7 @@ function normalizeQuery(q: string): string {
   return q.toLowerCase().trim().replace(/\s+/g, ' ');
 }
 
-function relevanceScore(item: SearchResultItem, q: string, activeDemoPlan: DemoPlanTaxonomy | null): number {
+function relevanceScore(item: SearchResultItem, q: string, activeDemoUserTaxonomy: DemoUserTaxonomy | null): number {
   const n = normalizeQuery(q);
   if (!n) return 0;
   const words = n.split(' ').filter(Boolean);
@@ -607,7 +712,7 @@ function relevanceScore(item: SearchResultItem, q: string, activeDemoPlan: DemoP
     if (crumbs.includes(w)) score += 1;
     if (extra.includes(w)) score += 3;
   }
-  if (activeDemoPlan && item.demoPlanTaxonomy === activeDemoPlan) {
+  if (activeDemoUserTaxonomy && item.demoUserTaxonomy === activeDemoUserTaxonomy) {
     score += 25;
   }
   return score;
@@ -884,12 +989,12 @@ export const SearchResults: FC<SearchResultsProps> = ({
     };
   }, []);
 
-  const activeDemoPlan = useMemo(() => parseDemoPlanTaxonomy(demoTaxonomyRaw), [demoTaxonomyRaw]);
+  const activeDemoUserTaxonomy = useMemo(() => parseDemoUserTaxonomy(demoTaxonomyRaw), [demoTaxonomyRaw]);
 
   const activeCatalog = useMemo(() => {
-    if (!activeDemoPlan) return searchCatalog;
-    return [...supplementalResultsForDemoPlan(activeDemoPlan), ...searchCatalog];
-  }, [activeDemoPlan]);
+    if (!activeDemoUserTaxonomy) return searchCatalog;
+    return [...supplementalResultsForDemoUserTaxonomy(activeDemoUserTaxonomy), ...searchCatalog];
+  }, [activeDemoUserTaxonomy]);
 
   const toggle = useCallback(<T extends string>(set: Dispatch<SetStateAction<Set<T>>>, v: T) => {
     set((prev) => {
@@ -973,14 +1078,14 @@ export const SearchResults: FC<SearchResultsProps> = ({
       sorted.sort((a, b) => a.title.localeCompare(b.title));
     } else {
       sorted.sort((a, b) => {
-        const ra = relevanceScore(a, q, activeDemoPlan);
-        const rb = relevanceScore(b, q, activeDemoPlan);
+        const ra = relevanceScore(a, q, activeDemoUserTaxonomy);
+        const rb = relevanceScore(b, q, activeDemoUserTaxonomy);
         if (rb !== ra) return rb - ra;
         return a.title.localeCompare(b.title);
       });
     }
     return sorted;
-  }, [activeCatalog, activeDemoPlan, query, selectedTypes, selectedTopics, selectedAudiences, sort]);
+  }, [activeCatalog, activeDemoUserTaxonomy, query, selectedTypes, selectedTopics, selectedAudiences, sort]);
 
   const resultsTotalPages = Math.max(1, Math.ceil(filtered.length / RESULTS_PAGE_SIZE));
   const safeResultsPage = Math.min(resultsPage, resultsTotalPages);

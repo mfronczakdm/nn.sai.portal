@@ -7,7 +7,7 @@ describe('collectPlanAssetFileNamesFromGraphqlBody', () => {
         allBCBS_PlanSecurityGroup: {
           results: [
             {
-              taxonomyName: 'BCBS of California',
+              taxonomyName: 'Maintenance Engineer',
               planSecurityGroupToAsset: {
                 total: 2,
                 results: [{ fileName: 'a.pdf' }, { fileName: 'b.csv' }],

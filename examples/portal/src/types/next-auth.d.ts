@@ -4,7 +4,7 @@ declare module 'next-auth' {
   interface Session {
     user: DefaultSession['user'] & {
       id?: string;
-      /** Plan / region label for GraphQL, e.g. `BCBS of California` — maps to `$taxonomy`. */
+      /** Demo / role label for GraphQL or APIs, e.g. `Maintenance Engineer` — maps to `$taxonomy` where used. */
       taxonomy?: string;
     };
   }
