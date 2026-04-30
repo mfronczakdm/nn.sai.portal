@@ -28,7 +28,6 @@
   --border-width-4: 0.25rem;
   --border-width-8: 0.5rem;
   --color-background: #ffffff;
-  --color-background: #ffffff;
   --color-foreground: #000000;
   --color-card: #ffffff;
   --color-card-foreground: #000000;
@@ -60,7 +59,6 @@
   --color-light-hover: #f5f5f5b3;
   --color-light-foreground: #18181b;
   --color-overlay: #f5f5f5b3;
-  --disabled: [object Object];
   --figma-automations-logo: Brand A;
   --figma-automations-hero: Hero 1;
   --figma-automations-navigation: Style 1;
@@ -292,4 +290,51 @@
   --width-3-5: 0.875rem;
   --width-px: 0.0625rem;
   --radius: var(--border-radius-default, 0.25rem);
+}
+
+/*
+ * Brand palettes — select with <html data-theme="bcbst | dwyeromega"> (see NEXT_PUBLIC_APP_THEME).
+ * bcbst: tokens are defined in @theme above (lime accent / existing portal brand).
+ * dwyeromega: steel headings (#75787b), deep indigo primary/footer (#2a2b67), red accent / alternate CTAs (#da2a2b).
+ */
+[data-theme='dwyeromega'] {
+  --background-image-gradient: linear-gradient(180deg, #da2a2b 0%, #2a2b67 100%);
+  --background-image-gradient-secondary: linear-gradient(90deg, #75787b 0%, #2a2b67 50%, #da2a2b 100%);
+  --color-background: #ffffff;
+  --color-foreground: #75787b;
+  --color-card: #ffffff;
+  --color-card-foreground: #75787b;
+  --color-popover: #ffffff;
+  --color-popover-foreground: #75787b;
+  --color-primary: #2a2b67;
+  --color-primary-foreground: #ffffff;
+  --color-primary-hover: #1f204f;
+  --color-secondary: #f1f5f9;
+  --color-secondary-foreground: #75787b;
+  --color-secondary-hover: #e2e8f0;
+  --color-muted: #f1f5f9;
+  --color-muted-foreground: #8b8e91;
+  --color-accent: #da2a2b;
+  --color-accent-foreground: #ffffff;
+  --color-destructive: #dc2626;
+  --color-destructive-hover: #b91c1c;
+  --color-destructive-foreground: #ffffff;
+  --color-border: #cbd5e1;
+  --color-input: #cbd5e1;
+  --color-ring: #2a2b67;
+  --color-tertiary-foreground: #75787b;
+  --color-tertiary-hover: #e2e8f0;
+  --color-tertiary: #f1f5f9;
+  --color-dark-foreground: #75787b;
+  --color-dark-hover: #e2e8f0;
+  --color-dark: #f1f5f9;
+  --color-light: #f8fafc;
+  --color-light-hover: #f1f5f9;
+  --color-light-foreground: #75787b;
+  --color-overlay: rgb(42 43 103 / 0.45);
+}
+
+/* On primary (e.g. footer) surfaces, headings inherit body foreground — force light text for contrast. */
+[data-theme='dwyeromega'] .bg-primary {
+  color: var(--color-primary-foreground);
 }
