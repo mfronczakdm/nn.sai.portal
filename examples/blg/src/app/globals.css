@@ -1,0 +1,344 @@
+/* Same @import order as examples/portal/src/app/globals.css */
+@import '../assets/styles/globals.css';
+@import '../assets/styles/themes/rockland-tokens.css';
+@import '../assets/styles/themes/pkm-tokens.css';
+@import '../assets/styles/tailwind-bootstrap-grid.css';
+@import '../assets/styles/column-splitter.css';
+@import 'tailwindcss';
+
+/* bootstrap grid to tailwind plugin */
+@plugin 'tailwind-bootstrap-grid' {
+  container_max_widths:
+    'sm', '576px', 'md', '768px', 'lg', '992px', 'xl', '1200px', '2xl', '1400px';
+}
+
+/* preload tailwind-bootstrap-grid utility classes */
+@source inline("col-{1..12}");
+@source inline("offset-{1..12}");
+
+@layer base {
+  html {
+    /* BCBS / default — Inter everywhere; overridden per theme below (higher specificity). */
+    --font-body: var(--font-inter), 'Inter', ui-sans-serif, system-ui, sans-serif;
+    --font-heading: var(--font-inter), 'Inter', ui-sans-serif, system-ui, sans-serif;
+    --font-accent: var(--font-inter), 'Inter', ui-sans-serif, system-ui, sans-serif;
+    --font-weight-heading: 600;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 400;
+    color: var(--color-brand-black);
+  }
+
+  * {
+    font-family: var(--font-body);
+  }
+
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4,
+  h5,
+  .h5,
+  h6,
+  .h6 {
+    font-family: var(--font-heading);
+    font-weight: var(--font-weight-heading, 600);
+    @apply leading-normal;
+
+    span {
+      font-family: inherit;
+    }
+  }
+
+  h1,
+  .h1 {
+    @apply text-6xl md:text-8xl;
+  }
+
+  h2,
+  .h2 {
+    @apply text-5xl md:text-7xl;
+  }
+
+  h3,
+  .h3 {
+    @apply text-4xl md:text-5xl;
+  }
+
+  h4,
+  .h4 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  h5,
+  .h5 {
+    @apply text-xl md:text-2xl;
+  }
+
+  body {
+    font-feature-settings:
+      'rlig' 1,
+      'calt' 1;
+  }
+
+  /* BUTTONS */
+  .btn {
+    font-family: var(--font-accent);
+    @apply inline-block text-sm font-medium transition-colors;
+
+    &.btn-primary {
+      @apply py-3 px-5 rounded-full bg-primary text-primary-foreground;
+
+      &:hover {
+        @apply bg-primary-hover text-primary-foreground;
+      }
+    }
+
+    &.btn-secondary {
+      @apply py-3 px-5 rounded-full bg-light text-secondary-foreground;
+
+      &:hover {
+        @apply bg-light-hover;
+      }
+    }
+
+    &.btn-ghost {
+      @apply py-2;
+    }
+
+    &.btn-sharp {
+      @apply rounded-none;
+    }
+
+    &.btn-ghost {
+      @apply py-2;
+    }
+
+    &.btn-outline {
+      @apply py-3 px-5 rounded-full bg-primary text-primary-foreground outline;
+    }
+
+    &:hover {
+      @apply bg-primary-hover;
+    }
+  }
+}
+
+/*
+ * Per-theme typography (`NEXT_PUBLIC_APP_THEME` → <html data-theme>).
+ * Unlayered `html[data-theme]` overrides `@layer base` html defaults.
+ */
+html[data-theme='dwyeromega'] {
+  --font-body: var(--font-source-sans-3), 'Source Sans 3', ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-barlow-condensed), 'Barlow Condensed', ui-sans-serif, system-ui,
+    sans-serif;
+  --font-accent: var(--font-barlow-condensed), 'Barlow Condensed', ui-sans-serif, system-ui,
+    sans-serif;
+  --font-weight-heading: 700;
+}
+
+/* bldr.com: Open Sans body / nav; Roboto Condensed for industrial display type & buttons */
+html[data-theme='builderfs'] {
+  --font-body: var(--font-open-sans), 'Open Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-roboto-condensed), 'Roboto Condensed', ui-sans-serif, system-ui,
+    sans-serif;
+  --font-accent: var(--font-roboto-condensed), 'Roboto Condensed', ui-sans-serif, system-ui,
+    sans-serif;
+  --font-weight-heading: 700;
+}
+
+html[data-theme='builderfs'] :where(h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6) {
+  letter-spacing: 0.03em;
+}
+
+html[data-theme='builderfs'] .btn.btn-primary {
+  background-color: var(--color-accent);
+  color: var(--color-accent-foreground);
+  border-radius: 0;
+}
+
+html[data-theme='builderfs'] .btn.btn-primary:hover {
+  background-color: var(--color-destructive-hover);
+  color: var(--color-accent-foreground);
+}
+
+/* rocklandtrust.com: Montserrat display headings, Open Sans body (Google Fonts substitutes for the brand type). */
+html[data-theme='rockland'] {
+  --font-body: var(--font-open-sans), 'Open Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-montserrat), 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+  --font-accent: var(--font-montserrat), 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+  --font-weight-heading: 700;
+}
+
+/* Progressive PKM: Source Sans 3 substitutes for proprietary 96 Sans (trustworthy, friendly, readable). */
+html[data-theme='pkm'] {
+  --font-body: var(--font-source-sans-3), 'Source Sans 3', ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-source-sans-3), 'Source Sans 3', ui-sans-serif, system-ui, sans-serif;
+  --font-accent: var(--font-source-sans-3), 'Source Sans 3', ui-sans-serif, system-ui, sans-serif;
+  --font-weight-heading: 700;
+}
+
+/* Pillsbury Law — modern BigLaw digital: Montserrat headings + Open Sans body (most common legal-web pairing, sans-first). */
+html[data-theme='pillsburylaw'] {
+  --font-body: var(--font-open-sans), 'Open Sans', Helvetica, Arial, ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-montserrat), 'Montserrat', Helvetica, Arial, ui-sans-serif, system-ui, sans-serif;
+  --font-accent: var(--font-montserrat), 'Montserrat', Helvetica, Arial, ui-sans-serif, system-ui, sans-serif;
+  --font-weight-heading: 600;
+  color: var(--color-foreground);
+  background-color: var(--color-background);
+}
+
+html[data-theme='pillsburylaw'] body {
+  color: var(--color-foreground);
+  background-color: var(--color-background);
+}
+
+/* Solid primary CTAs stay vivid on navy; text uses luminous --color-primary from theme tokens. */
+html[data-theme='pillsburylaw'] .btn.btn-primary {
+  background-color: #0055ff;
+  color: #ffffff;
+  border-radius: 0;
+}
+
+html[data-theme='pillsburylaw'] .btn.btn-primary:hover {
+  background-color: #0044cc;
+  color: #ffffff;
+}
+
+html[data-theme='pillsburylaw'] .bg-primary {
+  background-color: #0055ff;
+  color: #ffffff;
+}
+
+html[data-theme='pillsburylaw'] .bg-primary:hover,
+html[data-theme='pillsburylaw'] .hover\:bg-primary-hover:hover {
+  background-color: #0044cc;
+  color: #ffffff;
+}
+
+/* BUTTONS END */
+
+main {
+  @apply text-xl;
+}
+
+.xa-variable {
+  border: 0px;
+  padding: 1px;
+  margin: 0px;
+  background-color: #ebebe4;
+  color: #545454;
+  user-select: none;
+  pointer-events: none;
+}
+
+.menu-mobile-navigate {
+  display: none;
+}
+
+.sc-jss-empty-placeholder {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.sc-jss-placeholder-error {
+  background: #ff0000;
+  outline: 5px solid #e36565;
+  padding: 10px;
+  color: #fff;
+  max-width: 500px;
+}
+
+.content-sdk-rich-text {
+  ul {
+    list-style: disc;
+
+    li {
+      list-style-type: disc !important;
+      padding-left: calc((2 * 0.5rem) + 1.5625rem);
+    }
+  }
+}
+
+/* FADE ANIMATIONS */
+
+.animate .fade-section {
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.8s ease-out,
+    transform 1s ease-out;
+  will-change: opacity, visibility;
+}
+
+.animate .fade-section.fade-up {
+  transform: translateY(200px);
+}
+
+.animate .fade-section.fade-side {
+  transform: translateX(200px);
+}
+
+.animate .fade-section.is-visible {
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
+}
+
+/* Disable when editing and on mobile */
+.editing-mode .animate .fade-section {
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
+}
+
+@media (width <= 40rem) {
+  .animate .fade-section {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+  }
+}
+
+/* MARQUEE ANIMATION */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee linear infinite;
+
+  .editing-mode & {
+    transform: none !important;
+  }
+}
+
+/* HEADER STYLES */
+
+.partial-editing-mode header {
+  @apply static mb-0 overflow-hidden;
+}
+
+/* BCBS palette overrides; other named themes are defined in src/assets/styles/globals.css. */
+html[data-theme='bcbst'] {
+  --color-primary: #328ac9;
+  --color-primary-foreground: #ffffff;
+  --color-primary-hover: #2b78b3;
+  --color-secondary: #e3eef6;
+  --color-secondary-foreground: #133454;
+  --color-secondary-hover: #d2e4f2;
+  --color-accent: #328ac9;
+  --color-accent-foreground: #ffffff;
+}

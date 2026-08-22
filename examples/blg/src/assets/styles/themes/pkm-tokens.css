@@ -1,0 +1,264 @@
+/**
+ * Progressive Knowledge Management (PKM) brand tokens.
+ * Scoped to [data-theme='pkm'] — activate via NEXT_PUBLIC_APP_THEME=pkm.
+ *
+ * Colors from Progressive Brand Guidelines (design.progressive.com):
+ * Progressive Blue #0077B3, Steel Blue 900 #0A3360, Gray 900 #2D2D2D, plus extended UI scales.
+ * Portal-specific tokens support the Claims Knowledge Base layout (header, sidebar, tables, callouts).
+ */
+[data-theme='pkm'] {
+  /* ── Semantic surfaces ─────────────────────────────────────────── */
+  --color-background: #ffffff;
+  --color-background-accent: var(--color-blue-100);
+  --color-background-surface: var(--color-steel-100);
+  --color-foreground: #2d2d2d;
+  --color-primary: #0077b3;
+  --color-primary-foreground: #ffffff;
+  --color-primary-background: #f3f9fc;
+  --color-primary-background-active: #e3f1f8;
+  --color-primary-hover: #006598;
+  --color-primary-active: #00547d;
+  --color-secondary: #0a3360;
+  --color-secondary-foreground: #ffffff;
+  --color-secondary-background: #f4f9fa;
+  --color-secondary-background-active: #e4eef2;
+  --color-secondary-hover: #082a4f;
+  --color-secondary-active: #06223f;
+  --color-muted: #f8f8f8;
+  --color-muted-foreground: #707070;
+  --color-muted-background: #f0f0f0;
+  --color-muted-background-active: #e8e8e8;
+  --color-muted-hover: #eeeeee;
+  --color-muted-active: #e0e0e0;
+  --color-tertiary: #2862a4;
+  --color-tertiary-foreground: #ffffff;
+  --color-tertiary-background: #eef4fa;
+  --color-tertiary-background-active: #dce8f4;
+  --color-tertiary-hover: #235690;
+  --color-tertiary-active: #1e4b7d;
+  --color-accent: #4ebee5;
+  --color-accent-foreground: #0a3360;
+  --color-accent-background: #eef9fd;
+  --color-accent-background-active: #d9f1fa;
+  --color-accent-hover: #3aabd4;
+  --color-accent-active: #2e95bb;
+  --color-accent-2: #efab00;
+  --color-accent-2-foreground: #2d2d2d;
+  --color-accent-2-background: #fff8e5;
+  --color-accent-2-background-active: #fff0cc;
+  --color-accent-2-hover: #d99900;
+  --color-accent-2-active: #c28a00;
+  --color-accent-3: var(--color-purple-700);
+  --color-accent-3-foreground: #ffffff;
+  --color-accent-3-background: var(--color-purple-100);
+  --color-accent-3-background-active: var(--color-purple-300);
+  --color-accent-3-hover: var(--color-purple-900);
+  --color-accent-3-active: #6e2873;
+  --color-info: #0077b3;
+  --color-info-foreground: #ffffff;
+  --color-info-hover: #006598;
+  --color-info-active: #00547d;
+  --color-info-background: #f3f9fc;
+  --color-info-background-active: #e3f1f8;
+  --color-success: #067462;
+  --color-success-foreground: #ffffff;
+  --color-success-hover: #056355;
+  --color-success-active: #045248;
+  --color-success-background: #effbf7;
+  --color-success-background-active: #d8f5ec;
+  --color-warning: #c05711;
+  --color-warning-foreground: #ffffff;
+  --color-warning-hover: #a94b0e;
+  --color-warning-active: #923f0c;
+  --color-warning-background: #fef5ed;
+  --color-warning-background-active: #fce9d9;
+  --color-destructive: #d41659;
+  --color-destructive-foreground: #ffffff;
+  --color-destructive-hover: #bf1450;
+  --color-destructive-active: #a91147;
+  --color-destructive-background: #fceff2;
+  --color-destructive-background-active: #f8d9e2;
+  --color-neutral: var(--color-gray-700);
+  --color-neutral-foreground: var(--color-gray-900);
+  --color-neutral-hover: var(--color-gray-900);
+  --color-neutral-active: #1a1a1a;
+  --color-neutral-background: var(--color-gray-100);
+  --color-neutral-background-active: var(--color-gray-300);
+  --color-chart-1: #0077b3;
+  --color-chart-2: #4ebee5;
+  --color-chart-3: #08caa9;
+  --color-chart-4: #efab00;
+  --color-chart-5: #bd4ec4;
+  --color-transparent: transparent;
+  --color-current: currentColor;
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-overlay: rgb(10 51 96 / 0.45);
+  --color-inverse-text: var(--color-white);
+
+  /* ── Gradients ─────────────────────────────────────────────────── */
+  --background-image-gradient: linear-gradient(180deg, #4ebee5 0%, #0077b3 50%, #0a3360 100%);
+  --background-image-gradient-secondary: linear-gradient(
+    90deg,
+    #0a3360 0%,
+    #0077b3 50%,
+    #4ebee5 100%
+  );
+
+  /* ── Progressive official scales ───────────────────────────────── */
+  /* Grays */
+  --color-gray-50: #fafafa;
+  --color-gray-100: #f8f8f8;
+  --color-gray-200: #e8e8e8;
+  --color-gray-300: #cccccc;
+  --color-gray-400: #a6a6a6;
+  --color-gray-500: #8a8a8a;
+  --color-gray-600: #707070;
+  --color-gray-700: #707070;
+  --color-gray-800: #4a4a4a;
+  --color-gray-900: #2d2d2d;
+
+  /* Neutral aliases (portal components) */
+  --color-neutral-50: #fafafa;
+  --color-neutral-100: #f8f8f8;
+  --color-neutral-200: #e8e8e8;
+  --color-neutral-300: #cccccc;
+  --color-neutral-400: #a6a6a6;
+  --color-neutral-500: #8a8a8a;
+  --color-neutral-600: #707070;
+  --color-neutral-700: #4a4a4a;
+  --color-neutral-800: #3a3a3a;
+  --color-neutral-900: #2d2d2d;
+
+  /* Progressive Blue scale (Blue 100–900) */
+  --color-primary-50: #f7fbfd;
+  --color-primary-100: #f3f9fc;
+  --color-primary-200: #d4ebf5;
+  --color-primary-300: #8fd8f2;
+  --color-primary-400: #4ebee5;
+  --color-primary-500: #0077b3;
+  --color-primary-600: #006598;
+  --color-primary-700: #0077b3;
+  --color-primary-800: #2862a4;
+  --color-primary-900: #0a3360;
+
+  --color-blue-50: #f7fbfd;
+  --color-blue-100: #f3f9fc;
+  --color-blue-200: #d4ebf5;
+  --color-blue-300: #8fd8f2;
+  --color-blue-400: #4ebee5;
+  --color-blue-500: #0077b3;
+  --color-blue-600: #006598;
+  --color-blue-700: #0077b3;
+  --color-blue-800: #2862a4;
+  --color-blue-900: #0a3360;
+
+  /* Steel Blue scale */
+  --color-steel-100: #f4f9fa;
+  --color-steel-300: #d1e2e5;
+  --color-steel-500: #91b0bf;
+  --color-steel-700: #405e7c;
+  --color-steel-900: #0a3360;
+
+  /* Secondary (Steel Blue) scale */
+  --color-secondary-50: #f4f9fa;
+  --color-secondary-100: #e4eef2;
+  --color-secondary-200: #d1e2e5;
+  --color-secondary-300: #91b0bf;
+  --color-secondary-400: #405e7c;
+  --color-secondary-500: #0a3360;
+  --color-secondary-600: #082a4f;
+  --color-secondary-700: #06223f;
+  --color-secondary-800: #041a30;
+  --color-secondary-900: #031222;
+
+  /* Green (success) */
+  --color-green-100: #effbf7;
+  --color-green-300: #bdefe6;
+  --color-green-500: #7ee0ca;
+  --color-green-700: #08caa9;
+  --color-green-900: #067462;
+
+  /* Yellow */
+  --color-yellow-100: #fff8e5;
+  --color-yellow-300: #ffe694;
+  --color-yellow-500: #ffd039;
+  --color-yellow-700: #efab00;
+  --color-yellow-900: #a86800;
+
+  /* Orange (warning) */
+  --color-orange-100: #fef5ed;
+  --color-orange-300: #ffcc8f;
+  --color-orange-500: #ffa452;
+  --color-orange-700: #ff8a39;
+  --color-orange-900: #c05711;
+
+  /* Red (destructive / errors) */
+  --color-red-100: #fceff2;
+  --color-red-300: #ffcfde;
+  --color-red-500: #ff527b;
+  --color-red-700: #d41659;
+  --color-red-900: #a11b58;
+
+  /* Purple (help / loyalty) */
+  --color-purple-100: #f5f1f9;
+  --color-purple-300: #e4b9e4;
+  --color-purple-500: #c973c9;
+  --color-purple-700: #bd4ec4;
+  --color-purple-900: #86318c;
+
+  /* Semantic scale aliases */
+  --color-info-50: #f7fbfd;
+  --color-info-100: #f3f9fc;
+  --color-info-500: #0077b3;
+  --color-info-700: #006598;
+  --color-info-900: #0a3360;
+  --color-success-100: #effbf7;
+  --color-success-500: #08caa9;
+  --color-success-700: #067462;
+  --color-success-900: #045248;
+  --color-warning-100: #fef5ed;
+  --color-warning-500: #ff8a39;
+  --color-warning-700: #c05711;
+  --color-warning-900: #a94b0e;
+  --color-destructive-100: #fceff2;
+  --color-destructive-500: #d41659;
+  --color-destructive-700: #bf1450;
+  --color-destructive-900: #a11b58;
+  --color-accent-100: #eef9fd;
+  --color-accent-500: #4ebee5;
+  --color-accent-700: #3aabd4;
+  --color-accent-900: #0a3360;
+
+  /* Alpha helpers */
+  --color-blackAlpha-200: rgb(0 0 0 / 0.08);
+  --color-blackAlpha-500: rgb(0 0 0 / 0.45);
+  --color-whiteAlpha-200: rgb(255 255 255 / 0.12);
+  --color-whiteAlpha-500: rgb(255 255 255 / 0.5);
+
+  /* ── PKM portal layout tokens (Claims Knowledge Base) ──────────── */
+  --color-header-bg: #0a3360;
+  --color-header-foreground: #ffffff;
+  --color-header-nav-bg: #0c3d72;
+  --color-header-nav-active: #ffffff;
+  --color-sidebar-bg: #f4f9fa;
+  --color-sidebar-border: #d1e2e5;
+  --color-sidebar-foreground: #2d2d2d;
+  --color-sidebar-active: #0077b3;
+  --color-sidebar-active-bg: #e3f1f8;
+  --color-content-bg: #ffffff;
+  --color-table-header-bg: #0077b3;
+  --color-table-header-foreground: #ffffff;
+  --color-table-row-alt: #f8f8f8;
+  --color-table-border: #d1e2e5;
+  --color-callout-info-bg: #f3f9fc;
+  --color-callout-info-foreground: #0a3360;
+  --color-callout-info-icon: #0077b3;
+  --color-callout-error-fg: #d41659;
+  --color-link: #0077b3;
+  --color-link-hover: #006598;
+  --color-breadcrumb: #0077b3;
+  --color-meta: #707070;
+  --radius-search: 0.5rem;
+  --radius-callout: 0.5rem;
+}

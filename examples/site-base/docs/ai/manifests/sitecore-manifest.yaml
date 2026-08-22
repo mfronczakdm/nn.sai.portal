@@ -1,5 +1,5 @@
 ﻿generatedAt: "2026-03-20T09:00:00Z"
-lastUpdatedAt: "2026-08-19T23:45:00Z"
+lastUpdatedAt: "2026-08-20T20:30:00Z"
 lastUpdatedBy: "cursor-agent"
 
 project:
@@ -7501,4 +7501,210 @@ ia:
       pendingManual:
         - "Publish Presentation/Headless Variants changes for Edge"
         - "Confirm variant picker shows new options in Pages for affected renderings"
+
+  - name: "DFS Customer"
+    kind: "scaffolding"
+    category: "site-setup"
+    status: "complete"
+    createdAt: "2026-08-20T18:00:00Z"
+    updatedAt: "2026-08-20T18:30:00Z"
+    siteName: "dfs"
+    siteCollection: "dfs"
+    notes:
+      - "2026-08-20: Created HeadlessSiteSetupRoot 'DFS Customer' under /sitecore/system/Settings/Project/dfs, modeled on SYNC Setup AddItem pattern using template {3AEA335C-D06D-45B1-841A-CBC8D2D1CE40}."
+      - "Data folder AddItems mirror live /sitecore/content/dfs/dfs/Data children (folder template IDs + names)."
+      - "Available Renderings: click-click-launch branch + empty authentication/Portal Available Renderings shells (populate Renderings field after first scaffold or convert to branches)."
+      - "Empty stub 'dfs ' HeadlessSiteSetupRoot left in place; DFS Customer is the intentional module."
+    scaffolding:
+      root:
+        name: "DFS Customer"
+        itemId: "{A1CED083-13AB-4771-A086-D2DB08804DD6}"
+        path: "/sitecore/system/Settings/Project/dfs/DFS Customer"
+        templateId: "{BED31D6F-D968-45A9-B54E-12D7F977D861}"
+        displayName: "DFS Customer"
+        includeByDefault: true
+        dependencies:
+          - "{C4D79D81-83E9-4506-AE8C-F7145C75762F}"
+          - "{ED48A6C5-0E91-43AF-A2CE-4D00D5FE8F5D}"
+          - "{0006F007-9BA4-4AB7-B336-65A1452BD255}"
+      addItemTemplateId: "{3AEA335C-D06D-45B1-841A-CBC8D2D1CE40}"
+      locations:
+        data: "{BA2F959D-A614-4C92-8B57-F1FC1A323ABE}"
+        availableRenderings: "{3F14C1B6-5A2D-44CA-A8EF-DFE3CBD574E4}"
+        presentation: "{BE311027-A473-4A08-91B6-4F183EFF040E}"
+        partialDesigns: "{98AB60C3-0FE5-467B-A6C7-ABD981E30E7A}"
+        home: "{E96B4685-0341-4077-AFCE-BCCE690B3927}"
+      topLevelActions:
+        - { name: "Add Available Renderings", itemId: "{B8E26E7E-6128-4F60-9C89-64992943A250}", templateRef: "{9CE9EF69-C9F1-4420-BEF7-8ED9F70B06F7}", itemName: "click-click-launch" }
+        - { name: "Add Available Renderings Authentication", itemId: "{D435D161-96AD-47C0-91C7-4E64B08867EC}", templateRef: "{76DA0A8D-FC7E-42B2-AF1E-205B49E43F98}", itemName: "authentication" }
+        - { name: "Add Available Renderings Portal", itemId: "{CD195D6B-6853-4B52-BF59-1A2F7010621C}", templateRef: "{76DA0A8D-FC7E-42B2-AF1E-205B49E43F98}", itemName: "Portal" }
+        - { name: "Add Enumerations", itemId: "{8361F24F-8AC4-418F-B0AA-917EE76FBEC3}", templateRef: "{C04ABFD2-04F9-4E16-8303-8D4124D23F0C}" }
+        - { name: "Add Home Page Data Folder", itemId: "{51D8D927-099C-40E4-9D04-B08B51E2F982}", templateRef: "{1C82E550-EBCD-4E5D-8ABD-D50D0809541E}", itemName: "Data" }
+        - { name: "Add Partial Designs", itemId: "{FAA46BF9-5149-4D06-84BA-165879EDC076}", templateRef: "{3E0F1E87-6C71-4B15-877C-7A2D1680FE32}", itemName: "Site 3" }
+        - { name: "Add Styles", itemId: "{F1F0F5B8-E5B5-46C1-9D17-43ABDF272BFC}", templateRef: "{BFFF218D-039E-4A85-906A-AE3AF0ECFFDF}" }
+      dataFoldersParent:
+        itemId: "{3E4199F0-AFEB-43DC-89A3-55258937A397}"
+        path: "/sitecore/system/Settings/Project/dfs/DFS Customer/Data Folders"
+      dataFolderActionsCount: 44
+    verification:
+      checkedAt: "2026-08-20T18:30:00Z"
+      passed:
+        - "HeadlessSiteSetupRoot DFS Customer created under Project/dfs"
+        - "SYNC-parity top-level AddItems (Available Renderings, Partial Designs, Styles, Enumerations, Home Data)"
+        - "44 Data folder AddItems created from live dfs/Data structure"
+      failed: []
+      pendingManual:
+        - "Publish /sitecore/system/Settings/Project/dfs/DFS Customer"
+        - "Select DFS Customer when creating a new site under the dfs site collection"
+        - "After first scaffold: set Renderings multilist on authentication + Portal Available Renderings (or replace with Branches like SYNC)"
+        - "Optional: delete empty stub item /sitecore/system/Settings/Project/dfs/dfs "
+
+  - name: "dfs-knowledge-hub-ia"
+    kind: "ia"
+    category: "portal-content"
+    status: "complete"
+    createdAt: "2026-08-20T19:00:00Z"
+    updatedAt: "2026-08-20T20:30:00Z"
+    siteName: "dfs"
+    siteCollection: "dfs"
+    contentRootPath: "/sitecore/content/dfs/dfs/Home/Knowledge Hub"
+    contentRootItemId: "{384F9157-D1D0-4B57-8B75-2D0920BD56D8}"
+    templateId: "{0DEBCAB2-4EBA-47D8-A01C-42F0CEB6B223}"
+    templateName: "Detail Page"
+    language: "en"
+    iaSpecPath: "docs/ai/ia/dfs-knowledge-hub-ia.md"
+    pageCount:
+      l1: 6
+      l2: 21
+      totalIncludingRoot: 28
+    fields:
+      - pageTitle
+      - pageHeaderTitle
+      - pageShortTitle
+      - pageSubtitle
+      - pageSummary
+      - metadataTitle
+    notes:
+      - "2026-08-20: Built Knowledge Hub IA for DFS foodservice portal — help, policies, training, service docs, FAQs."
+      - "Root Knowledge Hub already existed; L1/L2 created via create_content_item (create_page failed on name field)."
+      - "Hub field update on root returned empty updatedFields (silent-write); verify titles in CE if needed."
+      - "2026-08-20: Cleared __Workflow + __Workflow state on all 28 Knowledge Hub pages so they are publish-ready (no Draft state)."
+    sections:
+      - name: "Getting Started"
+        itemId: "{09C3E73D-6E03-436B-901D-39AB28A00579}"
+        children:
+          - { name: "Portal Overview", itemId: "{55D323E0-5F49-4BDC-8C5C-CFCBAFE04EE9}" }
+          - { name: "First Login Checklist", itemId: "{592CC4A9-CF45-452F-99D2-9001F0C1A34A}" }
+          - { name: "Store Manager Quick Start", itemId: "{8BA19AA9-DED6-4B20-BA25-2F94BB3E8B41}" }
+      - name: "Help Articles"
+        itemId: "{022F7A43-3A2D-4B70-BACD-EF534DC2F22A}"
+        children:
+          - { name: "How to Place an Order", itemId: "{D3ECE3C3-2163-4B1E-AD23-A4FC07C0DE7A}" }
+          - { name: "Track Shipments", itemId: "{2C7652D6-7690-4CAE-813C-487AF67BE6B0}" }
+          - { name: "Update Store Profile", itemId: "{B35F3085-5801-4A2C-9FB0-6CDB9B1BC420}" }
+          - { name: "Reset Password", itemId: "{3FBE2FC5-307B-447B-95F0-2F4BCB35A12D}" }
+          - { name: "Multi-Location Accounts", itemId: "{8794E83F-2213-4B05-97EB-CD164B52207A}" }
+      - name: "Policies"
+        itemId: "{6AA41D90-FF8A-403B-AF67-12C801A457B3}"
+        children:
+          - { name: "Ordering Policy", itemId: "{2177EE3D-28DC-4B53-8E35-1FBD9849C198}" }
+          - { name: "Delivery and Receiving", itemId: "{2EF3734D-7514-4A38-85D9-D0CE86F5F62D}" }
+          - { name: "Returns and Credits", itemId: "{B6047FE8-49CD-4DBF-AEB5-0CD55A924E51}" }
+          - { name: "Food Safety Compliance", itemId: "{688E9E67-EAEC-4465-A7DC-AE8237A9A60D}" }
+          - { name: "Acceptable Use", itemId: "{CC9FE8FE-4CCA-4939-9A03-EB01FE3AEFD3}" }
+      - name: "Training"
+        itemId: "{C36DB300-1462-4C6D-876E-D692CB34EF03}"
+        children:
+          - { name: "New Manager Orientation", itemId: "{05931E2C-3931-4532-AC42-367B28BA8DB5}" }
+          - { name: "Equipment Safety Basics", itemId: "{79CAA0CE-E1B4-4492-8F95-44CE02F1B4AB}" }
+          - { name: "Inventory Best Practices", itemId: "{23EC6181-18F8-446A-9419-78A367C8D695}" }
+          - { name: "Cold Chain Handling", itemId: "{422C0AA8-4BD6-464D-B6DA-7715390A941F}" }
+      - name: "Service Documentation"
+        itemId: "{0585863A-8285-45B1-B2D9-886E477CB97B}"
+        children:
+          - { name: "Equipment Warranty Guide", itemId: "{4B9BF7B4-5689-4996-AEBC-76D8D015A294}" }
+          - { name: "Maintenance Request Process", itemId: "{ABC93C52-108F-4E76-BE6C-E2A05C5CF0B8}" }
+          - { name: "Parts Catalog Overview", itemId: "{B7460608-CBEE-4F1F-9C1B-90FE21B99B1E}" }
+          - { name: "Service Level Agreements", itemId: "{CEA7EBCB-EB89-4780-8A38-8FD750C66201}" }
+      - name: "FAQs"
+        itemId: "{D1B5CFC8-F0CA-49B9-8DEB-602F269CF166}"
+        children:
+          - { name: "Ordering FAQs", itemId: "{BAEF5842-64DF-411F-B863-A46F3C832CF3}" }
+          - { name: "Billing FAQs", itemId: "{4B476492-6A0F-4A64-8410-B24DD4737A4A}" }
+          - { name: "Delivery FAQs", itemId: "{0FE4A8B7-DEFA-4B78-A232-7882E08D41E5}" }
+          - { name: "Account Access FAQs", itemId: "{E3CE81B7-16B7-4949-A746-7D965A37F87E}" }
+    verification:
+      checkedAt: "2026-08-20T20:30:00Z"
+      passed:
+        - "Knowledge Hub root has 6 L1 Detail Page children"
+        - "Policies L2 verified (5 children)"
+        - "Getting Started L2 verified (3 children)"
+        - "Help Articles L2 verified (5 children)"
+        - "Training / Service Documentation / FAQs L2 created via MCP"
+        - "Cleared __Workflow + __Workflow state on all 28 pages; spot-check shows workflow null (not Draft)"
+      failed: []
+      pendingManual:
+        - "Publish /sitecore/content/dfs/dfs/Home/Knowledge Hub (subtree) for Edge"
+        - "Add body/Detail rich text content on article pages as needed"
+        - "Confirm navigation / sitemap includes Knowledge Hub routes"
+        - "Optional: verify root Knowledge Hub pageTitle/subtitle in Content Editor (silent-write)"
+        - "Publish Header Partial Design + Header/Data for Edge (nav remapped to Knowledge Hub)"
+
+  - name: "dfs-header-knowledge-hub-nav"
+    kind: "content-update"
+    category: "Navigation"
+    status: "complete"
+    createdAt: "2026-08-20T20:40:00Z"
+    updatedAt: "2026-08-20T21:00:00Z"
+    siteName: "dfs"
+    siteCollection: "dfs"
+    notes:
+      - "2026-08-20: Remapped Header/Data mega menus + LinkLists to Knowledge Hub IA. MCP cannot rename item names; created named KH datasources and updated starter Speakers/Headphones/Amps/Pro/Artist Services Title+Link as fallback for local:/Data bindings."
+      - "Starter Titles: Speakers→Getting Started, Headphones→Help Articles, Amps→Policies, Pro→Training, Artist Services→Service Documentation; FAQs_Nav added as 6th mega."
+      - "Link list Titles + children remapped; Loud for less→Training, By feature→Service Documentation, More speakers→FAQs."
+      - "SupportLink → Knowledge Hub; Image 1 TargetUrl → Knowledge Hub."
+    relatedItems:
+      headerPartialDesignId: "{8ED2B2B7-85DE-40C1-AA54-0A1E8BE05274}"
+      headerDataFolderId: "{D788F737-3DA9-49BA-9767-8583E494963C}"
+      megaMenus:
+        - { itemName: "Getting Started", itemId: "{B83DCED9-8250-490A-ADCB-488737612335}", pageId: "{09C3E73D-6E03-436B-901D-39AB28A00579}" }
+        - { itemName: "Help Articles", itemId: "{517ED820-0817-4D4E-A706-CAFBF11A9AC8}", pageId: "{022F7A43-3A2D-4B70-BACD-EF534DC2F22A}" }
+        - { itemName: "Policies", itemId: "{4C595A9D-34CC-4F2E-95BE-632B7A4C16F0}", pageId: "{6AA41D90-FF8A-403B-AF67-12C801A457B3}" }
+        - { itemName: "Training", itemId: "{D2E84677-387B-444B-813A-F5BD25E2942C}", pageId: "{C36DB300-1462-4C6D-876E-D692CB34EF03}" }
+        - { itemName: "Service Documentation", itemId: "{F9F3C64B-2252-4B58-A4FB-ED12F4798E1F}", pageId: "{0585863A-8285-45B1-B2D9-886E477CB97B}" }
+        - { itemName: "FAQs", itemId: "{A123763E-E2C8-4EBF-AC0F-B491C84A1B54}", pageId: "{D1B5CFC8-F0CA-49B9-8DEB-602F269CF166}" }
+        - { itemName: "FAQs_Nav", itemId: "{4E32A814-5AC5-4CC8-845B-616563DAB36A}", note: "layout mega for FAQs" }
+      primaryLinkLists:
+        - { itemName: "Getting Started Primary Links", itemId: "{C36E51A4-D096-4FD4-9E59-F9A708FBD24D}" }
+        - { itemName: "Help Articles Primary Links", itemId: "{F5D1953E-74AA-42D0-AB28-CE3D2FD55267}" }
+        - { itemName: "Policies Primary Links", itemId: "{5CABE238-CE61-4326-B9D3-649E70E9FBA7}" }
+        - { itemName: "Training Primary Links", itemId: "{13299463-1E81-445C-8229-EDC414CCD27C}" }
+        - { itemName: "Service Documentation Primary Links", itemId: "{9F926EDD-F70E-4BBB-A62B-8BD564EB0773}" }
+        - { itemName: "FAQs Primary Links", itemId: "{9F298428-1CFE-4681-A38E-56D810644507}" }
+        - { itemName: "Training_Primary", itemId: "{75D21CA2-54B7-4A3C-8BDD-AE0615BD0571}", note: "layout primary for Training mega" }
+        - { itemName: "FAQs_Primary", itemId: "{0AEA70EE-7A4B-4D06-A856-B8685C78B1C2}", note: "layout primary for FAQs mega" }
+        - { itemName: "Service_Documentation_Primary_Links", itemId: "{E4BDA378-FA9B-44E4-AAFC-3452F1F96957}", note: "layout primary for Service Docs mega" }
+      starterFallbacks:
+        - { itemName: "Speakers", title: "Getting Started", itemId: "{1FBD7D22-8222-4549-A675-6FB87453E2B1}" }
+        - { itemName: "Headphones", title: "Help Articles", itemId: "{51242AD6-0094-4564-AE8A-E331D22C996C}" }
+        - { itemName: "Amps", title: "Policies", itemId: "{C5875FD8-CE62-4911-B722-F7F1E90367E0}" }
+        - { itemName: "Pro", title: "Training", itemId: "{6EEDB873-BB0F-4907-B02F-6078A5A8FEEB}" }
+        - { itemName: "Artist Services", title: "Service Documentation", itemId: "{C44980C4-E32A-4146-B8CF-86BD92377062}" }
+        - { itemName: "Loud for less", title: "Training", itemId: "{13737352-1CFB-4B36-8515-4FBEDC6C4B30}" }
+        - { itemName: "By feature", title: "Service Documentation", itemId: "{8F326706-88F1-44CD-898E-4BADC9EDAC77}" }
+        - { itemName: "More speakers", title: "FAQs", itemId: "{3ECD6738-B177-470A-8DB4-8D037042F556}" }
+    verification:
+      checkedAt: "2026-08-20T21:00:00Z"
+      passed:
+        - "Named KH MegaMenuItems + Primary LinkLists created under Header/Data"
+        - "Starter mega Title+Link updated to Knowledge Hub L1 pages"
+        - "Starter primary/secondary LinkList Titles + Link children remapped to KH L2 pages"
+        - "FAQs_Nav mega + Training/Service/FAQs primary LinkLists added on Header PD"
+        - "SupportLink and Image 1 TargetUrl point at Knowledge Hub"
+      failed: []
+      pendingManual:
+        - "Publish Header Partial Design + Header/Data for Edge"
+        - "Confirm nav labels in Pages/Experience Editor (local:/Data may still show Speakers item name in CE tree)"
+        - "Optional: delete unused duplicate named lists if CE tree is too crowded"
+        - "Optional: set isSimpleLink on megas if empty dropdowns appear for any item"
 
