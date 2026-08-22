@@ -228,11 +228,18 @@ html[data-theme='blg'] {
   --font-accent: var(--font-inter), 'Helvetica Neue', Helvetica, Arial, ui-sans-serif, system-ui, sans-serif;
   --font-weight-heading: 500;
   --insights-mosaic-band: #002c5f;
+  --insights-mosaic-band-foreground: #ffffff;
   --insights-mosaic-teal: #0a7a7a;
+  --insights-mosaic-teal-foreground: #ffffff;
   --insights-mosaic-navy: #0a2048;
+  --insights-mosaic-navy-foreground: #ffffff;
   --insights-mosaic-maroon: #8f2433;
+  --insights-mosaic-maroon-foreground: #ffffff;
   --insights-mosaic-green: #2f5d3a;
+  --insights-mosaic-green-foreground: #ffffff;
   --insights-mosaic-purple: #5a3d6e;
+  --insights-mosaic-purple-foreground: #ffffff;
+  --insights-mosaic-foreground: #ffffff;
   color: var(--color-foreground);
   background-color: var(--color-background);
 }
@@ -249,6 +256,12 @@ html[data-theme='blg'] :where(h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .
 html[data-theme='blg'] .bg-primary :where(h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6),
 html[data-theme='blg'] .bg-dark :where(h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6) {
   color: var(--color-primary-foreground);
+}
+
+/* Mosaic dark tiles/band use light foreground tokens; do not change page headings. */
+html[data-theme='blg'] .insights-mosaic-band :where(h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6),
+html[data-theme='blg'] .insights-mosaic-tile-copy :where(h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6) {
+  color: inherit;
 }
 
 html[data-theme='blg'] .btn.btn-primary {

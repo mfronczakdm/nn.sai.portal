@@ -534,6 +534,19 @@
   --color-light-hover: #e4e4e4;
   --color-light-foreground: #002c5f;
   --color-overlay: rgb(0 44 95 / 0.45);
+  --insights-mosaic-band: #002c5f;
+  --insights-mosaic-band-foreground: #ffffff;
+  --insights-mosaic-teal: #0a7a7a;
+  --insights-mosaic-teal-foreground: #ffffff;
+  --insights-mosaic-navy: #0a2048;
+  --insights-mosaic-navy-foreground: #ffffff;
+  --insights-mosaic-maroon: #8f2433;
+  --insights-mosaic-maroon-foreground: #ffffff;
+  --insights-mosaic-green: #2f5d3a;
+  --insights-mosaic-green-foreground: #ffffff;
+  --insights-mosaic-purple: #5a3d6e;
+  --insights-mosaic-purple-foreground: #ffffff;
+  --insights-mosaic-foreground: #ffffff;
 }
 
 [data-theme='blg'] .bg-primary {

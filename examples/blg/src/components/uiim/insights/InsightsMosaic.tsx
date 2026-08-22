@@ -57,6 +57,14 @@ const ACCENT_VARS: Record<AccentToken, string> = {
   purple: 'var(--insights-mosaic-purple, #5a3d6e)',
 };
 
+const ACCENT_FOREGROUND_VARS: Record<AccentToken, string> = {
+  teal: 'var(--insights-mosaic-teal-foreground, #ffffff)',
+  navy: 'var(--insights-mosaic-navy-foreground, #ffffff)',
+  maroon: 'var(--insights-mosaic-maroon-foreground, #ffffff)',
+  green: 'var(--insights-mosaic-green-foreground, #ffffff)',
+  purple: 'var(--insights-mosaic-purple-foreground, #ffffff)',
+};
+
 function fieldString(field?: JsonField<Field<string>> | null): string {
   const value = field?.jsonValue?.value;
   return typeof value === 'string' ? value.trim() : '';
@@ -73,6 +81,12 @@ function resolveAccent(raw: string): string {
   if (token in ACCENT_VARS) return ACCENT_VARS[token];
   if (/^#([0-9a-f]{3}|[0-9a-f]{6})$/i.test(raw)) return raw;
   return ACCENT_VARS.navy;
+}
+
+function resolveAccentForeground(raw: string): string {
+  const token = raw.toLowerCase() as AccentToken;
+  if (token in ACCENT_FOREGROUND_VARS) return ACCENT_FOREGROUND_VARS[token];
+  return 'var(--insights-mosaic-foreground, #ffffff)';
 }
 
 function resolvePlacement(raw: string): ImagePlacement {
@@ -107,6 +121,7 @@ function InsightsMosaicTile({
   const tag = fieldString(item.tileTag);
   const number = formatTileNumber(fieldString(item.tileNumber), index);
   const accent = resolveAccent(fieldString(item.accentColor));
+  const accentForeground = resolveAccentForeground(fieldString(item.accentColor));
   const placement = resolvePlacement(fieldString(item.imagePlacement));
   const span = resolveSpan(fieldString(item.tileSpan));
   const href = linkHref(item.tileLink);
@@ -164,20 +179,20 @@ function InsightsMosaicTile({
 
       <div
         className={cn(
-          'flex min-h-0 flex-col justify-between gap-6 p-5 text-white md:p-7',
+          'insights-mosaic-tile-copy flex min-h-0 flex-col justify-between gap-6 p-5 md:p-7',
           isVertical ? 'h-1/2 w-full' : 'h-full w-1/2'
         )}
-        style={{ backgroundColor: accent }}
+        style={{ backgroundColor: accent, color: accentForeground }}
       >
         {showTitle && (
           <Text
             tag="h3"
             field={item.tileTitle?.jsonValue}
-            className="font-heading text-pretty text-xl font-medium leading-snug tracking-tight text-white md:text-2xl lg:text-[1.65rem]"
+            className="font-heading text-pretty text-xl font-medium leading-snug tracking-tight md:text-2xl lg:text-[1.65rem]"
           />
         )}
         {showTag && (
-          <p className="mt-auto flex items-center gap-2 text-[0.7rem] font-medium uppercase tracking-[0.16em] text-white">
+          <p className="mt-auto flex items-center gap-2 text-[0.7rem] font-medium uppercase tracking-[0.16em]">
             <FileText className="size-3.5 shrink-0" aria-hidden="true" />
             <Text field={item.tileTag?.jsonValue} tag="span" />
           </p>
@@ -223,15 +238,18 @@ function InsightsMosaicView({
       id={params?.RenderingIdentifier || 'insights-mosaic'}
     >
       <div
-        className="text-white"
-        style={{ backgroundColor: 'var(--insights-mosaic-band, var(--brand-primary, #002c5f))' }}
+        className="insights-mosaic-band"
+        style={{
+          backgroundColor: 'var(--insights-mosaic-band, var(--brand-primary, #002c5f))',
+          color: 'var(--insights-mosaic-band-foreground, #ffffff)',
+        }}
       >
         <div className="mx-auto max-w-[92rem] px-4 py-14 sm:px-6 md:px-10 md:py-20">
           {showTitle && (
             <Text
               tag="h2"
               field={datasource.sectionTitle?.jsonValue}
-              className="font-heading text-pretty text-3xl font-medium tracking-tight text-white md:text-4xl lg:text-5xl"
+              className="font-heading text-pretty text-3xl font-medium tracking-tight md:text-4xl lg:text-5xl"
             />
           )}
 
@@ -248,7 +266,7 @@ function InsightsMosaicView({
             </div>
           ) : (
             isEditing && (
-              <p className="text-white/70 mt-10 text-sm">Add insight tiles as child items.</p>
+              <p className="mt-10 text-sm opacity-70">Add insight tiles as child items.</p>
             )
           )}
 
@@ -256,7 +274,7 @@ function InsightsMosaicView({
             <div className="mt-10 flex justify-center">
               <ContentSdkLink
                 field={datasource.viewAllLink.jsonValue}
-                className="inline-flex items-center border border-white px-6 py-2.5 text-sm font-medium tracking-wide text-white no-underline transition-colors hover:bg-white hover:text-[var(--insights-mosaic-band,#002c5f)]"
+                className="inline-flex items-center border border-current px-6 py-2.5 text-sm font-medium tracking-wide no-underline transition-colors hover:bg-[var(--insights-mosaic-band-foreground,#ffffff)] hover:text-[var(--insights-mosaic-band,#002c5f)]"
               />
             </div>
           )}
