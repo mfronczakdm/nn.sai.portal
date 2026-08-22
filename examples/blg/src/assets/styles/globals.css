@@ -294,13 +294,15 @@
 }
 
 /*
- * Brand palettes — select with <html data-theme="bcbst | dwyeromega | builderfs | rockland | pkm"> (see NEXT_PUBLIC_APP_THEME).
+ * Brand palettes — select with <html data-theme="bcbst | dwyeromega | builderfs | rockland | pkm | pillsburylaw | blg"> (see NEXT_PUBLIC_APP_THEME).
  * bcbst: tokens are defined in @theme above (lime accent / existing portal brand).
  * dwyeromega: steel headings (#75787b), deep indigo primary/footer (#2a2b67), red accent / alternate CTAs (#da2a2b).
  * builderfs (bldr.com): deep blue primary (#292670), pigment red accent (#ED1D24) — logo palette.
  * rockland: official brand palette in src/assets/styles/themes/rockland-tokens.css (blue #005394 primary, #ffc233 accent).
  * pkm: Progressive Knowledge Management — official Progressive palette in src/assets/styles/themes/pkm-tokens.css
  *   (Progressive Blue #0077B3 primary, Steel Blue #0A3360 header, Blue 500 accent).
+ * pillsburylaw: McKinsey-inspired dark navy (#051c2c) with luminous blue links.
+ * blg: Borden Ladner Gervais — light Canadian law-firm navy (#002c5f), white, light gray (#eeeeee).
  * Font stacks and heading weights are set on <html data-theme="…"> in src/app/globals.css (next/font on <html class>).
  */
 [data-theme='dwyeromega'] {
@@ -489,5 +491,59 @@
 }
 
 [data-theme='pillsburylaw'] .bg-dark {
+  color: var(--color-dark-foreground);
+}
+
+/*
+ * BLG — Borden Ladner Gervais (https://www.blg.com/en).
+ * Light Canadian law-firm surfaces: white page, navy chrome, light-gray bands.
+ * Sharp rectangular CTAs (same wiring pattern as pillsburylaw).
+ */
+[data-theme='blg'] {
+  --background-image-gradient: linear-gradient(180deg, #1a4d8c 0%, #002c5f 100%);
+  --background-image-gradient-secondary: linear-gradient(90deg, #eeeeee 0%, #002c5f 50%, #1a4d8c 100%);
+  --color-background: #ffffff;
+  --color-foreground: #4d4f53;
+  --color-card: #f4f4f4;
+  --color-card-foreground: #002c5f;
+  --color-popover: #ffffff;
+  --color-popover-foreground: #4d4f53;
+  --color-primary: #002c5f;
+  --color-primary-foreground: #ffffff;
+  --color-primary-hover: #002551;
+  --color-secondary: #eeeeee;
+  --color-secondary-foreground: #002c5f;
+  --color-secondary-hover: #e4e4e4;
+  --color-muted: #eeeeee;
+  --color-muted-foreground: #6b6e73;
+  --color-accent: #1a4d8c;
+  --color-accent-foreground: #ffffff;
+  --color-destructive: #dc2626;
+  --color-destructive-hover: #b91c1c;
+  --color-destructive-foreground: #ffffff;
+  --color-border: #d8dce3;
+  --color-input: #d8dce3;
+  --color-ring: #002c5f;
+  --color-tertiary-foreground: #002c5f;
+  --color-tertiary-hover: #e4e4e4;
+  --color-tertiary: #eeeeee;
+  --color-dark-foreground: #ffffff;
+  --color-dark-hover: #002147;
+  --color-dark: #002c5f;
+  --color-light: #eeeeee;
+  --color-light-hover: #e4e4e4;
+  --color-light-foreground: #002c5f;
+  --color-overlay: rgb(0 44 95 / 0.45);
+}
+
+[data-theme='blg'] .bg-primary {
+  color: var(--color-primary-foreground);
+}
+
+[data-theme='blg'] .bg-secondary {
+  color: var(--color-secondary-foreground);
+}
+
+[data-theme='blg'] .bg-dark {
   color: var(--color-dark-foreground);
 }

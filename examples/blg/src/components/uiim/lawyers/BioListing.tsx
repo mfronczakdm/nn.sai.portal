@@ -285,7 +285,8 @@ function BioListingView({ props, layout }: { props: BioListingProps; layout: Lay
   const isEditing = propEditing ?? page.mode.isEditing;
 
   const datasource = fields?.data?.datasource;
-  const attorneys = datasource?.biosRoot?.targetItem?.children?.results ?? [];
+  const attorneyResults = datasource?.biosRoot?.targetItem?.children?.results;
+  const attorneys = useMemo(() => attorneyResults ?? [], [attorneyResults]);
 
   const [query, setQuery] = useState('');
   const [practice, setPractice] = useState('all');

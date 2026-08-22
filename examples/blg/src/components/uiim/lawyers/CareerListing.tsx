@@ -148,7 +148,8 @@ export const Default: React.FC<CareerListingProps> = (props) => {
   const isEditing = propEditing ?? page.mode.isEditing;
 
   const datasource = fields?.data?.datasource;
-  const roles = datasource?.careersRoot?.targetItem?.children?.results ?? [];
+  const roleResults = datasource?.careersRoot?.targetItem?.children?.results;
+  const roles = useMemo(() => roleResults ?? [], [roleResults]);
 
   const [query, setQuery] = useState('');
   const [track, setTrack] = useState('all');

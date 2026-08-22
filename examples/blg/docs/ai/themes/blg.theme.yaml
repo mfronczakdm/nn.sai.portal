@@ -1,0 +1,129 @@
+# Client Brand Theme — BLG (Borden Ladner Gervais)
+# Extracted from: https://www.blg.com/en
+# Light-first Canadian law-firm palette (navy + white + light gray).
+# Wiring patterned after pillsburylaw (sharp CTAs, heading-contrast fixes).
+
+client:
+  name: "BLG"
+  sourceUrl: "https://www.blg.com/en"
+  extractedAt: "2026-08-21T21:15:00Z"
+  extractedBy: "cursor"
+
+colors:
+  primary: "#002c5f"
+  primaryForeground: "#ffffff"
+  secondary: "#eeeeee"
+  secondaryForeground: "#002c5f"
+  accent: "#1a4d8c"
+  accentForeground: "#ffffff"
+  background: "#ffffff"
+  foreground: "#4d4f53"
+  muted: "#eeeeee"
+  mutedForeground: "#6b6e73"
+  headerBackground: "#002c5f"
+  headerForeground: "#ffffff"
+  footerBackground: "#eeeeee"
+  footerForeground: "#002c5f"
+  border: "#d8dce3"
+  ring: "#002c5f"
+  extra:
+    - { name: "blgNavy", value: "#002c5f" }
+    - { name: "blgMidBlue", value: "#1a4d8c" }
+    - { name: "sectionGray", value: "#eeeeee" }
+    - { name: "bodyGray", value: "#4d4f53" }
+    - { name: "insightBurgundy", value: "#7a2431" }
+    - { name: "insightGreen", value: "#2d4a3e" }
+    - { name: "insightPurple", value: "#3d2d5c" }
+
+typography:
+  headingFamily: "'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+  headingWeight: "500"
+  bodyFamily: "'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+  bodyWeight: "400"
+  monoFamily: "'ui-monospace', monospace"
+  googleFontsUrl: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+  scale:
+    hero: "3.125rem"
+    h1: "3.125rem"
+    h2: "1.875rem"
+    h3: "1rem"
+    body: "1rem"
+    small: "0.875rem"
+  headingTransform: "none"
+  letterSpacing: "normal"
+  lineHeight: "relaxed"
+
+spacing:
+  density: "spacious"
+  sectionGap: "4rem"
+  containerMaxWidth: "1590px"
+  containerPadding: "1.5rem"
+
+shape:
+  borderRadius: "0"
+  buttonRadius: "0"
+  cardRadius: "8px"
+  imageRadius: "0"
+  shadowStyle: "none"
+  borderStyle: "subtle"
+
+tone:
+  overall: "corporate"
+  colorMode: "light"
+  contrast: "high"
+  imagery: "photography"
+  heroStyle: "full-bleed-image"
+  cardStyle: "flat"
+  navStyle: "transparent-overlay"
+
+tailwind:
+  colors:
+    brand:
+      primary: "#002c5f"
+      secondary: "#eeeeee"
+      accent: "#1a4d8c"
+  fontFamily:
+    heading: ["Inter", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"]
+    body: ["Inter", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"]
+  borderRadius:
+    DEFAULT: "0"
+    button: "0"
+    card: "8px"
+
+cssVariables: |
+  :root {
+    --brand-primary: #002c5f;
+    --brand-primary-foreground: #ffffff;
+    --brand-secondary: #eeeeee;
+    --brand-secondary-foreground: #002c5f;
+    --brand-accent: #1a4d8c;
+    --brand-accent-foreground: #ffffff;
+    --brand-bg: #ffffff;
+    --brand-fg: #4d4f53;
+    --brand-muted: #eeeeee;
+    --brand-muted-fg: #6b6e73;
+    --brand-header-bg: #002c5f;
+    --brand-header-fg: #ffffff;
+    --brand-footer-bg: #eeeeee;
+    --brand-footer-fg: #002c5f;
+    --brand-border: #d8dce3;
+    --brand-ring: #002c5f;
+    --brand-heading-font: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --brand-body-font: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --brand-radius: 0;
+    --brand-button-radius: 0;
+    --brand-card-radius: 8px;
+  }
+
+extraction:
+  confidence: "high"
+  method: "playwright-full"
+  notes:
+    - "Playwright scraper succeeded (desktop, mobile, hero screenshots + extracted-styles.json + meta.json)."
+    - "Official navy from meta theme-color / msapplication-TileColor: #002c5f (rgb(0, 44, 95) also used for footer text)."
+    - "Body copy is rgb(77, 79, 83) / #4d4f53. Footer and alternating bands are rgb(238, 238, 238) / #eeeeee."
+    - "Site uses proprietary Helvetica Neue LT Pro (Roman body, Md headings, Bd bold). Google Fonts substitute: Inter, with Helvetica Neue / Helvetica system fallbacks."
+    - "Buttons are sharp (border-radius 0). Cards are slightly rounded (8px) with no shadow."
+    - "Light-first theme (white page, navy header/hero band) — opposite of the dark pillsburylaw palette, but the same wiring pattern (sharp CTAs, .bg-primary contrast)."
+    - "Insight-grid tile colors (burgundy, forest green, purple) are decorative extras, not chrome tokens."
+    - "Primary CTA on light surfaces is solid navy + white type (cookie modal Confirm). On navy bands, CTAs are white ghost buttons."

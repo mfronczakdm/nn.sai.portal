@@ -369,6 +369,7 @@ export function buildKnowledgeHrefIndex(
     kbId?: unknown;
   }>
 ): Map<string, string> {
+  void _articles;
   return new Map();
 }
 
@@ -376,10 +377,12 @@ export function applyLiveKnowledgeHrefs(
   items: SearchResultItem[],
   _hrefIndex: Map<string, string>
 ): SearchResultItem[] {
+  void _hrefIndex;
   return items;
 }
 
 export function supplementalResultsForDemoUserTaxonomy(_persona: DemoUserTaxonomy): SearchResultItem[] {
+  void _persona;
   return [];
 }
 
@@ -1489,6 +1492,7 @@ export function selectAiSearchInsight(
   q: string,
   _persona: DemoUserTaxonomy | null
 ): AiSearchInsight | null {
+  void _persona;
   const n = normalizeQuery(q);
   if (!n || n.length < 4) return null;
 

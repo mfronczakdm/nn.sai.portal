@@ -412,6 +412,7 @@ export function buildDemoPlaybookSources(
   question: string,
   _stateCode?: PulseStateCode | null
 ): PulseSource[] {
+  void _stateCode;
   const intent = matchPulseDemoIntent(question);
   if (!intent) return [];
 

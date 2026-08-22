@@ -13,7 +13,6 @@ import {
   FileText,
   Globe2,
   Loader2,
-  MapPin,
   MessageSquareText,
   Mic2,
   Newspaper,
@@ -66,24 +65,25 @@ export type SearchResultsProps = {
 
 type SortMode = 'relevance' | 'az';
 
-function resultIcon(lob: SearchLob) {
+function resultIcon(lob: SearchLob, className?: string) {
+  const iconProps = { className, 'aria-hidden': true as const };
   switch (lob) {
     case 'lawyer':
-      return UserRound;
+      return <UserRound {...iconProps} />;
     case 'insight':
-      return Newspaper;
+      return <Newspaper {...iconProps} />;
     case 'event':
-      return CalendarDays;
+      return <CalendarDays {...iconProps} />;
     case 'podcast':
-      return Mic2;
+      return <Mic2 {...iconProps} />;
     case 'capability':
-      return Scale;
+      return <Scale {...iconProps} />;
     case 'office':
-      return Building2;
+      return <Building2 {...iconProps} />;
     case 'career':
-      return Briefcase;
+      return <Briefcase {...iconProps} />;
     default:
-      return FileText;
+      return <FileText {...iconProps} />;
   }
 }
 
@@ -223,7 +223,6 @@ function FacetSection({
 function ResultCard({ item }: { item: SearchResultItem }) {
   const meta = itemMetadataLine(item);
   const practiceLabels = item.perils.map((p) => searchFacetLabels.peril[p]).slice(0, 2);
-  const Icon = resultIcon(item.lob);
   const isLawyer = item.lob === 'lawyer';
 
   return (
@@ -243,7 +242,7 @@ function ResultCard({ item }: { item: SearchResultItem }) {
             isLawyer ? 'bg-primary text-primary-foreground' : 'bg-primary/10 text-primary'
           )}
         >
-          <Icon className="size-5" aria-hidden />
+          {resultIcon(item.lob, 'size-5')}
         </div>
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-center gap-2">

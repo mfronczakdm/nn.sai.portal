@@ -10,6 +10,7 @@ import {
 } from 'next/font/google';
 import { resolveAppTheme } from '@/lib/app-theme';
 
+/** Default stack + BLG (Google Fonts substitute for Helvetica Neue LT Pro) */
 const inter = Inter({
   subsets: ['latin', 'latin-ext'],
   variable: '--font-inter',

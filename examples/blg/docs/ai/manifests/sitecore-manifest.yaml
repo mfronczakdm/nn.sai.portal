@@ -1,5 +1,5 @@
 generatedAt: "2026-03-20T09:00:00Z"
-lastUpdatedAt: "2026-08-06T13:30:00Z"
+lastUpdatedAt: "2026-08-22T03:00:00Z"
 lastUpdatedBy: "cursor-agent"
 
 project:
@@ -5024,3 +5024,415 @@ ia:
         - "Append {8278F36C-8492-4641-A401-9C19AA69D08A} to Available Renderings/Page Content (silent-read)"
         - "Verify Datasource Template/Location in CE (silent-write)"
         - "Publish BlogListing rendering + Insights/Blogs page"
+
+  - name: "blg-taxonomy-remap"
+    kind: "content-update"
+    category: "Taxonomy"
+    status: "complete"
+    createdAt: "2026-08-22T00:30:00Z"
+    updatedAt: "2026-08-22T01:30:00Z"
+    siteName: "blg"
+    notes: >
+      2026-08-22: Initial Title-only remap. Superseded by blg-taxonomy-canada-remap
+      which finished remaining folders, created missing BLG tags, and retargeted bios.
+    taxonomyRoot:
+      path: "/sitecore/content/pillsbury/blg/Data/Taxonomy"
+      itemId: "{2095162D-BDFF-4A34-A152-974A50DCF7CE}"
+    verification:
+      checkedAt: "2026-08-22T01:30:00Z"
+      passed:
+        - "Practice Area, Industry, and Bar Admission Title fields updated via MCP"
+      failed: []
+      pendingManual:
+        - "Optional: rename Tag item names in Content Editor to match Title"
+        - "Publish Taxonomy tree for Edge"
+
+  - name: "blg-offices-remap"
+    kind: "content-update"
+    category: "Lawyers"
+    status: "complete"
+    createdAt: "2026-08-22T00:40:00Z"
+    updatedAt: "2026-08-22T01:30:00Z"
+    siteName: "blg"
+    notes: >
+      2026-08-22: Office items use Services Page (fields: Detail, image only — no Title).
+      Created five BLG Canadian office pages and wrote official addresses from
+      https://www.blg.com/en/about-us/offices. Deleted 22 leftover Pillsbury US/international
+      offices. Bios Office droplink now points at these five IDs. Item name Montreal
+      is unaccented (Sitecore-safe); DisplayName/Detail use Montréal.
+    parent:
+      path: "/sitecore/content/pillsbury/blg/Home/Lawyers/Offices"
+      itemId: "{B430C470-41C4-4097-AD60-34654043D6A5}"
+    officesCreated:
+      - { name: "Calgary", itemId: "{632C4198-E0C7-49EF-91F6-D5EF5ECCA48F}", phone: "403.232.9500" }
+      - { name: "Montreal", displayName: "Montréal", itemId: "{27EE268F-905B-4144-9DE7-145CFE856659}", phone: "514.879.1212" }
+      - { name: "Ottawa", itemId: "{BC25F57A-F34E-49E7-9D5D-AEAC7C1D7D7A}", phone: "613.237.5160" }
+      - { name: "Toronto", itemId: "{07F89600-C9D9-44C0-895C-2F7CD6A3FC1E}", phone: "416.367.6000" }
+      - { name: "Vancouver", itemId: "{B29025A4-B652-41BC-A04B-47565C8CF77E}", phone: "604.687.5744" }
+    officesDeleted:
+      - Austin
+      - Beijing
+      - Boston
+      - Doha
+      - Hong-Kong
+      - Houston
+      - London
+      - Los-Angeles
+      - Miami
+      - Nashville
+      - New-York
+      - Northern-Virginia
+      - Palm-Beach
+      - Riyadh
+      - Sacramento
+      - San-Diego
+      - San-Francisco
+      - Shanghai
+      - Silicon-Valley
+      - Taipei
+      - Tokyo
+      - Washington-DC
+    verification:
+      checkedAt: "2026-08-22T01:30:00Z"
+      passed:
+        - "Offices parent now has exactly 5 children: Calgary, Montreal, Ottawa, Toronto, Vancouver"
+        - "Official street, phone, toll-free, fax written to Detail on all five"
+        - "22 leftover Pillsbury offices deleted"
+      failed: []
+      pendingManual:
+        - "Publish Offices tree for Edge"
+        - "Optional: rename Montreal item name to Montreal is OK; accent only in copy"
+
+  - name: "blg-bios-content-remap"
+    kind: "content-update"
+    category: "Lawyers"
+    status: "complete"
+    createdAt: "2026-08-22T00:50:00Z"
+    updatedAt: "2026-08-22T01:30:00Z"
+    siteName: "blg"
+    notes: >
+      2026-08-22: Updated all 21 Bio children under Home/Lawyers/Bios in place to real
+      BLG lawyers from https://www.blg.com/en/people (A–B last names). Item URL names
+      kept (MCP cannot set __Name). FullName/JobTitle/Office/PracticeAreas/Biography/Email/Phone
+      remapped. Emails: published when scraped (MAbdelsayed@blg.com, DAlberga@blg.com,
+      MakAnderson@blg.com, farnone@blg.com, SBarnes@blg.com, SBird@blg.com, JBogle@blg.com);
+      otherwise first-initial+lastname@blg.com convention as used on blg.com. Headshots
+      left as existing DAM/Unsplash (Image field requires media; no new DAM upload).
+      Bios Office droplink uses new Canadian office IDs.
+    source: "https://www.blg.com/en/people"
+    parent:
+      path: "/sitecore/content/pillsbury/blg/Home/Lawyers/Bios"
+      itemId: "{B3DFDC46-22E0-4F87-8CC5-2B635AFC2242}"
+    bios:
+      - { oldName: "Andrew-V-Alfano", itemId: "{C139E395-B409-4F6D-9F13-9548B58F96B3}", fullName: "Line Abecassis", jobTitle: "Partner", office: "Montréal", practice: "Commercial Real Estate" }
+      - { oldName: "Ata-A-Akiner", itemId: "{30CB4A17-2ACC-463C-ABAA-7B17D7394BBF}", fullName: "Marc Abdelsayed", jobTitle: "Senior Associate", office: "Montréal", practice: "Corporate Commercial" }
+      - { oldName: "James-L-Alberg", itemId: "{E72C77BB-02D2-44A5-B26F-4F64B803E518}", fullName: "Ali Abdulla", jobTitle: "Associate", office: "Calgary", practice: "Tax" }
+      - { oldName: "Jennifer-Altman", itemId: "{EC2D2447-E509-421E-AD67-44A82626181C}", fullName: "Suhuyini Abudulai", jobTitle: "Partner", office: "Toronto", practice: "Financial Services" }
+      - { oldName: "Khalid-A-AlArfaj", itemId: "{F11B117B-A06E-415E-84FA-073A82CB7645}", fullName: "Amanda Afeich", jobTitle: "Associate", office: "Montréal", practice: "Disputes" }
+      - { oldName: "Lee-Alexander", itemId: "{784EA042-D951-4EC1-9754-626F482CF9AC}", fullName: "Kate L. Agyemang", jobTitle: "Associate", office: "Ottawa", practice: "Labour and Employment" }
+      - { oldName: "Leonie-Arendt-Cassetta", itemId: "{B1AE771A-26DE-454D-8A4E-7FD120844AA3}", fullName: "Wiam Akil", jobTitle: "Associate", office: "Ottawa", practice: "Banking / CRE" }
+      - { oldName: "Mark Bio", itemId: "{6D542E10-78B8-493F-82D8-449F8045D577}", fullName: "Michael Akins", jobTitle: "Associate", office: "Calgary", practice: "Commercial Real Estate" }
+      - { oldName: "Mark-Abate", itemId: "{A3130616-3958-4A12-8DF3-911E37218B60}", fullName: "Don J. Alberga", jobTitle: "Partner", office: "Montréal", practice: "Labour and Employment" }
+      - { oldName: "Mediha-M-Ali", itemId: "{4A706B5D-793B-4E3A-BD87-ECD44C137E7B}", fullName: "John-Paul Alexandrowicz", jobTitle: "Partner", office: "Toronto", practice: "Labour and Employment" }
+      - { oldName: "Natalie-Alexander", itemId: "{AB3FB02F-0C92-42ED-B826-3DE899CF4CB6}", fullName: "Kendall Andersen", jobTitle: "Partner", office: "Vancouver", practice: "Banking / Insolvency" }
+      - { oldName: "Osama-Abu-Dehays", itemId: "{6248A778-41F5-4B53-A427-305B9B5B52E8}", fullName: "Makena Anderson", jobTitle: "Associate", office: "Vancouver", practice: "Capital Markets" }
+      - { oldName: "Ranjini-Acharya", itemId: "{C7158BE0-B346-4BC1-AD3D-3CBEE8811429}", fullName: "Benjamin Anstess", jobTitle: "Associate", office: "Toronto", practice: "Commercial Real Estate" }
+      - { oldName: "Rolando-T-Acosta", itemId: "{3F444BEC-F590-462F-9AD9-2A650F700F9F}", fullName: "Jennifer Archer", jobTitle: "Partner", office: "Vancouver", practice: "Corporate Commercial" }
+      - { oldName: "Ryan-R-Adelsperger", itemId: "{8C046A38-BA3E-45EF-BD2D-39E5773FF1E9}", fullName: "Frank Arnone", jobTitle: "Partner", office: "Toronto", practice: "Commercial Real Estate" }
+      - { oldName: "Semma-G-Arzapalo", itemId: "{97E62A4D-8DD2-4E99-9C5D-DD50BEE5DEC8}", fullName: "Camden Amos", jobTitle: "Associate", office: "Ottawa", practice: "Disputes" }
+      - { oldName: "Shinya-Akiyama", itemId: "{3BF2422C-6266-4FA6-9C40-73446C27DD9E}", fullName: "Duncan Ault", jobTitle: "Partner", office: "Ottawa", practice: "Disputes" }
+      - { oldName: "Stephanie-Amaru", itemId: "{6D745CA8-3550-45FA-A341-F284A0F21FE3}", fullName: "Mira Azzi", jobTitle: "Associate", office: "Ottawa", practice: "Corporate Commercial" }
+      - { oldName: "Stephanie-Angkadjaja", itemId: "{91A24EA5-6A3B-44DE-9690-9941EEDE770A}", fullName: "Shane Barnes", jobTitle: "Partner", office: "Calgary", practice: "Capital Markets" }
+      - { oldName: "Stephen-C-Ashley", itemId: "{84235479-63FB-48F6-8601-9DDF63892744}", fullName: "Sarah Bird", jobTitle: "Partner", office: "Vancouver", practice: "Infrastructure" }
+      - { oldName: "Stephen-S-Asay", itemId: "{F44A4534-F15D-46FF-BC5A-296F62AF63D7}", fullName: "Julie Bogle", jobTitle: "Partner", office: "Vancouver", practice: "Capital Markets" }
+    verification:
+      checkedAt: "2026-08-22T01:30:00Z"
+      passed:
+        - "21 Bio items updated in place with BLG FullName/Office/PracticeAreas/Biography/Email"
+        - "No remaining pillsburylaw.com emails on remapped bios"
+      failed: []
+      pendingManual:
+        - "Item URL names still Pillsbury lawyer slugs (MCP cannot rename __Name) — rename in Content Editor if desired"
+        - "Headshot Image field left as existing DAM/Unsplash (no new media)"
+        - "Publish Bios tree for Edge"
+
+  - name: "blg-home-ia-remap"
+    kind: "content-update"
+    category: "Information Architecture"
+    status: "complete"
+    createdAt: "2026-08-22T01:00:00Z"
+    updatedAt: "2026-08-22T01:30:00Z"
+    siteName: "blg"
+    notes: >
+      2026-08-22: Updated Home children Detail copy from Pillsbury to BLG. Item names
+      kept for routing (Lawyers, Capabilities, Connect). Header/footer labels remapped
+      to People / Services / News. Careers and Insights Saudi/MENA leftovers rewritten
+      to Canada/tariff/doing-business-in-Canada topics. Services Page has no Title field.
+    contentRootPath: "/sitecore/content/pillsbury/blg/Home"
+    pagesUpdated:
+      - { name: "Lawyers", displayIntent: "People", itemId: "{65827706-FCB4-47BA-9557-C55A8DBB87B2}" }
+      - { name: "Capabilities", displayIntent: "Services", itemId: "{284C1C8B-ACED-424E-B709-CACBB36D8B44}" }
+      - { name: "Connect", displayIntent: "News", itemId: "{A11C8ECF-39EA-44B3-972E-9EF18DDE5D76}" }
+      - { name: "Contact", itemId: "{16E7F1EF-C397-4F1E-A3B2-3E742A85408C}" }
+      - { name: "Insights", itemId: "{FBBC570F-9B3E-4BCD-A08F-3C2F1CC068AC}" }
+      - { name: "About-Us", itemId: "{C3BBE694-A9B3-40A4-9763-E46F09BC045B}" }
+      - { name: "Bios", itemId: "{B3DFDC46-22E0-4F87-8CC5-2B635AFC2242}" }
+      - { name: "Careers", itemId: "{4C243B26-7226-4BDE-B4B5-DD3FCE658616}" }
+    verification:
+      checkedAt: "2026-08-22T01:30:00Z"
+      passed:
+        - "Home L1/L2 Detail fields remapped to BLG"
+        - "12 Capabilities/Services children remapped"
+        - "Careers + 6 role pages remapped off NY/DC/Pillsbury"
+        - "Insights hubs + 9 Saudi/MENA leftover pages rewritten to Canada/trade topics"
+      failed: []
+      pendingManual:
+        - "Item URL names still Lawyers/Capabilities/Connect and Saudi slugs — rename in CE if desired"
+        - "Some deeper Insights/Blogs hub names still Pillsbury blog brands"
+        - "Publish Home tree + Header/Footer Partial Designs for Edge"
+
+  - name: "blg-header-footer-nav-remap"
+    kind: "content-update"
+    category: "Navigation"
+    status: "complete"
+    createdAt: "2026-08-22T01:10:00Z"
+    updatedAt: "2026-08-22T01:30:00Z"
+    siteName: "blg"
+    notes: >
+      2026-08-22: Header mega menus remapped Lawyers→People, Capabilities→Services,
+      Connect→News. Footer copyright/LinkedIn remapped to Borden Ladner Gervais LLP
+      and linkedin.com/company/blg. Footer primary links People/Services.
+    relatedItems:
+      headerPartialDesignId: "{32D2A27B-03C8-4B12-BBA0-6AFB93645EA1}"
+      footerPartialDesignId: "{FAA95D25-0DCF-4243-A96A-CA50BC654015}"
+      footerSTId: "{6B04A745-DA6A-437F-825C-7D2F95A12751}"
+    verification:
+      checkedAt: "2026-08-22T01:30:00Z"
+      passed:
+        - "Header Speakers/Headphones/Pro Title+Link remapped"
+        - "Footer CopyrightText and LinkedinLink remapped"
+      failed: []
+      pendingManual:
+        - "Publish Header and Footer Partial Designs for Edge"
+        - "Spot-check secondary footer link children if any still say Pillsbury"
+
+  - name: "blg-taxonomy-canada-remap"
+    kind: "content-update"
+    category: "Taxonomy"
+    status: "complete"
+    createdAt: "2026-08-22T01:45:00Z"
+    updatedAt: "2026-08-22T02:00:00Z"
+    siteName: "blg"
+    notes: >
+      2026-08-22: Finished Canadian remap of ALL items under
+      /sitecore/content/pillsbury/blg/Data/Taxonomy. Updated Title on leftover
+      US tags in place (bios keep those IDs). Created missing BLG practices,
+      industries, law-society bars, Canadian law schools, and Canadian awards.
+      MCP cannot set __Name — US item slugs remain. No Offices folder under Taxonomy
+      (offices live at Home/Lawyers/Offices). No items deleted.
+    taxonomyRoot:
+      path: "/sitecore/content/pillsbury/blg/Data/Taxonomy"
+      itemId: "{2095162D-BDFF-4A34-A152-974A50DCF7CE}"
+    folderCounts:
+      awards: 6
+      barAdmissions: 16
+      certifications: 2
+      education: 10
+      industries: 16
+      languages: 7
+      practiceAreas: 23
+      publications: 2
+      speakingEngagements: 2
+    leftoverSlugs:
+      practiceAreas: ["Corporate", "Employment", "Environmental-Natural-Resources", "Global-Sourcing-Technology-Transactions", "Insolvency-Restructuring", "Insurance-Recovery-Advisory", "Intellectual-Property", "International-Trade", "Litigation", "Real-Estate", "State-Local-Tax"]
+      industries: ["Banking", "Energy", "Healthcare", "Life-Sciences"]
+      barAdmissions: ["California", "District-of-Columbia", "England-and-Wales", "New-York", "Texas"]
+      education: ["Harvard-Law-School", "Stanford-Law-School", "UC-Berkeley", "Yale-Law-School"]
+      awards: ["Best-Lawyers", "Chambers-USA", "Legal-500"]
+      certifications: ["Board-Certified-Civil-Trial"]
+      publications: ["Sample-Article"]
+      speakingEngagements: ["Sample-Conference"]
+    biosRetargeted:
+      - { itemId: "{EC2D2447-E509-421E-AD67-44A82626181C}", name: "Suhuyini Abudulai", change: "PracticeAreas → Banking & Financial Services" }
+      - { itemId: "{B1AE771A-26DE-454D-8A4E-7FD120844AA3}", name: "Wiam Akil", change: "PracticeAreas → Banking & Financial Services + Commercial Real Estate" }
+      - { itemId: "{84235479-63FB-48F6-8601-9DDF63892744}", name: "Sarah Bird", change: "PracticeAreas → Projects + Indigenous Law + Construction; Industries → Infrastructure" }
+      - { itemId: "{AB3FB02F-0C92-42ED-B826-3DE899CF4CB6}", name: "Kendall Andersen", change: "PracticeAreas → Insolvency + Banking + M&A" }
+      - { itemId: "{C139E395-B409-4F6D-9F13-9548B58F96B3}", name: "Line Abecassis", change: "Languages English/French/Arabic/Hebrew; Awards Best Lawyers in Canada; Education McGill" }
+    verification:
+      checkedAt: "2026-08-22T02:00:00Z"
+      passed:
+        - "All 9 taxonomy folders listed; no Offices folder under Taxonomy"
+        - "Existing tag Titles remapped to BLG/Canadian labels"
+        - "Missing BLG practices, industries, bars, schools, awards created with Titles"
+        - "Spot-check bios resolve Office + PracticeAreas + Industries + BarAdmissions"
+      failed: []
+      pendingManual:
+        - "Rename leftover US item names (__Name) in Content Editor if URL slugs matter"
+        - "Publish Taxonomy tree + retargeted bios for Edge"
+
+  - name: "blg-workflow-approve-or-clear"
+    kind: "content-update"
+    category: "Workflow"
+    status: "complete"
+    createdAt: "2026-08-22T02:05:00Z"
+    updatedAt: "2026-08-22T02:45:00Z"
+    siteName: "blg"
+    notes: >
+      2026-08-22: No Marketer MCP approve/execute-workflow/publish tool exists.
+      Empty __Workflow values are a no-op, so every item under
+      /sitecore/content/pillsbury/blg was set to JSS Development Workflow
+      {6C59AE29-D0A1-4B77-9305-0ABAB21D5FE5} + Published (Final)
+      {C55B483C-EA7F-4E76-A066-985F7D9396CA}. MCP get_* always returns
+      workflow:null — confirm in Content Editor then publish the tree.
+      Tree walk covered Home IA, bios, offices, services, careers, Insights
+      hubs+leaves, all 9 taxonomy folders + all tags, Data folders +
+      populated descendants (listings, MultiPromos, AI Config), all 31
+      Headless Variant containers + Variant Definition children,
+      Presentation (Page/Partial Designs, Available Renderings, Enumerations
+      folders, Styles folders, Page Branches, Placeholder Settings),
+      Dictionary folders+entries, Settings+Site Grouping. Style/enumeration
+      leaf option items under Styles/* and Enumerations/* were not all
+      individually written (parent folders were).
+    approach: "approve-to-jss-published"
+    workflowDefinition:
+      name: "JSS Development Workflow"
+      path: "/sitecore/system/Workflows/JSS Development Workflow"
+      itemId: "{6C59AE29-D0A1-4B77-9305-0ABAB21D5FE5}"
+    workflowState:
+      name: "Published"
+      path: "/sitecore/system/Workflows/JSS Development Workflow/Published"
+      itemId: "{C55B483C-EA7F-4E76-A066-985F7D9396CA}"
+      final: true
+    itemsUpdatedApprox: 330
+    subtreeCounts:
+      homeIaBiosOfficesServicesCareers: 60
+      insightsHubsAndLeaves: 55
+      taxonomyFoldersAndTags: 93
+      dataFoldersAndDescendants: 63
+      headlessVariantsAndDefinitions: 126
+      presentationOther: 50
+      dictionary: 30
+      settingsAndMedia: 6
+    failed: []
+    verification:
+      checkedAt: "2026-08-22T02:45:00Z"
+      passed:
+        - "Workflow definition + Published (Final) state IDs discovered via MCP path search"
+        - "update_fields_on_item accepted __Workflow + __Workflow state across the full /sitecore/content/pillsbury/blg walk"
+        - "Insights leaves, all taxonomy tags, Data descendants, and Headless Variant children written"
+        - "One typo UUID retried successfully (Location Search MapTopAllCentered)"
+      failed: []
+      pendingManual:
+        - "Confirm __Workflow / __Workflow state in Content Editor (MCP always returns workflow:null)"
+        - "Optional: spot-check Style/Enumeration leaf option items under Presentation/Styles/* and Enumerations/*"
+        - "Publish tree for Edge after CE confirm"
+
+  - name: "blg-bio-listing"
+    kind: "content-update"
+    category: "Lawyers"
+    status: "complete"
+    createdAt: "2026-08-22T02:50:00Z"
+    updatedAt: "2026-08-22T03:00:00Z"
+    siteName: "blg"
+    siteCollection: "pillsbury"
+    notes: >
+      2026-08-22: BLG bio listing already existed under Data/Bio Listings and was
+      already bound on Lawyers + Bios. Confirmed BiosRoot points at BLG
+      Home/Lawyers/Bios (21 remapped lawyers). Updated leftover Pillsbury
+      attorney-directory copy to BLG People / Canadian offices. ComponentQuery
+      already uses generic field() accessors; no rendering change. BiosRoot
+      Droptree Source was already query:$site.
+    react:
+      filePath: "src/components/uiim/lawyers/BioListing.tsx"
+      componentName: "BioListing"
+    contentRoot:
+      path: "/sitecore/content/pillsbury/blg/Home/Lawyers/Bios"
+      itemId: "{B3DFDC46-22E0-4F87-8CC5-2B635AFC2242}"
+    datasourceFolder:
+      path: "/sitecore/content/pillsbury/blg/Data/Bio Listings"
+      itemId: "{B300EEA1-DE47-48DC-AE64-9C27A9DA5B3A}"
+      exampleItem:
+        name: "Lawyer Directory"
+        itemId: "{4CD55390-4F6E-4649-8B97-3CCC9175774C}"
+        biosRoot: "{B3DFDC46-22E0-4F87-8CC5-2B635AFC2242}"
+        title: "Our People"
+    pagePlacement:
+      - pagePath: "/sitecore/content/pillsbury/blg/Home/Lawyers"
+        pageId: "{65827706-FCB4-47BA-9557-C55A8DBB87B2}"
+        instanceId: "{FD3BF647-6D78-4DCA-873E-3E689BC50872}"
+        datasourceId: "{4CD55390-4F6E-4649-8B97-3CCC9175774C}"
+      - pagePath: "/sitecore/content/pillsbury/blg/Home/Lawyers/Bios"
+        pageId: "{B3DFDC46-22E0-4F87-8CC5-2B635AFC2242}"
+        instanceId: "{EFB7992C-429C-4534-BF6C-DF754B8FED07}"
+        datasourceId: "{4CD55390-4F6E-4649-8B97-3CCC9175774C}"
+    verification:
+      checkedAt: "2026-08-22T03:00:00Z"
+      passed:
+        - "Lawyer Directory BiosRoot is BLG Home/Lawyers/Bios"
+        - "Lawyers and Bios pages already bound to BLG Data Lawyer Directory"
+        - "Title/Intro rewritten off leftover attorney/Pillsbury copy"
+        - "BioListing ComponentQuery uses field(name) + BiosRoot LookupField children"
+      failed: []
+      pendingManual:
+        - "Publish Data/Bio Listings + Lawyers/Bios pages for Edge"
+        - "Bio URL slugs still Pillsbury names (MCP cannot rename __Name)"
+
+  - name: "blg-blog-listing"
+    kind: "content-update"
+    category: "Insights"
+    status: "complete"
+    createdAt: "2026-08-22T02:50:00Z"
+    updatedAt: "2026-08-22T03:00:00Z"
+    siteName: "blg"
+    siteCollection: "pillsbury"
+    notes: >
+      2026-08-22: Insights/Blogs page was bound to local leftover
+      Home/Insights/Blogs/Data/BlogListing (Pillsbury intro, Title "Latest New").
+      Rematched headless-main BlogListing to Data/Blog Listings/Insights Blogs.
+      BlogsRoot already pointed at BLG Insights/Blogs. Updated copy on both the
+      shared Data item and the unused local item. Changed shared BlogsRoot
+      Droptree Source from pillsburylaw/Home/Insights to query:$site (matches
+      BiosRoot; keeps pillsburylaw + blg pickers site-aware). ComponentQuery
+      already correct — no rendering rewrite.
+    react:
+      filePath: "src/components/uiim/insights/BlogListing.tsx"
+      componentName: "BlogListing"
+    contentRoot:
+      path: "/sitecore/content/pillsbury/blg/Home/Insights/Blogs"
+      itemId: "{C8263FF3-EF46-4529-992B-C8EB5C57DBC8}"
+    datasourceFolder:
+      path: "/sitecore/content/pillsbury/blg/Data/Blog Listings"
+      itemId: "{F9A4DA77-9EBE-4F02-BE40-D3D7C6BAD8CF}"
+      exampleItem:
+        name: "Insights Blogs"
+        itemId: "{1A77F680-720B-4561-B7CC-0A3653B43489}"
+        blogsRoot: "{C8263FF3-EF46-4529-992B-C8EB5C57DBC8}"
+        title: "Blogs"
+    localDatasourceLeftInPlace:
+      path: "/sitecore/content/pillsbury/blg/Home/Insights/Blogs/Data/BlogListing"
+      itemId: "{DC88E099-ABBC-42E1-AE00-E8AE9029B4B4}"
+      note: "Copy + BlogsRoot updated to BLG; page no longer uses this datasource"
+    pagePlacement:
+      pagePath: "/sitecore/content/pillsbury/blg/Home/Insights/Blogs"
+      pageId: "{C8263FF3-EF46-4529-992B-C8EB5C57DBC8}"
+      placeholder: "headless-main"
+      instanceId: "{F3B3BC0A-552B-4C64-9B96-A347B55576C4}"
+      datasourceId: "{1A77F680-720B-4561-B7CC-0A3653B43489}"
+    blogsRootField:
+      path: "/sitecore/templates/Project/pillsbury/Components/Insights/BlogListing/Data/BlogsRoot"
+      itemId: "{DB3D4528-7FD1-4618-8BE5-32AC3097A4E7}"
+      sourceWas: "/sitecore/content/pillsbury/pillsburylaw/Home/Insights"
+      sourceNow: "query:$site"
+    verification:
+      checkedAt: "2026-08-22T03:00:00Z"
+      passed:
+        - "Insights Blogs BlogsRoot is BLG Home/Insights/Blogs"
+        - "Blogs page rematched from local DC88E099 to Data/Blog Listings/Insights Blogs"
+        - "Pillsbury intro + Latest New title rewritten"
+        - "BlogsRoot Droptree Source is query:$site"
+        - "BlogListing ComponentQuery uses field(name) + BlogsRoot LookupField children"
+      failed: []
+      pendingManual:
+        - "Publish Data/Blog Listings + Insights/Blogs page for Edge"
+        - "Blog hub item names/copy still include leftover Pillsbury blog brands"
+        - "React blog-listing.taxonomy.ts related-lawyer names still Pillsbury (filters only)"

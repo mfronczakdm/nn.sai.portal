@@ -221,6 +221,52 @@ html[data-theme='pillsburylaw'] .hover\:bg-primary-hover:hover {
   color: #ffffff;
 }
 
+/* BLG — Helvetica Neue LT Pro substitute (Inter). Medium headings, sharp navy CTAs. */
+html[data-theme='blg'] {
+  --font-body: var(--font-inter), 'Helvetica Neue', Helvetica, Arial, ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-inter), 'Helvetica Neue', Helvetica, Arial, ui-sans-serif, system-ui, sans-serif;
+  --font-accent: var(--font-inter), 'Helvetica Neue', Helvetica, Arial, ui-sans-serif, system-ui, sans-serif;
+  --font-weight-heading: 500;
+  color: var(--color-foreground);
+  background-color: var(--color-background);
+}
+
+html[data-theme='blg'] body {
+  color: var(--color-foreground);
+  background-color: var(--color-background);
+}
+
+html[data-theme='blg'] :where(h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6) {
+  color: var(--color-primary);
+}
+
+html[data-theme='blg'] .bg-primary :where(h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6),
+html[data-theme='blg'] .bg-dark :where(h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6) {
+  color: var(--color-primary-foreground);
+}
+
+html[data-theme='blg'] .btn.btn-primary {
+  background-color: #002c5f;
+  color: #ffffff;
+  border-radius: 0;
+}
+
+html[data-theme='blg'] .btn.btn-primary:hover {
+  background-color: #002551;
+  color: #ffffff;
+}
+
+html[data-theme='blg'] .bg-primary {
+  background-color: #002c5f;
+  color: #ffffff;
+}
+
+html[data-theme='blg'] .bg-primary:hover,
+html[data-theme='blg'] .hover\:bg-primary-hover:hover {
+  background-color: #002551;
+  color: #ffffff;
+}
+
 /* BUTTONS END */
 
 main {
