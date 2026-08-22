@@ -33,7 +33,7 @@ import { cn } from '@/lib/utils';
 import { NoDataFallback } from '@/utils/NoDataFallback';
 
 import type { BioDetailFields, BioDetailProps } from './bio-detail.props';
-import { resolveBioHeadshotSrc } from './bio-headshots';
+import { resolveBioHeadshotSrc, shouldBypassHeadshotOptimizer } from './bio-headshots';
 import {
   relatedContentBadge,
   resolveBioRelatedContent,
@@ -246,8 +246,7 @@ export const Default: React.FC<BioDetailProps> = (props) => {
   });
   const headshotSrc = headshotResolved.src;
   const headshotAlt = headshotResolved.alt;
-  const bypassOptimizer =
-    headshotSrc.includes('images.unsplash.com') || headshotSrc.includes('sitecoresandbox.cloud');
+  const bypassOptimizer = shouldBypassHeadshotOptimizer(headshotSrc);
   const linkedIn = fields.LinkedIn as LinkField | undefined;
 
   const practiceAreas = resolveTaxonomy(fields.PracticeAreas);
@@ -282,7 +281,7 @@ export const Default: React.FC<BioDetailProps> = (props) => {
                   alt={headshotAlt || fullName || 'Attorney headshot'}
                   fill
                   sizes="176px"
-                  className="object-cover"
+                  className="object-cover object-left"
                   unoptimized={bypassOptimizer}
                 />
               ) : isEditing && fields.Headshot ? (

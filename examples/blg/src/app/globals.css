@@ -227,6 +227,12 @@ html[data-theme='blg'] {
   --font-heading: var(--font-inter), 'Helvetica Neue', Helvetica, Arial, ui-sans-serif, system-ui, sans-serif;
   --font-accent: var(--font-inter), 'Helvetica Neue', Helvetica, Arial, ui-sans-serif, system-ui, sans-serif;
   --font-weight-heading: 500;
+  --insights-mosaic-band: #002c5f;
+  --insights-mosaic-teal: #0a7a7a;
+  --insights-mosaic-navy: #0a2048;
+  --insights-mosaic-maroon: #8f2433;
+  --insights-mosaic-green: #2f5d3a;
+  --insights-mosaic-purple: #5a3d6e;
   color: var(--color-foreground);
   background-color: var(--color-background);
 }

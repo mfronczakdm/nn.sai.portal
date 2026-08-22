@@ -1,0 +1,16 @@
+variantSpecs:
+  - componentName: "MediaCanvas"
+    variantName: "Carousel"
+    baseVariant: "Default"
+    visualDifferences:
+      layout: "Full-bleed viewport hero; centered search overlay; header sits on top of media"
+      spacing: "min-h 100svh, overlay vertically centered, underline + 40px square search control"
+      typography: "Italic serif search prompt ~clamp 1.75rem-3.25rem; white on dark media"
+      background: "Morphing/crossfading Image and Video children; navy overlay + bottom fade to --color-dark"
+      buttons: "White square search button, sharp corners, navy icon"
+      distinctive: "Soft dissolve between slides; prefers-reduced-motion shows first slide only"
+    tailwindClasses:
+      section: "relative isolate h-[100svh] min-h-[32rem] w-full bg-dark overflow-hidden"
+      heading: "font-serif italic text-white text-[clamp(1.75rem,4vw,3.25rem)]"
+      searchLine: "flex-1 border-b border-white bg-transparent"
+      cta: "size-10 bg-white text-[var(--color-primary)]"

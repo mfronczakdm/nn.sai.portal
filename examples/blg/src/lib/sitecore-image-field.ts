@@ -54,3 +54,27 @@ export function extractImageSrc(raw: unknown): string {
 
   return '';
 }
+
+/**
+ * External Image XML often arrives with src only on `editable`.
+ * Copy that URL onto `value.src` so Image/NextImage can render.
+ */
+export function withResolvedImageSrc(
+  raw?: ImageField | JsonWrappedImageField | null
+): ImageField | undefined {
+  if (!raw) return undefined;
+  const field = normalizeImageFieldSrc(unwrapImageField(raw));
+  const src = extractImageSrc(field) || extractImageSrc(raw);
+  if (!field && !src) return undefined;
+  const base = field ?? ({ value: {} } as ImageField);
+  if (!src) return base;
+  const current = (base.value as { src?: string } | undefined)?.src;
+  if (current === src) return base;
+  return {
+    ...base,
+    value: {
+      ...(base.value as object),
+      src,
+    },
+  } as ImageField;
+}

@@ -22,7 +22,7 @@ import type {
   BioListingProps,
   BioListingTaxonomyItem,
 } from './bio-listing.props';
-import { resolveBioHeadshotSrc } from './bio-headshots';
+import { resolveBioHeadshotSrc, shouldBypassHeadshotOptimizer } from './bio-headshots';
 
 /** McKinsey-style hover shared with MultiPromo Default cards. */
 const hoverSurfaceClassName =
@@ -131,8 +131,7 @@ function Headshot({
   alt: string;
   className?: string;
 }) {
-  const bypassOptimizer =
-    src.includes('images.unsplash.com') || src.includes('sitecoresandbox.cloud');
+  const bypassOptimizer = shouldBypassHeadshotOptimizer(src);
 
   return (
     <div
@@ -147,7 +146,7 @@ function Headshot({
           alt={alt || name}
           fill
           sizes="128px"
-          className="object-cover"
+          className="object-cover object-left"
           unoptimized={bypassOptimizer}
         />
       ) : (

@@ -1,5 +1,5 @@
 generatedAt: "2026-03-20T09:00:00Z"
-lastUpdatedAt: "2026-08-22T03:00:00Z"
+lastUpdatedAt: "2026-08-22T04:15:00Z"
 lastUpdatedBy: "cursor-agent"
 
 project:
@@ -5117,7 +5117,7 @@ ia:
       remapped. Emails: published when scraped (MAbdelsayed@blg.com, DAlberga@blg.com,
       MakAnderson@blg.com, farnone@blg.com, SBarnes@blg.com, SBird@blg.com, JBogle@blg.com);
       otherwise first-initial+lastname@blg.com convention as used on blg.com. Headshots
-      left as existing DAM/Unsplash (Image field requires media; no new DAM upload).
+      updated in blg-bio-headshots to live blg.com media URLs.
       Bios Office droplink uses new Canadian office IDs.
     source: "https://www.blg.com/en/people"
     parent:
@@ -5153,8 +5153,7 @@ ia:
       failed: []
       pendingManual:
         - "Item URL names still Pillsbury lawyer slugs (MCP cannot rename __Name) — rename in Content Editor if desired"
-        - "Headshot Image field left as existing DAM/Unsplash (no new media)"
-        - "Publish Bios tree for Edge"
+        - "Publish Bios tree for Edge after blg-bio-headshots"
 
   - name: "blg-home-ia-remap"
     kind: "content-update"
@@ -5436,3 +5435,312 @@ ia:
         - "Publish Data/Blog Listings + Insights/Blogs page for Edge"
         - "Blog hub item names/copy still include leftover Pillsbury blog brands"
         - "React blog-listing.taxonomy.ts related-lawyer names still Pillsbury (filters only)"
+
+  - name: "blg-bio-headshots"
+    kind: "content-update"
+    category: "Lawyers"
+    status: "complete"
+    createdAt: "2026-08-22T02:25:00Z"
+    updatedAt: "2026-08-22T02:25:00Z"
+    siteName: "blg"
+    notes: >
+      2026-08-22: Replaced leftover Pillsbury DAM/Unsplash Headshot fields on all 21
+      BLG bios with live portraits from https://www.blg.com/en/people. Edge GraphQL
+      still may omit external Image src, so src/components/uiim/lawyers/bio-headshots.ts
+      maps the same URLs by leftover item slug. www.blg.com added to next.config
+      remotePatterns and the custom image loader bypass list. Listing/detail use
+      object-left because BLG media is a wide 3200x1082 crop with the face on the left.
+    source: "https://www.blg.com/en/people"
+    parent:
+      path: "/sitecore/content/pillsbury/blg/Home/Lawyers/Bios"
+      itemId: "{B3DFDC46-22E0-4F87-8CC5-2B635AFC2242}"
+    fieldFormat: '<image src="https://www.blg.com/-/media/..." alt="..." width="800" height="800" />'
+    react:
+      filePath: "src/components/uiim/lawyers/bio-headshots.ts"
+    fallbacks:
+      - { name: "Line Abecassis", itemName: "Andrew-V-Alfano", reason: "blg.com uses official female silhouette (no published portrait)" }
+      - { name: "Camden Amos", itemName: "Semma-G-Arzapalo", reason: "no published /-/media/bios portrait found; used official male silhouette" }
+    verification:
+      checkedAt: "2026-08-22T02:25:00Z"
+      passed:
+        - "21 Bio Headshot fields updated via MCP to www.blg.com media URLs"
+        - "bio-headshots.ts fallback map matches Sitecore item slugs"
+        - "next.config + sitecore-image-loader allow/bypass www.blg.com"
+      failed: []
+      pendingManual:
+        - "Publish Home/Lawyers/Bios for Edge"
+        - "Optional: replace Line Abecassis / Camden Amos silhouettes if BLG later publishes portraits"
+
+  - name: "MediaCanvas"
+    kind: "list"
+    category: "Media"
+    status: "complete"
+    createdAt: "2026-08-22T02:35:00Z"
+    updatedAt: "2026-08-22T03:45:00Z"
+    siteName: "blg"
+    siteCollection: "pillsbury"
+    notes: >
+      2026-08-22: Copied Cooley MediaCanvas list model into BLG (pillsbury project
+      roots, blg site content). Added Carousel variant matching blg.com homepage
+      hero (full-bleed morphing media + italic search overlay). Default keeps
+      Cooley collage. Home headless-main placement before MultiPromo; FieldNames
+      is Carousel. Shared datasource Data/MediaCanvas/Homepage Hero has 3 children
+      (2 images + 1 video). Local leftover Home/Data/MediaCanvas has no children.
+      Available Renderings silent-read — do not replace; append rendering GUID in CE.
+    react:
+      filePath: "src/components/uiim/media/MediaCanvas.tsx"
+      componentMapKey: "MediaCanvas"
+      propsShape: "graphql-datasource"
+      variants:
+        - "Default"
+        - "Carousel"
+    templates:
+      parent:
+        name: "MediaCanvas"
+        path: "/sitecore/templates/Project/pillsbury/Components/Media/MediaCanvas"
+        itemId: "{E25EF1FB-E92B-46A1-BAD9-F40EC9F84AC9}"
+        sectionName: "Data"
+        fields:
+          - { name: "Title", type: "Single-Line Text", itemId: "{F25E8FCC-552E-421F-9143-A1C2F5F5C5E4}" }
+          - { name: "Subtitle", type: "Single-Line Text", itemId: "{50A459D0-2C62-421C-A99A-2D0A1EBA50DA}" }
+          - { name: "Cta", type: "General Link", itemId: "{1E375238-C1C9-4C9D-A9FD-AD2315BA3E2D}" }
+          - { name: "PauseVideoLabel", type: "Single-Line Text", itemId: "{A9AC2E79-3AF4-459C-A235-014C5271144E}" }
+          - { name: "PlayVideoLabel", type: "Single-Line Text", itemId: "{CDF59735-2A15-4B7F-A03B-B830DC75EAA4}" }
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{7A5762B5-4278-4E81-A44C-0E2D7851365D}"
+          linked: true
+          masters: ["MediaCanvasItem"]
+      child:
+        name: "MediaCanvasItem"
+        path: "/sitecore/templates/Project/pillsbury/Components/Media/MediaCanvasItem"
+        itemId: "{2F26CC64-F6C8-45CC-8702-7A874677D94F}"
+        sectionName: "Data"
+        fields:
+          - { name: "Image", type: "Image", itemId: "{668CDF1F-C2BD-4CF2-9940-F3D23436FC09}" }
+          - { name: "Video", type: "General Link", itemId: "{DCB8478F-DF9D-4697-BDD2-9B2784A60DFF}" }
+          - { name: "Tagline", type: "Single-Line Text", itemId: "{8EEB4761-71F9-48C2-9837-B03256954BA6}" }
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{54F6A358-78DF-4931-8892-703E891AA4D3}"
+          linked: true
+      folder:
+        name: "MediaCanvas Folder"
+        path: "/sitecore/templates/Project/pillsbury/Folders/MediaCanvas Folder"
+        itemId: "{56748C12-DCD2-418A-B638-830B9405095D}"
+        standardValues:
+          itemId: "{86B2A166-950C-448B-8F71-4A2520C4165A}"
+          linked: true
+          masters: ["MediaCanvas"]
+      renderingParams:
+        name: "MediaCanvas"
+        path: "/sitecore/templates/Project/pillsbury/Rendering Parameters/Media/MediaCanvas"
+        itemId: "{CAAFCE44-7C54-429D-9530-EBE0FD009E78}"
+        baseTemplatesSet: true
+    datasourceFolder:
+      name: "MediaCanvas"
+      path: "/sitecore/content/pillsbury/blg/Data/MediaCanvas"
+      itemId: "{29C5D42C-588F-4111-A269-A6F9017E657F}"
+      insertOptionsSet: true
+      exampleItem:
+        name: "Homepage Hero"
+        itemId: "{9F15F9FB-313D-4032-A286-B8FA0D4CBEA1}"
+      exampleChildren:
+        - { name: "Logistics Hub", itemId: "{F56581DB-8597-4763-8689-17B3D8FA3794}" }
+        - { name: "City Night", itemId: "{45F7B624-B161-4710-90CD-57AA39F52F5F}" }
+        - { name: "Port Video", itemId: "{7C4CC74F-C782-407F-933C-380474424A12}" }
+    rendering:
+      name: "MediaCanvas"
+      path: "/sitecore/layout/Renderings/Project/pillsbury/Media/MediaCanvas"
+      itemId: "{882C4825-1A14-49DF-9734-BBA9B21DF8DB}"
+      componentName: "MediaCanvas"
+      datasourceTemplatePath: "/sitecore/templates/Project/pillsbury/Components/Media/MediaCanvas"
+      datasourceLocationQuery: "query:$site/*[@@name='Data']/*[@@templatename='MediaCanvas Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='MediaCanvas Folder']"
+      parametersTemplateId: "{CAAFCE44-7C54-429D-9530-EBE0FD009E78}"
+      useComponentQuery: true
+      addFieldEditorButton: "1"
+      registeredInAvailableRenderings: false
+    variants:
+      containerPath: "/sitecore/content/pillsbury/blg/Presentation/Headless Variants/MediaCanvas"
+      containerId: "{8FB97F8E-2F28-4144-9A8F-BC433BC308F7}"
+      definitions:
+        - { name: "Default", itemId: "{DB6EEB58-BBB0-4522-83FB-A58DE85AA05B}" }
+        - { name: "Carousel", itemId: "{BB54E48A-AB75-4D19-8341-44D3BACD8F42}" }
+    pagePlacement:
+      pagePath: "/sitecore/content/pillsbury/blg/Home"
+      pageId: "{7F4BFB88-FF0D-4935-BFF8-0B62B8677679}"
+      placeholder: "headless-main"
+      instanceId: "{61822578-02B6-46E4-BF5F-01703DC3D38D}"
+      datasourceId: "{9F15F9FB-313D-4032-A286-B8FA0D4CBEA1}"
+      fieldNames: "{BB54E48A-AB75-4D19-8341-44D3BACD8F42}"
+    localDatasourceLeftInPlace:
+      path: "/sitecore/content/pillsbury/blg/Home/Data/MediaCanvas"
+      itemId: "{C3BEB69C-B7B2-42FF-82A0-D433ED2A7DB9}"
+      note: "Auto-created empty local DS; page rematched to Data/MediaCanvas/Homepage Hero"
+    lookupsAdded:
+      - { path: "/sitecore/content/pillsbury/blg/Data", itemId: "{30F7F522-5982-4993-A8B0-6E00BAEB8715}" }
+      - { path: "/sitecore/templates/Project/pillsbury/Components", itemId: "{C9703877-CE6A-469E-8A20-E8C1EFB4B66E}" }
+      - { path: "/sitecore/templates/Project/pillsbury/Components/Media", itemId: "{65E3941B-3098-4127-B21A-49ABABDF9889}" }
+      - { path: "/sitecore/templates/Project/pillsbury/Folders", itemId: "{DC4FB79A-76CC-4373-AD5A-85FE438AE8D0}" }
+      - { path: "/sitecore/templates/Project/pillsbury/Rendering Parameters", itemId: "{E18F7F68-009D-4DBA-83D2-479BCEC56CD7}" }
+      - { path: "/sitecore/templates/Project/pillsbury/Rendering Parameters/Media", itemId: "{EADEBDC6-1E4A-48A5-B348-93BBACE44A78}" }
+      - { path: "/sitecore/layout/Renderings/Project/pillsbury", itemId: "{3C99DC01-C0B5-44AA-9908-D49BE3A042FD}" }
+      - { path: "/sitecore/layout/Renderings/Project/pillsbury/Media", itemId: "{CEA2DCD2-E7D8-4476-AFD8-DAD2FD1BBFD1}" }
+      - { path: "/sitecore/content/pillsbury/blg/Presentation/Headless Variants", itemId: "{43A6DC27-F057-4762-A71B-3CF8C1053410}" }
+      - { path: "/sitecore/content/pillsbury/blg/Presentation/Available Renderings/Page Content", itemId: "{BD358A28-674C-4A4C-A359-5A1E2611A8D2}" }
+    verification:
+      checkedAt: "2026-08-22T03:45:00Z"
+      passed:
+        - "Parent/child templates with Standard + Grid Parameters"
+        - "Fields created with correct Type (Title/Subtitle/labels Single-Line Text, Cta/Video General Link, Image Image)"
+        - "Standard Values created (SV link silent-write)"
+        - "Rendering Parameters template created with 4 base templates"
+        - "JSON Rendering componentName + Parameters Template + ComponentQuery verified"
+        - "Example parent + 3 children under Data/MediaCanvas"
+        - "Default + Carousel Headless Variants created and verified"
+        - "React MediaCanvas.tsx created with Default + Carousel named exports"
+        - "Component map generated (MediaCanvas registered)"
+        - "Placed on Home headless-main before MultiPromo with Carousel FieldNames"
+        - "Home rematched to Data/MediaCanvas/Homepage Hero"
+      failed: []
+      pendingManual:
+        - "Append {882C4825-1A14-49DF-9734-BBA9B21DF8DB} to Available Renderings/Page Content or Media (silent-read; do not replace)"
+        - "Verify Datasource Template/Location in CE (silent-write)"
+        - "Verify __Masters on folder SV and Data folder instance (silent-write)"
+        - "Verify __Standard values links on templates (silent-write)"
+        - "Publish rendering, templates, Home, and Data/MediaCanvas for Edge"
+        - "_HorizonDatasourceGrouping not applied — same as Cooley instance"
+
+  - name: "InsightsMosaic"
+    kind: "list"
+    category: "Insights"
+    status: "complete"
+    createdAt: "2026-08-22T03:50:00Z"
+    updatedAt: "2026-08-22T04:15:00Z"
+    siteName: "blg"
+    siteCollection: "pillsbury"
+    notes: >
+      2026-08-22: New list component for BLG homepage Latest Insights numbered
+      masonry/bento grid. MultiPromo was rejected: SimplePromo children only have
+      heading/image/link/description; no per-tile accent, tag, number, image
+      placement, or mixed tall/wide spans. Adding those fields would pollute
+      existing MultiPromo variants (Default/SingleColumn/Stacked carousel).
+      React at src/components/uiim/insights/InsightsMosaic.tsx. Sample datasource
+      uses live BLG titles/links; tile photos are Unsplash stand-ins (blg.com
+      media not scraped). Placed on Home headless-main after MediaCanvas, before
+      leftover MultiPromo. Did not touch mediaCanvas files.
+    react:
+      filePath: "src/components/uiim/insights/InsightsMosaic.tsx"
+      componentName: "InsightsMosaic"
+      componentMapKey: "InsightsMosaic"
+      propsShape: "graphql-datasource"
+      variants:
+        - "Default"
+        - "LatestInsights"
+    templates:
+      parent:
+        name: "InsightsMosaic"
+        path: "/sitecore/templates/Project/pillsbury/Components/Insights/InsightsMosaic"
+        itemId: "{9FBF9B82-4EF9-4932-B7AA-80D71FFD9A81}"
+        sectionName: "Data"
+        fields:
+          - { name: "SectionTitle", type: "Single-Line Text", itemId: "{EF25ABD4-B6FA-4B25-B00D-FDC5076E24B7}" }
+          - { name: "ViewAllLink", type: "General Link", itemId: "{CCD5F1BD-B6F8-4874-B06E-555B3590A0CF}" }
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{3567B0DA-C52D-4F19-B71C-38140BCFC613}"
+          linked: true
+      child:
+        name: "InsightsMosaicItem"
+        path: "/sitecore/templates/Project/pillsbury/Components/Insights/InsightsMosaicItem"
+        itemId: "{9BC41C3C-113D-412C-A039-E0057F014F78}"
+        sectionName: "Data"
+        fields:
+          - { name: "TileTitle", type: "Single-Line Text", itemId: "{F579C2E4-2112-41CB-AF38-200169948BB0}" }
+          - { name: "TileImage", type: "Image", itemId: "{9F685B28-89BC-4DF5-A949-45B5B2984E18}" }
+          - { name: "TileLink", type: "General Link", itemId: "{1CAD9CAC-AF51-491D-975E-99D306EE1473}" }
+          - { name: "TileTag", type: "Single-Line Text", itemId: "{6C90E59C-C23E-4F34-ADDC-F4FABDA525B5}" }
+          - { name: "TileNumber", type: "Single-Line Text", itemId: "{B1DFF298-C49D-4CA5-9A5D-3EF32D0C6DBF}" }
+          - { name: "AccentColor", type: "Single-Line Text", itemId: "{679BD5E8-B69F-479A-917B-58C2F4F5A26C}" }
+          - { name: "ImagePlacement", type: "Single-Line Text", itemId: "{F549C921-CFBC-429F-9386-680A401BADB0}" }
+          - { name: "TileSpan", type: "Single-Line Text", itemId: "{0C92785D-2513-44C6-886F-15EE46B49482}" }
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{0E51E2B6-8765-4BF4-818A-A3839CFAE667}"
+          linked: true
+      folder:
+        name: "Insights Mosaic Folder"
+        path: "/sitecore/templates/Project/pillsbury/Folders/Insights Mosaic Folder"
+        itemId: "{16424A30-A08D-4229-9689-7BAD7D9D5467}"
+        standardValues:
+          itemId: "{E61E3C55-EC1C-4D2B-8526-84C54A2A317E}"
+          linked: true
+      renderingParams:
+        name: "InsightsMosaic"
+        path: "/sitecore/templates/Project/pillsbury/Rendering Parameters/Insights/InsightsMosaic"
+        itemId: "{3A68F371-3438-44E8-A89C-80F39D90C274}"
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{9E0FFD5D-634C-40E6-AB07-682DCD27FECD}"
+    rendering:
+      name: "InsightsMosaic"
+      path: "/sitecore/layout/Renderings/Project/pillsbury/Insights/InsightsMosaic"
+      itemId: "{CFD708F4-0BAC-4E8E-9BAC-90C52DA27DC7}"
+      componentName: "InsightsMosaic"
+      datasourceTemplatePath: "/sitecore/templates/Project/pillsbury/Components/Insights/InsightsMosaic"
+      datasourceLocationQuery: "query:$site/*[@@name='Data']/*[@@templatename='Insights Mosaic Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='Insights Mosaic Folder']"
+      parametersTemplateId: "{3A68F371-3438-44E8-A89C-80F39D90C274}"
+      addFieldEditorButton: "1"
+      useComponentQuery: true
+      registeredInAvailableRenderings: false
+    datasourceFolder:
+      name: "Insights Mosaics"
+      path: "/sitecore/content/pillsbury/blg/Data/Insights Mosaics"
+      itemId: "{23AC03A5-C0B9-4F30-A158-B1EEC9EA886A}"
+      insertOptionsSet: true
+      exampleItem:
+        name: "Latest Insights"
+        itemId: "{4B6A0B73-C27A-4FC9-8664-8EF6AD49C9C1}"
+        children:
+          - { name: "01 Doing Business in Canada", itemId: "{6F2EC50C-0E33-46B9-9823-CAE0F0D69BD2}" }
+          - { name: "02 Tariffs and Trade", itemId: "{C4C8D4AE-588C-4669-9DF9-4915836F74BC}" }
+          - { name: "03 Bill C-31", itemId: "{7C8363BE-F040-419E-BAD3-46CE9ABEC294}" }
+          - { name: "04 GenAI Considerations", itemId: "{7C2C571A-8D1A-43B9-BCE8-97FE61464142}" }
+          - { name: "05 Construction Act", itemId: "{724D7E50-3806-428A-8ACF-17875BD77E4B}" }
+          - { name: "06 Smart Glasses", itemId: "{95AE7EDF-6729-409F-92F7-44B58D5B92ED}" }
+    variants:
+      containerPath: "/sitecore/content/pillsbury/blg/Presentation/Headless Variants/InsightsMosaic"
+      containerId: "{6B63EDFD-528E-4D4C-9396-CFBC85D14E37}"
+      definitions:
+        - { name: "Default", itemId: "{AC03CABF-2A1C-488C-A2E8-9C6BAE1075C6}" }
+        - { name: "LatestInsights", itemId: "{0592AFBC-D695-49E1-8054-548AB4712E0A}" }
+    pagePlacement:
+      pagePath: "/sitecore/content/pillsbury/blg/Home"
+      pageId: "{7F4BFB88-FF0D-4935-BFF8-0B62B8677679}"
+      placeholder: "headless-main"
+      instanceId: "{40AB39AD-923C-45A8-A773-5546EDED844D}"
+      datasourceId: "{4B6A0B73-C27A-4FC9-8664-8EF6AD49C9C1}"
+      fieldNames: "{AC03CABF-2A1C-488C-A2E8-9C6BAE1075C6}"
+      insertAfter: "MediaCanvas {61822578-02B6-46E4-BF5F-01703DC3D38D}"
+    verification:
+      checkedAt: "2026-08-22T04:15:00Z"
+      passed:
+        - "Parent/child templates with Standard + Grid Parameters"
+        - "Fields created with correct Type"
+        - "Standard Values created (SV link silent-write)"
+        - "Rendering Parameters template created with 4 base templates"
+        - "JSON Rendering componentName + Parameters Template + ComponentQuery verified"
+        - "Example parent + 6 children under Data/Insights Mosaics/Latest Insights"
+        - "Default + LatestInsights Headless Variants created"
+        - "React InsightsMosaic.tsx created with matching named exports"
+        - "Placed on Home headless-main after MediaCanvas; datasource rematched to sample"
+      failed: []
+      pendingManual:
+        - "Append {CFD708F4-0BAC-4E8E-9BAC-90C52DA27DC7} to Available Renderings/Page Content (silent-read; do not replace)"
+        - "Verify Datasource Template/Location in CE (silent-write)"
+        - "Verify __Masters on folder SV, folder instance, and parent SV (silent-write)"
+        - "Verify __Standard values links on templates (silent-write)"
+        - "Publish rendering, templates, Home, and Data/Insights Mosaics for Edge"
+        - "_HorizonDatasourceGrouping not applied — same as BlogListing on this project"
+        - "Optional: replace Unsplash tile images with live blg.com /-/media URLs"
+        - "Empty local Home/Data/Latest_Insights leftover from add_component_on_page can be deleted"

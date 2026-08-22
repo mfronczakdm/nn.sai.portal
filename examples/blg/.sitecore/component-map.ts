@@ -10,6 +10,7 @@ import * as verticalimageaccordionprops from 'src/components/vertical-image-acco
 import * as VariantContent from 'src/components/variant-content/VariantContent';
 import * as variantcontentprops from 'src/components/variant-content/variant-content.props';
 import * as variantcontentfields from 'src/components/variant-content/variant-content.fields';
+import * as MediaCanvas from 'src/components/uiim/media/MediaCanvas';
 import * as CareerListing from 'src/components/uiim/lawyers/CareerListing';
 import * as careerlistingprops from 'src/components/uiim/lawyers/career-listing.props';
 import * as BioListing from 'src/components/uiim/lawyers/BioListing';
@@ -296,6 +297,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['vertical-image-accordion', { ...verticalimageaccordionprops }],
   ['VariantContent', { ...VariantContent, componentType: 'client' }],
   ['variant-content', { ...variantcontentprops, ...variantcontentfields }],
+  ['MediaCanvas', { ...MediaCanvas, componentType: 'client' }],
   ['CareerListing', { ...CareerListing, componentType: 'client' }],
   ['career-listing', { ...careerlistingprops }],
   ['BioListing', { ...BioListing, componentType: 'client' }],

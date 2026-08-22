@@ -1,0 +1,83 @@
+project:
+  reactComponentRoot: "src/components/uiim"
+  shadcnImportBase: "@/components/ui"
+  componentMapPath: ".sitecore/component-map.ts"
+  sitecoreJssPackage: "@sitecore-content-sdk/nextjs"
+  usesTailwind: true
+  usesShadcn: true
+
+siteCollection: "pillsbury"
+siteName: "blg"
+category: "Media"
+
+component:
+  namePascal: "MediaCanvas"
+  nameKebab: "media-canvas"
+  kind: "list"
+  filePath: "src/components/uiim/media/MediaCanvas.tsx"
+  componentMapKey: "MediaCanvas"
+  componentMapImportAlias: "MediaCanvas"
+
+design:
+  references:
+    - "https://www.blg.com/en homepage hero screenshot"
+  extractedLayout:
+    summary: "Full-bleed morphing media hero with centered italic search overlay"
+    visibleElements:
+      - "Full-bleed night aerial media"
+      - "Italic serif search prompt"
+      - "Thin underline + square search button"
+      - "Navy fade at bottom"
+    inferredFields:
+      - "Title"
+      - "Subtitle"
+      - "Cta"
+      - "Image"
+      - "Video"
+      - "Tagline"
+    repeatedItems: true
+    likelyVariantNames:
+      - "Default"
+      - "Carousel"
+  assumptions:
+    - "Copied Cooley MediaCanvas list model (parent + MediaCanvasItem children)"
+    - "Carousel is the BLG homepage visual; Default keeps Cooley collage"
+    - "Search overlay uses Title + Cta; children supply Image and/or Video"
+
+templates:
+  parent:
+    create: true
+    path: "/sitecore/templates/Project/pillsbury/Components/Media/MediaCanvas"
+    name: "MediaCanvas"
+    sectionName: "Data"
+    fields:
+      - { name: "Title", type: "Single-Line Text" }
+      - { name: "Subtitle", type: "Single-Line Text" }
+      - { name: "Cta", type: "General Link" }
+      - { name: "PauseVideoLabel", type: "Single-Line Text" }
+      - { name: "PlayVideoLabel", type: "Single-Line Text" }
+  child:
+    create: true
+    path: "/sitecore/templates/Project/pillsbury/Components/Media/MediaCanvasItem"
+    name: "MediaCanvasItem"
+    sectionName: "Data"
+    fields:
+      - { name: "Image", type: "Image" }
+      - { name: "Video", type: "General Link" }
+      - { name: "Tagline", type: "Single-Line Text" }
+  folder:
+    create: true
+    name: "MediaCanvas Folder"
+    path: "/sitecore/templates/Project/pillsbury/Folders/MediaCanvas Folder"
+
+rendering:
+  datasourceRequired: true
+  useComponentQuery: true
+  name: "MediaCanvas"
+  path: "/sitecore/layout/Renderings/Project/pillsbury/Media/MediaCanvas"
+
+react:
+  propsShape: "graphql-datasource"
+  variants:
+    - "Default"
+    - "Carousel"
