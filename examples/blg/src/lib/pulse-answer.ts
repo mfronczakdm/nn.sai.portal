@@ -41,7 +41,7 @@ function isCareerSource(source: PulseSource): boolean {
 
 /**
  * Build a demoworthy, citation-backed answer from retrieved sources only.
- * Prefers lawyer bios for Pillsbury visitor demos; surfaces webinars and related
+ * Prefers lawyer bios for BLG visitor demos; surfaces webinars and related
  * learning assets when the playbook includes them. Career intents use openings-first framing.
  */
 export function composePulseAnswer(
@@ -54,7 +54,7 @@ export function composePulseAnswer(
   if (!sources.length) {
     return {
       answer:
-        `I searched indexed Pillsbury content for “${question.trim()}” and didn’t find a strong match. ` +
+        `I searched indexed BLG content for “${question.trim()}” and didn’t find a strong match. ` +
         `Try describing the situation (industry, geography, or risk), or open site search for a broader look.`,
       sources: [],
       stateCallout: null,
@@ -167,9 +167,9 @@ function composeCareerAnswer(
     (s) =>
       isCareerSource(s) &&
       !/how to apply/i.test(s.title) &&
-      !/^careers at pillsbury$/i.test(s.title.trim())
+      !/^careers at blg$/i.test(s.title.trim())
   );
-  const hub = sources.find((s) => /^careers at pillsbury$/i.test(s.title.trim()));
+  const hub = sources.find((s) => /^careers at blg$/i.test(s.title.trim()));
   const howToApply = sources.find((s) => /how to apply/i.test(s.title));
   const people = sources.filter((s) => s.type === 'people-and-teams');
   const primary = openings[0] || hub || sources[0];

@@ -171,7 +171,12 @@ function MediaTile({
             className="pointer-events-auto relative z-10 h-full w-full object-cover"
           />
         ) : (
-          <ContentSdkImage field={imageField} className="h-full w-full object-cover" />
+          <ContentSdkImage
+            field={imageField}
+            fill
+            sizes="20vw"
+            className="object-cover"
+          />
         )
       ) : null}
       {(tagline || isEditing) && (
@@ -232,7 +237,12 @@ function MediaTileStacked({
             className="pointer-events-auto relative z-10 h-full w-full object-cover"
           />
         ) : (
-          <ContentSdkImage field={imageField} className="h-full w-full object-cover" />
+          <ContentSdkImage
+            field={imageField}
+            fill
+            sizes="(max-width: 768px) 50vw, 20vw"
+            className="object-cover"
+          />
         )
       ) : null}
       {(tagline || isEditing) && (
@@ -374,7 +384,12 @@ function CarouselSlide({
         isEditing ? (
           <SitecoreImage field={imageField} className="absolute inset-0 h-full w-full object-cover" />
         ) : (
-          <ContentSdkImage field={imageField} className="absolute inset-0 h-full w-full object-cover" />
+          <ContentSdkImage
+            field={imageField}
+            fill
+            sizes="100vw"
+            className="object-cover"
+          />
         )
       ) : (
         <div className="bg-dark absolute inset-0 h-full w-full" />

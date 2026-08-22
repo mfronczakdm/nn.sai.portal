@@ -1,5 +1,5 @@
 generatedAt: "2026-03-20T09:00:00Z"
-lastUpdatedAt: "2026-08-22T04:15:00Z"
+lastUpdatedAt: "2026-08-22T12:40:00Z"
 lastUpdatedBy: "cursor-agent"
 
 project:
@@ -5616,7 +5616,7 @@ ia:
     category: "Insights"
     status: "complete"
     createdAt: "2026-08-22T03:50:00Z"
-    updatedAt: "2026-08-22T04:15:00Z"
+    updatedAt: "2026-08-22T12:10:00Z"
     siteName: "blg"
     siteCollection: "pillsbury"
     notes: >
@@ -5629,6 +5629,12 @@ ia:
       uses live BLG titles/links; tile photos are Unsplash stand-ins (blg.com
       media not scraped). Placed on Home headless-main after MediaCanvas, before
       leftover MultiPromo. Did not touch mediaCanvas files.
+      2026-08-22T12:10Z: Pages editor localhost showed MissingComponent because
+      (1) .sitecore/component-map.ts was stale (last generated before the TSX
+      existed) and (2) InsightsMosaic lacked 'use client', so it was omitted from
+      component-map.client.ts that Providers.tsx uses. Sitecore ComponentName was
+      already InsightsMosaic. Added 'use client' and regenerated the map. No
+      Sitecore field changes.
     react:
       filePath: "src/components/uiim/insights/InsightsMosaic.tsx"
       componentName: "InsightsMosaic"
@@ -5734,6 +5740,7 @@ ia:
         - "Default + LatestInsights Headless Variants created"
         - "React InsightsMosaic.tsx created with matching named exports"
         - "Placed on Home headless-main after MediaCanvas; datasource rematched to sample"
+        - "Added use client; generate-map registered InsightsMosaic in component-map and component-map.client"
       failed: []
       pendingManual:
         - "Append {CFD708F4-0BAC-4E8E-9BAC-90C52DA27DC7} to Available Renderings/Page Content (silent-read; do not replace)"
@@ -5744,3 +5751,47 @@ ia:
         - "_HorizonDatasourceGrouping not applied — same as BlogListing on this project"
         - "Optional: replace Unsplash tile images with live blg.com /-/media URLs"
         - "Empty local Home/Data/Latest_Insights leftover from add_component_on_page can be deleted"
+
+  - name: "blg-search-pulse-content-remap"
+    kind: "content-update"
+    category: "Search"
+    status: "complete"
+    createdAt: "2026-08-22T12:30:00Z"
+    updatedAt: "2026-08-22T12:40:00Z"
+    siteName: "blg"
+    notes: >
+      2026-08-22: Local SearchResults catalog + Pulse playbook remapped from leftover
+      Pillsbury / Saudi / US-office demo copy to BLG Canadian content. No Sitecore
+      items written — Pulse/Search use local catalogs first; leftover Insight item
+      slugs kept as hrefs because MCP cannot rename __Name. DEFAULT_HOME_PATH now
+      /sitecore/content/pillsbury/blg/Home. Related-lawyer names in
+      blog-listing.taxonomy.ts and bio-related-content.ts remapped to BLG bios.
+    siteHomePath: "/sitecore/content/pillsbury/blg/Home"
+    filesUpdated:
+      - "src/components/search-results/data.ts"
+      - "src/components/search-results/SearchResults.tsx"
+      - "src/lib/pulse-demo-playbook.ts"
+      - "src/lib/pulse-retrieve.ts"
+      - "src/lib/pulse-answer.ts"
+      - "src/components/uiim/insights/blog-listing.taxonomy.ts"
+      - "src/components/uiim/lawyers/bio-related-content.ts"
+    catalogItemCount: 63
+    pulseIntents:
+      - "careers-find-opening"
+      - "genai-canadian-issuer"
+      - "distressed-portfolio-company"
+      - "canada-tariffs-trade"
+      - "esg-indigenous-infrastructure"
+      - "construction-act-dispute"
+    verification:
+      checkedAt: "2026-08-22T12:40:00Z"
+      passed:
+        - "Search catalog titles/offices/practices remapped to BLG; hrefs keep leftover slugs"
+        - "Pulse playbook paths point at /sitecore/content/pillsbury/blg/Home"
+        - "pulse-retrieve DEFAULT_HOME_PATH is BLG Home"
+        - "No user-facing Pillsbury / NY / DC / Saudi copy in SearchResults or Pulse playbook titles"
+      failed: []
+      pendingManual:
+        - "Insight/career URL slugs still Pillsbury/Saudi/NY/DC names — rename in Content Editor if desired"
+        - "Some Insights/Blogs Detail fields in Sitecore still say Pillsbury (BlogListing live fetch)"
+        - "Unused SearchResults copy.tsx still has older demo taxonomy"

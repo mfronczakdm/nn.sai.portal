@@ -1,11 +1,15 @@
+'use client';
+
 import type React from 'react';
 import {
   Field,
+  Image as SitecoreImage,
   ImageField,
   Link as ContentSdkLink,
   LinkField,
   NextImage as ContentSdkImage,
   Text,
+  useSitecore,
 } from '@sitecore-content-sdk/nextjs';
 import { FileText } from 'lucide-react';
 
@@ -158,12 +162,20 @@ function InsightsMosaicTile({
           isVertical ? 'h-1/2 w-full' : 'h-full w-1/2'
         )}
       >
-        {showImage && (
-          <ContentSdkImage
-            field={imageField}
-            className="absolute inset-0 h-full w-full object-cover"
-          />
-        )}
+        {showImage &&
+          (isEditing ? (
+            <SitecoreImage
+              field={imageField}
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+          ) : (
+            <ContentSdkImage
+              field={imageField}
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover"
+            />
+          ))}
         <span
           aria-hidden="true"
           className={cn(
@@ -218,9 +230,12 @@ function InsightsMosaicTile({
 function InsightsMosaicView({
   fields,
   params,
-  page,
+  isPageEditing,
 }: InsightsMosaicProps): React.JSX.Element {
-  const isEditing = Boolean(page?.mode?.isEditing);
+  const { page } = useSitecore();
+  const isEditing = Boolean(
+    isPageEditing || page?.mode?.isEditing || page?.mode?.isDesignLibrary
+  );
   const datasource = fields?.data?.datasource;
   const items = datasource?.children?.results ?? [];
   const title = fieldString(datasource?.sectionTitle);
@@ -286,10 +301,12 @@ function InsightsMosaicView({
 
 /* Default — BLG Latest Insights numbered masonry / bento grid */
 export const Default: React.FC<InsightsMosaicProps> = (props) => {
+  const { page } = useSitecore();
+  const isPageEditing = Boolean(page?.mode?.isEditing || page?.mode?.isDesignLibrary);
   if (!props.fields?.data?.datasource) {
     return <InsightsMosaicEmpty />;
   }
-  return <InsightsMosaicView {...props} />;
+  return <InsightsMosaicView {...props} isPageEditing={isPageEditing} />;
 };
 
 /* LatestInsights — Pages-facing alias of the screenshot layout */

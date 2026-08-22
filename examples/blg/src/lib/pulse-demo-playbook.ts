@@ -1,17 +1,20 @@
 import type { PulseSource, PulseStateCode } from '@/lib/pulse-types';
 
 /**
- * Curated Pulse demo intents for the Pillsbury Law visitor demo.
+ * Curated Pulse demo intents for the BLG (Borden Ladner Gervais) visitor demo.
  * These scenarios are intentionally hard to solve with keyword search alone —
  * they need multi-criteria matching (practice + industry + geography + situation).
+ *
+ * Sitecore paths are under /sitecore/content/pillsbury/blg/Home.
+ * Public hrefs keep leftover item slugs (MCP cannot rename __Name).
  */
 
 export type PulseDemoIntentId =
-  | 'japan-us-tech-acquisition'
+  | 'genai-canadian-issuer'
   | 'distressed-portfolio-company'
-  | 'saudi-expansion-export-controls'
-  | 'mena-trade-sanctions'
-  | 'insurance-construction-dispute'
+  | 'canada-tariffs-trade'
+  | 'esg-indigenous-infrastructure'
+  | 'construction-act-dispute'
   | 'careers-find-opening';
 
 type PulseDemoIntent = {
@@ -22,13 +25,14 @@ type PulseDemoIntent = {
   sources: Omit<PulseSource, 'score'>[];
 };
 
+const BLG_HOME = '/sitecore/content/pillsbury/blg/Home';
+
 const INTENTS: PulseDemoIntent[] = [
   {
     id: 'careers-find-opening',
     matchAny: [
       ['looking', 'career'],
-      ['career', 'international', 'trade'],
-      ['career', 'trade'],
+      ['career', 'corporate'],
       ['career', 'opening'],
       ['job', 'opening'],
       ['summer', 'associate'],
@@ -37,122 +41,121 @@ const INTENTS: PulseDemoIntent[] = [
       ['find', 'career'],
       ['looking', 'job'],
       ['open', 'role'],
-      ['careers', 'pillsbury'],
+      ['careers', 'blg'],
       ['business', 'professional'],
-      ['work', 'at', 'pillsbury'],
+      ['work', 'at', 'blg'],
     ],
     sources: [
       {
-        id: '{F03B5B2C-D343-4C6B-9635-D876CD81150A}',
-        title: 'Associate — International Trade (Washington, DC)',
-        url: '/Lawyers/Careers/Associate-International-Trade-Washington-DC',
-        path: '/sitecore/content/pillsbury/pillsburylaw/Home/Lawyers/Careers/Associate-International-Trade-Washington-DC',
+        id: '{90A7E66E-18C1-42C4-BB58-ACBB18AEF330}',
+        title: 'Associate — Corporate Commercial (Toronto)',
+        url: '/Lawyers/Careers/Associate-Corporate-New-York',
+        path: `${BLG_HOME}/Lawyers/Careers/Associate-Corporate-New-York`,
         excerpt:
-          'Open associate role on EAR, OFAC, customs, and national-security trade matters — the strongest match for a career in international trade.',
+          'Open associate role on public and private M&A, capital markets, and governance — the strongest match for a corporate commercial career.',
         type: 'other',
       },
       {
-        id: '{C30AB91F-550F-4452-8725-5BCCAF1B674B}',
-        title: 'Careers at Pillsbury',
+        id: '{4C243B26-7226-4BDE-B4B5-DD3FCE658616}',
+        title: 'Careers at BLG',
         url: '/Lawyers/Careers',
-        path: '/sitecore/content/pillsbury/pillsburylaw/Home/Lawyers/Careers',
+        path: `${BLG_HOME}/Lawyers/Careers`,
         excerpt:
-          'Hub for associate, summer associate, lateral, and business professional openings across the firm.',
+          'Hub for associate, summer associate, lateral, and business professional openings across Calgary, Montréal, Ottawa, Toronto, and Vancouver.',
         type: 'other',
       },
       {
-        id: '{B3852AD7-B1EC-4BAD-88F6-ECD2D7A349DD}',
+        id: '{CDD1FE58-84A7-4737-AEAE-1BDC8EFAC6F8}',
         title: 'How to Apply',
         url: '/Lawyers/Careers/How-to-Apply',
-        path: '/sitecore/content/pillsbury/pillsburylaw/Home/Lawyers/Careers/How-to-Apply',
+        path: `${BLG_HOME}/Lawyers/Careers/How-to-Apply`,
         excerpt:
           'Application steps for students, associates, laterals, and business professionals.',
         type: 'knowledge-article',
       },
       {
-        id: '{B323778A-790A-4DAB-A820-08DCD8C3F256}',
+        id: '{A0AE63E5-0458-40F8-9B1B-310AF9580901}',
         title: 'Summer Associate Program',
         url: '/Lawyers/Careers/Summer-Associate-Program',
-        path: '/sitecore/content/pillsbury/pillsburylaw/Home/Lawyers/Careers/Summer-Associate-Program',
+        path: `${BLG_HOME}/Lawyers/Careers/Summer-Associate-Program`,
         excerpt:
-          'Law-student summer experience with mentoring and a clear path toward full-time offers.',
+          'Law-student summer experience with mentoring and a clear path toward articling and associate offers.',
         type: 'other',
       },
       {
-        id: '{9EDB3C29-87F7-475B-B960-41791D29EA0D}',
-        title: 'Associate — Corporate (New York)',
-        url: '/Lawyers/Careers/Associate-Corporate-New-York',
-        path: '/sitecore/content/pillsbury/pillsburylaw/Home/Lawyers/Careers/Associate-Corporate-New-York',
+        id: '{16E69073-18AE-4670-8C04-9990A8A971CF}',
+        title: 'Associate — Disputes (Ottawa)',
+        url: '/Lawyers/Careers/Associate-International-Trade-Washington-DC',
+        path: `${BLG_HOME}/Lawyers/Careers/Associate-International-Trade-Washington-DC`,
         excerpt:
-          'Open corporate associate role in New York for M&A, capital markets, and governance.',
+          'Open disputes associate role in Ottawa for commercial litigation, public law, and related regulatory matters.',
         type: 'other',
       },
       {
-        id: '{3CFF2A06-690B-471A-8877-4D74D78BAEEE}',
+        id: '{2F860237-0B2C-4B72-B166-8FA4468C7176}',
         title: 'Lateral Partner — Intellectual Property',
         url: '/Lawyers/Careers/Lateral-Partner-Intellectual-Property',
-        path: '/sitecore/content/pillsbury/pillsburylaw/Home/Lawyers/Careers/Lateral-Partner-Intellectual-Property',
+        path: `${BLG_HOME}/Lawyers/Careers/Lateral-Partner-Intellectual-Property`,
         excerpt:
-          'Lateral partner conversations for IP litigators and counselors joining the IP platform.',
+          'Lateral partner conversations for IP litigators and counselors joining BLG’s national IP platform.',
         type: 'other',
       },
       {
-        id: '{883337F3-7C1C-4FE8-A342-55471F1355C0}',
+        id: '{360D65FD-2B32-4449-9A89-700FEBE50A82}',
         title: 'Legal Operations Specialist',
         url: '/Lawyers/Careers/Legal-Operations-Specialist',
-        path: '/sitecore/content/pillsbury/pillsburylaw/Home/Lawyers/Careers/Legal-Operations-Specialist',
+        path: `${BLG_HOME}/Lawyers/Careers/Legal-Operations-Specialist`,
         excerpt:
           'Business professional career supporting legal operations, workflow, and lawyer enablement.',
         type: 'other',
       },
       {
-        id: '{8306EB6F-3AA2-474A-ABF0-CD35B805CE6E}',
-        title: 'Ata A. Akiner — International Trade (practice contact)',
-        url: '/Lawyers/Bios/Ata-A-Akiner',
-        path: '/sitecore/content/pillsbury/pillsburylaw/Home/Lawyers/Bios/Ata-A-Akiner',
+        id: '{3BF2422C-6266-4FA6-9C40-73446C27DD9E}',
+        title: 'Duncan Ault — Disputes (practice contact)',
+        url: '/Lawyers/Bios/Shinya-Akiyama',
+        path: `${BLG_HOME}/Lawyers/Bios/Shinya-Akiyama`,
         excerpt:
-          'Washington, DC International Trade partner — useful practice contact when exploring a trade associate path.',
+          'Ottawa Disputes partner — useful practice contact when exploring a disputes associate path.',
         type: 'people-and-teams',
       },
     ],
   },
   {
-    id: 'japan-us-tech-acquisition',
+    id: 'genai-canadian-issuer',
     matchAny: [
-      ['japanese', 'acqui'],
-      ['japan', 'us', 'tech'],
-      ['japan', 'intellectual'],
-      ['japan', 'patent'],
-      ['cross', 'border', 'japan'],
-      ['japanese', 'company'],
-      ['japan', 'practice'],
+      ['genai'],
+      ['gen', 'ai'],
+      ['generative', 'ai'],
+      ['ai', 'governance'],
+      ['ai', 'issuer'],
+      ['canadian', 'issuer'],
     ],
     sources: [
       {
-        id: '{4CF3E8A1-73B9-444F-9CBE-3E1F18A2D5D9}',
-        title: 'Shinya Akiyama — Corporate / Japan Practice',
-        url: '/Lawyers/Bios/Shinya-Akiyama',
-        path: '/sitecore/content/pillsbury/pillsburylaw/Home/Lawyers/Bios/Shinya-Akiyama',
+        id: '{F44A4534-F15D-46FF-BC5A-296F62AF63D7}',
+        title: 'Julie Bogle — Capital Markets',
+        url: '/Lawyers/Bios/Stephen-S-Asay',
+        path: `${BLG_HOME}/Lawyers/Bios/Stephen-S-Asay`,
         excerpt:
-          'Corporate partner and Japan Practice co-leader who counsels Japanese companies on starting, acquiring, and managing U.S. businesses.',
+          'Vancouver capital markets partner advising Canadian issuers on offerings, continuous disclosure, and GenAI governance.',
         type: 'people-and-teams',
       },
       {
-        id: '{3359606E-DFEC-4297-910F-7F15D0540066}',
-        title: 'Mark Abate — Intellectual Property',
-        url: '/Lawyers/Bios/Mark-Abate',
-        path: '/sitecore/content/pillsbury/pillsburylaw/Home/Lawyers/Bios/Mark-Abate',
+        id: '{6248A778-41F5-4B53-A427-305B9B5B52E8}',
+        title: 'Makena Anderson — Capital Markets',
+        url: '/Lawyers/Bios/Osama-Abu-Dehays',
+        path: `${BLG_HOME}/Lawyers/Bios/Osama-Abu-Dehays`,
         excerpt:
-          'Leading IP trial lawyer recognized for patent litigation strategy and technical mastery — a natural second seat when a tech deal carries IP risk.',
+          'Vancouver capital markets associate covering public offerings and GenAI-related disclosure.',
         type: 'people-and-teams',
       },
       {
-        id: '{ED34EB16-C784-43E5-BE3C-FBFC6697B205}',
-        title: 'Ranjini Acharya — Intellectual Property',
-        url: '/Lawyers/Bios/Ranjini-Acharya',
-        path: '/sitecore/content/pillsbury/pillsburylaw/Home/Lawyers/Bios/Ranjini-Acharya',
+        id: '{91A24EA5-6A3B-44DE-9690-9941EEDE770A}',
+        title: 'Shane Barnes — Capital Markets',
+        url: '/Lawyers/Bios/Stephanie-Angkadjaja',
+        path: `${BLG_HOME}/Lawyers/Bios/Stephanie-Angkadjaja`,
         excerpt:
-          'Silicon Valley IP partner covering patents, trade secrets, trademarks, and copyright enforcement across complex technology matters.',
+          'Calgary capital markets partner for public and private offerings, including energy and technology issuers.',
         type: 'people-and-teams',
       },
     ],
@@ -165,208 +168,167 @@ const INTENTS: PulseDemoIntent[] = [
       ['restructur'],
       ['bankrupt'],
       ['creditor'],
+      ['ccaa'],
       ['portfolio', 'company', 'trouble'],
       ['financial', 'distress'],
     ],
     sources: [
       {
-        id: '{2F243F36-C6AC-477C-9577-67AB86B05306}',
-        title: 'Andrew V. Alfano — Insolvency & Restructuring',
-        url: '/Lawyers/Bios/Andrew-V-Alfano',
-        path: '/sitecore/content/pillsbury/pillsburylaw/Home/Lawyers/Bios/Andrew-V-Alfano',
+        id: '{AB3FB02F-0C92-42ED-B826-3DE899CF4CB6}',
+        title: 'Kendall Andersen — Banking / Insolvency',
+        url: '/Lawyers/Bios/Natalie-Alexander',
+        path: `${BLG_HOME}/Lawyers/Bios/Natalie-Alexander`,
         excerpt:
-          'Advises distressed companies, investors, and creditors through complex restructurings across industries including energy, aviation, and EVs.',
+          'Vancouver partner advising lenders and distressed companies through insolvency, CCAA, and banking restructurings.',
         type: 'people-and-teams',
       },
       {
-        id: '{30D08BD7-7D13-4B0F-A8F4-E362FB8E01FD}',
-        title: 'Semma G. Arzapalo — Funds / Corporate',
-        url: '/Lawyers/Bios/Semma-G-Arzapalo',
-        path: '/sitecore/content/pillsbury/pillsburylaw/Home/Lawyers/Bios/Semma-G-Arzapalo',
-        excerpt:
-          'Global Funds practice leader representing institutional investors through private equity commitments — useful when LPs need coordinated counsel on a troubled portfolio company.',
-        type: 'people-and-teams',
-      },
-    ],
-  },
-  {
-    id: 'saudi-expansion-export-controls',
-    matchAny: [
-      ['expanding', 'saudi'],
-      ['expand', 'saudi'],
-      ['saudi', 'export'],
-      ['ksa', 'export'],
-      ['vision', '2030', 'export'],
-      ['who', 'talk', 'saudi'],
-      ['saudi', 'arabia', 'export'],
-      ['export', 'control', 'questions'],
-      ['saudi', 'arabia', 'talk'],
-    ],
-    sources: [
-      {
-        id: '{8306EB6F-3AA2-474A-ABF0-CD35B805CE6E}',
-        title: 'Ata A. Akiner — International Trade (Washington, DC)',
-        url: '/Lawyers/Bios/Ata-A-Akiner',
-        path: '/sitecore/content/pillsbury/pillsburylaw/Home/Lawyers/Bios/Ata-A-Akiner',
-        excerpt:
-          'EAR / OFAC and national-security trade counsel for U.S. companies expanding into the Kingdom — start here on export-control questions.',
-        type: 'people-and-teams',
-      },
-      {
-        id: '{A17985F3-2812-4721-8928-6B4381768660}',
-        title: 'Khalid A. AlArfaj — Corporate (Riyadh)',
-        url: '/Lawyers/Bios/Khalid-A-AlArfaj',
-        path: '/sitecore/content/pillsbury/pillsburylaw/Home/Lawyers/Bios/Khalid-A-AlArfaj',
-        excerpt:
-          'Riyadh corporate partner for entity setup, commercial contracting, and local coordination alongside U.S. trade counsel.',
-        type: 'people-and-teams',
-      },
-      {
-        id: '{FC3F756B-EF7C-4A68-9CD6-97FD0202EE72}',
-        title: 'Webinar: Expanding into Saudi Arabia — Export Controls 101',
-        url: '/Insights/Events/Webinar/Expanding-into-Saudi-Arabia-Export-Controls-101',
-        path: '/sitecore/content/pillsbury/pillsburylaw/Home/Insights/Events/Webinar/Expanding-into-Saudi-Arabia-Export-Controls-101',
-        excerpt:
-          'Client webinar with Akiner and AlArfaj on sequencing EAR/OFAC review with KSA corporate setup before the first intake call.',
-        type: 'knowledge-article',
-      },
-      {
-        id: '{77C55548-522D-46D9-9367-536CE5163AC4}',
-        title: 'Podcast: Trade Talks — Saudi Vision 2030 & Export Controls',
-        url: '/Insights/Thought-Leadership/Podcast/Trade-Talks-Saudi-Vision-2030-Export-Controls',
-        path: '/sitecore/content/pillsbury/pillsburylaw/Home/Insights/Thought-Leadership/Podcast/Trade-Talks-Saudi-Vision-2030-Export-Controls',
-        excerpt:
-          'Short briefing episode on when to involve DC trade counsel vs Riyadh corporate counsel during Gulf expansion.',
-        type: 'knowledge-article',
-      },
-      {
-        id: '{C6AD0AF7-0CCB-4109-B74D-E207ECB78A35}',
-        title: 'Guide: Who to Talk To — Saudi Expansion & Export Controls',
-        url: '/Insights/Thought-Leadership/Article/Who-to-Talk-To-Saudi-Expansion-Export-Controls',
-        path: '/sitecore/content/pillsbury/pillsburylaw/Home/Insights/Thought-Leadership/Article/Who-to-Talk-To-Saudi-Expansion-Export-Controls',
-        excerpt:
-          'Recommended lawyer pairing plus webinars, CLE, alert, and checklist for expansion teams.',
-        type: 'knowledge-article',
-      },
-      {
-        id: '{0579D7FB-48F2-4036-A8EE-E279E67958D4}',
-        title: 'Checklist: U.S. Companies Entering KSA',
-        url: '/Insights/Thought-Leadership/White-Paper/Checklist-US-Companies-Entering-KSA',
-        path: '/sitecore/content/pillsbury/pillsburylaw/Home/Insights/Thought-Leadership/White-Paper/Checklist-US-Companies-Entering-KSA',
-        excerpt:
-          'Practical market-entry checklist covering corporate setup, trade diligence, and counsel handoffs.',
-        type: 'knowledge-article',
-      },
-      {
-        id: '{68460E98-8ADA-4788-9921-EFD5270CAC89}',
-        title: 'Alert: Gulf Expansion — EAR / OFAC Update',
-        url: '/Insights/Alert/Gulf-Expansion-EAR-OFAC-Update',
-        path: '/sitecore/content/pillsbury/pillsburylaw/Home/Insights/Alert/Gulf-Expansion-EAR-OFAC-Update',
-        excerpt:
-          'Current EAR and OFAC points of focus for U.S. companies expanding across the Gulf.',
-        type: 'knowledge-article',
-      },
-      {
-        id: '{CC0936CE-7B39-4755-A1FF-D7E80563CB07}',
-        title: 'CLE: International Trade Briefing — Riyadh & DC',
-        url: '/Insights/Events/CLE/International-Trade-Briefing-Riyadh-and-DC',
-        path: '/sitecore/content/pillsbury/pillsburylaw/Home/Insights/Events/CLE/International-Trade-Briefing-Riyadh-and-DC',
-        excerpt:
-          'In-person / CLE-style briefing bridging Riyadh commercial realities with Washington trade compliance.',
-        type: 'knowledge-article',
-      },
-    ],
-  },
-  {
-    id: 'mena-trade-sanctions',
-    matchAny: [
-      ['sanction'],
-      ['export', 'control'],
-      ['international', 'trade'],
-      ['national', 'security', 'trade'],
-      ['middle', 'east'],
-      ['qatar'],
-      ['mena'],
-      ['riyadh'],
-      ['doha'],
-      ['saudi'],
-    ],
-    sources: [
-      {
-        id: '{8306EB6F-3AA2-474A-ABF0-CD35B805CE6E}',
-        title: 'Ata A. Akiner — International Trade',
-        url: '/Lawyers/Bios/Ata-A-Akiner',
-        path: '/sitecore/content/pillsbury/pillsburylaw/Home/Lawyers/Bios/Ata-A-Akiner',
-        excerpt:
-          'Helps global and U.S. clients navigate complex international trade, regulatory, and national-security matters from Washington, DC.',
-        type: 'people-and-teams',
-      },
-      {
-        id: '{4746BD74-AC63-4ED2-8B86-A2CE1B2BA178}',
-        title: 'Osama Abu-Dehays — Corporate (Doha / London)',
-        url: '/Lawyers/Bios/Osama-Abu-Dehays',
-        path: '/sitecore/content/pillsbury/pillsburylaw/Home/Lawyers/Bios/Osama-Abu-Dehays',
-        excerpt:
-          'Corporate partner known across MENA for commercial, technology, media, and telecommunications matters — strong local counterpart for regional expansion.',
-        type: 'people-and-teams',
-      },
-      {
-        id: '{A17985F3-2812-4721-8928-6B4381768660}',
-        title: 'Khalid A. AlArfaj — Corporate (Riyadh)',
-        url: '/Lawyers/Bios/Khalid-A-AlArfaj',
-        path: '/sitecore/content/pillsbury/pillsburylaw/Home/Lawyers/Bios/Khalid-A-AlArfaj',
-        excerpt:
-          'Advises national and international clients on complex corporate and commercial matters across Saudi Arabia and the United States.',
-        type: 'people-and-teams',
-      },
-      {
-        id: '{021363E1-C472-4752-878D-55C455EA8BB5}',
-        title: 'Webinar: MENA Corporate Setup & U.S. Export Compliance',
-        url: '/Insights/Events/Webinar/MENA-Corporate-Setup-and-US-Export-Compliance',
-        path: '/sitecore/content/pillsbury/pillsburylaw/Home/Insights/Events/Webinar/MENA-Corporate-Setup-and-US-Export-Compliance',
-        excerpt:
-          'How entity formation across MENA intersects with U.S. export-compliance obligations.',
-        type: 'knowledge-article',
-      },
-      {
-        id: '{54B23AD1-7151-47BF-91B8-E005268353B9}',
-        title: 'Presentation: Export-Control Diligence for MENA Deals',
-        url: '/Insights/Thought-Leadership/Presentation/Export-Control-Diligence-for-MENA-Deals',
-        path: '/sitecore/content/pillsbury/pillsburylaw/Home/Insights/Thought-Leadership/Presentation/Export-Control-Diligence-for-MENA-Deals',
-        excerpt:
-          'Deal-team diligence framework for export controls on MENA transactions.',
-        type: 'knowledge-article',
-      },
-    ],
-  },
-  {
-    id: 'insurance-construction-dispute',
-    matchAny: [
-      ['insurance', 'recover'],
-      ['insurance', 'coverage'],
-      ['construction', 'insurance'],
-      ['construction', 'claim'],
-      ['carrier', 'dispute'],
-      ['risk', 'management', 'insurance'],
-      ['coverage', 'fight'],
-    ],
-    sources: [
-      {
-        id: '{A65B716C-C64E-4F83-AC29-5BA7FAD8B503}',
-        title: 'Stephen S. Asay — Insurance Recovery & Advisory',
-        url: '/Lawyers/Bios/Stephen-S-Asay',
-        path: '/sitecore/content/pillsbury/pillsburylaw/Home/Lawyers/Bios/Stephen-S-Asay',
-        excerpt:
-          'Advises on proactive risk management and complex commercial litigation involving insurance coverage and construction claims from Washington, DC.',
-        type: 'people-and-teams',
-      },
-      {
-        id: '{3FACDBC5-B0E5-472F-9ED5-C16EC268C75C}',
-        title: 'Jennifer Altman — Litigation (Miami)',
+        id: '{EC2D2447-E509-421E-AD67-44A82626181C}',
+        title: 'Suhuyini Abudulai — Financial Services',
         url: '/Lawyers/Bios/Jennifer-Altman',
-        path: '/sitecore/content/pillsbury/pillsburylaw/Home/Lawyers/Bios/Jennifer-Altman',
+        path: `${BLG_HOME}/Lawyers/Bios/Jennifer-Altman`,
         excerpt:
-          'Miami managing partner and Chambers-recognized commercial litigator with deep trial and arbitration experience when a coverage dispute becomes hard-fought litigation.',
+          'Toronto financial services partner — useful when lenders and institutional clients need coordinated counsel on a troubled portfolio company.',
+        type: 'people-and-teams',
+      },
+    ],
+  },
+  {
+    id: 'canada-tariffs-trade',
+    matchAny: [
+      ['entering', 'canada'],
+      ['expanding', 'canada'],
+      ['expand', 'canada'],
+      ['doing', 'business', 'canada'],
+      ['tariff'],
+      ['who', 'talk', 'canada'],
+      ['canada', 'trade'],
+      ['customs'],
+    ],
+    sources: [
+      {
+        id: '{30CB4A17-2ACC-463C-ABAA-7B17D7394BBF}',
+        title: 'Marc Abdelsayed — Corporate Commercial (Montréal)',
+        url: '/Lawyers/Bios/Ata-A-Akiner',
+        path: `${BLG_HOME}/Lawyers/Bios/Ata-A-Akiner`,
+        excerpt:
+          'Inbound Canada entity setup and tariff-sensitive supply-chain contracts — start here on doing-business questions.',
+        type: 'people-and-teams',
+      },
+      {
+        id: '{3BF2422C-6266-4FA6-9C40-73446C27DD9E}',
+        title: 'Duncan Ault — Disputes (Ottawa)',
+        url: '/Lawyers/Bios/Shinya-Akiyama',
+        path: `${BLG_HOME}/Lawyers/Bios/Shinya-Akiyama`,
+        excerpt:
+          'Ottawa disputes partner for tariff, trade-remedy, and public-law conflicts alongside Montréal corporate counsel.',
+        type: 'people-and-teams',
+      },
+      {
+        id: '{16474C7B-EFF3-4251-BA9E-594B6FAD9774}',
+        title: 'Webinar: Tariffs and Trade Resource Centre',
+        url: '/Insights/Events/Webinar/Expanding-into-Saudi-Arabia-Export-Controls-101',
+        path: `${BLG_HOME}/Insights/Events/Webinar/Expanding-into-Saudi-Arabia-Export-Controls-101`,
+        excerpt:
+          'Client webinar with Abdelsayed and Ault on sequencing tariff diligence with Canadian corporate setup.',
+        type: 'knowledge-article',
+      },
+      {
+        id: '{EDC51F31-CCA4-4D5B-9713-C1104D4703E4}',
+        title: 'Podcast: Trade Talks — Canada’s Tariff Response',
+        url: '/Insights/Thought-Leadership/Podcast/Trade-Talks-Saudi-Vision-2030-Export-Controls',
+        path: `${BLG_HOME}/Insights/Thought-Leadership/Podcast/Trade-Talks-Saudi-Vision-2030-Export-Controls`,
+        excerpt:
+          'Short briefing episode on when to involve Montréal corporate counsel vs Ottawa disputes counsel.',
+        type: 'knowledge-article',
+      },
+      {
+        id: '{B68AB708-EAF5-46DF-9364-F111E2070B34}',
+        title: 'Guide: Who to Talk To — Tariffs & Doing Business in Canada',
+        url: '/Insights/Thought-Leadership/Article/Who-to-Talk-To-Saudi-Expansion-Export-Controls',
+        path: `${BLG_HOME}/Insights/Thought-Leadership/Article/Who-to-Talk-To-Saudi-Expansion-Export-Controls`,
+        excerpt:
+          'Recommended lawyer pairing plus webinars, CLE, alert, and checklist for inbound teams.',
+        type: 'knowledge-article',
+      },
+      {
+        id: '{F11B117B-A06E-415E-84FA-073A82CB7645}',
+        title: 'Amanda Afeich — Disputes (Montréal)',
+        url: '/Lawyers/Bios/Khalid-A-AlArfaj',
+        path: `${BLG_HOME}/Lawyers/Bios/Khalid-A-AlArfaj`,
+        excerpt:
+          'Montréal disputes associate supporting commercial litigation and trade-related conflicts.',
+        type: 'people-and-teams',
+      },
+    ],
+  },
+  {
+    id: 'esg-indigenous-infrastructure',
+    matchAny: [
+      ['esg'],
+      ['indigenous'],
+      ['first', 'nations'],
+      ['infrastructure', 'project'],
+      ['duty', 'consult'],
+      ['sustainability'],
+    ],
+    sources: [
+      {
+        id: '{84235479-63FB-48F6-8601-9DDF63892744}',
+        title: 'Sarah Bird — Infrastructure / Indigenous Law',
+        url: '/Lawyers/Bios/Stephen-C-Ashley',
+        path: `${BLG_HOME}/Lawyers/Bios/Stephen-C-Ashley`,
+        excerpt:
+          'Vancouver partner advising on infrastructure, Indigenous law, construction, and ESG for major Canadian projects.',
+        type: 'people-and-teams',
+      },
+      {
+        id: '{3F444BEC-F590-462F-9AD9-2A650F700F9F}',
+        title: 'Jennifer Archer — Corporate Commercial (Vancouver)',
+        url: '/Lawyers/Bios/Rolando-T-Acosta',
+        path: `${BLG_HOME}/Lawyers/Bios/Rolando-T-Acosta`,
+        excerpt:
+          'Vancouver corporate commercial partner for M&A, governance, and ESG-related corporate transactions.',
+        type: 'people-and-teams',
+      },
+    ],
+  },
+  {
+    id: 'construction-act-dispute',
+    matchAny: [
+      ['construction', 'act'],
+      ['holdback'],
+      ['construction', 'claim'],
+      ['lien'],
+      ['prompt', 'payment'],
+      ['construction', 'insurance'],
+    ],
+    sources: [
+      {
+        id: '{8C046A38-BA3E-45EF-BD2D-39E5773FF1E9}',
+        title: 'Frank Arnone — Commercial Real Estate',
+        url: '/Lawyers/Bios/Ryan-R-Adelsperger',
+        path: `${BLG_HOME}/Lawyers/Bios/Ryan-R-Adelsperger`,
+        excerpt:
+          'Toronto commercial real estate partner advising on development, Construction Act holdbacks, and national real estate portfolios.',
+        type: 'people-and-teams',
+      },
+      {
+        id: '{C139E395-B409-4F6D-9F13-9548B58F96B3}',
+        title: 'Line Abecassis — Commercial Real Estate',
+        url: '/Lawyers/Bios/Andrew-V-Alfano',
+        path: `${BLG_HOME}/Lawyers/Bios/Andrew-V-Alfano`,
+        excerpt:
+          'Montréal commercial real estate partner for acquisitions, leasing, and development across Québec and national portfolios.',
+        type: 'people-and-teams',
+      },
+      {
+        id: '{84235479-63FB-48F6-8601-9DDF63892744}',
+        title: 'Sarah Bird — Infrastructure',
+        url: '/Lawyers/Bios/Stephen-C-Ashley',
+        path: `${BLG_HOME}/Lawyers/Bios/Stephen-C-Ashley`,
+        excerpt:
+          'Vancouver infrastructure partner when a Construction Act file is also an Indigenous-facing or major project.',
         type: 'people-and-teams',
       },
     ],
@@ -406,7 +368,7 @@ export function matchPulseDemoIntent(question: string): PulseDemoIntent | null {
 /**
  * Build high-confidence sources for a matched demo intent.
  * `stateCode` is retained for API compatibility with the Pulse ask route;
- * Pillsbury visitor demos do not layer state Shared Content.
+ * BLG visitor demos do not layer U.S. state Shared Content.
  */
 export function buildDemoPlaybookSources(
   question: string,
@@ -427,8 +389,8 @@ export function buildDemoPlaybookSources(
  * Each maps to a demo intent and is phrased as a visitor would ask — not as a keyword search.
  */
 export const PULSE_DEMO_STARTER_PROMPTS = [
-  "I'm looking for a career in international trade. What openings do you have?",
-  'A Japanese company is buying a U.S. tech business — who should lead, and who covers the IP risk?',
+  "I'm looking for a career in corporate commercial. What openings do you have?",
+  'We need GenAI governance advice for a Canadian issuer — who should lead?',
   'One of our portfolio companies is in financial distress. Who should we talk to?',
-  "We're expanding into Saudi Arabia and have export-control questions. Who should we talk to?",
+  "We're entering Canada and have tariff questions. Who should we talk to?",
 ] as const;

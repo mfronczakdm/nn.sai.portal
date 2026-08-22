@@ -1,7 +1,8 @@
 /**
  * Curated related insights / speaking for BioDetail.
- * Keyed by Sitecore Bio page item name (hyphenated).
- * Start with Ata A. Akiner for the Saudi expansion / export-control demo journey.
+ * Keyed by leftover Sitecore Bio page item name (hyphenated).
+ * Start with Ata-A-Akiner (display: Marc Abdelsayed) for the
+ * Canada tariffs / doing-business demo journey.
  */
 
 export type BioRelatedContentType =
@@ -48,99 +49,94 @@ export function relatedContentBadge(item: BioRelatedContentItem): string {
   return item.badge || TYPE_BADGE[item.type];
 }
 
-/** Demo-ready related content for Ata — people → learning assets journey */
-const ATA_AKINER: BioRelatedContentProfile = {
+/** Demo-ready related content for Marc Abdelsayed — people → learning assets journey */
+const MARC_ABDELSAYED: BioRelatedContentProfile = {
   sectionTitle: 'Insights & speaking',
   sectionIntro:
-    'Export controls, sanctions, and Saudi / MENA expansion — webinars, podcasts, and guides to brief your team before the first call.',
+    'Tariffs, customs, and doing business in Canada — webinars, podcasts, and guides to brief your team before the first call.',
   items: [
     {
-      id: 'blog-saudi-expansion-export',
+      id: 'blog-canada-tariffs',
       type: 'blog',
-      title: 'Saudi Expansion and U.S. Export Controls',
+      title: 'Canada Tariffs and Supply Chains',
       description:
-        'Commentary on EAR/OFAC diligence for Vision 2030 market entry—and how to pair DC trade counsel with Riyadh corporate counsel.',
+        'Commentary on tariff diligence for inbound market entry—and how to pair Montréal corporate counsel with Ottawa disputes counsel.',
       href: '/Insights/Blogs/Global-Trade-and-Sanctions-Law/Saudi-Expansion-and-US-Export-Controls',
       dateLabel: 'Latest post',
     },
     {
-      id: 'blog-global-trade',
+      id: 'blog-tariffs-trade',
       type: 'blog',
-      title: 'Global Trade & Sanctions Law',
-      description:
-        'Ongoing commentary on OFAC, EAR, customs, and cross-border trade compliance.',
+      title: 'Tariffs and Trade',
+      description: 'Ongoing commentary on Canadian tariffs, customs, and cross-border trade.',
       href: '/Insights/Blogs/Global-Trade-and-Sanctions-Law',
       dateLabel: 'Blog',
     },
     {
-      id: 'webinar-saudi-export-101',
+      id: 'webinar-tariffs-centre',
       type: 'webinar',
-      title: 'Expanding into Saudi Arabia: Export Controls 101',
+      title: 'Tariffs and Trade Resource Centre',
       description:
-        'With Khalid AlArfaj (Riyadh) — sequencing EAR/OFAC review with KSA corporate setup.',
+        'With Duncan Ault (Ottawa) — sequencing tariff review with Canadian corporate setup.',
       href: '/Insights/Events/Webinar/Expanding-into-Saudi-Arabia-Export-Controls-101',
       dateLabel: 'Upcoming webinar',
     },
     {
-      id: 'webinar-mena-corporate',
+      id: 'webinar-doing-business-canada',
       type: 'webinar',
-      title: 'MENA Corporate Setup & U.S. Export Compliance',
-      description:
-        'Standing up a Saudi or Qatar entity without missing U.S. trade controls.',
+      title: 'Doing Business in Canada: Corporate Setup',
+      description: 'Standing up a Canadian entity without missing tariff and employment workstreams.',
       href: '/Insights/Events/Webinar/MENA-Corporate-Setup-and-US-Export-Compliance',
       dateLabel: 'On demand',
     },
     {
       id: 'podcast-trade-talks',
       type: 'podcast',
-      title: 'Trade Talks: Saudi Vision 2030 & Export Controls',
+      title: 'Trade Talks: Canada’s Tariff Response',
       description:
-        'When to involve DC trade counsel vs Riyadh corporate counsel during Gulf expansion.',
+        'When to involve Montréal corporate counsel vs Ottawa disputes counsel during inbound expansion.',
       href: '/Insights/Thought-Leadership/Podcast/Trade-Talks-Saudi-Vision-2030-Export-Controls',
       dateLabel: 'Listen now',
     },
     {
-      id: 'cle-riyadh-dc',
+      id: 'cle-ottawa-toronto',
       type: 'cle',
-      title: 'International Trade Briefing: Riyadh & DC',
-      description:
-        'Half-day CLE for in-house teams managing Saudi expansion and export-control risk.',
+      title: 'Tariffs & Trade Briefing: Ottawa & Toronto',
+      description: 'Half-day CLE for in-house teams managing Canadian tariff and trade-remedy risk.',
       href: '/Insights/Events/CLE/International-Trade-Briefing-Riyadh-and-DC',
       dateLabel: 'CLE · Live',
     },
     {
       id: 'guide-who-to-talk-to',
       type: 'guide',
-      title: 'Who Should We Talk To? Saudi Expansion & Export Controls',
+      title: 'Who Should We Talk To? Tariffs & Doing Business in Canada',
       description:
-        'Recommended lawyer pairing plus webinars, podcast, alert, and checklist for expansion teams.',
+        'Recommended lawyer pairing plus webinars, podcast, alert, and checklist for inbound teams.',
       href: '/Insights/Thought-Leadership/Article/Who-to-Talk-To-Saudi-Expansion-Export-Controls',
       dateLabel: 'Client guide',
     },
     {
-      id: 'alert-gulf-ear-ofac',
+      id: 'alert-canada-tariff',
       type: 'alert',
-      title: 'Gulf Expansion: EAR & OFAC Update',
-      description:
-        'Recent EAR and OFAC developments for U.S. companies expanding into Saudi Arabia and the Gulf.',
+      title: 'Canada Tariff Update',
+      description: 'Recent tariff and customs developments for companies doing business in Canada.',
       href: '/Insights/Alert/Gulf-Expansion-EAR-OFAC-Update',
       dateLabel: 'Legal alert',
     },
     {
-      id: 'checklist-ksa',
+      id: 'checklist-canada',
       type: 'white-paper',
-      title: 'Checklist: U.S. Companies Entering KSA',
-      description:
-        'Corporate setup, contracting, and U.S. export-control diligence for Saudi market entry.',
+      title: 'Checklist: Doing Business in Canada',
+      description: 'Corporate setup, contracting, and tariff diligence for Canadian market entry.',
       href: '/Insights/Thought-Leadership/White-Paper/Checklist-US-Companies-Entering-KSA',
       dateLabel: 'White paper',
     },
     {
-      id: 'presentation-mena-diligence',
+      id: 'presentation-genai',
       type: 'presentation',
-      title: 'Export-Control Diligence for MENA Deals',
+      title: 'GenAI Diligence for Canadian Issuers',
       description:
-        'Workshop outline: deal screening, technology classification, and RACI for DC vs MENA counsel.',
+        'Workshop outline: disclosure, governance, and RACI for capital-markets and technology counsel.',
       href: '/Insights/Thought-Leadership/Presentation/Export-Control-Diligence-for-MENA-Deals',
       dateLabel: 'Presentation',
     },
@@ -148,7 +144,7 @@ const ATA_AKINER: BioRelatedContentProfile = {
 };
 
 export const BIO_RELATED_CONTENT_BY_NAME: Record<string, BioRelatedContentProfile> = {
-  'Ata-A-Akiner': ATA_AKINER,
+  'Ata-A-Akiner': MARC_ABDELSAYED,
 };
 
 export function resolveBioRelatedContent(itemName?: string | null): BioRelatedContentProfile | null {

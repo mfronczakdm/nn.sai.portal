@@ -8,7 +8,7 @@ import {
 import { buildDemoPlaybookSources } from '@/lib/pulse-demo-playbook';
 import type { PulseSource, PulseSourceType, PulseStateCode } from '@/lib/pulse-types';
 
-const DEFAULT_HOME_PATH = '/sitecore/content/pillsbury/pillsburylaw/Home';
+const DEFAULT_HOME_PATH = '/sitecore/content/pillsbury/blg/Home';
 const DEFAULT_KA_ROOT_ID = '5dad4c5c-84cd-471a-80ef-c805570be79a';
 const FETCH_FIRST = 36;
 /** Enough room for demo playbook people + webinars / podcasts / guides. */

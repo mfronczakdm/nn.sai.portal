@@ -41,19 +41,23 @@ export const SearchBox = ({ searchLink }: { searchLink: LinkField }) => {
     searchLink?.value?.text?.trim() || t(DICTIONARY_KEYS.SEARCH_LABEL) || 'Search';
 
   const buildSearchUrl = (): string | null => {
-    if (!hasValidSearchLink) return null;
+    if (!hasValidSearchLink || !searchBaseHref) return null;
+    const query = searchTerm.trim();
     try {
-      const url = new URL(searchBaseHref!, window.location.origin);
-      if (searchTerm.trim()) {
-        url.searchParams.set('q', searchTerm.trim());
+      const isAbsolute = /^https?:\/\//i.test(searchBaseHref);
+      // Dummy origin keeps this SSR-safe. `window` during render made the client
+      // href absolute (`http://localhost:3000/Search-Results`) and hydrated against
+      // the server's relative `/Search-Results`.
+      const url = new URL(searchBaseHref, 'http://sitecore.local');
+      if (query) {
+        url.searchParams.set('q', query);
       } else {
         url.searchParams.delete('q');
       }
-      return url.toString();
+      if (isAbsolute) return url.toString();
+      return `${url.pathname}${url.search}${url.hash}`;
     } catch {
-      return searchTerm.trim()
-        ? `${searchBaseHref}?q=${encodeURIComponent(searchTerm.trim())}`
-        : (searchBaseHref ?? null);
+      return query ? `${searchBaseHref}?q=${encodeURIComponent(query)}` : searchBaseHref;
     }
   };
 

@@ -380,7 +380,7 @@ function SearchTips() {
         {
           icon: Globe2,
           title: 'Situation search',
-          body: 'Describe the matter—“expanding into Saudi Arabia,” “export-control questions”—for AI routing to people + events.',
+          body: 'Describe the matter—“entering Canada,” “tariff questions,” “Construction Act holdback”—for AI routing to people + events.',
         },
         {
           icon: CalendarDays,
@@ -672,7 +672,7 @@ export const SearchResults: FC<SearchResultsProps> = ({
         <header className="mt-10">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
-              <p className="text-xs font-medium uppercase tracking-widest text-primary/90">Pillsbury search</p>
+              <p className="text-xs font-medium uppercase tracking-widest text-primary/90">BLG search</p>
               <h1 className="mt-1 text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
                 {normalizeQuery(query) ? (
                   <>
@@ -683,9 +683,9 @@ export const SearchResults: FC<SearchResultsProps> = ({
                 )}
               </h1>
               <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
-                Built for a global firm: search by person, practice, office, or matter narrative. Results link into
-                Bios, capabilities, offices, and insight hubs already in the content tree—then refine by type,
-                practice area, and region.
+                Built for Canada’s Law Firm: search by person, practice, office, or matter narrative. Results link
+                into Bios, services, offices, and insight hubs already in the content tree—then refine by type,
+                practice area, and city.
               </p>
             </div>
             <div className="rounded-xl border border-dashed border-primary/25 bg-primary/5 px-3 py-2 text-xs text-muted-foreground">
