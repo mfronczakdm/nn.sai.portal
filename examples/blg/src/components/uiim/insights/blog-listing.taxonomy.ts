@@ -15,7 +15,9 @@ export type BlogSpecialty =
   | 'Corporate Commercial'
   | 'Commercial Real Estate'
   | 'Indigenous Law'
-  | 'Capital Markets';
+  | 'Capital Markets'
+  | 'Infrastructure'
+  | 'Tax';
 
 export type RelatedLawyer = {
   name: string;
