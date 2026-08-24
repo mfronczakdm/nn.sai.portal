@@ -7,22 +7,35 @@ import { isSitecoreSearchConfigured, PREVIEW_WIDGET_ID } from '@/lib/search-cust
 
 type HeaderPreviewSearchProps = {
   searchLink?: LinkField;
+  /** `bar` matches inverted VersionN headers with an inline SEARCH slot. */
+  appearance?: 'trigger' | 'bar';
+  className?: string;
 };
 
 /**
  * Header search slot: Sitecore Search PreviewSearch when legacy SDK env is configured,
  * otherwise the existing client-side SearchBox fallback.
  */
-export function HeaderPreviewSearch({ searchLink }: HeaderPreviewSearchProps) {
+export function HeaderPreviewSearch({
+  searchLink,
+  appearance = 'trigger',
+  className,
+}: HeaderPreviewSearchProps) {
   const resultsPath = searchLink?.value?.href || '/search';
   const configured = isSitecoreSearchConfigured();
 
   if (!configured) {
-    return <SearchBox searchLink={searchLink as LinkField} />;
+    return (
+      <SearchBox searchLink={searchLink as LinkField} appearance={appearance} className={className} />
+    );
   }
 
   return (
-    <div className="flex min-w-[14rem] flex-1 items-center px-2 py-2 lg:min-w-[20rem] lg:max-w-xl">
+    <div
+      className={
+        className ?? 'flex min-w-[14rem] flex-1 items-center px-2 py-2 lg:min-w-[20rem] lg:max-w-xl'
+      }
+    >
       <PreviewSearch rfkId={PREVIEW_WIDGET_ID} resultsPath={resultsPath} />
     </div>
   );

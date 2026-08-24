@@ -7432,7 +7432,7 @@ ia:
     category: "Global Elements"
     status: "complete"
     createdAt: "2026-08-19T18:30:00Z"
-    updatedAt: "2026-08-19T18:45:00Z"
+    updatedAt: "2026-08-24T14:20:00Z"
 
     react:
       filePath: "src/components/site-three/HeaderST.tsx"
@@ -7440,6 +7440,8 @@ ia:
       variants:
         - "Default"
         - "LoginRequired"
+        - "Version1"
+        - "Version2"
 
     sitecoreEnvironment:
       siteName: "dfs"
@@ -7465,6 +7467,11 @@ ia:
       itemId: "{90A922AA-E2A7-4553-A7AD-B89AC9318D6B}"
       componentName: "HeaderST"
       parametersTemplateId: "{4B39645F-F45A-4099-817A-60A20E48DA25}"
+      parametersFields:
+        - { name: "showSearchBox", type: "Checkbox", itemId: "{CC0DE6CD-2EE2-4B94-88B8-C76361F85796}" }
+        - { name: "showMiniCart", type: "Checkbox", itemId: "{5BB5BA3D-4FD2-41DA-B6C3-814CC2D71656}" }
+        - { name: "ReverseTheme", type: "Checkbox", itemId: "{086782CC-6DC4-4918-86B1-4680EA595AB9}" }
+        - { name: "HideCart", type: "Checkbox", itemId: "{8DD858AB-1F52-4B3A-983B-B6CA90C90606}", note: "Added 2026-08-24; default off" }
 
     headlessVariants:
       containerPath: "/sitecore/content/dfs/dfs/Presentation/Headless Variants/HeaderST"
@@ -7473,6 +7480,50 @@ ia:
         - { name: "Default", itemId: "{466965AD-0D48-4359-852B-D3660BCFFEE5}" }
         - { name: "LoginRequired", itemId: "{197F5333-48FF-42CF-8357-B49796219679}" }
 
+    headlessVariantsPkm:
+      containerPath: "/sitecore/content/progressive/pkm/Presentation/Headless Variants/HeaderST"
+      containerId: "{E17C9631-8CAE-48EE-9EF9-1588C7C99575}"
+      variants:
+        - { name: "Default", itemId: "{3DF1F5AF-6D14-4035-A53B-C58D2C641EA7}" }
+        - { name: "LoginRequired", itemId: "{1EAEB888-076E-4C51-939A-84B1AD1C8421}" }
+        - { name: "Version1", itemId: "{2D284CF1-A465-4E92-BF61-8D24F4CB955D}" }
+
+    headlessVariantsAmkor:
+      containerPath: "/sitecore/content/amkor/amkor/Presentation/Headless Variants/HeaderST"
+      containerId: "{02D1C60D-0A24-4095-8795-9E1459B848B1}"
+      variants:
+        - { name: "Default", itemId: "{CAA5F6E2-DD62-4D5C-ABC5-4230477AEA53}" }
+        - { name: "LoginRequired", itemId: "{59C8D916-34FA-4499-97EE-8A9537DEEBEC}" }
+        - { name: "Version1", itemId: "{3C5FBC3A-F12E-4EAF-A2B2-17DF9BEECE5A}" }
+        - { name: "Version2", itemId: "{24E133EF-9AFA-4BAC-9780-724CDF33F490}" }
+
+    headlessVariantsAmericasmart:
+      containerPath: "/sitecore/content/andmore/americasmart/Presentation/Headless Variants/HeaderST"
+      containerId: "{5BD94FBE-EF9A-423F-8D72-A4D7012FD4D8}"
+      variants:
+        - { name: "Default", itemId: "{0B200083-A0D0-484C-95E0-4D5AF88944EA}" }
+        - { name: "LoginRequired", itemId: "{798EA535-FDA2-4E5E-800D-749D589CB22F}" }
+        - { name: "Version1", itemId: "{79D9FD63-A15F-4C0E-B79C-A86BE3B51FC5}" }
+        - { name: "Version2", itemId: "{2C359EA2-ECEA-4348-A6C3-CA0E6E5178A9}" }
+
+    headlessVariantsAtlantaApparel:
+      containerPath: "/sitecore/content/andmore/atlanta-apparel/Presentation/Headless Variants/HeaderST"
+      containerId: "{18CF00E1-D66E-410E-98DE-C740EE7B41FC}"
+      variants:
+        - { name: "Default", itemId: "{6B60E4E2-BD6C-4963-AA75-915256361A21}" }
+        - { name: "LoginRequired", itemId: "{A77DAE32-F306-4AD8-AA64-687D89D3DD54}" }
+        - { name: "Version1", itemId: "{066E75D8-07AC-4688-A358-1FA38AB6B429}" }
+        - { name: "Version2", itemId: "{F0F3B5E5-DA94-4B53-A6BD-143F3F9B5538}" }
+
+    headlessVariantsSiteBase:
+      containerPath: "/sitecore/content/site-base/site-base/Presentation/Headless Variants/HeaderST"
+      containerId: "{67FD09D8-D1B6-4EC6-AAAD-55EB608512FB}"
+      variants:
+        - { name: "Default", itemId: "{B531FCD2-0C2E-4992-9B69-019A0D08DBA3}" }
+        - { name: "LoginRequired", itemId: "{D0E85B97-CABF-41A1-8C17-35095613CC81}" }
+        - { name: "Version1", itemId: "{54EFE51F-DAD3-4B73-AD5D-51EFBBF59F7E}" }
+        - { name: "Version2", itemId: "{0D1930FA-63EA-4FCF-981D-028DE654D697}" }
+
     datasourceExample:
       name: "Header"
       path: "/sitecore/content/dfs/dfs/Presentation/Partial Designs/Global/Header/Data/Header"
@@ -7480,20 +7531,36 @@ ia:
       note: "LoginLink points to Portal Login page item {EFEAC18B-D47C-41AC-B207-5525CD230634}"
 
     verification:
-      checkedAt: "2026-08-19T18:45:00Z"
+      checkedAt: "2026-08-24T14:20:00Z"
       passed:
         - "LoginLink field created on HeaderST datasource template"
         - "Headless Variants container + Default + LoginRequired verified via MCP"
         - "Header partial design datasource LoginLink populated"
         - "React HeaderST Default + LoginRequired variants with Auth.js session"
         - "LoginRequired hides nav until authenticated; shows user + logout when authenticated"
+        - "pkm Headless Variants container HeaderST created"
+        - "pkm Variant Definitions Default, LoginRequired, Version1 verified"
+        - "HideCart Checkbox on HeaderST Parameters Functionality section"
+        - "amkor HeaderST Headless Variants + Default/LoginRequired/Version1 verified"
+        - "americasmart HeaderST Headless Variants + Default/LoginRequired/Version1 verified"
+        - "atlanta-apparel HeaderST Headless Variants + Default/LoginRequired/Version1 verified"
+        - "Version2 added on amkor, americasmart, atlanta-apparel, and site-base"
+        - "site-base HeaderST Headless Variants + Default/LoginRequired/Version1/Version2 verified"
       failed: []
       pendingManual:
+        - "Select Version1 on amkor Header partial design HeaderST rendering in Pages"
+        - "Select Version2 on atlanta-apparel Header partial (Andmore layout)"
+        - "Select Version2 on americasmart Header partial if that demo uses the same chrome"
+        - "On Version2: leave Show Search Box unchecked; check Hide Cart"
+        - "Set showSearchBox and HideCart on that HeaderST rendering"
+        - "Publish Header partial design + HideCart template field for Edge"
         - "Select LoginRequired variant on Header partial design HeaderST rendering in Pages"
-        - "Publish Header partial design + template changes for Edge"
         - "Optional: add postLogoutRedirect to HeaderST rendering parameters template"
 
     notes:
+      - "2026-08-24: Version2 Andmore-style header (dark utility row, logo left, inline nav, search icon). Headless variants on amkor, americasmart, atlanta-apparel, and site-base."
+      - "2026-08-24: HeaderST Version1 also added under amkor, andmore/americasmart, andmore/atlanta-apparel Headless Variants."
+      - "2026-08-24: Version1 cosmetic variant for Amkor-style inverted two-row header (MENU + search + logo-right). HideCart rendering param (default off)."
       - "2026-08-19: Portal auth header update — LoginLink (PascalCase, matches SupportLink/SearchLink/CartLink)"
       - "LoginRequired variant hides header-navigation placeholder until Auth.js session is authenticated"
       - "Utility row (Support, Search, Cart, LoginLink) remains visible when unauthenticated"

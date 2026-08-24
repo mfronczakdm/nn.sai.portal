@@ -21,3 +21,4 @@ Key rules:
 - **Keep ALL Sitecore field helpers** — `Text`, `RichText`, `NextImage`, `Link`
 - **Keep ALL isEditing guards** — fields must stay editable
 - **Use the closest existing variant as starting point** — modify, don't rebuild from scratch
+- **HeaderST is excluded** — use `sitecore-headerst-variant` (`Version1`, `Version2`, …) instead of a client-named header variant

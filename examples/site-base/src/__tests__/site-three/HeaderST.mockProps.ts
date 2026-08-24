@@ -173,6 +173,59 @@ export const headerSTPropsReverseTheme = {
   },
 };
 
+export const headerSTPropsHideCart = {
+  rendering: { componentName: 'HeaderST' },
+  params: {
+    styles: 'bg-white shadow-sm',
+    showSearchBox: 'true',
+    showMiniCart: 'true',
+    HideCart: '1',
+    DynamicPlaceholderId: 'main-nav',
+  },
+  page: mockPage,
+  fields: {
+    Logo: createMockImageField('/images/sync-logo.svg', 'SYNC Audio Logo'),
+    SupportLink: createMockLinkField('/support', 'Support'),
+    SearchLink: createMockLinkField('/search', 'Search Products'),
+    CartLink: createMockLinkField('/cart', 'Shopping Cart'),
+    LoginLink: createMockLinkField('/login', 'Login'),
+  },
+};
+
+export const headerSTPropsVersion1 = {
+  rendering: { componentName: 'HeaderST' },
+  params: {
+    showSearchBox: 'true',
+    showMiniCart: 'false',
+    HideCart: '1',
+    DynamicPlaceholderId: 'main-nav',
+  },
+  page: mockPage,
+  fields: {
+    Logo: createMockImageField('/images/amkor-logo.svg', 'Amkor Technology'),
+    SupportLink: createMockLinkField('/contact-us', 'Contact Us'),
+    SearchLink: createMockLinkField('/search', 'Search'),
+    CartLink: createMockLinkField('/cart', 'Cart'),
+    LoginLink: createMockLinkField('/login', 'Login'),
+  },
+};
+
+export const headerSTPropsVersion2 = {
+  rendering: { componentName: 'HeaderST' },
+  params: {
+    HideCart: '1',
+    DynamicPlaceholderId: 'main-nav',
+  },
+  page: mockPage,
+  fields: {
+    Logo: createMockImageField('/images/atlanta-market-logo.svg', 'Atlanta Market Andmore'),
+    SupportLink: createMockLinkField('/register', 'Register'),
+    SearchLink: createMockLinkField('/search', 'Search'),
+    CartLink: createMockLinkField('/cart', 'Cart'),
+    LoginLink: createMockLinkField('/login', 'Sign In'),
+  },
+};
+
 // Mock props with special characters
 export const headerSTPropsSpecialChars = {
   rendering: { componentName: 'HeaderST' },

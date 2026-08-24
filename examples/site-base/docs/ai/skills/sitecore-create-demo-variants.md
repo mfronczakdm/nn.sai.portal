@@ -14,6 +14,7 @@ Use this skill when:
 
 - If the user explicitly says generic variants are fine ("just use Default variants")
 - If the build plan has 0 sections needing custom variants and the user hasn't asked for pixel-perfect matching
+- If the work is **HeaderST** header cosmetics (screenshot/URL of a company nav) — use `sitecore-headerst-variant`. HeaderST is shared across sites; variants must be `Version1`, `Version2`, … — never the client PascalCase name used by this skill.
 
 ## Why this phase exists
 

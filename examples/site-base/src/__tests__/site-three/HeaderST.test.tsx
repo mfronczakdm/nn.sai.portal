@@ -4,6 +4,8 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import {
   Default as HeaderSTDefault,
   LoginRequired as HeaderSTLoginRequired,
+  Version1 as HeaderSTVersion1,
+  Version2 as HeaderSTVersion2,
 } from '../../components/site-three/HeaderST';
 import {
   defaultHeaderSTProps,
@@ -16,6 +18,9 @@ import {
   headerSTPropsMiniCartOnly,
   headerSTPropsReverseTheme,
   headerSTPropsSpecialChars,
+  headerSTPropsHideCart,
+  headerSTPropsVersion1,
+  headerSTPropsVersion2,
 } from './HeaderST.mockProps';
 
 // Mock FontAwesome icon
@@ -50,6 +55,7 @@ jest.mock('.sitecore/component-map', () => ({
 // Mock Lucide icons
 jest.mock('lucide-react', () => ({
   User: (props: React.SVGProps<SVGSVGElement>) => <svg data-testid="lucide-user" {...props} />,
+  Search: (props: React.SVGProps<SVGSVGElement>) => <svg data-testid="lucide-search" {...props} />,
 }));
 
 const mockSignOut = jest.fn();
@@ -618,6 +624,109 @@ describe('HeaderST Component', () => {
       expect(() => {
         render(<HeaderSTDefault {...propsWithMalformedParams} />);
       }).not.toThrow();
+    });
+  });
+
+  describe('HideCart rendering parameter', () => {
+    it('hides cart on Default when HideCart is true', () => {
+      render(<HeaderSTDefault {...headerSTPropsHideCart} />);
+
+      expect(screen.queryByTestId('mini-cart')).not.toBeInTheDocument();
+      expect(screen.queryByTestId('fontawesome-icon')).not.toBeInTheDocument();
+    });
+
+    it('still shows cart on Default when HideCart is unset', () => {
+      render(<HeaderSTDefault {...defaultHeaderSTProps} />);
+
+      expect(screen.getByTestId('mini-cart')).toBeInTheDocument();
+    });
+  });
+
+  describe('Version1 variant', () => {
+    it('renders inverted two-row layout without throwing', () => {
+      render(<HeaderSTVersion1 {...headerSTPropsVersion1} />);
+
+      expect(document.querySelector('[data-header-st-layout="version1"]')).toBeInTheDocument();
+      expect(screen.getByTestId('sitecore-image')).toHaveAttribute('alt', 'Amkor Technology');
+    });
+
+    it('shows a desktop MENU control', () => {
+      render(<HeaderSTVersion1 {...headerSTPropsVersion1} />);
+
+      expect(screen.getByLabelText('Toggle menu')).toBeInTheDocument();
+      expect(screen.getByText('MENU')).toBeInTheDocument();
+    });
+
+    it('shows search when showSearchBox is true', () => {
+      render(<HeaderSTVersion1 {...headerSTPropsVersion1} />);
+
+      expect(screen.getByTestId('search-box')).toBeInTheDocument();
+    });
+
+    it('hides cart when HideCart is true', () => {
+      render(<HeaderSTVersion1 {...headerSTPropsVersion1} />);
+
+      expect(screen.queryByTestId('mini-cart')).not.toBeInTheDocument();
+      expect(screen.queryByTestId('fontawesome-icon')).not.toBeInTheDocument();
+    });
+
+    it('shows cart on Version1 when HideCart is unset', () => {
+      render(
+        <HeaderSTVersion1
+          {...headerSTPropsVersion1}
+          params={{
+            ...headerSTPropsVersion1.params,
+            HideCart: '',
+            showMiniCart: 'true',
+          }}
+        />
+      );
+
+      expect(screen.getByTestId('mini-cart')).toBeInTheDocument();
+    });
+  });
+
+  describe('Version2 variant', () => {
+    it('renders dark utility + light main row without throwing', () => {
+      render(<HeaderSTVersion2 {...headerSTPropsVersion2} />);
+
+      expect(document.querySelector('[data-header-st-layout="version2"]')).toBeInTheDocument();
+      expect(screen.getByTestId('sitecore-image')).toHaveAttribute('alt', 'Atlanta Market Andmore');
+    });
+
+    it('does not show the Version1 MENU label', () => {
+      render(<HeaderSTVersion2 {...headerSTPropsVersion2} />);
+
+      expect(screen.queryByText('MENU')).not.toBeInTheDocument();
+      expect(screen.getByLabelText('Toggle mobile menu')).toBeInTheDocument();
+    });
+
+    it('shows a search icon when showSearchBox is false', () => {
+      render(<HeaderSTVersion2 {...headerSTPropsVersion2} />);
+
+      expect(screen.queryByTestId('search-box')).not.toBeInTheDocument();
+      expect(screen.getByTestId('lucide-search')).toBeInTheDocument();
+    });
+
+    it('renders SupportLink as a pill CTA and Sign In as text', () => {
+      render(<HeaderSTVersion2 {...headerSTPropsVersion2} />);
+
+      const registerLinks = screen
+        .getAllByTestId('sitecore-link')
+        .filter((link) => link.getAttribute('href') === '/register');
+      expect(registerLinks.some((link) => link.className.includes('rounded-full'))).toBe(true);
+
+      const signInLinks = screen
+        .getAllByTestId('sitecore-link')
+        .filter((link) => link.getAttribute('href') === '/login');
+      expect(signInLinks.some((link) => link.textContent?.includes('Sign In'))).toBe(true);
+    });
+
+    it('hides cart when HideCart is true', () => {
+      render(<HeaderSTVersion2 {...headerSTPropsVersion2} />);
+
+      expect(screen.queryByTestId('mini-cart')).not.toBeInTheDocument();
+      expect(screen.queryByTestId('fontawesome-icon')).not.toBeInTheDocument();
     });
   });
 });

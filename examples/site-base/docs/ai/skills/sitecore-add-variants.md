@@ -12,6 +12,7 @@ Use this skill when:
 ## Do not use this skill when
 - the component itself does not exist yet and has no variants — use the appropriate creation skill first, then return here for variants
 - the requirement is a completely different component, not a variation of an existing one
+- the work is cosmetic theming of **HeaderST** from a company header screenshot or URL — use `sitecore-headerst-variant` (VersionN names, opt-in rendering params, do not restyle Default)
 
 ---
 

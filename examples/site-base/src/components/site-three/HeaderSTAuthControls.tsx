@@ -16,6 +16,9 @@ type HeaderSTAuthControlsProps = {
   loginLink?: LinkField;
   postLogoutRedirect?: string;
   className?: string;
+  linkClassName?: string;
+  /** `text` shows the LoginLink field text (e.g. Sign In) instead of the user icon. */
+  linkAppearance?: 'icon' | 'text';
 };
 
 function hasLinkHref(field?: LinkField): boolean {
@@ -34,6 +37,8 @@ export const HeaderSTAuthControls: React.FC<HeaderSTAuthControlsProps> = ({
   loginLink,
   postLogoutRedirect,
   className,
+  linkClassName,
+  linkAppearance = 'icon',
 }) => {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -44,6 +49,7 @@ export const HeaderSTAuthControls: React.FC<HeaderSTAuthControlsProps> = ({
     () => resolvePostLogoutRedirect(searchParams, postLogoutRedirect),
     [postLogoutRedirect, searchParams],
   );
+  const resolvedLinkClass = cn(utilityLinkClass, linkClassName);
 
   const handleLogout = useCallback(async () => {
     await signOut({ redirect: false });
@@ -62,12 +68,19 @@ export const HeaderSTAuthControls: React.FC<HeaderSTAuthControlsProps> = ({
   const isAuthenticated = status === 'authenticated' && session?.user;
   const showLoginLink = hasLinkHref(loginLink) && !isAuthenticated;
 
+  const loginLinkContent =
+    linkAppearance === 'text' ? undefined : (
+      <>
+        <User className="h-6 w-6" aria-hidden="true" />
+        <span className="sr-only">{loginLink?.value?.text || 'Login'}</span>
+      </>
+    );
+
   if (page.mode.isEditing && !isAuthenticated && loginLink && hasLinkHref(loginLink)) {
     return (
       <li className={cn('hidden lg:block', className)}>
-        <ContentSdkLink field={loginLink} prefetch={false} className={utilityLinkClass}>
-          <User className="h-6 w-6" aria-hidden="true" />
-          <span className="sr-only">{loginLink?.value?.text || 'Login'}</span>
+        <ContentSdkLink field={loginLink} prefetch={false} className={resolvedLinkClass}>
+          {loginLinkContent}
         </ContentSdkLink>
       </li>
     );
@@ -78,13 +91,13 @@ export const HeaderSTAuthControls: React.FC<HeaderSTAuthControlsProps> = ({
 
     return (
       <li className={cn('hidden items-center gap-2 lg:flex', className)}>
-        <span className="max-w-[12rem] truncate px-2 text-sm font-medium text-foreground" title={displayName}>
+        <span className={cn('max-w-[12rem] truncate px-2 text-sm font-medium text-foreground', linkClassName)} title={displayName}>
           {displayName}
         </span>
         <button
           type="button"
           onClick={handleLogout}
-          className={cn(utilityLinkClass, 'text-sm')}
+          className={cn(resolvedLinkClass, 'text-sm')}
         >
           Log out
         </button>
@@ -98,9 +111,8 @@ export const HeaderSTAuthControls: React.FC<HeaderSTAuthControlsProps> = ({
 
   return (
     <li className={cn('hidden lg:block', className)}>
-      <ContentSdkLink field={loginLink} prefetch={false} className={utilityLinkClass}>
-        <User className="h-6 w-6" aria-hidden="true" />
-        <span className="sr-only">{loginLink?.value?.text || 'Login'}</span>
+      <ContentSdkLink field={loginLink} prefetch={false} className={resolvedLinkClass}>
+        {loginLinkContent}
       </ContentSdkLink>
     </li>
   );

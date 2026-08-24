@@ -1,0 +1,51 @@
+# HeaderST layout recipes (Version1, Version2, …)
+# Read before creating a new HeaderST variant. Reuse a matching VersionN instead of duplicating layouts.
+# Default and LoginRequired are reserved — never restyle them for a demo.
+
+component: HeaderST
+tsxPath: src/components/site-three/HeaderST.tsx
+datasourceTemplateId: "{3CB38973-6209-4407-B463-4B017E0467CD}"
+datasourceTemplatePath: "/sitecore/templates/Project/click-click-launch/Sites/Site 3/HeaderST/HeaderST"
+renderingPath: "/sitecore/layout/Renderings/Project/click-click-launch/Global Elements/HeaderST"
+renderingItemId: "{90A922AA-E2A7-4553-A7AD-B89AC9318D6B}"
+parametersTemplateId: "{4B39645F-F45A-4099-817A-60A20E48DA25}"
+parametersTemplatePath: "/sitecore/templates/Project/click-click-launch/Sites/Site 3/HeaderST/Rendering Parameters/HeaderST Parameters"
+functionalitySectionId: "{0E23CA45-925A-4E01-899E-9FAE36D902F6}"
+
+reservedExports:
+  - Default
+  - LoginRequired
+
+existingParams:
+  - name: showSearchBox
+    type: Checkbox
+    itemId: "{CC0DE6CD-2EE2-4B94-88B8-C76361F85796}"
+    effect: "When true, render HeaderPreviewSearch; otherwise SearchLink as a text link"
+  - name: showMiniCart
+    type: Checkbox
+    itemId: "{5BB5BA3D-4FD2-41DA-B6C3-814CC2D71656}"
+    effect: "When true, render MiniCart drawer; otherwise CartLink as a cart icon"
+  - name: ReverseTheme
+    type: Checkbox
+    itemId: "{086782CC-6DC4-4918-86B1-4680EA595AB9}"
+    effect: "When true, second nav row uses bg-primary + primary-foreground"
+    note: "Do not create another ReverseTheme field — duplicates already exist under Functionality"
+  - name: HideCart
+    type: Checkbox
+    itemId: "{8DD858AB-1F52-4B3A-983B-B6CA90C90606}"
+    effect: "When true, do not render MiniCart or the cart icon. Unset keeps Default behavior."
+
+# Auth is orthogonal to layout. VersionN must honor RequireAuthForNav / LoginRequired detection.
+# Do not create Version1LoginRequired.
+
+versions:
+  - name: Version1
+    layout: "two-row inverted; utility top-right; MENU left + search bar + logo right; nav in overlay only"
+    paramsUsed: ["showSearchBox", "HideCart"]
+    usedBy: ["amkor"]
+    notes: "Language picker out of scope. One SupportLink stands in for Amkor's six utility links. Mega-menu out of scope — MENU overlay uses header-navigation placeholder."
+  - name: Version2
+    layout: "dark utility row; white main row; logo left; inline L1 nav; search icon right"
+    paramsUsed: ["HideCart", "showSearchBox"]
+    usedBy: ["atlanta-apparel", "americasmart"]
+    notes: "Location switcher (Atlanta/Las Vegas/High Point/New York) and Market Plan bookmark are out of scope. SupportLink styled as pill CTA (Register). LoginLink shown as Sign In text. Search is icon-only unless showSearchBox is on."

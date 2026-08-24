@@ -36,6 +36,7 @@ When the user asks to create, update, diagnose, or fix a Sitecore XM Cloud compo
 - the request mentions "variant", "variation", "alternate layout", or "alternate style"
 - a design shows two or more distinct layouts for the same component
 - an existing component needs a new named export / variant added
+- **Exception:** HeaderST demo theming (screenshot/URL of a company header) uses `sitecore-headerst-variant` instead — VersionN names, not client names
 
 ### Use `sitecore-create-page-template` when
 - the user wants a new **page type** (route template) that inherits from an existing base template
@@ -64,11 +65,18 @@ When the user asks to create, update, diagnose, or fix a Sitecore XM Cloud compo
 - this skill consumes the existing Landing Page template (status: complete in manifest) and creates a Sitecore content item with 40 personalized fields
 - **Prerequisite:** the Landing Page template must already exist (created by `sitecore-create-landing-page`). If it doesn't, route there first.
 
+### Use `sitecore-headerst-variant` when
+- the user wants to theme or restyle **HeaderST** for a demo
+- the user uploads a company **header screenshot** and/or **URL** and wants the site header to match
+- the request mentions HeaderST, site header cosmetics, "match their header", or header layout (search/cart visibility, reverse nav, VersionN)
+- HeaderST is shared across sites — work must be a `Version1` / `Version2` / … variant and/or opt-in rendering parameters, **never** a Default restyle and **never** named after the opportunity
+
 ### Use `sitecore-create-demo-variants` when
 - the demo builder pipeline reaches Phase 5.5
 - the user says "create custom variants", "match the screenshot exactly", "replicate the visual style", "pixel-perfect"
 - existing template variants are close but don't match the client's exact layout, spacing, or visual details
 - the user wants each component to look identical to the client's homepage, not just color-matched
+- **Exception:** HeaderST cosmetics go to `sitecore-headerst-variant`, not client-named variants
 
 ## Required process
 1. Classify the request before implementing.
@@ -99,7 +107,8 @@ Do not jump directly into code or Sitecore item changes until the request has be
 - create article page (orchestrator)
 - create landing page template (orchestrator — architecture)
 - create ABM landing page (per-account content-fill page instance)
-- create demo variants (pixel-perfect matching)
+- create demo variants (pixel-perfect matching, not HeaderST)
+- HeaderST cosmetic variant (VersionN + rendering params)
 
 ## Repo-first rule
 If repository conventions conflict with a default skill behavior, follow the repository convention and explain the deviation.

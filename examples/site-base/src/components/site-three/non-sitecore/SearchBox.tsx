@@ -30,7 +30,15 @@ const triggerClassName = cn(
   'text-foreground hover:text-primary'
 );
 
-export const SearchBox = ({ searchLink }: { searchLink: LinkField }) => {
+export const SearchBox = ({
+  searchLink,
+  appearance = 'trigger',
+  className,
+}: {
+  searchLink: LinkField;
+  appearance?: 'trigger' | 'bar';
+  className?: string;
+}) => {
   const t = useTranslations();
   const { isVisible, setIsVisible, ref } = useToggleWithClickOutside<HTMLDivElement>(false);
   const [searchTerm, setSearchTerm] = useState('');
@@ -66,31 +74,44 @@ export const SearchBox = ({ searchLink }: { searchLink: LinkField }) => {
     </>
   );
 
+  const isBar = appearance === 'bar';
+  const barTriggerClassName = cn(
+    'w-full bg-transparent px-1 py-3 text-left text-sm font-normal uppercase tracking-[0.28em]',
+    'text-background/50 hover:text-background/80',
+    className
+  );
+  const resolvedTriggerClassName = isBar ? barTriggerClassName : cn(triggerClassName, className);
+  const resolvedTriggerContent = isBar ? (
+    <span>{`${searchLabel}...`}</span>
+  ) : (
+    triggerContent
+  );
+
   return (
     // Do not add `relative` here — the panel uses lg:absolute and must size to the
     // sticky header (full width), not this narrow trigger wrapper.
-    <div ref={ref}>
+    <div ref={ref} className={isBar ? 'w-full min-w-0' : undefined}>
       {hasValidSearchLink ? (
         <ContentSdkLink
           field={searchLink}
           prefetch={false}
-          className={triggerClassName}
+          className={resolvedTriggerClassName}
           onClick={(e) => {
             e.preventDefault();
             setIsVisible(!isVisible);
           }}
         >
-          {triggerContent}
+          {resolvedTriggerContent}
         </ContentSdkLink>
       ) : (
         <button
           type="button"
-          className={cn(triggerClassName, 'w-full text-left')}
+          className={cn(resolvedTriggerClassName, 'w-full text-left')}
           onClick={() => setIsVisible(!isVisible)}
           aria-label={searchLabel}
           aria-expanded={isVisible}
         >
-          {triggerContent}
+          {resolvedTriggerContent}
         </button>
       )}
 
