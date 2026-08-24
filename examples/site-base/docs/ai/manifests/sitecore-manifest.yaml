@@ -1,5 +1,5 @@
 ﻿generatedAt: "2026-03-20T09:00:00Z"
-lastUpdatedAt: "2026-08-20T20:30:00Z"
+lastUpdatedAt: "2026-08-24T12:50:00Z"
 lastUpdatedBy: "cursor-agent"
 
 project:
@@ -2921,6 +2921,28 @@ pageTemplates:
       - "2026-05-20: All 3 pendingManual items verified via get_component and get_allowed_comps_by_ph â€” datasource template, datasource location, and available renderings all confirmed."
 
 lookups:
+  - path: "/sitecore/content/progressive/pkm/Data"
+    itemId: "{D37965BE-ED74-4694-9040-57AD038A3B70}"
+    lastReadAt: "2026-08-24T12:30:00Z"
+  - path: "/sitecore/templates/Project/progressive/components"
+    itemId: "{531E96EA-07C9-47F2-9860-6608951FB818}"
+    lastReadAt: "2026-08-24T12:30:00Z"
+  - path: "/sitecore/templates/Project/progressive/Folders"
+    itemId: "{E029593E-0900-4159-812B-7A90380D686C}"
+    lastReadAt: "2026-08-24T12:30:00Z"
+  - path: "/sitecore/templates/Project/progressive/Rendering Parameters"
+    itemId: "{21076582-6610-4894-97F6-C586D11D9C4A}"
+    lastReadAt: "2026-08-24T12:30:00Z"
+  - path: "/sitecore/layout/Renderings/Project/progressive"
+    itemId: "{04D318B2-B62F-4CE1-84A0-0E76FFE702FE}"
+    lastReadAt: "2026-08-24T12:30:00Z"
+  - path: "/sitecore/content/progressive/pkm/Presentation/Headless Variants"
+    itemId: "{62CB4534-B034-413D-AA11-05B67E197481}"
+    lastReadAt: "2026-08-24T12:30:00Z"
+  - path: "/sitecore/content/progressive/pkm/Presentation/Available Renderings/Page Content"
+    itemId: "{5EA156B8-2FF0-4FDC-81C1-5791F1A50CDD}"
+    lastReadAt: "2026-08-24T12:30:00Z"
+    note: "Available Renderings — NEVER replace, always concatenate; current value not readable via MCP"
   - path: "/sitecore/content/main/main-website/Data"
     itemId: "{E6C852B5-B70D-412C-B5C6-E6502842F74E}"
     lastReadAt: "2026-03-25T12:00:00Z"
@@ -7008,6 +7030,126 @@ ia:
       - "Field names use camelCase (Portal/Auth convention), not PascalCase from original fmc-custom-demo plan — matches React props exactly"
       - "2026-08-19: All Sitecore artifacts created via Marketer MCP in dfs/Portal project"
       - "2026-08-19: Refactored to shared Portal Login datasource; customerSlug template field deprecated"
+      - "2026-08-24: MCP tenant has no dfs/Portal — Authentication recreated under progressive/pkm (see Authentication progressive/pkm entry)"
+
+  - name: "Authentication"
+    kind: "simple"
+    category: "Page Content"
+    status: "complete"
+    createdAt: "2026-08-24T12:30:00Z"
+    updatedAt: "2026-08-24T12:50:00Z"
+    siteName: "pkm"
+    siteCollection: "progressive"
+    notes: >
+      Recreated for current Marketer MCP tenant (project.yaml: progressive/pkm).
+      dfs/Portal Authentication (category Portal) is not present in this environment.
+      React already existed; Sitecore templates/rendering/data mirrored from Portal field set (camelCase, no deprecated customerSlug).
+      2026-08-24T12:50: Re-verified live via Marketer MCP — all items present; no create/repair needed.
+      Authentication still NOT in get_allowed_comps_by_ph(headless-main) until Available Renderings updated.
+
+    react:
+      filePath: "src/components/authentication/Authentication.tsx"
+      componentMapKey: "Authentication"
+      variants:
+        - "Default"
+
+    sitecoreEnvironment:
+      siteName: "pkm"
+      siteCollection: "progressive"
+      note: "project.yaml active; dfs site/collection absent from this MCP instance"
+
+    templates:
+      datasource:
+        name: "Authentication"
+        path: "/sitecore/templates/Project/progressive/components/Authentication"
+        itemId: "{3EA981CB-74AB-4139-ACCA-0637C0BBD4CC}"
+        sectionName: "Authentication Settings"
+        sectionItemId: "{A97DBE51-EC13-4B70-8226-6E0BB3389CB1}"
+        fields:
+          - { name: "title", type: "Single-Line Text", itemId: "{C52A01E1-03F0-4D5B-8A25-39232E0AF26A}" }
+          - { name: "subtitle", type: "Single-Line Text", itemId: "{B3C4262B-08FD-4DC3-8BDC-9CE5AC65E824}" }
+          - { name: "logo", type: "Image", itemId: "{048DCC9D-8733-41DF-B728-D61F9E40B3AA}" }
+          - { name: "postLoginRedirect", type: "General Link", itemId: "{A6CB1A5C-FA0F-4152-9429-CA377FD369E0}" }
+          - { name: "loginButtonText", type: "Single-Line Text", itemId: "{B2BF5EC1-7057-45D8-BDCB-BD3FE6474B39}" }
+          - { name: "logoutButtonText", type: "Single-Line Text", itemId: "{0A0DBB61-8B8F-4EFC-B106-7149643525EB}" }
+          - { name: "userNameLabel", type: "Single-Line Text", itemId: "{AB9ED535-272F-4FE4-97F5-5EFFD47A0AAC}" }
+          - { name: "passwordLabel", type: "Single-Line Text", itemId: "{76E1D086-5FD8-47B5-9689-578EB1C53F1D}" }
+          - { name: "forgotPasswordLabel", type: "Single-Line Text", itemId: "{FE20394C-A0E9-4410-A42D-DAFDD9C27DD6}" }
+          - { name: "forgotPasswordLinkText", type: "Single-Line Text", itemId: "{69553349-8683-4B08-A855-2C7487431C7B}" }
+          - { name: "loginFailedMessage", type: "Single-Line Text", itemId: "{C564A87B-26F8-4019-860D-D30A819F7109}" }
+          - { name: "resetPasswordPath", type: "Single-Line Text", itemId: "{2C622232-4750-44B5-891E-7313DEEEB4C3}" }
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{66A433F1-04EA-4FA3-A01E-7AFB9AACB283}"
+          linked: true
+
+      folder:
+        name: "Authentication Folder"
+        path: "/sitecore/templates/Project/progressive/Folders/Authentication Folder"
+        itemId: "{1289EDB0-E68A-4D97-9B96-2AB9B3A2BE6E}"
+        standardValues:
+          itemId: "{AA536E0A-B9A3-4AC7-97DA-ADA852060141}"
+          linked: true
+          masters: ["Authentication"]
+
+      renderingParams:
+        name: "Authentication"
+        path: "/sitecore/templates/Project/progressive/Rendering Parameters/Authentication"
+        itemId: "{8A8CECF7-096C-44BD-843E-F29CAC7A6FB7}"
+        standardValues:
+          itemId: "{088FE451-1B41-459A-9E18-7108B00975C0}"
+        paramFields:
+          - { name: "redirectUrl", type: "Single-Line Text", itemId: "{058C2090-0774-4C8A-968C-4BED272390B0}" }
+          - { name: "postLogoutRedirect", type: "Single-Line Text", itemId: "{C173B434-8640-4F5A-AC94-8E7F103E78CD}" }
+        baseTemplatesSet: true
+
+    datasourceFolder:
+      name: "Authentication"
+      path: "/sitecore/content/progressive/pkm/Data/Authentication"
+      itemId: "{0957F09F-0D4F-4399-A769-BBC9AAEE94C5}"
+      insertOptionsSet: true
+      exampleItems:
+        - { name: "Portal Login", itemId: "{9E142BB9-556A-4F14-84AE-9AE6A22FE1DE}", path: "/sitecore/content/progressive/pkm/Data/Authentication/Portal Login" }
+
+    rendering:
+      name: "Authentication"
+      path: "/sitecore/layout/Renderings/Project/progressive/Authentication"
+      itemId: "{203D59C9-BCDF-4BED-859D-F81F0BE44266}"
+      componentName: "Authentication"
+      datasourceTemplatePath: "/sitecore/templates/Project/progressive/components/Authentication"
+      datasourceLocationQuery: "query:$site/*[@@name='Data']/*[@@templatename='Authentication Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='Authentication Folder']"
+      parametersTemplateId: "{8A8CECF7-096C-44BD-843E-F29CAC7A6FB7}"
+      componentQuery: ""
+      addFieldEditorButton: "1"
+      registeredInAvailableRenderings: false
+
+    headlessVariants:
+      containerPath: "/sitecore/content/progressive/pkm/Presentation/Headless Variants/Authentication"
+      containerId: "{C1B97335-475D-4B3C-BCCF-9059A56ACF0B}"
+      variants:
+        - { name: "Default", itemId: "{61FC6611-B910-4F28-AE38-000B904059C5}" }
+
+    verification:
+      checkedAt: "2026-08-24T12:50:00Z"
+      passed:
+        - "React Authentication already present; component map key Authentication (client)"
+        - "Datasource template with 12 camelCase fields matching authentication.props.ts"
+        - "Base templates Standard + Grid Parameters set"
+        - "Folder template + Data/Authentication folder; list_avail_insertopts returns Authentication"
+        - "Portal Login example datasource populated"
+        - "Rendering Parameters with redirectUrl and postLogoutRedirect"
+        - "JSON Rendering; get_component confirms datasource template, location, and fields"
+        - "Headless Variants Default created"
+        - "Workflow null on Portal Login / Data folder (publish-ready)"
+        - "2026-08-24 re-verify: rendering {203D59C9…}, templates, Data folder, Portal Login, variants all found via MCP"
+        - "list_components(pkm) includes Authentication under category progressive"
+      failed: []
+      pendingManual:
+        - "Register Authentication {203D59C9-BCDF-4BED-859D-F81F0BE44266} on Presentation/Available Renderings/Page Content (needs current Renderings value from CE — do not overwrite with partial list); confirmed still missing from get_allowed_comps_by_ph headless-main"
+        - "Verify Datasource Template/Location and __Masters silent-writes in Content Editor"
+        - "Publish Authentication templates, rendering, Data folder, and Portal Login for Edge"
+        - "Create Login page under Home (none exists yet) and add Authentication rendering in Pages"
+        - "If dfs Portal tenant is needed again, reconnect MCP to that environment (original Portal entry above)"
 
   - name: "PortalHub"
     kind: "list"

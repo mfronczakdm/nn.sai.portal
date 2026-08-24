@@ -37,6 +37,9 @@ export const SITE_SKINS: Readonly<Record<string, AppTheme>> = {
   dfsupply: 'dfsupply',
   /** DFS manager portal site — Skin field should be `dfsupply` in Sitecore. */
   dfs: 'dfsupply',
+  amkor: 'amkor',
+  'atlanta-apparel': 'atlanta-apparel',
+  americasmart: 'americasmart',
 
   // Example: site name differs from skin
   // 'acme-demo': 'rockland',

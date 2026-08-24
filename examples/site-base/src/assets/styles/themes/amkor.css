@@ -1,0 +1,82 @@
+/**
+ * Theme: amkor
+ * Skin key / data-theme: amkor
+ * Source: https://amkor.com/ (screenshot primary + Playwright extraction)
+ * Activate via Sitecore Site definition Skin field (mirrored in src/lib/theme/site-skins.ts).
+ *
+ * Navy chrome #002D5B (header / footer / section headings).
+ * Vibrant CTA blue #2B59FF (hero buttons, secondary headings).
+ * Open Sans throughout. Square geometry (0 radius).
+ */
+
+[data-theme='amkor'] {
+  --background-image-gradient: linear-gradient(180deg, #2b59ff 0%, #002d5b 100%);
+  --background-image-gradient-secondary: linear-gradient(90deg, #677385 0%, #002d5b 50%, #2b59ff 100%);
+
+  --color-background: #ffffff;
+  --color-foreground: #212529;
+  --color-card: #ffffff;
+  --color-card-foreground: #212529;
+  --color-popover: #ffffff;
+  --color-popover-foreground: #212529;
+
+  --color-primary: #002d5b;
+  --color-primary-foreground: #ffffff;
+  --color-primary-hover: #00244a;
+
+  --color-secondary: #f4f4f4;
+  --color-secondary-foreground: #002d5b;
+  --color-secondary-hover: #e8e8e8;
+
+  --color-muted: #f4f4f4;
+  --color-muted-foreground: #677385;
+
+  --color-accent: #2b59ff;
+  --color-accent-foreground: #ffffff;
+
+  --color-destructive: #dc2626;
+  --color-destructive-hover: #b91c1c;
+  --color-destructive-foreground: #ffffff;
+
+  --color-border: #d4d4d4;
+  --color-input: #d4d4d4;
+  --color-ring: #2b59ff;
+
+  --color-tertiary: #f4f4f4;
+  --color-tertiary-foreground: #002d5b;
+  --color-tertiary-hover: #e8e8e8;
+
+  --color-dark: #002d5b;
+  --color-dark-foreground: #ffffff;
+  --color-dark-hover: #001f40;
+
+  --color-light: #fafafa;
+  --color-light-hover: #f4f4f4;
+  --color-light-foreground: #212529;
+
+  --color-overlay: rgb(0 45 91 / 0.45);
+
+  /* Amkor extras — semiconductor / high-tech chrome */
+  --border-radius-default: 0;
+  --border-radius-sm: 0;
+  --border-radius-md: 0;
+  --border-radius-lg: 0;
+  --radius: 0;
+  --color-header-background: #002d5b;
+  --color-header-foreground: #ffffff;
+  --color-footer-background: #002d5b;
+  --color-footer-foreground: #ffffff;
+  --color-footer-mid: #677385;
+  --color-utility-bar: #1a1a1a;
+  --color-careers-magenta: #c2185b;
+  --color-accent-hover: #244adb;
+}
+
+[data-theme='amkor'] .bg-primary {
+  color: var(--color-primary-foreground);
+}
+
+[data-theme='amkor'] .bg-dark,
+[data-theme='amkor'] .bg-accent {
+  color: var(--color-dark-foreground);
+}

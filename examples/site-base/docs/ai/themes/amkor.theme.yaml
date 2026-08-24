@@ -1,0 +1,96 @@
+# Client Brand Theme — Amkor Technology
+# Wired into the app via the create-new-theme skill (data-theme="amkor").
+# Token CSS: src/assets/styles/themes/amkor.css
+
+client:
+  name: "Amkor Technology"
+  sourceUrl: "https://amkor.com/"
+  extractedAt: "2026-08-24"
+  extractedBy: "cursor"
+
+colors:
+  primary: "#002D5B"
+  primaryForeground: "#ffffff"
+  secondary: "#F4F4F4"
+  secondaryForeground: "#002D5B"
+  accent: "#2B59FF"
+  accentForeground: "#ffffff"
+  background: "#ffffff"
+  foreground: "#212529"
+  muted: "#F4F4F4"
+  mutedForeground: "#677385"
+  headerBackground: "#002D5B"
+  headerForeground: "#ffffff"
+  footerBackground: "#002D5B"
+  footerForeground: "#ffffff"
+  border: "#D4D4D4"
+  ring: "#2B59FF"
+  extra:
+    - name: "primary-hover"
+      value: "#00244A"
+    - name: "accent-hover"
+      value: "#244ADB"
+    - name: "footer-mid"
+      value: "#677385"
+    - name: "careers-magenta"
+      value: "#C2185B"
+    - name: "utility-bar"
+      value: "#1A1A1A"
+    - name: "border-radius"
+      value: "0"
+
+typography:
+  headingFamily: "Open Sans"
+  headingWeight: "600"
+  bodyFamily: "Open Sans"
+  bodyWeight: "400"
+  googleFontsUrl: "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"
+  headingTransform: "none"
+  letterSpacing: "normal"
+  scale:
+    hero: "56px"
+    h1: "56px"
+    h2: "45px"
+    h3: "34px"
+    body: "16px"
+    small: "14px"
+
+shape:
+  borderRadius: "0"
+  buttonRadius: "0"
+  cardRadius: "0"
+  shadowStyle: "none"
+  borderStyle: "subtle"
+
+tone:
+  overall: "corporate-high-tech"
+  colorMode: "light"
+  contrast: "high"
+  imagery: "technical-photography"
+  heroStyle: "full-bleed-image-with-overlay-text"
+  cardStyle: "flat-image-title"
+  navStyle: "slim-navy-bar"
+
+tailwind:
+  colors:
+    brand:
+      primary: "#002D5B"
+      secondary: "#F4F4F4"
+      accent: "#2B59FF"
+  fontFamily:
+    heading: ["Open Sans", "Arial", "ui-sans-serif", "system-ui", "sans-serif"]
+    body: ["Open Sans", "Arial", "ui-sans-serif", "system-ui", "sans-serif"]
+  borderRadius:
+    DEFAULT: "0"
+
+extraction:
+  confidence: "high"
+  method: "user-screenshot-primary + playwright-supplementary"
+  notes:
+    - "Screenshot is source of truth for navy header (#002D5B) and vibrant hero CTA (#2B59FF)."
+    - "Playwright computed styles returned muted gray body/footer (#677385) and Open Sans typography."
+    - "Google Fonts link confirms Open Sans 300/400/600/700 — already loaded via next/font as --font-open-sans."
+    - "Proprietary icon fonts (electricFont, mems) ignored; UI uses Open Sans."
+    - "Square geometry (0 radius) on buttons and cards."
+    - "Careers section uses magenta/pink geometric band (~#C2185B) as brand accent extra."
+    - "Primary = navy chrome; accent = vibrant CTA blue; btn-primary styled to accent in fonts.css."

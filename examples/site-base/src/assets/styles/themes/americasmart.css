@@ -1,0 +1,91 @@
+/**
+ * Theme: americasmart
+ * Skin key / data-theme: americasmart
+ * Source: https://www.americasmart.com/ (screenshot primary; scraper timed out)
+ * Activate via Sitecore Site definition Skin field (mirrored in src/lib/theme/site-skins.ts).
+ *
+ * Deep navy/teal (#003B4F) bands & primary CTAs. Warm beige hero (#F5F1EE).
+ * White surfaces; light gray resources (#F2F2F2). Black secondary CTAs.
+ * Proprietary Avenir → Montserrat / Open Sans (see fonts.css). Square CTAs.
+ */
+
+[data-theme='americasmart'] {
+  --background-image-gradient: linear-gradient(180deg, #f5f1ee 0%, #003b4f 100%);
+  --background-image-gradient-secondary: linear-gradient(
+    90deg,
+    #003b4f 0%,
+    #f5f1ee 50%,
+    #003b4f 100%
+  );
+
+  --color-background: #ffffff;
+  --color-foreground: #1a1a1a;
+  --color-card: #ffffff;
+  --color-card-foreground: #1a1a1a;
+  --color-popover: #ffffff;
+  --color-popover-foreground: #1a1a1a;
+
+  --color-primary: #003b4f;
+  --color-primary-foreground: #ffffff;
+  --color-primary-hover: #002a38;
+
+  --color-secondary: #f5f1ee;
+  --color-secondary-foreground: #003b4f;
+  --color-secondary-hover: #ebe6e1;
+
+  --color-muted: #f2f2f2;
+  --color-muted-foreground: #5c6670;
+
+  --color-accent: #000000;
+  --color-accent-foreground: #ffffff;
+
+  --color-destructive: #dc2626;
+  --color-destructive-hover: #b91c1c;
+  --color-destructive-foreground: #ffffff;
+
+  --color-border: #e0e0e0;
+  --color-input: #e0e0e0;
+  --color-ring: #003b4f;
+
+  --color-tertiary: #f2f2f2;
+  --color-tertiary-foreground: #1a1a1a;
+  --color-tertiary-hover: #e8e8e8;
+
+  --color-dark: #003b4f;
+  --color-dark-foreground: #ffffff;
+  --color-dark-hover: #002a38;
+
+  --color-light: #f5f1ee;
+  --color-light-hover: #ebe6e1;
+  --color-light-foreground: #1a1a1a;
+
+  --color-overlay: rgb(0 59 79 / 0.45);
+
+  /* AmericasMart extras — sharp rectangles match live site */
+  --border-radius-default: 0;
+  --border-radius-sm: 0;
+  --border-radius-md: 0;
+  --border-radius-lg: 0;
+  --radius: 0;
+  --color-header-background: #ffffff;
+  --color-header-foreground: #1a1a1a;
+  --color-footer-background: #ffffff;
+  --color-footer-foreground: #1a1a1a;
+  --color-link: #003b4f;
+  --color-hero-surface: #f5f1ee;
+  --color-section-band: #003b4f;
+  --color-resources-surface: #f2f2f2;
+}
+
+[data-theme='americasmart'] .bg-primary {
+  color: var(--color-primary-foreground);
+}
+
+[data-theme='americasmart'] .bg-dark,
+[data-theme='americasmart'] .bg-accent {
+  color: var(--color-dark-foreground);
+}
+
+[data-theme='americasmart'] a:not([class]) {
+  color: var(--color-link);
+}

@@ -1,0 +1,84 @@
+/**
+ * Theme: atlanta-apparel
+ * Skin key / data-theme: atlanta-apparel
+ * Source: https://www.atlanta-apparel.com/ (screenshot primary + Playwright extraction)
+ * Activate via Sitecore Site definition Skin field (mirrored in src/lib/theme/site-skins.ts).
+ *
+ * Dark olive primary (#4A5844) for CTAs and lead-gen bands. Tan accent (#8C6D52) for
+ * hero/section display headings. White surfaces, black body text, sharp rectangular CTAs.
+ */
+
+[data-theme='atlanta-apparel'] {
+  --background-image-gradient: linear-gradient(180deg, #8c6d52 0%, #4a5844 100%);
+  --background-image-gradient-secondary: linear-gradient(90deg, #4a5844 0%, #8c6d52 50%, #4a5844 100%);
+
+  --color-background: #ffffff;
+  --color-foreground: #000000;
+  --color-card: #ffffff;
+  --color-card-foreground: #000000;
+  --color-popover: #ffffff;
+  --color-popover-foreground: #000000;
+
+  --color-primary: #4a5844;
+  --color-primary-foreground: #ffffff;
+  --color-primary-hover: #3f4b3a;
+
+  --color-secondary: #f4f4f4;
+  --color-secondary-foreground: #000000;
+  --color-secondary-hover: #e8e8e8;
+
+  --color-muted: #f4f4f4;
+  --color-muted-foreground: #6b6b6b;
+
+  --color-accent: #8c6d52;
+  --color-accent-foreground: #ffffff;
+
+  --color-destructive: #dc2626;
+  --color-destructive-hover: #b91c1c;
+  --color-destructive-foreground: #ffffff;
+
+  --color-border: #e5e5e5;
+  --color-input: #e5e5e5;
+  --color-ring: #4a5844;
+
+  --color-tertiary: #f4f4f4;
+  --color-tertiary-foreground: #000000;
+  --color-tertiary-hover: #e8e8e8;
+
+  --color-dark: #000000;
+  --color-dark-foreground: #ffffff;
+  --color-dark-hover: #1a1a1a;
+
+  --color-light: #fafafa;
+  --color-light-hover: #f4f4f4;
+  --color-light-foreground: #000000;
+
+  --color-overlay: rgb(74 88 68 / 0.45);
+
+  /* Atlanta Apparel extras — sharp geometry, brand surfaces */
+  --border-radius-default: 0;
+  --border-radius-sm: 0;
+  --border-radius-md: 0;
+  --border-radius-lg: 0;
+  --radius: 0;
+  --color-header-background: #ffffff;
+  --color-header-foreground: #000000;
+  --color-footer-background: #ffffff;
+  --color-footer-foreground: #000000;
+  --color-link: #ec5115;
+  --color-section-heading: #8c6d52;
+  --color-cta-band: #4a5844;
+}
+
+[data-theme='atlanta-apparel'] .bg-primary {
+  color: var(--color-primary-foreground);
+}
+
+[data-theme='atlanta-apparel'] .bg-dark,
+[data-theme='atlanta-apparel'] .bg-accent {
+  color: var(--color-dark-foreground);
+}
+
+[data-theme='atlanta-apparel'] a:not([class]) {
+  color: var(--color-link);
+}

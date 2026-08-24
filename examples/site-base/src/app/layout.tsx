@@ -58,11 +58,11 @@ const roboto = Roboto({
   display: 'swap',
 });
 
-/** Rockland Trust + Pillsbury Law headings — Montserrat */
+/** Rockland Trust + Pillsbury Law + Atlanta Apparel — Montserrat (Centra Andmore substitute) */
 const montserrat = Montserrat({
   subsets: ['latin', 'latin-ext'],
   variable: '--font-montserrat',
-  weight: ['500', '600', '700'],
+  weight: ['400', '500', '600', '700', '900'],
   display: 'swap',
 });
 

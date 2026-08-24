@@ -23,6 +23,9 @@ export const APP_THEMES = [
   'amesburytruth',
   'era',
   'dfsupply',
+  'amkor',
+  'atlanta-apparel',
+  'americasmart',
 ] as const;
 
 export type AppTheme = (typeof APP_THEMES)[number];

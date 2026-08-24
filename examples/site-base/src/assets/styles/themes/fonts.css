@@ -183,3 +183,78 @@ html[data-theme='dfsupply'] .btn.btn-primary:hover {
   background-color: var(--color-primary-hover);
   color: var(--color-primary-foreground);
 }
+
+/* amkor.com: Open Sans everywhere; navy chrome + vibrant blue CTAs; square buttons. */
+html[data-theme='amkor'] {
+  --font-body: var(--font-open-sans), 'Open Sans', Arial, Helvetica, ui-sans-serif, system-ui,
+    sans-serif;
+  --font-heading: var(--font-open-sans), 'Open Sans', Arial, Helvetica, ui-sans-serif, system-ui,
+    sans-serif;
+  --font-accent: var(--font-open-sans), 'Open Sans', Arial, Helvetica, ui-sans-serif, system-ui,
+    sans-serif;
+  --font-weight-heading: 600;
+}
+
+html[data-theme='amkor'] .btn.btn-primary {
+  background-color: var(--color-accent);
+  color: var(--color-accent-foreground);
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+html[data-theme='amkor'] .btn.btn-primary:hover {
+  background-color: var(--color-accent-hover);
+  color: var(--color-accent-foreground);
+}
+
+/* americasmart.com: Avenir → Montserrat headings + Open Sans body; uppercase display; square CTAs. */
+html[data-theme='americasmart'] {
+  --font-body: var(--font-open-sans), 'Open Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-montserrat), 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+  --font-accent: var(--font-montserrat), 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+  --font-weight-heading: 700;
+}
+
+html[data-theme='americasmart'] :where(h1, .h1, h2, .h2, h3, .h3) {
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+html[data-theme='americasmart'] .btn.btn-primary {
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+html[data-theme='americasmart'] .btn.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  color: var(--color-primary-foreground);
+}
+
+/* atlanta-apparel.com: Centra Andmore (proprietary) → Montserrat; uppercase display headings; sharp CTAs. */
+html[data-theme='atlanta-apparel'] {
+  --font-body: var(--font-montserrat), 'Montserrat', Helvetica, Arial, ui-sans-serif, system-ui,
+    sans-serif;
+  --font-heading: var(--font-montserrat), 'Montserrat', Helvetica, Arial, ui-sans-serif, system-ui,
+    sans-serif;
+  --font-accent: var(--font-montserrat), 'Montserrat', Helvetica, Arial, ui-sans-serif, system-ui,
+    sans-serif;
+  --font-weight-heading: 700;
+}
+
+html[data-theme='atlanta-apparel'] :where(h1, .h1, h2, .h2, h3, .h3) {
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+html[data-theme='atlanta-apparel'] .btn.btn-primary {
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+html[data-theme='atlanta-apparel'] .btn.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  color: var(--color-primary-foreground);
+}
