@@ -26,6 +26,7 @@ export const APP_THEMES = [
   'amkor',
   'atlanta-apparel',
   'americasmart',
+  'lcmc',
 ] as const;
 
 export type AppTheme = (typeof APP_THEMES)[number];

@@ -21,6 +21,11 @@ import * as BioDetail from 'src/components/uiim/lawyers/BioDetail';
 import * as biorelatedcontent from 'src/components/uiim/lawyers/bio-related-content';
 import * as biodetailprops from 'src/components/uiim/lawyers/bio-detail.props';
 import * as BlogListing from 'src/components/uiim/insights/BlogListing';
+import * as SplitFeature from 'src/components/uiim/global-elements/SplitFeature';
+import * as ListingBlock from 'src/components/uiim/global-elements/ListingBlock';
+import * as LinkColumnsBand from 'src/components/uiim/global-elements/LinkColumnsBand';
+import * as IconLinkBar from 'src/components/uiim/global-elements/IconLinkBar';
+import * as ButtonRow from 'src/components/uiim/global-elements/ButtonRow';
 import * as HeroCarousel from 'src/components/uiim/banners/HeroCarousel';
 import * as TopicListing from 'src/components/topic-listing/TopicListing';
 import * as TopicItemdev from 'src/components/topic-listing/TopicItem.dev';
@@ -319,6 +324,11 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['bio-related-content', { ...biorelatedcontent }],
   ['bio-detail', { ...biodetailprops }],
   ['BlogListing', { ...BlogListing, componentType: 'client' }],
+  ['SplitFeature', { ...SplitFeature }],
+  ['ListingBlock', { ...ListingBlock }],
+  ['LinkColumnsBand', { ...LinkColumnsBand }],
+  ['IconLinkBar', { ...IconLinkBar }],
+  ['ButtonRow', { ...ButtonRow }],
   ['HeroCarousel', { ...HeroCarousel, componentType: 'client' }],
   ['TopicListing', { ...TopicListing }],
   ['TopicItem', { ...TopicItemdev }],

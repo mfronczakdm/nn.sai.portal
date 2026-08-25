@@ -210,6 +210,24 @@ export const headerSTPropsVersion1 = {
   },
 };
 
+export const headerSTPropsVersion3 = {
+  rendering: { componentName: 'HeaderST' },
+  params: {
+    showSearchBox: 'true',
+    showMiniCart: 'false',
+    HideCart: '1',
+    DynamicPlaceholderId: 'main-nav',
+  },
+  page: mockPage,
+  fields: {
+    Logo: createMockImageField('/images/lcmc-logo.svg', 'LCMC Health'),
+    SupportLink: createMockLinkField('/contact-us', 'Contact Us'),
+    SearchLink: createMockLinkField('/search', 'Search LCMC Health'),
+    CartLink: createMockLinkField('/cart', 'Cart'),
+    LoginLink: createMockLinkField('/login', 'Login'),
+  },
+};
+
 export const headerSTPropsVersion2 = {
   rendering: { componentName: 'HeaderST' },
   params: {

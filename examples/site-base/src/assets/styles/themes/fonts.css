@@ -258,3 +258,23 @@ html[data-theme='atlanta-apparel'] .btn.btn-primary:hover {
   background-color: var(--color-primary-hover);
   color: var(--color-primary-foreground);
 }
+
+/* lcmchealth.org: Jubilat display → Zilla Slab; Gilroy/Arial body → Open Sans; green rounded CTAs. */
+html[data-theme='lcmc'] {
+  --font-body: var(--font-open-sans), 'Open Sans', Arial, Helvetica, ui-sans-serif, system-ui,
+    sans-serif;
+  --font-heading: var(--font-zilla-slab), 'Zilla Slab', Georgia, 'Times New Roman', serif;
+  --font-accent: var(--font-open-sans), 'Open Sans', Arial, Helvetica, ui-sans-serif, system-ui,
+    sans-serif;
+  --font-weight-heading: 500;
+}
+
+html[data-theme='lcmc'] .btn.btn-primary {
+  background-color: var(--color-accent);
+  color: var(--color-accent-foreground);
+}
+
+html[data-theme='lcmc'] .btn.btn-primary:hover {
+  background-color: var(--color-accent-hover);
+  color: var(--color-accent-foreground);
+}

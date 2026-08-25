@@ -1,5 +1,5 @@
 ﻿generatedAt: "2026-03-20T09:00:00Z"
-lastUpdatedAt: "2026-08-24T12:50:00Z"
+lastUpdatedAt: "2026-08-25T03:30:00Z"
 lastUpdatedBy: "cursor-agent"
 
 project:
@@ -2920,6 +2920,155 @@ pageTemplates:
       - "2026-05-20: Created SearchExperienceV2 (Issue #34). Replaces JSON config with 7 individual template fields. ADR 0004."
       - "2026-05-20: All 3 pendingManual items verified via get_component and get_allowed_comps_by_ph â€” datasource template, datasource location, and available renderings all confirmed."
 
+  - name: "Services Page"
+    kind: "page-template"
+    category: "Page Types"
+    status: "complete"
+    createdAt: "2026-08-25T01:25:00Z"
+    updatedAt: "2026-08-25T01:30:00Z"
+    siteName: "lcmc"
+    siteCollection: "lcmc"
+    copiedFrom:
+      name: "Services Page"
+      path: "/sitecore/templates/Project/Cooley/Services Page"
+      itemId: "{25CF32E0-C2D1-4E72-8CB9-FDEB000BE0D7}"
+    baseTemplate:
+      name: "Detail Page"
+      path: "/sitecore/templates/Project/click-click-launch/Site/Detail Page"
+      itemId: "{A9919790-3389-4FC2-ABC8-24F73C847C8E}"
+      note: "Shared foundation base used by Cooley Services Page; not Cooley-specific. Same GUID used by lcmc/amkor/andmore Detail Page templates."
+    templates:
+      pageTemplate:
+        name: "Services Page"
+        path: "/sitecore/templates/Project/lcmc/Services Page"
+        itemId: "{D77937AC-BAE4-4EB0-8D7E-69EC09D5BBFC}"
+        sectionName: "Page Content"
+        sectionId: "{C0B094F4-CA6A-4FA6-8573-DB43FDD3ACFE}"
+        fields:
+          - { name: "Detail", type: "Rich Text", itemId: "{A8A1DFCB-7DD5-4413-8789-DB24A95E439F}", title: "", source: "", shared: "", unversioned: "" }
+          - { name: "image", type: "Image", itemId: "{9D32260E-215D-4EFF-80DE-6D469DAADBC4}", title: "", source: "", shared: "", unversioned: "" }
+        inheritsFrom: "Detail Page"
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{318EDF69-23AA-4B3D-856E-712EC3B89A07}"
+          path: "/sitecore/templates/Project/lcmc/Services Page/__Standard Values"
+          linked: true
+    verification:
+      checkedAt: "2026-08-25T01:30:00Z"
+      passed:
+        - "Template exists at /sitecore/templates/Project/lcmc/Services Page"
+        - "Base template set to shared Detail Page {A9919790-3389-4FC2-ABC8-24F73C847C8E}"
+        - "Page Content section created"
+        - "Detail field Type Rich Text"
+        - "image field Type Image"
+        - "Standard Values created based on owning template"
+        - "get_page_template_by_id returns inherited page/metadata/og fields"
+      failed: []
+      pendingManual:
+        - "__Standard values link on template (silent-write)"
+        - "Insert options / __Masters — Cooley SV had none readable via MCP; list_avail_insertopts fails on template items (no site root)"
+    notes:
+      - "2026-08-25: Copied Cooley Services Page to lcmc Project templates as a loose item (same structure as Cooley, not under a subfolder)."
+
+  - name: "Services Page"
+    kind: "page-template"
+    category: "Page Types"
+    status: "complete"
+    createdAt: "2026-08-25T01:25:00Z"
+    updatedAt: "2026-08-25T01:30:00Z"
+    siteName: "amkor"
+    siteCollection: "amkor"
+    copiedFrom:
+      name: "Services Page"
+      path: "/sitecore/templates/Project/Cooley/Services Page"
+      itemId: "{25CF32E0-C2D1-4E72-8CB9-FDEB000BE0D7}"
+    baseTemplate:
+      name: "Detail Page"
+      path: "/sitecore/templates/Project/click-click-launch/Site/Detail Page"
+      itemId: "{A9919790-3389-4FC2-ABC8-24F73C847C8E}"
+      note: "Shared foundation base used by Cooley Services Page; not Cooley-specific."
+    templates:
+      pageTemplate:
+        name: "Services Page"
+        path: "/sitecore/templates/Project/amkor/Services Page"
+        itemId: "{B2B918C3-ACDA-433F-A11B-718466493AEC}"
+        sectionName: "Page Content"
+        sectionId: "{60F31EEA-63B2-4976-BA3C-CBF467220E5C}"
+        fields:
+          - { name: "Detail", type: "Rich Text", itemId: "{9C0F3BFA-27D9-4C2F-B589-6F67BEAF207B}", title: "", source: "", shared: "", unversioned: "" }
+          - { name: "image", type: "Image", itemId: "{75EEE468-E1A7-4C63-A2D3-43A4956CF1DC}", title: "", source: "", shared: "", unversioned: "" }
+        inheritsFrom: "Detail Page"
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{997233E3-68DF-460B-876C-49C666EFDE55}"
+          path: "/sitecore/templates/Project/amkor/Services Page/__Standard Values"
+          linked: true
+    verification:
+      checkedAt: "2026-08-25T01:30:00Z"
+      passed:
+        - "Template exists at /sitecore/templates/Project/amkor/Services Page"
+        - "Base template set to shared Detail Page {A9919790-3389-4FC2-ABC8-24F73C847C8E}"
+        - "Page Content section created"
+        - "Detail field Type Rich Text"
+        - "image field Type Image"
+        - "Standard Values created based on owning template"
+      failed: []
+      pendingManual:
+        - "__Standard values link on template (silent-write)"
+        - "Insert options / __Masters — Cooley SV had none readable via MCP"
+    notes:
+      - "2026-08-25: Copied Cooley Services Page to amkor Project templates as a loose item (same structure as Cooley)."
+
+  - name: "Services Page"
+    kind: "page-template"
+    category: "Page Types"
+    status: "complete"
+    createdAt: "2026-08-25T01:25:00Z"
+    updatedAt: "2026-08-25T01:30:00Z"
+    siteName: "andmore"
+    siteCollection: "andmore"
+    copiedFrom:
+      name: "Services Page"
+      path: "/sitecore/templates/Project/Cooley/Services Page"
+      itemId: "{25CF32E0-C2D1-4E72-8CB9-FDEB000BE0D7}"
+    baseTemplate:
+      name: "Detail Page"
+      path: "/sitecore/templates/Project/click-click-launch/Site/Detail Page"
+      itemId: "{A9919790-3389-4FC2-ABC8-24F73C847C8E}"
+      note: "Shared foundation base used by Cooley Services Page; not Cooley-specific. Created once at andmore tenant Project root (not per site americasmart/atlanta-apparel)."
+    templates:
+      pageTemplate:
+        name: "Services Page"
+        path: "/sitecore/templates/Project/andmore/Services Page"
+        itemId: "{69728677-52E5-4482-A415-94F0222799B8}"
+        sectionName: "Page Content"
+        sectionId: "{D26A1EDD-628F-42C2-AF81-86D213CF8B54}"
+        fields:
+          - { name: "Detail", type: "Rich Text", itemId: "{F79467FB-89E8-478B-8AC7-5B37B53C1C0C}", title: "", source: "", shared: "", unversioned: "" }
+          - { name: "image", type: "Image", itemId: "{18AB03D1-C9AE-4F00-815D-220FCB2D80E5}", title: "", source: "", shared: "", unversioned: "" }
+        inheritsFrom: "Detail Page"
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{78DEB7E8-BEC2-4BF6-B9A8-BC7F5EE1540A}"
+          path: "/sitecore/templates/Project/andmore/Services Page/__Standard Values"
+          linked: true
+    verification:
+      checkedAt: "2026-08-25T01:30:00Z"
+      passed:
+        - "Template exists at /sitecore/templates/Project/andmore/Services Page"
+        - "Base template set to shared Detail Page {A9919790-3389-4FC2-ABC8-24F73C847C8E}"
+        - "Page Content section created"
+        - "Detail field Type Rich Text"
+        - "image field Type Image"
+        - "Standard Values created based on owning template"
+      failed: []
+      pendingManual:
+        - "__Standard values link on template (silent-write)"
+        - "Insert options / __Masters — Cooley SV had none readable via MCP"
+        - "Add Services Page to Home (and site) insert options in Pages/CE if authors need to insert it"
+    notes:
+      - "2026-08-25: Copied Cooley Services Page once to andmore tenant Project templates. americasmart and atlanta-apparel share this tenant template root."
+
 lookups:
   - path: "/sitecore/content/progressive/pkm/Data"
     itemId: "{D37965BE-ED74-4694-9040-57AD038A3B70}"
@@ -3097,6 +3246,62 @@ lookups:
   - path: "/sitecore/content/manufacturing/dwyeromega/Home/Resources/Featured Articles"
     itemId: "{86583073-892F-4839-90EF-8660776225E3}"
     lastReadAt: "2026-07-15T16:50:00Z"
+  - path: "/sitecore/templates/Project/Cooley"
+    itemId: "{DE1E8AD5-E276-42FA-9150-F84A764427DC}"
+    lastReadAt: "2026-08-25T01:20:00Z"
+  - path: "/sitecore/templates/Project/Cooley/Services Page"
+    itemId: "{25CF32E0-C2D1-4E72-8CB9-FDEB000BE0D7}"
+    lastReadAt: "2026-08-25T01:20:00Z"
+  - path: "/sitecore/templates/Project/click-click-launch/Site/Detail Page"
+    itemId: "{A9919790-3389-4FC2-ABC8-24F73C847C8E}"
+    lastReadAt: "2026-08-25T01:20:00Z"
+    note: "Shared foundation Detail Page — base of Cooley/lcmc/amkor/andmore Services Page"
+  - path: "/sitecore/templates/Project/lcmc"
+    itemId: "{518471D1-E80C-4860-8B40-F6EE2E3BD17A}"
+    lastReadAt: "2026-08-25T01:20:00Z"
+  - path: "/sitecore/templates/Project/lcmc/Services Page"
+    itemId: "{D77937AC-BAE4-4EB0-8D7E-69EC09D5BBFC}"
+    lastReadAt: "2026-08-25T01:30:00Z"
+  - path: "/sitecore/templates/Project/amkor"
+    itemId: "{BA3998A0-21C1-4157-A4FF-33796F4C96D8}"
+    lastReadAt: "2026-08-25T01:20:00Z"
+  - path: "/sitecore/templates/Project/amkor/Services Page"
+    itemId: "{B2B918C3-ACDA-433F-A11B-718466493AEC}"
+    lastReadAt: "2026-08-25T01:30:00Z"
+  - path: "/sitecore/content/amkor/amkor/Home"
+    itemId: "{BB13BF5A-B102-4FE8-B410-63E3DA7AA448}"
+    lastReadAt: "2026-08-25T02:00:00Z"
+  - path: "/sitecore/templates/Project/andmore"
+    itemId: "{3985C679-6374-4131-A6C3-0BC5378E4082}"
+    lastReadAt: "2026-08-25T01:20:00Z"
+  - path: "/sitecore/templates/Project/andmore/Services Page"
+    itemId: "{69728677-52E5-4482-A415-94F0222799B8}"
+    lastReadAt: "2026-08-25T01:30:00Z"
+  - path: "/sitecore/templates/Project/click-click-launch/Components/Global Elements"
+    itemId: "{0B2C970A-EEC6-4F9E-858C-97F71CA70019}"
+    lastReadAt: "2026-08-25T02:00:00Z"
+  - path: "/sitecore/templates/Project/click-click-launch/Components/Global Elements/Rendering Parameters"
+    itemId: "{A4B8BCDA-A71C-42DB-A090-395998FED818}"
+    lastReadAt: "2026-08-25T02:00:00Z"
+  - path: "/sitecore/layout/Renderings/Project/click-click-launch/Global Elements"
+    itemId: "{E4F62F61-C63C-42B7-8E60-9F657F44E6DE}"
+    lastReadAt: "2026-08-25T02:00:00Z"
+  - path: "/sitecore/content/lcmc/lcmc/Data"
+    itemId: "{227DEDF2-DDB8-4E81-AB05-867119366ACE}"
+    lastReadAt: "2026-08-25T02:00:00Z"
+  - path: "/sitecore/content/amkor/amkor/Data"
+    itemId: "{F48777EF-EC88-4406-B6D8-D05BF1742F78}"
+    lastReadAt: "2026-08-25T02:00:00Z"
+  - path: "/sitecore/content/andmore/americasmart/Data"
+    itemId: "{5CD5FD5C-2915-42B3-9D9E-21101F24D96D}"
+    lastReadAt: "2026-08-25T02:00:00Z"
+  - path: "/sitecore/content/andmore/atlanta-apparel/Data"
+    itemId: "{1DF8C830-7FB6-43F7-9D03-14B897DD2BF8}"
+    lastReadAt: "2026-08-25T02:00:00Z"
+  - path: "/sitecore/content/lcmc/lcmc/Presentation/Available Renderings/Homepage Kit"
+    itemId: "{72E55B4F-12C7-4D15-9E7C-71F88370D501}"
+    lastReadAt: "2026-08-25T03:00:00Z"
+    note: "New AR group for homepage kit — Renderings is silent-write; expected value is the five new rendering IDs"
 
 # Demo datasource items (AI-created content, not new component definitions)
 demoContent: []
@@ -7432,7 +7637,7 @@ ia:
     category: "Global Elements"
     status: "complete"
     createdAt: "2026-08-19T18:30:00Z"
-    updatedAt: "2026-08-24T14:20:00Z"
+    updatedAt: "2026-08-24T21:15:00Z"
 
     react:
       filePath: "src/components/site-three/HeaderST.tsx"
@@ -7442,6 +7647,7 @@ ia:
         - "LoginRequired"
         - "Version1"
         - "Version2"
+        - "Version3"
 
     sitecoreEnvironment:
       siteName: "dfs"
@@ -7487,6 +7693,7 @@ ia:
         - { name: "Default", itemId: "{3DF1F5AF-6D14-4035-A53B-C58D2C641EA7}" }
         - { name: "LoginRequired", itemId: "{1EAEB888-076E-4C51-939A-84B1AD1C8421}" }
         - { name: "Version1", itemId: "{2D284CF1-A465-4E92-BF61-8D24F4CB955D}" }
+        - { name: "Version3", itemId: "{AE686A2F-8982-4A2C-8BB8-8306E57E7746}" }
 
     headlessVariantsAmkor:
       containerPath: "/sitecore/content/amkor/amkor/Presentation/Headless Variants/HeaderST"
@@ -7523,6 +7730,17 @@ ia:
         - { name: "LoginRequired", itemId: "{D0E85B97-CABF-41A1-8C17-35095613CC81}" }
         - { name: "Version1", itemId: "{54EFE51F-DAD3-4B73-AD5D-51EFBBF59F7E}" }
         - { name: "Version2", itemId: "{0D1930FA-63EA-4FCF-981D-028DE654D697}" }
+        - { name: "Version3", itemId: "{BE0FD55A-4ADA-4CEB-BFE7-EBBE2FE7C439}" }
+
+    headlessVariantsLcmc:
+      containerPath: "/sitecore/content/lcmc/lcmc/Presentation/Headless Variants/HeaderST"
+      containerId: "{7E99CC78-00C5-4A35-8662-FD982E088F8A}"
+      variants:
+        - { name: "Default", itemId: "{9041DDD8-676C-4F7A-B08B-E2A774BA0DC3}" }
+        - { name: "LoginRequired", itemId: "{DC181145-2824-4F97-8CED-41FAF857A318}" }
+        - { name: "Version1", itemId: "{A2F518F8-63F9-467B-9679-683C6B715187}" }
+        - { name: "Version2", itemId: "{7289C108-E76F-439A-8E0C-96CBF1DBA1B0}" }
+        - { name: "Version3", itemId: "{75F2C76E-BD06-4664-B0ED-0C8782B39ECA}" }
 
     datasourceExample:
       name: "Header"
@@ -7531,7 +7749,7 @@ ia:
       note: "LoginLink points to Portal Login page item {EFEAC18B-D47C-41AC-B207-5525CD230634}"
 
     verification:
-      checkedAt: "2026-08-24T14:20:00Z"
+      checkedAt: "2026-08-24T21:15:00Z"
       passed:
         - "LoginLink field created on HeaderST datasource template"
         - "Headless Variants container + Default + LoginRequired verified via MCP"
@@ -7546,8 +7764,14 @@ ia:
         - "atlanta-apparel HeaderST Headless Variants + Default/LoginRequired/Version1 verified"
         - "Version2 added on amkor, americasmart, atlanta-apparel, and site-base"
         - "site-base HeaderST Headless Variants + Default/LoginRequired/Version1/Version2 verified"
+        - "Version3 added on pkm, site-base, and lcmc; verified via get_content_item_by_path"
+        - "lcmc HeaderST Headless Variants container created with Default/LoginRequired/Version1/Version2/Version3"
+        - "HeaderST.test.tsx 54 tests passed including Version3 (layout, search bar, HideCart)"
       failed: []
       pendingManual:
+        - "Select Version3 on lcmc Header partial design HeaderST rendering in Pages"
+        - "On Version3: check Show Search Box; check Hide Cart; leave ReverseTheme off"
+        - "Publish the lcmc Header partial"
         - "Select Version1 on amkor Header partial design HeaderST rendering in Pages"
         - "Select Version2 on atlanta-apparel Header partial (Andmore layout)"
         - "Select Version2 on americasmart Header partial if that demo uses the same chrome"
@@ -7558,6 +7782,7 @@ ia:
         - "Optional: add postLogoutRedirect to HeaderST rendering parameters template"
 
     notes:
+      - "2026-08-24: Version3 LCMC-style header (single white bar, logo left, stacked utility+primary nav, muted rounded search bar). Headless variants on pkm, site-base, and lcmc. No new RP fields."
       - "2026-08-24: Version2 Andmore-style header (dark utility row, logo left, inline nav, search icon). Headless variants on amkor, americasmart, atlanta-apparel, and site-base."
       - "2026-08-24: HeaderST Version1 also added under amkor, andmore/americasmart, andmore/atlanta-apparel Headless Variants."
       - "2026-08-24: Version1 cosmetic variant for Amkor-style inverted two-row header (MENU + search + logo-right). HideCart rendering param (default off)."
@@ -7916,4 +8141,593 @@ ia:
         - "Confirm nav labels in Pages/Experience Editor (local:/Data may still show Speakers item name in CE tree)"
         - "Optional: delete unused duplicate named lists if CE tree is too crowded"
         - "Optional: set isSimpleLink on megas if empty dropdowns appear for any item"
+
+  - name: "americasmart-ia-tree"
+    kind: "ia-create"
+    category: "IA"
+    status: "complete"
+    createdAt: "2026-08-25T01:35:00Z"
+    updatedAt: "2026-08-25T01:50:00Z"
+    siteName: "americasmart"
+    siteCollection: "andmore"
+    contentRootPath: "/sitecore/content/andmore/americasmart/Home"
+    contentRootItemId: "{3BD35058-A302-42FE-98A6-7ECA10407DE2}"
+    pageTemplateId: "{69728677-52E5-4482-A415-94F0222799B8}"
+    pageTemplateName: "Services Page"
+    iaSource: "docs/ai/ia/americasmart-ia.md"
+    sourceSite: "https://www.americasmart.com/"
+    createdCount: 32
+    skippedCount: 1
+    failedCount: 0
+    notes: >
+      Created AmericasMart IA tree (32 Services Page items) under Home from americasmart-ia.md.
+      Home already existed (Home Page) and was skipped. Starter Data/Speakers/Video left untouched.
+      Titles from IA node names (no live scrape). Item names: spaces preserved; "&" -> "and".
+      Services Page was NOT in Home insert options (Article/Audio/Detail/Landing/Product/Page Folder);
+      create_content_item still succeeded. MCP read-back only echoes Detail+image; pageTitle/
+      pageHeaderTitle/pageShortTitle/pageSubtitle/pageSummary are silent-write — verify in Content Editor.
+      No [folder]/shared nodes; folder template not used.
+    items:
+      - { name: "Exhibitor Directory", itemId: "{B05CA3CD-1041-4DE9-91C6-BAF2AD34A4F5}", path: "/sitecore/content/andmore/americasmart/Home/Exhibitor Directory" }
+      - { name: "Search Exhibitors", itemId: "{F1DFC38B-5589-404D-B3C1-19A20DA462AA}", path: "/sitecore/content/andmore/americasmart/Home/Exhibitor Directory/Search Exhibitors" }
+      - { name: "A-Z Brand Listing", itemId: "{215A375B-F6AF-40CC-8ABB-0538A653A042}", path: "/sitecore/content/andmore/americasmart/Home/Exhibitor Directory/A-Z Brand Listing" }
+      - { name: "Floor Plans", itemId: "{29E0DE8C-08DE-4922-A893-ADDCB6D39B50}", path: "/sitecore/content/andmore/americasmart/Home/Exhibitor Directory/Floor Plans" }
+      - { name: "Markets and Events", itemId: "{C115FD2A-F431-4121-9592-865B87145921}", path: "/sitecore/content/andmore/americasmart/Home/Markets and Events" }
+      - { name: "Market Dates and Hours", itemId: "{FED9A866-782B-4965-B88D-8C374FA7FAA3}", path: "/sitecore/content/andmore/americasmart/Home/Markets and Events/Market Dates and Hours" }
+      - { name: "Plan Your Market", itemId: "{86682B20-B1C6-49EE-B062-EFA64EA70320}", path: "/sitecore/content/andmore/americasmart/Home/Markets and Events/Plan Your Market" }
+      - { name: "Spring Market", itemId: "{30908533-8D5A-4012-BF24-0D0B4BD2E3BB}", path: "/sitecore/content/andmore/americasmart/Home/Markets and Events/Plan Your Market/Spring Market" }
+      - { name: "Spring Cash and Carry", itemId: "{3589FCF9-0298-4047-84C9-74068C74B545}", path: "/sitecore/content/andmore/americasmart/Home/Markets and Events/Plan Your Market/Spring Cash and Carry" }
+      - { name: "Fall Market", itemId: "{7F26E824-F4BD-401C-9665-3F5077022290}", path: "/sitecore/content/andmore/americasmart/Home/Markets and Events/Plan Your Market/Fall Market" }
+      - { name: "Fall Cash and Carry", itemId: "{9346FFAD-FBF4-4BC9-9FF3-891F950CD8A2}", path: "/sitecore/content/andmore/americasmart/Home/Markets and Events/Plan Your Market/Fall Cash and Carry" }
+      - { name: "Shop Year Round", itemId: "{7805B60D-6335-46E5-A2C9-3F280BFDDCAC}", path: "/sitecore/content/andmore/americasmart/Home/Markets and Events/Shop Year Round" }
+      - { name: "How to Register", itemId: "{171D148B-5FE1-44D7-A142-0F1E8A529F74}", path: "/sitecore/content/andmore/americasmart/Home/Markets and Events/Shop Year Round/How to Register" }
+      - { name: "Calendar of Events", itemId: "{CF0B831B-0067-4C72-8D19-0FCD9721787A}", path: "/sitecore/content/andmore/americasmart/Home/Markets and Events/Shop Year Round/Calendar of Events" }
+      - { name: "Open Year Round Showrooms", itemId: "{CA2A337E-0FE4-4D32-A86E-53E2B3FEFC74}", path: "/sitecore/content/andmore/americasmart/Home/Markets and Events/Shop Year Round/Open Year Round Showrooms" }
+      - { name: "For Designers", itemId: "{1EBE7E7B-53F8-4B29-921D-B603FC0787C0}", path: "/sitecore/content/andmore/americasmart/Home/Markets and Events/Shop Year Round/For Designers" }
+      - { name: "Visit", itemId: "{42528502-4AF5-4E69-A99F-DB456947355B}", path: "/sitecore/content/andmore/americasmart/Home/Visit" }
+      - { name: "Hotels", itemId: "{06277FEA-9C60-41D4-9578-E48AE5F547D0}", path: "/sitecore/content/andmore/americasmart/Home/Visit/Hotels" }
+      - { name: "Parking and Transportation", itemId: "{A3D04FF0-D4DA-4D6C-9607-67CB7FEDB414}", path: "/sitecore/content/andmore/americasmart/Home/Visit/Parking and Transportation" }
+      - { name: "Dining", itemId: "{1705895E-B963-4138-BD9B-F8C15FFCA401}", path: "/sitecore/content/andmore/americasmart/Home/Visit/Dining" }
+      - { name: "Campus Overview", itemId: "{AC33C7FF-4ED8-4FD4-BB72-7431A9E736E2}", path: "/sitecore/content/andmore/americasmart/Home/Visit/Campus Overview" }
+      - { name: "Atlanta City Guide", itemId: "{F6B6CF87-6FF0-4B2E-BEF4-BAE2E1E4D51E}", path: "/sitecore/content/andmore/americasmart/Home/Visit/Atlanta City Guide" }
+      - { name: "Downtown Development", itemId: "{F5155A47-2CC7-4D5F-BF67-95C10E21A460}", path: "/sitecore/content/andmore/americasmart/Home/Visit/Downtown Development" }
+      - { name: "Exhibit", itemId: "{F9C2E930-E904-413B-B445-851376888CAD}", path: "/sitecore/content/andmore/americasmart/Home/Exhibit" }
+      - { name: "Leasing and Exhibit Options", itemId: "{B2939A21-EEBC-4905-8B81-F89CBAF9F331}", path: "/sitecore/content/andmore/americasmart/Home/Exhibit/Leasing and Exhibit Options" }
+      - { name: "Advertising", itemId: "{119A49D7-54E9-470F-AF8F-5A2D5A449DA0}", path: "/sitecore/content/andmore/americasmart/Home/Exhibit/Advertising" }
+      - { name: "Exhibitor FAQs", itemId: "{2F9FE820-59EE-4FBD-8044-74A203E93D70}", path: "/sitecore/content/andmore/americasmart/Home/Exhibit/Exhibitor FAQs" }
+      - { name: "About", itemId: "{993B7A60-7B2C-43FC-BDDC-2872624BCA20}", path: "/sitecore/content/andmore/americasmart/Home/About" }
+      - { name: "History", itemId: "{49418265-8562-4234-9527-62893B448377}", path: "/sitecore/content/andmore/americasmart/Home/About/History" }
+      - { name: "Contact Us", itemId: "{ADB1080D-AD26-471A-BA65-C13FE8C90596}", path: "/sitecore/content/andmore/americasmart/Home/About/Contact Us" }
+      - { name: "Press Center", itemId: "{FD88CA16-73F3-4600-A45F-4D24EF90A85F}", path: "/sitecore/content/andmore/americasmart/Home/About/Press Center" }
+      - { name: "Industry Partners", itemId: "{3976618D-872F-4DCC-8D36-0C57A34BEE10}", path: "/sitecore/content/andmore/americasmart/Home/About/Industry Partners" }
+    verification:
+      checkedAt: "2026-08-25T01:50:00Z"
+      passed:
+        - "Site americasmart verified via list_sites (tenant andmore)"
+        - "Home exists at /sitecore/content/andmore/americasmart/Home"
+        - "Services Page template {69728677-52E5-4482-A415-94F0222799B8} validated"
+        - "32 Services Pages created via create_content_item and verified by MCP read-back"
+        - "Detail field confirmed on sample items"
+        - "L1 children present under Home; L3 children present under Plan Your Market and Shop Year Round"
+      failed: []
+      pendingManual:
+        - "pageTitle / pageHeaderTitle / pageShortTitle / pageSubtitle / pageSummary (silent-write — verify in Content Editor)"
+        - "Add Services Page to Home insert options for authors"
+        - "Publish /sitecore/content/andmore/americasmart/Home subtree for Edge"
+        - "Wire navigation to new IA pages; starter Speakers/Video left in tree"
+
+  - name: "atlanta-apparel-ia"
+    kind: "ia"
+    category: "IA"
+    status: "complete"
+    createdAt: "2026-08-25T01:35:00Z"
+    updatedAt: "2026-08-25T02:10:00Z"
+    siteName: "atlanta-apparel"
+    siteCollection: "andmore"
+    contentRootPath: "/sitecore/content/andmore/atlanta-apparel/Home"
+    contentRootItemId: "{011D81AC-F13E-4DC1-A142-88119D17A7B5}"
+    pageTemplateId: "{69728677-52E5-4482-A415-94F0222799B8}"
+    pageTemplateName: "Services Page"
+    folderTemplateId: "{9F8AD610-0BF4-4801-A9AC-7E242EDD1B6A}"
+    folderTemplateName: "Page Folder"
+    folderTemplatePath: "/sitecore/templates/Project/andmore/Page Folder"
+    language: "en"
+    iaSpecPath: "docs/ai/ia/atlanta-apparel-ia.md"
+    sourceUrl: "https://www.atlanta-apparel.com/"
+    createdCount: 54
+    skippedCount: 1
+    failedCount: 0
+    notes: >
+      Created Atlanta Apparel IA tree (5 L1 / 20 L2 / 29 L3) under Home from atlanta-apparel-ia.md.
+      Home already existed (Home Page {011D81AC-...}) and was skipped. Starter Data/Speakers/Video left untouched.
+      Titles from IA node names (no live scrape). Item names: spaces preserved; "&" -> "and"; apostrophes stripped
+      (Children's -> Childrens, Men's -> Mens). Discover is a Page Folder because /Discover 404s on the live site.
+      Services Page was NOT in Home or Discover insert options (Article/Audio/Detail/Landing/Product/Page Folder);
+      create_content_item still succeeded. MCP read-back only echoes Detail+image; pageTitle/
+      pageHeaderTitle/pageShortTitle/pageSubtitle/pageSummary are silent-write — verify in Content Editor.
+    items:
+      - { name: "Exhibitor Directory", itemId: "{21A89CBC-2730-4989-8289-085CEA0B6BA5}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Exhibitor Directory", level: 1 }
+      - { name: "Brand Directory", itemId: "{013E2F61-6B31-46DC-B209-5D6CCC75C44C}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Exhibitor Directory/Brand Directory", level: 2 }
+      - { name: "Markets and Events", itemId: "{ECB4D5C8-A179-428C-A897-1A6626F82E13}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Markets and Events", level: 1 }
+      - { name: "Atlanta Apparel", itemId: "{3BA72117-C7D9-4047-8259-2D3EEA9C29EA}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Markets and Events/Atlanta Apparel", level: 2 }
+      - { name: "February Atlanta Apparel", itemId: "{F73FFD28-CFA1-4BC3-AC8D-6394017E5C55}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Markets and Events/Atlanta Apparel/February Atlanta Apparel", level: 3 }
+      - { name: "April Atlanta Apparel", itemId: "{C8E2F6CA-F889-45D9-8E3E-5B69E236EE43}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Markets and Events/Atlanta Apparel/April Atlanta Apparel", level: 3 }
+      - { name: "June Atlanta Apparel", itemId: "{33F83AAA-56B5-4100-8443-23B9E31D5A8D}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Markets and Events/Atlanta Apparel/June Atlanta Apparel", level: 3 }
+      - { name: "August Atlanta Apparel", itemId: "{AC7D2488-9277-4476-A1D8-67FBF15A0FD2}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Markets and Events/Atlanta Apparel/August Atlanta Apparel", level: 3 }
+      - { name: "October Atlanta Apparel", itemId: "{945A2F3F-39C8-4D6B-A46B-58857CFA760F}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Markets and Events/Atlanta Apparel/October Atlanta Apparel", level: 3 }
+      - { name: "Formal Markets", itemId: "{7441A2FA-D839-4F43-944E-6406AA5C039B}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Markets and Events/Formal Markets", level: 2 }
+      - { name: "Spring Formal Markets", itemId: "{822B964B-CB8A-4444-8FC7-5618D6D10D67}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Markets and Events/Formal Markets/Spring Formal Markets", level: 3 }
+      - { name: "Fall Formal Markets", itemId: "{60CB9378-6719-4C6A-8AE5-BF0C574E421E}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Markets and Events/Formal Markets/Fall Formal Markets", level: 3 }
+      - { name: "Press Center", itemId: "{D4515103-84B3-4209-B683-A8775EDCFB99}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Markets and Events/Press Center", level: 2 }
+      - { name: "Media Resources", itemId: "{52ACCC0E-673F-472D-A3C8-299AB94CF862}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Markets and Events/Press Center/Media Resources", level: 3 }
+      - { name: "Media Registration", itemId: "{36E5E24E-925B-473B-A3E7-5AB84B3DFBC6}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Markets and Events/Press Center/Media Registration", level: 3 }
+      - { name: "Visit", itemId: "{F6CAECE4-C4C6-466A-9D9F-170D90294CE0}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Visit", level: 1 }
+      - { name: "Registration", itemId: "{EBD89713-040D-4B8F-810D-23E44B93F2A6}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Visit/Registration", level: 2 }
+      - { name: "First-Time Buyers", itemId: "{0C67BC67-B071-4243-ABA0-71606A1A4194}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Visit/Registration/First-Time Buyers", level: 3 }
+      - { name: "Returning Buyers", itemId: "{D4057D10-C1BC-44DF-9A6C-5302C5D25CD4}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Visit/Registration/Returning Buyers", level: 3 }
+      - { name: "Plan Your Market", itemId: "{94A9563C-55F2-4348-BFAF-95D95DDD58A6}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Visit/Plan Your Market", level: 2 }
+      - { name: "Events", itemId: "{47CEA21C-AEC1-4775-93BC-7F5D5B92DFAF}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Visit/Events", level: 2 }
+      - { name: "Floor Plans", itemId: "{130E1B49-8D45-4AE1-9FE8-7A98B05BCE33}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Visit/Floor Plans", level: 2 }
+      - { name: "Travel", itemId: "{CE7211A9-145A-43A8-B574-33EBA316E79E}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Visit/Travel", level: 2 }
+      - { name: "Hotels", itemId: "{AE306069-F31E-4BAE-8D0A-9D5CC5DA415B}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Visit/Travel/Hotels", level: 3 }
+      - { name: "Directions and Parking", itemId: "{960E06CC-D117-40F5-8506-830C0100F745}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Visit/Travel/Directions and Parking", level: 3 }
+      - { name: "Air Travel", itemId: "{5BC89299-CC1C-4304-82D3-B1EAE02DDD17}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Visit/Travel/Air Travel", level: 3 }
+      - { name: "Dining", itemId: "{6EF62955-E43C-492E-8944-2D7CC901277F}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Visit/Dining", level: 2 }
+      - { name: "FAQs", itemId: "{520177A9-3F90-422E-BC13-0560D8913196}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Visit/FAQs", level: 2 }
+      - { name: "Safety and Security", itemId: "{4891D6E0-D375-417A-BC99-17C4D1951701}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Visit/Safety and Security", level: 2 }
+      - { name: "Discover", itemId: "{DC2D8267-372A-4EA6-8A54-ABFCE2CB02F4}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Discover", level: 1, template: "Page Folder" }
+      - { name: "Categories", itemId: "{64CE9116-4EC0-4C65-947F-96E60D324C4B}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Discover/Categories", level: 2 }
+      - { name: "Contemporary Apparel", itemId: "{D45D2552-98DB-4737-824F-CD2801C052C9}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Discover/Categories/Contemporary Apparel", level: 3 }
+      - { name: "Prom and Social Occasion", itemId: "{FB3EA2AE-4E6E-4EBF-9D78-3F172BF0916E}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Discover/Categories/Prom and Social Occasion", level: 3 }
+      - { name: "Bridal", itemId: "{D8340581-9CB7-4165-9FFF-785C291C3117}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Discover/Categories/Bridal", level: 3 }
+      - { name: "Ready to Wear", itemId: "{1AFD474F-E6F3-4A78-8C96-23E2533003FF}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Discover/Categories/Ready to Wear", level: 3 }
+      - { name: "Young Contemporary", itemId: "{067BD6BF-C947-48E3-99A2-149EB7EA132C}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Discover/Categories/Young Contemporary", level: 3 }
+      - { name: "Jewelry and Fashion Accessories", itemId: "{2D770D8D-618A-4035-BC74-58C9BA6C6E8D}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Discover/Categories/Jewelry and Fashion Accessories", level: 3 }
+      - { name: "Shoes", itemId: "{E766E1D3-86A5-4811-B3D7-068E104D0491}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Discover/Categories/Shoes", level: 3 }
+      - { name: "Childrens", itemId: "{C16FC208-FF82-46C4-BD07-DB10A1B9CEC0}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Discover/Categories/Childrens", level: 3 }
+      - { name: "Mens", itemId: "{4FB9E299-A6F3-4778-A257-89D61CC0A3AC}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Discover/Categories/Mens", level: 3 }
+      - { name: "Cash and Carry", itemId: "{7A0FAEC6-350A-4188-AEB3-2D7D73B1CED7}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Discover/Categories/Cash and Carry", level: 3 }
+      - { name: "First Finds", itemId: "{FEF1D929-6586-4B23-BB89-123FE2DC75A2}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Discover/First Finds", level: 2 }
+      - { name: "Open Year Round", itemId: "{6BAF31EB-3C09-4594-999A-00CE10C7B155}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Discover/Open Year Round", level: 2 }
+      - { name: "Tools and Inspiration", itemId: "{F40F6D3A-F53A-4055-B9F9-AC0D192142B7}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Discover/Tools and Inspiration", level: 2 }
+      - { name: "Exhibit", itemId: "{1DAB23FB-1431-430C-95B9-18D374F86720}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Exhibit", level: 1 }
+      - { name: "Exhibit at Atlanta Apparel", itemId: "{A872EA14-B49F-41D2-8DB8-17294A12E6A6}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Exhibit/Exhibit at Atlanta Apparel", level: 2 }
+      - { name: "Showrooms", itemId: "{1F693673-F4DB-4F23-8F7B-DCE3153B1CF6}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Exhibit/Exhibit at Atlanta Apparel/Showrooms", level: 3 }
+      - { name: "First Finds", itemId: "{854F8E12-DFC2-4033-BDAD-9BFE7D88BB7B}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Exhibit/Exhibit at Atlanta Apparel/First Finds", level: 3 }
+      - { name: "Exhibitor Resources", itemId: "{AC5D1237-F108-4061-A0E6-51014079FA65}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Exhibit/Exhibitor Resources", level: 2 }
+      - { name: "Showroom Resources", itemId: "{EF5F5E9E-D7AE-4665-87EE-02493C8680BA}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Exhibit/Exhibitor Resources/Showroom Resources", level: 3 }
+      - { name: "Temporary Resources", itemId: "{1F376221-5BBE-40BB-B428-942390DCE276}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Exhibit/Exhibitor Resources/Temporary Resources", level: 3 }
+      - { name: "Market Toolkit", itemId: "{0AB4F9E5-3622-4C14-9720-C76F393900B1}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Exhibit/Exhibitor Resources/Market Toolkit", level: 3 }
+      - { name: "Advertising and Sponsorship", itemId: "{4399045B-989E-47A3-BDF6-01258267D652}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Exhibit/Advertising and Sponsorship", level: 2 }
+      - { name: "Social Occasion", itemId: "{B84A57AD-9731-4567-B28C-87690A054D40}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Exhibit/Social Occasion", level: 2 }
+    verification:
+      checkedAt: "2026-08-25T02:10:00Z"
+      passed:
+        - "Site atlanta-apparel verified via list_sites (tenant andmore, id eb11b7a5-...)"
+        - "Home exists at /sitecore/content/andmore/atlanta-apparel/Home {011D81AC-F13E-4DC1-A142-88119D17A7B5}"
+        - "Services Page template {69728677-52E5-4482-A415-94F0222799B8} validated"
+        - "Page Folder {9F8AD610-0BF4-4801-A9AC-7E242EDD1B6A} verified insertable under Home"
+        - "54 items created via create_content_item (53 Services Pages + 1 Page Folder)"
+        - "Home L1 children include Exhibitor Directory, Markets and Events, Visit, Discover (Page Folder), Exhibit"
+        - "Discover children: Categories, First Finds, Open Year Round, Tools and Inspiration"
+        - "Detail field confirmed on sample items (silent page* fields written but not echoed)"
+      failed: []
+      pendingManual:
+        - "pageTitle / pageHeaderTitle / pageShortTitle / pageSubtitle / pageSummary (silent-write — verify in Content Editor)"
+        - "Add Services Page to Home and Page Folder insert options for authors"
+        - "Publish /sitecore/content/andmore/atlanta-apparel/Home subtree for Edge"
+        - "Wire navigation to new IA pages; starter Speakers/Video left in tree"
+        - "Display names for Childrens/Mens still show item names; titles kept Children's/Men's"
+
+  - name: "amkor-ia-tree"
+    kind: "ia-create"
+    category: "IA"
+    status: "complete"
+    createdAt: "2026-08-25T01:40:00Z"
+    updatedAt: "2026-08-25T02:00:00Z"
+    siteName: "amkor"
+    siteCollection: "amkor"
+    contentRootPath: "/sitecore/content/amkor/amkor/Home"
+    contentRootItemId: "{BB13BF5A-B102-4FE8-B410-63E3DA7AA448}"
+    pageTemplateId: "{B2B918C3-ACDA-433F-A11B-718466493AEC}"
+    pageTemplateName: "Services Page"
+    iaSource: "docs/ai/ia/amkor-ia.md"
+    sourceSite: "https://amkor.com/"
+    createdCount: 99
+    skippedCount: 1
+    failedCount: 0
+    notes: >
+      Created Amkor IA tree (99 Services Page items) under Home from amkor-ia.md.
+      Home already existed (Home Page) and was skipped. Starter Data/Speakers/Video left untouched.
+      Titles from IA node names (no live scrape). Item names: spaces preserved; "/" -> space;
+      "+" -> "Plus"; stripped "." "®" "™" and non-digit parentheses to satisfy ItemNameValidation
+      ^[\\w\\*\\$][\\w\\s\\-\\$]*(\\(\\d{1,}\\)){0,1}$. pageTitle fields keep original IA labels
+      (e.g. item Smart Manufacturing I40 / title Smart Manufacturing (I4.0)).
+      Services Page was NOT in Home insert options (Article/Audio/Detail/Landing/Product/Page Folder);
+      create_content_item still succeeded. MCP read-back only echoes Detail+image; pageTitle/
+      pageHeaderTitle/pageShortTitle/pageSubtitle/pageSummary are silent-write — verify in Content Editor.
+      No [folder]/shared nodes; folder template not used. Items created in Draft workflow.
+    items:
+      - { name: "About Us", itemId: "{86E9AAED-39B1-4E89-9E41-9C3E778F8E1D}", path: "/sitecore/content/amkor/amkor/Home/About Us" }
+      - { name: "Amkor Overview", itemId: "{B6B4DA5A-F8B2-4AD1-BF08-02AADF88C82E}", path: "/sitecore/content/amkor/amkor/Home/About Us/Amkor Overview" }
+      - { name: "Mission", itemId: "{17D30160-59DD-44A9-9ADA-A4AECC425F1C}", path: "/sitecore/content/amkor/amkor/Home/About Us/Mission" }
+      - { name: "Company History", itemId: "{08B4621B-314D-40B5-8D63-CF579DB1EE28}", path: "/sitecore/content/amkor/amkor/Home/About Us/Company History" }
+      - { name: "Leadership", itemId: "{229DB77C-8772-482B-863D-763554D4F19F}", path: "/sitecore/content/amkor/amkor/Home/About Us/Leadership" }
+      - { name: "Careers", itemId: "{6F39EC02-DAA7-4FED-9E65-E31A9DAF37F1}", path: "/sitecore/content/amkor/amkor/Home/About Us/Careers" }
+      - { name: "China", itemId: "{E746BAFF-D4F8-4202-953D-6C491FA8F038}", path: "/sitecore/content/amkor/amkor/Home/About Us/Careers/China" }
+      - { name: "France", itemId: "{924A3636-8B21-45B4-A0EC-C37EAE4E6E1A}", path: "/sitecore/content/amkor/amkor/Home/About Us/Careers/France" }
+      - { name: "Germany", itemId: "{5D82FB89-2858-4C0F-82A2-F51A6B4A2E4D}", path: "/sitecore/content/amkor/amkor/Home/About Us/Careers/Germany" }
+      - { name: "Japan", itemId: "{254ACA3F-5147-4FC8-A52B-8280CE28EE4A}", path: "/sitecore/content/amkor/amkor/Home/About Us/Careers/Japan" }
+      - { name: "Korea", itemId: "{F4F4B8B7-38C9-4990-9934-9A55A96CC425}", path: "/sitecore/content/amkor/amkor/Home/About Us/Careers/Korea" }
+      - { name: "Malaysia", itemId: "{1D867EB1-BA61-43AB-AA09-802772F6C5ED}", path: "/sitecore/content/amkor/amkor/Home/About Us/Careers/Malaysia" }
+      - { name: "Philippines", itemId: "{E6F535CE-2DD6-4C05-B48B-61E24B56753D}", path: "/sitecore/content/amkor/amkor/Home/About Us/Careers/Philippines" }
+      - { name: "Portugal", itemId: "{E0C7CEB1-0EC3-4B9C-B96C-684C52DCE4AB}", path: "/sitecore/content/amkor/amkor/Home/About Us/Careers/Portugal" }
+      - { name: "Singapore", itemId: "{BE496562-4BEA-4149-A834-878A9705495A}", path: "/sitecore/content/amkor/amkor/Home/About Us/Careers/Singapore" }
+      - { name: "Taiwan", itemId: "{0591F743-0EFD-4D29-8F9F-36B1CA3FD8F7}", path: "/sitecore/content/amkor/amkor/Home/About Us/Careers/Taiwan" }
+      - { name: "United States", itemId: "{74297BC9-7EA0-496D-A956-882BEFEE3230}", path: "/sitecore/content/amkor/amkor/Home/About Us/Careers/United States" }
+      - { name: "Vietnam", itemId: "{A3CAEC3B-1A9D-4FFE-A8E1-926C1540E0AE}", path: "/sitecore/content/amkor/amkor/Home/About Us/Careers/Vietnam" }
+      - { name: "Smart Manufacturing I40", itemId: "{1EFA1BC9-1495-4B58-8CC2-02E569B24A01}", path: "/sitecore/content/amkor/amkor/Home/About Us/Smart Manufacturing I40" }
+      - { name: "Corporate Responsibility", itemId: "{1BF4DDF7-3A85-4655-840F-81BB7D1478D1}", path: "/sitecore/content/amkor/amkor/Home/About Us/Corporate Responsibility" }
+      - { name: "News", itemId: "{BE42D3F0-C644-4ADE-9CEB-E72208ACFD8E}", path: "/sitecore/content/amkor/amkor/Home/About Us/News" }
+      - { name: "Blog", itemId: "{893BBB60-2B8C-4A97-BB8E-541E744F2B33}", path: "/sitecore/content/amkor/amkor/Home/About Us/News/Blog" }
+      - { name: "Events", itemId: "{2654163D-7840-4EA1-AAFF-AB12FD524787}", path: "/sitecore/content/amkor/amkor/Home/About Us/Events" }
+      - { name: "Customer Center", itemId: "{41FF6CB6-EAFE-4153-926F-BDFF896DB03C}", path: "/sitecore/content/amkor/amkor/Home/About Us/Customer Center" }
+      - { name: "Amkor Mechanical Samples", itemId: "{8C417BB7-ED49-44D2-BA41-FF28327BC87D}", path: "/sitecore/content/amkor/amkor/Home/About Us/Customer Center/Amkor Mechanical Samples" }
+      - { name: "B2B Integration Services", itemId: "{9E1BC7D5-855F-4CD9-94DC-7D26E579D149}", path: "/sitecore/content/amkor/amkor/Home/About Us/Customer Center/B2B Integration Services" }
+      - { name: "Document Library", itemId: "{732461B7-BE88-46A1-88D6-1BA797112060}", path: "/sitecore/content/amkor/amkor/Home/About Us/Customer Center/Document Library" }
+      - { name: "Memberships and Partnerships", itemId: "{E320A2CE-1336-4B69-9BBF-A4A037CB2F90}", path: "/sitecore/content/amkor/amkor/Home/About Us/Memberships and Partnerships" }
+      - { name: "Contact Us", itemId: "{DF23610E-A0C4-4E95-A316-AB794CFF927F}", path: "/sitecore/content/amkor/amkor/Home/About Us/Contact Us" }
+      - { name: "Packaging", itemId: "{CFF1B3A2-45C1-44F9-8411-32C55F316627}", path: "/sitecore/content/amkor/amkor/Home/Packaging" }
+      - { name: "Laminate", itemId: "{B508EAF5-A373-43CD-A504-D5ADD51AE36B}", path: "/sitecore/content/amkor/amkor/Home/Packaging/Laminate" }
+      - { name: "CABGA FBGA", itemId: "{7F6B1F5B-A1E3-4BAB-9FF0-C57F7A2AAFD7}", path: "/sitecore/content/amkor/amkor/Home/Packaging/Laminate/CABGA FBGA" }
+      - { name: "DSMBGA", itemId: "{5C8D8E99-6B07-48D5-87A9-FA4A9509A243}", path: "/sitecore/content/amkor/amkor/Home/Packaging/Laminate/DSMBGA" }
+      - { name: "FCBGA", itemId: "{9D6BFBE6-DF0A-4340-8F9B-2B353BA47AC1}", path: "/sitecore/content/amkor/amkor/Home/Packaging/Laminate/FCBGA" }
+      - { name: "fcCSP", itemId: "{73C7A566-81A0-4529-8805-F5D2B3A595FA}", path: "/sitecore/content/amkor/amkor/Home/Packaging/Laminate/fcCSP" }
+      - { name: "FlipStack CSP", itemId: "{764CB846-8081-439C-BAB5-A0BA97F45BF7}", path: "/sitecore/content/amkor/amkor/Home/Packaging/Laminate/FlipStack CSP" }
+      - { name: "Interposer PoP", itemId: "{2750629A-A0AD-4650-A73C-C0794107390F}", path: "/sitecore/content/amkor/amkor/Home/Packaging/Laminate/Interposer PoP" }
+      - { name: "PBGA TEPBGA", itemId: "{52232711-4E01-4E3C-BFC5-97E3136AF3FC}", path: "/sitecore/content/amkor/amkor/Home/Packaging/Laminate/PBGA TEPBGA" }
+      - { name: "Stacked CSP", itemId: "{DA1BB148-E021-42FC-AFBD-B120632BFD9C}", path: "/sitecore/content/amkor/amkor/Home/Packaging/Laminate/Stacked CSP" }
+      - { name: "Leadframe", itemId: "{8B6D05C9-7940-49A3-B371-44BF34E1A02A}", path: "/sitecore/content/amkor/amkor/Home/Packaging/Leadframe" }
+      - { name: "ePad LQFP TQFP", itemId: "{5C75F9E0-0738-48C0-B618-CC3CED67108E}", path: "/sitecore/content/amkor/amkor/Home/Packaging/Leadframe/ePad LQFP TQFP" }
+      - { name: "ePad TSSOP SOIC SSOP", itemId: "{F46304E7-17D5-440B-AEFF-2B3F40BB9E60}", path: "/sitecore/content/amkor/amkor/Home/Packaging/Leadframe/ePad TSSOP SOIC SSOP" }
+      - { name: "fcMLF", itemId: "{6979B580-41F1-4926-A02E-05A06CC7ACE8}", path: "/sitecore/content/amkor/amkor/Home/Packaging/Leadframe/fcMLF" }
+      - { name: "LQFP", itemId: "{69A12BB3-B802-4F53-A8E5-11887F50DABD}", path: "/sitecore/content/amkor/amkor/Home/Packaging/Leadframe/LQFP" }
+      - { name: "MicroLeadFrame", itemId: "{6435B867-5B7C-42D8-A099-D790A35729A8}", path: "/sitecore/content/amkor/amkor/Home/Packaging/Leadframe/MicroLeadFrame" }
+      - { name: "SOIC", itemId: "{89EC5DB6-0475-4B7F-A5E3-C4B0FC99D32F}", path: "/sitecore/content/amkor/amkor/Home/Packaging/Leadframe/SOIC" }
+      - { name: "SSOP QSOP", itemId: "{798C52BF-CA05-448A-B884-2191A8582973}", path: "/sitecore/content/amkor/amkor/Home/Packaging/Leadframe/SSOP QSOP" }
+      - { name: "TQFP", itemId: "{5C29183D-34A2-4C34-95C5-73C1CC0C81C4}", path: "/sitecore/content/amkor/amkor/Home/Packaging/Leadframe/TQFP" }
+      - { name: "TSSOP MSOP", itemId: "{2B657B54-FAB2-4C16-BFC7-AD21B3F6FFA0}", path: "/sitecore/content/amkor/amkor/Home/Packaging/Leadframe/TSSOP MSOP" }
+      - { name: "Memory", itemId: "{0EBC33FF-8697-49B8-A276-19BD86E99074}", path: "/sitecore/content/amkor/amkor/Home/Packaging/Memory" }
+      - { name: "MEMS and Sensors", itemId: "{5EE5F38A-D624-4836-BF30-45B31C4A6DEF}", path: "/sitecore/content/amkor/amkor/Home/Packaging/MEMS and Sensors" }
+      - { name: "Power", itemId: "{7D2DC1EC-89FC-49B9-A779-7A44A51D9C3C}", path: "/sitecore/content/amkor/amkor/Home/Packaging/Power" }
+      - { name: "D2PAK TO-263", itemId: "{E3ED9B77-117E-4C17-85F5-3157C0E8658F}", path: "/sitecore/content/amkor/amkor/Home/Packaging/Power/D2PAK TO-263" }
+      - { name: "DPAK TO-252", itemId: "{62D4D8D7-F898-428A-A18E-2C8439DC17BD}", path: "/sitecore/content/amkor/amkor/Home/Packaging/Power/DPAK TO-252" }
+      - { name: "HSON8", itemId: "{80B6AB7B-4D84-4158-8BFE-EBEF699D5278}", path: "/sitecore/content/amkor/amkor/Home/Packaging/Power/HSON8" }
+      - { name: "LFPAK56", itemId: "{E9069DE4-C0A4-4FEA-97CB-06E892FEDF49}", path: "/sitecore/content/amkor/amkor/Home/Packaging/Power/LFPAK56" }
+      - { name: "PowerCSP", itemId: "{879EA064-5E63-4E4C-9E80-BF6F5A5CA40F}", path: "/sitecore/content/amkor/amkor/Home/Packaging/Power/PowerCSP" }
+      - { name: "PQFN", itemId: "{3C01A53A-09CC-4C0F-B168-1E643B2A6188}", path: "/sitecore/content/amkor/amkor/Home/Packaging/Power/PQFN" }
+      - { name: "PSMC", itemId: "{5F8FF7C8-88D8-429F-B8E9-CDF92B89863A}", path: "/sitecore/content/amkor/amkor/Home/Packaging/Power/PSMC" }
+      - { name: "SO8-FL", itemId: "{7C96C701-07D0-42A1-94D1-45697894E954}", path: "/sitecore/content/amkor/amkor/Home/Packaging/Power/SO8-FL" }
+      - { name: "SOD123-FL", itemId: "{264CD1DA-08C1-436B-BD5B-29A76020122A}", path: "/sitecore/content/amkor/amkor/Home/Packaging/Power/SOD123-FL" }
+      - { name: "SOD128-FL", itemId: "{DEE4EFDA-6968-409F-8277-19B5D5806A32}", path: "/sitecore/content/amkor/amkor/Home/Packaging/Power/SOD128-FL" }
+      - { name: "TO-220FP", itemId: "{BB04AF56-1E6C-446D-8B0D-4E52AB75E736}", path: "/sitecore/content/amkor/amkor/Home/Packaging/Power/TO-220FP" }
+      - { name: "TOLL", itemId: "{06143D15-42C6-4C73-900F-CC5B434D3101}", path: "/sitecore/content/amkor/amkor/Home/Packaging/Power/TOLL" }
+      - { name: "TSON8-FL", itemId: "{6A634542-B10F-42AA-85CD-9130DC0112C6}", path: "/sitecore/content/amkor/amkor/Home/Packaging/Power/TSON8-FL" }
+      - { name: "System in Package SiP", itemId: "{874F21E1-91B9-44BD-BE36-A5AEF1A95055}", path: "/sitecore/content/amkor/amkor/Home/Packaging/System in Package SiP" }
+      - { name: "Wafer Level", itemId: "{E612545E-DDF3-4DA9-85D0-FA7BD8249855}", path: "/sitecore/content/amkor/amkor/Home/Packaging/Wafer Level" }
+      - { name: "WLCSP", itemId: "{1F3236AD-D353-46FF-B55B-6C0B9D6ADD95}", path: "/sitecore/content/amkor/amkor/Home/Packaging/Wafer Level/WLCSP" }
+      - { name: "WLFO WLCSP Plus", itemId: "{64565A95-2308-442B-BEAC-7B5092C4727A}", path: "/sitecore/content/amkor/amkor/Home/Packaging/Wafer Level/WLFO WLCSP Plus" }
+      - { name: "WLSiP WL3D", itemId: "{2B721843-CE5D-4073-947D-77C302434B96}", path: "/sitecore/content/amkor/amkor/Home/Packaging/Wafer Level/WLSiP WL3D" }
+      - { name: "Technology", itemId: "{53463616-8870-4F0D-95C1-4371D992C7DB}", path: "/sitecore/content/amkor/amkor/Home/Technology" }
+      - { name: "2-5D 3D TSV", itemId: "{F4903CA0-FBF5-4486-B2A9-80DA52523BF9}", path: "/sitecore/content/amkor/amkor/Home/Technology/2-5D 3D TSV" }
+      - { name: "3D Stacked Die", itemId: "{19478127-AE96-474E-AE08-9F6601DCDA94}", path: "/sitecore/content/amkor/amkor/Home/Technology/3D Stacked Die" }
+      - { name: "AiP AoP", itemId: "{D6B40CFF-CAC3-436F-9C1E-5FC6DD652472}", path: "/sitecore/content/amkor/amkor/Home/Technology/AiP AoP" }
+      - { name: "Chip-on-Chip", itemId: "{CF68DBF5-9228-4CAC-B321-6D71FFCB4975}", path: "/sitecore/content/amkor/amkor/Home/Technology/Chip-on-Chip" }
+      - { name: "Copper Pillar", itemId: "{7E5C8A64-1ACA-47AE-9C00-5BD02F82AC81}", path: "/sitecore/content/amkor/amkor/Home/Technology/Copper Pillar" }
+      - { name: "Edge Protection", itemId: "{371658F9-84D7-403C-A28A-FEA5B30BC028}", path: "/sitecore/content/amkor/amkor/Home/Technology/Edge Protection" }
+      - { name: "Flip Chip", itemId: "{65D76B35-6818-4960-9507-25C44EA92BE9}", path: "/sitecore/content/amkor/amkor/Home/Technology/Flip Chip" }
+      - { name: "Interconnect", itemId: "{DB60AF32-8D68-46F2-B24A-AFECE62EBEE0}", path: "/sitecore/content/amkor/amkor/Home/Technology/Interconnect" }
+      - { name: "Optical Sensors", itemId: "{A11AE558-FCAF-437E-93CA-64A7AC7F6E2D}", path: "/sitecore/content/amkor/amkor/Home/Technology/Optical Sensors" }
+      - { name: "Package-on-Package", itemId: "{D36A3F10-8A1C-46E6-BFFC-59F318C87129}", path: "/sitecore/content/amkor/amkor/Home/Technology/Package-on-Package" }
+      - { name: "S-Connect", itemId: "{1F93ED97-C9E0-4A5E-9B79-ABA7BEFD2157}", path: "/sitecore/content/amkor/amkor/Home/Technology/S-Connect" }
+      - { name: "S-SWIFT", itemId: "{661EEBCD-90EE-4393-A085-F4FF6710A826}", path: "/sitecore/content/amkor/amkor/Home/Technology/S-SWIFT" }
+      - { name: "SWIFT", itemId: "{B49F5BEE-B6D4-4E71-8249-D814522087A9}", path: "/sitecore/content/amkor/amkor/Home/Technology/SWIFT" }
+      - { name: "Test Services", itemId: "{C39BC746-0C9C-4C76-A623-3DE87ED527F0}", path: "/sitecore/content/amkor/amkor/Home/Test Services" }
+      - { name: "Services", itemId: "{E1435CB8-EDE6-4A86-911F-58CB91C3300D}", path: "/sitecore/content/amkor/amkor/Home/Services" }
+      - { name: "Design Services", itemId: "{10C697EC-265D-45F2-9007-EAA023C90A93}", path: "/sitecore/content/amkor/amkor/Home/Services/Design Services" }
+      - { name: "Package Characterization", itemId: "{9D26CCBE-06C5-4098-BEB7-B6A75CB65357}", path: "/sitecore/content/amkor/amkor/Home/Services/Package Characterization" }
+      - { name: "Wafer Bumping", itemId: "{4332E3EA-A3AF-413A-BC52-B32861D6392B}", path: "/sitecore/content/amkor/amkor/Home/Services/Wafer Bumping" }
+      - { name: "Applications", itemId: "{20E5730D-E035-4835-B224-BD494A0F3C99}", path: "/sitecore/content/amkor/amkor/Home/Applications" }
+      - { name: "Artificial Intelligence", itemId: "{2D3B2322-D080-4557-9E16-CB198F62C8AA}", path: "/sitecore/content/amkor/amkor/Home/Applications/Artificial Intelligence" }
+      - { name: "Automotive", itemId: "{BC03EECC-5E7C-4897-8ACE-7E834F2BED1E}", path: "/sitecore/content/amkor/amkor/Home/Applications/Automotive" }
+      - { name: "Communications", itemId: "{5559500A-A62E-480F-81AF-FC453032AE38}", path: "/sitecore/content/amkor/amkor/Home/Applications/Communications" }
+      - { name: "Computing", itemId: "{24D543C6-0796-4451-AB0B-5DAE2240F86A}", path: "/sitecore/content/amkor/amkor/Home/Applications/Computing" }
+      - { name: "Consumer", itemId: "{2C473693-3137-409C-A698-CB2604C67B9D}", path: "/sitecore/content/amkor/amkor/Home/Applications/Consumer" }
+      - { name: "Industrial", itemId: "{7B96D5B1-7ADC-487A-A990-2784E633DABC}", path: "/sitecore/content/amkor/amkor/Home/Applications/Industrial" }
+      - { name: "Internet of Things", itemId: "{E7C78365-D02B-4D31-A898-E5C1D16709AB}", path: "/sitecore/content/amkor/amkor/Home/Applications/Internet of Things" }
+      - { name: "Networking", itemId: "{A3406EF6-D1D8-4C55-920A-80E56A32D49F}", path: "/sitecore/content/amkor/amkor/Home/Applications/Networking" }
+      - { name: "Quality", itemId: "{518DF9E7-844E-413A-9F74-42108EFEE527}", path: "/sitecore/content/amkor/amkor/Home/Quality" }
+    fieldsUpdated:
+      - Detail
+      - pageTitle
+      - pageHeaderTitle
+      - pageShortTitle
+      - pageSubtitle
+      - pageSummary
+    verification:
+      checkedAt: "2026-08-25T02:00:00Z"
+      passed:
+        - "Site amkor verified via list_sites"
+        - "Home exists at /sitecore/content/amkor/amkor/Home {BB13BF5A-B102-4FE8-B410-63E3DA7AA448}"
+        - "Services Page template {B2B918C3-ACDA-433F-A11B-718466493AEC} validated"
+        - "99 Services Pages created via create_content_item"
+        - "Detail field confirmed on About Us, FlipStack CSP, and Home L1 children"
+        - "All 7 L1 hubs present under Home"
+        - "About Us L2 children present; Careers/News/Customer Center L3 present"
+      failed: []
+      pendingManual:
+        - "pageTitle / pageHeaderTitle / pageShortTitle / pageSubtitle / pageSummary (silent-write — verify in Content Editor)"
+        - "Add Services Page to Home insert options for authors"
+        - "Approve Draft workflow and publish /sitecore/content/amkor/amkor/Home subtree for Edge"
+        - "Wire navigation to new IA pages; starter Speakers/Video/Data left in tree"
+
+  - name: "lcmc-ia-tree"
+    kind: "ia-create"
+    category: "IA"
+    status: "complete"
+    createdAt: "2026-08-25T01:40:00Z"
+    updatedAt: "2026-08-25T02:50:00Z"
+    siteName: "lcmc"
+    siteCollection: "lcmc"
+    contentRootPath: "/sitecore/content/lcmc/lcmc/Home"
+    contentRootItemId: "{194F8944-6400-40DD-BDCB-931686A42643}"
+    pageTemplateId: "{D77937AC-BAE4-4EB0-8D7E-69EC09D5BBFC}"
+    pageTemplateName: "Services Page"
+    iaSource: "docs/ai/ia/lcmc-health-ia.md"
+    sourceSite: "https://www.lcmchealth.org/"
+    createdCount: 115
+    skippedCount: 1
+    failedCount: 0
+    notes: >
+      Created LCMC Health IA tree (115 Services Page items) under Home from lcmc-health-ia.md.
+      Home already existed (Home Page) and was skipped. Starter Data/Speakers/Video left untouched.
+      Titles from IA node names (no live scrape). Item names: spaces preserved; "&" -> "and";
+      apostrophes and commas stripped (Sitecore ItemNameValidation). Display titles keep
+      original punctuation in pageTitle/pageHeaderTitle/pageShortTitle/pageSubtitle/pageSummary/Detail.
+      Services Page was NOT in Home insert options (Article/Audio/Detail/Landing/Product/Page Folder);
+      create_content_item still succeeded. MCP read-back only echoes Detail+image; page* fields
+      are silent-write — verify in Content Editor. No [folder]/shared nodes; folder template not used.
+      image left empty (no live scrape / no DAM). Items remain in Draft workflow.
+    items:
+      - { name: "About Us", itemId: "{7A74408E-B1F1-4B41-B189-C80D340CF88C}", path: "/sitecore/content/lcmc/lcmc/Home/About Us" }
+      - { name: "Academic Affairs at LCMC Health", itemId: "{9AC41D38-4175-4441-B817-0F35FAA9727D}", path: "/sitecore/content/lcmc/lcmc/Home/About Us/Academic Affairs at LCMC Health" }
+      - { name: "Meet Our Team", itemId: "{D8BBE70B-91EC-4317-BE6D-5FF9B70906E7}", path: "/sitecore/content/lcmc/lcmc/Home/About Us/Academic Affairs at LCMC Health/Meet Our Team" }
+      - { name: "Helpful Resources", itemId: "{44C81099-8AFB-4098-961E-48D043F4402C}", path: "/sitecore/content/lcmc/lcmc/Home/About Us/Academic Affairs at LCMC Health/Helpful Resources" }
+      - { name: "Sponsored Training Programs", itemId: "{D4D69336-7EDF-448F-9EFD-7FEBDA18D02F}", path: "/sitecore/content/lcmc/lcmc/Home/About Us/Academic Affairs at LCMC Health/Sponsored Training Programs" }
+      - { name: "Learner Opportunities", itemId: "{63C1DA83-218A-4640-A221-07BB47D95E11}", path: "/sitecore/content/lcmc/lcmc/Home/About Us/Academic Affairs at LCMC Health/Learner Opportunities" }
+      - { name: "Beyond Extraordinary Podcast", itemId: "{2004BAD5-C7D6-48CB-BD36-7405A60163D4}", path: "/sitecore/content/lcmc/lcmc/Home/About Us/Beyond Extraordinary Podcast" }
+      - { name: "Celebrating the Little Extras All Around Us", itemId: "{CAFB11DE-64B7-4C72-BB94-BB34AA73CBBC}", path: "/sitecore/content/lcmc/lcmc/Home/About Us/Celebrating the Little Extras All Around Us" }
+      - { name: "Community Health Needs", itemId: "{2B3A5CCD-3897-4B07-81D8-9B16447C81BD}", path: "/sitecore/content/lcmc/lcmc/Home/About Us/Community Health Needs" }
+      - { name: "Community Involvement", itemId: "{56886CD0-DF8D-4C4A-BB8C-C34FDA9FD7CE}", path: "/sitecore/content/lcmc/lcmc/Home/About Us/Community Involvement" }
+      - { name: "New Orleans Museum of Art Partnership", itemId: "{6375F515-B1C4-4205-BE8B-C9701D7D3680}", path: "/sitecore/content/lcmc/lcmc/Home/About Us/Community Involvement/New Orleans Museum of Art Partnership" }
+      - { name: "Wellness Lounge", itemId: "{5699FD61-1CD3-4D0F-8BC5-94A092B1AA24}", path: "/sitecore/content/lcmc/lcmc/Home/About Us/Community Involvement/Wellness Lounge" }
+      - { name: "Heart Beat Marching Krewe", itemId: "{D5053225-257F-4B79-85AA-62F5001C4A78}", path: "/sitecore/content/lcmc/lcmc/Home/About Us/Community Involvement/Heart Beat Marching Krewe" }
+      - { name: "Direct Contracting", itemId: "{D16050C5-2F89-48BD-9494-5E121541F702}", path: "/sitecore/content/lcmc/lcmc/Home/About Us/Direct Contracting" }
+      - { name: "Emergency Preparedness", itemId: "{E0C486D7-74FE-4D0A-B643-CBF2AB7A79A5}", path: "/sitecore/content/lcmc/lcmc/Home/About Us/Emergency Preparedness" }
+      - { name: "Executive Leadership", itemId: "{2D120BC2-D120-4DED-B682-42EC2DE99F23}", path: "/sitecore/content/lcmc/lcmc/Home/About Us/Executive Leadership" }
+      - { name: "Extraordinary Together", itemId: "{D27C71BD-2F7D-4306-AB64-F2FF0A7E72EB}", path: "/sitecore/content/lcmc/lcmc/Home/About Us/Extraordinary Together" }
+      - { name: "Family ties", itemId: "{9F405048-091F-4255-B9A6-DAB29583B25C}", path: "/sitecore/content/lcmc/lcmc/Home/About Us/Family ties" }
+      - { name: "Heart Beat Dance Krewe", itemId: "{7CE90717-BDE1-4ACD-8833-F6371CC05115}", path: "/sitecore/content/lcmc/lcmc/Home/About Us/Heart Beat Dance Krewe" }
+      - { name: "Keeping You Well", itemId: "{9E54175F-4152-4A58-A5EE-6EB156AF089A}", path: "/sitecore/content/lcmc/lcmc/Home/About Us/Keeping You Well" }
+      - { name: "LCMC Health therapy dogs", itemId: "{E938C013-C0E1-44E9-950B-3E26BC360BBA}", path: "/sitecore/content/lcmc/lcmc/Home/About Us/LCMC Health therapy dogs" }
+      - { name: "Opportunity and Social Responsibility", itemId: "{3BCBC2DE-CB4B-4F21-8FEA-0CABBFBDF9EB}", path: "/sitecore/content/lcmc/lcmc/Home/About Us/Opportunity and Social Responsibility" }
+      - { name: "LCMC Health FindHelp", itemId: "{41AB6D58-A7A9-422E-9B61-1C06A9C6ED36}", path: "/sitecore/content/lcmc/lcmc/Home/About Us/Opportunity and Social Responsibility/LCMC Health FindHelp" }
+      - { name: "Be in the KNOW", itemId: "{F5A7ABA6-317B-48C0-9B9E-71EB3EAEEBB4}", path: "/sitecore/content/lcmc/lcmc/Home/About Us/Opportunity and Social Responsibility/Be in the KNOW" }
+      - { name: "Minority Executive Fellowship Program", itemId: "{0641567C-AC9F-4BE7-A9D5-8A40C9F960B1}", path: "/sitecore/content/lcmc/lcmc/Home/About Us/Opportunity and Social Responsibility/Minority Executive Fellowship Program" }
+      - { name: "Patient Stories", itemId: "{C4A22B89-6F7E-4772-80A6-58FABAF8EDDB}", path: "/sitecore/content/lcmc/lcmc/Home/About Us/Patient Stories" }
+      - { name: "Satisfaction Surveys and Ratings", itemId: "{82652198-70F8-47D5-9A0F-66B13BD942CF}", path: "/sitecore/content/lcmc/lcmc/Home/About Us/Satisfaction Surveys and Ratings" }
+      - { name: "Volunteer", itemId: "{E166775B-77ED-4452-A7A7-8A4128D15F4F}", path: "/sitecore/content/lcmc/lcmc/Home/About Us/Volunteer" }
+      - { name: "For Patients", itemId: "{6CCB1824-626B-4DD1-94CD-16B902D21C23}", path: "/sitecore/content/lcmc/lcmc/Home/For Patients" }
+      - { name: "Communication and Translation", itemId: "{AF99D6E0-1858-477D-8DA7-9E1527E7C142}", path: "/sitecore/content/lcmc/lcmc/Home/For Patients/Communication and Translation" }
+      - { name: "Donate blood", itemId: "{EE0505C7-3E99-499D-86B7-80774350640C}", path: "/sitecore/content/lcmc/lcmc/Home/For Patients/Donate blood" }
+      - { name: "Financial Assistance", itemId: "{1EEC866D-D03B-43A0-9605-DA9DFDF94CB5}", path: "/sitecore/content/lcmc/lcmc/Home/For Patients/Financial Assistance" }
+      - { name: "Price Transparency", itemId: "{0ADA9559-A4AF-42AE-ABDC-1EC616615C2D}", path: "/sitecore/content/lcmc/lcmc/Home/For Patients/Financial Assistance/Price Transparency" }
+      - { name: "Free Ask a Nurse Hotline", itemId: "{DE438041-8A49-4784-B009-3D76B427F8DE}", path: "/sitecore/content/lcmc/lcmc/Home/For Patients/Free Ask a Nurse Hotline" }
+      - { name: "Pay My Bill", itemId: "{E804539D-EE01-4ECD-85D8-17392F6B7A92}", path: "/sitecore/content/lcmc/lcmc/Home/For Patients/Pay My Bill" }
+      - { name: "Request Your Medical Records", itemId: "{F768939E-B6D0-4709-B059-AB164158A579}", path: "/sitecore/content/lcmc/lcmc/Home/For Patients/Request Your Medical Records" }
+      - { name: "Patient Portal", itemId: "{6F3909CB-683B-4854-A8B6-0FCAE28C1627}", path: "/sitecore/content/lcmc/lcmc/Home/For Patients/Patient Portal" }
+      - { name: "SMS Terms and Conditions", itemId: "{0127DB52-118B-4226-8BB9-82E1E5E67D9F}", path: "/sitecore/content/lcmc/lcmc/Home/For Patients/SMS Terms and Conditions" }
+      - { name: "Our Services", itemId: "{1E4A5B3F-FFF8-46F3-B1A3-44A0ECA55A2D}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services" }
+      - { name: "Behavioral Health", itemId: "{9415CD18-5257-4916-B3CC-6AB9C8A59719}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Behavioral Health" }
+      - { name: "Cancer Care", itemId: "{3750C717-8995-4CED-8F87-3B13F0DCC287}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Cancer Care" }
+      - { name: "LSU LCMC Health Cancer Center", itemId: "{7D1CDD99-998D-4199-BFBA-596EFAC7635D}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Cancer Care/LSU LCMC Health Cancer Center" }
+      - { name: "Cancel Cancer", itemId: "{30E152AF-A7BB-4E69-939A-E462E863FB14}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Cancer Care/Cancel Cancer" }
+      - { name: "Clinical Trials", itemId: "{84885471-0FAB-474C-8EFA-FA73B9CA0FED}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Cancer Care/Clinical Trials" }
+      - { name: "Centro Hispano de Salud", itemId: "{90F7849A-0041-470F-9C0F-14C7B96E72E2}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Centro Hispano de Salud" }
+      - { name: "Dermatology", itemId: "{B0A4034A-CC2F-4D81-8736-49CD41F70BF7}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Dermatology" }
+      - { name: "Mohs Surgery", itemId: "{EC92C0C8-C6E8-4144-B8EF-4406D0CA6473}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Dermatology/Mohs Surgery" }
+      - { name: "Diabetes Care", itemId: "{180B89E4-F691-49C1-A83D-6E66C0F7C630}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Diabetes Care" }
+      - { name: "Digestive Care", itemId: "{6E692604-C028-4852-81CD-9B869C07FFBF}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Digestive Care" }
+      - { name: "Ears Nose and Throat Care", itemId: "{87C759FA-EFED-4FAE-80EA-5CD10A4C0046}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Ears Nose and Throat Care" }
+      - { name: "Emergency Care", itemId: "{9010D462-6EDC-46A5-B18C-E6D29D1DAD5B}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Emergency Care" }
+      - { name: "LCMC Health Emergency Care Downtown", itemId: "{3E5E4795-4054-4011-B71B-28EAF537B7DD}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Emergency Care/LCMC Health Emergency Care Downtown" }
+      - { name: "Where to Seek Care", itemId: "{96742CB7-2A4C-4B54-8753-9E398C915B2E}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Emergency Care/Where to Seek Care" }
+      - { name: "Heart and Vascular Care", itemId: "{C2445C30-B8EB-4E7C-AB4D-7B1CD7CDBEEA}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Heart and Vascular Care" }
+      - { name: "Hispanic Health Center", itemId: "{55F49D2F-D9CA-4B55-A50C-807D9B7A434B}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Hispanic Health Center" }
+      - { name: "Imaging", itemId: "{2F5E74F2-EB7C-483F-A627-3012B3375264}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Imaging" }
+      - { name: "Laboratory Services", itemId: "{51C94218-1C48-4113-850A-7A131DD91C02}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Laboratory Services" }
+      - { name: "LCMC Health Pharmacy Services", itemId: "{79C6FE4E-B201-4FFB-B7CC-08212CCDF158}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/LCMC Health Pharmacy Services" }
+      - { name: "LCMC Health Home Care", itemId: "{A908505B-5AA3-4195-875D-62A402A8F1D3}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/LCMC Health Home Care" }
+      - { name: "Maternal Fetal Medicine", itemId: "{73EAB924-1752-4D60-BEFF-B02B4DDF5E11}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Maternal Fetal Medicine" }
+      - { name: "Mens Health", itemId: "{6CD7C827-D701-475D-A5A7-BEBDD0519FB6}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Mens Health" }
+      - { name: "Neuroscience Institute at LCMC Health", itemId: "{EEA0ED34-3690-4AA3-A74A-8DDE71F19632}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Neuroscience Institute at LCMC Health" }
+      - { name: "Conditions We Treat", itemId: "{84D622FE-DA54-47FD-8E0D-807F56015758}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Neuroscience Institute at LCMC Health/Conditions We Treat" }
+      - { name: "Caregiver Resources", itemId: "{29F43E74-D4EB-414E-A4CA-093C0A994526}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Neuroscience Institute at LCMC Health/Caregiver Resources" }
+      - { name: "Preparing for Your Procedure", itemId: "{BB32A5A4-F13E-4291-A4FB-A54293EE1487}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Neuroscience Institute at LCMC Health/Preparing for Your Procedure" }
+      - { name: "Awards and Accolades", itemId: "{03155F67-3B76-406E-9202-E45AC51C7D5E}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Neuroscience Institute at LCMC Health/Awards and Accolades" }
+      - { name: "News and Events", itemId: "{E6AFDD1D-FB73-41A0-BD70-4F8809EF4682}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Neuroscience Institute at LCMC Health/News and Events" }
+      - { name: "Neuroscience For Providers", itemId: "{2C74CFCA-533F-43A3-8C3A-3CE49C8EDF59}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Neuroscience Institute at LCMC Health/Neuroscience For Providers" }
+      - { name: "Orthopedic Care", itemId: "{AFABB642-E6B8-44DE-B6A6-57E5CB0614FC}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Orthopedic Care" }
+      - { name: "Pediatrics", itemId: "{DF15B68E-DF58-4CDC-8F23-201D863572FE}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Pediatrics" }
+      - { name: "Primary Care", itemId: "{475940B6-BCD7-430B-A025-9A17725A63A0}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Primary Care" }
+      - { name: "Same and Next Day Appointments", itemId: "{59024438-27D0-49F2-8180-B47DB5FE1E75}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Primary Care/Same and Next Day Appointments" }
+      - { name: "Rehabilitation", itemId: "{7F895D44-CA57-4685-AFCE-7F1C6B896252}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Rehabilitation" }
+      - { name: "Inpatient Rehab", itemId: "{C12EF93C-68E6-4DF6-9619-61E65F463D2E}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Rehabilitation/Inpatient Rehab" }
+      - { name: "Outpatient Rehab", itemId: "{80FCD92F-CA94-4550-9046-24BC42AA402C}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Rehabilitation/Outpatient Rehab" }
+      - { name: "Respiratory Care", itemId: "{609B19A3-69C3-4720-BA24-99C69338203A}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Respiratory Care" }
+      - { name: "Sleep Care", itemId: "{96360567-FC0E-4B1E-BE85-17C482B4BED5}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Sleep Care" }
+      - { name: "Stroke Care", itemId: "{6C5C31D6-6ED7-47EB-981E-FD0263C9E02D}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Stroke Care" }
+      - { name: "Transplant Services", itemId: "{A4718E7F-3CEB-4639-B1CB-F41B445540AF}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Transplant Services" }
+      - { name: "Urgent Care", itemId: "{A97CCB83-DE1D-4EC7-B20F-607F510219DB}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Urgent Care" }
+      - { name: "Urology", itemId: "{D0708C84-2D88-49EE-9E65-7EA0F0BF8C6C}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Urology" }
+      - { name: "Virtual Care", itemId: "{673735F3-DBD1-442F-B608-331E9BDFFB2E}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Virtual Care" }
+      - { name: "Virtual Care On-Demand", itemId: "{545941EC-27A9-4EA6-B3F3-A0B320AAF018}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Virtual Care/Virtual Care On-Demand" }
+      - { name: "Remote Monitoring for Chronic Conditions", itemId: "{0918C4FE-FA6D-4CE7-BBB1-7B08CA043095}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Virtual Care/Remote Monitoring for Chronic Conditions" }
+      - { name: "Home Monitoring for Maternal Health", itemId: "{4ADF1E6D-FA20-473E-9EAF-B65267FB296F}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Virtual Care/Home Monitoring for Maternal Health" }
+      - { name: "Nurse Hotline", itemId: "{D3BFF8F3-9957-4B0F-B552-F585E79AB698}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Virtual Care/Nurse Hotline" }
+      - { name: "Weight Loss", itemId: "{4300A661-DB00-4FDB-803F-28825D81A280}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Weight Loss" }
+      - { name: "Meet the Weight Loss Team", itemId: "{CB12BC9E-D9D8-4062-8DDD-F5526A01835C}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Weight Loss/Meet the Weight Loss Team" }
+      - { name: "Womens Health", itemId: "{EC4F7F65-4F81-4D82-AF6E-32AB97CB962D}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Womens Health" }
+      - { name: "Womens Care for the Next Generation", itemId: "{B7672783-AA27-4E37-BCE4-8EBA7CF23791}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Womens Health/Womens Care for the Next Generation" }
+      - { name: "Breast Cancer Care", itemId: "{1CBF9DD2-BD7A-443E-B790-25236C5E8D4F}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Womens Health/Breast Cancer Care" }
+      - { name: "Menopause Care", itemId: "{77062B7F-C6C8-4D76-A6B7-E3DB3DC6969F}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Womens Health/Menopause Care" }
+      - { name: "Wound Care", itemId: "{2F10649D-8011-441A-B459-31315B20B55A}", path: "/sitecore/content/lcmc/lcmc/Home/Our Services/Wound Care" }
+      - { name: "Our Locations", itemId: "{0A471272-462E-4497-BEA2-D03C904BCBE5}", path: "/sitecore/content/lcmc/lcmc/Home/Our Locations" }
+      - { name: "East Jefferson General Hospital", itemId: "{8EED2D44-9041-483E-9DE2-6DEE4E92B0B0}", path: "/sitecore/content/lcmc/lcmc/Home/Our Locations/East Jefferson General Hospital" }
+      - { name: "Lakeside Hospital", itemId: "{3A19DAC6-9E88-416D-AEB9-B677B796A2F8}", path: "/sitecore/content/lcmc/lcmc/Home/Our Locations/Lakeside Hospital" }
+      - { name: "Lakeview Hospital", itemId: "{B570613E-4755-4797-B953-D0FA40E87AB2}", path: "/sitecore/content/lcmc/lcmc/Home/Our Locations/Lakeview Hospital" }
+      - { name: "Manning Family Childrens", itemId: "{733FA878-5E4D-4882-9F64-5F55FF00F1D8}", path: "/sitecore/content/lcmc/lcmc/Home/Our Locations/Manning Family Childrens" }
+      - { name: "New Orleans East Hospital", itemId: "{31988E67-198E-431F-A244-834AE4D473D8}", path: "/sitecore/content/lcmc/lcmc/Home/Our Locations/New Orleans East Hospital" }
+      - { name: "Touro", itemId: "{3FB47445-1BE8-4622-8E2D-AC071AC2D56A}", path: "/sitecore/content/lcmc/lcmc/Home/Our Locations/Touro" }
+      - { name: "University Medical Center New Orleans", itemId: "{618FA09A-743B-4623-A06C-F1CEE45FDF4F}", path: "/sitecore/content/lcmc/lcmc/Home/Our Locations/University Medical Center New Orleans" }
+      - { name: "West Jefferson Medical Center", itemId: "{130578E9-32C7-474B-9C19-E452C5DD0215}", path: "/sitecore/content/lcmc/lcmc/Home/Our Locations/West Jefferson Medical Center" }
+      - { name: "Urgent Care Locations", itemId: "{8E01B094-506C-4379-8257-8E02A97E9291}", path: "/sitecore/content/lcmc/lcmc/Home/Our Locations/Urgent Care Locations" }
+      - { name: "LCMC Health Chalmette Urgent Care", itemId: "{249D74AF-E407-4786-B643-48830A467D54}", path: "/sitecore/content/lcmc/lcmc/Home/Our Locations/Urgent Care Locations/LCMC Health Chalmette Urgent Care" }
+      - { name: "LCMC Health Clearview Urgent Care", itemId: "{6B3630CF-2011-4EC0-9329-EBDA3E104D9A}", path: "/sitecore/content/lcmc/lcmc/Home/Our Locations/Urgent Care Locations/LCMC Health Clearview Urgent Care" }
+      - { name: "LCMC Health Gretna Urgent Care", itemId: "{2F519DB5-833E-4540-93D6-25E1A2382071}", path: "/sitecore/content/lcmc/lcmc/Home/Our Locations/Urgent Care Locations/LCMC Health Gretna Urgent Care" }
+      - { name: "LCMC Health Kenner Urgent Care", itemId: "{4961F1F3-B83E-4E6E-95C5-5AA373092BCA}", path: "/sitecore/content/lcmc/lcmc/Home/Our Locations/Urgent Care Locations/LCMC Health Kenner Urgent Care" }
+      - { name: "LCMC Health Lakeview Urgent Care", itemId: "{9C37B7E0-C075-4FD8-8E6F-BCED1C5A1767}", path: "/sitecore/content/lcmc/lcmc/Home/Our Locations/Urgent Care Locations/LCMC Health Lakeview Urgent Care" }
+      - { name: "LCMC Health Luling Urgent Care", itemId: "{B423D1CE-D9F7-4343-87FC-B0DE6496CB27}", path: "/sitecore/content/lcmc/lcmc/Home/Our Locations/Urgent Care Locations/LCMC Health Luling Urgent Care" }
+      - { name: "LCMC Health Marrero Urgent Care", itemId: "{FA259C01-E1C9-4649-8332-210A24C1D6AF}", path: "/sitecore/content/lcmc/lcmc/Home/Our Locations/Urgent Care Locations/LCMC Health Marrero Urgent Care" }
+      - { name: "LCMC Health Uptown Urgent Care", itemId: "{4970D71E-474B-4EAA-878B-787BB6216EAB}", path: "/sitecore/content/lcmc/lcmc/Home/Our Locations/Urgent Care Locations/LCMC Health Uptown Urgent Care" }
+      - { name: "Find a Provider", itemId: "{BAE717F7-D99D-4722-8FAF-CED2581DF809}", path: "/sitecore/content/lcmc/lcmc/Home/Find a Provider" }
+      - { name: "For Providers", itemId: "{F280CB2F-C7F8-4217-B325-004870571DC8}", path: "/sitecore/content/lcmc/lcmc/Home/For Providers" }
+      - { name: "Contact Us", itemId: "{C04ED62D-9082-490D-99EE-D72146755712}", path: "/sitecore/content/lcmc/lcmc/Home/Contact Us" }
+      - { name: "Notice of Non-Discrimination", itemId: "{E71BF3C3-7DAC-43EF-8222-963DD4F3EF49}", path: "/sitecore/content/lcmc/lcmc/Home/Notice of Non-Discrimination" }
+    verification:
+      checkedAt: "2026-08-25T02:50:00Z"
+      passed:
+        - "Site lcmc verified via list_sites (tenant lcmc, rootPath matches Home)"
+        - "Home exists at /sitecore/content/lcmc/lcmc/Home {194F8944-6400-40DD-BDCB-931686A42643}"
+        - "Services Page template {D77937AC-BAE4-4EB0-8D7E-69EC09D5BBFC} validated (pageTitle/pageHeaderTitle/pageShortTitle/pageSubtitle/pageSummary/Detail/image; no Title)"
+        - "115 Services Pages created via create_content_item and verified by MCP read-back"
+        - "Detail field confirmed on Home L1 children, Our Services (31 L2), and Urgent Care Locations (8 L3)"
+        - "All 8 L1 pages present under Home"
+      failed: []
+      pendingManual:
+        - "pageTitle / pageHeaderTitle / pageShortTitle / pageSubtitle / pageSummary (silent-write — verify in Content Editor)"
+        - "Add Services Page to Home insert options for authors"
+        - "Approve Draft workflow and publish /sitecore/content/lcmc/lcmc/Home subtree for Edge"
+        - "Wire navigation to new IA pages; starter Speakers/Video/Data left in tree"
+        - "image empty — replace with DAM when assets are uploaded"
+
+# Shared homepage kit (click-click-launch Global Elements) — 2026-08-25
+# Do not treat these as FMC/progressive items. HeaderST Default was not restyled.
+homepageKit:
+  status: "partial"
+  createdAt: "2026-08-25T01:00:00Z"
+  updatedAt: "2026-08-25T03:30:00Z"
+  projectTemplatesRoot: "/sitecore/templates/Project/click-click-launch/Components/Global Elements"
+  renderingsRoot: "/sitecore/layout/Renderings/Project/click-click-launch/Global Elements"
+  availableRenderingsGroup: "Homepage Kit"
+  availableRenderingsValue: "{916AD4EA-646B-4F69-BA9D-594CEA0D59C7}|{FD183076-E346-49B5-A3F1-22D2E45B4A63}|{1745BCF4-CD31-4182-A3DF-8874E979DD60}|{0B67AE92-7387-4EE5-8A97-217AE6BDE765}|{B644D425-E162-45A9-A59E-FCFE3F14B90D}"
+  sitesWired:
+    - { name: "lcmc", homeId: "{194F8944-6400-40DD-BDCB-931686A42643}", arItemId: "{72E55B4F-12C7-4D15-9E7C-71F88370D501}" }
+    - { name: "amkor", homeId: "{BB13BF5A-B102-4FE8-B410-63E3DA7AA448}", arItemId: "{E72EC5E7-E264-404A-8137-004BEC46E7CE}" }
+    - { name: "americasmart", homeId: "{3BD35058-A302-42FE-98A6-7ECA10407DE2}", arItemId: "{99FD24DA-DBEA-4824-9AA9-35C32D4EE44C}" }
+    - { name: "atlanta-apparel", homeId: "{011D81AC-F13E-4DC1-A142-88119D17A7B5}", arItemId: "{4AA4093B-EE42-421B-BF5A-FEA56CEF911A}" }
+  notes:
+    - "2026-08-25: Shared kit created under click-click-launch (not client-named). Wired onto four Homes. Variants must be set in Pages. Images empty."
+  components:
+    - name: "IconLinkBar"
+      kind: "list"
+      category: "Global Elements"
+      status: "complete"
+      react:
+        filePath: "src/components/uiim/global-elements/IconLinkBar.tsx"
+        variants: ["Default", "DarkBand", "CircleGrid"]
+      templates:
+        datasource: { name: "IconLinkBar", itemId: "{5AD908DA-DEB0-4B6F-8A3D-00FDFC802915}", standardValues: "{409BB427-78DC-4D52-9686-FE5FC50BED0B}" }
+        child: { name: "IconLinkItem", itemId: "{3D6D2E42-D566-4A98-ABF3-F1487BC2E603}" }
+        folder: { name: "IconLinkBar Folder", itemId: "{0B6BE34E-726E-4B50-8CBF-C7A86106C52D}" }
+        renderingParams: { itemId: "{0839B4BD-6F76-453F-94DA-C32199690BD4}" }
+      rendering: { itemId: "{916AD4EA-646B-4F69-BA9D-594CEA0D59C7}", path: "/sitecore/layout/Renderings/Project/click-click-launch/Global Elements/IconLinkBar" }
+    - name: "LinkColumnsBand"
+      kind: "list"
+      category: "Global Elements"
+      status: "complete"
+      react:
+        filePath: "src/components/uiim/global-elements/LinkColumnsBand.tsx"
+        variants: ["Default", "TwoColumn"]
+      templates:
+        datasource: { name: "LinkColumnsBand", itemId: "{F382ED37-1016-4449-BC8F-E46499A451BC}", standardValues: "{4B4F0A40-3ADD-400C-BAF2-E51FD10BFA34}" }
+        child: { name: "LinkColumnsItem", itemId: "{8A768EF4-DE41-4E4A-B7B4-0D3665AB0407}" }
+        folder: { name: "LinkColumnsBand Folder", itemId: "{EEAEE4F5-79BA-4FAF-945D-09AC441654F7}" }
+        renderingParams: { itemId: "{76389824-CC06-447A-ABF9-1F3C6A54EC38}" }
+      rendering: { itemId: "{FD183076-E346-49B5-A3F1-22D2E45B4A63}", path: "/sitecore/layout/Renderings/Project/click-click-launch/Global Elements/LinkColumnsBand" }
+    - name: "SplitFeature"
+      kind: "simple"
+      category: "Global Elements"
+      status: "complete"
+      react:
+        filePath: "src/components/uiim/global-elements/SplitFeature.tsx"
+        variants: ["Default", "ImageLeft"]
+      templates:
+        datasource: { name: "SplitFeature", itemId: "{70780390-A3EB-478D-B5DE-062BA3C9E897}", standardValues: "{FB71B394-76BC-4CDA-ABBE-9A40AE24E9F3}" }
+        folder: { name: "SplitFeature Folder", itemId: "{DA07889E-03D4-4FD7-A9EA-73D4B987C623}" }
+        renderingParams: { itemId: "{52C2A8BB-4C8B-4F54-9892-BF81C0377505}" }
+      rendering: { itemId: "{1745BCF4-CD31-4182-A3DF-8874E979DD60}", path: "/sitecore/layout/Renderings/Project/click-click-launch/Global Elements/SplitFeature" }
+    - name: "ButtonRow"
+      kind: "list"
+      category: "Global Elements"
+      status: "complete"
+      react:
+        filePath: "src/components/uiim/global-elements/ButtonRow.tsx"
+        variants: ["Default", "DarkGhost"]
+      templates:
+        datasource: { name: "ButtonRow", itemId: "{183C1B07-EAEC-48FE-9D2F-B94A4C630960}", standardValues: "{94FDDAEB-081D-4964-81FB-4B2A96309254}" }
+        child: { name: "ButtonRowItem", itemId: "{EF69B5F3-3E95-4FF1-8A42-EB5A95F43F0E}" }
+        folder: { name: "ButtonRow Folder", itemId: "{360C592A-81D3-41FD-85B9-8BD71DED2711}" }
+        renderingParams: { itemId: "{83CB0F59-9ABB-49EC-A6F4-C0707621E7B7}" }
+      rendering: { itemId: "{0B67AE92-7387-4EE5-8A97-217AE6BDE765}", path: "/sitecore/layout/Renderings/Project/click-click-launch/Global Elements/ButtonRow" }
+    - name: "ListingBlock"
+      kind: "list"
+      category: "Global Elements"
+      status: "complete"
+      react:
+        filePath: "src/components/uiim/global-elements/ListingBlock.tsx"
+        variants: ["Default", "TextList", "Split"]
+      templates:
+        datasource: { name: "ListingBlock", itemId: "{4A77FD9B-93B9-4AB2-91F7-936173963913}", standardValues: "{0ED2B36E-A8CA-4871-AAAE-3A87729F1C42}" }
+        child: { name: "ListingItem", itemId: "{13C565FE-09C3-4994-8B5A-580DA061BE0C}" }
+        folder: { name: "ListingBlock Folder", itemId: "{F865AD91-D7B8-4499-A658-60D90F08F4E8}" }
+        renderingParams: { itemId: "{F570D6F0-BC7E-4720-A681-0B19EBE0EF65}" }
+      rendering: { itemId: "{B644D425-E162-45A9-A59E-FCFE3F14B90D}", path: "/sitecore/layout/Renderings/Project/click-click-launch/Global Elements/ListingBlock" }
+  verification:
+    checkedAt: "2026-08-25T03:30:00Z"
+    passed:
+      - "Five React components + Jest tests (17 passed)"
+      - "Templates, folder templates, RP templates, and JSON renderings created under click-click-launch"
+      - "Homepage Kit Available Renderings group created on lcmc, amkor, americasmart, atlanta-apparel"
+      - "Headless Variants containers + definitions created on all four sites (LCMC full set; others have the variants they use)"
+      - "Data folders created on all four sites"
+      - "Components added to all four Home pages (headless-main) and authored datasources assigned where instance IDs were known"
+      - "sitecore-tools:generate-map registered IconLinkBar, LinkColumnsBand, SplitFeature, ButtonRow, ListingBlock"
+    pendingManual:
+      - "Datasource Template / Datasource Location / __Standard values / __Masters / Homepage Kit Renderings (silent-write)"
+      - "Set FieldNames variants in Pages (see homepage-kit-variant-checklist.md)"
+      - "Upload DAM images"
+      - "Assign remaining Amkor ListingBlock datasources (Events, Press) and extra Atlanta SplitFeature datasources in Pages"
+      - "Add ImageBanner (Amkor map) and AccordionBlock (AmericasMart FAQ) if authors want those existing components on Home"
+      - "Publish Home + Data + renderings for Edge"
 

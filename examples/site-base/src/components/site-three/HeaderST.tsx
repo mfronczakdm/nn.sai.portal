@@ -494,3 +494,152 @@ const HeaderSTVersion2View = (props: HeaderSTViewProps) => {
 export const Version2 = (props: HeaderSTProps) => (
   <HeaderSTVersion2View {...props} requireAuthForNav={resolveRequireAuthForNav(props, false)} />
 );
+
+const version3UtilityLinkClass =
+  'block px-2 py-1 font-[family-name:var(--font-body)] text-xs font-medium text-primary hover:underline';
+
+const version3NavLinkClass =
+  'block px-3 py-1.5 font-[family-name:var(--font-body)] text-sm font-semibold text-foreground hover:text-primary';
+
+/* Version3 — single white bar; logo left; two stacked nav rows; muted search bar right. */
+const HeaderSTVersion3View = (props: HeaderSTViewProps) => {
+  const { fields, params, requireAuthForNav } = props;
+  const showNavigation = useHeaderSTNavigationVisibility(requireAuthForNav);
+  const componentMap = getComponentMap();
+  const hideCart = isTruthyParam(params?.HideCart);
+  const isReverseTheme = isReverseThemeParam(params?.ReverseTheme);
+
+  const searchControl = params.showSearchBox ? (
+    <HeaderPreviewSearch
+      searchLink={fields?.SearchLink}
+      appearance="contained"
+      className="min-w-0"
+    />
+  ) : (
+    <ContentSdkLink
+      field={fields?.SearchLink}
+      prefetch={false}
+      className="flex items-center gap-2 px-2 py-2 text-sm text-foreground hover:text-primary"
+    >
+      <Search className="h-4 w-4 shrink-0" strokeWidth={2} aria-hidden />
+      <span>{fields?.SearchLink?.value?.text || 'Search'}</span>
+    </ContentSdkLink>
+  );
+
+  return (
+    <section
+      className={cn(
+        'relative sticky top-0 z-30 w-full min-w-0 border-b border-border/30 bg-background shadow-sm',
+        params?.styles
+      )}
+      data-class-change
+      data-header-st-layout="version3"
+    >
+      <div className="flex w-full min-w-0 flex-col" role="navigation" aria-label="Site header">
+        <div className="w-full min-w-0 bg-background">
+          <div className="mx-auto flex w-full max-w-[100rem] items-center gap-4 px-4 py-3 sm:px-6 lg:gap-8 lg:px-8">
+            <Link
+              href="/"
+              className="relative z-10 flex shrink-0 items-center self-stretch"
+              prefetch={false}
+            >
+              <ContentSdkImage
+                field={props.fields?.Logo}
+                className="h-11 w-auto max-w-[min(100%,220px)] object-contain object-left sm:h-12 sm:max-w-[min(100%,280px)] lg:h-14 lg:max-w-[min(100%,320px)]"
+              />
+            </Link>
+
+            <div className="ml-auto flex min-w-0 items-center gap-3 lg:gap-6">
+              {showNavigation ? (
+                <div className="hidden min-w-0 flex-col items-end justify-center gap-1 lg:flex">
+                  <ul className="m-0 flex list-none flex-row items-center justify-end gap-3 p-0">
+                    <li>
+                      <ContentSdkLink
+                        field={fields?.SupportLink}
+                        prefetch={false}
+                        className={version3UtilityLinkClass}
+                      />
+                    </li>
+                    <HeaderSTAuthControls
+                      loginLink={fields?.LoginLink}
+                      postLogoutRedirect={params?.postLogoutRedirect}
+                      linkAppearance="text"
+                      className="hidden lg:block"
+                      linkClassName="p-0 text-xs font-medium text-primary hover:underline hover:opacity-100"
+                    />
+                  </ul>
+                  <ul
+                    className={cn(
+                      'm-0 flex list-none flex-row items-center justify-end gap-1 p-0 text-left',
+                      '[.partial-editing-mode_&]:!flex-col',
+                      isReverseTheme &&
+                        'rounded-md bg-primary px-2 text-primary-foreground [&>li>a]:!text-primary-foreground [&>li>a:hover]:opacity-90'
+                    )}
+                  >
+                    <AppPlaceholder
+                      name={`header-navigation-${params?.DynamicPlaceholderId}`}
+                      rendering={props.rendering}
+                      page={props.page}
+                      componentMap={componentMap}
+                    />
+                  </ul>
+                </div>
+              ) : null}
+
+              <ul className="flex list-none flex-row items-center gap-2 p-0">
+                <li className="flex items-center">{searchControl}</li>
+                {!hideCart ? (
+                  <li>
+                    {params.showMiniCart ? (
+                      <MiniCart cartLink={fields?.CartLink} />
+                    ) : (
+                      <ContentSdkLink
+                        field={fields?.CartLink}
+                        prefetch={false}
+                        className="block p-2 text-foreground hover:text-primary"
+                      >
+                        <FontAwesomeIcon icon={faShoppingCart} width={20} height={20} />
+                      </ContentSdkLink>
+                    )}
+                  </li>
+                ) : null}
+                {showNavigation ? (
+                  <MobileMenuWrapper panelClassName="top-[5.5rem] h-[calc(100vh-5.5rem)]">
+                    <div className="flex h-full w-full flex-col">
+                      <div className="flex flex-1 items-center justify-center">
+                        <ul className="flex w-full flex-col bg-background text-center">
+                          <AppPlaceholder
+                            name={`header-navigation-${params?.DynamicPlaceholderId}`}
+                            rendering={props.rendering}
+                            page={props.page}
+                            componentMap={componentMap}
+                          />
+                        </ul>
+                      </div>
+                      <div className="w-full">
+                        <hr className="w-full border-border" />
+                        <ul className="text-center">
+                          <li>
+                            <ContentSdkLink
+                              field={fields?.SupportLink}
+                              prefetch={false}
+                              className={version3NavLinkClass}
+                            />
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </MobileMenuWrapper>
+                ) : null}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export const Version3 = (props: HeaderSTProps) => (
+  <HeaderSTVersion3View {...props} requireAuthForNav={resolveRequireAuthForNav(props, false)} />
+);

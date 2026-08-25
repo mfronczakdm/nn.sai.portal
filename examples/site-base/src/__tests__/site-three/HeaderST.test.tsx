@@ -6,6 +6,7 @@ import {
   LoginRequired as HeaderSTLoginRequired,
   Version1 as HeaderSTVersion1,
   Version2 as HeaderSTVersion2,
+  Version3 as HeaderSTVersion3,
 } from '../../components/site-three/HeaderST';
 import {
   defaultHeaderSTProps,
@@ -21,6 +22,7 @@ import {
   headerSTPropsHideCart,
   headerSTPropsVersion1,
   headerSTPropsVersion2,
+  headerSTPropsVersion3,
 } from './HeaderST.mockProps';
 
 // Mock FontAwesome icon
@@ -154,8 +156,12 @@ jest.mock('../../components/site-three/non-sitecore/MiniCart', () => ({
 }));
 
 jest.mock('../../components/site-three/non-sitecore/HeaderPreviewSearch', () => ({
-  HeaderPreviewSearch: ({ searchLink }: any) => (
-    <div data-testid="search-box" data-search-link={searchLink?.value?.href}>
+  HeaderPreviewSearch: ({ searchLink, appearance }: any) => (
+    <div
+      data-testid="search-box"
+      data-search-link={searchLink?.value?.href}
+      data-appearance={appearance || 'trigger'}
+    >
       Search Box Component
     </div>
   ),
@@ -727,6 +733,76 @@ describe('HeaderST Component', () => {
 
       expect(screen.queryByTestId('mini-cart')).not.toBeInTheDocument();
       expect(screen.queryByTestId('fontawesome-icon')).not.toBeInTheDocument();
+    });
+  });
+
+  describe('Version3 variant', () => {
+    it('renders without throwing and sets layout version3', () => {
+      expect(() => {
+        render(<HeaderSTVersion3 {...headerSTPropsVersion3} />);
+      }).not.toThrow();
+
+      expect(document.querySelector('[data-header-st-layout="version3"]')).toBeInTheDocument();
+      expect(screen.getByTestId('sitecore-image')).toHaveAttribute('alt', 'LCMC Health');
+    });
+
+    it('does not restyle Default and does not show Version1 MENU', () => {
+      render(<HeaderSTVersion3 {...headerSTPropsVersion3} />);
+
+      expect(document.querySelector('[data-header-st-layout="version1"]')).not.toBeInTheDocument();
+      expect(document.querySelector('[data-header-st-layout="version2"]')).not.toBeInTheDocument();
+      expect(screen.queryByText('MENU')).not.toBeInTheDocument();
+      expect(screen.getByLabelText('Toggle mobile menu')).toBeInTheDocument();
+    });
+
+    it('shows a contained search bar when showSearchBox is true', () => {
+      render(<HeaderSTVersion3 {...headerSTPropsVersion3} />);
+
+      const searchBox = screen.getByTestId('search-box');
+      expect(searchBox).toBeInTheDocument();
+      expect(searchBox).toHaveAttribute('data-appearance', 'contained');
+      expect(searchBox).toHaveAttribute('data-search-link', '/search');
+    });
+
+    it('shows SearchLink as text/icon when showSearchBox is unset', () => {
+      render(
+        <HeaderSTVersion3
+          {...headerSTPropsVersion3}
+          params={{
+            ...headerSTPropsVersion3.params,
+            showSearchBox: '',
+          }}
+        />
+      );
+
+      expect(screen.queryByTestId('search-box')).not.toBeInTheDocument();
+      expect(screen.getByTestId('lucide-search')).toBeInTheDocument();
+      const searchLinks = screen
+        .getAllByTestId('sitecore-link')
+        .filter((link) => link.getAttribute('href') === '/search');
+      expect(searchLinks.length).toBeGreaterThan(0);
+    });
+
+    it('hides cart when HideCart is true', () => {
+      render(<HeaderSTVersion3 {...headerSTPropsVersion3} />);
+
+      expect(screen.queryByTestId('mini-cart')).not.toBeInTheDocument();
+      expect(screen.queryByTestId('fontawesome-icon')).not.toBeInTheDocument();
+    });
+
+    it('shows cart on Version3 when HideCart is unset', () => {
+      render(
+        <HeaderSTVersion3
+          {...headerSTPropsVersion3}
+          params={{
+            ...headerSTPropsVersion3.params,
+            HideCart: '',
+            showMiniCart: 'true',
+          }}
+        />
+      );
+
+      expect(screen.getByTestId('mini-cart')).toBeInTheDocument();
     });
   });
 });

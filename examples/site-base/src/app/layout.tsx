@@ -11,6 +11,7 @@ import {
   Roboto,
   Roboto_Condensed,
   Source_Sans_3,
+  Zilla_Slab,
 } from 'next/font/google';
 
 const inter = Inter({
@@ -66,6 +67,14 @@ const montserrat = Montserrat({
   display: 'swap',
 });
 
+/** LCMC Health — Zilla Slab substitutes proprietary Jubilat display headings */
+const zillaSlab = Zilla_Slab({
+  subsets: ['latin', 'latin-ext'],
+  variable: '--font-zilla-slab',
+  weight: ['400', '500', '600', '700'],
+  display: 'swap',
+});
+
 const fontVariables = [
   inter.variable,
   sourceSans3.variable,
@@ -74,6 +83,7 @@ const fontVariables = [
   robotoCondensed.variable,
   roboto.variable,
   montserrat.variable,
+  zillaSlab.variable,
 ].join(' ');
 
 /**

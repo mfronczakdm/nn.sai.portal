@@ -40,6 +40,7 @@ export const SITE_SKINS: Readonly<Record<string, AppTheme>> = {
   amkor: 'amkor',
   'atlanta-apparel': 'atlanta-apparel',
   americasmart: 'americasmart',
+  lcmc: 'lcmc',
 
   // Example: site name differs from skin
   // 'acme-demo': 'rockland',

@@ -49,3 +49,8 @@ versions:
     paramsUsed: ["HideCart", "showSearchBox"]
     usedBy: ["atlanta-apparel", "americasmart"]
     notes: "Location switcher (Atlanta/Las Vegas/High Point/New York) and Market Plan bookmark are out of scope. SupportLink styled as pill CTA (Register). LoginLink shown as Sign In text. Search is icon-only unless showSearchBox is on."
+  - name: Version3
+    layout: "single white bar; logo left; two stacked nav rows (utility teal + primary dark) beside logo; muted rounded search bar far right"
+    paramsUsed: ["showSearchBox", "HideCart"]
+    usedBy: ["lcmc"]
+    notes: "No cart, no dark utility bar, no desktop MENU hamburger. SupportLink stands in for extra utility links (Notice of Non-Discrimination, Careers, Patient Portal/Pay my Bill, For Providers). Mega-menus out of scope — L1 lives in header-navigation placeholder. Search is a grey rounded bar when showSearchBox is on."

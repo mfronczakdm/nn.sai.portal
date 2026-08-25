@@ -1,0 +1,77 @@
+/**
+ * Theme: lcmc
+ * Skin key / data-theme: lcmc
+ * Source: https://www.lcmchealth.org/ (screenshot primary + Playwright extraction)
+ * Activate via Sitecore Site definition Skin field (mirrored in src/lib/theme/site-skins.ts).
+ *
+ * Teal #007A87 (logo, nav, headings, footer band).
+ * Bright blue #00B5E2 (logo accent, social footer block).
+ * Action green #00A651 (primary CTAs).
+ * White header / surfaces; near-black legal footer.
+ */
+
+[data-theme='lcmc'] {
+  --background-image-gradient: linear-gradient(180deg, #00b5e2 0%, #007a87 100%);
+  --background-image-gradient-secondary: linear-gradient(90deg, #00a651 0%, #007a87 50%, #00b5e2 100%);
+
+  --color-background: #ffffff;
+  --color-foreground: #333333;
+  --color-card: #ffffff;
+  --color-card-foreground: #333333;
+  --color-popover: #ffffff;
+  --color-popover-foreground: #333333;
+
+  --color-primary: #007a87;
+  --color-primary-foreground: #ffffff;
+  --color-primary-hover: #006b77;
+
+  --color-secondary: #00b5e2;
+  --color-secondary-foreground: #ffffff;
+  --color-secondary-hover: #009fc7;
+
+  --color-muted: #f4f4f4;
+  --color-muted-foreground: #706d66;
+
+  --color-accent: #00a651;
+  --color-accent-foreground: #ffffff;
+
+  --color-destructive: #dc2626;
+  --color-destructive-hover: #b91c1c;
+  --color-destructive-foreground: #ffffff;
+
+  --color-border: #d4d4d4;
+  --color-input: #d4d4d4;
+  --color-ring: #007a87;
+
+  --color-tertiary: #f4f4f4;
+  --color-tertiary-foreground: #333333;
+  --color-tertiary-hover: #e8e8e8;
+
+  --color-dark: #1a1a1a;
+  --color-dark-foreground: #ffffff;
+  --color-dark-hover: #111111;
+
+  --color-light: #fafafa;
+  --color-light-hover: #f4f4f4;
+  --color-light-foreground: #333333;
+
+  --color-overlay: rgb(0 122 135 / 0.45);
+
+  /* LCMC extras — healthcare chrome */
+  --color-header-background: #ffffff;
+  --color-header-foreground: #007a87;
+  --color-footer-background: #007a87;
+  --color-footer-foreground: #ffffff;
+  --color-footer-bottom: #1a1a1a;
+  --color-accent-hover: #009247;
+}
+
+[data-theme='lcmc'] .bg-primary {
+  color: var(--color-primary-foreground);
+}
+
+[data-theme='lcmc'] .bg-secondary,
+[data-theme='lcmc'] .bg-accent,
+[data-theme='lcmc'] .bg-dark {
+  color: var(--color-primary-foreground);
+}
