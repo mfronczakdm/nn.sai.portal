@@ -496,10 +496,41 @@ export const Version2 = (props: HeaderSTProps) => (
 );
 
 const version3UtilityLinkClass =
-  'block px-2 py-1 font-[family-name:var(--font-body)] text-xs font-medium text-primary hover:underline';
+  'block whitespace-nowrap px-1.5 py-0.5 font-[family-name:var(--font-body)] text-[0.6875rem] font-medium text-primary hover:underline xl:px-2 xl:py-1 xl:text-xs';
 
 const version3NavLinkClass =
   'block px-3 py-1.5 font-[family-name:var(--font-body)] text-sm font-semibold text-foreground hover:text-primary';
+
+/* HeaderST's datasource exposes one SupportLink and the template is shared with the other sites,
+   so LCMC's five utility links stay in code for this demo variant. Order matches the live header. */
+const version3UtilityLinks = [
+  { text: 'Notice of Non-Discrimination', href: '/notice-of-non-discrimination' },
+  { text: 'Careers', href: 'https://careers.lcmchealth.org/us/en/' },
+  { text: 'Patient Portal/Pay my Bill', href: '/for-patients/patient-portal' },
+  { text: 'For Providers', href: '/for-providers' },
+  { text: 'Contact Us', href: '/contact-us' },
+] as const;
+
+const version3UtilityLabels = new Set(version3UtilityLinks.map((link) => link.text.toLowerCase()));
+
+const Version3UtilityLink = ({
+  text,
+  href,
+  className,
+}: {
+  text: string;
+  href: string;
+  className: string;
+}) =>
+  /^https?:\/\//i.test(href) ? (
+    <a href={href} className={className} target="_blank" rel="noopener noreferrer">
+      {text}
+    </a>
+  ) : (
+    <Link href={href} prefetch={false} className={className}>
+      {text}
+    </Link>
+  );
 
 /* Version3 — single white bar; logo left; two stacked nav rows; muted search bar right. */
 const HeaderSTVersion3View = (props: HeaderSTViewProps) => {
@@ -508,6 +539,9 @@ const HeaderSTVersion3View = (props: HeaderSTViewProps) => {
   const componentMap = getComponentMap();
   const hideCart = isTruthyParam(params?.HideCart);
   const isReverseTheme = isReverseThemeParam(params?.ReverseTheme);
+  const supportLinkText = fields?.SupportLink?.value?.text?.trim() ?? '';
+  const showSupportLink =
+    supportLinkText.length > 0 && !version3UtilityLabels.has(supportLinkText.toLowerCase());
 
   const searchControl = params.showSearchBox ? (
     <HeaderPreviewSearch
@@ -537,7 +571,7 @@ const HeaderSTVersion3View = (props: HeaderSTViewProps) => {
     >
       <div className="flex w-full min-w-0 flex-col" role="navigation" aria-label="Site header">
         <div className="w-full min-w-0 bg-background">
-          <div className="mx-auto flex w-full max-w-[100rem] items-center gap-4 px-4 py-3 sm:px-6 lg:gap-8 lg:px-8">
+          <div className="mx-auto flex w-full max-w-[100rem] items-center gap-4 px-4 py-3 sm:px-6 lg:gap-3 lg:px-6 xl:gap-8 xl:px-8">
             <Link
               href="/"
               className="relative z-10 flex shrink-0 items-center self-stretch"
@@ -545,21 +579,32 @@ const HeaderSTVersion3View = (props: HeaderSTViewProps) => {
             >
               <ContentSdkImage
                 field={props.fields?.Logo}
-                className="h-11 w-auto max-w-[min(100%,220px)] object-contain object-left sm:h-12 sm:max-w-[min(100%,280px)] lg:h-14 lg:max-w-[min(100%,320px)]"
+                className="h-11 w-auto max-w-[min(100%,220px)] object-contain object-left sm:h-12 sm:max-w-[min(100%,280px)] lg:h-11 lg:max-w-[min(100%,190px)] xl:h-14 xl:max-w-[min(100%,320px)]"
               />
             </Link>
 
-            <div className="ml-auto flex min-w-0 items-center gap-3 lg:gap-6">
+            <div className="ml-auto flex min-w-0 items-center gap-2 xl:gap-6">
               {showNavigation ? (
                 <div className="hidden min-w-0 flex-col items-end justify-center gap-1 lg:flex">
-                  <ul className="m-0 flex list-none flex-row items-center justify-end gap-3 p-0">
-                    <li>
-                      <ContentSdkLink
-                        field={fields?.SupportLink}
-                        prefetch={false}
-                        className={version3UtilityLinkClass}
-                      />
-                    </li>
+                  <ul className="m-0 flex list-none flex-row flex-wrap items-center justify-end gap-x-1 gap-y-0.5 p-0">
+                    {version3UtilityLinks.map((link) => (
+                      <li key={link.text}>
+                        <Version3UtilityLink
+                          text={link.text}
+                          href={link.href}
+                          className={version3UtilityLinkClass}
+                        />
+                      </li>
+                    ))}
+                    {showSupportLink ? (
+                      <li>
+                        <ContentSdkLink
+                          field={fields?.SupportLink}
+                          prefetch={false}
+                          className={version3UtilityLinkClass}
+                        />
+                      </li>
+                    ) : null}
                     <HeaderSTAuthControls
                       loginLink={fields?.LoginLink}
                       postLogoutRedirect={params?.postLogoutRedirect}
@@ -570,7 +615,10 @@ const HeaderSTVersion3View = (props: HeaderSTViewProps) => {
                   </ul>
                   <ul
                     className={cn(
-                      'm-0 flex list-none flex-row items-center justify-end gap-1 p-0 text-left',
+                      'm-0 flex min-w-0 list-none flex-row flex-wrap items-center justify-end gap-x-0 gap-y-0.5 p-0 text-left',
+                      // lg (1024px) is tight: compact the placeholder nav links so the row cannot
+                      // overflow left underneath the logo. Full sizing returns at xl.
+                      '[&>li>a]:whitespace-nowrap [&>li>a]:px-2 [&>li>a]:text-[0.8125rem] xl:[&>li>a]:px-3 xl:[&>li>a]:text-sm',
                       '[.partial-editing-mode_&]:!flex-col',
                       isReverseTheme &&
                         'rounded-md bg-primary px-2 text-primary-foreground [&>li>a]:!text-primary-foreground [&>li>a:hover]:opacity-90'
@@ -619,13 +667,24 @@ const HeaderSTVersion3View = (props: HeaderSTViewProps) => {
                       <div className="w-full">
                         <hr className="w-full border-border" />
                         <ul className="text-center">
-                          <li>
-                            <ContentSdkLink
-                              field={fields?.SupportLink}
-                              prefetch={false}
-                              className={version3NavLinkClass}
-                            />
-                          </li>
+                          {version3UtilityLinks.map((link) => (
+                            <li key={link.text}>
+                              <Version3UtilityLink
+                                text={link.text}
+                                href={link.href}
+                                className={version3NavLinkClass}
+                              />
+                            </li>
+                          ))}
+                          {showSupportLink ? (
+                            <li>
+                              <ContentSdkLink
+                                field={fields?.SupportLink}
+                                prefetch={false}
+                                className={version3NavLinkClass}
+                              />
+                            </li>
+                          ) : null}
                         </ul>
                       </div>
                     </div>

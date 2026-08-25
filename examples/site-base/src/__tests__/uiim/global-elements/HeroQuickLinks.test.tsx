@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import { CircleGrid, DarkBand, Default } from '@/components/uiim/global-elements/IconLinkBar';
+import { Default } from '@/components/uiim/global-elements/HeroQuickLinks';
 
 jest.mock('change-case', () => ({
   kebabCase: (s: string) => String(s).replace(/\s+/g, '-').toLowerCase(),
@@ -22,21 +22,29 @@ jest.mock('@sitecore-content-sdk/nextjs', () => ({
 
 const page = { mode: { isEditing: false } } as any;
 const editingPage = { mode: { isEditing: true } } as any;
-const params = { styles: '', RenderingIdentifier: 'icon-link-bar' };
-const rendering = { componentName: 'IconLinkBar' } as any;
+const params = { styles: '', RenderingIdentifier: 'hero-quick-links' };
+const rendering = { componentName: 'HeroQuickLinks' } as any;
 
 const fields = {
   data: {
     datasource: {
-      sectionTitle: { jsonValue: { value: 'Quick links' } },
-      sectionDescription: { jsonValue: { value: 'Helpful shortcuts' } },
-      searchLink: { jsonValue: { value: { href: '/search', text: 'Search resources' } } },
+      headline: { jsonValue: { value: "You're never far from a trusted ER" } },
+      backgroundImage: { jsonValue: { value: { src: '/hero.png', alt: 'Clinician' } } },
+      zipLabel: { jsonValue: { value: 'Find a provider near you' } },
+      zipPlaceholder: { jsonValue: { value: 'Enter your ZIP code' } },
+      zipSearchLink: { jsonValue: { value: { href: '/find-a-provider', text: 'ZIP search' } } },
+      specialtyLabel: { jsonValue: { value: 'Search by specialty' } },
+      specialtyPlaceholder: { jsonValue: { value: 'Select a specialty' } },
+      specialtyOptions: { jsonValue: { value: 'Cardiology\nEmergency Medicine' } },
+      specialtySearchLink: {
+        jsonValue: { value: { href: '/find-a-provider', text: 'Specialty search' } },
+      },
       children: {
         results: [
           {
             id: '1',
-            itemTitle: { jsonValue: { value: 'Pay bill' } },
-            itemImage: { jsonValue: { value: { src: '/icon.png', alt: 'bill' } } },
+            itemTitle: { jsonValue: { value: 'Pay My Bill Online' } },
+            itemImage: { jsonValue: { value: { src: '/pay-bill.svg', alt: 'Bill' } } },
             itemLink: { jsonValue: { value: { href: '/pay', text: 'Pay now' } } },
           },
         ],
@@ -45,22 +53,24 @@ const fields = {
   },
 };
 
-describe('IconLinkBar', () => {
+describe('HeroQuickLinks', () => {
   it('renders NoDataFallback when datasource is missing', () => {
     render(<Default fields={{ data: {} }} params={params} page={page} rendering={rendering} />);
     expect(screen.getByText(/requires a datasource item assigned/i)).toBeInTheDocument();
   });
 
-  it('renders title, items, and search link', () => {
+  it('renders headline, search labels, specialties, and quick links', () => {
     render(<Default fields={fields} params={params} page={page} rendering={rendering} />);
-    expect(screen.getByText('Quick links')).toBeInTheDocument();
-    expect(screen.getByText('Pay bill')).toBeInTheDocument();
-    expect(screen.getByText('Search resources')).toBeInTheDocument();
+    expect(screen.getByText("You're never far from a trusted ER")).toBeInTheDocument();
+    expect(screen.getByText('Find a provider near you')).toBeInTheDocument();
+    expect(screen.getByText('Search by specialty')).toBeInTheDocument();
+    expect(screen.getByRole('option', { name: 'Cardiology' })).toBeInTheDocument();
+    expect(screen.getByText('Pay My Bill Online')).toBeInTheDocument();
   });
 
   it('renders empty fields while editing', () => {
     render(
-      <DarkBand
+      <Default
         fields={{ data: { datasource: { children: { results: [] } } } }}
         params={params}
         page={editingPage}
@@ -68,24 +78,5 @@ describe('IconLinkBar', () => {
       />
     );
     expect(screen.queryByText(/requires a datasource/i)).not.toBeInTheDocument();
-  });
-
-  it('CircleGrid uses the same datasource', () => {
-    render(<CircleGrid fields={fields} params={params} page={page} rendering={rendering} />);
-    expect(screen.getByText('Pay bill')).toBeInTheDocument();
-  });
-
-  it.each([
-    ['Default', Default],
-    ['DarkBand', DarkBand],
-    ['CircleGrid', CircleGrid],
-  ])('%s centers a partially filled row of items', (_name, Variant) => {
-    const { container } = render(
-      <Variant fields={fields} params={params} page={page} rendering={rendering} />
-    );
-
-    const itemRow = container.querySelector('.component-content > div:last-child');
-    expect(itemRow).toHaveClass('flex', 'flex-wrap', 'justify-center');
-    expect(itemRow?.className).not.toMatch(/\bgrid\b/);
   });
 });

@@ -25,6 +25,7 @@ import * as SplitFeature from 'src/components/uiim/global-elements/SplitFeature'
 import * as ListingBlock from 'src/components/uiim/global-elements/ListingBlock';
 import * as LinkColumnsBand from 'src/components/uiim/global-elements/LinkColumnsBand';
 import * as IconLinkBar from 'src/components/uiim/global-elements/IconLinkBar';
+import * as HeroQuickLinks from 'src/components/uiim/global-elements/HeroQuickLinks';
 import * as ButtonRow from 'src/components/uiim/global-elements/ButtonRow';
 import * as HeroCarousel from 'src/components/uiim/banners/HeroCarousel';
 import * as TopicListing from 'src/components/topic-listing/TopicListing';
@@ -328,6 +329,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['ListingBlock', { ...ListingBlock }],
   ['LinkColumnsBand', { ...LinkColumnsBand }],
   ['IconLinkBar', { ...IconLinkBar }],
+  ['HeroQuickLinks', { ...HeroQuickLinks, componentType: 'client' }],
   ['ButtonRow', { ...ButtonRow }],
   ['HeroCarousel', { ...HeroCarousel, componentType: 'client' }],
   ['TopicListing', { ...TopicListing }],

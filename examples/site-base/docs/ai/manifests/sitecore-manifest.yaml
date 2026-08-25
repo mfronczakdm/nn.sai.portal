@@ -7782,6 +7782,8 @@ ia:
         - "Optional: add postLogoutRedirect to HeaderST rendering parameters template"
 
     notes:
+      - "2026-08-25: Version3 responsive fix for the lg band (1024-1279px), where the placeholder nav overflowed left and rendered underneath the logo. Logo capped at lg:h-11/190px, container gap lg:gap-3, nav links compacted to px-2/13px via [&>li>a], utility links to 11px, both nav rows flex-wrap, and the contained search pill min-width lowered to 10rem (touches SearchBox.tsx + HeaderPreviewSearch.tsx contained appearance, which is Version3-only). Full sizing restored at xl. Code-only; no Sitecore items touched."
+      - "2026-08-25: Version3 utility row now renders LCMC's five live links (Notice of Non-Discrimination, Careers, Patient Portal/Pay my Bill, For Providers, Contact Us) from the version3UtilityLinks constant in HeaderST.tsx. Code-only change — no Sitecore items touched, and Default/Version1/Version2 are unaffected. HeaderST's datasource exposes a single SupportLink and the template is shared across sites, so the list is demo-fixed rather than authorable; SupportLink still renders after the five unless its text duplicates one of them. Careers targets https://careers.lcmchealth.org/us/en/ in a new tab; the other four target existing lcmc demo pages (/notice-of-non-discrimination, /for-patients/patient-portal, /for-providers, /contact-us). HeaderST.test.tsx 58 tests passed."
       - "2026-08-24: Version3 LCMC-style header (single white bar, logo left, stacked utility+primary nav, muted rounded search bar). Headless variants on pkm, site-base, and lcmc. No new RP fields."
       - "2026-08-24: Version2 Andmore-style header (dark utility row, logo left, inline nav, search icon). Headless variants on amkor, americasmart, atlanta-apparel, and site-base."
       - "2026-08-24: HeaderST Version1 also added under amkor, andmore/americasmart, andmore/atlanta-apparel Headless Variants."
@@ -8147,7 +8149,7 @@ ia:
     category: "IA"
     status: "complete"
     createdAt: "2026-08-25T01:35:00Z"
-    updatedAt: "2026-08-25T01:50:00Z"
+    updatedAt: "2026-08-25T12:00:00Z"
     siteName: "americasmart"
     siteCollection: "andmore"
     contentRootPath: "/sitecore/content/andmore/americasmart/Home"
@@ -8159,6 +8161,9 @@ ia:
     createdCount: 32
     skippedCount: 1
     failedCount: 0
+    populatedCount: 32
+    populateFailedCount: 0
+    populateFallbackCount: 1
     notes: >
       Created AmericasMart IA tree (32 Services Page items) under Home from americasmart-ia.md.
       Home already existed (Home Page) and was skipped. Starter Data/Speakers/Video left untouched.
@@ -8167,6 +8172,12 @@ ia:
       create_content_item still succeeded. MCP read-back only echoes Detail+image; pageTitle/
       pageHeaderTitle/pageShortTitle/pageSubtitle/pageSummary are silent-write — verify in Content Editor.
       No [folder]/shared nodes; folder template not used.
+      2026-08-25: Cleared __Workflow + __Workflow state on 32 IA pages to match Home (workflow: null). No Final GUID used.
+      2026-08-25T12:00:00Z: Populated all 32 AmericasMart Services Pages from validated
+      americasmart.com copy. Detail and external AmericasMart-hosted image XML were written to every
+      item; page*, metadata*, and og* fields were also sent but remain silent on MCP read-back.
+      Dining used parent-section fallback copy from the live Atlanta City Guide because the guessed
+      /Year-Round/Dining URL returned a soft-200 404. No lcmc or amkor items were touched.
     items:
       - { name: "Exhibitor Directory", itemId: "{B05CA3CD-1041-4DE9-91C6-BAF2AD34A4F5}", path: "/sitecore/content/andmore/americasmart/Home/Exhibitor Directory" }
       - { name: "Search Exhibitors", itemId: "{F1DFC38B-5589-404D-B3C1-19A20DA462AA}", path: "/sitecore/content/andmore/americasmart/Home/Exhibitor Directory/Search Exhibitors" }
@@ -8201,17 +8212,20 @@ ia:
       - { name: "Press Center", itemId: "{FD88CA16-73F3-4600-A45F-4D24EF90A85F}", path: "/sitecore/content/andmore/americasmart/Home/About/Press Center" }
       - { name: "Industry Partners", itemId: "{3976618D-872F-4DCC-8D36-0C57A34BEE10}", path: "/sitecore/content/andmore/americasmart/Home/About/Industry Partners" }
     verification:
-      checkedAt: "2026-08-25T01:50:00Z"
+      checkedAt: "2026-08-25T12:00:00Z"
       passed:
         - "Site americasmart verified via list_sites (tenant andmore)"
         - "Home exists at /sitecore/content/andmore/americasmart/Home"
         - "Services Page template {69728677-52E5-4482-A415-94F0222799B8} validated"
         - "32 Services Pages created via create_content_item and verified by MCP read-back"
-        - "Detail field confirmed on sample items"
+        - "32 Services Pages populated with live AmericasMart-aligned copy"
+        - "Detail + external image XML confirmed by MCP read-back for one sample in each L1 section"
+        - "Exhibitor Directory, Markets and Events, Visit, Exhibit, and About L1 samples verified"
         - "L1 children present under Home; L3 children present under Plan Your Market and Shop Year Round"
       failed: []
       pendingManual:
-        - "pageTitle / pageHeaderTitle / pageShortTitle / pageSubtitle / pageSummary (silent-write — verify in Content Editor)"
+        - "pageTitle / pageHeaderTitle / pageShortTitle / pageSubtitle / pageSummary / metadata* / og* (silent-write — verify in Content Editor)"
+        - "External image XML uses a confirmed AmericasMart-hosted Events image; replace with page-specific Content Hub assets when credentials are available"
         - "Add Services Page to Home insert options for authors"
         - "Publish /sitecore/content/andmore/americasmart/Home subtree for Edge"
         - "Wire navigation to new IA pages; starter Speakers/Video left in tree"
@@ -8221,7 +8235,7 @@ ia:
     category: "IA"
     status: "complete"
     createdAt: "2026-08-25T01:35:00Z"
-    updatedAt: "2026-08-25T02:10:00Z"
+    updatedAt: "2026-08-25T11:55:00Z"
     siteName: "atlanta-apparel"
     siteCollection: "andmore"
     contentRootPath: "/sitecore/content/andmore/atlanta-apparel/Home"
@@ -8237,6 +8251,10 @@ ia:
     createdCount: 54
     skippedCount: 1
     failedCount: 0
+    populatedCount: 53
+    populationSkippedCount: 2
+    populationFailedCount: 0
+    populationFallbackCount: 31
     notes: >
       Created Atlanta Apparel IA tree (5 L1 / 20 L2 / 29 L3) under Home from atlanta-apparel-ia.md.
       Home already existed (Home Page {011D81AC-...}) and was skipped. Starter Data/Speakers/Video left untouched.
@@ -8245,6 +8263,11 @@ ia:
       Services Page was NOT in Home or Discover insert options (Article/Audio/Detail/Landing/Product/Page Folder);
       create_content_item still succeeded. MCP read-back only echoes Detail+image; pageTitle/
       pageHeaderTitle/pageShortTitle/pageSubtitle/pageSummary are silent-write — verify in Content Editor.
+      2026-08-25: Cleared __Workflow + __Workflow state on 54 IA items to match Home (workflow: null). No Final GUID used.
+      2026-08-25T11:55:00Z: Populated all 53 Services Pages from atlanta-apparel.com live copy and
+      section-level fallback copy. Skipped Home (Home Page) and Discover (Page Folder). Wrote semantic Detail HTML,
+      page titles/summaries, metadata/OG text, and external Atlanta Apparel image XML. The two First Finds items use
+      distinct buyer (/exhibitor/First-Finds) and exhibitor (/Exhibit/Atlanta-Apparel/First-Finds) source pages.
     items:
       - { name: "Exhibitor Directory", itemId: "{21A89CBC-2730-4989-8289-085CEA0B6BA5}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Exhibitor Directory", level: 1 }
       - { name: "Brand Directory", itemId: "{013E2F61-6B31-46DC-B209-5D6CCC75C44C}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Exhibitor Directory/Brand Directory", level: 2 }
@@ -8301,7 +8324,7 @@ ia:
       - { name: "Advertising and Sponsorship", itemId: "{4399045B-989E-47A3-BDF6-01258267D652}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Exhibit/Advertising and Sponsorship", level: 2 }
       - { name: "Social Occasion", itemId: "{B84A57AD-9731-4567-B28C-87690A054D40}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Exhibit/Social Occasion", level: 2 }
     verification:
-      checkedAt: "2026-08-25T02:10:00Z"
+      checkedAt: "2026-08-25T11:55:00Z"
       passed:
         - "Site atlanta-apparel verified via list_sites (tenant andmore, id eb11b7a5-...)"
         - "Home exists at /sitecore/content/andmore/atlanta-apparel/Home {011D81AC-F13E-4DC1-A142-88119D17A7B5}"
@@ -8311,9 +8334,13 @@ ia:
         - "Home L1 children include Exhibitor Directory, Markets and Events, Visit, Discover (Page Folder), Exhibit"
         - "Discover children: Categories, First Finds, Open Year Round, Tools and Inspiration"
         - "Detail field confirmed on sample items (silent page* fields written but not echoed)"
+        - "53 Services Pages populated from Atlanta Apparel live copy; Home and Discover folder skipped"
+        - "Detail + external image XML verified on Exhibitor Directory, Markets and Events, Visit, Discover/First Finds, and Exhibit"
+        - "Buyer and exhibitor First Finds pages use distinct live source URLs and distinct copy"
       failed: []
       pendingManual:
-        - "pageTitle / pageHeaderTitle / pageShortTitle / pageSubtitle / pageSummary (silent-write — verify in Content Editor)"
+        - "pageTitle / pageHeaderTitle / pageShortTitle / pageSubtitle / pageSummary / metadata* / og* (silent-write — verify in Content Editor)"
+        - "External image XML uses confirmed Atlanta Apparel-hosted fashion gallery images; replace with Content Hub assets when credentials are available"
         - "Add Services Page to Home and Page Folder insert options for authors"
         - "Publish /sitecore/content/andmore/atlanta-apparel/Home subtree for Edge"
         - "Wire navigation to new IA pages; starter Speakers/Video left in tree"
@@ -8324,7 +8351,7 @@ ia:
     category: "IA"
     status: "complete"
     createdAt: "2026-08-25T01:40:00Z"
-    updatedAt: "2026-08-25T02:00:00Z"
+    updatedAt: "2026-08-25T12:15:00Z"
     siteName: "amkor"
     siteCollection: "amkor"
     contentRootPath: "/sitecore/content/amkor/amkor/Home"
@@ -8346,7 +8373,14 @@ ia:
       Services Page was NOT in Home insert options (Article/Audio/Detail/Landing/Product/Page Folder);
       create_content_item still succeeded. MCP read-back only echoes Detail+image; pageTitle/
       pageHeaderTitle/pageShortTitle/pageSubtitle/pageSummary are silent-write — verify in Content Editor.
-      No [folder]/shared nodes; folder template not used. Items created in Draft workflow.
+      No [folder]/shared nodes; folder template not used.
+      2026-08-25: Cleared __Workflow + __Workflow state on 99 IA pages to match Home (workflow: null). No Final GUID used.
+      2026-08-25T12:15:00Z: Populated all 99 Amkor Services Pages from live amkor.com copy.
+      Added semantic Detail HTML, live-source links, title fields, and external live-site image XML.
+      Direct page URLs were used where available; section-parent copy was used for 23 soft-404 or
+      unavailable child URLs. Home was inspected but not modified because it exposes no authorable fields.
+      Detail + image read-back passed for one item in each L1 branch. No Content Hub credentials were
+      available, so images reference Amkor's live Azure-hosted brand asset rather than invented DAM IDs.
     items:
       - { name: "About Us", itemId: "{86E9AAED-39B1-4E89-9E41-9C3E778F8E1D}", path: "/sitecore/content/amkor/amkor/Home/About Us" }
       - { name: "Amkor Overview", itemId: "{B6B4DA5A-F8B2-4AD1-BF08-02AADF88C82E}", path: "/sitecore/content/amkor/amkor/Home/About Us/Amkor Overview" }
@@ -8454,14 +8488,21 @@ ia:
       - pageShortTitle
       - pageSubtitle
       - pageSummary
+      - image
+      - metadataTitle
+      - metadataDescription
+      - ogTitle
+      - ogDescription
     verification:
-      checkedAt: "2026-08-25T02:00:00Z"
+      checkedAt: "2026-08-25T12:15:00Z"
       passed:
         - "Site amkor verified via list_sites"
         - "Home exists at /sitecore/content/amkor/amkor/Home {BB13BF5A-B102-4FE8-B410-63E3DA7AA448}"
         - "Services Page template {B2B918C3-ACDA-433F-A11B-718466493AEC} validated"
         - "99 Services Pages created via create_content_item"
         - "Detail field confirmed on About Us, FlipStack CSP, and Home L1 children"
+        - "99 Services Pages populated with live-aligned Detail HTML, title fields, source links, and image XML"
+        - "Detail and image read-back passed for About Us, Packaging, Technology, Test Services, Services, Applications, and Quality"
         - "All 7 L1 hubs present under Home"
         - "About Us L2 children present; Careers/News/Customer Center L3 present"
       failed: []
@@ -8476,7 +8517,7 @@ ia:
     category: "IA"
     status: "complete"
     createdAt: "2026-08-25T01:40:00Z"
-    updatedAt: "2026-08-25T02:50:00Z"
+    updatedAt: "2026-08-25T12:45:00Z"
     siteName: "lcmc"
     siteCollection: "lcmc"
     contentRootPath: "/sitecore/content/lcmc/lcmc/Home"
@@ -8488,6 +8529,14 @@ ia:
     createdCount: 115
     skippedCount: 1
     failedCount: 0
+    population:
+      populatedCount: 115
+      updatedInBulkCount: 114
+      approvedTestPageCount: 1
+      failedCount: 0
+      noLiveUrlFallbackCount: 6
+      detailSummaryRewriteCount: 115
+      amkorLeakPurgeCount: 115
     notes: >
       Created LCMC Health IA tree (115 Services Page items) under Home from lcmc-health-ia.md.
       Home already existed (Home Page) and was skipped. Starter Data/Speakers/Video left untouched.
@@ -8497,7 +8546,87 @@ ia:
       Services Page was NOT in Home insert options (Article/Audio/Detail/Landing/Product/Page Folder);
       create_content_item still succeeded. MCP read-back only echoes Detail+image; page* fields
       are silent-write — verify in Content Editor. No [folder]/shared nodes; folder template not used.
-      image left empty (no live scrape / no DAM). Items remain in Draft workflow.
+      image left empty (no live scrape / no DAM).
+      2026-08-25: Cleared __Workflow + __Workflow state on 115 IA pages to match Home (workflow: null). No Final GUID used.
+      2026-08-25: Live-copy test on Communication and Translation {AF99D6E0-1858-477D-8DA7-9E1527E7C142} only.
+      Source: https://www.lcmchealth.org/university-medical-center-new-orleans/patients-visitors/communication-translation/
+      (no system-level /for-patients/communication-and-translation/ URL). Detail HTML + external image XML confirmed.
+      page*/metadata*/og* sent, silent on read-back. No credentials.local.yaml — image is live URL, not DAM.
+      Do not bulk-update remaining 114 pages until this pattern is approved.
+      2026-08-25: Approved bulk live-copy population resumed. Updated and MCP-confirmed Detail+image on 52 of
+      114 remaining Services Pages: all 28 About Us pages, all 9 remaining For Patients pages, and the first
+      15 Our Services pages through Where to Seek Care. Communication and Translation remained unchanged.
+      Full page*/metadata*/og* field sets were sent and remain silent-write. External live og:image URLs used;
+      no Content Hub credentials were available. Remaining population: 40 Our Services, 18 Our Locations,
+      and 4 standalone L1 pages.
+      2026-08-25: Live-copy population completed for all 115 Services Pages. The approved Communication and
+      Translation test page was retained; the other 114 pages were populated from lcmchealth.org with
+      semantic Detail HTML, live-source links, page*/metadata*/og* fields, and external image XML.
+      MCP read-back confirmed Detail+image samples for every L1 branch. Six pages used the closest parent
+      fallback because the leaf URL was missing, redirected to unrelated content, or had no usable body:
+      Same and Next Day Appointments, Neuroscience For Providers, Menopause Care, Manning Family Children's,
+      Urgent Care Locations, and LCMC Health Luling Urgent Care. Home is a Home Page with no authorable fields
+      returned by MCP, so no Services Page Detail was forced onto it. No DAM IDs were invented.
+      2026-08-25: Rewrote Detail, pageSummary, and pageSubtitle on all 115 Services Pages with unique,
+      LCMC-specific healthcare copy. Detail now contains two or three substantive semantic HTML paragraphs;
+      inherited teaser fields were overwritten to purge the Amkor AI/packaging leak. Existing LCMC images
+      were preserved. MCP read-back verified Detail samples across About Us, For Patients, Our Services,
+      Our Locations, and standalone pages; pageSummary/pageSubtitle remain silent-read fields.
+      2026-08-25: Footer Partial Design Data remapped (see lcmc-footer-nav-remap). Header/mega menu not touched.
+      2026-08-25: Header mega menu remapped to the LCMC IA. Five existing MegaMenuItem datasources now render
+      About Us, For Patients, Our Services, Our Locations, and Find a Provider. Existing starter link children
+      were repurposed, and dedicated Link List datasources were added for every IA L3 branch. All internal
+      destinations use Sitecore item IDs; Careers and Patient Portal Login remain external. HeaderST utility
+      fields now target For Providers, Contact Us, Notice of Non-Discrimination, and Patient Portal.
+      Workflow was cleared by setting __Workflow and __Workflow state to empty on all 134 retained header
+      navigation items (5 mega items, HeaderST datasource, 19 link lists, 109 links), matching Home's null
+      workflow approach. Layout and sampled datasource read-back passed. Footer Data was not edited.
+    headerNavigation:
+      partialDesign:
+        path: "/sitecore/content/lcmc/lcmc/Presentation/Partial Designs/Global/Header"
+        itemId: "{7D1AB59C-D03F-420A-AE9B-D97F511CF28E}"
+      dataRoot:
+        path: "/sitecore/content/lcmc/lcmc/Presentation/Partial Designs/Global/Header/Data"
+        itemId: "{AA49D41D-1397-42FD-BADB-0EC488686514}"
+      headerDatasource:
+        path: "/sitecore/content/lcmc/lcmc/Presentation/Partial Designs/Global/Header/Data/Header"
+        itemId: "{D7264BD2-810B-479E-8468-FB894F9A8C17}"
+      megaMenuItems:
+        - { label: "About Us", itemId: "{CE5028AA-28D8-47EA-A382-0297400FC83D}", internalItemName: "Speakers" }
+        - { label: "For Patients", itemId: "{69A720AA-1C61-439E-AC3B-00091DCD483D}", internalItemName: "Headphones" }
+        - { label: "Our Services", itemId: "{99B688E7-0A27-4088-B977-4AB591D7A2FC}", internalItemName: "Amps" }
+        - { label: "Our Locations", itemId: "{15F81325-A26F-492C-B751-2F0009BB170E}", internalItemName: "Pro" }
+        - { label: "Find a Provider", itemId: "{12C83D0B-C1C0-4310-919C-7A1E056833A2}", internalItemName: "Artist Services" }
+      primaryLinkLists:
+        - { title: "About Us", itemId: "{65A16DF0-8170-4397-95AA-41DF2F05F0DC}" }
+        - { title: "For Patients", itemId: "{304E01D5-F54A-424D-8D28-AD9060D2A770}" }
+        - { title: "Our Services", itemId: "{DA4F77EE-8F82-4A2C-8544-A2CBADD18AA9}" }
+        - { title: "Our Locations", itemId: "{23791DA9-7D27-4F2E-9B90-D78B9931D34C}" }
+      retainedItemCounts:
+        megaMenuItems: 5
+        headerDatasources: 1
+        linkLists: 19
+        links: 109
+        workflowCleared: 134
+      coverage:
+        l1: "5/5"
+        l2: "complete for About Us, For Patients, Our Services, and summarized Our Locations"
+        l3: "complete for every branch in docs/ai/ia/lcmc-health-ia.md"
+        gaps: []
+      verification:
+        checkedAt: "2026-08-25T12:45:00Z"
+        passed:
+          - "Header partial has 5 MegaMenuItem renderings in IA order"
+          - "All retained starter link children now contain LCMC labels and targets"
+          - "All IA L2 and L3 internal links target Sitecore item IDs"
+          - "Careers and Patient Portal Login are external links"
+          - "Workflow reads as null on sampled existing and created navigation items"
+          - "Final component layout read-back includes 19 LinkList renderings"
+          - "Footer Data was not edited"
+        failed: []
+        pendingManual:
+          - "Publish the Header partial design subtree and related Home IA pages"
+          - "Visually check the large Our Services mega menu in Pages at desktop and mobile widths"
     items:
       - { name: "About Us", itemId: "{7A74408E-B1F1-4B41-B189-C80D340CF88C}", path: "/sitecore/content/lcmc/lcmc/Home/About Us" }
       - { name: "Academic Affairs at LCMC Health", itemId: "{9AC41D38-4175-4441-B817-0F35FAA9727D}", path: "/sitecore/content/lcmc/lcmc/Home/About Us/Academic Affairs at LCMC Health" }
@@ -8615,7 +8744,7 @@ ia:
       - { name: "Contact Us", itemId: "{C04ED62D-9082-490D-99EE-D72146755712}", path: "/sitecore/content/lcmc/lcmc/Home/Contact Us" }
       - { name: "Notice of Non-Discrimination", itemId: "{E71BF3C3-7DAC-43EF-8222-963DD4F3EF49}", path: "/sitecore/content/lcmc/lcmc/Home/Notice of Non-Discrimination" }
     verification:
-      checkedAt: "2026-08-25T02:50:00Z"
+      checkedAt: "2026-08-25T11:50:00Z"
       passed:
         - "Site lcmc verified via list_sites (tenant lcmc, rootPath matches Home)"
         - "Home exists at /sitecore/content/lcmc/lcmc/Home {194F8944-6400-40DD-BDCB-931686A42643}"
@@ -8623,13 +8752,72 @@ ia:
         - "115 Services Pages created via create_content_item and verified by MCP read-back"
         - "Detail field confirmed on Home L1 children, Our Services (31 L2), and Urgent Care Locations (8 L3)"
         - "All 8 L1 pages present under Home"
+        - "Live-copy test: Communication and Translation Detail HTML + image XML confirmed via MCP read-back"
+        - "All 115 Services Pages populated with live-aligned Detail HTML, source links, title/metadata fields, and external image XML"
+        - "Detail and image read-back passed for About Us, For Patients, Our Services, Our Locations, Find a Provider, For Providers, Contact Us, and Notice of Non-Discrimination"
       failed: []
       pendingManual:
-        - "pageTitle / pageHeaderTitle / pageShortTitle / pageSubtitle / pageSummary (silent-write — verify in Content Editor)"
+        - "pageTitle / pageHeaderTitle / pageShortTitle / pageSubtitle / pageSummary / metadata* / og* on all 115 pages (silent-write — verify in Content Editor)"
+        - "Replace external image URLs with DAM dam-id XML when Content Hub credentials exist"
         - "Add Services Page to Home insert options for authors"
         - "Approve Draft workflow and publish /sitecore/content/lcmc/lcmc/Home subtree for Edge"
         - "Wire navigation to new IA pages; starter Speakers/Video/Data left in tree"
-        - "image empty — replace with DAM when assets are uploaded"
+        - "Publish Footer Partial Design + Footer/Data for Edge (footer links remapped 2026-08-25)"
+
+  - name: "lcmc-footer-nav-remap"
+    kind: "content-update"
+    category: "Navigation"
+    status: "complete"
+    createdAt: "2026-08-25T12:15:00Z"
+    updatedAt: "2026-08-25T12:20:00Z"
+    siteName: "lcmc"
+    notes: >
+      Updated Footer Partial Design Data under /sitecore/content/lcmc/lcmc/Presentation/Partial Designs/Global/Footer/Data
+      to match live lcmchealth.org footer + LCMC IA. Did not edit Header/mega menu or FooterST Default layout.
+      Starter Speakers/Headphones/Amps/Artist Services and About us/Contact/Warranty/Shipping/Returns remapped in place
+      (item names Link 1–n kept). Six additional Primary Link items created. __Workflow + __Workflow state set to empty
+      on 16 Footer Data items to match Home (no Final GUID).
+    relatedItems:
+      footerPartialDesignId: "{BE2A0E7E-6FBB-4EE7-8968-41B6D1AE01C4}"
+      footerDataFolderId: "{3DC10FAB-D4FB-4B68-9B5E-1DC5D00E93DB}"
+      footerSTId: "{CBC82743-E6A7-4A36-A938-4DC03635E9BE}"
+      primaryLinksId: "{13273832-BEF1-4F8B-A388-75A884CBCBBC}"
+      secondaryLinksId: "{F233BBB1-712D-43B6-83A1-348E2E81E7C3}"
+      branding:
+        title: "Let's stay connected."
+        copyright: "1100 Poydras St., New Orleans, LA 70163 — © 2026 LCMC Health. All rights reserved."
+        facebook: "https://www.facebook.com/LCMCHealth"
+        instagram: "https://www.instagram.com/lcmchealth/"
+        linkedIn: "https://www.linkedin.com/company/lcmchealth"
+      primaryLinks:
+        - { itemName: "Link 1", itemId: "{55F1E3A5-2BDA-4CC4-A7FF-3E19D59D519F}", text: "Find a Provider", href: "internal {BAE717F7-D99D-4722-8FAF-CED2581DF809}", created: false }
+        - { itemName: "Link 2", itemId: "{BD74B6FA-6984-4693-81E1-263CCE5F5096}", text: "Careers", href: "https://careers.lcmchealth.org/us/en/home", created: false }
+        - { itemName: "Link 3", itemId: "{C539EF97-6DFB-4653-A930-1F5D7932B09C}", text: "Find a Location", href: "internal {0A471272-462E-4497-BEA2-D03C904BCBE5}", created: false }
+        - { itemName: "Link 4", itemId: "{F2C64BC4-B709-4856-B348-29F3BF2B609D}", text: "Newsroom & Blog", href: "https://www.lcmchealth.org/newsroom-blog/", created: false }
+        - { itemName: "Patient Portal Login", itemId: "{1E9DD273-404D-4C4A-AE7B-5BB6D310923B}", text: "Patient Portal Login", href: "https://mylcmchealth.org/", created: true }
+        - { itemName: "For Providers", itemId: "{4391DAC2-1588-46C0-BA72-88BA37FDDD43}", text: "For Providers", href: "internal {F280CB2F-C7F8-4217-B325-004870571DC8}", created: true }
+        - { itemName: "Pay Your Bill", itemId: "{4C08DBD7-8A92-435E-9292-AFCCC91D2C2D}", text: "Pay Your Bill", href: "internal {E804539D-EE01-4ECD-85D8-17392F6B7A92}", created: true }
+        - { itemName: "Contact Us", itemId: "{4FD9F12F-9C53-4C9A-AEE7-50B03D579EF5}", text: "Contact Us", href: "internal {C04ED62D-9082-490D-99EE-D72146755712}", created: true }
+        - { itemName: "Request Medical Records", itemId: "{13C161FC-307E-4252-963A-09AFCF3527F3}", text: "Request Medical Records", href: "internal {F768939E-B6D0-4709-B059-AB164158A579}", created: true }
+        - { itemName: "Newsletter Sign-up", itemId: "{0520D5F6-57A3-48D8-8E1C-5BB2C910D782}", text: "Newsletter Sign-up", href: "https://www.lcmchealth.org/newsletter-sign-up/", created: true }
+      secondaryLinks:
+        - { itemName: "Link 1", itemId: "{98433015-5248-47D4-B94A-7960919C5D05}", text: "Site Map", href: "https://www.lcmchealth.org/site-map/" }
+        - { itemName: "Link 2", itemId: "{0E86EF7F-D913-4BE2-B182-64FA5E107A06}", text: "Terms of Use", href: "https://www.lcmchealth.org/terms-of-use/" }
+        - { itemName: "Link 3", itemId: "{4449E137-1AC9-4FCD-980A-CA9353D75614}", text: "Notice of Nondiscrimination", href: "internal {E71BF3C3-7DAC-43EF-8222-963DD4F3EF49}" }
+        - { itemName: "Link 4", itemId: "{78B89D84-B5F3-43FF-9D40-F4994294F63B}", text: "Notice of Privacy Practices", href: "https://www.lcmchealth.org/university-medical-center-new-orleans/patients-visitors/notice-of-privacy-practices/" }
+        - { itemName: "Link 5", itemId: "{89EB345D-E8F5-448D-BC3A-B93BFDFD3D6E}", text: "Price Transparency", href: "internal {0ADA9559-A4AF-42AE-ABDC-1EC616615C2D}" }
+      workflowClearedCount: 16
+    verification:
+      checkedAt: "2026-08-25T12:20:00Z"
+      passed:
+        - "FooterST Title/Copyright/social verified via MCP read-back"
+        - "Primary Links: 4 remapped + 6 created; labels match live footer utility"
+        - "Secondary Links remapped to legal/site-map destinations"
+      failed: []
+      pendingManual:
+        - "Publish Footer Partial Design + Footer/Data for Edge"
+        - "FooterST cannot show ADA.gov service-animal block, X/YouTube, or GFE/balance-billing PDFs as dedicated columns"
+        - "Notice of Privacy Practices has no IA page — linked to live UMC notice URL"
 
 # Shared homepage kit (click-click-launch Global Elements) — 2026-08-25
 # Do not treat these as FMC/progressive items. HeaderST Default was not restyled.
@@ -8640,7 +8828,7 @@ homepageKit:
   projectTemplatesRoot: "/sitecore/templates/Project/click-click-launch/Components/Global Elements"
   renderingsRoot: "/sitecore/layout/Renderings/Project/click-click-launch/Global Elements"
   availableRenderingsGroup: "Homepage Kit"
-  availableRenderingsValue: "{916AD4EA-646B-4F69-BA9D-594CEA0D59C7}|{FD183076-E346-49B5-A3F1-22D2E45B4A63}|{1745BCF4-CD31-4182-A3DF-8874E979DD60}|{0B67AE92-7387-4EE5-8A97-217AE6BDE765}|{B644D425-E162-45A9-A59E-FCFE3F14B90D}"
+  availableRenderingsValue: "{916AD4EA-646B-4F69-BA9D-594CEA0D59C7}|{FD183076-E346-49B5-A3F1-22D2E45B4A63}|{1745BCF4-CD31-4182-A3DF-8874E979DD60}|{0B67AE92-7387-4EE5-8A97-217AE6BDE765}|{B644D425-E162-45A9-A59E-FCFE3F14B90D}|{8792FF9C-9B69-4F56-A0CD-B5EC8F2647BD}"
   sitesWired:
     - { name: "lcmc", homeId: "{194F8944-6400-40DD-BDCB-931686A42643}", arItemId: "{72E55B4F-12C7-4D15-9E7C-71F88370D501}" }
     - { name: "amkor", homeId: "{BB13BF5A-B102-4FE8-B410-63E3DA7AA448}", arItemId: "{E72EC5E7-E264-404A-8137-004BEC46E7CE}" }
@@ -8648,7 +8836,23 @@ homepageKit:
     - { name: "atlanta-apparel", homeId: "{011D81AC-F13E-4DC1-A142-88119D17A7B5}", arItemId: "{4AA4093B-EE42-421B-BF5A-FEA56CEF911A}" }
   notes:
     - "2026-08-25: Shared kit created under click-click-launch (not client-named). Wired onto four Homes. Variants must be set in Pages. Images empty."
+    - "2026-08-25: Homepage Kit templates/renderings and sample datasources already workflow:null (same as Home). Not field-cleared. No executeWorkflowCommand on Marketer MCP."
+    - "2026-08-25: HeroQuickLinks added (LCMC-style search hero + overlapping icon CTAs). Rendering {8792FF9C-9B69-4F56-A0CD-B5EC8F2647BD}."
   components:
+    - name: "HeroQuickLinks"
+      kind: "list"
+      category: "Global Elements"
+      status: "complete"
+      react:
+        filePath: "src/components/uiim/global-elements/HeroQuickLinks.tsx"
+        variants: ["Default"]
+      templates:
+        datasource: { name: "HeroQuickLinks", itemId: "{CFF35DC3-7968-4ADB-B146-417CB0AA6BBB}", standardValues: "{9E6545BD-7901-436A-A025-D99DE3A9AC0D}" }
+        child: { name: "HeroQuickLinkItem", itemId: "{FE0A7F7E-7242-4126-B07F-2A6FA7BD4807}" }
+        folder: { name: "HeroQuickLinks Folder", itemId: "{E1E5CD81-25A7-4149-AD89-50F4707D63FC}" }
+        renderingParams: { itemId: "{FA743BF1-9160-4CBA-832E-456BE90C36D2}" }
+      rendering: { itemId: "{8792FF9C-9B69-4F56-A0CD-B5EC8F2647BD}", path: "/sitecore/layout/Renderings/Project/click-click-launch/Global Elements/HeroQuickLinks" }
+      exampleDatasource: { itemId: "{6E0C9D38-0C38-471A-BE3C-B7FAD2AAEA06}", path: "/sitecore/content/lcmc/lcmc/Data/Hero Quick Links/LCMC Home Hero" }
     - name: "IconLinkBar"
       kind: "list"
       category: "Global Elements"
@@ -8656,6 +8860,7 @@ homepageKit:
       react:
         filePath: "src/components/uiim/global-elements/IconLinkBar.tsx"
         variants: ["Default", "DarkBand", "CircleGrid"]
+        notes: "2026-08-25: item row switched from a fixed-column grid to flex-wrap + justify-center. The grid sized every column even when empty, so a row with fewer items than columns (e.g. 4 items in CircleGrid's 5 columns) was pushed left while the title, description, and search button stayed centered. Items now carry explicit widths (2-up on mobile, sm:w-52 md:w-60 default/dark, sm:w-44 md:w-48 circle) so any count stays centered."
       templates:
         datasource: { name: "IconLinkBar", itemId: "{5AD908DA-DEB0-4B6F-8A3D-00FDFC802915}", standardValues: "{409BB427-78DC-4D52-9686-FE5FC50BED0B}" }
         child: { name: "IconLinkItem", itemId: "{3D6D2E42-D566-4A98-ABF3-F1487BC2E603}" }

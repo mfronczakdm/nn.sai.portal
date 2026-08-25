@@ -36,7 +36,7 @@ export function HeaderPreviewSearch({
       className={
         appearance === 'contained'
           ? cn(
-              'flex min-w-[12rem] items-center rounded-full bg-muted px-4 py-2.5 lg:min-w-[16rem]',
+              'flex min-w-[10rem] items-center rounded-full bg-muted px-4 py-2.5 xl:min-w-[16rem]',
               className
             )
           : (className ??

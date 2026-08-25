@@ -755,6 +755,59 @@ describe('HeaderST Component', () => {
       expect(screen.getByLabelText('Toggle mobile menu')).toBeInTheDocument();
     });
 
+    it('renders the five LCMC utility links in live order', () => {
+      render(<HeaderSTVersion3 {...headerSTPropsVersion3} />);
+
+      const expected = [
+        ['Notice of Non-Discrimination', '/notice-of-non-discrimination'],
+        ['Careers', 'https://careers.lcmchealth.org/us/en/'],
+        ['Patient Portal/Pay my Bill', '/for-patients/patient-portal'],
+        ['For Providers', '/for-providers'],
+        ['Contact Us', '/contact-us'],
+      ];
+
+      expected.forEach(([text, href]) => {
+        const link = screen.getAllByText(text)[0];
+        expect(link).toBeInTheDocument();
+        expect(link).toHaveAttribute('href', href);
+      });
+    });
+
+    it('opens the external Careers link in a new tab', () => {
+      render(<HeaderSTVersion3 {...headerSTPropsVersion3} />);
+
+      const careers = screen.getAllByText('Careers')[0];
+      expect(careers).toHaveAttribute('target', '_blank');
+      expect(careers).toHaveAttribute('rel', 'noopener noreferrer');
+    });
+
+    it('does not duplicate SupportLink when it matches a utility link', () => {
+      render(<HeaderSTVersion3 {...headerSTPropsVersion3} />);
+
+      const contactUsLinks = screen
+        .getAllByText('Contact Us')
+        .filter((link) => link.getAttribute('data-testid') === 'sitecore-link');
+      expect(contactUsLinks).toHaveLength(0);
+    });
+
+    it('renders SupportLink alongside the utility links when it is not a duplicate', () => {
+      render(
+        <HeaderSTVersion3
+          {...headerSTPropsVersion3}
+          fields={{
+            ...headerSTPropsVersion3.fields,
+            SupportLink: { value: { href: '/donate', text: 'Donate' } },
+          }}
+        />
+      );
+
+      const donateLinks = screen
+        .getAllByTestId('sitecore-link')
+        .filter((link) => link.getAttribute('href') === '/donate');
+      expect(donateLinks.length).toBeGreaterThan(0);
+      expect(screen.getAllByText('For Providers')[0]).toBeInTheDocument();
+    });
+
     it('shows a contained search bar when showSearchBox is true', () => {
       render(<HeaderSTVersion3 {...headerSTPropsVersion3} />);
 

@@ -39,17 +39,19 @@ function IconLinkItem({
   item,
   isEditing,
   imageClassName,
+  className,
 }: {
   item: IconLinkItemFields;
   isEditing?: boolean;
   imageClassName: string;
+  className?: string;
 }) {
   const hasImage = Boolean(item.itemImage?.jsonValue?.value?.src);
   const hasTitle = Boolean(item.itemTitle?.jsonValue?.value);
   const hasLink = Boolean(item.itemLink?.jsonValue?.value?.href);
 
   return (
-    <div className="flex flex-col items-center gap-3 text-center">
+    <div className={cn('flex flex-col items-center gap-3 text-center', className)}>
       {(hasImage || isEditing) && (
         <ContentSdkImage field={item.itemImage?.jsonValue} className={imageClassName} />
       )}
@@ -129,20 +131,19 @@ function IconLinkBarLayout({
             />
           </div>
         )}
-        <div
-          className={cn(
-            'grid gap-8',
-            variant === 'circle'
-              ? 'grid-cols-2 sm:grid-cols-3 md:grid-cols-5'
-              : 'grid-cols-2 md:grid-cols-4'
-          )}
-        >
+        {/* Flex + justify-center keeps a partially filled row centered. A grid would size every
+            column even when empty, pushing a short row of items to the left. */}
+        <div className="flex flex-wrap justify-center gap-8">
           {items.map((item) => (
             <IconLinkItem
               key={item.id}
               item={item}
               isEditing={isEditing}
               imageClassName={imageClass}
+              className={cn(
+                'w-[calc(50%-1rem)]',
+                variant === 'circle' ? 'sm:w-44 md:w-48' : 'sm:w-52 md:w-60'
+              )}
             />
           ))}
         </div>
