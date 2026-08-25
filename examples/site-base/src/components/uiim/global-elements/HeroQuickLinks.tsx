@@ -122,12 +122,23 @@ function HeroQuickLinksLayout({ fields, params, page }: HeroQuickLinksProps): JS
     >
       <div className="relative min-h-[28rem] bg-[#3d4a45] md:min-h-[32rem]">
         {(datasource.backgroundImage?.jsonValue?.value?.src || isEditing) && (
-          <ContentSdkImage
-            field={datasource.backgroundImage?.jsonValue}
-            className="absolute inset-0 h-full w-full object-cover object-right"
-          />
+          <div
+            data-hero-quick-links-bg
+            className={cn(
+              'absolute inset-0 z-0 overflow-hidden',
+              // Pages wraps empty/invalid Image fields in chrome that ignores absolute on the img.
+              '[&>*]:absolute [&>*]:inset-0 [&>*]:flex [&>*]:h-full [&>*]:w-full [&>*]:items-center [&>*]:justify-center [&>*]:overflow-hidden',
+              '[&_img]:h-full [&_img]:w-full [&_img]:object-cover [&_img]:object-right',
+              '[&_svg]:max-h-28 [&_svg]:max-w-28 [&_svg]:opacity-40'
+            )}
+          >
+            <ContentSdkImage
+              field={datasource.backgroundImage?.jsonValue}
+              className="h-full w-full object-cover object-right"
+            />
+          </div>
         )}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#2f3c38]/95 via-[#2f3c38]/80 to-transparent" />
+        <div className="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-r from-[#2f3c38]/95 via-[#2f3c38]/80 to-transparent" />
         <div className="relative z-10 mx-auto max-w-7xl px-4 pb-28 pt-12 md:px-8 md:pt-16">
           {(datasource.headline?.jsonValue?.value || isEditing) && (
             <Text
@@ -149,7 +160,7 @@ function HeroQuickLinksLayout({ fields, params, page }: HeroQuickLinksProps): JS
                 <Text
                   field={datasource.zipPlaceholder?.jsonValue}
                   tag="span"
-                  className={cn('block text-xs text-white/70', !isEditing && 'sr-only')}
+                  className="sr-only"
                 />
               )}
               <div className="flex overflow-hidden rounded-sm bg-white">
@@ -194,14 +205,7 @@ function HeroQuickLinksLayout({ fields, params, page }: HeroQuickLinksProps): JS
                 <Text
                   field={datasource.specialtyPlaceholder?.jsonValue}
                   tag="span"
-                  className={cn('block text-xs text-white/70', !isEditing && 'sr-only')}
-                />
-              )}
-              {(datasource.specialtyOptions?.jsonValue?.value || isEditing) && (
-                <Text
-                  field={datasource.specialtyOptions?.jsonValue}
-                  tag="span"
-                  className={cn('block whitespace-pre-line text-xs text-white/70', !isEditing && 'sr-only')}
+                  className="sr-only"
                 />
               )}
               <div className="flex overflow-hidden rounded-sm bg-white">
@@ -241,6 +245,18 @@ function HeroQuickLinksLayout({ fields, params, page }: HeroQuickLinksProps): JS
               )}
             </form>
           </div>
+          {isEditing ? (
+            <div className="mt-6 max-w-4xl rounded-md border border-white/25 bg-black/35 p-3">
+              <p className="mb-2 text-[11px] font-semibold uppercase tracking-wide text-white/80">
+                Specialty options (one per line)
+              </p>
+              <Text
+                field={datasource.specialtyOptions?.jsonValue}
+                tag="div"
+                className="max-h-24 overflow-y-auto whitespace-pre-line text-xs leading-snug text-white/90"
+              />
+            </div>
+          ) : null}
         </div>
       </div>
       <div className="relative z-20 mx-auto -mt-16 max-w-7xl px-4 md:px-8">
@@ -258,10 +274,12 @@ function HeroQuickLinksLayout({ fields, params, page }: HeroQuickLinksProps): JS
               return (
                 <li key={item.id} className="flex items-center gap-4">
                   {(hasImage || isEditing) && (
-                    <ContentSdkImage
-                      field={item.itemImage?.jsonValue}
-                      className="h-12 w-12 shrink-0 object-contain"
-                    />
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden [&>*]:max-h-12 [&>*]:max-w-12 [&_img]:h-12 [&_img]:w-12 [&_img]:object-contain">
+                      <ContentSdkImage
+                        field={item.itemImage?.jsonValue}
+                        className="h-12 w-12 object-contain"
+                      />
+                    </div>
                   )}
                   <div className="min-w-0">
                     {(hasTitle || isEditing) && (

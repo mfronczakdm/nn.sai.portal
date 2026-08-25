@@ -614,11 +614,13 @@ const HeaderSTVersion3View = (props: HeaderSTViewProps) => {
                     />
                   </ul>
                   <ul
+                    data-header-st-nav="primary"
                     className={cn(
-                      'm-0 flex min-w-0 list-none flex-row flex-wrap items-center justify-end gap-x-0 gap-y-0.5 p-0 text-left',
-                      // lg (1024px) is tight: compact the placeholder nav links so the row cannot
-                      // overflow left underneath the logo. Full sizing returns at xl.
-                      '[&>li>a]:whitespace-nowrap [&>li>a]:px-2 [&>li>a]:text-[0.8125rem] xl:[&>li>a]:px-3 xl:[&>li>a]:text-sm',
+                      'm-0 flex shrink-0 list-none flex-row flex-nowrap items-center justify-end gap-1 p-0 text-left',
+                      // Compact L1 triggers at lg so the nowrap row cannot slide under the logo.
+                      // Mega-menu items use span/button, not a, so those selectors are included.
+                      '[&>li]:shrink-0 [&>li>a]:whitespace-nowrap [&>li>span]:whitespace-nowrap [&>li>button]:whitespace-nowrap',
+                      '[&>li>a]:px-2 [&>li>a]:text-[0.8125rem] xl:[&>li>a]:px-3 xl:[&>li>a]:text-sm',
                       '[.partial-editing-mode_&]:!flex-col',
                       isReverseTheme &&
                         'rounded-md bg-primary px-2 text-primary-foreground [&>li>a]:!text-primary-foreground [&>li>a:hover]:opacity-90'

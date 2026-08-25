@@ -7782,6 +7782,7 @@ ia:
         - "Optional: add postLogoutRedirect to HeaderST rendering parameters template"
 
     notes:
+      - "2026-08-25: Version3 primary nav no longer uses flex-wrap/min-w-0. Those classes let the ul shrink until each MegaMenuItem sat on its own line. Primary ul is now flex-nowrap shrink-0; utility row may still wrap. Logo/gap/search min-width lg tuning kept so the row cannot slide under the logo at 1024px. Partial-editing-mode !flex-col is unchanged."
       - "2026-08-25: Version3 responsive fix for the lg band (1024-1279px), where the placeholder nav overflowed left and rendered underneath the logo. Logo capped at lg:h-11/190px, container gap lg:gap-3, nav links compacted to px-2/13px via [&>li>a], utility links to 11px, both nav rows flex-wrap, and the contained search pill min-width lowered to 10rem (touches SearchBox.tsx + HeaderPreviewSearch.tsx contained appearance, which is Version3-only). Full sizing restored at xl. Code-only; no Sitecore items touched."
       - "2026-08-25: Version3 utility row now renders LCMC's five live links (Notice of Non-Discrimination, Careers, Patient Portal/Pay my Bill, For Providers, Contact Us) from the version3UtilityLinks constant in HeaderST.tsx. Code-only change — no Sitecore items touched, and Default/Version1/Version2 are unaffected. HeaderST's datasource exposes a single SupportLink and the template is shared across sites, so the list is demo-fixed rather than authorable; SupportLink still renders after the five unless its text duplicates one of them. Careers targets https://careers.lcmchealth.org/us/en/ in a new tab; the other four target existing lcmc demo pages (/notice-of-non-discrimination, /for-patients/patient-portal, /for-providers, /contact-us). HeaderST.test.tsx 58 tests passed."
       - "2026-08-24: Version3 LCMC-style header (single white bar, logo left, stacked utility+primary nav, muted rounded search bar). Headless variants on pkm, site-base, and lcmc. No new RP fields."
@@ -8846,6 +8847,7 @@ homepageKit:
       react:
         filePath: "src/components/uiim/global-elements/HeroQuickLinks.tsx"
         variants: ["Default"]
+        notes: "2026-08-25: Pages editing chrome — empty/invalid BackgroundImage was rendering a giant broken-image placeholder over the headline because NextImage's EE wrapper ignores absolute on the img. Background is now in an overflow-hidden absolute frame that sizes chrome/img/svg. Specialty options no longer dump as a visible pre-line list in the form; they sit in a compact editing-only panel. Placeholders stay sr-only. Quick-link icons clipped to 48px. BackgroundImage on LCMC Home Hero still reports invalid XML in Pages — reset that field in Content Editor and re-pick media (MCP was unavailable)."
       templates:
         datasource: { name: "HeroQuickLinks", itemId: "{CFF35DC3-7968-4ADB-B146-417CB0AA6BBB}", standardValues: "{9E6545BD-7901-436A-A025-D99DE3A9AC0D}" }
         child: { name: "HeroQuickLinkItem", itemId: "{FE0A7F7E-7242-4126-B07F-2A6FA7BD4807}" }

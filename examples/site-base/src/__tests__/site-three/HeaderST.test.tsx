@@ -755,6 +755,16 @@ describe('HeaderST Component', () => {
       expect(screen.getByLabelText('Toggle mobile menu')).toBeInTheDocument();
     });
 
+    it('keeps the primary nav on a single nowrap row', () => {
+      render(<HeaderSTVersion3 {...headerSTPropsVersion3} />);
+
+      const primaryNav = document.querySelector('[data-header-st-nav="primary"]');
+      expect(primaryNav).toBeInTheDocument();
+      expect(primaryNav).toHaveClass('flex-nowrap');
+      expect(primaryNav).not.toHaveClass('flex-wrap');
+      expect(primaryNav).toHaveClass('shrink-0');
+    });
+
     it('renders the five LCMC utility links in live order', () => {
       render(<HeaderSTVersion3 {...headerSTPropsVersion3} />);
 

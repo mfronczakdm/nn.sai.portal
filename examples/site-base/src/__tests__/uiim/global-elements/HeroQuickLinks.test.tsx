@@ -79,4 +79,34 @@ describe('HeroQuickLinks', () => {
     );
     expect(screen.queryByText(/requires a datasource/i)).not.toBeInTheDocument();
   });
+
+  it('keeps an empty background image inside the hero frame while editing', () => {
+    const { container } = render(
+      <Default
+        fields={{
+          data: {
+            datasource: {
+              headline: { jsonValue: { value: "You're never far from a trusted ER" } },
+              children: { results: [] },
+            },
+          },
+        }}
+        params={params}
+        page={editingPage}
+        rendering={rendering}
+      />
+    );
+
+    expect(screen.getByText("You're never far from a trusted ER")).toBeInTheDocument();
+    const background = container.querySelector('[data-hero-quick-links-bg]');
+    expect(background).toBeInTheDocument();
+    expect(background).toHaveClass('absolute', 'inset-0', 'overflow-hidden');
+    expect(screen.getByText('Specialty options (one per line)')).toBeInTheDocument();
+  });
+
+  it('does not dump specialty options into the live hero', () => {
+    render(<Default fields={fields} params={params} page={page} rendering={rendering} />);
+    expect(screen.queryByText('Specialty options (one per line)')).not.toBeInTheDocument();
+    expect(screen.getByRole('option', { name: 'Cardiology' })).toBeInTheDocument();
+  });
 });
