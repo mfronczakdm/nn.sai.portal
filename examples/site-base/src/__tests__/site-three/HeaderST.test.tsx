@@ -762,7 +762,11 @@ describe('HeaderST Component', () => {
       expect(primaryNav).toBeInTheDocument();
       expect(primaryNav).toHaveClass('flex-nowrap');
       expect(primaryNav).not.toHaveClass('flex-wrap');
-      expect(primaryNav).toHaveClass('shrink-0');
+      expect(primaryNav).not.toHaveClass('overflow-hidden');
+      expect(primaryNav).not.toHaveClass('shrink-0');
+      expect(primaryNav).toHaveClass('min-w-0');
+      expect(primaryNav).toHaveClass('overflow-visible');
+      expect(primaryNav?.parentElement).toHaveClass('flex-1');
     });
 
     it('renders the five LCMC utility links in live order', () => {

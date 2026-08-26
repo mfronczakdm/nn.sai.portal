@@ -26,6 +26,7 @@ interface Fields {
     datasource: {
       title?: IGQLTextField;
       description?: IGQLRichTextField;
+      backgroundImage?: IGQLImageField;
       children: {
         results: SimplePromoFields[];
       };
@@ -122,6 +123,26 @@ const parentBasedGridItemClasses =
 
 const getPromoSlugField = (promo: SimplePromoFields) =>
   promo.slug?.jsonValue ?? promo.Slug?.jsonValue;
+
+const VERSION1_CAROUSEL_THRESHOLD = 3;
+
+/** Sitecore checkbox rendering parameters often arrive as 1 / true / yes / on. */
+const isCheckboxParamEnabled = (value: string | undefined): boolean => {
+  if (value == null || typeof value !== 'string') return false;
+  const v = value.trim().toLowerCase();
+  return v === '1' || v === 'true' || v === 'yes' || v === 'on';
+};
+
+const isShowBackgroundImage = (params: MultiPromoProps['params'] | undefined): boolean => {
+  if (!params) return false;
+  for (const [key, value] of Object.entries(params)) {
+    const normalized = key.replace(/[\s_-]/g, '').toLowerCase();
+    if (normalized === 'showbackgroundimage' && isCheckboxParamEnabled(value)) {
+      return true;
+    }
+  }
+  return false;
+};
 
 export const Default = (props: MultiPromoProps) => {
   const datasource = useMemo(
@@ -560,3 +581,142 @@ export const TopTabs = (props: MultiPromoProps) =>
 
 export const TopTabsNoImage = (props: MultiPromoProps) =>
   TopTabsLayout({ props, showImage: false, layoutClass: 'multi-promo-top-tabs-no-image' });
+
+const Version1PromoCard = ({
+  promo,
+  isEditing,
+}: {
+  promo: SimplePromoFields;
+  isEditing: boolean;
+}) => {
+  const { image, heading, description, link } = promo ?? {};
+  const headingField = heading?.jsonValue;
+  const descriptionField = description?.jsonValue;
+  const imageField = image?.jsonValue;
+  const linkField = link?.jsonValue;
+
+  return (
+    <article className="flex h-full flex-col" data-testid="multi-promo-v1-card">
+      {(imageField?.value?.src || isEditing) && imageField && (
+        <ContentSdkImage
+          field={imageField}
+          className="mb-5 aspect-[16/10] w-full object-cover"
+        />
+      )}
+      {(headingField?.value || isEditing) && headingField && (
+        <h3 className="font-heading text-foreground mb-3 text-pretty text-xl font-semibold leading-snug tracking-tight lg:text-2xl">
+          <ContentSdkText field={headingField} />
+        </h3>
+      )}
+      {(descriptionField?.value || isEditing) && descriptionField && (
+        <div className="font-body text-foreground mb-4 text-sm leading-relaxed lg:text-base">
+          <ContentSdkRichText field={descriptionField} />
+        </div>
+      )}
+      {(linkField?.value?.href || isEditing) && linkField && (
+        <TrackedCtaLink
+          field={linkField}
+          className="mt-auto inline-flex w-fit text-sm font-semibold text-primary hover:underline"
+        />
+      )}
+    </article>
+  );
+};
+
+export const Version1 = (props: MultiPromoProps) => {
+  const { page } = useSitecore();
+  const isEditing = Boolean(page?.mode?.isEditing);
+  const { data } = props.fields || {};
+  const { datasource } = data || {};
+  const { title, backgroundImage, children } = datasource || {};
+  const titleField = title?.jsonValue;
+  const portraitField = backgroundImage?.jsonValue;
+  const promos = children?.results?.filter(Boolean) ?? [];
+  const showBackgroundImage = isShowBackgroundImage(props.params);
+  const showPortrait =
+    showBackgroundImage && Boolean(portraitField) && Boolean(portraitField?.value?.src || isEditing);
+  const useCarousel = promos.length > VERSION1_CAROUSEL_THRESHOLD;
+
+  if (!props.fields) {
+    return <NoDataFallback componentName="MultiPromo" />;
+  }
+
+  return (
+    <section
+      className={cn('multi-promo-version1 relative overflow-hidden bg-background', props.params?.styles || '')}
+      data-class-change
+      data-testid="multi-promo-version1"
+    >
+      <div aria-hidden className="absolute inset-x-0 top-0 z-0 h-[18rem] bg-primary lg:h-[22rem]" />
+
+      {showPortrait && portraitField && (
+        <>
+          <div
+            className="absolute inset-y-0 right-0 z-0 hidden w-[min(40%,36rem)] lg:block"
+            data-testid="multi-promo-v1-portrait"
+          >
+            <ContentSdkImage
+              field={portraitField}
+              className="h-full w-full object-cover object-[center_20%]"
+            />
+          </div>
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -top-[35%] z-[1] hidden h-[170%] w-[min(70%,52rem)] rounded-full bg-background lg:block"
+            style={{ right: '16%' }}
+          />
+        </>
+      )}
+
+      <div className="relative z-10 container mx-auto px-4 pb-16 pt-10 lg:px-8 lg:pb-20 lg:pt-14">
+        <div className={cn(showPortrait && 'lg:max-w-[70%]')}>
+          {(titleField?.value || isEditing) && titleField && (
+            <h2 className="font-heading mb-10 max-w-xl text-pretty text-3xl leading-tight tracking-tight text-white lg:mb-14 lg:max-w-2xl lg:text-5xl">
+              <ContentSdkText field={titleField} />
+            </h2>
+          )}
+
+          {promos.length > 0 &&
+            (useCarousel ? (
+              <div className="relative px-0 sm:px-12">
+                <Carousel
+                  opts={{ align: 'start', loop: false }}
+                  className="w-full"
+                  data-testid="multi-promo-v1-carousel"
+                >
+                  <CarouselContent className="-ml-6">
+                    {promos.map((promo) => (
+                      <CarouselItem
+                        key={promo.id}
+                        className="basis-full pl-6 sm:basis-1/2 lg:basis-1/3"
+                        data-testid="multi-promo-v1-carousel-item"
+                      >
+                        <Version1PromoCard promo={promo} isEditing={isEditing} />
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <CarouselPrevious
+                    className="left-0 h-10 w-10 border-0 bg-secondary text-secondary-foreground hover:bg-secondary-hover sm:left-2"
+                    data-testid="multi-promo-v1-carousel-prev"
+                  />
+                  <CarouselNext
+                    className="right-0 h-10 w-10 border-0 bg-secondary text-secondary-foreground hover:bg-secondary-hover sm:right-2"
+                    data-testid="multi-promo-v1-carousel-next"
+                  />
+                </Carousel>
+              </div>
+            ) : (
+              <div
+                className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
+                data-testid="multi-promo-v1-grid"
+              >
+                {promos.map((promo) => (
+                  <Version1PromoCard key={promo.id} promo={promo} isEditing={isEditing} />
+                ))}
+              </div>
+            ))}
+        </div>
+      </div>
+    </section>
+  );
+};

@@ -8,6 +8,7 @@ import {
   SideTabs as MultiPromoSideTabs,
   TopTabs as MultiPromoTopTabs,
   TopTabsNoImage as MultiPromoTopTabsNoImage,
+  Version1 as MultiPromoVersion1,
 } from '@/components/site-three/MultiPromo';
 
 // Mock lucide-react
@@ -622,6 +623,155 @@ describe('MultiPromo', () => {
     it('renders NoDataFallback when fields are missing', () => {
       const emptyProps = { params: {}, fields: undefined } as any;
       render(<MultiPromoTopTabsNoImage {...emptyProps} />);
+      expect(screen.getByTestId('no-data-fallback')).toBeInTheDocument();
+    });
+  });
+
+  describe('Version1 variant', () => {
+    const makePromo = (n: number) => ({
+      id: `promo-${n}`,
+      heading: { jsonValue: { value: `Product ${n}` } },
+      description: { jsonValue: { value: `Description ${n}` } },
+      image: {
+        jsonValue: {
+          value: { src: `/images/product${n}.jpg`, alt: `Product ${n}` },
+        },
+      },
+      link: {
+        jsonValue: {
+          value: { href: `/product${n}`, text: 'Learn more' },
+        },
+      },
+    });
+
+    const version1Title = 'The right care, right where you need it.';
+    const portraitImage = {
+      jsonValue: {
+        value: {
+          src: '/images/portrait.jpg',
+          alt: 'Portrait',
+          width: 800,
+          height: 1200,
+        },
+      },
+    };
+
+    const threeItemProps = {
+      params: { styles: 'test-styles' },
+      fields: {
+        data: {
+          datasource: {
+            title: { jsonValue: { value: version1Title } },
+            backgroundImage: portraitImage,
+            children: {
+              results: [makePromo(1), makePromo(2), makePromo(3)],
+            },
+          },
+        },
+      },
+    };
+
+    const fourItemProps = {
+      ...threeItemProps,
+      fields: {
+        data: {
+          datasource: {
+            title: { jsonValue: { value: version1Title } },
+            backgroundImage: portraitImage,
+            children: {
+              results: [makePromo(1), makePromo(2), makePromo(3), makePromo(4)],
+            },
+          },
+        },
+      },
+    };
+
+    it('renders the serif headline from the datasource title', () => {
+      render(<MultiPromoVersion1 {...threeItemProps} />);
+      expect(screen.getByText(version1Title)).toBeInTheDocument();
+      const heading = screen.getByRole('heading', { level: 2, name: version1Title });
+      expect(heading).toHaveClass('font-heading');
+      expect(heading).toHaveClass('text-white');
+    });
+
+    it('renders three-up cards without carousel controls', () => {
+      render(<MultiPromoVersion1 {...threeItemProps} />);
+      expect(screen.getAllByTestId('multi-promo-v1-card')).toHaveLength(3);
+      expect(screen.getByTestId('multi-promo-v1-grid')).toBeInTheDocument();
+      expect(screen.queryByTestId('multi-promo-v1-carousel')).not.toBeInTheDocument();
+      expect(screen.queryByTestId('multi-promo-v1-carousel-prev')).not.toBeInTheDocument();
+      expect(screen.queryByTestId('multi-promo-v1-carousel-next')).not.toBeInTheDocument();
+      expect(screen.queryByTestId('multi-promo-carousel-prev')).not.toBeInTheDocument();
+      expect(screen.queryByTestId('multi-promo-carousel-next')).not.toBeInTheDocument();
+    });
+
+    it('uses teal text Learn more links instead of btn-ghost', () => {
+      render(<MultiPromoVersion1 {...threeItemProps} />);
+      const links = screen.getAllByRole('link');
+      expect(links).toHaveLength(3);
+      links.forEach((link) => {
+        expect(link).toHaveClass('text-primary');
+        expect(link).not.toHaveClass('btn-ghost');
+        expect(link).not.toHaveClass('btn');
+      });
+    });
+
+    it('renders a one-row carousel with prev/next when there are more than three items', () => {
+      render(<MultiPromoVersion1 {...fourItemProps} />);
+      expect(screen.getByTestId('multi-promo-v1-carousel')).toBeInTheDocument();
+      expect(screen.getAllByTestId('multi-promo-v1-carousel-item')).toHaveLength(4);
+      expect(screen.getAllByTestId('multi-promo-v1-card')).toHaveLength(4);
+      expect(screen.getByTestId('multi-promo-v1-carousel-prev')).toBeInTheDocument();
+      expect(screen.getByTestId('multi-promo-v1-carousel-next')).toBeInTheDocument();
+      expect(screen.queryByTestId('multi-promo-v1-grid')).not.toBeInTheDocument();
+    });
+
+    it('renders the right-side portrait when ShowBackgroundImage is on', () => {
+      const props = {
+        ...threeItemProps,
+        params: { ...threeItemProps.params, ShowBackgroundImage: '1' },
+      };
+      render(<MultiPromoVersion1 {...props} />);
+      const portrait = screen.getByTestId('multi-promo-v1-portrait');
+      expect(portrait).toBeInTheDocument();
+      expect(portrait.querySelector('img')).toHaveAttribute('src', '/images/portrait.jpg');
+    });
+
+    it('treats true/yes checkbox values as ShowBackgroundImage on', () => {
+      const props = {
+        ...threeItemProps,
+        params: { ...threeItemProps.params, ShowBackgroundImage: 'true' },
+      };
+      render(<MultiPromoVersion1 {...props} />);
+      expect(screen.getByTestId('multi-promo-v1-portrait')).toBeInTheDocument();
+    });
+
+    it('does not render the portrait when ShowBackgroundImage is off', () => {
+      render(<MultiPromoVersion1 {...threeItemProps} />);
+      expect(screen.queryByTestId('multi-promo-v1-portrait')).not.toBeInTheDocument();
+      const section = screen.getByTestId('multi-promo-version1');
+      expect(section.querySelector('.bg-primary')).toBeInTheDocument();
+    });
+
+    it('does not render the portrait when ShowBackgroundImage is on but no image is set', () => {
+      const props = {
+        params: { ShowBackgroundImage: '1' },
+        fields: {
+          data: {
+            datasource: {
+              title: { jsonValue: { value: version1Title } },
+              children: { results: [makePromo(1)] },
+            },
+          },
+        },
+      };
+      render(<MultiPromoVersion1 {...props} />);
+      expect(screen.queryByTestId('multi-promo-v1-portrait')).not.toBeInTheDocument();
+    });
+
+    it('renders NoDataFallback when fields are missing', () => {
+      const emptyProps = { params: {}, fields: undefined } as any;
+      render(<MultiPromoVersion1 {...emptyProps} />);
       expect(screen.getByTestId('no-data-fallback')).toBeInTheDocument();
     });
   });

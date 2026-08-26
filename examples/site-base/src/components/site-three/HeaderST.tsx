@@ -571,7 +571,7 @@ const HeaderSTVersion3View = (props: HeaderSTViewProps) => {
     >
       <div className="flex w-full min-w-0 flex-col" role="navigation" aria-label="Site header">
         <div className="w-full min-w-0 bg-background">
-          <div className="mx-auto flex w-full max-w-[100rem] items-center gap-4 px-4 py-3 sm:px-6 lg:gap-3 lg:px-6 xl:gap-8 xl:px-8">
+          <div className="mx-auto flex w-full max-w-[100rem] items-center gap-3 px-4 py-3 sm:px-6 lg:gap-3 lg:px-6 xl:gap-6 xl:px-8">
             <Link
               href="/"
               className="relative z-10 flex shrink-0 items-center self-stretch"
@@ -583,9 +583,9 @@ const HeaderSTVersion3View = (props: HeaderSTViewProps) => {
               />
             </Link>
 
-            <div className="ml-auto flex min-w-0 items-center gap-2 xl:gap-6">
+            <div className="flex min-w-0 flex-1 items-center gap-2 xl:gap-6">
               {showNavigation ? (
-                <div className="hidden min-w-0 flex-col items-end justify-center gap-1 lg:flex">
+                <div className="hidden min-w-0 flex-1 flex-col items-end justify-center gap-1 lg:flex">
                   <ul className="m-0 flex list-none flex-row flex-wrap items-center justify-end gap-x-1 gap-y-0.5 p-0">
                     {version3UtilityLinks.map((link) => (
                       <li key={link.text}>
@@ -616,11 +616,15 @@ const HeaderSTVersion3View = (props: HeaderSTViewProps) => {
                   <ul
                     data-header-st-nav="primary"
                     className={cn(
-                      'm-0 flex shrink-0 list-none flex-row flex-nowrap items-center justify-end gap-1 p-0 text-left',
-                      // Compact L1 triggers at lg so the nowrap row cannot slide under the logo.
-                      // Mega-menu items use span/button, not a, so those selectors are included.
-                      '[&>li]:shrink-0 [&>li>a]:whitespace-nowrap [&>li>span]:whitespace-nowrap [&>li>button]:whitespace-nowrap',
-                      '[&>li>a]:px-2 [&>li>a]:text-[0.8125rem] xl:[&>li>a]:px-3 xl:[&>li>a]:text-sm',
+                      'm-0 flex w-full min-w-0 list-none flex-row flex-nowrap items-center justify-end gap-1 overflow-visible p-0 text-left',
+                      // Size L1 items to their labels. Sitecore GridParameters (col-12) otherwise
+                      // stretch each MegaMenuItem to 100% of this column and the nowrap row
+                      // overflows left under the logo (z-10), hiding the first items.
+                      '[&>li]:w-auto [&>li]:max-w-none [&>li]:shrink-0 [&>li]:grow-0 [&>li]:basis-auto',
+                      '[&>li>a]:whitespace-nowrap [&>li>span]:whitespace-nowrap [&>li>button]:whitespace-nowrap',
+                      '[&>li>a]:px-2 [&>li>a]:py-2 [&>li>a]:text-[0.8125rem] xl:[&>li>a]:px-3 xl:[&>li>a]:text-sm',
+                      '[&>li>span]:px-2 [&>li>span]:py-2 [&>li>span]:text-[0.8125rem] xl:[&>li>span]:px-3 xl:[&>li>span]:text-sm',
+                      '[&>li>button]:px-2 [&>li>button]:py-2 [&>li>button]:text-[0.8125rem] xl:[&>li>button]:px-3 xl:[&>li>button]:text-sm',
                       '[.partial-editing-mode_&]:!flex-col',
                       isReverseTheme &&
                         'rounded-md bg-primary px-2 text-primary-foreground [&>li>a]:!text-primary-foreground [&>li>a:hover]:opacity-90'
@@ -636,7 +640,7 @@ const HeaderSTVersion3View = (props: HeaderSTViewProps) => {
                 </div>
               ) : null}
 
-              <ul className="flex list-none flex-row items-center gap-2 p-0">
+              <ul className="flex shrink-0 list-none flex-row items-center gap-2 p-0">
                 <li className="flex items-center">{searchControl}</li>
                 {!hideCart ? (
                   <li>

@@ -7637,7 +7637,7 @@ ia:
     category: "Global Elements"
     status: "complete"
     createdAt: "2026-08-19T18:30:00Z"
-    updatedAt: "2026-08-24T21:15:00Z"
+    updatedAt: "2026-08-25T13:50:00Z"
 
     react:
       filePath: "src/components/site-three/HeaderST.tsx"
@@ -7782,6 +7782,7 @@ ia:
         - "Optional: add postLogoutRedirect to HeaderST rendering parameters template"
 
     notes:
+      - "2026-08-25: Version3 L1 clip was CSS, not missing Sitecore items. MCP get_components_on_page on LCMC Header {7D1AB59C-D03F-420A-AE9B-D97F511CF28E} confirmed 5 MegaMenuItem renderings in header-navigation-1 (Speakers/Headphones/Amps/Pro/Artist Services). shrink-0 + nowrap + ml-auto + min-w-0 parent overflowed LEFT under the logo (relative z-10); compact padding only targeted a, while MegaMenuToggle uses span.p-4. Fix: nav column flex-1, drop shrink-0/ml-auto, overflow-visible, compact a/span/button, force li w-auto/basis-auto. Did not use overflow-x-auto (would trap lg:absolute mega menus). Default/Version1/Version2 unchanged. HeaderST.test.tsx Version3 nowrap + not overflow-hidden."
       - "2026-08-25: Version3 primary nav no longer uses flex-wrap/min-w-0. Those classes let the ul shrink until each MegaMenuItem sat on its own line. Primary ul is now flex-nowrap shrink-0; utility row may still wrap. Logo/gap/search min-width lg tuning kept so the row cannot slide under the logo at 1024px. Partial-editing-mode !flex-col is unchanged."
       - "2026-08-25: Version3 responsive fix for the lg band (1024-1279px), where the placeholder nav overflowed left and rendered underneath the logo. Logo capped at lg:h-11/190px, container gap lg:gap-3, nav links compacted to px-2/13px via [&>li>a], utility links to 11px, both nav rows flex-wrap, and the contained search pill min-width lowered to 10rem (touches SearchBox.tsx + HeaderPreviewSearch.tsx contained appearance, which is Version3-only). Full sizing restored at xl. Code-only; no Sitecore items touched."
       - "2026-08-25: Version3 utility row now renders LCMC's five live links (Notice of Non-Discrimination, Careers, Patient Portal/Pay my Bill, For Providers, Contact Us) from the version3UtilityLinks constant in HeaderST.tsx. Code-only change — no Sitecore items touched, and Default/Version1/Version2 are unaffected. HeaderST's datasource exposes a single SupportLink and the template is shared across sites, so the list is demo-fixed rather than authorable; SupportLink still renders after the five unless its text duplicates one of them. Careers targets https://careers.lcmchealth.org/us/en/ in a new tab; the other four target existing lcmc demo pages (/notice-of-non-discrimination, /for-patients/patient-portal, /for-providers, /contact-us). HeaderST.test.tsx 58 tests passed."
@@ -8937,4 +8938,133 @@ homepageKit:
       - "Assign remaining Amkor ListingBlock datasources (Events, Press) and extra Atlanta SplitFeature datasources in Pages"
       - "Add ImageBanner (Amkor map) and AccordionBlock (AmericasMart FAQ) if authors want those existing components on Home"
       - "Publish Home + Data + renderings for Edge"
+
+  - name: "MultiPromo"
+    kind: "update"
+    category: "Promos"
+    status: "complete"
+    createdAt: "2026-08-25T13:45:00Z"
+    updatedAt: "2026-08-25T13:56:00Z"
+
+    react:
+      filePath: "src/components/site-three/MultiPromo.tsx"
+      componentMapKey: "MultiPromo"
+      variants:
+        - "Default"
+        - "Stacked"
+        - "SingleColumn"
+        - "SideTabs"
+        - "TopTabs"
+        - "TopTabsNoImage"
+        - "Version1"
+      note: "Version1 named export implemented 2026-08-25. Teal/white split, three-up overlapping cards, optional portrait with concave white mask, carousel when more than 3 children."
+
+    sitecoreEnvironment:
+      siteName: "lcmc"
+      siteCollection: "lcmc"
+
+    rendering:
+      name: "MultiPromo"
+      path: "/sitecore/layout/Renderings/Project/click-click-launch/Promos/MultiPromo"
+      itemId: "{D806DDF7-39A7-4A6D-8E0A-D138BC53845D}"
+      componentName: "MultiPromo"
+      parametersTemplateId: "{C18E61D8-FBDA-49F7-8251-29507CD4ECFC}"
+      parametersTemplatePath: "/sitecore/templates/Project/click-click-launch/Components/Promos/Rendering Parameters/MultiPromo Parameters"
+      parametersFields:
+        - { name: "numColumns", type: "Droplist", itemId: "{22DF33A8-4FC8-456D-BA02-05FE614B9F90}", preexisting: true }
+        - { name: "ShowBackgroundImage", type: "Checkbox", itemId: "{EE3BE048-388B-4294-A034-546382395972}", title: "Background image", note: "Added 2026-08-25 under Advanced styling; default off" }
+      componentQueryUpdated: true
+      componentQueryNote: "Added backgroundImage: field(name: \"BackgroundImage\") { jsonValue } alongside existing MultiPromo/SimplePromo fragments. Verified via get_components_on_page 2026-08-25."
+
+    renderingParams:
+      templateId: "{C18E61D8-FBDA-49F7-8251-29507CD4ECFC}"
+      advancedStylingSection:
+        name: "Advanced styling"
+        itemId: "{DA5B03B2-68C2-4759-99BA-F59B5805F7FF}"
+        path: "/sitecore/templates/Project/click-click-launch/Components/Promos/Rendering Parameters/MultiPromo Parameters/Advanced styling"
+
+    datasourceTemplate:
+      name: "MultiPromo"
+      itemId: "{775D6354-CF01-4F34-9713-D34645079C88}"
+      path: "/sitecore/templates/Project/click-click-launch/Components/Promos/MultiPromo"
+      section:
+        name: "MultiPromo"
+        itemId: "{0C496F0F-8DCE-4CA1-B8E5-BD87D08CC628}"
+      standardValues: "{E3B27E1D-6294-4BB6-ADEF-2ECB537F181F}"
+      fields:
+        - { name: "title", type: "Single-Line Text", itemId: "{24FA0354-D116-4F42-9EAA-BDAB15A8ADE7}", preexisting: true }
+        - { name: "description", type: "Single-Line Text", itemId: "{2FE9BED7-7BCC-4A35-A209-34BCB84FCB42}", preexisting: true }
+        - { name: "Start Date", type: "Date", itemId: "{AA6B3713-C46D-4905-955B-5F9549DE6913}", preexisting: true }
+        - { name: "End Date", type: "Date", itemId: "{870630A3-7A1B-4F92-96E4-CE77C9C74987}", preexisting: true }
+        - { name: "BackgroundImage", type: "Image", itemId: "{B62D994B-4D80-4DE5-8852-FA0F210404B8}", title: "Background Image", note: "Added 2026-08-25; empty on SV so other sites are unaffected" }
+
+    headlessVariantsLcmc:
+      containerPath: "/sitecore/content/lcmc/lcmc/Presentation/Headless Variants/MultiPromo"
+      containerId: "{093498E0-C8F7-40B5-93C9-7F7A3CF147BE}"
+      variants:
+        - { name: "Default", itemId: "{53094257-4E18-40AD-AC8B-8F70BACC45F5}", preexisting: true }
+        - { name: "SingleColumn", itemId: "{915D9AB6-D335-49F1-8E44-9FF86E88F9D0}", preexisting: true }
+        - { name: "Stacked", itemId: "{C5F7A623-F143-4CD7-90A9-6613B9758293}", preexisting: true }
+        - { name: "Version1", itemId: "{06714DB7-4BC2-430E-8990-82F264AA101F}" }
+
+    headlessVariantsSiteBase:
+      containerPath: "/sitecore/content/site-base/site-base/Presentation/Headless Variants/MultiPromo"
+      containerId: "{97830CCD-A754-4CEC-BC8E-98A2998E38A3}"
+      variants:
+        - { name: "Default", itemId: "{8A3E2998-8E87-4BDA-B4AA-B60F8396D41C}", preexisting: true }
+        - { name: "SingleColumn", itemId: "{447478FA-4851-417E-BA50-2178BA046DDB}", preexisting: true }
+        - { name: "Stacked", itemId: "{694CF2DA-FD9C-4D7F-9436-FF924A1018B2}", preexisting: true }
+        - { name: "Version1", itemId: "{2716D50F-0FA0-42C8-9915-363AB5D1631B}" }
+
+    headlessVariantsPkm:
+      containerPath: "/sitecore/content/progressive/pkm/Presentation/Headless Variants/MultiPromo"
+      containerId: "{73702C89-F6B9-4C8A-A4E3-ED0CAE35C47A}"
+      variants:
+        - { name: "Default", itemId: "{DE9293A6-CAC5-463B-BE9B-44080581FF03}", preexisting: true }
+        - { name: "SingleColumn", itemId: "{0298FC44-9195-4456-B2FC-FCE6BA0BBCCC}", preexisting: true }
+        - { name: "Stacked", itemId: "{06D0C4F8-CC38-4975-860F-9E828F097A13}", preexisting: true }
+        - { name: "SideTabs", itemId: "{30A29C3E-79E9-4B41-BF8F-D802B1C6B5BA}", preexisting: true }
+        - { name: "TopTabs", itemId: "{1C98443D-76DB-448D-9FDC-E5F2C5C6A6A7}", preexisting: true }
+        - { name: "TopTabsNoImage", itemId: "{DF48F113-B9D5-4503-8A2A-F51D9C6E7E65}", preexisting: true }
+        - { name: "Version1", itemId: "{01E26641-D6DE-4468-86F1-47F5EBAA23D0}" }
+
+    leftoverDatasource:
+      name: "MultiPromo 2"
+      itemId: "{A48AADE0-A051-4865-932E-0A1D5FF7633B}"
+      path: "/sitecore/content/lcmc/lcmc/Home/Data/MultiPromo 2"
+      note: "Still unused. Home now has a new empty MultiPromo datasource at Home/Data/MultiPromo. Leftover contains Sonic Sound starter copy — do not assign to LCMC Home."
+
+    lcmcHomePlacement:
+      pageId: "{194F8944-6400-40DD-BDCB-931686A42643}"
+      pagePath: "/sitecore/content/lcmc/lcmc/Home"
+      placeholder: "headless-main"
+      instanceId: "{57D942A3-CC66-4119-9291-590998219122}"
+      datasourceId: "{FC5AF998-34DB-40F4-A3D2-AE45DC0E24D3}"
+      datasourcePath: "/sitecore/content/lcmc/lcmc/Home/Data/MultiPromo"
+      currentFieldNames: "{53094257-4E18-40AD-AC8B-8F70BACC45F5}"
+      currentFieldNamesNote: "Default variant. set_component_datasource variantId failed (404 — that API is personalization, not Headless Variants). Select Version1 in Pages."
+
+    verification:
+      checkedAt: "2026-08-25T13:56:00Z"
+      passed:
+        - "lcmc MultiPromo Version1 Variant Definition preexisting {06714DB7-4BC2-430E-8990-82F264AA101F}"
+        - "site-base MultiPromo Version1 Variant Definition preexisting {2716D50F-0FA0-42C8-9915-363AB5D1631B}"
+        - "pkm MultiPromo Version1 Variant Definition preexisting {01E26641-D6DE-4468-86F1-47F5EBAA23D0}"
+        - "ShowBackgroundImage Checkbox Type=Checkbox Title=Background image under Advanced styling"
+        - "BackgroundImage Image field {B62D994B-4D80-4DE5-8852-FA0F210404B8} created on datasource template; Type=Image verified"
+        - "ComponentQuery updated with backgroundImage field(name: BackgroundImage)"
+        - "React export const Version1 added; Jest 52 passed (site-three/MultiPromo)"
+        - "MultiPromo added to LCMC Home FINAL headless-main after ListingBlock"
+      failed: []
+      pendingManual:
+        - "Publish Headless Variants (lcmc, site-base, pkm) + MultiPromo template/rendering + Home/Data/MultiPromo for Edge"
+        - "In Pages on LCMC Home, select variant Version1 (FieldNames = {06714DB7-4BC2-430E-8990-82F264AA101F})"
+        - "Check Advanced styling → Background image (ShowBackgroundImage) when a portrait is assigned"
+        - "Add three SimplePromo children under Home/Data/MultiPromo; leave BackgroundImage empty until a DAM asset is available (do not invent media IDs)"
+        - "Approve Draft workflow on Home/Data/MultiPromo"
+        - "set_component_datasource variantId cannot set Headless Variants (404); FieldNames must be set in Pages"
+
+    notes:
+      - "2026-08-25: Added MultiPromo Version1 (LCMC teal/white split + optional portrait/arc). Headless Variants on lcmc, site-base, and pkm. ShowBackgroundImage RP checkbox defaults off."
+      - "2026-08-25: Implemented Version1 React export. Added BackgroundImage Image field on shared MultiPromo datasource template (empty SV). Updated ComponentQuery. Added MultiPromo to LCMC Home; variant selection still requires Pages."
 
