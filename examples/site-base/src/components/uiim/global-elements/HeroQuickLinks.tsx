@@ -245,18 +245,6 @@ function HeroQuickLinksLayout({ fields, params, page }: HeroQuickLinksProps): JS
               )}
             </form>
           </div>
-          {isEditing ? (
-            <div className="mt-6 max-w-4xl rounded-md border border-white/25 bg-black/35 p-3">
-              <p className="mb-2 text-[11px] font-semibold uppercase tracking-wide text-white/80">
-                Specialty options (one per line)
-              </p>
-              <Text
-                field={datasource.specialtyOptions?.jsonValue}
-                tag="div"
-                className="max-h-24 overflow-y-auto whitespace-pre-line text-xs leading-snug text-white/90"
-              />
-            </div>
-          ) : null}
         </div>
       </div>
       <div className="relative z-20 mx-auto -mt-16 max-w-7xl px-4 md:px-8">

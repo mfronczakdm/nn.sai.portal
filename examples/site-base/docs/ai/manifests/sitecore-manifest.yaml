@@ -8848,7 +8848,7 @@ homepageKit:
       react:
         filePath: "src/components/uiim/global-elements/HeroQuickLinks.tsx"
         variants: ["Default"]
-        notes: "2026-08-25: Pages editing chrome — empty/invalid BackgroundImage was rendering a giant broken-image placeholder over the headline because NextImage's EE wrapper ignores absolute on the img. Background is now in an overflow-hidden absolute frame that sizes chrome/img/svg. Specialty options no longer dump as a visible pre-line list in the form; they sit in a compact editing-only panel. Placeholders stay sr-only. Quick-link icons clipped to 48px. BackgroundImage on LCMC Home Hero still reports invalid XML in Pages — reset that field in Content Editor and re-pick media (MCP was unavailable)."
+        notes: "2026-08-25: Removed on-canvas SpecialtyOptions editor panel from Pages; authors edit the field in the right-hand data panel. Pages editing chrome — empty/invalid BackgroundImage was rendering a giant broken-image placeholder over the headline because NextImage's EE wrapper ignores absolute on the img. Background is now in an overflow-hidden absolute frame that sizes chrome/img/svg. Placeholders stay sr-only. Quick-link icons clipped to 48px. BackgroundImage on LCMC Home Hero still reports invalid XML in Pages — reset that field in Content Editor and re-pick media (MCP was unavailable)."
       templates:
         datasource: { name: "HeroQuickLinks", itemId: "{CFF35DC3-7968-4ADB-B146-417CB0AA6BBB}", standardValues: "{9E6545BD-7901-436A-A025-D99DE3A9AC0D}" }
         child: { name: "HeroQuickLinkItem", itemId: "{FE0A7F7E-7242-4126-B07F-2A6FA7BD4807}" }

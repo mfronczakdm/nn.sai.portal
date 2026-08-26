@@ -101,7 +101,7 @@ describe('HeroQuickLinks', () => {
     const background = container.querySelector('[data-hero-quick-links-bg]');
     expect(background).toBeInTheDocument();
     expect(background).toHaveClass('absolute', 'inset-0', 'overflow-hidden');
-    expect(screen.getByText('Specialty options (one per line)')).toBeInTheDocument();
+    expect(screen.queryByText('Specialty options (one per line)')).not.toBeInTheDocument();
   });
 
   it('does not dump specialty options into the live hero', () => {
