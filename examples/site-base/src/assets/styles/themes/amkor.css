@@ -4,7 +4,7 @@
  * Source: https://amkor.com/ (screenshot primary + Playwright extraction)
  * Activate via Sitecore Site definition Skin field (mirrored in src/lib/theme/site-skins.ts).
  *
- * Navy chrome #002D5B (header / footer / section headings).
+ * Navy chrome #002D5B (footer / section headings). Header is two-tone charcoal.
  * Vibrant CTA blue #2B59FF (hero buttons, secondary headings).
  * Open Sans throughout. Square geometry (0 radius).
  */
@@ -62,14 +62,35 @@
   --border-radius-md: 0;
   --border-radius-lg: 0;
   --radius: 0;
-  --color-header-background: #002d5b;
+  /* Live amkor.com header is two-tone charcoal, not navy (navy stays --color-primary). */
+  --color-header-utility: #4e4e4e;
+  --color-header-background: #1e1e1e;
   --color-header-foreground: #ffffff;
+  --color-header-menu: #111111;
+  --color-header-muted: #a8a8a8;
+  --color-header-lang-active: #3a3a3a;
   --color-footer-background: #002d5b;
   --color-footer-foreground: #ffffff;
   --color-footer-mid: #677385;
-  --color-utility-bar: #1a1a1a;
+  --color-utility-bar: #4e4e4e;
   --color-careers-magenta: #c2185b;
   --color-accent-hover: #244adb;
+}
+
+/*
+ * White wordmark sitting on charcoal: drop a baked-in black plate via lighten blend.
+ * Authors should still upload Amkor-white.svg (transparent). This only hides a black box.
+ */
+[data-theme='amkor'] [data-header-st-layout='version1'] [data-header-st-logo] {
+  background-color: transparent;
+}
+
+[data-theme='amkor'] [data-header-st-layout='version1'] [data-header-st-logo] img,
+[data-theme='amkor'] [data-header-st-layout='version1'] [data-header-st-logo] picture,
+[data-theme='amkor'] [data-header-st-layout='version1'] [data-header-st-logo] svg {
+  background-color: transparent;
+  mix-blend-mode: lighten;
+  object-fit: contain;
 }
 
 [data-theme='amkor'] .bg-primary {

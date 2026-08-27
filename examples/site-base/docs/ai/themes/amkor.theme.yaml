@@ -19,13 +19,13 @@ colors:
   foreground: "#212529"
   muted: "#F4F4F4"
   mutedForeground: "#677385"
-  headerBackground: "#002D5B"
+  headerBackground: "#1E1E1E"
   headerForeground: "#ffffff"
   footerBackground: "#002D5B"
   footerForeground: "#ffffff"
   border: "#D4D4D4"
   ring: "#2B59FF"
-  extra:
+    extra:
     - name: "primary-hover"
       value: "#00244A"
     - name: "accent-hover"
@@ -34,8 +34,18 @@ colors:
       value: "#677385"
     - name: "careers-magenta"
       value: "#C2185B"
+    - name: "header-utility"
+      value: "#4E4E4E"
+    - name: "header-background"
+      value: "#1E1E1E"
+    - name: "header-menu"
+      value: "#111111"
+    - name: "header-muted"
+      value: "#A8A8A8"
+    - name: "header-lang-active"
+      value: "#3A3A3A"
     - name: "utility-bar"
-      value: "#1A1A1A"
+      value: "#4E4E4E"
     - name: "border-radius"
       value: "0"
 
@@ -69,7 +79,7 @@ tone:
   imagery: "technical-photography"
   heroStyle: "full-bleed-image-with-overlay-text"
   cardStyle: "flat-image-title"
-  navStyle: "slim-navy-bar"
+  navStyle: "two-tone-charcoal-bars"
 
 tailwind:
   colors:
@@ -87,7 +97,7 @@ extraction:
   confidence: "high"
   method: "user-screenshot-primary + playwright-supplementary"
   notes:
-    - "Screenshot is source of truth for navy header (#002D5B) and vibrant hero CTA (#2B59FF)."
+    - "Screenshot is source of truth for two-tone charcoal header (utility #4E4E4E / main #1E1E1E) and vibrant hero CTA (#2B59FF). Navy #002D5B remains primary/footer."
     - "Playwright computed styles returned muted gray body/footer (#677385) and Open Sans typography."
     - "Google Fonts link confirms Open Sans 300/400/600/700 — already loaded via next/font as --font-open-sans."
     - "Proprietary icon fonts (electricFont, mems) ignored; UI uses Open Sans."

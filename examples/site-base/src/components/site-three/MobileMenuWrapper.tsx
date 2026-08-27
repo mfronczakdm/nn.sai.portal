@@ -12,6 +12,8 @@ interface MobileMenuWrapperProps {
   label?: string;
   className?: string;
   buttonClassName?: string;
+  /** Overrides the default MENU label classes (Version1 boxed control). */
+  labelClassName?: string;
   panelClassName?: string;
 }
 
@@ -21,6 +23,7 @@ export const MobileMenuWrapper = ({
   label,
   className,
   buttonClassName,
+  labelClassName,
   panelClassName,
 }: MobileMenuWrapperProps) => {
   const {
@@ -68,7 +71,12 @@ export const MobileMenuWrapper = ({
           />
         </span>
         {label ? (
-          <span className="hidden text-xs font-semibold uppercase tracking-[0.2em] sm:inline">
+          <span
+            className={cn(
+              'hidden text-xs font-semibold uppercase tracking-[0.2em] sm:inline',
+              labelClassName
+            )}
+          >
             {label}
           </span>
         ) : null}

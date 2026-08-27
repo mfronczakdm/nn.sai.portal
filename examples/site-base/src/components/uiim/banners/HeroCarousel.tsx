@@ -42,7 +42,7 @@ export type HeroCarouselProps = ComponentProps & {
   fields?: HeroCarouselFields;
 };
 
-type CarouselVariant = 'default' | 'focusProduct' | 'splitPanel';
+type CarouselVariant = 'default' | 'focusProduct' | 'splitPanel' | 'version1';
 
 function isChecked(field?: IGQLTextField | null): boolean {
   const value = field?.jsonValue?.value as unknown;
@@ -228,6 +228,113 @@ const HorizontalDots: React.FC<{
           />
         );
       })}
+    </div>
+  );
+};
+
+const HorizontalDashes: React.FC<{
+  slides: HeroCarouselSlideFields[];
+  activeIndex: number;
+  onSelect: (index: number) => void;
+}> = ({ slides, activeIndex, onSelect }) => {
+  if (!slides.length) return null;
+  return (
+    <div
+      className="absolute bottom-6 left-0 right-0 z-20 flex items-center justify-center gap-3 px-4"
+      role="tablist"
+      aria-label="Slide selection"
+    >
+      {slides.map((slide, index) => {
+        const selected = index === activeIndex;
+        return (
+          <button
+            key={`dash-${slide.id || index}`}
+            type="button"
+            role="tab"
+            aria-label={`Go to slide ${index + 1}`}
+            aria-selected={selected}
+            aria-controls={`hero-carousel-slide-${index}`}
+            onClick={() => onSelect(index)}
+            className={cn(
+              'h-0.5 rounded-none border-0 transition-all',
+              selected
+                ? 'w-10 bg-primary-foreground'
+                : 'w-6 bg-primary-foreground/50 hover:bg-primary-foreground/80'
+            )}
+          />
+        );
+      })}
+    </div>
+  );
+};
+
+/* Version1 — Amkor: full-bleed photo, right-aligned white headline, navy CTA, dash ticks */
+const Version1Slide: React.FC<{
+  slide: HeroCarouselSlideFields;
+  index: number;
+  slides: HeroCarouselSlideFields[];
+  isActive: boolean;
+  isEditing: boolean | undefined;
+}> = ({ slide, index, slides, isActive, isEditing }) => {
+  const imageField = slide.image?.jsonValue;
+  const backgroundField = slide.backgroundImage?.jsonValue;
+  const fullBleed = shouldShowImageField(slide.image, isEditing)
+    ? imageField
+    : shouldShowImageField(slide.backgroundImage, isEditing)
+      ? backgroundField
+      : undefined;
+
+  return (
+    <div
+      className={cn(
+        'absolute inset-0 transition-opacity duration-700',
+        isActive ? 'z-10 opacity-100' : 'z-0 opacity-0 pointer-events-none'
+      )}
+      aria-hidden={!isActive}
+      aria-roledescription="slide"
+      aria-label={`Slide ${index + 1} of ${slides.length}`}
+      role="group"
+      id={`hero-carousel-slide-${index}`}
+    >
+      <div className="absolute inset-0 bg-primary">
+        {fullBleed && <ContentSdkImage field={fullBleed} className="h-full w-full object-cover" />}
+        <div
+          className="pointer-events-none absolute inset-0 bg-[var(--color-overlay)]"
+          aria-hidden="true"
+        />
+      </div>
+
+      <div
+        className={cn(
+          'relative z-10 flex h-full items-center justify-end px-6 py-12 md:px-12 lg:px-20',
+          HEIGHT
+        )}
+      >
+        <div className="pointer-events-auto max-w-xl text-right text-primary-foreground">
+          {(hasText(slide.slideName) || isEditing) && (
+            <h2
+              className="text-3xl font-semibold leading-tight tracking-tight md:text-5xl lg:text-[56px]"
+              style={{ fontFamily: 'var(--brand-heading-font)' }}
+            >
+              <Text field={slide.slideName?.jsonValue} />
+            </h2>
+          )}
+          {(hasText(slide.description) || isEditing) && (
+            <p className="mt-4 text-base leading-relaxed text-primary-foreground/90 md:text-lg">
+              <Text field={slide.description?.jsonValue} />
+            </p>
+          )}
+          {(hasLink(slide.link) || isEditing) && slide.link?.jsonValue && (
+            <div className="mt-8 flex justify-end">
+              <ContentSdkLink
+                field={slide.link.jsonValue}
+                className="inline-flex items-center bg-primary px-8 py-3 text-sm font-semibold uppercase tracking-wider text-primary-foreground transition-colors hover:bg-primary-hover"
+                prefetch={false}
+              />
+            </div>
+          )}
+        </div>
+      </div>
     </div>
   );
 };
@@ -539,6 +646,7 @@ const HeroCarouselBase: React.FC<HeroCarouselProps & { variant: CarouselVariant 
     'component hero-carousel relative w-full',
     variant === 'focusProduct' && 'hero-carousel--focus-product',
     variant === 'splitPanel' && 'hero-carousel--split-panel',
+    variant === 'version1' && 'hero-carousel--version1',
     params?.styles
   );
 
@@ -569,6 +677,9 @@ const HeroCarouselBase: React.FC<HeroCarouselProps & { variant: CarouselVariant 
     }
     if (variant === 'splitPanel') {
       return <SplitPanelSlide key={slide.id || `slide-${index}`} {...shared} />;
+    }
+    if (variant === 'version1') {
+      return <Version1Slide key={slide.id || `slide-${index}`} {...shared} />;
     }
     return <DefaultSlide key={slide.id || `slide-${index}`} {...shared} />;
   };
@@ -623,6 +734,14 @@ const HeroCarouselBase: React.FC<HeroCarouselProps & { variant: CarouselVariant 
             tone="onMixed"
           />
         )}
+
+        {variant === 'version1' && (
+          <HorizontalDashes
+            slides={slides}
+            activeIndex={activeIndex}
+            onSelect={setCurrentSlide}
+          />
+        )}
       </div>
 
       <div className="sr-only" aria-live="polite">
@@ -647,4 +766,8 @@ export const FocusProduct: React.FC<HeroCarouselProps> = (props) => (
 
 export const SplitPanel: React.FC<HeroCarouselProps> = (props) => (
   <HeroCarouselBase {...props} variant="splitPanel" />
+);
+
+export const Version1: React.FC<HeroCarouselProps> = (props) => (
+  <HeroCarouselBase {...props} variant="version1" />
 );

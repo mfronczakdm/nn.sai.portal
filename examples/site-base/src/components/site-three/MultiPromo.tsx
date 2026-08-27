@@ -720,3 +720,82 @@ export const Version1 = (props: MultiPromoProps) => {
     </section>
   );
 };
+
+const Version2PromoCard = ({
+  promo,
+  isEditing,
+}: {
+  promo: SimplePromoFields;
+  isEditing: boolean;
+}) => {
+  const { image, heading, description, link } = promo ?? {};
+  const headingField = heading?.jsonValue;
+  const descriptionField = description?.jsonValue;
+  const imageField = image?.jsonValue;
+  const linkField = link?.jsonValue;
+
+  return (
+    <article
+      className="flex h-full flex-col bg-background text-center"
+      data-testid="multi-promo-v2-card"
+    >
+      {(imageField?.value?.src || isEditing) && imageField && (
+        <ContentSdkImage field={imageField} className="mb-6 aspect-[16/10] w-full object-cover" />
+      )}
+      {(headingField?.value || isEditing) && headingField && (
+        <h3
+          className="mb-3 px-4 text-xl font-semibold leading-snug tracking-tight text-primary lg:text-2xl"
+          style={{ fontFamily: 'var(--brand-heading-font)' }}
+        >
+          <ContentSdkText field={headingField} />
+        </h3>
+      )}
+      {(descriptionField?.value || isEditing) && descriptionField && (
+        <div className="mb-6 px-6 text-sm leading-relaxed text-muted-foreground lg:text-base">
+          <ContentSdkRichText field={descriptionField} />
+        </div>
+      )}
+      {(linkField?.value?.href || isEditing) && linkField && (
+        <div className="mt-auto flex justify-center px-4 pb-2">
+          <TrackedCtaLink
+            field={linkField}
+            className="inline-flex items-center bg-primary px-8 py-2.5 text-sm font-semibold uppercase tracking-wider text-primary-foreground transition-colors hover:bg-primary-hover"
+          />
+        </div>
+      )}
+    </article>
+  );
+};
+
+/* Version2 — Amkor: equal white/navy columns, centered copy, navy READ MORE */
+export const Version2 = (props: MultiPromoProps) => {
+  const { page } = useSitecore();
+  const isEditing = Boolean(page?.mode?.isEditing);
+  const datasource = props.fields?.data?.datasource;
+  const promos = datasource?.children?.results?.filter(Boolean) ?? [];
+
+  if (!props.fields) {
+    return <NoDataFallback componentName="MultiPromo" />;
+  }
+
+  return (
+    <section
+      className={cn('multi-promo-version2 relative bg-background py-12', props.params?.styles || '')}
+      data-class-change
+      data-testid="multi-promo-version2"
+    >
+      <div className="container mx-auto px-4 lg:px-8">
+        {(datasource?.title?.jsonValue?.value || isEditing) && datasource?.title?.jsonValue && (
+          <h2 className="mb-10 text-center text-2xl font-semibold text-primary lg:text-4xl">
+            <ContentSdkText field={datasource.title.jsonValue} />
+          </h2>
+        )}
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-8">
+          {promos.map((promo) => (
+            <Version2PromoCard key={promo.id} promo={promo} isEditing={isEditing} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};

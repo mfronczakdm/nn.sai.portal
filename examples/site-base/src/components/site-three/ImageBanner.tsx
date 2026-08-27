@@ -197,6 +197,39 @@ export const SingleRowGrid = (props: ImageBannerProps) => {
   );
 };
 
+/* Version1 — Amkor: centered heading, single full-width map, legend in Body */
+export const Version1 = (props: ImageBannerProps) => {
+  return (
+    <section
+      className={`relative bg-background py-16 ${props.params?.styles || ''}`}
+      data-class-change
+      data-testid="image-banner-version1"
+    >
+      <div className="container mx-auto px-4">
+        <div className="mx-auto max-w-4xl text-center">
+          <h2
+            className="mb-10 text-3xl font-semibold text-primary lg:text-5xl"
+            style={{ fontFamily: 'var(--brand-heading-font)' }}
+          >
+            <ContentSdkText field={props.fields?.Title} />
+          </h2>
+        </div>
+        <div className="mx-auto max-w-6xl">
+          <ContentSdkImage
+            field={props.fields?.Image1}
+            width={1600}
+            height={800}
+            className="h-auto w-full object-contain"
+          />
+        </div>
+        <div className="mx-auto mt-8 max-w-3xl text-center text-sm text-muted-foreground lg:text-base">
+          <ContentSdkRichText field={props.fields?.Body} />
+        </div>
+      </div>
+    </section>
+  );
+};
+
 export const Stacked = (props: ImageBannerProps) => {
   return (
     <section className={`relative py-16 ${props.params?.styles || ''}`} data-class-change>

@@ -226,39 +226,145 @@ export const LoginRequired = (props: HeaderSTProps) => (
 );
 
 const version1UtilityLinkClass =
-  'block px-3 py-2 font-[family-name:var(--font-body)] text-xs font-normal text-background/90 hover:text-background';
+  'block whitespace-nowrap px-2.5 py-1.5 font-[family-name:var(--font-body)] text-[0.6875rem] font-normal tracking-[0.14em] text-[color:var(--color-header-foreground,var(--color-background))] hover:opacity-80';
 
-/* Version1 — inverted two-row header: utilities on top, MENU + search + logo-right below. */
+const version1LangClass =
+  'inline-flex h-full items-center px-3 font-[family-name:var(--font-body)] text-[0.6875rem] font-normal tracking-[0.12em] text-[color:var(--color-header-foreground,var(--color-background))] hover:opacity-80';
+
+const version1SearchClass =
+  'w-full min-w-0 bg-transparent py-2 text-left text-[0.8125rem] font-normal uppercase tracking-[0.14em] text-[color:var(--color-header-muted,var(--color-muted-foreground))] hover:text-[color:var(--color-header-foreground,var(--color-background))]';
+
+/* HeaderST's datasource exposes one SupportLink and the template is shared with the other sites,
+   so Amkor's utility + language row stays in code for this demo variant. */
+const version1LanguageLinks = [
+  { text: 'English', href: '/', lang: 'en', current: true },
+  { text: '한국어', href: 'https://amkor.com/kr/', lang: 'ko', current: false },
+  { text: '日本語', href: 'https://amkor.com/jp/', lang: 'ja', current: false },
+  { text: '简体中文', href: 'https://amkor.com/cn/', lang: 'zh-Hans', current: false },
+] as const;
+
+const version1UtilityLinks = [
+  { text: 'Document Library', href: '/about-us/customer-center/document-library' },
+  { text: 'Factory Certs', href: '/quality#certifications' },
+  { text: 'Investors', href: 'https://ir.amkor.com/' },
+  { text: 'Cloud Services', href: 'https://cloudservices.amkor.com/' },
+  { text: 'Careers', href: '/about-us/careers' },
+  { text: 'Contact Us', href: '/about-us/contact-us' },
+] as const;
+
+const version1UtilityLabels = new Set(version1UtilityLinks.map((link) => link.text.toLowerCase()));
+
+const Version1HardcodedLink = ({
+  text,
+  href,
+  className,
+  lang,
+  current,
+}: {
+  text: string;
+  href: string;
+  className: string;
+  lang?: string;
+  current?: boolean;
+}) => {
+  const extra = {
+    ...(lang ? { lang, hrefLang: lang } : {}),
+    ...(current ? { 'aria-current': 'page' as const } : {}),
+  };
+
+  if (/^https?:\/\//i.test(href)) {
+    const isLocale = Boolean(lang);
+    return (
+      <a
+        href={href}
+        className={className}
+        {...extra}
+        {...(isLocale ? {} : { target: '_blank', rel: 'noopener noreferrer' })}
+      >
+        {text}
+      </a>
+    );
+  }
+
+  return (
+    <Link href={href} prefetch={false} className={className} {...extra}>
+      {text}
+    </Link>
+  );
+};
+
+/* Version1 — inverted two-row header: langs + utilities on top, MENU + search + logo-right below. */
 const HeaderSTVersion1View = (props: HeaderSTViewProps) => {
   const { fields, params, requireAuthForNav } = props;
   const showNavigation = useHeaderSTNavigationVisibility(requireAuthForNav);
   const componentMap = getComponentMap();
   const hideCart = isTruthyParam(params?.HideCart);
+  const supportLinkText = fields?.SupportLink?.value?.text?.trim() ?? '';
+  const showSupportLink =
+    supportLinkText.length > 0 && !version1UtilityLabels.has(supportLinkText.toLowerCase());
 
   return (
     <section
       className={cn(
-        'relative sticky top-0 z-30 w-full min-w-0 bg-foreground text-background shadow-sm',
+        'relative sticky top-0 z-30 w-full min-w-0 text-[color:var(--color-header-foreground,var(--color-background))] shadow-sm',
         params?.styles
       )}
       data-class-change
       data-header-st-layout="version1"
     >
       <div className="flex w-full min-w-0 flex-col" role="navigation" aria-label="Site header">
-        <div className="w-full min-w-0 border-b border-background/10 bg-black/25">
-          <div className="mx-auto flex w-full max-w-[100rem] items-center justify-end gap-4 px-4 py-1 sm:px-6 lg:px-8">
-            <ul className="flex list-none flex-row items-center justify-end gap-1 p-0">
-              <li className="hidden lg:block">
-                <ContentSdkLink
-                  field={fields?.SupportLink}
-                  prefetch={false}
-                  className={version1UtilityLinkClass}
-                />
-              </li>
+        <div
+          data-header-st-row="utility"
+          className="w-full min-w-0 bg-[var(--color-header-utility,var(--color-muted-foreground))]"
+        >
+          <div className="flex w-full items-stretch justify-between gap-3 px-3 sm:px-4">
+            <ul
+              data-header-st-langs
+              className="m-0 flex min-h-8 list-none flex-row items-stretch gap-0 p-0"
+              aria-label="Language"
+            >
+              {version1LanguageLinks.map((link) => (
+                <li
+                  key={link.lang}
+                  className={cn(
+                    'flex items-stretch',
+                    link.current &&
+                      'bg-[var(--color-header-lang-active,color-mix(in_srgb,var(--color-foreground)_75%,black))]'
+                  )}
+                >
+                  <Version1HardcodedLink
+                    text={link.text}
+                    href={link.href}
+                    lang={link.lang}
+                    current={link.current}
+                    className={version1LangClass}
+                  />
+                </li>
+              ))}
+            </ul>
+            <ul className="m-0 flex list-none flex-row flex-wrap items-center justify-end gap-0 p-0">
+              {version1UtilityLinks.map((link) => (
+                <li key={link.text}>
+                  <Version1HardcodedLink
+                    text={link.text}
+                    href={link.href}
+                    className={version1UtilityLinkClass}
+                  />
+                </li>
+              ))}
+              {showSupportLink ? (
+                <li className="hidden lg:block">
+                  <ContentSdkLink
+                    field={fields?.SupportLink}
+                    prefetch={false}
+                    className={version1UtilityLinkClass}
+                  />
+                </li>
+              ) : null}
               <HeaderSTAuthControls
                 loginLink={fields?.LoginLink}
                 postLogoutRedirect={params?.postLogoutRedirect}
-                linkClassName="p-2 text-background/90 hover:text-background hover:opacity-100"
+                linkClassName="px-2.5 py-1.5 text-[0.6875rem] tracking-[0.14em] text-[color:var(--color-header-foreground,var(--color-background))] hover:opacity-80"
               />
               {!hideCart ? (
                 <li>
@@ -268,7 +374,7 @@ const HeaderSTVersion1View = (props: HeaderSTViewProps) => {
                     <ContentSdkLink
                       field={fields?.CartLink}
                       prefetch={false}
-                      className="block p-2 text-background hover:opacity-80"
+                      className="block p-2 text-[color:var(--color-header-foreground,var(--color-background))] hover:opacity-80"
                     >
                       <FontAwesomeIcon icon={faShoppingCart} width={20} height={20} />
                     </ContentSdkLink>
@@ -279,14 +385,19 @@ const HeaderSTVersion1View = (props: HeaderSTViewProps) => {
           </div>
         </div>
 
-        <div className="w-full min-w-0">
-          <ul className="mx-auto flex w-full max-w-[100rem] list-none items-stretch p-0">
+        <div
+          data-header-st-row="main"
+          className="w-full min-w-0 bg-[var(--color-header-background,var(--color-foreground))]"
+        >
+          <ul className="flex w-full list-none items-stretch p-0">
             {showNavigation ? (
               <MobileMenuWrapper
                 alwaysVisible
                 label="MENU"
-                buttonClassName="bg-black/20 text-background hover:bg-black/30"
-                panelClassName="top-[7.25rem] h-[calc(100vh-7.25rem)]"
+                className="bg-[var(--color-header-menu,var(--color-foreground))]"
+                buttonClassName="h-full gap-2.5 px-5 py-0 text-[color:var(--color-header-foreground,var(--color-background))] hover:opacity-90"
+                labelClassName="inline text-[0.8125rem] font-bold tracking-[0.16em]"
+                panelClassName="top-[6.25rem] h-[calc(100vh-6.25rem)]"
               >
                 <div className="flex h-full w-full flex-col">
                   <div className="flex flex-1 items-center justify-center">
@@ -302,44 +413,56 @@ const HeaderSTVersion1View = (props: HeaderSTViewProps) => {
                   <div className="w-full">
                     <hr className="w-full border-border" />
                     <ul className="text-center">
-                      <li>
-                        <ContentSdkLink
-                          field={fields?.SupportLink}
-                          prefetch={false}
-                          className={navLinkClass}
-                        />
-                      </li>
+                      {version1UtilityLinks.map((link) => (
+                        <li key={link.text}>
+                          <Version1HardcodedLink
+                            text={link.text}
+                            href={link.href}
+                            className={navLinkClass}
+                          />
+                        </li>
+                      ))}
+                      {showSupportLink ? (
+                        <li>
+                          <ContentSdkLink
+                            field={fields?.SupportLink}
+                            prefetch={false}
+                            className={navLinkClass}
+                          />
+                        </li>
+                      ) : null}
                     </ul>
                   </div>
                 </div>
               </MobileMenuWrapper>
             ) : null}
 
-            <li className="flex min-w-0 flex-1 items-center px-4 sm:px-6">
+            <li className="flex min-w-0 flex-1 items-center px-3 sm:px-4">
               {params.showSearchBox ? (
                 <HeaderPreviewSearch
                   searchLink={fields?.SearchLink}
                   appearance="bar"
-                  className="w-full min-w-0"
+                  className={version1SearchClass}
                 />
               ) : (
                 <ContentSdkLink
                   field={fields?.SearchLink}
                   prefetch={false}
-                  className="block py-3 text-sm uppercase tracking-[0.28em] text-background/50 hover:text-background/80"
+                  className={cn(version1SearchClass, 'block after:content-["..."]')}
                 />
               )}
             </li>
 
-            <li className="flex shrink-0 self-stretch">
+            <li className="flex shrink-0 items-center self-stretch bg-transparent">
               <Link
                 href="/"
-                className="relative z-10 flex items-center justify-center px-4 py-3 sm:px-6 lg:px-8"
+                data-header-st-logo
+                className="relative z-10 flex items-center justify-center bg-transparent px-3 py-2 sm:px-4"
                 prefetch={false}
               >
                 <ContentSdkImage
                   field={props.fields?.Logo}
-                  className="h-10 w-auto max-w-[min(100%,220px)] object-contain object-right sm:h-12 sm:max-w-[min(100%,280px)] lg:h-14 lg:max-w-[min(100%,320px)]"
+                  className="h-9 w-auto max-w-[min(100%,200px)] bg-transparent object-contain object-right sm:h-10 sm:max-w-[min(100%,240px)]"
                 />
               </Link>
             </li>

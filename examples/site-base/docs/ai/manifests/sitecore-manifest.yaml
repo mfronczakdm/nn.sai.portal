@@ -7637,7 +7637,7 @@ ia:
     category: "Global Elements"
     status: "complete"
     createdAt: "2026-08-19T18:30:00Z"
-    updatedAt: "2026-08-25T13:50:00Z"
+    updatedAt: "2026-08-27T01:50:00Z"
 
     react:
       filePath: "src/components/site-three/HeaderST.tsx"
@@ -7773,6 +7773,9 @@ ia:
         - "On Version3: check Show Search Box; check Hide Cart; leave ReverseTheme off"
         - "Publish the lcmc Header partial"
         - "Select Version1 on amkor Header partial design HeaderST rendering in Pages"
+        - "On amkor Version1: check Hide Cart (live has no cart; screenshot cart means the Pages param is unchecked)"
+        - "On amkor Version1: check Show Search Box so SEARCH... uses the bar appearance"
+        - "Replace the Amkor HeaderST Logo with a transparent white SVG (https://amkormarcomexternal.blob.core.windows.net/amkordotcom/theme-assets/Amkor-white.svg) if a black plate remains"
         - "Select Version2 on atlanta-apparel Header partial (Andmore layout)"
         - "Select Version2 on americasmart Header partial if that demo uses the same chrome"
         - "On Version2: leave Show Search Box unchecked; check Hide Cart"
@@ -7782,6 +7785,7 @@ ia:
         - "Optional: add postLogoutRedirect to HeaderST rendering parameters template"
 
     notes:
+      - "2026-08-26: Version1 pixel-perfect to amkor.com. Two-tone Amkor tokens (--color-header-utility #4E4E4E top, --color-header-background #1E1E1E main, --color-header-menu #111 MENU box, --color-header-muted SEARCH...). Version1-hardcoded langs (English current / 한국어 / 日本語 / 简体中文 → amkor.com/kr|/jp|/cn) and six utility links (Document Library, Factory Certs, Investors, Cloud Services, Careers, Contact Us) — no new datasource fields. SupportLink skipped when it duplicates a utility label. HideCart still honored. Logo mix-blend lighten on [data-theme=amkor] Version1 to drop a baked-in black plate; authors should still upload Amkor-white.svg. Default/Version2/Version3 unchanged. Code-only."
       - "2026-08-25: Version3 L1 clip was CSS, not missing Sitecore items. MCP get_components_on_page on LCMC Header {7D1AB59C-D03F-420A-AE9B-D97F511CF28E} confirmed 5 MegaMenuItem renderings in header-navigation-1 (Speakers/Headphones/Amps/Pro/Artist Services). shrink-0 + nowrap + ml-auto + min-w-0 parent overflowed LEFT under the logo (relative z-10); compact padding only targeted a, while MegaMenuToggle uses span.p-4. Fix: nav column flex-1, drop shrink-0/ml-auto, overflow-visible, compact a/span/button, force li w-auto/basis-auto. Did not use overflow-x-auto (would trap lg:absolute mega menus). Default/Version1/Version2 unchanged. HeaderST.test.tsx Version3 nowrap + not overflow-hidden."
       - "2026-08-25: Version3 primary nav no longer uses flex-wrap/min-w-0. Those classes let the ul shrink until each MegaMenuItem sat on its own line. Primary ul is now flex-nowrap shrink-0; utility row may still wrap. Logo/gap/search min-width lg tuning kept so the row cannot slide under the logo at 1024px. Partial-editing-mode !flex-col is unchanged."
       - "2026-08-25: Version3 responsive fix for the lg band (1024-1279px), where the placeholder nav overflowed left and rendered underneath the logo. Logo capped at lg:h-11/190px, container gap lg:gap-3, nav links compacted to px-2/13px via [&>li>a], utility links to 11px, both nav rows flex-wrap, and the contained search pill min-width lowered to 10rem (touches SearchBox.tsx + HeaderPreviewSearch.tsx contained appearance, which is Version3-only). Full sizing restored at xl. Code-only; no Sitecore items touched."

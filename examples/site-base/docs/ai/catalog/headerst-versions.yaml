@@ -40,10 +40,10 @@ existingParams:
 
 versions:
   - name: Version1
-    layout: "two-row inverted; utility top-right; MENU left + search bar + logo right; nav in overlay only"
+    layout: "two-row inverted; langs left + utilities right on lighter top bar; MENU box + SEARCH... + logo-right on darker main bar; nav in overlay only"
     paramsUsed: ["showSearchBox", "HideCart"]
     usedBy: ["amkor"]
-    notes: "Language picker out of scope. One SupportLink stands in for Amkor's six utility links. Mega-menu out of scope — MENU overlay uses header-navigation placeholder."
+    notes: "Language switcher and six Amkor utility links are Version1-hardcoded for the demo (same pattern as Version3 LCMC links) — do not add Sitecore fields on the shared HeaderST datasource. Langs: English (current, /) · 한국어 https://amkor.com/kr/ · 日本語 https://amkor.com/jp/ · 简体中文 https://amkor.com/cn/. Utilities: Document Library, Factory Certs, Investors (ir.amkor.com, new tab), Cloud Services (cloudservices.amkor.com, new tab), Careers, Contact Us. SupportLink still renders unless its text duplicates one of the six. Mega-menu out of scope — MENU overlay uses header-navigation placeholder. HideCart should be checked on the Amkor Header partial (live has no cart). Authors should upload a transparent white Amkor logo (Amkor-white.svg); CSS mix-blend lighten also drops a baked-in black plate."
   - name: Version2
     layout: "dark utility row; white main row; logo left; inline L1 nav; search icon right"
     paramsUsed: ["HideCart", "showSearchBox"]

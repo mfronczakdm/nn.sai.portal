@@ -653,14 +653,87 @@ describe('HeaderST Component', () => {
       render(<HeaderSTVersion1 {...headerSTPropsVersion1} />);
 
       expect(document.querySelector('[data-header-st-layout="version1"]')).toBeInTheDocument();
+      expect(document.querySelector('[data-header-st-row="utility"]')).toBeInTheDocument();
+      expect(document.querySelector('[data-header-st-row="main"]')).toBeInTheDocument();
       expect(screen.getByTestId('sitecore-image')).toHaveAttribute('alt', 'Amkor Technology');
     });
 
-    it('shows a desktop MENU control', () => {
+    it('shows a boxed desktop MENU control', () => {
       render(<HeaderSTVersion1 {...headerSTPropsVersion1} />);
 
       expect(screen.getByLabelText('Toggle menu')).toBeInTheDocument();
-      expect(screen.getByText('MENU')).toBeInTheDocument();
+      const menuLabel = screen.getByText('MENU');
+      expect(menuLabel).toBeInTheDocument();
+      expect(menuLabel.className).toMatch(/font-bold/);
+      expect(menuLabel.closest('li')?.className).toMatch(/--color-header-menu/);
+    });
+
+    it('renders language links with English current', () => {
+      render(<HeaderSTVersion1 {...headerSTPropsVersion1} />);
+
+      const english = screen.getByText('English');
+      expect(english).toHaveAttribute('href', '/');
+      expect(english).toHaveAttribute('aria-current', 'page');
+      expect(screen.getByText('한국어')).toHaveAttribute('href', 'https://amkor.com/kr/');
+      expect(screen.getByText('日本語')).toHaveAttribute('href', 'https://amkor.com/jp/');
+      expect(screen.getByText('简体中文')).toHaveAttribute('href', 'https://amkor.com/cn/');
+    });
+
+    it('renders the six Amkor utility links in live order', () => {
+      render(<HeaderSTVersion1 {...headerSTPropsVersion1} />);
+
+      const expected = [
+        ['Document Library', '/about-us/customer-center/document-library'],
+        ['Factory Certs', '/quality#certifications'],
+        ['Investors', 'https://ir.amkor.com/'],
+        ['Cloud Services', 'https://cloudservices.amkor.com/'],
+        ['Careers', '/about-us/careers'],
+        ['Contact Us', '/about-us/contact-us'],
+      ];
+
+      expected.forEach(([text, href]) => {
+        const link = screen.getAllByText(text)[0];
+        expect(link).toBeInTheDocument();
+        expect(link).toHaveAttribute('href', href);
+      });
+    });
+
+    it('opens external Investors and Cloud Services links in a new tab', () => {
+      render(<HeaderSTVersion1 {...headerSTPropsVersion1} />);
+
+      const investors = screen.getAllByText('Investors')[0];
+      expect(investors).toHaveAttribute('target', '_blank');
+      expect(investors).toHaveAttribute('rel', 'noopener noreferrer');
+
+      const cloud = screen.getAllByText('Cloud Services')[0];
+      expect(cloud).toHaveAttribute('target', '_blank');
+    });
+
+    it('does not duplicate SupportLink when it matches a utility link', () => {
+      render(<HeaderSTVersion1 {...headerSTPropsVersion1} />);
+
+      const contactUsLinks = screen
+        .getAllByText('Contact Us')
+        .filter((link) => link.getAttribute('data-testid') === 'sitecore-link');
+      expect(contactUsLinks).toHaveLength(0);
+    });
+
+    it('renders SupportLink alongside the utility links when it is not a duplicate', () => {
+      render(
+        <HeaderSTVersion1
+          {...headerSTPropsVersion1}
+          fields={{
+            ...headerSTPropsVersion1.fields,
+            SupportLink: { value: { href: '/support', text: 'Support' } },
+          }}
+        />
+      );
+
+      const supportLinks = screen
+        .getAllByTestId('sitecore-link')
+        .filter((link) => link.getAttribute('href') === '/support');
+      expect(supportLinks.length).toBeGreaterThan(0);
+      expect(screen.getAllByText('Document Library')[0]).toBeInTheDocument();
     });
 
     it('shows search when showSearchBox is true', () => {

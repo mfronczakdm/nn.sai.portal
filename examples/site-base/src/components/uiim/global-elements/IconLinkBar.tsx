@@ -22,6 +22,7 @@ interface IconLinkBarFields {
       sectionTitle?: IGQLTextField;
       sectionDescription?: IGQLTextField;
       searchLink?: IGQLLinkField;
+      backgroundImage?: IGQLImageField;
       children?: {
         results?: IconLinkItemFields[];
       };
@@ -73,7 +74,7 @@ function IconLinkBarLayout({
   params,
   page,
   variant,
-}: IconLinkBarProps & { variant: 'default' | 'dark' | 'circle' }): JSX.Element {
+}: IconLinkBarProps & { variant: 'default' | 'dark' | 'circle' | 'photo' }): JSX.Element {
   const isEditing = page?.mode?.isEditing;
   const datasource = fields?.data?.datasource;
 
@@ -82,22 +83,42 @@ function IconLinkBarLayout({
   }
 
   const items = datasource.children?.results ?? [];
-  const isDark = variant === 'dark';
+  const isDark = variant === 'dark' || variant === 'photo';
+  const isPhoto = variant === 'photo';
   const imageClass =
     variant === 'circle'
       ? 'h-24 w-24 rounded-full object-cover'
-      : 'h-12 w-12 object-contain';
+      : isPhoto
+        ? 'h-14 w-14 object-contain'
+        : 'h-12 w-12 object-contain';
+  const backgroundImage = datasource.backgroundImage?.jsonValue;
 
   return (
     <section
       className={cn(
-        'component icon-link-bar',
+        'component icon-link-bar relative overflow-hidden',
         params?.styles,
-        isDark ? 'bg-primary py-16 text-primary-foreground' : 'bg-background py-10'
+        isPhoto
+          ? 'py-20 text-primary-foreground'
+          : isDark
+            ? 'bg-primary py-16 text-primary-foreground'
+            : 'bg-background py-10'
       )}
       id={params?.RenderingIdentifier}
     >
-      <div className="component-content mx-auto max-w-7xl px-4">
+      {isPhoto && (
+        <div className="absolute inset-0 z-0">
+          {(backgroundImage?.value?.src || isEditing) && backgroundImage && (
+            <ContentSdkImage field={backgroundImage} className="h-full w-full object-cover" />
+          )}
+          <div
+            className="absolute inset-0 bg-primary/80"
+            style={{ backgroundColor: 'color-mix(in srgb, var(--color-primary) 80%, black)' }}
+            aria-hidden="true"
+          />
+        </div>
+      )}
+      <div className="component-content relative z-10 mx-auto max-w-7xl px-4">
         {(datasource.sectionTitle?.jsonValue?.value || isEditing) && (
           <Text
             field={datasource.sectionTitle?.jsonValue}
