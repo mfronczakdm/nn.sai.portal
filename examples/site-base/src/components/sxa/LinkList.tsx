@@ -119,6 +119,20 @@ export const Default = (props: LinkListProps): JSX.Element => {
   const datasource = props.fields?.data?.datasource;
   const styles = `max-w-xs p-5 font-sans ${props.params.styles}`.trimEnd();
   const id = props.params.RenderingIdentifier;
+  const cascade = useMegaMenuCascade();
+  const l1Scope = useMegaMenuCascadeL1Scope();
+  const cascadeLinks =
+    datasource?.children?.results
+      ?.map((element: ResultsFieldLink, index: number) =>
+        element?.field?.link ? toCascadeLink(element.field.link, index) : null
+      )
+      .filter((link): link is CascadeLinkItem => link != null) ?? [];
+
+  useRegisterCascadePrimaryLinks(cascadeLinks);
+
+  if (cascade?.enabled && l1Scope && !isPageEditing) {
+    return <div className="hidden" aria-hidden="true" />;
+  }
 
   if (datasource) {
     const list = datasource.children.results

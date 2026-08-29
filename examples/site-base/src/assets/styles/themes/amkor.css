@@ -101,3 +101,29 @@
 [data-theme='amkor'] .bg-accent {
   color: var(--color-dark-foreground);
 }
+
+[data-theme='amkor'] [data-footer-st-layout='version1'] [data-footer-st-legal] a {
+  color: var(--color-footer-foreground);
+  text-decoration: none;
+}
+
+[data-theme='amkor'] [data-footer-st-layout='version1'] [data-footer-st-legal] a:hover {
+  text-decoration: underline;
+}
+
+[data-theme='amkor'] [data-footer-st-layout='version1'] [data-footer-st-legal] a[href*='privacy-notice'] {
+  font-weight: 700;
+}
+
+[data-theme='amkor'] [data-footer-st-layout='version1'] [data-footer-st-legal] {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem 0;
+}
+
+[data-theme='amkor'] [data-footer-st-layout='version1'] [data-footer-st-legal] > div + div::before {
+  color: var(--color-footer-mid);
+  content: '|';
+  margin-inline: 0.75rem;
+}

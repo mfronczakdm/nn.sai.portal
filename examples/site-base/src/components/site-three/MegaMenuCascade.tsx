@@ -77,6 +77,30 @@ export function MegaMenuCascadeProvider({
     });
   }, []);
 
+  const upsertL1Links = useCallback(
+    (
+      l1Id: string,
+      updater: (existing: CascadeL1Item | undefined) => Partial<
+        Pick<CascadeL1Item, 'primaryLinks' | 'secondaryGroups'>
+      >
+    ) => {
+      setL1Map((prev) => {
+        const existing = prev.get(l1Id);
+        const patch = updater(existing);
+        const next = new Map(prev);
+        next.set(l1Id, {
+          id: l1Id,
+          title: existing?.title ?? '',
+          href: existing?.href,
+          primaryLinks: patch.primaryLinks ?? existing?.primaryLinks ?? [],
+          secondaryGroups: patch.secondaryGroups ?? existing?.secondaryGroups ?? [],
+        });
+        return next;
+      });
+    },
+    []
+  );
+
   const unregisterL1 = useCallback((id: string) => {
     setL1Map((prev) => {
       const next = new Map(prev);
@@ -85,26 +109,22 @@ export function MegaMenuCascadeProvider({
     });
   }, []);
 
-  const setL1PrimaryLinks = useCallback((l1Id: string, links: CascadeLinkItem[]) => {
-    setL1Map((prev) => {
-      const existing = prev.get(l1Id);
-      if (!existing) return prev;
-      const next = new Map(prev);
-      next.set(l1Id, { ...existing, primaryLinks: links });
-      return next;
-    });
-  }, []);
+  const setL1PrimaryLinks = useCallback(
+    (l1Id: string, links: CascadeLinkItem[]) => {
+      upsertL1Links(l1Id, () => ({ primaryLinks: links }));
+    },
+    [upsertL1Links]
+  );
 
-  const addL1SecondaryGroup = useCallback((l1Id: string, group: CascadeSecondaryGroup) => {
-    setL1Map((prev) => {
-      const existing = prev.get(l1Id);
-      if (!existing) return prev;
-      const filtered = existing.secondaryGroups.filter((g) => g.title !== group.title);
-      const next = new Map(prev);
-      next.set(l1Id, { ...existing, secondaryGroups: [...filtered, group] });
-      return next;
-    });
-  }, []);
+  const addL1SecondaryGroup = useCallback(
+    (l1Id: string, group: CascadeSecondaryGroup) => {
+      upsertL1Links(l1Id, (existing) => {
+        const filtered = (existing?.secondaryGroups ?? []).filter((g) => g.title !== group.title);
+        return { secondaryGroups: [...filtered, group] };
+      });
+    },
+    [upsertL1Links]
+  );
 
   const value = useMemo(
     () => ({
@@ -129,11 +149,13 @@ export function MegaMenuCascadeL1Scope({
   id,
   title,
   href,
+  isPageEditing = false,
   children,
 }: {
   id: string;
   title: string;
   href?: string;
+  isPageEditing?: boolean;
   children: ReactNode;
 }) {
   const cascade = useMegaMenuCascade();
@@ -150,7 +172,15 @@ export function MegaMenuCascadeL1Scope({
 
   return (
     <CascadeL1ScopeContext.Provider value={id}>
-      <div data-mega-cascade-l1={id} className="hidden" aria-hidden="true">
+      <div
+        data-mega-cascade-l1={id}
+        className={cn(
+          isPageEditing
+            ? 'border border-dashed border-white/25 p-2 [&_ul]:m-0 [&_ul]:list-none [&_ul]:p-0'
+            : 'hidden'
+        )}
+        aria-hidden={!isPageEditing}
+      >
         {children}
       </div>
     </CascadeL1ScopeContext.Provider>

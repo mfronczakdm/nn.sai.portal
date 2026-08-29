@@ -21,6 +21,11 @@ import {
   linkListPropsNullFields,
 } from './LinkList.mockProps';
 
+jest.mock('lucide-react', () => ({
+  ChevronRight: () => null,
+  X: () => null,
+}));
+
 // Mock IntersectionObserver
 global.IntersectionObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn(),

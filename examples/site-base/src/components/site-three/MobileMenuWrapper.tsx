@@ -99,13 +99,22 @@ export const MobileMenuWrapper = ({
         ) : null}
       </button>
 
-      {/* Mobile Menu Content */}
+      {/* Mobile Menu Content — darkPanel keeps children mounted (sr-only) when closed so cascade registration runs */}
       <div
         className={cn(
-          isMobileMenuVisible ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0',
           darkPanel
-            ? 'relative fixed inset-x-0 bottom-0 top-[6.25rem] z-50 overflow-hidden bg-[color-mix(in_srgb,var(--color-header-background,var(--color-foreground))_88%,black)] text-[color:var(--color-header-foreground,var(--color-background))] transition-all duration-300 ease-in-out'
-            : 'fixed left-0 right-0 top-14 z-50 flex h-[calc(100vh-3.5rem)] flex-col items-center justify-center overflow-auto bg-background p-4 text-foreground transition-all duration-300 ease-in-out',
+            ? isMobileMenuVisible
+              ? 'fixed inset-x-0 bottom-0 top-[6.25rem] z-50 overflow-hidden text-[color:var(--color-header-foreground,var(--color-background))] transition-opacity duration-300 ease-in-out'
+              : cn(
+                  'sr-only fixed h-px w-px overflow-hidden opacity-0 pointer-events-none',
+                  '[.partial-editing-mode_&]:!static [.partial-editing-mode_&]:!h-auto [.partial-editing-mode_&]:!w-auto [.partial-editing-mode_&]:!overflow-visible [.partial-editing-mode_&]:!opacity-100 [.partial-editing-mode_&]:!pointer-events-auto'
+                )
+            : cn(
+                'fixed left-0 right-0 top-14 z-50 flex h-[calc(100vh-3.5rem)] flex-col items-center justify-center overflow-auto bg-background p-4 text-foreground transition-all duration-300 ease-in-out',
+                isMobileMenuVisible
+                  ? 'pointer-events-auto opacity-100'
+                  : 'pointer-events-none opacity-0'
+              ),
           panelClassName
         )}
       >

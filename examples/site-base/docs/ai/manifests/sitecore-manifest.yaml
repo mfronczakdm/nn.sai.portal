@@ -1,5 +1,5 @@
 ﻿generatedAt: "2026-03-20T09:00:00Z"
-lastUpdatedAt: "2026-08-29T18:00:00Z"
+lastUpdatedAt: "2026-08-29T21:00:00Z"
 lastUpdatedBy: "cursor-agent"
 
 project:
@@ -3400,7 +3400,6 @@ demoContent:
         - "Internal link IDs resolve to existing Amkor IA pages"
       failed: []
       pendingManual:
-        - "Approve Draft workflow on three datasource items"
         - "Publish /sitecore/content/amkor/amkor/Data/HeroST subtree for Edge"
         - "Place HeroST on Home in Pages; pick one datasource per rendering instance"
         - "Select variant (Default, Right, or Centered) per hero in Pages"
@@ -3480,7 +3479,6 @@ demoContent:
         - "Parent title/description and child lists verified via get_content_item_by_path"
       failed: []
       pendingManual:
-        - "Approve Draft workflow on four parents + twelve children"
         - "Publish /sitecore/content/amkor/amkor/Data/MultiPromos for Edge"
         - "Place MultiPromo on Home in Pages; assign one datasource per instance"
         - "Select Version2 on Homepage Feature Tiles (Amkor 3-up READ MORE)"
@@ -3611,7 +3609,6 @@ demoContent:
         - "Image XML includes verified width/height for all CDN images"
       failed: []
       pendingManual:
-        - "Approve Draft workflow on datasource items if applicable"
         - "Publish Data/HeroCarousels and Presentation/Headless Variants/HeroCarousel for Edge"
         - "Place HeroCarousel on Home; select datasource + suggested variant per carousel"
         - "Replace temporary CDN images with DAM assets when credentials available"
@@ -3688,7 +3685,6 @@ demoContent:
         - "Place LocationSearch on target page in Pages; select variant Version1"
         - "Assign datasource An unrivaled global footprint"
         - "Set NEXT_PUBLIC_GOOGLE_MAPS_API_KEY in rendering host env for live map tiles"
-        - "Approve Draft workflow on datasource + location items if applicable"
         - "FieldNames variant must be set in Pages (set_component_datasource variantId is personalization, not Headless Variants)"
 
 # Information architecture / page creation batches
@@ -8259,6 +8255,7 @@ ia:
 
     notes:
       - "2026-08-29: Version1 cascade megamenu (MegaMenuCascade.tsx). MENU opens dark overlay; L1 column → L2 → L3 (Careers countries split). MegaMenuItem Default + LinkList HeaderPrimaryLinks/HeaderSecondaryLinks register into cascade when MegaMenuCascadeProvider wraps header-navigation (Version1 only). MobileMenuWrapper exports useMobileMenu + darkPanel. Default/Version2/Version3 unchanged."
+      - "2026-08-29: Version1 cascade fix — darkPanel uses sr-only (not opacity-0 fixed overlay) when closed; L1 registration runs in Pages editing mode; utility/main rows z-[60] keep logo + lang row above overlay; partial-editing-mode still expands sr-only slot for Header PD authoring."
       - "2026-08-26: Version1 pixel-perfect to amkor.com. Two-tone Amkor tokens (--color-header-utility #4E4E4E top, --color-header-background #1E1E1E main, --color-header-menu #111 MENU box, --color-header-muted SEARCH...). Version1-hardcoded langs (English current / 한국어 / 日本語 / 简体中文 → amkor.com/kr|/jp|/cn) and six utility links (Document Library, Factory Certs, Investors, Cloud Services, Careers, Contact Us) — no new datasource fields. SupportLink skipped when it duplicates a utility label. HideCart still honored. Logo mix-blend lighten on [data-theme=amkor] Version1 to drop a baked-in black plate; authors should still upload Amkor-white.svg. Default/Version2/Version3 unchanged. Code-only."
       - "2026-08-25: Version3 L1 clip was CSS, not missing Sitecore items. MCP get_components_on_page on LCMC Header {7D1AB59C-D03F-420A-AE9B-D97F511CF28E} confirmed 5 MegaMenuItem renderings in header-navigation-1 (Speakers/Headphones/Amps/Pro/Artist Services). shrink-0 + nowrap + ml-auto + min-w-0 parent overflowed LEFT under the logo (relative z-10); compact padding only targeted a, while MegaMenuToggle uses span.p-4. Fix: nav column flex-1, drop shrink-0/ml-auto, overflow-visible, compact a/span/button, force li w-auto/basis-auto. Did not use overflow-x-auto (would trap lg:absolute mega menus). Default/Version1/Version2 unchanged. HeaderST.test.tsx Version3 nowrap + not overflow-hidden."
       - "2026-08-25: Version3 primary nav no longer uses flex-wrap/min-w-0. Those classes let the ul shrink until each MegaMenuItem sat on its own line. Primary ul is now flex-nowrap shrink-0; utility row may still wrap. Logo/gap/search min-width lg tuning kept so the row cannot slide under the logo at 1024px. Partial-editing-mode !flex-col is unchanged."
@@ -8831,7 +8828,7 @@ ia:
     category: "Navigation"
     status: "complete"
     createdAt: "2026-08-29T18:00:00Z"
-    updatedAt: "2026-08-29T18:00:00Z"
+    updatedAt: "2026-08-29T22:50:00Z"
     siteName: "amkor"
     siteCollection: "amkor"
     notes: >
@@ -8841,33 +8838,47 @@ ia:
       Test Services, Services; added Applications + Quality components. About Us primary 13 links +
       secondary Careers (12 countries), News (Blog), Customer Center (3 links). Packaging primary
       Laminate/Leadframe/Memory/MEMS/Power (+ more L2 pending author). Publish Header PD + Data for Edge.
+      2026-08-29: Fixed cascade L2 registration race (LinkList child effect before MegaMenuItem L1 scope).
+      Created Services Primary Links {4615C242-EB1C-4AEB-AB27-589837931C1D} + LinkList on placeholder-3.
+      Wired Applications Primary Links on placeholder-8. Remapped Technology Amps Primary Links (13 IA links).
+      Completed Packaging Headphones Primary Links (7 links). LinkList Default registers cascade when inside L1 scope.
     relatedItems:
       headerPartialDesignId: "{1A12281C-993B-4097-AB06-5A1849784F7E}"
       headerDataFolderId: "{45493019-F268-4CF4-9BC1-F23C9E6DFC40}"
       megaMenus:
-        - { itemName: "Speakers", title: "About Us", itemId: "{31AD7DBB-CB85-478E-8964-CAB33D36B82B}", pageId: "{86E9AAED-39B1-4E89-9E41-9C3E778F8E1D}" }
-        - { itemName: "Headphones", title: "Packaging", itemId: "{44E6D296-49CA-4AD2-B8C9-F6F1085EF529}", pageId: "{CFF1B3A2-45C1-44F9-8411-32C55F316627}" }
-        - { itemName: "Amps", title: "Technology", itemId: "{B360D712-0ED3-4DF2-A27A-AFC47827EF4A}", pageId: "{53463616-8870-4F0D-95C1-4371D992C7DB}" }
-        - { itemName: "Pro", title: "Test Services", itemId: "{2276E4D3-3234-4AC6-AB25-515F73A5611D}", pageId: "{C39BC746-0C9C-4C76-A623-3DE87ED527F0}" }
-        - { itemName: "Artist Services", title: "Services", itemId: "{064532F1-C321-4BD4-87A9-D06A88B36402}", pageId: "{E1435CB8-EDE6-4A86-911F-58CB91C3300D}" }
-        - { itemName: "Applications", title: "Applications", itemId: "{23698738-6225-468E-8CA7-680C76B3F4E9}", pageId: "{20E5730D-E035-4835-B224-BD494A0F3C99}" }
-        - { itemName: "Quality", title: "Quality", itemId: "{D7A4667E-B2AC-48DF-93FE-94654A065F8C}", pageId: "{518DF9E7-844E-413A-9F74-42108EFEE527}" }
+        - { itemName: "Speakers", title: "About Us", itemId: "{31AD7DBB-CB85-478E-8964-CAB33D36B82B}", pageId: "{86E9AAED-39B1-4E89-9E41-9C3E778F8E1D}", placeholderId: "2" }
+        - { itemName: "Headphones", title: "Packaging", itemId: "{44E6D296-49CA-4AD2-B8C9-F6F1085EF529}", pageId: "{CFF1B3A2-45C1-44F9-8411-32C55F316627}", placeholderId: "5" }
+        - { itemName: "Amps", title: "Technology", itemId: "{B360D712-0ED3-4DF2-A27A-AFC47827EF4A}", pageId: "{53463616-8870-4F0D-95C1-4371D992C7DB}", placeholderId: "6" }
+        - { itemName: "Pro", title: "Test Services", itemId: "{2276E4D3-3234-4AC6-AB25-515F73A5611D}", pageId: "{C39BC746-0C9C-4C76-A623-3DE87ED527F0}", placeholderId: "4" }
+        - { itemName: "Artist Services", title: "Services", itemId: "{064532F1-C321-4BD4-87A9-D06A88B36402}", pageId: "{E1435CB8-EDE6-4A86-911F-58CB91C3300D}", placeholderId: "3" }
+        - { itemName: "Applications", title: "Applications", itemId: "{23698738-6225-468E-8CA7-680C76B3F4E9}", pageId: "{20E5730D-E035-4835-B224-BD494A0F3C99}", placeholderId: "8" }
+        - { itemName: "Quality", title: "Quality", itemId: "{D7A4667E-B2AC-48DF-93FE-94654A065F8C}", pageId: "{518DF9E7-844E-413A-9F74-42108EFEE527}", placeholderId: "9" }
+      primaryLinkLists:
+        - { itemName: "Speakers Primary Links", itemId: "{00549EC3-E9B2-4B1B-9157-8A85633B9FF7}", componentOnPlaceholder: "primary-links-2", variant: "HeaderPrimaryLinks" }
+        - { itemName: "Headphones Primary Links", itemId: "{CC008753-10B0-4A2D-B310-959AE61F9A69}", componentOnPlaceholder: "primary-links-5", variant: "HeaderPrimaryLinks" }
+        - { itemName: "Amps Primary Links", itemId: "{723556A7-A15A-4055-A8C0-63C1347FAB21}", componentOnPlaceholder: "primary-links-6", variant: "HeaderPrimaryLinks" }
+        - { itemName: "Services Primary Links", itemId: "{4615C242-EB1C-4AEB-AB27-589837931C1D}", componentOnPlaceholder: "primary-links-3", componentInstanceId: "{73E93F2A-B6FA-4421-974C-B70E47C416F4}", variant: "Default (cascade via L1 scope)" }
+        - { itemName: "Applications Primary Links", itemId: "{5E63CB6C-F4F3-40CE-BBB0-B8FEA09CEFB4}", componentOnPlaceholder: "primary-links-8", componentInstanceId: "{F7D0BF1A-37FC-41B3-B005-F2279135D6CF}", variant: "Default (cascade via L1 scope)" }
       aboutUsPrimaryLinks: "{00549EC3-E9B2-4B1B-9157-8A85633B9FF7}"
       careersCountries: "{D26400BE-7189-4B25-8223-AC7503EE92F2}"
       newsSecondary: "{F449D25B-E169-47DB-927E-1E41367FCE7C}"
       customerCenterSecondary: "{BA9677AA-DCFB-4A32-867F-BB464360039B}"
     verification:
-      checkedAt: "2026-08-29T18:00:00Z"
+      checkedAt: "2026-08-29T22:50:00Z"
       passed:
-        - "MegaMenuCascade.test.tsx L1/L2/L3 column cascade tests"
+        - "MegaMenuCascade.test.tsx L1/L2/L3 column cascade tests + child-before-parent registration test"
+        - "LinkList Default registers cascade primary links inside MegaMenuCascadeL1Scope"
         - "HeaderST Version1 MENU + cascade provider wiring"
         - "About Us / Packaging / Technology / Services mega Title+Link updated"
         - "About Us primary 13 links + Careers 12 countries + News Blog + Customer Center 3 links"
-        - "Applications + Quality MegaMenuItem components added on Header partial"
+        - "Services Primary Links (3) + Applications Primary Links (8) datasources populated"
+        - "LinkList components added on Services placeholder-3 and Applications placeholder-8"
+        - "Technology Amps Primary Links remapped to 13 Home Technology children"
+        - "Packaging Headphones Primary Links completed to 7 Home Packaging children"
       pendingManual:
         - "Publish /sitecore/content/amkor/amkor/Presentation/Partial Designs/Global/Header for Edge"
-        - "Wire Applications Primary LinkList component on mega-menu-item-primary-links-8 in Pages if L2 empty"
-        - "Complete Packaging L2 links 5-7 (Power, SiP, Wafer Level) and Technology/Services/Applications primary lists"
+        - "Optional: set LinkList variant HeaderPrimaryLinks on Services/Applications in Pages (Default works via L1-scope cascade registration)"
+        - "Test Services + Quality are leaf L1 pages (no L2 children in IA) — direct nav links expected"
 
   - name: "amkor-ia-tree"
     kind: "ia-create"
@@ -9756,4 +9767,92 @@ homepageKit:
         - "Publish News page + Data/NewsListing + blog pages for Edge"
         - "Optional: copy NewsListing template to Project/amkor with FeaturedItems source = Blog folder for cleaner author picker"
         - "Rename datasource item to friendly name in CE"
+
+  - name: "amkor-footer-nav-remap"
+    kind: "content-update"
+    category: "Navigation"
+    status: "complete"
+    createdAt: "2026-08-29T20:30:00Z"
+    updatedAt: "2026-08-29T20:45:00Z"
+    siteName: "amkor"
+    siteCollection: "amkor"
+    sourceSite: "https://www.amkor.com/"
+    notes: >
+      Amkor footer aligned to live amkor.com two-row layout via FooterST Version1 cosmetic variant
+      (Default/LogoLeft/LogoRight/Centered unchanged). Top row: logo + Constant Contact newsletter CTA +
+      social (WeChat/YouTube/Twitter hardcoded; FB/IG/LinkedIn from datasource). Bottom row: copyright +
+      pipe-separated legal links. Primary Links 1–4 + Secondary Links 1–3 remapped; Secondary 4–5 cleared.
+      Did not edit HeaderST or mega menu.
+    relatedItems:
+      footerPartialDesignId: "{A666B913-4E79-4A8C-89CD-C29B55A4F2DC}"
+      footerDataFolderId: "{0831008B-8092-4483-9D4C-85A19252D74C}"
+      footerSTId: "{E77C43D9-1A7A-4987-A741-5C5F61C5D19D}"
+      primaryLinksId: "{83DD8DC9-D14B-450F-AB98-B30C7055ADE4}"
+      secondaryLinksId: "{5D813D61-722B-4F16-B983-95C2E2DF1DBE}"
+      headlessVariantVersion1Id: "{D4E5C4CD-F853-45CF-8327-00B52E214474}"
+      branding:
+        title: "Connect with us"
+        copyright: "© Copyright 2026 Amkor Technology"
+        facebook: "https://www.facebook.com/AmkorTechnology/"
+        instagram: "https://www.instagram.com/amkortechnology/"
+        linkedIn: "https://www.linkedin.com/company/amkor-technology/"
+      primaryLinks:
+        - { itemName: "Link 1", itemId: "{11D166E9-9FB8-4CDC-9E84-5AA1BA3CDBC3}", text: "ADA Accessibility", href: "https://amkor.com/our-commitment-to-accessibility/" }
+        - { itemName: "Link 2", itemId: "{64E02DB5-28F4-401C-A810-5EA4B8F69F04}", text: "Careers", href: "internal {6F39EC02-DAA7-4FED-9E65-E31A9DAF37F1}" }
+        - { itemName: "Link 3", itemId: "{8E4CE859-53FB-4FFA-B6C9-922286620665}", text: "Privacy Notice", href: "https://amkor.com/privacy-notice/" }
+        - { itemName: "Link 4", itemId: "{0189CB13-E306-49E2-AD3F-7D3EF9540D78}", text: "Privacy Request", href: "https://amkor.com/privacy-request/" }
+      secondaryLinks:
+        - { itemName: "Link 1", itemId: "{89E7584A-534B-41A1-9B9A-3C62A65074A4}", text: "Legal", href: "https://amkor.com/legal/" }
+        - { itemName: "Link 2", itemId: "{18BF034E-52A3-40B3-9E68-260310562940}", text: "Sitemap", href: "https://amkor.com/sitemap/" }
+        - { itemName: "Link 3", itemId: "{D2B38440-F0B9-4205-97CE-18339E13CFDE}", text: "Contact Us", href: "internal {DF23610E-A0C4-4E95-A316-AB794CFF927F}" }
+    react:
+      filePath: "src/components/site-three/FooterST.tsx"
+      variant: "Version1"
+      themeCss: "src/assets/styles/themes/amkor.css"
+    verification:
+      checkedAt: "2026-08-29T20:45:00Z"
+      passed:
+        - "FooterST Version1 Headless Variant Definition created on amkor {D4E5C4CD-F853-45CF-8327-00B52E214474}"
+        - "FooterST datasource Title/Copyright/social verified via MCP read-back"
+        - "Primary + Secondary legal links remapped to live amkor.com labels"
+        - "React Version1 export; Default/LogoLeft/LogoRight/Centered unchanged"
+        - "Jest FooterST.test.tsx 12 tests pass"
+      failed: []
+      pendingManual:
+        - "Select Version1 on Footer Partial Design FooterST rendering in Pages (FieldNames {D4E5C4CD-F853-45CF-8327-00B52E214474})"
+        - "Publish Footer Partial Design + Footer/Data + Headless Variants/FooterST/Version1 for Edge"
+        - "Newsletter URL + WeChat/YouTube/Twitter are hardcoded in Version1 (live Constant Contact + amkor.com paths)"
+
+workflowApproval:
+  siteCollection: "amkor"
+  siteName: "amkor"
+  checkedAt: "2026-08-29T21:00:00Z"
+  workflowName: "Sample Workflow"
+  approvedStateId: "{FCA998C5-0CC3-4F91-94D8-0A4E6CAECE88}"
+  approvedStatePath: "/sitecore/system/Workflows/Sample Workflow/Approved"
+  approvedStateFinal: true
+  method: "MCP update_fields_on_item __Workflow state (no publish, no workflow action execution)"
+  scope:
+    - "/sitecore/content/amkor/amkor/Home and descendants (109 pages via get_all_pages_by_site + manifest)"
+    - "/sitecore/content/amkor/amkor/Data (HeroST, MultiPromos, HeroCarousels, Locations, Location Searches, etc.)"
+    - "/sitecore/content/amkor/amkor/Presentation (Headless Variants, Partial Designs, Available Renderings)"
+    - "/sitecore/content/amkor/amkor/Dictionary, Settings, Media roots"
+  counts:
+    totalAttempted: 224
+    workflowUpdated: 152
+    skippedNoWorkflowField: 56
+    failed: 16
+    notFound: 11
+  notes: >
+    Batch workflow approval across manifest checklist (217 amkor-related IDs) plus site pages and
+    structural roots (224 unique IDs). Items with __Workflow state set to Sample Workflow Approved
+    verified via spot-check on HeroST and SimplePromo datasources (final=true, displayName=Approved).
+    IA Services Page items and presentation folders typically have no workflow field — skipped.
+    Stale manifest GUIDs (andmore/lcmc template copies) returned 404. Template items without
+    __Workflow state returned 400. Did not execute Approved/Auto Publish workflow action or Edge publish.
+  pendingManual:
+    - "Publish Amkor content subtrees in Pages for Edge delivery (HeroST, MultiPromos, HeroCarousels, Locations, Header/Footer partial designs, etc.)"
+    - "Stale/deleted manifest IDs — remove or refresh: {06A429E2-A31F-40ED-AF05-AAC53F54401D}, {453D5D4E-D9C0-4B99-8099-CD6E66584D3F}, {5F8FF7C8-88D8-429F-ABE9-CDF92B89863A}, {61979ED4-3BAD-49C2-AF3D-0D725DF1884A}, {7C2EDB0E-035E-4A22-B069-F8242035EA9D}, {96A42097-34D6-465C-990D-B801882D7B27}, {D477F40A-6C82-40B2-AEAC-4F2F8DB5F03A}, {DFC20993-D8F0-44B4-BA5C-846540B4E0EC}, {E5B4577C-12CD-4196-AD2F-FE60E49B5567}, {FC928466-98E1-46E8-9842-5FE7DD44271D}"
+    - "Template items without workflow field (not content): {25CF32E0-C2D1-4E72-8CB9-FDEB000BE0D7}, {69728677-52E5-4482-A415-94F0222799B8}, {A9919790-3389-4FC2-ABC8-24F73C847C8E}, {B2B918C3-ACDA-433F-A11B-718466493AEC}, {D77937AC-BAE4-4EB0-8D7E-69EC09D5BBFC}"
+    - "Dictionary leaf items and Media library assets not exhaustively tree-walked — approve/publish manually if workflow-enabled"
 

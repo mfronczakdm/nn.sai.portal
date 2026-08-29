@@ -316,7 +316,7 @@ const HeaderSTVersion1View = (props: HeaderSTViewProps) => {
       <div className="flex w-full min-w-0 flex-col" role="navigation" aria-label="Site header">
         <div
           data-header-st-row="utility"
-          className="w-full min-w-0 bg-[var(--color-header-utility,var(--color-muted-foreground))]"
+          className="relative z-[60] w-full min-w-0 bg-[var(--color-header-utility,var(--color-muted-foreground))]"
         >
           <div className="flex w-full items-stretch justify-between gap-3 px-3 sm:px-4">
             <ul
@@ -388,7 +388,7 @@ const HeaderSTVersion1View = (props: HeaderSTViewProps) => {
 
         <div
           data-header-st-row="main"
-          className="w-full min-w-0 bg-[var(--color-header-background,var(--color-foreground))]"
+          className="relative z-[60] w-full min-w-0 bg-[var(--color-header-background,var(--color-foreground))]"
         >
           <ul className="flex w-full list-none items-stretch p-0">
             {showNavigation ? (

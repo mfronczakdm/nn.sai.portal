@@ -50,7 +50,7 @@ export const Default = (props: MegaMenuItemProps) => {
   const featuredProduct = props.fields?.FeaturedProduct;
   const menuId = `mega-menu-${props.params?.DynamicPlaceholderId || 'default'}`;
 
-  if (cascade?.enabled && !isPageEditing) {
+  if (cascade?.enabled) {
     const title =
       trimFieldValue(props.fields?.Title?.value) ||
       trimFieldValue(props.fields?.Link?.value?.text) ||
@@ -58,7 +58,12 @@ export const Default = (props: MegaMenuItemProps) => {
     const href = props.fields?.Link?.value?.href;
 
     return (
-      <MegaMenuCascadeL1Scope id={menuId} title={title} href={href}>
+      <MegaMenuCascadeL1Scope
+        id={menuId}
+        title={title}
+        href={href}
+        isPageEditing={Boolean(isPageEditing)}
+      >
         <AppPlaceholder
           name={`mega-menu-item-primary-links-${props.params?.DynamicPlaceholderId}`}
           rendering={props.rendering}

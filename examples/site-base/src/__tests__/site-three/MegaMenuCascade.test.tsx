@@ -81,6 +81,13 @@ function CascadeMenuFixture() {
 }
 
 describe('MegaMenuCascade', () => {
+  it('keeps the cascade panel closed by default', () => {
+    render(<CascadeMenuFixture />);
+
+    expect(screen.queryByTestId('close-icon')).not.toBeInTheDocument();
+    expect(screen.queryByLabelText('Primary navigation')).not.toBeInTheDocument();
+  });
+
   it('shows L1 items and opens L2 column on L1 click', () => {
     render(<CascadeMenuFixture />);
 
@@ -116,5 +123,70 @@ describe('MegaMenuCascade', () => {
 
     fireEvent.click(screen.getByLabelText('Close menu'));
     expect(screen.queryByText('About Us')).not.toBeInTheDocument();
+  });
+
+  it('registers primary links when LinkList mounts before L1 scope effect', () => {
+    function LinkListBeforeScopeRegistrar({
+      l1Id,
+      links,
+    }: {
+      l1Id: string;
+      links: Array<{ id: string; text: string; href: string }>;
+    }) {
+      const cascade = useMegaMenuCascade();
+
+      React.useEffect(() => {
+        if (!cascade?.enabled) return;
+        cascade.setL1PrimaryLinks(l1Id, links);
+      }, [cascade, l1Id, links]);
+
+      return null;
+    }
+
+    render(
+      <MobileMenuWrapper alwaysVisible label="MENU" darkPanel>
+        <MegaMenuCascadeProvider enabled>
+          <MegaMenuCascadeL1Scope id="services" title="Services">
+            <LinkListBeforeScopeRegistrar
+              l1Id="services"
+              links={[
+                { id: 'design', text: 'Design Services', href: '/services/design-services' },
+                { id: 'pkg', text: 'Package Characterization', href: '/services/package-characterization' },
+              ]}
+            />
+          </MegaMenuCascadeL1Scope>
+        </MegaMenuCascadeProvider>
+      </MobileMenuWrapper>
+    );
+
+    fireEvent.click(screen.getByLabelText('Toggle menu'));
+    fireEvent.click(screen.getByText('Services'));
+
+    expect(screen.getByText('Design Services')).toBeInTheDocument();
+    expect(screen.getByText('Package Characterization')).toBeInTheDocument();
+  });
+
+  it('registers L1 items when menu opens in editing mode', () => {
+    render(
+      <div className="editing-mode">
+        <MobileMenuWrapper alwaysVisible label="MENU" darkPanel>
+          <MegaMenuCascadeProvider enabled>
+            <MegaMenuCascadeL1Scope id="about-us" title="About Us" isPageEditing>
+              <div data-testid="scope-about-us" />
+            </MegaMenuCascadeL1Scope>
+            <MegaMenuCascadeL1Scope id="packaging" title="Packaging" isPageEditing>
+              <div data-testid="scope-packaging" />
+            </MegaMenuCascadeL1Scope>
+          </MegaMenuCascadeProvider>
+        </MobileMenuWrapper>
+      </div>
+    );
+
+    expect(screen.queryByText('About Us')).not.toBeInTheDocument();
+
+    fireEvent.click(screen.getByLabelText('Toggle menu'));
+
+    expect(screen.getByText('About Us')).toBeInTheDocument();
+    expect(screen.getByText('Packaging')).toBeInTheDocument();
   });
 });

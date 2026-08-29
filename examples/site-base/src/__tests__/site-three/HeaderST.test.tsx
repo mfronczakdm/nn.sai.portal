@@ -763,6 +763,21 @@ describe('HeaderST Component', () => {
 
       expect(screen.getByTestId('mini-cart')).toBeInTheDocument();
     });
+
+    it('keeps the cascade megamenu panel closed by default', () => {
+      render(<HeaderSTVersion1 {...headerSTPropsVersion1} />);
+
+      expect(screen.queryByLabelText('Close menu')).not.toBeInTheDocument();
+      expect(screen.queryByLabelText('Primary navigation')).not.toBeInTheDocument();
+    });
+
+    it('keeps utility and main header rows above the menu overlay layer', () => {
+      render(<HeaderSTVersion1 {...headerSTPropsVersion1} />);
+
+      expect(document.querySelector('[data-header-st-row="utility"]')).toHaveClass('z-[60]');
+      expect(document.querySelector('[data-header-st-row="main"]')).toHaveClass('z-[60]');
+      expect(screen.getByTestId('sitecore-image')).toBeVisible();
+    });
   });
 
   describe('Version2 variant', () => {

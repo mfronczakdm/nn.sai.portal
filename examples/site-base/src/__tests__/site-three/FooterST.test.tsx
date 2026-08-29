@@ -4,6 +4,7 @@ import { render, screen } from '@testing-library/react';
 import {
   Default as FooterSTDefault,
   Centered as FooterSTCentered,
+  Version1 as FooterSTVersion1,
 } from '@/components/site-three/FooterST';
 import { mockPage } from '../test-utils/mockPage';
 
@@ -16,6 +17,15 @@ jest.mock('@fortawesome/react-fontawesome', () => ({
       data-width={width}
       data-height={height}
     />
+  ),
+}));
+
+jest.mock('next/link', () => ({
+  __esModule: true,
+  default: ({ href, children, ...props }: { href: string; children: React.ReactNode }) => (
+    <a href={href} {...props}>
+      {children}
+    </a>
   ),
 }));
 
@@ -128,6 +138,46 @@ describe('FooterST', () => {
       render(<FooterSTCentered {...mockProps} />);
       expect(screen.getByTestId('placeholder-footer-primary-links-test-id')).toBeInTheDocument();
       expect(screen.getByTestId('placeholder-footer-secondary-links-test-id')).toBeInTheDocument();
+    });
+  });
+
+  describe('Version1 variant (Amkor)', () => {
+    it('renders Amkor logo and newsletter CTA', () => {
+      render(
+        <FooterSTVersion1
+          {...mockProps}
+          fields={{
+            ...mockProps.fields,
+            Title: { value: 'Connect with us' },
+          }}
+        />
+      );
+
+      expect(screen.getByAltText('Amkor Technology Logo')).toBeInTheDocument();
+      expect(screen.getByText('Connect with us')).toBeInTheDocument();
+      expect(screen.getByText('Sign up for email updates from Amkor')).toBeInTheDocument();
+      expect(screen.getByLabelText('Link to E-mail Updates')).toHaveAttribute(
+        'href',
+        expect.stringContaining('constantcontact.com')
+      );
+    });
+
+    it('renders social icons including datasource and hardcoded networks', () => {
+      render(<FooterSTVersion1 {...mockProps} />);
+      const icons = screen.getAllByTestId('font-awesome-icon');
+      expect(icons.length).toBeGreaterThanOrEqual(6);
+    });
+
+    it('renders copyright and legal links placeholders', () => {
+      render(<FooterSTVersion1 {...mockProps} />);
+      expect(screen.getByText('© 2025 Company Name. All rights reserved.')).toBeInTheDocument();
+      expect(screen.getByTestId('placeholder-footer-primary-links-test-id')).toBeInTheDocument();
+      expect(screen.getByTestId('placeholder-footer-secondary-links-test-id')).toBeInTheDocument();
+    });
+
+    it('uses data-footer-st-layout version1', () => {
+      const { container } = render(<FooterSTVersion1 {...mockProps} />);
+      expect(container.querySelector('[data-footer-st-layout="version1"]')).toBeInTheDocument();
     });
   });
 });
