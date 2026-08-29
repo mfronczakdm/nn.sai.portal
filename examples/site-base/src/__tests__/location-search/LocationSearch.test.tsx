@@ -7,12 +7,14 @@ import {
   MapTopAllCentered,
   MapRightTitleZipCentered,
   MapLeftTitleZipCentered,
+  Version1,
 } from '../../components/location-search/LocationSearch';
 import {
   defaultLocationSearchProps,
   locationSearchPropsNoResults,
   locationSearchPropsMinimal,
   locationSearchPropsEditing,
+  version1LocationSearchProps,
 } from './LocationSearch.mockProps';
 
 // Mock the Sitecore Content SDK
@@ -133,6 +135,33 @@ jest.mock('../../components/location-search/LocationSearchTitleZipCentered.dev',
   ),
 }));
 
+jest.mock('../../components/location-search/LocationSearchVersion1.dev', () => ({
+  LocationSearchVersion1: ({ fields, isPageEditing }: any) => {
+    const datasource = fields?.data?.datasource;
+    const title = datasource?.title?.jsonValue?.value;
+    const children = datasource?.children?.results ?? [];
+
+    return (
+      <section data-testid="location-search-version1">
+        {title ? <h2 data-testid="footprint-title">{title}</h2> : null}
+        <div data-testid="footprint-legend">
+          <span>Corporate Headquarters</span>
+          <span>Factories</span>
+          <span>Customer Support Centers</span>
+        </div>
+        <ul data-testid="footprint-pin-types">
+          {children.map((child: any, index: number) => (
+            <li key={index} data-testid={`footprint-pin-${index}`}>
+              {child.locationType?.jsonValue?.value}
+            </li>
+          ))}
+        </ul>
+        <span data-testid="editing-mode">{isPageEditing ? 'editing' : 'normal'}</span>
+      </section>
+    );
+  },
+}));
+
 jest.mock('../../utils/NoDataFallback', () => ({
   NoDataFallback: ({ componentName }: { componentName: string }) => (
     <div data-testid="no-data-fallback">{componentName}</div>
@@ -248,6 +277,21 @@ describe('LocationSearch Component', () => {
     it('renders MapLeftTitleZipCentered variant', () => {
       render(<MapLeftTitleZipCentered {...defaultLocationSearchProps} />);
       expect(screen.getByTestId('location-search-title-zip-centered')).toBeInTheDocument();
+    });
+
+    it('renders Version1 variant with heading, legend, and pin types', () => {
+      render(<Version1 {...version1LocationSearchProps} />);
+
+      expect(screen.getByTestId('location-search-version1')).toBeInTheDocument();
+      expect(screen.getByTestId('footprint-title')).toHaveTextContent(
+        'An unrivaled global footprint'
+      );
+      expect(screen.getByTestId('footprint-legend')).toHaveTextContent('Corporate Headquarters');
+      expect(screen.getByTestId('footprint-legend')).toHaveTextContent('Factories');
+      expect(screen.getByTestId('footprint-legend')).toHaveTextContent('Customer Support Centers');
+      expect(screen.getByTestId('footprint-pin-0')).toHaveTextContent('Corporate Headquarters');
+      expect(screen.getByTestId('footprint-pin-1')).toHaveTextContent('Factories');
+      expect(screen.getByTestId('footprint-pin-2')).toHaveTextContent('Customer Support Centers');
     });
   });
 

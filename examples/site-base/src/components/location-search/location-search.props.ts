@@ -22,10 +22,24 @@ export interface LocationSearchParams {
   [key: string]: any; // eslint-disable-line
 }
 
+export interface FootprintLocationFields {
+  id?: string;
+  name?: { jsonValue: Field<string> };
+  streetAddress?: { jsonValue: Field<string> };
+  city?: { jsonValue: Field<string> };
+  state?: { jsonValue: Field<string> };
+  zip?: { jsonValue: Field<string> };
+  GEO?: { jsonValue: Field<string> };
+  locationType?: { jsonValue: Field<string> };
+}
+
 export interface LocationSearchFields {
   googleMapsApiKey: string;
   title: { jsonValue: Field<string> };
   defaultZipCode: string;
+  children?: {
+    results?: FootprintLocationFields[];
+  };
 }
 
 export interface LocationSearchProps extends ComponentProps {

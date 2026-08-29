@@ -147,6 +147,7 @@ import * as logotabsprops from 'src/components/logo-tabs/logo-tabs.props';
 import * as logoprops from 'src/components/logo/logo.props';
 import * as Logodev from 'src/components/logo/Logo.dev';
 import * as utils from 'src/components/location-search/utils';
+import * as LocationSearchVersion1dev from 'src/components/location-search/LocationSearchVersion1.dev';
 import * as LocationSearchTitleZipCentereddev from 'src/components/location-search/LocationSearchTitleZipCentered.dev';
 import * as LocationSearchMapTopAllCentereddev from 'src/components/location-search/LocationSearchMapTopAllCentered.dev';
 import * as LocationSearchMapRightTitleZipCentereddev from 'src/components/location-search/LocationSearchMapRightTitleZipCentered.dev';
@@ -156,8 +157,10 @@ import * as LocationSearchDefaultdev from 'src/components/location-search/Locati
 import * as LocationSearch from 'src/components/location-search/LocationSearch';
 import * as locationsearchprops from 'src/components/location-search/location-search.props';
 import * as locationsearchitemprops from 'src/components/location-search/location-search-item.props';
+import * as locationfootprintutils from 'src/components/location-search/location-footprint.utils';
 import * as GoogleMapdev from 'src/components/location-search/GoogleMap.dev';
 import * as googlemapsprops from 'src/components/location-search/google-maps.props';
+import * as FootprintGoogleMapdev from 'src/components/location-search/FootprintGoogleMap.dev';
 import * as KnowledgeListing from 'src/components/knowledge-listing/KnowledgeListing';
 import * as knowledgelistingprops from 'src/components/knowledge-listing/knowledge-listing.props';
 import * as knowledgelistingfields from 'src/components/knowledge-listing/knowledge-listing.fields';
@@ -448,6 +451,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['logo', { ...logoprops }],
   ['Logo', { ...Logodev }],
   ['utils', { ...utils }],
+  ['LocationSearchVersion1', { ...LocationSearchVersion1dev }],
   ['LocationSearchTitleZipCentered', { ...LocationSearchTitleZipCentereddev }],
   ['LocationSearchMapTopAllCentered', { ...LocationSearchMapTopAllCentereddev }],
   ['LocationSearchMapRightTitleZipCentered', { ...LocationSearchMapRightTitleZipCentereddev }],
@@ -457,8 +461,10 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['LocationSearch', { ...LocationSearch, componentType: 'client' }],
   ['location-search', { ...locationsearchprops }],
   ['location-search-item', { ...locationsearchitemprops }],
+  ['location-footprint', { ...locationfootprintutils }],
   ['GoogleMap', { ...GoogleMapdev }],
   ['google-maps', { ...googlemapsprops }],
+  ['FootprintGoogleMap', { ...FootprintGoogleMapdev }],
   ['KnowledgeListing', { ...KnowledgeListing, componentType: 'client' }],
   ['knowledge-listing', { ...knowledgelistingprops, ...knowledgelistingfields }],
   ['KnowledeVariant', { ...KnowledeVariant, componentType: 'client' }],

@@ -136,6 +136,56 @@ export const locationSearchPropsEditing: LocationSearchProps = {
   isPageEditing: true,
 };
 
+const mockFootprintChild = (
+  name: string,
+  type: string,
+  geo: string,
+  id = name
+) => ({
+  id,
+  name: { jsonValue: createMockField(name) },
+  locationType: { jsonValue: createMockField(type) },
+  GEO: { jsonValue: createMockField(geo) },
+});
+
+export const version1LocationSearchProps: LocationSearchProps = {
+  rendering: { componentName: 'LocationSearch', params: {} },
+  params: {},
+  page: mockPageNormal,
+  fields: {
+    data: {
+      datasource: {
+        googleMapsApiKey: '',
+        title: { jsonValue: createMockField('An unrivaled global footprint') },
+        defaultZipCode: '',
+        children: {
+          results: [
+            mockFootprintChild(
+              'Tempe Corporate Headquarters',
+              'Corporate Headquarters',
+              '33.3483,-111.9360',
+              'hq-1'
+            ),
+            mockFootprintChild('K3 Bupyeong', 'Factories', '37.5088,126.7260', 'factory-1'),
+            mockFootprintChild(
+              'San Jose Customer Support',
+              'Customer Support Centers',
+              '37.3772,-121.9253',
+              'support-1'
+            ),
+          ],
+        },
+      },
+      dealerships: {
+        results: [],
+      },
+    },
+  },
+  defaultZipCode: '',
+  googleMapsApiKey: '',
+  isPageEditing: false,
+};
+
 // Mock useSitecore contexts
 export const mockUseSitecoreNormal = {
   page: { mode: { isEditing: false } },

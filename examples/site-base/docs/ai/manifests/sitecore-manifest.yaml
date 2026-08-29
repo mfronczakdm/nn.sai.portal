@@ -1,5 +1,5 @@
 ﻿generatedAt: "2026-03-20T09:00:00Z"
-lastUpdatedAt: "2026-08-25T03:30:00Z"
+lastUpdatedAt: "2026-08-29T16:30:00Z"
 lastUpdatedBy: "cursor-agent"
 
 project:
@@ -3292,6 +3292,34 @@ lookups:
   - path: "/sitecore/content/amkor/amkor/Data"
     itemId: "{F48777EF-EC88-4406-B6D8-D05BF1742F78}"
     lastReadAt: "2026-08-25T02:00:00Z"
+  - path: "/sitecore/content/amkor/amkor/Data/HeroST"
+    itemId: "{4D947028-954E-4464-B969-41ED9184990E}"
+    lastReadAt: "2026-08-29T15:30:00Z"
+    note: "HeroST Folder — reusable HeroST datasource picker location for amkor site"
+  - path: "/sitecore/content/amkor/amkor/Data/MultiPromos"
+    itemId: "{EC7F7306-B6D1-459B-B150-66D7C8CAEE08}"
+    lastReadAt: "2026-08-29T15:40:00Z"
+    note: "MultiPromo Folder — preexisting Amkor datasource picker location"
+  - path: "/sitecore/content/amkor/amkor/Data/HeroCarousels"
+    itemId: "{E8544567-48B8-46AD-B8DB-B7107FA9AF9C}"
+    lastReadAt: "2026-08-29T16:00:00Z"
+    note: "HeroCarousel Folder — reusable HeroCarousel datasource picker location for amkor site"
+  - path: "/sitecore/content/amkor/amkor/Presentation/Headless Variants/HeroCarousel"
+    itemId: "{D074EA35-53FA-4142-AE86-5A7264E7A49C}"
+    lastReadAt: "2026-08-29T16:00:00Z"
+    note: "Amkor HeroCarousel Headless Variants container (Default, FocusProduct, SplitPanel, Version1)"
+  - path: "/sitecore/content/amkor/amkor/Data/Locations"
+    itemId: "{F9DC4191-96BA-4E83-B6BC-601AF41ED499}"
+    lastReadAt: "2026-08-29T16:30:00Z"
+    note: "Amkor Locations folder — 30 dycom Location items (1 HQ, 10 CSC, 19 Factories)"
+  - path: "/sitecore/content/amkor/amkor/Data/Location Searches/An unrivaled global footprint"
+    itemId: "{AF9AA2C3-9CF1-49C4-9A8F-5211530F2FFF}"
+    lastReadAt: "2026-08-29T16:30:00Z"
+    note: "LocationSearch Version1 datasource — 30 child Location items for ComponentQuery children"
+  - path: "/sitecore/content/amkor/amkor/Presentation/Headless Variants/Location Search"
+    itemId: "{0E7EA654-5E01-4B3D-B5EF-B4C1B585FC3E}"
+    lastReadAt: "2026-08-29T16:30:00Z"
+    note: "Amkor LocationSearch Headless Variants — Version1 {FF24F042-30E6-4F40-BDC4-819059865005}"
   - path: "/sitecore/content/andmore/americasmart/Data"
     itemId: "{5CD5FD5C-2915-42B3-9D9E-21101F24D96D}"
     lastReadAt: "2026-08-25T02:00:00Z"
@@ -3304,7 +3332,364 @@ lookups:
     note: "New AR group for homepage kit — Renderings is silent-write; expected value is the five new rendering IDs"
 
 # Demo datasource items (AI-created content, not new component definitions)
-demoContent: []
+demoContent:
+  - name: "amkor-herost-homepage-datasources"
+    kind: "content-create"
+    category: "Banners"
+    status: "complete"
+    createdAt: "2026-08-29T15:30:00Z"
+    updatedAt: "2026-08-29T15:30:00Z"
+    siteCollection: "amkor"
+    siteName: "amkor"
+    componentName: "HeroST"
+    componentId: "{7943A20A-669D-4921-81EE-F4EC7F2E78A3}"
+    datasourceTemplateId: "{C241957A-B7CC-4BDD-962F-BF8652ED595C}"
+    sourceSite: "https://amkor.com/"
+    notes: >
+      Three reusable HeroST datasource items for Amkor homepage authoring — not new component
+      infrastructure. Created HeroST Folder under site Data (template HeroST Folder
+      {91F1954F-86D9-4859-9885-3E42E8D8A2A9}) because no HeroST Folder existed; Amkor had
+      only Hero Sections Folder (wrong template for HeroST picker). Content aligned to live
+      amkor.com homepage themes: NVIDIA AI partnership, U.S. advanced packaging facility,
+      S-Connect advanced packaging. Image1 uses genuine amkormarcomexternal Azure URLs from
+      live site masthead/tiles. Image2 inherited from HeroST template standard values (unused
+      by Default/Right/Centered variants). Home page not modified — authors select datasource
+      and variant in Pages. Suggested variants: AI Infrastructure → Centered; US Packaging →
+      Default; S-Connect → Right (or Default). Enable Dark Image rendering param when using
+      photo backgrounds.
+    folder:
+      name: "HeroST"
+      itemId: "{4D947028-954E-4464-B969-41ED9184990E}"
+      path: "/sitecore/content/amkor/amkor/Data/HeroST"
+      templateId: "{91F1954F-86D9-4859-9885-3E42E8D8A2A9}"
+    items:
+      - name: "AI Infrastructure Hero"
+        itemId: "{1ED2346C-9A76-444B-9D3B-9466A31E8BF5}"
+        path: "/sitecore/content/amkor/amkor/Data/HeroST/AI Infrastructure Hero"
+        eyebrow: "Strategic Partnership"
+        title: "Amkor and NVIDIA Partner for AI Infrastructure"
+        link1: { text: "Explore Technology", targetId: "{53463616-8870-4F0D-95C1-4371D992C7DB}", targetPath: "/sitecore/content/amkor/amkor/Home/Technology" }
+        link2: { text: "Contact Us", targetId: "{DF23610E-A0C4-4E95-A316-AB794CFF927F}", targetPath: "/sitecore/content/amkor/amkor/Home/About Us/Contact Us" }
+        image1Status: "set — Nvidia-Partnership-Banner_2000x600px_Final.jpg (live Azure CDN)"
+        suggestedVariant: "Centered"
+      - name: "US Advanced Packaging Hero"
+        itemId: "{34E6C317-6645-419F-B903-86FD13EFD889}"
+        path: "/sitecore/content/amkor/amkor/Data/HeroST/US Advanced Packaging Hero"
+        eyebrow: "U.S. Manufacturing"
+        title: "New U.S. Advanced Packaging and Test Facility"
+        link1: { text: "Explore Test Services", targetId: "{C39BC746-0C9C-4C76-A623-3DE87ED527F0}", targetPath: "/sitecore/content/amkor/amkor/Home/Test Services" }
+        link2: { text: "About Amkor", targetId: "{B6B4DA5A-F8B2-4AD1-BF08-02AADF88C82E}", targetPath: "/sitecore/content/amkor/amkor/Home/About Us/Amkor Overview" }
+        image1Status: "set — Amkor-Flag-in-Desert-Content-Tile.png (live Azure CDN)"
+        suggestedVariant: "Default"
+      - name: "S-Connect Technology Hero"
+        itemId: "{90F07F97-B0F3-4474-827C-BF5832BFCCC5}"
+        path: "/sitecore/content/amkor/amkor/Data/HeroST/S-Connect Technology Hero"
+        eyebrow: "Advanced Packaging"
+        title: "S-Connect: A Revolutionary Bridge Die Interposer Solution"
+        link1: { text: "Learn More", targetId: "{1F93ED97-C9E0-4A5E-9B79-ABA7BEFD2157}", targetPath: "/sitecore/content/amkor/amkor/Home/Technology/S-Connect" }
+        link2: { text: "Explore S-SWIFT", targetId: "{661EEBCD-90EE-4393-A085-F4FF6710A826}", targetPath: "/sitecore/content/amkor/amkor/Home/Technology/S-SWIFT" }
+        image1Status: "set — S-Connect_BG_Tile.png (live Azure CDN)"
+        suggestedVariant: "Right"
+    verification:
+      checkedAt: "2026-08-29T15:30:00Z"
+      passed:
+        - "HeroST Folder created at /sitecore/content/amkor/amkor/Data/HeroST"
+        - "All three HeroST datasource items created with template {C241957A-B7CC-4BDD-962F-BF8652ED595C}"
+        - "Eyebrow, Title, Link1, Link2 read-back verified via get_content_item_by_id"
+        - "Image1 read-back verified for all three items"
+        - "Internal link IDs resolve to existing Amkor IA pages"
+      failed: []
+      pendingManual:
+        - "Approve Draft workflow on three datasource items"
+        - "Publish /sitecore/content/amkor/amkor/Data/HeroST subtree for Edge"
+        - "Place HeroST on Home in Pages; pick one datasource per rendering instance"
+        - "Select variant (Default, Right, or Centered) per hero in Pages"
+        - "Enable Dark Image rendering param for photo backgrounds if text contrast is low"
+        - "Image2 is template SV default — clear if using Stacked variant"
+
+  - name: "amkor-multipromo-homepage-datasources"
+    kind: "content-create"
+    category: "Promos"
+    status: "complete"
+    createdAt: "2026-08-29T15:40:00Z"
+    updatedAt: "2026-08-29T15:40:00Z"
+    siteCollection: "amkor"
+    siteName: "amkor"
+    componentName: "MultiPromo"
+    renderingId: "{D806DDF7-39A7-4A6D-8E0A-D138BC53845D}"
+    datasourceTemplateId: "{775D6354-CF01-4F34-9713-D34645079C88}"
+    childTemplateId: "{F94C8C17-70E8-4D8B-9D35-D0465C0E0945}"
+    sourceSite: "https://amkor.com/"
+    notes: >
+      Four reusable MultiPromo parents (3 SimplePromo children each) for Amkor homepage
+      authoring — not new component infrastructure. Reused existing Data/MultiPromos
+      folder {EC7F7306-B6D1-459B-B150-66D7C8CAEE08}. Copy aligned to live amkor.com homepage
+      tiles (US facility, S-Connect, S-SWIFT), applications (AI/automotive/communications),
+      packaging/test/technology, and careers/blog/contact. Images are live Azure CDN URLs
+      (same assets as HeroST datasources). Home not modified. Suggested variant Version2
+      (Amkor 3-up READ MORE) for Homepage Feature Tiles; Default also works.
+    folder:
+      name: "MultiPromos"
+      itemId: "{EC7F7306-B6D1-459B-B150-66D7C8CAEE08}"
+      path: "/sitecore/content/amkor/amkor/Data/MultiPromos"
+      templateId: "{17550F13-FDE0-4FC4-9B70-67BD02AF2673}"
+      preexisting: true
+    items:
+      - name: "Homepage Feature Tiles"
+        itemId: "{EE6CCF56-05BC-4940-8B42-A5A38AD5A535}"
+        path: "/sitecore/content/amkor/amkor/Data/MultiPromos/Homepage Feature Tiles"
+        title: "Featured Technologies"
+        suggestedVariant: "Version2"
+        children:
+          - { name: "US Advanced Packaging Facility", itemId: "{5CA09D55-1B4C-495C-9359-1B7B024F3A3A}", heading: "Amkor’s New US Advanced Packaging and Test Facility", targetPath: "/sitecore/content/amkor/amkor/Home/Test Services" }
+          - { name: "S-Connect Interposer", itemId: "{F6A20A96-9B3D-41AE-A046-AA204A8B1C32}", heading: "S-Connect: A Revolutionary Bridge Die Interposer Solution", targetPath: "/sitecore/content/amkor/amkor/Home/Technology/S-Connect" }
+          - { name: "S-SWIFT Technology", itemId: "{078CCFA0-5EDD-476E-8832-E00F6C9A8788}", heading: "Advancing IC Packaging with Amkor’s S-SWIFT Technology", targetPath: "/sitecore/content/amkor/amkor/Home/Technology/S-SWIFT" }
+      - name: "Applications We Serve"
+        itemId: "{2111C5E5-39F0-4D48-A512-26685A5CDE1E}"
+        path: "/sitecore/content/amkor/amkor/Data/MultiPromos/Applications We Serve"
+        title: "Applications We Serve"
+        suggestedVariant: "Version2"
+        children:
+          - { name: "Artificial Intelligence", itemId: "{C4CEBE95-E9CB-4BB3-BBDA-F08E31BA4B1D}", heading: "Artificial Intelligence and Machine Learning", targetPath: "/sitecore/content/amkor/amkor/Home/Applications/Artificial Intelligence" }
+          - { name: "Automotive", itemId: "{D787967D-563B-4603-AB58-34DF108AF9E9}", heading: "Automotive", targetPath: "/sitecore/content/amkor/amkor/Home/Applications/Automotive" }
+          - { name: "Communications", itemId: "{9CFD2872-E4E2-4C76-8A1C-1B9CDFD2B03E}", heading: "Communications", targetPath: "/sitecore/content/amkor/amkor/Home/Applications/Communications" }
+      - name: "Packaging and Test"
+        itemId: "{52E41A3A-F8A4-4471-B35C-A4C0A1E41FB5}"
+        path: "/sitecore/content/amkor/amkor/Data/MultiPromos/Packaging and Test"
+        title: "Packaging and Test"
+        suggestedVariant: "Default"
+        children:
+          - { name: "Packaging Overview", itemId: "{126733FA-A593-4A45-B800-FDFCA7157DA2}", heading: "Packaging Overview", targetPath: "/sitecore/content/amkor/amkor/Home/Packaging" }
+          - { name: "Test Services", itemId: "{F0EC71CE-F4A7-429F-AB77-04E707929A9C}", heading: "Test Services", targetPath: "/sitecore/content/amkor/amkor/Home/Test Services" }
+          - { name: "Technology", itemId: "{52B6E228-792B-435F-BFD3-EE8E1647049F}", heading: "Technology", targetPath: "/sitecore/content/amkor/amkor/Home/Technology" }
+      - name: "Company and Careers"
+        itemId: "{AD2EADCB-12BE-46B3-84A4-2F211F51E384}"
+        path: "/sitecore/content/amkor/amkor/Data/MultiPromos/Company and Careers"
+        title: "Company and Careers"
+        suggestedVariant: "Version2"
+        children:
+          - { name: "Careers", itemId: "{97AA99A3-571F-4338-88DD-1ACC3F3D7D8E}", heading: "Want to work at Amkor?", targetPath: "/sitecore/content/amkor/amkor/Home/About Us/Careers" }
+          - { name: "Latest Blog Posts", itemId: "{ABDF775E-6ED7-443F-AF94-213994799F34}", heading: "Latest Blog Posts", targetPath: "/sitecore/content/amkor/amkor/Home/About Us/News/Blog" }
+          - { name: "Contact Us", itemId: "{930F593D-E419-4806-B487-40CE0002F3A8}", heading: "Contact Us", targetPath: "/sitecore/content/amkor/amkor/Home/About Us/Contact Us" }
+    verification:
+      checkedAt: "2026-08-29T15:40:00Z"
+      passed:
+        - "Four MultiPromo parents created under /sitecore/content/amkor/amkor/Data/MultiPromos"
+        - "Twelve SimplePromo children created (3 per parent)"
+        - "heading, description, image, link read-back verified on sample children"
+        - "Parent title/description and child lists verified via get_content_item_by_path"
+      failed: []
+      pendingManual:
+        - "Approve Draft workflow on four parents + twelve children"
+        - "Publish /sitecore/content/amkor/amkor/Data/MultiPromos for Edge"
+        - "Place MultiPromo on Home in Pages; assign one datasource per instance"
+        - "Select Version2 on Homepage Feature Tiles (Amkor 3-up READ MORE)"
+        - "Replace Azure CDN images with Content Hub DAM IDs when credentials.local.yaml is available"
+
+  - name: "amkor-herost-multipromo-headless-variants"
+    kind: "update"
+    category: "Presentation"
+    status: "complete"
+    createdAt: "2026-08-29T15:45:00Z"
+    updatedAt: "2026-08-29T15:45:00Z"
+    siteCollection: "amkor"
+    siteName: "amkor"
+    notes: >
+      Ensured Amkor Headless Variants match all React named exports for HeroST and MultiPromo.
+      HeroST already had Default/Right/Centered/SplitScreen/Stacked. MultiPromo had only
+      Default/SingleColumn/Stacked; added SideTabs, TopTabs, TopTabsNoImage, Version1, Version2.
+    heroST:
+      containerPath: "/sitecore/content/amkor/amkor/Presentation/Headless Variants/HeroST"
+      containerId: "{172DAFBD-C52D-4F63-8FC2-E7285070EC80}"
+      variants:
+        - { name: "Default", itemId: "{7CE376E8-957B-4B64-8995-21CF13D9C035}", preexisting: true }
+        - { name: "Centered", itemId: "{AA664986-ED31-4167-A011-3329C3AC6225}", preexisting: true }
+        - { name: "Right", itemId: "{D89A6B7D-2B3A-4087-90EC-766F219B99D6}", preexisting: true }
+        - { name: "SplitScreen", itemId: "{5FEBC9DF-BF19-4425-ABEE-4D0DA0D85BF0}", preexisting: true }
+        - { name: "Stacked", itemId: "{42C92EEF-A8BA-4ACB-910E-4CE417074F55}", preexisting: true }
+    multiPromo:
+      containerPath: "/sitecore/content/amkor/amkor/Presentation/Headless Variants/MultiPromo"
+      containerId: "{6888B523-05C6-4765-AE70-CE5EFDD6C38B}"
+      variants:
+        - { name: "Default", itemId: "{23889C65-EB97-472E-A801-CDE626B6D661}", preexisting: true }
+        - { name: "SingleColumn", itemId: "{BE90606C-6A9D-4643-8118-2AC537D3925F}", preexisting: true }
+        - { name: "Stacked", itemId: "{2A2A18EA-F470-491B-9AEC-3A302DB19F44}", preexisting: true }
+        - { name: "SideTabs", itemId: "{81331659-1002-4DA1-906B-95AE65D9D58E}" }
+        - { name: "TopTabs", itemId: "{E33CE5DA-33CB-4F79-B419-AFA2025AA332}" }
+        - { name: "TopTabsNoImage", itemId: "{96F0C1DF-C42C-4C4B-B24C-4AC0D15DA397}" }
+        - { name: "Version1", itemId: "{01A42D1D-362A-4A35-AC18-6A11BBD0CD79}" }
+        - { name: "Version2", itemId: "{CB060119-C9A8-4871-A790-68827ECBEFDC}" }
+    verification:
+      checkedAt: "2026-08-29T15:45:00Z"
+      passed:
+        - "HeroST container has all 5 React exports as Variant Definitions"
+        - "MultiPromo container now has all 8 React exports as Variant Definitions"
+        - "New items verified via get_content_item_by_path on MultiPromo container"
+      failed: []
+      pendingManual:
+        - "Publish Presentation/Headless Variants/MultiPromo for Edge"
+        - "In Pages, select Version2 on Amkor homepage MultiPromo instances"
+
+  - name: "amkor-herocarousel-homepage-datasources"
+    kind: "content-create"
+    category: "Banners"
+    status: "complete"
+    createdAt: "2026-08-29T15:40:00Z"
+    updatedAt: "2026-08-29T16:00:00Z"
+    siteCollection: "amkor"
+    siteName: "amkor"
+    componentName: "HeroCarousel"
+    renderingId: "{80E42F34-7012-491E-9E5E-8D2B241CDEFF}"
+    datasourceTemplateId: "{ED997A6B-FECA-4349-A58D-72535E7FEFFF}"
+    childTemplateId: "{8EF3FB89-FD2F-48B9-A8CE-20F387E0AB0A}"
+    sourceSite: "https://www.amkor.com/"
+    notes: >
+      Reused existing Quanex HeroCarousel infrastructure on Amkor. Headless Variants container
+      and four variant definitions created earlier; this session created 12 HeroCarouselSlide
+      children (3 per parent). Images use genuine amkormarcomexternal Azure CDN URLs with
+      verified width/height (NVIDIA 2000x600; facility + S-Connect tiles 370x230). S-SWIFT
+      slide uses S-Connect tile as temporary related image. Home page not modified — authors
+      select datasource and suggested variant in Pages.
+    headlessVariants:
+      containerId: "{D074EA35-53FA-4142-AE86-5A7264E7A49C}"
+      containerPath: "/sitecore/content/amkor/amkor/Presentation/Headless Variants/HeroCarousel"
+      variants:
+        - { name: "Default", itemId: "{170E394D-F359-42A4-AFF3-0A98589B8A7E}" }
+        - { name: "FocusProduct", itemId: "{5D73F212-39FA-4056-B8A4-1B8113DDF9EB}" }
+        - { name: "SplitPanel", itemId: "{0BBF7AC6-F61C-44CD-BD80-48E3D72810A9}" }
+        - { name: "Version1", itemId: "{52A42EC7-EDAF-450E-AADA-D3AF4A1FB7F7}" }
+    folder:
+      name: "HeroCarousels"
+      itemId: "{E8544567-48B8-46AD-B8DB-B7107FA9AF9C}"
+      path: "/sitecore/content/amkor/amkor/Data/HeroCarousels"
+      templateId: "{6DCC219E-2A14-4427-80A0-2621A9F6B6DD}"
+    items:
+      - name: "Amkor Homepage Highlights"
+        itemId: "{10ACEA0B-F83A-421F-924F-F285BBE415A5}"
+        path: "/sitecore/content/amkor/amkor/Data/HeroCarousels/Amkor Homepage Highlights"
+        suggestedVariant: "Version1"
+        contactLink: { targetId: "{DF23610E-A0C4-4E95-A316-AB794CFF927F}" }
+        slides:
+          - { name: "01 NVIDIA AI Partnership", itemId: "{E797D4F8-1EB7-4322-92C9-2747E2E543E6}" }
+          - { name: "02 US Advanced Packaging Facility", itemId: "{420CC159-B58A-4752-9266-2A426354D7CC}" }
+          - { name: "03 S-Connect Technology", itemId: "{FE63F4E6-6E9A-4D61-8252-C8C8024E677D}" }
+      - name: "Advanced Packaging Innovations"
+        itemId: "{B787E258-83FD-48BC-A176-895168F37BCC}"
+        path: "/sitecore/content/amkor/amkor/Data/HeroCarousels/Advanced Packaging Innovations"
+        suggestedVariant: "FocusProduct"
+        contactLink: { targetId: "{DF23610E-A0C4-4E95-A316-AB794CFF927F}" }
+        slides:
+          - { name: "01 S-Connect Bridge Technology", itemId: "{C4C3C37A-1B1D-41CA-863C-57B510FF9AD2}" }
+          - { name: "02 S-SWIFT Integration", itemId: "{6A8C51F9-13D3-4454-8128-BC37B73483D2}" }
+          - { name: "03 2-5D and 3D TSV", itemId: "{9278B5B7-736A-46B5-949A-680A2302A485}" }
+      - name: "Applications and Test Solutions"
+        itemId: "{EB291C8E-1AA0-4BC2-9357-EA872F420560}"
+        path: "/sitecore/content/amkor/amkor/Data/HeroCarousels/Applications and Test Solutions"
+        suggestedVariant: "SplitPanel"
+        contactLink: { targetId: "{DF23610E-A0C4-4E95-A316-AB794CFF927F}" }
+        slides:
+          - { name: "01 Artificial Intelligence", itemId: "{09D07196-E205-4188-9807-8359855945CE}" }
+          - { name: "02 Automotive", itemId: "{1DE51440-73A3-460B-9667-91DC21AC4C79}" }
+          - { name: "03 Test Services", itemId: "{0F0F1EB8-20EB-4D8F-A4F6-5FBEBEC88075}" }
+      - name: "Global Company and Careers"
+        itemId: "{2B77F24D-9A72-4566-B75E-954A98F85221}"
+        path: "/sitecore/content/amkor/amkor/Data/HeroCarousels/Global Company and Careers"
+        suggestedVariant: "Default"
+        contactLink: { targetId: "{DF23610E-A0C4-4E95-A316-AB794CFF927F}" }
+        slides:
+          - { name: "01 Global Footprint", itemId: "{D68C8E7D-B3F7-48C3-ACB8-C27116B51432}" }
+          - { name: "02 Careers at Amkor", itemId: "{32F217B3-7E89-4FC2-ABD3-FDDEAC699CA9}" }
+          - { name: "03 Contact Amkor", itemId: "{61B80A28-AACB-47AA-9752-5743BCC13650}" }
+    verification:
+      checkedAt: "2026-08-29T16:00:00Z"
+      passed:
+        - "Headless Variants container has Default, FocusProduct, SplitPanel, Version1"
+        - "HeroCarousels folder exists at /sitecore/content/amkor/amkor/Data/HeroCarousels"
+        - "All 4 parent carousels have exactly 3 slides each"
+        - "SlideName, Description, Summary, Image, Link, IsIntroSlide, ImageOnLeft read-back verified via get_content_item_by_id"
+        - "Internal link IDs resolve to existing Amkor IA pages"
+        - "Image XML includes verified width/height for all CDN images"
+      failed: []
+      pendingManual:
+        - "Approve Draft workflow on datasource items if applicable"
+        - "Publish Data/HeroCarousels and Presentation/Headless Variants/HeroCarousel for Edge"
+        - "Place HeroCarousel on Home; select datasource + suggested variant per carousel"
+        - "Replace temporary CDN images with DAM assets when credentials available"
+        - "Optional: confirm slide __Sortorder (01/02/03 prefix should sort correctly)"
+
+  - name: "amkor-location-footprint-map"
+    kind: "content-create"
+    category: "Location Search"
+    status: "complete"
+    createdAt: "2026-08-29T16:00:00Z"
+    updatedAt: "2026-08-29T16:30:00Z"
+    siteCollection: "amkor"
+    siteName: "amkor"
+    componentName: "LocationSearch"
+    renderingId: "{422E6817-A63D-4291-A735-C43CAF943EBE}"
+    datasourceTemplateId: "{F03FD970-82A7-44E0-8B87-6EE7B2D39939}"
+    locationItemTemplateId: "{0A93F003-2EF3-4A66-9FB6-95C10B95532B}"
+    sourceSite: "https://www.amkor.com/"
+    notes: >
+      Amkor global footprint map matching live amkor.com "An unrivaled global footprint"
+      section. LocationSearch Version1 React variant (full-width world map, typed pins,
+      legend). Reused click-click-launch LocationSearch rendering + dycom Location template
+      for items (same pattern as Dycom). Created Data/Locations folder, 30 location items,
+      Location Search datasource with 30 child Location items for ComponentQuery children.
+      Home page not modified — authors add LocationSearch + select Version1 in Pages.
+    headlessVariants:
+      containerId: "{0E7EA654-5E01-4B3D-B5EF-B4C1B585FC3E}"
+      containerPath: "/sitecore/content/amkor/amkor/Presentation/Headless Variants/Location Search"
+      variants:
+        - { name: "Default", itemId: "{57D91206-1DE7-4733-B0FB-CD27C1DCB843}", preexisting: true }
+        - { name: "MapLeftTitleZipCentered", itemId: "{565C058E-1B46-4BCF-8C20-1C599DF63A3D}", preexisting: true }
+        - { name: "MapRight", itemId: "{AE3C31DC-D081-41CF-8652-FAD460B91DB7}", preexisting: true }
+        - { name: "MapRightTitleZipCentered", itemId: "{1CAB6CDB-DBE6-4766-970D-FE4090C60916}", preexisting: true }
+        - { name: "MapTopAllCentered", itemId: "{8D66AFAB-E1B7-4DAD-AF20-71A72C7B4C28}", preexisting: true }
+        - { name: "Version1", itemId: "{FF24F042-30E6-4F40-BDC4-819059865005}" }
+    locationsFolder:
+      name: "Locations"
+      itemId: "{F9DC4191-96BA-4E83-B6BC-601AF41ED499}"
+      path: "/sitecore/content/amkor/amkor/Data/Locations"
+      templateId: "{A87A00B1-E6DB-45AB-8B54-636FEC3B5523}"
+      itemCount: 30
+      byType:
+        Corporate Headquarters: 1
+        Customer Support Centers: 10
+        Factories: 19
+    datasource:
+      name: "An unrivaled global footprint"
+      itemId: "{AF9AA2C3-9CF1-49C4-9A8F-5211530F2FFF}"
+      path: "/sitecore/content/amkor/amkor/Data/Location Searches/An unrivaled global footprint"
+      title: "An unrivaled global footprint"
+      childLocationCount: 30
+      suggestedVariant: "Version1"
+    react:
+      filePath: "src/components/location-search/LocationSearch.tsx"
+      variantFiles:
+        - "src/components/location-search/LocationSearchVersion1.dev.tsx"
+        - "src/components/location-search/FootprintGoogleMap.dev.tsx"
+        - "src/components/location-search/location-footprint.utils.ts"
+      tests:
+        - "src/__tests__/location-search/LocationSearch.test.tsx"
+        - "src/__tests__/location-search/location-footprint.utils.test.ts"
+    verification:
+      checkedAt: "2026-08-29T16:30:00Z"
+      passed:
+        - "Version1 Headless Variant Definition created on Amkor"
+        - "30 Location items in Data/Locations with Name, Type, GEO from amkor.com contact page"
+        - "Location Search datasource with title + 30 child Location items"
+        - "React Version1 export; Default unchanged"
+        - "Jest location-search suite 51 passed"
+        - "Pin types: HQ orange #D4A017, Factory teal #2D8B8B, Support purple #7B3F6B"
+      failed: []
+      pendingManual:
+        - "Publish Data/Locations, Data/Location Searches, Presentation/Headless Variants/Location Search for Edge"
+        - "Place LocationSearch on target page in Pages; select variant Version1"
+        - "Assign datasource An unrivaled global footprint"
+        - "Set NEXT_PUBLIC_GOOGLE_MAPS_API_KEY in rendering host env for live map tiles"
+        - "Approve Draft workflow on datasource + location items if applicable"
+        - "FieldNames variant must be set in Pages (set_component_datasource variantId is personalization, not Headless Variants)"
 
 # Information architecture / page creation batches
 ia:
@@ -5986,10 +6371,11 @@ ia:
     category: "Banners"
     status: "complete"
     createdAt: "2026-08-13T12:50:00Z"
-    updatedAt: "2026-08-19T23:15:00Z"
+    updatedAt: "2026-08-29T16:00:00Z"
     siteName: "quanex"
     siteCollection: "quanex"
     notes:
+      - "2026-08-29: Amkor HeroCarousel Headless Variants container + 4 variant definitions (Default, FocusProduct, SplitPanel, Version1) created; HeroCarousels folder + 4 parent datasources + 12 slides. See demoContent amkor-herocarousel-homepage-datasources. React exports Version1 (already in HeroCarousel.tsx)."
       - "2026-08-13: Quanex homepage hero carousel (intro brand slide + left CTA card slides + right Contact Us/dots rail). Created under Project/quanex despite docs/ai/config/project.yaml pointing at progressive/pkm — design + content tree are quanex."
       - "AE018465-4E68-4A49-8B15-9702274FA75A is click-click-launch Hero (badge/title/image/description/bannerText/bannerCTA/searchLink), NOT a slide child template. New HeroCarouselSlide created instead (SlideName/Description/Summary + Image/Link/IsIntroSlide)."
       - "SlideName used instead of Name (collision-prone). Display Title remains Name for authors."
@@ -6005,6 +6391,7 @@ ia:
         - "Default"
         - "FocusProduct"
         - "SplitPanel"
+        - "Version1"
     templates:
       parent:
         name: "HeroCarousel"
@@ -6068,6 +6455,7 @@ ia:
         - { siteName: "era", path: "/sitecore/content/quanex/era/Data/HeroCarousels", itemId: "{3C0B98D1-7F79-4C00-9655-C732E5A4F8D2}" }
         - { siteName: "amesburytruth", path: "/sitecore/content/quanex/amesburytruth/Data/HeroCarousels", itemId: "{7FAD9903-66A3-4357-B57C-5DAD1E295416}" }
         - { siteName: "dfs", path: "/sitecore/content/dfs/dfs/Data/HeroCarousels", itemId: "{FC928466-98E1-46E8-9842-5FE7DD44271D}" }
+        - { siteName: "amkor", path: "/sitecore/content/amkor/amkor/Data/HeroCarousels", itemId: "{E8544567-48B8-46AD-B8DB-B7107FA9AF9C}" }
       dfsPortalHeroCarousels:
         - name: "Chipotle Portal Hero"
           itemId: "{61979ED4-3BAD-49C2-AF3D-0D725DF1884A}"
@@ -6131,6 +6519,14 @@ ia:
           - { name: "Default", itemId: "{453D5D4E-D9C0-4B99-8099-CD6E66584D3F}" }
           - { name: "FocusProduct", itemId: "{D477F40A-6C82-40B2-AEAC-4F2F8DB5F03A}" }
           - { name: "SplitPanel", itemId: "{DFC20993-D8F0-44B4-BA5C-846540B4E0EC}" }
+      amkor:
+        containerPath: "/sitecore/content/amkor/amkor/Presentation/Headless Variants/HeroCarousel"
+        containerId: "{D074EA35-53FA-4142-AE86-5A7264E7A49C}"
+        variants:
+          - { name: "Default", itemId: "{170E394D-F359-42A4-AFF3-0A98589B8A7E}" }
+          - { name: "FocusProduct", itemId: "{5D73F212-39FA-4056-B8A4-1B8113DDF9EB}" }
+          - { name: "SplitPanel", itemId: "{0BBF7AC6-F61C-44CD-BD80-48E3D72810A9}" }
+          - { name: "Version1", itemId: "{52A42EC7-EDAF-450E-AADA-D3AF4A1FB7F7}" }
     sitecoreEnvironments:
       dfs:
         siteName: "dfs"
@@ -7632,6 +8028,82 @@ ia:
       - "Generic DFS restaurant-manager mock content — not Chipotle/Taco Bell specific"
       - "PortalPageDetail.tsx unchanged; existing not-prose body wrapper handles RTE layout HTML"
 
+  - name: "LocationSearch"
+    kind: "update"
+    category: "Location Search"
+    status: "complete"
+    createdAt: "2026-03-20T09:00:00Z"
+    updatedAt: "2026-08-29T16:30:00Z"
+
+    react:
+      filePath: "src/components/location-search/LocationSearch.tsx"
+      componentMapKey: "LocationSearch"
+      variants:
+        - "Default"
+        - "MapRight"
+        - "MapTopAllCentered"
+        - "MapRightTitleZipCentered"
+        - "MapLeftTitleZipCentered"
+        - "Version1"
+      note: "Version1 added 2026-08-29 — Amkor-style global footprint map (centered navy heading, full-width map, typed pins, legend). Default and other variants unchanged."
+
+    rendering:
+      name: "LocationSearch"
+      path: "/sitecore/layout/Renderings/Project/click-click-launch/Location Search/Location Search"
+      itemId: "{422E6817-A63D-4291-A735-C43CAF943EBE}"
+      componentName: "LocationSearch"
+      datasourceTemplatePath: "/sitecore/templates/Project/click-click-launch/Components/Location Search/Location Search"
+      datasourceTemplateId: "{F03FD970-82A7-44E0-8B87-6EE7B2D39939}"
+      datasourceLocationQuery: "query:$site/*[@@name='Data']/*[@@name='Locations']|query:$sharedSites/*[@@name='Data']/*[@@name='Locations']|query:$site/*[@@name='Data']/*[@@templatename='Location Search Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='Location Search Folder']"
+      componentQuery: "preexisting — datasource children (Location items) + dealership search for Default zipcode flow"
+
+    templates:
+      datasource:
+        name: "Location Search"
+        path: "/sitecore/templates/Project/click-click-launch/Components/Location Search/Location Search"
+        itemId: "{F03FD970-82A7-44E0-8B87-6EE7B2D39939}"
+        fields:
+          - { name: "title", type: "Single-Line Text" }
+      locationItem:
+        name: "Location"
+        path: "/sitecore/templates/Project/dycom/Location"
+        itemId: "{0A93F003-2EF3-4A66-9FB6-95C10B95532B}"
+        fields:
+          - { name: "Name", type: "Single-Line Text" }
+          - { name: "Type", type: "Single-Line Text" }
+          - { name: "GEO", type: "Single-Line Text" }
+          - { name: "Street Address", type: "Single-Line Text" }
+          - { name: "City", type: "Single-Line Text" }
+          - { name: "State", type: "Single-Line Text" }
+          - { name: "ZIP", type: "Single-Line Text" }
+
+    headlessVariantsAmkor:
+      containerPath: "/sitecore/content/amkor/amkor/Presentation/Headless Variants/Location Search"
+      containerId: "{0E7EA654-5E01-4B3D-B5EF-B4C1B585FC3E}"
+      variants:
+        - { name: "Default", itemId: "{57D91206-1DE7-4733-B0FB-CD27C1DCB843}", preexisting: true }
+        - { name: "MapLeftTitleZipCentered", itemId: "{565C058E-1B46-4BCF-8C20-1C599DF63A3D}", preexisting: true }
+        - { name: "MapRight", itemId: "{AE3C31DC-D081-41CF-8652-FAD460B91DB7}", preexisting: true }
+        - { name: "MapRightTitleZipCentered", itemId: "{1CAB6CDB-DBE6-4766-970D-FE4090C60916}", preexisting: true }
+        - { name: "MapTopAllCentered", itemId: "{8D66AFAB-E1B7-4DAD-AF20-71A72C7B4C28}", preexisting: true }
+        - { name: "Version1", itemId: "{FF24F042-30E6-4F40-BDC4-819059865005}" }
+
+    verification:
+      checkedAt: "2026-08-29T16:30:00Z"
+      passed:
+        - "Version1 React export + FootprintGoogleMap + location-footprint.utils"
+        - "Amkor Headless Variant Version1 {FF24F042-30E6-4F40-BDC4-819059865005}"
+        - "Default/MapRight/MapTopAllCentered variants unchanged"
+        - "Jest location-search 51 passed"
+      failed: []
+      pendingManual:
+        - "Publish Amkor Headless Variants/Location Search for Edge"
+        - "Google Maps API key required for map tiles in preview/production"
+        - "See demoContent amkor-location-footprint-map for datasource + locations"
+
+    notes:
+      - "2026-08-29: Version1 cosmetic variant for Amkor global footprint map. Reads datasource.title + children.results from ComponentQuery. Pin colors: HQ #D4A017, Factory #2D8B8B, Support #7B3F6B."
+
   - name: "HeaderST"
     kind: "update"
     category: "Global Elements"
@@ -9068,7 +9540,21 @@ homepageKit:
         - "Approve Draft workflow on Home/Data/MultiPromo"
         - "set_component_datasource variantId cannot set Headless Variants (404); FieldNames must be set in Pages"
 
+    headlessVariantsAmkor:
+      containerPath: "/sitecore/content/amkor/amkor/Presentation/Headless Variants/MultiPromo"
+      containerId: "{6888B523-05C6-4765-AE70-CE5EFDD6C38B}"
+      variants:
+        - { name: "Default", itemId: "{23889C65-EB97-472E-A801-CDE626B6D661}", preexisting: true }
+        - { name: "SingleColumn", itemId: "{BE90606C-6A9D-4643-8118-2AC537D3925F}", preexisting: true }
+        - { name: "Stacked", itemId: "{2A2A18EA-F470-491B-9AEC-3A302DB19F44}", preexisting: true }
+        - { name: "SideTabs", itemId: "{81331659-1002-4DA1-906B-95AE65D9D58E}" }
+        - { name: "TopTabs", itemId: "{E33CE5DA-33CB-4F79-B419-AFA2025AA332}" }
+        - { name: "TopTabsNoImage", itemId: "{96F0C1DF-C42C-4C4B-B24C-4AC0D15DA397}" }
+        - { name: "Version1", itemId: "{01A42D1D-362A-4A35-AC18-6A11BBD0CD79}" }
+        - { name: "Version2", itemId: "{CB060119-C9A8-4871-A790-68827ECBEFDC}" }
+
     notes:
+      - "2026-08-29: Amkor Headless Variants completed — added SideTabs, TopTabs, TopTabsNoImage, Version1, Version2. HeroST already had all 5 exports."
       - "2026-08-25: Added MultiPromo Version1 (LCMC teal/white split + optional portrait/arc). Headless Variants on lcmc, site-base, and pkm. ShowBackgroundImage RP checkbox defaults off."
       - "2026-08-25: Implemented Version1 React export. Added BackgroundImage Image field on shared MultiPromo datasource template (empty SV). Updated ComponentQuery. Added MultiPromo to LCMC Home; variant selection still requires Pages."
 
