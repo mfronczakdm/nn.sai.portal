@@ -3,6 +3,11 @@
 import React, { useEffect, useState, type JSX } from 'react';
 import { Link as ContentSdkLink, Text, LinkField, TextField, useSitecore } from '@sitecore-content-sdk/nextjs';
 import Link from 'next/link';
+import {
+  useMegaMenuCascade,
+  useMegaMenuCascadeL1Scope,
+  type CascadeLinkItem,
+} from '@/components/site-three/MegaMenuCascade';
 
 type ResultsFieldLink = {
   field: {
@@ -34,6 +39,39 @@ type LinkListItemProps = {
   total: number;
   field: LinkField;
 };
+
+function toCascadeLink(field: LinkField, index: number): CascadeLinkItem | null {
+  const href = field?.value?.href?.trim();
+  const text = field?.value?.text?.trim();
+  if (!href || !text) return null;
+  const external = field?.value?.linktype === 'external' || /^https?:\/\//i.test(href);
+  return {
+    id: `${href}-${index}`,
+    text,
+    href,
+    external,
+  };
+}
+
+function useRegisterCascadePrimaryLinks(links: CascadeLinkItem[]) {
+  const cascade = useMegaMenuCascade();
+  const l1Id = useMegaMenuCascadeL1Scope();
+
+  useEffect(() => {
+    if (!cascade?.enabled || !l1Id) return;
+    cascade.setL1PrimaryLinks(l1Id, links);
+  }, [cascade, l1Id, links]);
+}
+
+function useRegisterCascadeSecondaryGroup(title: string, links: CascadeLinkItem[]) {
+  const cascade = useMegaMenuCascade();
+  const l1Id = useMegaMenuCascadeL1Scope();
+
+  useEffect(() => {
+    if (!cascade?.enabled || !l1Id || !title) return;
+    cascade.addL1SecondaryGroup(l1Id, { title, links });
+  }, [cascade, l1Id, title, links]);
+}
 
 const LinkListItem = (props: LinkListItemProps & { isPageEditing?: boolean }) => {
   const { page } = useSitecore();
@@ -279,6 +317,19 @@ export const HeaderPrimaryLinks = (props: LinkListProps): JSX.Element => {
   const datasource = props.fields?.data?.datasource;
   const styles = `font-[inherit] ${props.params.styles}`.trimEnd();
   const id = props.params.RenderingIdentifier;
+  const cascade = useMegaMenuCascade();
+  const cascadeLinks =
+    datasource?.children?.results
+      ?.map((element: ResultsFieldLink, index: number) =>
+        element?.field?.link ? toCascadeLink(element.field.link, index) : null
+      )
+      .filter((link): link is CascadeLinkItem => link != null) ?? [];
+
+  useRegisterCascadePrimaryLinks(cascadeLinks);
+
+  if (cascade?.enabled && !isPageEditing) {
+    return <div className="hidden" aria-hidden="true" />;
+  }
 
   if (datasource) {
     const list = datasource.children.results
@@ -324,6 +375,20 @@ export const HeaderSecondaryLinks = (props: LinkListProps): JSX.Element => {
   const datasource = props.fields?.data?.datasource;
   const styles = `font-[inherit] ${props.params.styles}`.trimEnd();
   const id = props.params.RenderingIdentifier;
+  const cascade = useMegaMenuCascade();
+  const groupTitle = datasource?.field?.title?.value?.trim() ?? '';
+  const cascadeLinks =
+    datasource?.children?.results
+      ?.map((element: ResultsFieldLink, index: number) =>
+        element?.field?.link ? toCascadeLink(element.field.link, index) : null
+      )
+      .filter((link): link is CascadeLinkItem => link != null) ?? [];
+
+  useRegisterCascadeSecondaryGroup(groupTitle, cascadeLinks);
+
+  if (cascade?.enabled && !isPageEditing) {
+    return <div className="hidden" aria-hidden="true" />;
+  }
 
   if (datasource) {
     const list = datasource.children.results

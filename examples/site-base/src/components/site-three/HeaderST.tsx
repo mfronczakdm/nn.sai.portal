@@ -15,6 +15,7 @@ import { MiniCart } from './non-sitecore/MiniCart';
 import { HeaderPreviewSearch } from './non-sitecore/HeaderPreviewSearch';
 import { ComponentProps } from 'lib/component-props';
 import { MobileMenuWrapper } from './MobileMenuWrapper';
+import { MegaMenuCascadeProvider } from './MegaMenuCascade';
 import { HeaderSTAuthControls, useHeaderSTNavigationVisibility } from './HeaderSTAuthControls';
 import { cn } from '@/lib/utils';
 
@@ -394,46 +395,20 @@ const HeaderSTVersion1View = (props: HeaderSTViewProps) => {
               <MobileMenuWrapper
                 alwaysVisible
                 label="MENU"
+                darkPanel
                 className="bg-[var(--color-header-menu,var(--color-foreground))]"
                 buttonClassName="h-full gap-2.5 px-5 py-0 text-[color:var(--color-header-foreground,var(--color-background))] hover:opacity-90"
                 labelClassName="inline text-[0.8125rem] font-bold tracking-[0.16em]"
                 panelClassName="top-[6.25rem] h-[calc(100vh-6.25rem)]"
               >
-                <div className="flex h-full w-full flex-col">
-                  <div className="flex flex-1 items-center justify-center">
-                    <ul className="flex w-full flex-col bg-background text-center text-foreground">
-                      <AppPlaceholder
-                        name={`header-navigation-${params?.DynamicPlaceholderId}`}
-                        rendering={props.rendering}
-                        page={props.page}
-                        componentMap={componentMap}
-                      />
-                    </ul>
-                  </div>
-                  <div className="w-full">
-                    <hr className="w-full border-border" />
-                    <ul className="text-center">
-                      {version1UtilityLinks.map((link) => (
-                        <li key={link.text}>
-                          <Version1HardcodedLink
-                            text={link.text}
-                            href={link.href}
-                            className={navLinkClass}
-                          />
-                        </li>
-                      ))}
-                      {showSupportLink ? (
-                        <li>
-                          <ContentSdkLink
-                            field={fields?.SupportLink}
-                            prefetch={false}
-                            className={navLinkClass}
-                          />
-                        </li>
-                      ) : null}
-                    </ul>
-                  </div>
-                </div>
+                <MegaMenuCascadeProvider enabled>
+                  <AppPlaceholder
+                    name={`header-navigation-${params?.DynamicPlaceholderId}`}
+                    rendering={props.rendering}
+                    page={props.page}
+                    componentMap={componentMap}
+                  />
+                </MegaMenuCascadeProvider>
               </MobileMenuWrapper>
             ) : null}
 

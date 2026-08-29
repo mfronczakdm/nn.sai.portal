@@ -1,5 +1,5 @@
 ﻿generatedAt: "2026-03-20T09:00:00Z"
-lastUpdatedAt: "2026-08-29T16:30:00Z"
+lastUpdatedAt: "2026-08-29T18:00:00Z"
 lastUpdatedBy: "cursor-agent"
 
 project:
@@ -8238,7 +8238,8 @@ ia:
         - "site-base HeaderST Headless Variants + Default/LoginRequired/Version1/Version2 verified"
         - "Version3 added on pkm, site-base, and lcmc; verified via get_content_item_by_path"
         - "lcmc HeaderST Headless Variants container created with Default/LoginRequired/Version1/Version2/Version3"
-        - "HeaderST.test.tsx 54 tests passed including Version3 (layout, search bar, HideCart)"
+        - "HeaderST.test.tsx + MegaMenuCascade.test.tsx cascade column tests passed (88 total with HeaderST)"
+        - "2026-08-29: Amkor Header Partial Design mega menus remapped to Home IA L1 (About Us, Packaging, Technology, Test Services, Services, Applications, Quality)"
       failed: []
       pendingManual:
         - "Select Version3 on lcmc Header partial design HeaderST rendering in Pages"
@@ -8257,6 +8258,7 @@ ia:
         - "Optional: add postLogoutRedirect to HeaderST rendering parameters template"
 
     notes:
+      - "2026-08-29: Version1 cascade megamenu (MegaMenuCascade.tsx). MENU opens dark overlay; L1 column → L2 → L3 (Careers countries split). MegaMenuItem Default + LinkList HeaderPrimaryLinks/HeaderSecondaryLinks register into cascade when MegaMenuCascadeProvider wraps header-navigation (Version1 only). MobileMenuWrapper exports useMobileMenu + darkPanel. Default/Version2/Version3 unchanged."
       - "2026-08-26: Version1 pixel-perfect to amkor.com. Two-tone Amkor tokens (--color-header-utility #4E4E4E top, --color-header-background #1E1E1E main, --color-header-menu #111 MENU box, --color-header-muted SEARCH...). Version1-hardcoded langs (English current / 한국어 / 日本語 / 简体中文 → amkor.com/kr|/jp|/cn) and six utility links (Document Library, Factory Certs, Investors, Cloud Services, Careers, Contact Us) — no new datasource fields. SupportLink skipped when it duplicates a utility label. HideCart still honored. Logo mix-blend lighten on [data-theme=amkor] Version1 to drop a baked-in black plate; authors should still upload Amkor-white.svg. Default/Version2/Version3 unchanged. Code-only."
       - "2026-08-25: Version3 L1 clip was CSS, not missing Sitecore items. MCP get_components_on_page on LCMC Header {7D1AB59C-D03F-420A-AE9B-D97F511CF28E} confirmed 5 MegaMenuItem renderings in header-navigation-1 (Speakers/Headphones/Amps/Pro/Artist Services). shrink-0 + nowrap + ml-auto + min-w-0 parent overflowed LEFT under the logo (relative z-10); compact padding only targeted a, while MegaMenuToggle uses span.p-4. Fix: nav column flex-1, drop shrink-0/ml-auto, overflow-visible, compact a/span/button, force li w-auto/basis-auto. Did not use overflow-x-auto (would trap lg:absolute mega menus). Default/Version1/Version2 unchanged. HeaderST.test.tsx Version3 nowrap + not overflow-hidden."
       - "2026-08-25: Version3 primary nav no longer uses flex-wrap/min-w-0. Those classes let the ul shrink until each MegaMenuItem sat on its own line. Primary ul is now flex-nowrap shrink-0; utility row may still wrap. Logo/gap/search min-width lg tuning kept so the row cannot slide under the logo at 1024px. Partial-editing-mode !flex-col is unchanged."
@@ -8823,6 +8825,49 @@ ia:
         - "Publish /sitecore/content/andmore/atlanta-apparel/Home subtree for Edge"
         - "Wire navigation to new IA pages; starter Speakers/Video left in tree"
         - "Display names for Childrens/Mens still show item names; titles kept Children's/Men's"
+
+  - name: "amkor-header-cascade-megamenu"
+    kind: "content-update"
+    category: "Navigation"
+    status: "complete"
+    createdAt: "2026-08-29T18:00:00Z"
+    updatedAt: "2026-08-29T18:00:00Z"
+    siteName: "amkor"
+    siteCollection: "amkor"
+    notes: >
+      Remapped Amkor Header Partial Design mega menus + LinkLists to Home IA for Version1 cascade
+      megamenu. React: MegaMenuCascade.tsx + HeaderST Version1 MENU overlay. L1 megas (starter
+      Speakers/Headphones/Amps/Pro/Artist Services retitled): About Us, Packaging, Technology,
+      Test Services, Services; added Applications + Quality components. About Us primary 13 links +
+      secondary Careers (12 countries), News (Blog), Customer Center (3 links). Packaging primary
+      Laminate/Leadframe/Memory/MEMS/Power (+ more L2 pending author). Publish Header PD + Data for Edge.
+    relatedItems:
+      headerPartialDesignId: "{1A12281C-993B-4097-AB06-5A1849784F7E}"
+      headerDataFolderId: "{45493019-F268-4CF4-9BC1-F23C9E6DFC40}"
+      megaMenus:
+        - { itemName: "Speakers", title: "About Us", itemId: "{31AD7DBB-CB85-478E-8964-CAB33D36B82B}", pageId: "{86E9AAED-39B1-4E89-9E41-9C3E778F8E1D}" }
+        - { itemName: "Headphones", title: "Packaging", itemId: "{44E6D296-49CA-4AD2-B8C9-F6F1085EF529}", pageId: "{CFF1B3A2-45C1-44F9-8411-32C55F316627}" }
+        - { itemName: "Amps", title: "Technology", itemId: "{B360D712-0ED3-4DF2-A27A-AFC47827EF4A}", pageId: "{53463616-8870-4F0D-95C1-4371D992C7DB}" }
+        - { itemName: "Pro", title: "Test Services", itemId: "{2276E4D3-3234-4AC6-AB25-515F73A5611D}", pageId: "{C39BC746-0C9C-4C76-A623-3DE87ED527F0}" }
+        - { itemName: "Artist Services", title: "Services", itemId: "{064532F1-C321-4BD4-87A9-D06A88B36402}", pageId: "{E1435CB8-EDE6-4A86-911F-58CB91C3300D}" }
+        - { itemName: "Applications", title: "Applications", itemId: "{23698738-6225-468E-8CA7-680C76B3F4E9}", pageId: "{20E5730D-E035-4835-B224-BD494A0F3C99}" }
+        - { itemName: "Quality", title: "Quality", itemId: "{D7A4667E-B2AC-48DF-93FE-94654A065F8C}", pageId: "{518DF9E7-844E-413A-9F74-42108EFEE527}" }
+      aboutUsPrimaryLinks: "{00549EC3-E9B2-4B1B-9157-8A85633B9FF7}"
+      careersCountries: "{D26400BE-7189-4B25-8223-AC7503EE92F2}"
+      newsSecondary: "{F449D25B-E169-47DB-927E-1E41367FCE7C}"
+      customerCenterSecondary: "{BA9677AA-DCFB-4A32-867F-BB464360039B}"
+    verification:
+      checkedAt: "2026-08-29T18:00:00Z"
+      passed:
+        - "MegaMenuCascade.test.tsx L1/L2/L3 column cascade tests"
+        - "HeaderST Version1 MENU + cascade provider wiring"
+        - "About Us / Packaging / Technology / Services mega Title+Link updated"
+        - "About Us primary 13 links + Careers 12 countries + News Blog + Customer Center 3 links"
+        - "Applications + Quality MegaMenuItem components added on Header partial"
+      pendingManual:
+        - "Publish /sitecore/content/amkor/amkor/Presentation/Partial Designs/Global/Header for Edge"
+        - "Wire Applications Primary LinkList component on mega-menu-item-primary-links-8 in Pages if L2 empty"
+        - "Complete Packaging L2 links 5-7 (Power, SiP, Wafer Level) and Technology/Services/Applications primary lists"
 
   - name: "amkor-ia-tree"
     kind: "ia-create"
@@ -9557,4 +9602,158 @@ homepageKit:
       - "2026-08-29: Amkor Headless Variants completed — added SideTabs, TopTabs, TopTabsNoImage, Version1, Version2. HeroST already had all 5 exports."
       - "2026-08-25: Added MultiPromo Version1 (LCMC teal/white split + optional portrait/arc). Headless Variants on lcmc, site-base, and pkm. ShowBackgroundImage RP checkbox defaults off."
       - "2026-08-25: Implemented Version1 React export. Added BackgroundImage Image field on shared MultiPromo datasource template (empty SV). Updated ComponentQuery. Added MultiPromo to LCMC Home; variant selection still requires Pages."
+
+  - name: "amkor-blog-content"
+    kind: "content-update"
+    category: "IA"
+    status: "complete"
+    createdAt: "2026-08-29T16:10:00Z"
+    updatedAt: "2026-08-29T16:20:00Z"
+    siteName: "amkor"
+    siteCollection: "amkor"
+    contentRootPath: "/sitecore/content/amkor/amkor/Home/About Us/News/Blog"
+    blogParentId: "{893BBB60-2B8C-4A97-BB8E-541E744F2B33}"
+    pageTemplateId: "{B2B918C3-ACDA-433F-A11B-718466493AEC}"
+    sourceSite: "https://amkor.com/blog/"
+    notes: >
+      Created 10 Services Page blog items under Blog parent from live amkor.com/blog listing
+      (titles, dates, og:description summaries, Azure CDN hero images). No invented DAM IDs.
+    blogPages:
+      - { title: "Amkor Joins Arizona Economic Delegation to the Republic of Korea", itemId: "{09F401A4-FAE0-42CE-B69A-A616D507E187}", path: "/sitecore/content/amkor/amkor/Home/About Us/News/Blog/Arizona Korea Semiconductor Delegation", date: "August 13, 2026" }
+      - { title: "Amkor Technology Launches Semiconductor Educator Bootcamp to Strengthen Future Workforce Pipeline", itemId: "{620CDBA1-8F9D-4B45-BCC2-6F89BFFD78C0}", path: "/sitecore/content/amkor/amkor/Home/About Us/News/Blog/Amkor Semiconductor Educator Bootcamp", date: "June 8, 2026" }
+      - { title: "Amkor Showcases Next-Gen Packaging and U.S. Expansion at ECTC 2026", itemId: "{0227D955-DE71-4AA4-B1BD-EC944EAC53D8}", path: "/sitecore/content/amkor/amkor/Home/About Us/News/Blog/Amkor ECTC 2026 Advanced Packaging", date: "June 5, 2026" }
+      - { title: "Amkor Technology Concludes 2026 Investor Day with Nasdaq Closing Bell Ceremony", itemId: "{71F8E54C-5557-4BFD-B869-CB79994E42CA}", path: "/sitecore/content/amkor/amkor/Home/About Us/News/Blog/Amkor 2026 Investor Day Nasdaq", date: "May 29, 2026" }
+      - { title: "Amkor's Peoria Project Recognized as the Number One Deal in North America", itemId: "{8C43BF43-1FA2-42CA-B535-D18A528B0BAC}", path: "/sitecore/content/amkor/amkor/Home/About Us/News/Blog/Amkor Peoria Number One Deal North America", date: "May 13, 2026" }
+      - { title: "Amkor Technology Receives Kioxia's Best Partner Award", itemId: "{D7EEDC9A-29E8-4522-86F4-ED8FAF88CB23}", path: "/sitecore/content/amkor/amkor/Home/About Us/News/Blog/Amkor Receives Kioxia Best Partner Award", date: "January 29, 2026" }
+      - { title: "Amkor Earns Environmental Leadership Recognition from CDP", itemId: "{0C088EBE-1D07-45D5-91B5-6567AD0D7AAC}", path: "/sitecore/content/amkor/amkor/Home/About Us/News/Blog/Amkor Earns Environmental Leadership CDP", date: "January 21, 2026" }
+      - { title: "Arizona's Next Chip Leaders: CUSD's SEMI CTE Program Takes Off", itemId: "{172CA403-7A83-4003-8ABF-F3C174C4D2F8}", path: "/sitecore/content/amkor/amkor/Home/About Us/News/Blog/Arizona Next Chip Leaders CUSD SEMI CTE", date: "January 16, 2026" }
+      - { title: "Building the Talent Pipeline with West-MEC Advanced Manufacturing Students", itemId: "{EDDB8EF0-8C38-401C-92F5-F618A696A6ED}", path: "/sitecore/content/amkor/amkor/Home/About Us/News/Blog/Building Talent Pipeline West-MEC Students", date: "December 4, 2025" }
+      - { title: "Amkor Technology Vietnam Honored with Industry Award and Highlights Innovation at SEMIExpo Vietnam", itemId: "{41A8A937-48E6-49A9-A547-F5656A9AD18F}", path: "/sitecore/content/amkor/amkor/Home/About Us/News/Blog/Amkor Vietnam Industry Award SEMIExpo 2025", date: "November 14, 2025" }
+    verification:
+      checkedAt: "2026-08-29T16:20:00Z"
+      passed:
+        - "10 blog pages created under Blog parent with Services Page template"
+        - "Live amkor.com titles, dates, excerpts, and CDN image URLs"
+      failed: []
+      pendingManual:
+        - "Publish Blog subtree for Edge"
+        - "Verify pageTitle/pageSubtitle silent-write fields in Content Editor"
+
+  - name: "amkor-blog-listing"
+    kind: "content-wiring"
+    category: "Insights"
+    status: "complete"
+    createdAt: "2026-08-29T16:20:00Z"
+    updatedAt: "2026-08-29T16:25:00Z"
+    siteName: "amkor"
+    siteCollection: "amkor"
+    notes: >
+      Reused Pillsbury BlogListing rendering/template on amkor site (not duplicated under Project/amkor).
+      BlogsRoot Droptree lists children of Blog folder. ShowFilters off for Amkor.
+    rendering:
+      path: "/sitecore/layout/Renderings/Project/pillsbury/Insights/BlogListing"
+      itemId: "{8278F36C-8492-4641-A401-9C19AA69D08A}"
+      registeredOnAmkorAvailableRenderings: true
+    datasourceFolder:
+      path: "/sitecore/content/amkor/amkor/Data/Blog Listings"
+      itemId: "{749AC59C-FC4A-4D8C-BD35-72DA59971BB0}"
+      templateId: "{FADF27CB-F64D-4406-B1E2-09DAAED54D82}"
+    datasource:
+      itemId: "{BCA09BD3-B05F-4916-B1BD-EB9D4C5FB29C}"
+      path: "/sitecore/content/amkor/amkor/Data/Blog Listings"
+      blogsRoot: "{893BBB60-2B8C-4A97-BB8E-541E744F2B33}"
+    variants:
+      containerPath: "/sitecore/content/amkor/amkor/Presentation/Headless Variants/BlogListing"
+      containerId: "{422D471E-280F-4FCF-99FF-DD31DA990F03}"
+      definitions:
+        - { name: "Default", itemId: "{62DDB88F-3B76-46CA-ACDB-328556E73F87}" }
+        - { name: "Cards", itemId: "{17BE22E6-363D-476D-B22D-077790392C67}" }
+    pagePlacement:
+      pagePath: "/sitecore/content/amkor/amkor/Home/About Us/News/Blog"
+      pageId: "{893BBB60-2B8C-4A97-BB8E-541E744F2B33}"
+      placeholder: "headless-main"
+      instanceId: "{3227E99D-6BC6-43CA-B2A6-4C13F1A605DF}"
+      variant: "Cards"
+      datasourceId: "{BCA09BD3-B05F-4916-B1BD-EB9D4C5FB29C}"
+    react:
+      filePath: "src/components/uiim/insights/BlogListing.tsx"
+      componentName: "BlogListing"
+    verification:
+      checkedAt: "2026-08-29T16:25:00Z"
+      passed:
+        - "BlogListing rendering registered on amkor Page Content Available Renderings"
+        - "Headless Variants Default + Cards"
+        - "Datasource BlogsRoot = Blog folder"
+        - "Component on Blog page headless-main (Cards)"
+      failed: []
+      pendingManual:
+        - "Publish Blog page + Data/Blog Listings + rendering for Edge"
+        - "Verify Available Renderings concat in CE (silent-write)"
+
+  - name: "amkor-news-listing"
+    kind: "content-wiring"
+    category: "News"
+    status: "complete"
+    createdAt: "2026-08-29T16:25:00Z"
+    updatedAt: "2026-08-29T16:30:00Z"
+    siteName: "amkor"
+    siteCollection: "amkor"
+    notes: >
+      Reused Cooley NewsListing rendering/template. Authors select blog pages via FeaturedItems Treelist
+      (Cooley template source still Media and Insight — authors can pick any item by ID; datasource has all 10 blogs).
+      Placed on News parent page headless-main.
+    rendering:
+      path: "/sitecore/layout/Renderings/Project/Cooley/News/NewsListing"
+      itemId: "{29419ABC-5E18-40B5-A113-26D89297D1A5}"
+      registeredOnAmkorAvailableRenderings: true
+    datasourceFolder:
+      path: "/sitecore/content/amkor/amkor/Data/NewsListing"
+      itemId: "{960AE89A-45F2-4D7B-B9FC-EBABDE0F6AC7}"
+      templateId: "{E7DDA8F5-E1CC-4568-87CB-0362CAE6C449}"
+    datasource:
+      itemId: "{96A42097-34D6-465C-990D-B801882D7B27}"
+      path: "/sitecore/content/amkor/amkor/Data/NewsListing/NewsListing_4825eb049e214449847779f47bb4bb9c"
+      eyebrow: "Company News"
+      title: "Latest from Amkor"
+      featuredItemIds:
+        - "{09F401A4-FAE0-42CE-B69A-A616D507E187}"
+        - "{620CDBA1-8F9D-4B45-BCC2-6F89BFFD78C0}"
+        - "{0227D955-DE71-4AA4-B1BD-EC944EAC53D8}"
+        - "{71F8E54C-5557-4BFD-B869-CB79994E42CA}"
+        - "{8C43BF43-1FA2-42CA-B535-D18A528B0BAC}"
+        - "{D7EEDC9A-29E8-4522-86F4-ED8FAF88CB23}"
+        - "{0C088EBE-1D07-45D5-91B5-6567AD0D7AAC}"
+        - "{172CA403-7A83-4003-8ABF-F3C174C4D2F8}"
+        - "{EDDB8EF0-8C38-401C-92F5-F618A696A6ED}"
+        - "{41A8A937-48E6-49A9-A547-F5656A9AD18F}"
+    variants:
+      containerPath: "/sitecore/content/amkor/amkor/Presentation/Headless Variants/NewsListing"
+      containerId: "{C737B9D1-C893-4D9B-8B98-EC66BC3C63ED}"
+      definitions:
+        - { name: "Default", itemId: "{E8F1E7B7-8C6F-4953-8843-33DABDD94F47}" }
+    pagePlacement:
+      pagePath: "/sitecore/content/amkor/amkor/Home/About Us/News"
+      pageId: "{BE42D3F0-C644-4ADE-9CEB-E72208ACFD8E}"
+      placeholder: "headless-main"
+      instanceId: "{DD4F4118-2692-4565-98EF-43974F71B085}"
+      variant: "Default"
+      datasourceId: "{96A42097-34D6-465C-990D-B801882D7B27}"
+    react:
+      filePath: "src/components/uiim/news/NewsListing.tsx"
+      componentName: "NewsListing"
+      addedBlogParentContentType: true
+    verification:
+      checkedAt: "2026-08-29T16:30:00Z"
+      passed:
+        - "NewsListing rendering registered on amkor Page Content Available Renderings"
+        - "Headless Variant Default"
+        - "FeaturedItems treelist with 10 blog page IDs"
+        - "Component on News page headless-main"
+        - "React NewsListing.tsx added with Blog parent content type"
+        - "Jest NewsListing.test.tsx (2 tests pass)"
+      failed: []
+      pendingManual:
+        - "Publish News page + Data/NewsListing + blog pages for Edge"
+        - "Optional: copy NewsListing template to Project/amkor with FeaturedItems source = Blog folder for cleaner author picker"
+        - "Rename datasource item to friendly name in CE"
 

@@ -1,8 +1,19 @@
 'use client';
 
 import { useToggleWithClickOutside } from '@/hooks/useToggleWithClickOutside';
-import { ReactNode } from 'react';
+import { createContext, ReactNode, useContext } from 'react';
 import { cn } from '@/lib/utils';
+
+type MobileMenuContextValue = {
+  isVisible: boolean;
+  setIsVisible: (visible: boolean) => void;
+};
+
+const MobileMenuContext = createContext<MobileMenuContextValue | null>(null);
+
+export function useMobileMenu() {
+  return useContext(MobileMenuContext);
+}
 
 interface MobileMenuWrapperProps {
   children: ReactNode;
@@ -15,6 +26,8 @@ interface MobileMenuWrapperProps {
   /** Overrides the default MENU label classes (Version1 boxed control). */
   labelClassName?: string;
   panelClassName?: string;
+  /** Dark full-bleed panel (Amkor Version1 cascade megamenu). */
+  darkPanel?: boolean;
 }
 
 export const MobileMenuWrapper = ({
@@ -25,6 +38,7 @@ export const MobileMenuWrapper = ({
   buttonClassName,
   labelClassName,
   panelClassName,
+  darkPanel = false,
 }: MobileMenuWrapperProps) => {
   const {
     isVisible: isMobileMenuVisible,
@@ -33,6 +47,9 @@ export const MobileMenuWrapper = ({
   } = useToggleWithClickOutside<HTMLLIElement>(false);
 
   return (
+    <MobileMenuContext.Provider
+      value={{ isVisible: isMobileMenuVisible, setIsVisible: setIsMobileMenuVisible }}
+    >
     <li
       ref={ref}
       className={cn(
@@ -86,12 +103,15 @@ export const MobileMenuWrapper = ({
       <div
         className={cn(
           isMobileMenuVisible ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0',
-          'fixed left-0 right-0 top-14 z-50 flex h-[calc(100vh-3.5rem)] flex-col items-center justify-center overflow-auto bg-background p-4 text-foreground transition-all duration-300 ease-in-out',
+          darkPanel
+            ? 'relative fixed inset-x-0 bottom-0 top-[6.25rem] z-50 overflow-hidden bg-[color-mix(in_srgb,var(--color-header-background,var(--color-foreground))_88%,black)] text-[color:var(--color-header-foreground,var(--color-background))] transition-all duration-300 ease-in-out'
+            : 'fixed left-0 right-0 top-14 z-50 flex h-[calc(100vh-3.5rem)] flex-col items-center justify-center overflow-auto bg-background p-4 text-foreground transition-all duration-300 ease-in-out',
           panelClassName
         )}
       >
         {children}
       </div>
     </li>
+    </MobileMenuContext.Provider>
   );
 };

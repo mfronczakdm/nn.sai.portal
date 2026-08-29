@@ -13,6 +13,7 @@ import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import componentMap from '.sitecore/component-map';
 import { MegaMenuToggle, MegaMenuContent, MegaMenuBackButton } from './MegaMenuItemWrapper';
+import { MegaMenuCascadeL1Scope, useMegaMenuCascade } from './MegaMenuCascade';
 
 interface Fields {
   Title: Field<string>;
@@ -40,9 +41,32 @@ const DICTIONARY_KEYS = {
 export const Default = (props: MegaMenuItemProps) => {
   const { page } = props;
   const isPageEditing = page?.mode?.isEditing;
+  const cascade = useMegaMenuCascade();
   const t = useTranslations();
   const featuredProduct = props.fields?.FeaturedProduct;
   const menuId = `mega-menu-${props.params?.DynamicPlaceholderId || 'default'}`;
+
+  if (cascade?.enabled && !isPageEditing) {
+    const title = props.fields?.Title?.value?.trim() || props.fields?.Link?.value?.text || 'Menu';
+    const href = props.fields?.Link?.value?.href;
+
+    return (
+      <MegaMenuCascadeL1Scope id={menuId} title={title} href={href}>
+        <AppPlaceholder
+          name={`mega-menu-item-primary-links-${props.params?.DynamicPlaceholderId}`}
+          rendering={props.rendering}
+          page={props.page}
+          componentMap={componentMap}
+        />
+        <AppPlaceholder
+          name={`mega-menu-item-secondary-links-${props.params?.DynamicPlaceholderId}`}
+          rendering={props.rendering}
+          page={props.page}
+          componentMap={componentMap}
+        />
+      </MegaMenuCascadeL1Scope>
+    );
+  }
 
   if (props.params?.isSimpleLink) {
     return (
