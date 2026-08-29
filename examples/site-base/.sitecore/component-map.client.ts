@@ -8,6 +8,7 @@ import * as VerticalImageAccordion from 'src/components/vertical-image-accordion
 import * as VariantContent from 'src/components/variant-content/VariantContent';
 import * as ProductDetail from 'src/components/uiim/products/ProductDetail';
 import * as ProductCarousel from 'src/components/uiim/products/ProductCarousel';
+import * as NewsListing from 'src/components/uiim/news/NewsListing';
 import * as CareerListing from 'src/components/uiim/lawyers/CareerListing';
 import * as BioListing from 'src/components/uiim/lawyers/BioListing';
 import * as BioDetail from 'src/components/uiim/lawyers/BioDetail';
@@ -36,6 +37,7 @@ import * as ProductComparison from 'src/components/site-three/ProductComparison'
 import * as MultiPromo from 'src/components/site-three/MultiPromo';
 import * as MobileMenuWrapper from 'src/components/site-three/MobileMenuWrapper';
 import * as MegaMenuItemWrapper from 'src/components/site-three/MegaMenuItemWrapper';
+import * as MegaMenuCascade from 'src/components/site-three/MegaMenuCascade';
 import * as ImageCarousel from 'src/components/site-three/ImageCarousel';
 import * as HeroST from 'src/components/site-three/HeroST';
 import * as HeaderSTAuthControls from 'src/components/site-three/HeaderSTAuthControls';
@@ -140,6 +142,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['VariantContent', { ...VariantContent }],
   ['ProductDetail', { ...ProductDetail }],
   ['ProductCarousel', { ...ProductCarousel }],
+  ['NewsListing', { ...NewsListing }],
   ['CareerListing', { ...CareerListing }],
   ['BioListing', { ...BioListing }],
   ['BioDetail', { ...BioDetail }],
@@ -168,6 +171,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['MultiPromo', { ...MultiPromo }],
   ['MobileMenuWrapper', { ...MobileMenuWrapper }],
   ['MegaMenuItemWrapper', { ...MegaMenuItemWrapper }],
+  ['MegaMenuCascade', { ...MegaMenuCascade }],
   ['ImageCarousel', { ...ImageCarousel }],
   ['HeroST', { ...HeroST }],
   ['HeaderSTAuthControls', { ...HeaderSTAuthControls }],

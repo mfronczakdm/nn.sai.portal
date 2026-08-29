@@ -38,6 +38,10 @@ const DICTIONARY_KEYS = {
   BACK_BUTTON_LABEL: 'Back',
 };
 
+function trimFieldValue(value: string | number | null | undefined): string {
+  return String(value ?? '').trim();
+}
+
 export const Default = (props: MegaMenuItemProps) => {
   const { page } = props;
   const isPageEditing = page?.mode?.isEditing;
@@ -47,7 +51,10 @@ export const Default = (props: MegaMenuItemProps) => {
   const menuId = `mega-menu-${props.params?.DynamicPlaceholderId || 'default'}`;
 
   if (cascade?.enabled && !isPageEditing) {
-    const title = props.fields?.Title?.value?.trim() || props.fields?.Link?.value?.text || 'Menu';
+    const title =
+      trimFieldValue(props.fields?.Title?.value) ||
+      trimFieldValue(props.fields?.Link?.value?.text) ||
+      'Menu';
     const href = props.fields?.Link?.value?.href;
 
     return (

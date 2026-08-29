@@ -40,9 +40,13 @@ type LinkListItemProps = {
   field: LinkField;
 };
 
+function trimFieldValue(value: string | number | null | undefined): string {
+  return String(value ?? '').trim();
+}
+
 function toCascadeLink(field: LinkField, index: number): CascadeLinkItem | null {
-  const href = field?.value?.href?.trim();
-  const text = field?.value?.text?.trim();
+  const href = trimFieldValue(field?.value?.href);
+  const text = trimFieldValue(field?.value?.text);
   if (!href || !text) return null;
   const external = field?.value?.linktype === 'external' || /^https?:\/\//i.test(href);
   return {
@@ -376,7 +380,7 @@ export const HeaderSecondaryLinks = (props: LinkListProps): JSX.Element => {
   const styles = `font-[inherit] ${props.params.styles}`.trimEnd();
   const id = props.params.RenderingIdentifier;
   const cascade = useMegaMenuCascade();
-  const groupTitle = datasource?.field?.title?.value?.trim() ?? '';
+  const groupTitle = trimFieldValue(datasource?.field?.title?.value);
   const cascadeLinks =
     datasource?.children?.results
       ?.map((element: ResultsFieldLink, index: number) =>

@@ -14,6 +14,7 @@ import * as ProductDetail from 'src/components/uiim/products/ProductDetail';
 import * as ProductCarousel from 'src/components/uiim/products/ProductCarousel';
 import * as productdetailprops from 'src/components/uiim/products/product-detail.props';
 import * as productcarouselprops from 'src/components/uiim/products/product-carousel.props';
+import * as NewsListing from 'src/components/uiim/news/NewsListing';
 import * as CareerListing from 'src/components/uiim/lawyers/CareerListing';
 import * as careerlistingprops from 'src/components/uiim/lawyers/career-listing.props';
 import * as BioListing from 'src/components/uiim/lawyers/BioListing';
@@ -78,6 +79,7 @@ import * as MultiPromo from 'src/components/site-three/MultiPromo';
 import * as MobileMenuWrapper from 'src/components/site-three/MobileMenuWrapper';
 import * as MegaMenuItemWrapper from 'src/components/site-three/MegaMenuItemWrapper';
 import * as MegaMenuItem from 'src/components/site-three/MegaMenuItem';
+import * as MegaMenuCascade from 'src/components/site-three/MegaMenuCascade';
 import * as ImageCarousel from 'src/components/site-three/ImageCarousel';
 import * as ImageBanner from 'src/components/site-three/ImageBanner';
 import * as HeroST from 'src/components/site-three/HeroST';
@@ -321,6 +323,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['ProductCarousel', { ...ProductCarousel, componentType: 'client' }],
   ['product-detail', { ...productdetailprops }],
   ['product-carousel', { ...productcarouselprops }],
+  ['NewsListing', { ...NewsListing, componentType: 'client' }],
   ['CareerListing', { ...CareerListing, componentType: 'client' }],
   ['career-listing', { ...careerlistingprops }],
   ['BioListing', { ...BioListing, componentType: 'client' }],
@@ -385,6 +388,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['MobileMenuWrapper', { ...MobileMenuWrapper, componentType: 'client' }],
   ['MegaMenuItemWrapper', { ...MegaMenuItemWrapper, componentType: 'client' }],
   ['MegaMenuItem', { ...MegaMenuItem }],
+  ['MegaMenuCascade', { ...MegaMenuCascade, componentType: 'client' }],
   ['ImageCarousel', { ...ImageCarousel, componentType: 'client' }],
   ['ImageBanner', { ...ImageBanner }],
   ['HeroST', { ...HeroST, componentType: 'client' }],

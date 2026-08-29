@@ -300,7 +300,7 @@ const HeaderSTVersion1View = (props: HeaderSTViewProps) => {
   const showNavigation = useHeaderSTNavigationVisibility(requireAuthForNav);
   const componentMap = getComponentMap();
   const hideCart = isTruthyParam(params?.HideCart);
-  const supportLinkText = fields?.SupportLink?.value?.text?.trim() ?? '';
+  const supportLinkText = String(fields?.SupportLink?.value?.text ?? '').trim();
   const showSupportLink =
     supportLinkText.length > 0 && !version1UtilityLabels.has(supportLinkText.toLowerCase());
 
@@ -637,7 +637,7 @@ const HeaderSTVersion3View = (props: HeaderSTViewProps) => {
   const componentMap = getComponentMap();
   const hideCart = isTruthyParam(params?.HideCart);
   const isReverseTheme = isReverseThemeParam(params?.ReverseTheme);
-  const supportLinkText = fields?.SupportLink?.value?.text?.trim() ?? '';
+  const supportLinkText = String(fields?.SupportLink?.value?.text ?? '').trim();
   const showSupportLink =
     supportLinkText.length > 0 && !version3UtilityLabels.has(supportLinkText.toLowerCase());
 
