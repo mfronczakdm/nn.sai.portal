@@ -148,7 +148,10 @@ import * as LogoItem from 'src/components/logo-tabs/LogoItem';
 import * as logotabsprops from 'src/components/logo-tabs/logo-tabs.props';
 import * as logoprops from 'src/components/logo/logo.props';
 import * as Logodev from 'src/components/logo/Logo.dev';
+import * as worldmaputils from 'src/components/location-search/world-map.utils';
+import * as worldlanddata from 'src/components/location-search/world-land.data';
 import * as utils from 'src/components/location-search/utils';
+import * as LocationSearchVersion2dev from 'src/components/location-search/LocationSearchVersion2.dev';
 import * as LocationSearchVersion1dev from 'src/components/location-search/LocationSearchVersion1.dev';
 import * as LocationSearchTitleZipCentereddev from 'src/components/location-search/LocationSearchTitleZipCentered.dev';
 import * as LocationSearchMapTopAllCentereddev from 'src/components/location-search/LocationSearchMapTopAllCentered.dev';
@@ -164,6 +167,7 @@ import * as GoogleMapdev from 'src/components/location-search/GoogleMap.dev';
 import * as googlemapsprops from 'src/components/location-search/google-maps.props';
 import * as FootprintWorldMapdev from 'src/components/location-search/FootprintWorldMap.dev';
 import * as FootprintGoogleMapdev from 'src/components/location-search/FootprintGoogleMap.dev';
+import * as FootprintGlobalMapdev from 'src/components/location-search/FootprintGlobalMap.dev';
 import * as KnowledgeListing from 'src/components/knowledge-listing/KnowledgeListing';
 import * as knowledgelistingprops from 'src/components/knowledge-listing/knowledge-listing.props';
 import * as knowledgelistingfields from 'src/components/knowledge-listing/knowledge-listing.fields';
@@ -455,7 +459,10 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['logo-tabs', { ...logotabsprops }],
   ['logo', { ...logoprops }],
   ['Logo', { ...Logodev }],
+  ['world-map', { ...worldmaputils }],
+  ['world-land', { ...worldlanddata }],
   ['utils', { ...utils }],
+  ['LocationSearchVersion2', { ...LocationSearchVersion2dev }],
   ['LocationSearchVersion1', { ...LocationSearchVersion1dev }],
   ['LocationSearchTitleZipCentered', { ...LocationSearchTitleZipCentereddev }],
   ['LocationSearchMapTopAllCentered', { ...LocationSearchMapTopAllCentereddev }],
@@ -471,6 +478,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['google-maps', { ...googlemapsprops }],
   ['FootprintWorldMap', { ...FootprintWorldMapdev }],
   ['FootprintGoogleMap', { ...FootprintGoogleMapdev }],
+  ['FootprintGlobalMap', { ...FootprintGlobalMapdev }],
   ['KnowledgeListing', { ...KnowledgeListing, componentType: 'client' }],
   ['knowledge-listing', { ...knowledgelistingprops, ...knowledgelistingfields }],
   ['KnowledeVariant', { ...KnowledeVariant, componentType: 'client' }],

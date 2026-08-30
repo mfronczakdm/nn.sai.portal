@@ -11,7 +11,12 @@
 
 [data-theme='amkor'] {
   --background-image-gradient: linear-gradient(180deg, #2b59ff 0%, #002d5b 100%);
-  --background-image-gradient-secondary: linear-gradient(90deg, #677385 0%, #002d5b 50%, #2b59ff 100%);
+  --background-image-gradient-secondary: linear-gradient(
+    90deg,
+    #677385 0%,
+    #002d5b 50%,
+    #2b59ff 100%
+  );
 
   --color-background: #ffffff;
   --color-foreground: #212529;
@@ -75,6 +80,22 @@
   --color-utility-bar: #4e4e4e;
   --color-careers-magenta: #c2185b;
   --color-accent-hover: #244adb;
+
+  /* News / events accents sampled from amkor.com card corner wedges and metadata colours. */
+  --color-news-accent-from: #1aa0be;
+  --color-news-accent-to: #0e6e90;
+  --color-events-accent-from: #b44a8e;
+  --color-events-accent-to: #8c2e69;
+  --color-news-heading: #0f4c8d;
+  --color-events-heading: #800049;
+  --color-news-card-title: #565656;
+  --color-news-date: #004aa0;
+  --color-events-date: #800049;
+  --color-news-category: #259cbb;
+  --color-news-link: #104b8e;
+  --color-news-cta: #0f4c8d;
+  --color-news-cta-hover: #053360;
+  --color-news-cta-foreground: #ffffff;
 }
 
 /*
@@ -111,7 +132,10 @@
   text-decoration: underline;
 }
 
-[data-theme='amkor'] [data-footer-st-layout='version1'] [data-footer-st-legal] a[href*='privacy-notice'] {
+[data-theme='amkor']
+  [data-footer-st-layout='version1']
+  [data-footer-st-legal]
+  a[href*='privacy-notice'] {
   font-weight: 700;
 }
 

@@ -72,6 +72,7 @@ import * as MediaSectiondev from 'src/components/media-section/MediaSection.dev'
 import * as MainNav from 'src/components/main-nav/MainNav';
 import * as meteors from 'src/components/magicui/meteors';
 import * as LogoTabs from 'src/components/logo-tabs/LogoTabs';
+import * as LocationSearchVersion2dev from 'src/components/location-search/LocationSearchVersion2.dev';
 import * as LocationSearchVersion1dev from 'src/components/location-search/LocationSearchVersion1.dev';
 import * as LocationSearchTitleZipCentereddev from 'src/components/location-search/LocationSearchTitleZipCentered.dev';
 import * as LocationSearchMapTopAllCentereddev from 'src/components/location-search/LocationSearchMapTopAllCentered.dev';
@@ -82,6 +83,7 @@ import * as LocationSearch from 'src/components/location-search/LocationSearch';
 import * as GoogleMapdev from 'src/components/location-search/GoogleMap.dev';
 import * as FootprintWorldMapdev from 'src/components/location-search/FootprintWorldMap.dev';
 import * as FootprintGoogleMapdev from 'src/components/location-search/FootprintGoogleMap.dev';
+import * as FootprintGlobalMapdev from 'src/components/location-search/FootprintGlobalMap.dev';
 import * as KnowledgeListing from 'src/components/knowledge-listing/KnowledgeListing';
 import * as KnowledeVariant from 'src/components/knowlede-variant/KnowledeVariant';
 import * as KmArticleContent from 'src/components/km-article-content/KmArticleContent';
@@ -206,6 +208,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['MainNav', { ...MainNav }],
   ['meteors', { ...meteors }],
   ['LogoTabs', { ...LogoTabs }],
+  ['LocationSearchVersion2', { ...LocationSearchVersion2dev }],
   ['LocationSearchVersion1', { ...LocationSearchVersion1dev }],
   ['LocationSearchTitleZipCentered', { ...LocationSearchTitleZipCentereddev }],
   ['LocationSearchMapTopAllCentered', { ...LocationSearchMapTopAllCentereddev }],
@@ -216,6 +219,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['GoogleMap', { ...GoogleMapdev }],
   ['FootprintWorldMap', { ...FootprintWorldMapdev }],
   ['FootprintGoogleMap', { ...FootprintGoogleMapdev }],
+  ['FootprintGlobalMap', { ...FootprintGlobalMapdev }],
   ['KnowledgeListing', { ...KnowledgeListing }],
   ['KnowledeVariant', { ...KnowledeVariant }],
   ['KmArticleContent', { ...KmArticleContent }],

@@ -1,5 +1,5 @@
 ﻿generatedAt: "2026-03-20T09:00:00Z"
-lastUpdatedAt: "2026-08-29T21:00:00Z"
+lastUpdatedAt: "2026-08-30T16:10:00Z"
 lastUpdatedBy: "cursor-agent"
 
 project:
@@ -3644,6 +3644,7 @@ demoContent:
         - { name: "MapRightTitleZipCentered", itemId: "{1CAB6CDB-DBE6-4766-970D-FE4090C60916}", preexisting: true }
         - { name: "MapTopAllCentered", itemId: "{8D66AFAB-E1B7-4DAD-AF20-71A72C7B4C28}", preexisting: true }
         - { name: "Version1", itemId: "{FF24F042-30E6-4F40-BDC4-819059865005}" }
+        - { name: "Version2", itemId: "{DB0994AC-24C7-4070-A248-03173C3B7148}" }
     locationsFolder:
       name: "Locations"
       itemId: "{F9DC4191-96BA-4E83-B6BC-601AF41ED499}"
@@ -8043,7 +8044,22 @@ ia:
         - "MapRightTitleZipCentered"
         - "MapLeftTitleZipCentered"
         - "Version1"
+        - "Version2"
       note: "Version1 added 2026-08-29 — Amkor-style global footprint map (centered navy heading, full-width map, typed pins, legend). Default and other variants unchanged."
+      version2Note: >
+        Version2 added 2026-08-30 — world view matching amkor.com, with no Google Maps dependency
+        or API key. Land outlines come from Natural Earth 110m (public domain) baked into
+        world-land.data.ts and projected with Pacific-centred Mercator (centre 150E, crop 72N–55S)
+        by world-map.utils.ts. Includes zoom in/out, drag pan, reset view, teardrop pins and legend.
+      version2Files:
+        - "src/components/location-search/LocationSearchVersion2.dev.tsx"
+        - "src/components/location-search/FootprintGlobalMap.dev.tsx"
+        - "src/components/location-search/world-map.utils.ts"
+        - "src/components/location-search/world-land.data.ts"
+        - "src/__tests__/location-search/world-map.utils.test.ts"
+        - "src/lib/location-footprint-from-edge.ts"
+        - "src/app/api/location-footprint/route.ts"
+        - "docs/ai/demos/amkor/_tmp-build-world-land.mjs (generator for world-land.data.ts)"
 
     rendering:
       name: "LocationSearch"
@@ -8105,6 +8121,7 @@ ia:
         - { name: "MapRightTitleZipCentered", itemId: "{1CAB6CDB-DBE6-4766-970D-FE4090C60916}", preexisting: true }
         - { name: "MapTopAllCentered", itemId: "{8D66AFAB-E1B7-4DAD-AF20-71A72C7B4C28}", preexisting: true }
         - { name: "Version1", itemId: "{FF24F042-30E6-4F40-BDC4-819059865005}" }
+        - { name: "Version2", itemId: "{DB0994AC-24C7-4070-A248-03173C3B7148}" }
 
     verification:
       checkedAt: "2026-08-29T16:30:00Z"
@@ -8122,6 +8139,8 @@ ia:
 
     notes:
       - "2026-08-30: Version1 Google map uses political globe styles (roads/POI/labels off, zoom 2–4). Static world fallback when NEXT_PUBLIC_GOOGLE_MAPS_API_KEY is unset. Amkor Headless Variants already present: Default, MapLeftTitleZipCentered, MapRight, MapRightTitleZipCentered, MapTopAllCentered, Version1."
+      - "2026-08-30: Version2 rendered NoDataFallback even with the datasource assigned. Root cause: the Portal LocationSearch ComponentQuery used children(first: 50) with 8 field(name:){jsonValue} selections, which Experience Edge rejects with 'Query is too complex to execute' (INVALID_OPERATION). A failed ComponentQuery yields fields: {} in layout data, so fields.data.datasource was undefined. Fix: ComponentQuery reverted to children without arguments (returns the first 10 children only), and the full location list is loaded from the Content API via src/lib/location-footprint-from-edge.ts behind /api/location-footprint, paging 10 children at a time (pageInfo.hasNext/endCursor) with only Name, Type and GEO requested as value. Verified 30/30 locations with GEO. Same complexity limit applies to Version1 if it is ever used with more than 10 locations."
+      - "2026-08-30: Version2 world view created (Amkor Headless Variant {DB0994AC-24C7-4070-A248-03173C3B7148}). Renders entirely from SVG — no Google Maps script, API key or billing. Publish Presentation/Headless Variants/LocationSearch and select Version2 on the Home LocationSearch instance {769842A2-4905-42C9-AE65-8316B19C8C8D}."
       - "2026-08-30: Root cause of missing variant dropdown in Pages — Portal LocationSearch rendering {09F20AFE-ABD8-4A55-839F-F16CBCBDB7C9} had an empty Parameters Template, so there was no FieldNames field for Pages to bind a variant selector to. Set to {673C2756-3107-4C99-9CFB-75CC27B080BA} (inherits BaseRenderingParameters -> IComponentVariant) and extended ComponentQuery with jsonValue aliases + Type + title. Compatible Renderings and Headless Variants were already correct — the parameters template was the missing piece."
 
   - name: "HeaderST"
@@ -9766,6 +9785,9 @@ homepageKit:
       containerId: "{C737B9D1-C893-4D9B-8B98-EC66BC3C63ED}"
       definitions:
         - { name: "Default", itemId: "{E8F1E7B7-8C6F-4953-8843-33DABDD94F47}" }
+        - { name: "NewsCards", itemId: "{ABF5E41E-6968-4B86-B729-C14CEA65805A}" }
+        - { name: "EventCards", itemId: "{65096C78-D7D2-45BC-A6B9-83F3843F7F5F}" }
+        - { name: "PressReleaseList", itemId: "{514C76FF-DF40-4874-8864-D89D97B4CE5F}" }
     pagePlacement:
       pagePath: "/sitecore/content/amkor/amkor/Home/About Us/News"
       pageId: "{BE42D3F0-C644-4ADE-9CEB-E72208ACFD8E}"
@@ -9791,6 +9813,105 @@ homepageKit:
         - "Publish News page + Data/NewsListing + blog pages for Edge"
         - "Optional: copy NewsListing template to Project/amkor with FeaturedItems source = Blog folder for cleaner author picker"
         - "Rename datasource item to friendly name in CE"
+
+  - name: "amkor-news-listing-card-variants"
+    kind: "component-variants"
+    category: "News"
+    status: "complete"
+    createdAt: "2026-08-30T15:40:00Z"
+    updatedAt: "2026-08-30T16:10:00Z"
+    siteName: "amkor"
+    siteCollection: "amkor"
+    sourceSite: "https://amkor.com/"
+    notes: >
+      Three NewsListing variants replicating the amkor.com Latest Blog Posts / Upcoming Events /
+      Latest Press Releases tiers: NewsCards and EventCards (3-up image cards with the diagonal
+      corner wedge, date and category metadata pinned to the card bottom) and PressReleaseList
+      (document-icon rows). Colours were sampled from amkor.com's main.css and the news.png /
+      events.png corner wedges, then expressed as theme tokens in src/assets/styles/themes/amkor.css
+      with generic fallbacks in globals.css, so other skins inherit their own accent.
+      Default variant layout was left untouched.
+    templateChanges:
+      path: "/sitecore/templates/Project/Cooley/Components/News/NewsListing/Data"
+      addedFields:
+        - { name: "CtaLink", itemId: "{4CA382AF-BE31-48D5-A714-7C7173D3B002}", type: "General Link" }
+        - { name: "CtaText", itemId: "{7CFFB21E-1450-4FC5-96B1-4BF1B8390DC7}", type: "Single-Line Text" }
+      note: "Additive only — existing Cooley/amkor datasources keep working with both fields empty."
+    renderingChanges:
+      path: "/sitecore/layout/Renderings/Project/Cooley/News/NewsListing"
+      itemId: "{29419ABC-5E18-40B5-A113-26D89297D1A5}"
+      componentQuery: "added ctaLink, ctaText and per-item image"
+      imageFieldNote: >
+        image is requested as `value` rather than `jsonValue`: the amkor demo pages store external
+        blob URLs and Edge returns an empty jsonValue for those, so the src/alt are parsed from the
+        raw field XML in NewsListing.tsx.
+      fieldEditorFields: "Eyebrow|Title|FeaturedItems|CtaLink|CtaText"
+    variants:
+      containerPath: "/sitecore/content/amkor/amkor/Presentation/Headless Variants/NewsListing"
+      containerId: "{C737B9D1-C893-4D9B-8B98-EC66BC3C63ED}"
+      definitions:
+        - { name: "NewsCards", itemId: "{ABF5E41E-6968-4B86-B729-C14CEA65805A}" }
+        - { name: "EventCards", itemId: "{65096C78-D7D2-45BC-A6B9-83F3843F7F5F}" }
+        - { name: "PressReleaseList", itemId: "{514C76FF-DF40-4874-8864-D89D97B4CE5F}" }
+    datasourceUpdates:
+      - itemId: "{E6BA41E4-6316-4DAB-9724-C8AE3BE23509}"
+        path: "/sitecore/content/amkor/amkor/Data/NewsListing/Featured News"
+        title: "Latest Blog Posts"
+        ctaLink: "internal -> {893BBB60-2B8C-4A97-BB8E-541E744F2B33} (/About-Us/News/Blog)"
+        ctaText: "View All Posts"
+    contentCreated:
+      sectionPages:
+        - { name: "Events", itemId: "{931ADD10-6857-451F-ABF5-A9D14B1F1757}", path: "/sitecore/content/amkor/amkor/Home/About Us/News/Events" }
+        - { name: "Press Releases", itemId: "{5D1B8301-F3D2-4367-BC9A-A3A5FA3400C9}", path: "/sitecore/content/amkor/amkor/Home/About Us/News/Press Releases" }
+      eventPages:
+        - { name: "Smart Semiconductor Academy", itemId: "{7066F5BE-B478-43BB-BC5E-8CCCBCA8A321}", date: "August 24, 2026" }
+        - { name: "ISIG Executive Summit Korea", itemId: "{BCE8B541-B9B0-4732-9055-1F2D6328794C}", date: "August 26, 2026" }
+        - { name: "ISIG Executive Summit Europe", itemId: "{FD3B8E2A-D77F-4F95-9A33-1377EDE6E7B4}", date: "September 15, 2026" }
+      pressReleasePages:
+        - { name: "Amkor Technology Declares Quarterly Dividend", itemId: "{F171370F-82D3-4E83-8596-6B1E78A2B958}", date: "August 12, 2026 at 4:12 PM" }
+        - { name: "Amkor Technology Reports Financial Results for the Second Quarter 2026", itemId: "{50289AA5-EDC5-4B20-94BB-13B6B22F1D80}", date: "July 27, 2026 at 8:03 PM" }
+        - { name: "Amkor Technology Announces Strategic Partnership with NVIDIA", itemId: "{A42872CF-6EF9-42DA-A65E-02FE32E11A56}", date: "July 28, 2026 at 9:00 PM" }
+      newDatasources:
+        - { name: "Upcoming Events", itemId: "{3E822FA8-EDB4-4C7A-9FBB-9CE52AE2E63E}", cta: "internal -> Events page" }
+        - { name: "Latest Press Releases", itemId: "{464A51C6-4046-404D-92DE-16167789E5CB}", cta: "external -> https://ir.amkor.com/press-releases (_blank)" }
+      featuredItemsSourceExtended: >
+        FeaturedItems {C351FB98-4E20-4598-844F-90497BC78E7D} Source query now also allows the amkor
+        Events {931ADD10} and Press Releases {5D1B8301} folders so authors can pick those items.
+    pagePlacements:
+      pagePath: "/sitecore/content/amkor/amkor/Home"
+      pageId: "{BB13BF5A-B102-4FE8-B410-63E3DA7AA448}"
+      placeholder: "headless-main"
+      instances:
+        - { instanceId: "{449261EE-3D53-428E-A7AF-884BF18F169B}", datasource: "{E6BA41E4-6316-4DAB-9724-C8AE3BE23509}", intendedVariant: "NewsCards" }
+        - { instanceId: "{A93A28D1-0A31-467F-8CBE-0337D470E76B}", datasource: "{3E822FA8-EDB4-4C7A-9FBB-9CE52AE2E63E}", intendedVariant: "EventCards" }
+        - { instanceId: "{F61D3881-9CCA-434F-8E64-C9F78B2C4A10}", datasource: "{464A51C6-4046-404D-92DE-16167789E5CB}", intendedVariant: "PressReleaseList" }
+      note: >
+        All three instances still carry FieldNames = Default {E8F1E7B7-8C6F-4953-8843-33DABDD94F47}.
+        set_component_datasource's variantId is a personalization variant, not a rendering variant,
+        so the rendering variant must be selected in Pages.
+      orphanedDatasources:
+        - "{52AB0078-A531-4985-B8B0-21070D471C41} (auto-created by add_component_on_page, unused)"
+        - "{44568F0A-66F9-42BE-9394-20CFE24BF588} (auto-created by add_component_on_page, unused)"
+    react:
+      filePath: "src/components/uiim/news/NewsListing.tsx"
+      exports: ["Default", "NewsCards", "EventCards", "PressReleaseList"]
+      supportingFiles:
+        - "src/app/globals.css (news accent utility + colour role classes)"
+        - "src/assets/styles/themes/amkor.css (amkor accent token values)"
+        - "next.config.ts (amkormarcomexternal.blob.core.windows.net image host)"
+    verification:
+      checkedAt: "2026-08-30T16:10:00Z"
+      passed:
+        - "3 Variant Definition items created and verified under amkor Headless Variants/NewsListing"
+        - "CtaLink/CtaText fields created on the NewsListing template"
+        - "ComponentQuery returns ctaLink href /About-Us/News/Blog, ctaText and per-item image src via Edge"
+        - "Jest NewsListing.test.tsx — 9 tests pass (cards, accent, CTA, CtaText override, category rules, press rows, fallbacks)"
+        - "Events + Press Releases datasources resolve via Edge with CTA hrefs and event image srcs"
+      failed: []
+      pendingManual:
+        - "In Pages, set the rendering variant on each of the three Home NewsListing instances: NewsCards, EventCards, PressReleaseList"
+        - "Publish News/Events/Press Releases pages, Data/NewsListing, template, rendering and variants for Edge"
+        - "Optional: delete the two auto-created orphan datasources under Home/Data"
 
   - name: "amkor-footer-nav-remap"
     kind: "content-update"

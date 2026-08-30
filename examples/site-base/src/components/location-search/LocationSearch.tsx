@@ -8,6 +8,7 @@ import { LocationSearchMapTopAllCentered } from './LocationSearchMapTopAllCenter
 import { LocationSearchMapRightTitleZipCentered } from './LocationSearchMapRightTitleZipCentered.dev';
 import { LocationSearchTitleZipCentered } from './LocationSearchTitleZipCentered.dev';
 import { LocationSearchVersion1 } from './LocationSearchVersion1.dev';
+import { LocationSearchVersion2 } from './LocationSearchVersion2.dev';
 
 // Default display of the component
 
@@ -40,4 +41,9 @@ export const Version1: React.FC<LocationSearchProps> = (props) => {
   const { page } = props;
   const isPageEditing = page.mode.isEditing;
   return <LocationSearchVersion1 {...props} isPageEditing={isPageEditing} />;
+};
+export const Version2: React.FC<LocationSearchProps> = (props) => {
+  const { page } = props;
+  const isPageEditing = page.mode.isEditing;
+  return <LocationSearchVersion2 {...props} isPageEditing={isPageEditing} />;
 };

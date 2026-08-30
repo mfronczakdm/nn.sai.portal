@@ -26,7 +26,7 @@ const nextConfig: NextConfig = {
   distDir: process.env.NEXTJS_DIST_DIR || '.next',
 
   productionBrowserSourceMaps: process.env.GENERATE_SOURCEMAP === 'true',
-  
+
   // Enable React Strict Mode
   reactStrictMode: true,
 
@@ -139,6 +139,19 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      // Public Amkor media (external image fields on amkor demo pages)
+      {
+        protocol: 'https',
+        hostname: 'amkormarcomexternal.blob.core.windows.net',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'amkor.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
     // Optimize image sizes for responsive loading
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
@@ -148,7 +161,7 @@ const nextConfig: NextConfig = {
     // Disable image optimization in development to avoid upstream timeouts
     unoptimized: process.env.NODE_ENV === 'development',
   },
-  
+
   // Sitemap, robots, and AI JSON endpoints via rewrites; handlers live under app/api/
   rewrites: async () => {
     return [

@@ -252,3 +252,73 @@ main {
   @apply static mb-0 overflow-hidden;
 }
 
+/* NEWS LISTING ACCENTS
+   Card corner wedge plus the news/event colour roles. Every value falls back to a core
+   theme token, so themes that do not opt in still render sensibly. */
+
+[data-news-accent] {
+  position: relative;
+  overflow: hidden;
+}
+
+[data-news-accent]::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: var(--news-accent-size, 7.3rem);
+  height: var(--news-accent-size, 7.3rem);
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  pointer-events: none;
+  background-image: linear-gradient(
+    135deg,
+    var(--color-news-accent-from, var(--color-accent)),
+    var(--color-news-accent-to, var(--color-accent))
+  );
+}
+
+[data-news-accent='events']::after {
+  background-image: linear-gradient(
+    135deg,
+    var(--color-events-accent-from, var(--color-news-accent-from, var(--color-accent))),
+    var(--color-events-accent-to, var(--color-news-accent-to, var(--color-accent)))
+  );
+}
+
+.news-listing-heading {
+  color: var(--color-news-heading, var(--color-primary));
+}
+
+.news-listing-heading--events {
+  color: var(--color-events-heading, var(--color-news-heading, var(--color-primary)));
+}
+
+.news-card-title {
+  color: var(--color-news-card-title, var(--color-foreground));
+}
+
+.news-card-date {
+  color: var(--color-news-date, var(--color-primary));
+}
+
+.news-card-date--events {
+  color: var(--color-events-date, var(--color-news-date, var(--color-primary)));
+}
+
+.news-card-category {
+  color: var(--color-news-category, var(--color-accent));
+}
+
+.news-listing-link {
+  color: var(--color-news-link, var(--color-primary));
+}
+
+.news-listing-cta {
+  background-color: var(--color-news-cta, var(--color-primary));
+  color: var(--color-news-cta-foreground, var(--color-primary-foreground));
+}
+
+.news-listing-cta:hover {
+  background-color: var(--color-news-cta-hover, var(--color-primary-hover));
+  color: var(--color-news-cta-foreground, var(--color-primary-foreground));
+}
