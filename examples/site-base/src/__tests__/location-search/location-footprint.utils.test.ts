@@ -1,7 +1,9 @@
 import {
   createFootprintPinIcon,
+  FOOTPRINT_GOOGLE_MAP_STYLES,
   FOOTPRINT_LEGEND_ITEMS,
   FOOTPRINT_PIN_COLORS,
+  latLngToMapPercent,
   mapFootprintItemToPoint,
   mapFootprintItemsToPoints,
   parseGeoCoordinates,
@@ -66,5 +68,20 @@ describe('location-footprint.utils', () => {
       'Factories',
       'Customer Support Centers',
     ]);
+  });
+
+  it('hides roads and POI on the footprint Google map style', () => {
+    expect(FOOTPRINT_GOOGLE_MAP_STYLES).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({ featureType: 'road', stylers: [{ visibility: 'off' }] }),
+        expect.objectContaining({ featureType: 'poi', stylers: [{ visibility: 'off' }] }),
+      ])
+    );
+  });
+
+  it('projects coordinates onto the static world map', () => {
+    const equator = latLngToMapPercent(0, 0);
+    expect(equator.leftPercent).toBeCloseTo(50, 0);
+    expect(equator.topPercent).toBeCloseTo(50, 0);
   });
 });

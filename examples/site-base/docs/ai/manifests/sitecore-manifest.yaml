@@ -3619,7 +3619,7 @@ demoContent:
     category: "Location Search"
     status: "complete"
     createdAt: "2026-08-29T16:00:00Z"
-    updatedAt: "2026-08-29T16:30:00Z"
+    updatedAt: "2026-08-30T00:25:00Z"
     siteCollection: "amkor"
     siteName: "amkor"
     componentName: "LocationSearch"
@@ -3666,6 +3666,7 @@ demoContent:
       variantFiles:
         - "src/components/location-search/LocationSearchVersion1.dev.tsx"
         - "src/components/location-search/FootprintGoogleMap.dev.tsx"
+        - "src/components/location-search/FootprintWorldMap.dev.tsx"
         - "src/components/location-search/location-footprint.utils.ts"
       tests:
         - "src/__tests__/location-search/LocationSearch.test.tsx"
@@ -3686,6 +3687,7 @@ demoContent:
         - "Assign datasource An unrivaled global footprint"
         - "Set NEXT_PUBLIC_GOOGLE_MAPS_API_KEY in rendering host env for live map tiles"
         - "FieldNames variant must be set in Pages (set_component_datasource variantId is personalization, not Headless Variants)"
+        - "Select component variant Version1 — Pages canvas Version 1 is layout version, not the rendering variant"
 
 # Information architecture / page creation batches
 ia:
@@ -8051,7 +8053,26 @@ ia:
       datasourceTemplatePath: "/sitecore/templates/Project/click-click-launch/Components/Location Search/Location Search"
       datasourceTemplateId: "{F03FD970-82A7-44E0-8B87-6EE7B2D39939}"
       datasourceLocationQuery: "query:$site/*[@@name='Data']/*[@@name='Locations']|query:$sharedSites/*[@@name='Data']/*[@@name='Locations']|query:$site/*[@@name='Data']/*[@@templatename='Location Search Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='Location Search Folder']"
-      componentQuery: "preexisting — datasource children (Location items) + dealership search for Default zipcode flow"
+      componentQuery: "EMPTY on this rendering — Version1 gets no data if this rendering is used"
+      parametersTemplateId: "{673C2756-3107-4C99-9CFB-75CC27B080BA}"
+
+    # Second rendering with the same componentName — this is the one placed on Amkor Home.
+    # Headless Variants container name must match the rendering item name (LocationSearch).
+    renderingPortal:
+      name: "LocationSearch"
+      path: "/sitecore/layout/Renderings/Project/Portal/LocationSearch"
+      itemId: "{09F20AFE-ABD8-4A55-839F-F16CBCBDB7C9}"
+      componentName: "LocationSearch"
+      parametersTemplateId: "{673C2756-3107-4C99-9CFB-75CC27B080BA}"
+      parametersTemplateSetAt: "2026-08-30T00:45:00Z"
+      componentQuery: "datasource title + children(first: 50) with jsonValue aliases (name, locationType, GEO, streetAddress, city, state, zip) plus legacy value aliases (Name, Type, StreetAddress, City, State, ZIP, ParentCompany, SubsidiaryName)"
+      note: >
+        Parameters Template was EMPTY, so the rendering had no FieldNames field and Pages showed no
+        variant selector. Set to the Location Search Parameters template (inherits
+        BaseRenderingParameters -> IComponentVariant) to expose the variant dropdown. ComponentQuery
+        extended with jsonValue aliases + Type so LocationSearch Version1 can read
+        datasource.title and datasource.children.results. Legacy value aliases retained for
+        backwards compatibility with other sites using this shared Portal rendering.
 
     templates:
       datasource:
@@ -8074,8 +8095,9 @@ ia:
           - { name: "ZIP", type: "Single-Line Text" }
 
     headlessVariantsAmkor:
-      containerPath: "/sitecore/content/amkor/amkor/Presentation/Headless Variants/Location Search"
+      containerPath: "/sitecore/content/amkor/amkor/Presentation/Headless Variants/LocationSearch"
       containerId: "{0E7EA654-5E01-4B3D-B5EF-B4C1B585FC3E}"
+      containerNameMatchesRendering: "LocationSearch (Portal rendering {09F20AFE-ABD8-4A55-839F-F16CBCBDB7C9})"
       variants:
         - { name: "Default", itemId: "{57D91206-1DE7-4733-B0FB-CD27C1DCB843}", preexisting: true }
         - { name: "MapLeftTitleZipCentered", itemId: "{565C058E-1B46-4BCF-8C20-1C599DF63A3D}", preexisting: true }
@@ -8093,12 +8115,14 @@ ia:
         - "Jest location-search 51 passed"
       failed: []
       pendingManual:
-        - "Publish Amkor Headless Variants/Location Search for Edge"
+        - "Publish Amkor Headless Variants/LocationSearch for Edge"
         - "Google Maps API key required for map tiles in preview/production"
         - "See demoContent amkor-location-footprint-map for datasource + locations"
+        - "Select Version1 in Pages on the Home LocationSearch instance {769842A2-4905-42C9-AE65-8316B19C8C8D} (FieldNames was null)"
 
     notes:
-      - "2026-08-29: Version1 cosmetic variant for Amkor global footprint map. Reads datasource.title + children.results from ComponentQuery. Pin colors: HQ #D4A017, Factory #2D8B8B, Support #7B3F6B."
+      - "2026-08-30: Version1 Google map uses political globe styles (roads/POI/labels off, zoom 2–4). Static world fallback when NEXT_PUBLIC_GOOGLE_MAPS_API_KEY is unset. Amkor Headless Variants already present: Default, MapLeftTitleZipCentered, MapRight, MapRightTitleZipCentered, MapTopAllCentered, Version1."
+      - "2026-08-30: Root cause of missing variant dropdown in Pages — Portal LocationSearch rendering {09F20AFE-ABD8-4A55-839F-F16CBCBDB7C9} had an empty Parameters Template, so there was no FieldNames field for Pages to bind a variant selector to. Set to {673C2756-3107-4C99-9CFB-75CC27B080BA} (inherits BaseRenderingParameters -> IComponentVariant) and extended ComponentQuery with jsonValue aliases + Type + title. Compatible Renderings and Headless Variants were already correct — the parameters template was the missing piece."
 
   - name: "HeaderST"
     kind: "update"

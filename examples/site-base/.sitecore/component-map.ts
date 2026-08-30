@@ -162,6 +162,7 @@ import * as locationsearchitemprops from 'src/components/location-search/locatio
 import * as locationfootprintutils from 'src/components/location-search/location-footprint.utils';
 import * as GoogleMapdev from 'src/components/location-search/GoogleMap.dev';
 import * as googlemapsprops from 'src/components/location-search/google-maps.props';
+import * as FootprintWorldMapdev from 'src/components/location-search/FootprintWorldMap.dev';
 import * as FootprintGoogleMapdev from 'src/components/location-search/FootprintGoogleMap.dev';
 import * as KnowledgeListing from 'src/components/knowledge-listing/KnowledgeListing';
 import * as knowledgelistingprops from 'src/components/knowledge-listing/knowledge-listing.props';
@@ -468,6 +469,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['location-footprint', { ...locationfootprintutils }],
   ['GoogleMap', { ...GoogleMapdev }],
   ['google-maps', { ...googlemapsprops }],
+  ['FootprintWorldMap', { ...FootprintWorldMapdev }],
   ['FootprintGoogleMap', { ...FootprintGoogleMapdev }],
   ['KnowledgeListing', { ...KnowledgeListing, componentType: 'client' }],
   ['knowledge-listing', { ...knowledgelistingprops, ...knowledgelistingfields }],

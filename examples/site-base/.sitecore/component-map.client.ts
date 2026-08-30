@@ -80,6 +80,7 @@ import * as LocationSearchMapRightdev from 'src/components/location-search/Locat
 import * as LocationSearchDefaultdev from 'src/components/location-search/LocationSearchDefault.dev';
 import * as LocationSearch from 'src/components/location-search/LocationSearch';
 import * as GoogleMapdev from 'src/components/location-search/GoogleMap.dev';
+import * as FootprintWorldMapdev from 'src/components/location-search/FootprintWorldMap.dev';
 import * as FootprintGoogleMapdev from 'src/components/location-search/FootprintGoogleMap.dev';
 import * as KnowledgeListing from 'src/components/knowledge-listing/KnowledgeListing';
 import * as KnowledeVariant from 'src/components/knowlede-variant/KnowledeVariant';
@@ -213,6 +214,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['LocationSearchDefault', { ...LocationSearchDefaultdev }],
   ['LocationSearch', { ...LocationSearch }],
   ['GoogleMap', { ...GoogleMapdev }],
+  ['FootprintWorldMap', { ...FootprintWorldMapdev }],
   ['FootprintGoogleMap', { ...FootprintGoogleMapdev }],
   ['KnowledgeListing', { ...KnowledgeListing }],
   ['KnowledeVariant', { ...KnowledeVariant }],

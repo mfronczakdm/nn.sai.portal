@@ -4,6 +4,7 @@
 import { useRef, useEffect, useState } from 'react';
 import {
   createFootprintPinIcon,
+  FOOTPRINT_GOOGLE_MAP_OPTIONS,
   type FootprintMapPoint,
 } from './location-footprint.utils';
 
@@ -50,51 +51,13 @@ export const FootprintGoogleMap = ({ apiKey, locations }: FootprintGoogleMapProp
   useEffect(() => {
     if (!isLoaded || !mapRef.current) return;
 
-    const mapOptions = {
-      center: { lat: 20, lng: 10 },
-      zoom: 2,
-      disableDefaultUI: true,
-      zoomControl: false,
-      mapTypeControl: false,
-      scaleControl: false,
-      streetViewControl: false,
-      rotateControl: false,
-      fullscreenControl: false,
-      styles: [
-        {
-          featureType: 'administrative',
-          elementType: 'all',
-          stylers: [{ saturation: '-100' }],
-        },
-        {
-          featureType: 'landscape',
-          elementType: 'all',
-          stylers: [{ saturation: -100 }, { lightness: 65 }, { visibility: 'on' }],
-        },
-        {
-          featureType: 'poi',
-          elementType: 'all',
-          stylers: [{ visibility: 'off' }],
-        },
-        {
-          featureType: 'road',
-          elementType: 'all',
-          stylers: [{ saturation: '-100' }],
-        },
-        {
-          featureType: 'transit',
-          elementType: 'all',
-          stylers: [{ saturation: -100 }, { visibility: 'simplified' }],
-        },
-        {
-          featureType: 'water',
-          elementType: 'geometry',
-          stylers: [{ hue: '#ffff00' }, { lightness: -25 }, { saturation: -97 }],
-        },
-      ],
-    };
-
-    const newMap = new window.google.maps.Map(mapRef.current, mapOptions);
+    const newMap = new window.google.maps.Map(mapRef.current, {
+      ...FOOTPRINT_GOOGLE_MAP_OPTIONS,
+      restriction: {
+        latLngBounds: { north: 85, south: -85, west: -180, east: 180 },
+        strictBounds: false,
+      },
+    });
     setMap(newMap);
   }, [isLoaded]);
 

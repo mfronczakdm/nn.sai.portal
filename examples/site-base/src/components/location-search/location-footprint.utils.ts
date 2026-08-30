@@ -83,6 +83,72 @@ export function mapFootprintItemsToPoints(items: FootprintLocationFields[]): Foo
     .filter((point): point is FootprintMapPoint => point !== null);
 }
 
+/** Mercator projection for the static world fallback (percent of map box). */
+export function latLngToMapPercent(
+  latitude: number,
+  longitude: number
+): { leftPercent: number; topPercent: number } {
+  const clampedLat = Math.max(-85, Math.min(85, latitude));
+  const leftPercent = ((longitude + 180) / 360) * 100;
+  const latRad = (clampedLat * Math.PI) / 180;
+  const mercatorN = Math.log(Math.tan(Math.PI / 4 + latRad / 2));
+  const topPercent = ((1 - mercatorN / Math.PI) / 2) * 100;
+
+  return {
+    leftPercent: Math.max(1, Math.min(99, leftPercent)),
+    topPercent: Math.max(2, Math.min(98, topPercent)),
+  };
+}
+
+/** Google Maps JSON styles: political globe — land/water only, no streets or POI. */
+export const FOOTPRINT_GOOGLE_MAP_STYLES: Array<{
+  featureType?: string;
+  elementType?: string;
+  stylers: Array<Record<string, string | number>>;
+}> = [
+  { elementType: 'labels', stylers: [{ visibility: 'off' }] },
+  {
+    featureType: 'administrative',
+    elementType: 'geometry',
+    stylers: [{ visibility: 'off' }],
+  },
+  {
+    featureType: 'administrative.country',
+    elementType: 'geometry.stroke',
+    stylers: [{ visibility: 'on' }, { color: '#d4d4d0' }, { weight: 0.8 }],
+  },
+  {
+    featureType: 'landscape',
+    elementType: 'geometry',
+    stylers: [{ color: '#ecece6' }],
+  },
+  { featureType: 'poi', stylers: [{ visibility: 'off' }] },
+  { featureType: 'road', stylers: [{ visibility: 'off' }] },
+  { featureType: 'transit', stylers: [{ visibility: 'off' }] },
+  {
+    featureType: 'water',
+    elementType: 'geometry',
+    stylers: [{ color: '#b8d4e8' }],
+  },
+];
+
+export const FOOTPRINT_GOOGLE_MAP_OPTIONS = {
+  center: { lat: 20, lng: 12 },
+  zoom: 2,
+  minZoom: 2,
+  maxZoom: 4,
+  disableDefaultUI: true,
+  zoomControl: true,
+  mapTypeControl: false,
+  scaleControl: false,
+  streetViewControl: false,
+  rotateControl: false,
+  fullscreenControl: true,
+  clickableIcons: false,
+  gestureHandling: 'cooperative' as const,
+  styles: FOOTPRINT_GOOGLE_MAP_STYLES,
+};
+
 export function createFootprintPinIcon(pinType: FootprintPinType): string {
   const color = FOOTPRINT_PIN_COLORS[pinType];
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="36" viewBox="0 0 28 36">
