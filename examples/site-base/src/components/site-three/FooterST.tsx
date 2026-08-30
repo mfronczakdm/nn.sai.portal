@@ -88,7 +88,7 @@ type FooterSTProps = ComponentProps & {
 };
 
 /** Returns true if the link field has a valid href (not a placeholder like # or http://#). */
-function hasValidLink(field: LinkField | undefined): boolean {
+function hasValidLink(field: LinkField | undefined): field is LinkField {
   const href = field?.value?.href;
   return !!(href && href !== '#' && !href.startsWith('http://#'));
 }
