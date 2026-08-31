@@ -24,11 +24,32 @@ function hasRichText(field?: { value?: string | null }) {
   return Boolean(field?.value?.trim());
 }
 
-export const Default: React.FC<ArticleContentProps> = (props) => {
-  const { params, page } = props;
+type ArticleContentLayoutProps = ArticleContentProps & {
+  showImage: boolean;
+  variantName?: string;
+};
+
+const ArticleContentLayout: React.FC<ArticleContentLayoutProps> = (props) => {
+  const { params, page, showImage, variantName } = props;
   const isEditing = page.mode.isEditing;
-  const { pageTitle, pageShortTitle, pageHeaderTitle, pageSummary, pageSubtitle, ArticleBody } =
-    mergeArticleContentFields(props, isEditing);
+  const {
+    pageTitle,
+    pageShortTitle,
+    pageHeaderTitle,
+    pageSummary,
+    pageSubtitle,
+    ArticleBody,
+    image: rawImage,
+  } = mergeArticleContentFields(props, isEditing);
+
+  const image = normalizeImageFieldSrc(unwrapImageField(rawImage));
+  const imageSrc = showImage ? extractImageSrc(image) || extractImageSrc(rawImage) : '';
+  const imageAlt =
+    (typeof image?.value?.alt === 'string' && image.value.alt.trim()) ||
+    pageHeaderTitle?.value ||
+    pageTitle?.value ||
+    'Article image';
+  const hasImage = Boolean(imageSrc);
 
   const hasPageHeaderTitle = hasText(pageHeaderTitle);
   const hasPageTitle = hasText(pageTitle);
@@ -46,6 +67,7 @@ export const Default: React.FC<ArticleContentProps> = (props) => {
   const showPageShortTitleSlot = Boolean(pageShortTitle) && (hasPageShortTitle || isEditing);
 
   const hasRenderableBlock =
+    hasImage ||
     hasPageShortTitle ||
     hasPageHeaderTitle ||
     hasPageTitle ||
@@ -61,12 +83,16 @@ export const Default: React.FC<ArticleContentProps> = (props) => {
   const headingId = 'article-content-primary-heading';
   const pageShortTitleId = 'article-content-page-short-title';
 
-  const labelledBy =
-    showPrimaryHeading ? headingId : showPageShortTitleSlot ? pageShortTitleId : undefined;
+  const labelledBy = showPrimaryHeading
+    ? headingId
+    : showPageShortTitleSlot
+      ? pageShortTitleId
+      : undefined;
 
   return (
     <section
       data-component="ArticleContent"
+      data-variant={variantName}
       className={cn('@container article-content w-full', params?.styles)}
       aria-labelledby={labelledBy}
     >
@@ -123,11 +149,33 @@ export const Default: React.FC<ArticleContentProps> = (props) => {
             </div>
           )}
 
+          {showImage && (hasImage || isEditing) && (
+            <figure className="max-w-3xl">
+              <div className="bg-muted relative aspect-2/1 w-full overflow-hidden rounded-lg">
+                {hasImage ? (
+                  <Image
+                    src={imageSrc}
+                    alt={imageAlt}
+                    fill
+                    priority
+                    sizes="(max-width: 768px) 100vw, 768px"
+                    className="object-cover"
+                    unoptimized
+                  />
+                ) : (
+                  <div className="text-muted-foreground flex size-full items-center justify-center text-sm">
+                    Add page image
+                  </div>
+                )}
+              </div>
+            </figure>
+          )}
+
           {(hasArticleBody || isEditing) && ArticleBody && (
             <div
               className={cn(
                 'article-content__body text-foreground not-prose w-full max-w-3xl min-w-0',
-                (hasPageSummary || isEditing) && pageSummary && 'pt-6 md:pt-8',
+                (hasPageSummary || isEditing) && pageSummary && 'pt-6 md:pt-8'
               )}
             >
               <RichText field={ArticleBody} />
@@ -139,10 +187,27 @@ export const Default: React.FC<ArticleContentProps> = (props) => {
   );
 };
 
+export const Default: React.FC<ArticleContentProps> = (props) => (
+  <ArticleContentLayout {...props} showImage={false} />
+);
+
+/** Same reading layout as `Default` plus the page `image` field between summary and body. */
+export const WithImage: React.FC<ArticleContentProps> = (props) => (
+  <ArticleContentLayout {...props} showImage variantName="WithImage" />
+);
+
+/** Explicit copy-only presentation — suppresses the page `image` field. */
+export const TextOnly: React.FC<ArticleContentProps> = (props) => (
+  <ArticleContentLayout {...props} showImage={false} variantName="TextOnly" />
+);
+
 export const ServicePageVariant: React.FC<ArticleContentProps> = (props) => {
   const { params, page } = props;
   const isEditing = page.mode.isEditing;
-  const { pageHeaderTitle, pageSummary, pageSubtitle } = mergeArticleContentFields(props, isEditing);
+  const { pageHeaderTitle, pageSummary, pageSubtitle } = mergeArticleContentFields(
+    props,
+    isEditing
+  );
 
   const hasPageHeaderTitle = hasText(pageHeaderTitle);
   const hasPageSubtitle = hasText(pageSubtitle);
@@ -268,7 +333,7 @@ export const kmpage: React.FC<ArticleContentProps> = (props) => {
       data-variant="kmpage"
       className={cn(
         '@container article-content article-content--kmpage w-full bg-background',
-        params?.styles,
+        params?.styles
       )}
       aria-labelledby={showPrimaryHeading ? headingId : undefined}
     >
@@ -359,7 +424,7 @@ export const kmpage: React.FC<ArticleContentProps> = (props) => {
                 '[&_p]:mb-4 [&_p]:text-pretty',
                 '[&_ul]:mb-4 [&_ul]:list-disc [&_ul]:pl-6 [&_ol]:mb-4 [&_ol]:list-decimal [&_ol]:pl-6',
                 '[&_li]:mb-1.5 [&_a]:text-primary [&_a]:underline-offset-2 hover:[&_a]:underline',
-                '[&_strong]:font-semibold [&_strong]:text-foreground',
+                '[&_strong]:font-semibold [&_strong]:text-foreground'
               )}
             >
               <RichText field={Detail} />

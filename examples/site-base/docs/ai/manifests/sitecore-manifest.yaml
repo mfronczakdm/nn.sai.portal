@@ -1,5 +1,5 @@
 ﻿generatedAt: "2026-03-20T09:00:00Z"
-lastUpdatedAt: "2026-08-30T16:10:00Z"
+lastUpdatedAt: "2026-08-31T19:50:00Z"
 lastUpdatedBy: "cursor-agent"
 
 project:
@@ -18,7 +18,7 @@ availableRenderings:
   lastKnownValue: "{55790BFE-783E-4FF0-BD53-F81D3857DAD4}|{C5F905F8-FD1F-444E-A9E5-AC6B774FF0DE}|{2492BAC4-DA07-4C86-87F0-9873D40E2276}|{9C6D53E3-FE57-4638-AF7B-6D68304C7A94}|{3836D951-BB14-43AC-9231-649B7F245DC5}|{E97DCF2B-8011-41E0-A605-8A379F3DF1AA}|{A41A47A5-D305-4ADC-BFC8-CCB0F301DDCF}|{EFE73752-6046-45A8-92F4-7A68430A0759}|{EAA7CC9B-4657-410E-9A25-CD33C700261B}|{58490557-5582-4B19-9E31-CE6A80F95D93}|{4281E3CD-2309-4427-9A3E-D69FDD32FCDA}|{E6D0C7C1-ACFF-4E85-8600-196649FEFFB9}|{90021266-66B3-47B6-9709-A070F56064A1}|{F6A1FA05-15FC-46C9-B921-98E79EFF5F4E}|{E194B962-0617-4A10-B4DB-2A4D19248C13}|{E1BCD607-51C4-4248-8EE2-B7F474D40B3E}|{A53006E8-C66B-419F-859D-7CFA92E7E26B}|{4E7E77EF-529C-4C28-A5D8-94C5ACA065FF}|{C739DB42-43E5-4DAC-B5FC-404EDDC9E37C}|{0F7C27E2-B960-47E9-AB85-F8A9C45D0F9C}|{D008D5FE-B27E-419F-889C-115B3D48A114}|{85CC2A41-AC6F-4C10-9C2F-44308B48C453}|{4C5C1FA5-C077-491D-9686-40D0F68EF03E}|{83BD1231-A48F-4F54-A361-20904C69A641}|{0E64EDCA-06DD-469A-B3D1-93D8700A8F41}|{505B6BB0-DEEA-46F9-9AB2-7020E386F4F0}|{C9FFEF83-C928-4346-AA68-14B3EE0B0017}|{B92A0B89-790F-4D94-89C7-B361C8688765}|{9E525B59-B9BF-4EB7-B75D-10811EF6100D}|{66E80043-36E4-48AE-8CAF-EEF4A77690BE}|{5A8724FB-D6E6-4C9D-8A4A-EFD8750B0019}|{14FCB11C-364D-4BC2-9238-B29B4C6F8145}"
   lastUpdatedAt: "2026-06-09T00:00:00Z"
   renderingCount: 32
-  warning: "MCP cannot read this field â€” value may be stale if modified outside this session. Also: MCP write returned empty updatedFields â€” silent-write. Verify in Content Editor."
+  warning: "MCP cannot read this field — value may be stale if modified outside this session. Also: MCP write returned empty updatedFields — silent-write. Verify in Content Editor."
 
 components:
   - name: "AnnouncementBar"
@@ -226,8 +226,8 @@ components:
         - "Child template with base templates"
         - "All fields with correct Types"
         - "SVs created and linked"
-        - "Parent __Masters â†’ NavigationLink"
-        - "Folder template with __Masters â†’ NavigationHeaderData"
+        - "Parent __Masters → NavigationLink"
+        - "Folder template with __Masters → NavigationHeaderData"
         - "Datasource folder under /Data"
         - "Example parent + 2 child items"
         - "Rendering with ComponentQuery (generic field access)"
@@ -446,9 +446,9 @@ components:
         - "Parent template created with base templates + HorizonDatasourceGrouping"
         - "Child template created with base templates"
         - "All fields created with correct Types"
-        - "Parent SV created with __Masters â†’ child template"
+        - "Parent SV created with __Masters → child template"
         - "Child SV created with defaults"
-        - "Folder template created with __Masters â†’ parent template"
+        - "Folder template created with __Masters → parent template"
         - "Datasource folder created with insert options on instance"
         - "Example parent + 2 child items created"
         - "Rendering Parameters template created with 4 base templates"
@@ -577,9 +577,9 @@ components:
         - "Parent template created with base templates + HorizonDatasourceGrouping"
         - "Child template created with base templates"
         - "All 8 fields created with correct Types"
-        - "Parent SV created with __Masters â†’ child template"
+        - "Parent SV created with __Masters → child template"
         - "Child SV created with defaults"
-        - "Folder template created with __Masters â†’ parent template"
+        - "Folder template created with __Masters → parent template"
         - "Datasource folder created with insert options on instance"
         - "Example parent + 3 child items created"
         - "Rendering Parameters template created with 4 base templates"
@@ -804,8 +804,8 @@ components:
         - "Parent template created with base templates + HorizonDatasourceGrouping"
         - "Child template created with base templates"
         - "All 6 fields created with correct Types"
-        - "Parent SV with __Masters â†’ child, Child SV with defaults"
-        - "Folder template with __Masters â†’ parent"
+        - "Parent SV with __Masters → child, Child SV with defaults"
+        - "Folder template with __Masters → parent"
         - "Datasource folder with insert options on instance"
         - "Example parent + 3 child items created"
         - "Rendering Parameters template with 4 base templates"
@@ -927,7 +927,7 @@ components:
         - "Child template with base templates"
         - "All 6 fields with correct Types"
         - "SVs created, linked, __Masters set"
-        - "Folder template with __Masters â†’ parent"
+        - "Folder template with __Masters → parent"
         - "Datasource folder with insert options"
         - "Example parent + 4 child items"
         - "Rendering Parameters with 4 base templates"
@@ -1046,7 +1046,7 @@ components:
         - "Child template with base templates"
         - "All 7 fields with correct Types"
         - "SVs created, linked, __Masters set"
-        - "Folder template with __Masters â†’ parent"
+        - "Folder template with __Masters → parent"
         - "Datasource folder with insert options"
         - "Example parent + 2 child items"
         - "Rendering Parameters with 4 base templates"
@@ -1265,7 +1265,7 @@ components:
         - "Child template with base templates"
         - "All 6 fields with correct Types"
         - "SVs created, linked, __Masters set"
-        - "Folder template with __Masters â†’ parent"
+        - "Folder template with __Masters → parent"
         - "Datasource folder with insert options"
         - "Example parent + 3 child items"
         - "Rendering Parameters with 4 base templates"
@@ -1475,7 +1475,7 @@ components:
         - "Child template with base templates"
         - "All 4 fields with correct Types"
         - "SVs created, linked, __Masters set"
-        - "Folder template with __Masters â†’ parent"
+        - "Folder template with __Masters → parent"
         - "Datasource folder with insert options"
         - "Example parent + 3 child items"
         - "Rendering Parameters with 4 base templates"
@@ -1776,7 +1776,7 @@ components:
         - "Child template with base templates"
         - "All 4 fields with correct Types"
         - "SVs created, linked, __Masters set"
-        - "Folder template with __Masters â†’ parent"
+        - "Folder template with __Masters → parent"
         - "Datasource folder with insert options"
         - "Example parent + 3 child items"
         - "Rendering Parameters with 4 base templates"
@@ -1790,7 +1790,7 @@ components:
         - "Silent-write fields (Datasource Template, Location, __Masters, __Standard values)"
 
     notes:
-      - "shadcn/ui Accordion not available â€” used native HTML details/summary with chevron SVG and group-open:rotate-180 transition"
+      - "shadcn/ui Accordion not available — used native HTML details/summary with chevron SVG and group-open:rotate-180 transition"
 
   - name: "RichTextBlock"
     kind: "simple"
@@ -2236,7 +2236,7 @@ components:
       reactComponentExists: passed
       componentMapUpdated: passed
     notes:
-      - "2026-06-09: Created LandingHero (3 variants â€” Default, SplitImage, Minimal). Renders heroVideo if set else heroImage. ABM swap surface."
+      - "2026-06-09: Created LandingHero (3 variants — Default, SplitImage, Minimal). Renders heroVideo if set else heroImage. ABM swap surface."
 
   - name: "LandingFeatures"
     kind: "context-only"
@@ -2275,7 +2275,7 @@ components:
       reactComponentExists: passed
       componentMapUpdated: passed
     notes:
-      - "2026-06-09: Created. 3 fixed feature slots. Icons via lucide-react dynamic lookup (PascalCase icon name strings â†’ React component)."
+      - "2026-06-09: Created. 3 fixed feature slots. Icons via lucide-react dynamic lookup (PascalCase icon name strings → React component)."
 
   - name: "LandingStats"
     kind: "context-only"
@@ -2393,7 +2393,7 @@ components:
       reactComponentExists: passed
       componentMapUpdated: passed
     notes:
-      - "2026-06-09: Created. 5 fixed Q/A pairs. Custom accordion (useState) â€” shadcn does not ship an Accordion primitive in this repo. Marked componentType: client."
+      - "2026-06-09: Created. 5 fixed Q/A pairs. Custom accordion (useState) — shadcn does not ship an Accordion primitive in this repo. Marked componentType: client."
 
   - name: "LandingFinalCTA"
     kind: "context-only"
@@ -2494,7 +2494,7 @@ sharedDataTemplates:
       exampleItemExists: passed
 
     notes:
-      - "2026-05-18: Created Person data model (Issue #9). Insert options set via __Masters on folder SV and folder instance â€” MCP returned empty updatedFields (known silent-write behavior). Verify insert options in Content Editor if needed."
+      - "2026-05-18: Created Person data model (Issue #9). Insert options set via __Masters on folder SV and folder instance — MCP returned empty updatedFields (known silent-write behavior). Verify insert options in Content Editor if needed."
 
 pageTemplates:
   - name: "Article Page"
@@ -2565,7 +2565,7 @@ pageTemplates:
     notes:
       - "2026-05-18: Created Article Page template (Issue #10). Inherits from Page template. Insert options on Articles parent set via __Masters (silent-write)."
       - "2026-05-18: Template moved from /sitecore/templates/Project/fmc-custom-demo/Page Types to /sitecore/templates/Project/main/Page Types per project conventions."
-      - "2026-05-18: Created Article Layout partial design + Article page design (Issue #15). Components placed in headless-main. Page Design and Partial Design association via MCP (silent-write) â€” verify linkage in Content Editor."
+      - "2026-05-18: Created Article Layout partial design + Article page design (Issue #15). Components placed in headless-main. Page Design and Partial Design association via MCP (silent-write) — verify linkage in Content Editor."
 
   - name: "Landing Page"
     kind: "page-template"
@@ -2573,7 +2573,7 @@ pageTemplates:
     status: "complete"
     createdAt: "2026-06-09T00:00:00Z"
     updatedAt: "2026-06-09T00:00:00Z"
-    designIntent: "Agentic-Studio-fillable, ABM-ready, fixed-shape (3 features, 3 stats, 5 FAQs). All content on the page template â€” no datasources."
+    designIntent: "Agentic-Studio-fillable, ABM-ready, fixed-shape (3 features, 3 stats, 5 FAQs). All content on the page template — no datasources."
 
     baseTemplate:
       name: "Page"
@@ -2687,17 +2687,17 @@ pageTemplates:
       linkedToStandardValues: pendingManual
 
     pendingManual:
-      - "Insert options on /Home/lp (__Masters silent-write â€” set in Content Editor)"
-      - "Renderings on Available Renderings (silent-write â€” verify Renderings [shared] on Page Content includes the 6 new GUIDs)"
+      - "Insert options on /Home/lp (__Masters silent-write — set in Content Editor)"
+      - "Renderings on Available Renderings (silent-write — verify Renderings [shared] on Page Content includes the 6 new GUIDs)"
       - "6 renderings placed on Landing Page Layout's headless-main placeholder (Pages Builder)"
       - "Page Design 'Landing Page' references Partial Designs (Header + Landing Page Layout + Footer) (Content Editor)"
       - "Landing Page __Standard Values references Page Design 'Landing Page' (Content Editor)"
-      - "Validation regex + __Short description silent-write on 40 fields â€” verify a sample in Content Editor"
+      - "Validation regex + __Short description silent-write on 40 fields — verify a sample in Content Editor"
 
     notes:
       - "2026-06-09: Created via grilling session. Agentic-Studio-fillable, ABM-ready. Fixed-shape (3 features, 3 stats, 5 FAQs). 40 route fields across 6 sections with validation regexes + agent help text. __Standard Values populated with v1 SaaS-flavored defaults (marked for review before first ABM campaign)."
-      - "2026-06-09: 6 context components created (LandingHero, LandingFeatures, LandingStats, LandingSocialProof, LandingFAQ, LandingFinalCTA). 8 Variant Definitions total â€” Hero gets 3 (Default, SplitImage, Minimal), others get Default only (lean v1 scope)."
-      - "2026-06-09: Partial Design and Page Design items created but rendering placement and standard-values linkage are silent-write â€” finalize via Pages Builder / Content Editor."
+      - "2026-06-09: 6 context components created (LandingHero, LandingFeatures, LandingStats, LandingSocialProof, LandingFAQ, LandingFinalCTA). 8 Variant Definitions total — Hero gets 3 (Default, SplitImage, Minimal), others get Default only (lean v1 scope)."
+      - "2026-06-09: Partial Design and Page Design items created but rendering placement and standard-values linkage are silent-write — finalize via Pages Builder / Content Editor."
       - "2026-06-09: Registry entry in docs/ai/catalog/page-template-registry.yaml under id=landing is the canonical schema source of truth. Orchestrator skill at docs/ai/skills/sitecore-create-landing-page.md. Router updated at docs/ai/rules/01-sitecore-router.md."
 
   - name: "SearchExperience"
@@ -2828,7 +2828,7 @@ pageTemplates:
 
     notes:
       - "2026-05-20: Backfilled into manifest from live Sitecore. Created before manifest existed."
-      - "2026-05-20: React component was deleted (ADR 0003 pivot). Sitecore items remain as orphans â€” safe to clean up later."
+      - "2026-05-20: React component was deleted (ADR 0003 pivot). Sitecore items remain as orphans — safe to clean up later."
 
   - name: "SearchExperienceV2"
     kind: "simple"
@@ -2918,7 +2918,7 @@ pageTemplates:
 
     notes:
       - "2026-05-20: Created SearchExperienceV2 (Issue #34). Replaces JSON config with 7 individual template fields. ADR 0004."
-      - "2026-05-20: All 3 pendingManual items verified via get_component and get_allowed_comps_by_ph â€” datasource template, datasource location, and available renderings all confirmed."
+      - "2026-05-20: All 3 pendingManual items verified via get_component and get_allowed_comps_by_ph — datasource template, datasource location, and available renderings all confirmed."
 
   - name: "Services Page"
     kind: "page-template"
@@ -2966,7 +2966,7 @@ pageTemplates:
       failed: []
       pendingManual:
         - "__Standard values link on template (silent-write)"
-        - "Insert options / __Masters — Cooley SV had none readable via MCP; list_avail_insertopts fails on template items (no site root)"
+        - "Insert options / __Masters � Cooley SV had none readable via MCP; list_avail_insertopts fails on template items (no site root)"
     notes:
       - "2026-08-25: Copied Cooley Services Page to lcmc Project templates as a loose item (same structure as Cooley, not under a subfolder)."
 
@@ -3015,7 +3015,7 @@ pageTemplates:
       failed: []
       pendingManual:
         - "__Standard values link on template (silent-write)"
-        - "Insert options / __Masters — Cooley SV had none readable via MCP"
+        - "Insert options / __Masters � Cooley SV had none readable via MCP"
     notes:
       - "2026-08-25: Copied Cooley Services Page to amkor Project templates as a loose item (same structure as Cooley)."
 
@@ -3064,7 +3064,7 @@ pageTemplates:
       failed: []
       pendingManual:
         - "__Standard values link on template (silent-write)"
-        - "Insert options / __Masters — Cooley SV had none readable via MCP"
+        - "Insert options / __Masters � Cooley SV had none readable via MCP"
         - "Add Services Page to Home (and site) insert options in Pages/CE if authors need to insert it"
     notes:
       - "2026-08-25: Copied Cooley Services Page once to andmore tenant Project templates. americasmart and atlanta-apparel share this tenant template root."
@@ -3091,7 +3091,7 @@ lookups:
   - path: "/sitecore/content/progressive/pkm/Presentation/Available Renderings/Page Content"
     itemId: "{5EA156B8-2FF0-4FDC-81C1-5791F1A50CDD}"
     lastReadAt: "2026-08-24T12:30:00Z"
-    note: "Available Renderings — NEVER replace, always concatenate; current value not readable via MCP"
+    note: "Available Renderings � NEVER replace, always concatenate; current value not readable via MCP"
   - path: "/sitecore/content/main/main-website/Data"
     itemId: "{E6C852B5-B70D-412C-B5C6-E6502842F74E}"
     lastReadAt: "2026-03-25T12:00:00Z"
@@ -3122,7 +3122,7 @@ lookups:
   - path: "/sitecore/content/main/main-website/Presentation/Available Renderings/Page Content"
     itemId: "{2BF7E311-E3A5-4290-A043-AB97EA1DFB15}"
     lastReadAt: "2026-03-25T12:00:00Z"
-    note: "Available Renderings â€” NEVER replace, always concatenate"
+    note: "Available Renderings — NEVER replace, always concatenate"
   - path: "/sitecore/layout/Renderings/Project/fmc-custom-demo"
     itemId: "{4A1F0B51-F3F3-43D2-B184-C7A9F549154D}"
     lastReadAt: "2026-03-25T12:00:00Z"
@@ -3255,7 +3255,7 @@ lookups:
   - path: "/sitecore/templates/Project/click-click-launch/Site/Detail Page"
     itemId: "{A9919790-3389-4FC2-ABC8-24F73C847C8E}"
     lastReadAt: "2026-08-25T01:20:00Z"
-    note: "Shared foundation Detail Page — base of Cooley/lcmc/amkor/andmore Services Page"
+    note: "Shared foundation Detail Page � base of Cooley/lcmc/amkor/andmore Services Page"
   - path: "/sitecore/templates/Project/lcmc"
     itemId: "{518471D1-E80C-4860-8B40-F6EE2E3BD17A}"
     lastReadAt: "2026-08-25T01:20:00Z"
@@ -3295,15 +3295,15 @@ lookups:
   - path: "/sitecore/content/amkor/amkor/Data/HeroST"
     itemId: "{4D947028-954E-4464-B969-41ED9184990E}"
     lastReadAt: "2026-08-29T15:30:00Z"
-    note: "HeroST Folder — reusable HeroST datasource picker location for amkor site"
+    note: "HeroST Folder � reusable HeroST datasource picker location for amkor site"
   - path: "/sitecore/content/amkor/amkor/Data/MultiPromos"
     itemId: "{EC7F7306-B6D1-459B-B150-66D7C8CAEE08}"
     lastReadAt: "2026-08-29T15:40:00Z"
-    note: "MultiPromo Folder — preexisting Amkor datasource picker location"
+    note: "MultiPromo Folder � preexisting Amkor datasource picker location"
   - path: "/sitecore/content/amkor/amkor/Data/HeroCarousels"
     itemId: "{E8544567-48B8-46AD-B8DB-B7107FA9AF9C}"
     lastReadAt: "2026-08-29T16:00:00Z"
-    note: "HeroCarousel Folder — reusable HeroCarousel datasource picker location for amkor site"
+    note: "HeroCarousel Folder � reusable HeroCarousel datasource picker location for amkor site"
   - path: "/sitecore/content/amkor/amkor/Presentation/Headless Variants/HeroCarousel"
     itemId: "{D074EA35-53FA-4142-AE86-5A7264E7A49C}"
     lastReadAt: "2026-08-29T16:00:00Z"
@@ -3311,15 +3311,15 @@ lookups:
   - path: "/sitecore/content/amkor/amkor/Data/Locations"
     itemId: "{F9DC4191-96BA-4E83-B6BC-601AF41ED499}"
     lastReadAt: "2026-08-29T16:30:00Z"
-    note: "Amkor Locations folder — 30 dycom Location items (1 HQ, 10 CSC, 19 Factories)"
+    note: "Amkor Locations folder � 30 dycom Location items (1 HQ, 10 CSC, 19 Factories)"
   - path: "/sitecore/content/amkor/amkor/Data/Location Searches/An unrivaled global footprint"
     itemId: "{AF9AA2C3-9CF1-49C4-9A8F-5211530F2FFF}"
     lastReadAt: "2026-08-29T16:30:00Z"
-    note: "LocationSearch Version1 datasource — 30 child Location items for ComponentQuery children"
+    note: "LocationSearch Version1 datasource � 30 child Location items for ComponentQuery children"
   - path: "/sitecore/content/amkor/amkor/Presentation/Headless Variants/Location Search"
     itemId: "{0E7EA654-5E01-4B3D-B5EF-B4C1B585FC3E}"
     lastReadAt: "2026-08-29T16:30:00Z"
-    note: "Amkor LocationSearch Headless Variants — Version1 {FF24F042-30E6-4F40-BDC4-819059865005}"
+    note: "Amkor LocationSearch Headless Variants � Version1 {FF24F042-30E6-4F40-BDC4-819059865005}"
   - path: "/sitecore/content/andmore/americasmart/Data"
     itemId: "{5CD5FD5C-2915-42B3-9D9E-21101F24D96D}"
     lastReadAt: "2026-08-25T02:00:00Z"
@@ -3329,7 +3329,7 @@ lookups:
   - path: "/sitecore/content/lcmc/lcmc/Presentation/Available Renderings/Homepage Kit"
     itemId: "{72E55B4F-12C7-4D15-9E7C-71F88370D501}"
     lastReadAt: "2026-08-25T03:00:00Z"
-    note: "New AR group for homepage kit — Renderings is silent-write; expected value is the five new rendering IDs"
+    note: "New AR group for homepage kit � Renderings is silent-write; expected value is the five new rendering IDs"
 
 # Demo datasource items (AI-created content, not new component definitions)
 demoContent:
@@ -3346,16 +3346,16 @@ demoContent:
     datasourceTemplateId: "{C241957A-B7CC-4BDD-962F-BF8652ED595C}"
     sourceSite: "https://amkor.com/"
     notes: >
-      Three reusable HeroST datasource items for Amkor homepage authoring — not new component
+      Three reusable HeroST datasource items for Amkor homepage authoring � not new component
       infrastructure. Created HeroST Folder under site Data (template HeroST Folder
       {91F1954F-86D9-4859-9885-3E42E8D8A2A9}) because no HeroST Folder existed; Amkor had
       only Hero Sections Folder (wrong template for HeroST picker). Content aligned to live
       amkor.com homepage themes: NVIDIA AI partnership, U.S. advanced packaging facility,
       S-Connect advanced packaging. Image1 uses genuine amkormarcomexternal Azure URLs from
       live site masthead/tiles. Image2 inherited from HeroST template standard values (unused
-      by Default/Right/Centered variants). Home page not modified — authors select datasource
-      and variant in Pages. Suggested variants: AI Infrastructure → Centered; US Packaging →
-      Default; S-Connect → Right (or Default). Enable Dark Image rendering param when using
+      by Default/Right/Centered variants). Home page not modified � authors select datasource
+      and variant in Pages. Suggested variants: AI Infrastructure ? Centered; US Packaging ?
+      Default; S-Connect ? Right (or Default). Enable Dark Image rendering param when using
       photo backgrounds.
     folder:
       name: "HeroST"
@@ -3370,7 +3370,7 @@ demoContent:
         title: "Amkor and NVIDIA Partner for AI Infrastructure"
         link1: { text: "Explore Technology", targetId: "{53463616-8870-4F0D-95C1-4371D992C7DB}", targetPath: "/sitecore/content/amkor/amkor/Home/Technology" }
         link2: { text: "Contact Us", targetId: "{DF23610E-A0C4-4E95-A316-AB794CFF927F}", targetPath: "/sitecore/content/amkor/amkor/Home/About Us/Contact Us" }
-        image1Status: "set — Nvidia-Partnership-Banner_2000x600px_Final.jpg (live Azure CDN)"
+        image1Status: "set � Nvidia-Partnership-Banner_2000x600px_Final.jpg (live Azure CDN)"
         suggestedVariant: "Centered"
       - name: "US Advanced Packaging Hero"
         itemId: "{34E6C317-6645-419F-B903-86FD13EFD889}"
@@ -3379,7 +3379,7 @@ demoContent:
         title: "New U.S. Advanced Packaging and Test Facility"
         link1: { text: "Explore Test Services", targetId: "{C39BC746-0C9C-4C76-A623-3DE87ED527F0}", targetPath: "/sitecore/content/amkor/amkor/Home/Test Services" }
         link2: { text: "About Amkor", targetId: "{B6B4DA5A-F8B2-4AD1-BF08-02AADF88C82E}", targetPath: "/sitecore/content/amkor/amkor/Home/About Us/Amkor Overview" }
-        image1Status: "set — Amkor-Flag-in-Desert-Content-Tile.png (live Azure CDN)"
+        image1Status: "set � Amkor-Flag-in-Desert-Content-Tile.png (live Azure CDN)"
         suggestedVariant: "Default"
       - name: "S-Connect Technology Hero"
         itemId: "{90F07F97-B0F3-4474-827C-BF5832BFCCC5}"
@@ -3388,7 +3388,7 @@ demoContent:
         title: "S-Connect: A Revolutionary Bridge Die Interposer Solution"
         link1: { text: "Learn More", targetId: "{1F93ED97-C9E0-4A5E-9B79-ABA7BEFD2157}", targetPath: "/sitecore/content/amkor/amkor/Home/Technology/S-Connect" }
         link2: { text: "Explore S-SWIFT", targetId: "{661EEBCD-90EE-4393-A085-F4FF6710A826}", targetPath: "/sitecore/content/amkor/amkor/Home/Technology/S-SWIFT" }
-        image1Status: "set — S-Connect_BG_Tile.png (live Azure CDN)"
+        image1Status: "set � S-Connect_BG_Tile.png (live Azure CDN)"
         suggestedVariant: "Right"
     verification:
       checkedAt: "2026-08-29T15:30:00Z"
@@ -3404,7 +3404,7 @@ demoContent:
         - "Place HeroST on Home in Pages; pick one datasource per rendering instance"
         - "Select variant (Default, Right, or Centered) per hero in Pages"
         - "Enable Dark Image rendering param for photo backgrounds if text contrast is low"
-        - "Image2 is template SV default — clear if using Stacked variant"
+        - "Image2 is template SV default � clear if using Stacked variant"
 
   - name: "amkor-multipromo-homepage-datasources"
     kind: "content-create"
@@ -3421,7 +3421,7 @@ demoContent:
     sourceSite: "https://amkor.com/"
     notes: >
       Four reusable MultiPromo parents (3 SimplePromo children each) for Amkor homepage
-      authoring — not new component infrastructure. Reused existing Data/MultiPromos
+      authoring � not new component infrastructure. Reused existing Data/MultiPromos
       folder {EC7F7306-B6D1-459B-B150-66D7C8CAEE08}. Copy aligned to live amkor.com homepage
       tiles (US facility, S-Connect, S-SWIFT), applications (AI/automotive/communications),
       packaging/test/technology, and careers/blog/contact. Images are live Azure CDN URLs
@@ -3440,9 +3440,9 @@ demoContent:
         title: "Featured Technologies"
         suggestedVariant: "Version2"
         children:
-          - { name: "US Advanced Packaging Facility", itemId: "{5CA09D55-1B4C-495C-9359-1B7B024F3A3A}", heading: "Amkor’s New US Advanced Packaging and Test Facility", targetPath: "/sitecore/content/amkor/amkor/Home/Test Services" }
+          - { name: "US Advanced Packaging Facility", itemId: "{5CA09D55-1B4C-495C-9359-1B7B024F3A3A}", heading: "Amkor�s New US Advanced Packaging and Test Facility", targetPath: "/sitecore/content/amkor/amkor/Home/Test Services" }
           - { name: "S-Connect Interposer", itemId: "{F6A20A96-9B3D-41AE-A046-AA204A8B1C32}", heading: "S-Connect: A Revolutionary Bridge Die Interposer Solution", targetPath: "/sitecore/content/amkor/amkor/Home/Technology/S-Connect" }
-          - { name: "S-SWIFT Technology", itemId: "{078CCFA0-5EDD-476E-8832-E00F6C9A8788}", heading: "Advancing IC Packaging with Amkor’s S-SWIFT Technology", targetPath: "/sitecore/content/amkor/amkor/Home/Technology/S-SWIFT" }
+          - { name: "S-SWIFT Technology", itemId: "{078CCFA0-5EDD-476E-8832-E00F6C9A8788}", heading: "Advancing IC Packaging with Amkor�s S-SWIFT Technology", targetPath: "/sitecore/content/amkor/amkor/Home/Technology/S-SWIFT" }
       - name: "Applications We Serve"
         itemId: "{2111C5E5-39F0-4D48-A512-26685A5CDE1E}"
         path: "/sitecore/content/amkor/amkor/Data/MultiPromos/Applications We Serve"
@@ -3546,7 +3546,7 @@ demoContent:
       and four variant definitions created earlier; this session created 12 HeroCarouselSlide
       children (3 per parent). Images use genuine amkormarcomexternal Azure CDN URLs with
       verified width/height (NVIDIA 2000x600; facility + S-Connect tiles 370x230). S-SWIFT
-      slide uses S-Connect tile as temporary related image. Home page not modified — authors
+      slide uses S-Connect tile as temporary related image. Home page not modified � authors
       select datasource and suggested variant in Pages.
     headlessVariants:
       containerId: "{D074EA35-53FA-4142-AE86-5A7264E7A49C}"
@@ -3633,7 +3633,7 @@ demoContent:
       legend). Reused click-click-launch LocationSearch rendering + dycom Location template
       for items (same pattern as Dycom). Created Data/Locations folder, 30 location items,
       Location Search datasource with 30 child Location items for ComponentQuery children.
-      Home page not modified — authors add LocationSearch + select Version1 in Pages.
+      Home page not modified � authors add LocationSearch + select Version1 in Pages.
     headlessVariants:
       containerId: "{0E7EA654-5E01-4B3D-B5EF-B4C1B585FC3E}"
       containerPath: "/sitecore/content/amkor/amkor/Presentation/Headless Variants/Location Search"
@@ -3688,7 +3688,7 @@ demoContent:
         - "Assign datasource An unrivaled global footprint"
         - "Set NEXT_PUBLIC_GOOGLE_MAPS_API_KEY in rendering host env for live map tiles"
         - "FieldNames variant must be set in Pages (set_component_datasource variantId is personalization, not Headless Variants)"
-        - "Select component variant Version1 — Pages canvas Version 1 is layout version, not the rendering variant"
+        - "Select component variant Version1 � Pages canvas Version 1 is layout version, not the rendering variant"
 
 # Information architecture / page creation batches
 ia:
@@ -3703,7 +3703,7 @@ ia:
     notes: >
       Marketing-aligned HeroCarousel + MultiPromo datasources for ERA, AmesburyTruth,
       and Quanex. Created HeroCarousels folders on ERA/AT; reused quanex folders.
-      Homepage Hero on quanex left unchanged. ContactLink → each site Contact Us page.
+      Homepage Hero on quanex left unchanged. ContactLink ? each site Contact Us page.
       MultiPromo parent template {775D6354-CF01-4F34-9713-D34645079C88}; SimplePromo
       child {F94C8C17-70E8-4D8B-9D35-D0465C0E0945}. Images use public brand CDN URLs
       (replace with DAM when available). Publish Data trees for Edge.
@@ -3851,7 +3851,7 @@ ia:
         - "ERA + AT HeroCarousels folders created"
         - "8 HeroCarousel parents + slides verified via get_content_item_by_id"
         - "8 MultiPromo parents + SimplePromo children created"
-        - "Homepage Hero {259A5850…} left untouched"
+        - "Homepage Hero {259A5850�} left untouched"
       failed: []
       pendingManual:
         - "Publish HeroCarousels + MultiPromos Data trees on era, amesburytruth, quanex for Edge"
@@ -3869,7 +3869,7 @@ ia:
       Refactored Pulse into a multi-site pack platform (code-only; no new Sitecore items).
       Packs: quanex, era, amesburytruth, pillsburylaw under src/lib/pulse-packs/.
       Experience Edge GraphQL is the primary content source (Home-scoped per pack).
-      Sitecore Search remains optional via isSitecoreSearchConfigured() — not required for
+      Sitecore Search remains optional via isSitecoreSearchConfigured() � not required for
       Quanex family. Intent citationItemIds hydrate title/url/excerpt from Edge at ask-time.
       Docs: docs/ai/demo/pulse-multi-site.md. Publish each site Home tree to Edge for Pulse.
     relatedHomeRoots:
@@ -3890,9 +3890,9 @@ ia:
       to Quanex Home IA. Created named MegaMenuItems and LinkLists (Products, Capabilities,
       Service and Support, Company, Contact Us, Resources, Careers). Wired via
       set_component_datasource. MCP get_components_on_page often still reports local:/Data
-      starter names even after successful GUID swaps — also updated starter Speakers/
-      Headphones/Amps/Pro/Artist Services Title+Link as fallback. Header SupportLink →
-      Contact Us; Image 1 TargetUrl → Products. Publish Header PD + Data for Edge.
+      starter names even after successful GUID swaps � also updated starter Speakers/
+      Headphones/Amps/Pro/Artist Services Title+Link as fallback. Header SupportLink ?
+      Contact Us; Image 1 TargetUrl ? Products. Publish Header PD + Data for Edge.
     relatedItems:
       headerPartialDesignId: "{7B76C1CE-57C8-41C5-880B-BE61B8FD0F1B}"
       headerDataFolderId: "{3A265592-9AC5-4388-8A9B-E2AC997AEF3E}"
@@ -3942,7 +3942,7 @@ ia:
       Remapped ERA Header/Data mega menus to Home IA. Updated starter Speakers/Headphones/Amps/Pro/
       Artist Services Title+Link in place (layout still binds local:/Data/...). Added extra megas
       Fab and Fix, Weatherseals, News, Clearance. Unique Door Entrance/More LinkLists swapped onto
-      Door mega secondaries. SupportLink → Contact Us. Publish Header PD + Data for Edge.
+      Door mega secondaries. SupportLink ? Contact Us. Publish Header PD + Data for Edge.
     relatedItems:
       headerPartialDesignId: "{05218645-2A86-4805-89AF-BA02E11E060C}"
       headerDataFolderId: "{4D565A9F-5B20-42A1-8398-A5987954811E}"
@@ -3977,7 +3977,7 @@ ia:
     notes: >
       Remapped AmesburyTruth Header/Data mega menus to Home IA. Updated starter Speakers/Headphones/
       Amps/Pro/Artist Services Title+Link in place. Added About Us and Recall Notice megas.
-      Unique Door Sliding/Hinged LinkLists swapped onto Door mega secondaries. SupportLink → Contact Us.
+      Unique Door Sliding/Hinged LinkLists swapped onto Door mega secondaries. SupportLink ? Contact Us.
     relatedItems:
       headerPartialDesignId: "{021A940F-0650-4FCD-9F2A-CB1B46B92803}"
       headerDataFolderId: "{E0802197-AF95-4CD0-8864-F8F80960749C}"
@@ -4010,7 +4010,7 @@ ia:
     notes: >
       Updated Footer Primary/Secondary LinkLists plus FooterST Title/Copyright/social for quanex,
       era, and amesburytruth to match live-site footer hubs. Legal pages (Privacy/Cookies/Terms)
-      do not exist in IA — secondary columns use nearest Home pages instead.
+      do not exist in IA � secondary columns use nearest Home pages instead.
     relatedItems:
       quanex:
         footerPartialDesignId: "{5113CC1F-C7AD-4DA7-9CBA-4C539B8A9E33}"
@@ -4062,7 +4062,7 @@ ia:
       Created full Quanex IA tree (64 Services Page items) under Home from quanex-ia.md.
       Content sourced from quanex.com (og:description / page copy). Detail + image confirmed
       via MCP read-back. pageTitle/pageHeaderTitle/pageShortTitle/pageSubtitle/pageSummary/
-      metadata*/og* sent on create/update but are silent in MCP responses (inherited fields) â€”
+      metadata*/og* sent on create/update but are silent in MCP responses (inherited fields) —
       verify in Content Editor. Image fields use external quanex.com URL XML (not DAM-uploaded).
       Services Page was NOT in Home insert options; create_content_item still succeeded.
       Item naming: spaces preserved; "&" -> "and"; "Screens+" -> "Screens Plus";
@@ -4176,11 +4176,11 @@ ia:
       Created full AmesburyTruth IA tree (81 Services Page items) under Home from amesburytruth-ia.md.
       Skipped Home (exists) and pre-existing Speakers/Video/Data. Content sourced from amesburytruth.com
       (validated product URLs under /products/windows|doors|weatherseals|extrusions; about/resources hubs).
-      Detail + image confirmed via MCP read-back. page*/metadata*/og* sent on create but silent in MCP â€”
+      Detail + image confirmed via MCP read-back. page*/metadata*/og* sent on create but silent in MCP —
       pendingManual verify in Content Editor. External image XML uses https://www.amesburytruth.com/img/fb-post.png.
       Services Page NOT in Home insert options; create_content_item still succeeded (same as quanex).
       Item naming: spaces preserved; "/" removed from Casement Awning / Hung Sliding; "&" -> "and" (News and Events).
-      Sitemap uses double-slash /products//â€¦ â€” live paths normalize to /products/â€¦.
+      Sitemap uses double-slash /products//… — live paths normalize to /products/….
     items:
       - { name: "Window Hardware", itemId: "{F88066D7-8523-449D-BA4A-B47FAD953042}", path: "/sitecore/content/quanex/amesburytruth/Home/Window Hardware" }
       - { name: "Casement Awning", itemId: "{07CD2182-CFEA-4459-A266-70C1E5C1057D}", path: "/sitecore/content/quanex/amesburytruth/Home/Window Hardware/Casement Awning" }
@@ -4434,7 +4434,7 @@ ia:
       Updated all 12 blog hubs + parent Blogs page with Pillsbury-relevant Detail HTML,
       pageTitle/pageHeaderTitle/pageShortTitle/pageSubtitle/pageSummary, metadata* and og*
       fields. MCP update responses only echo Services Page local fields (Detail/image);
-      inherited Page Content / Metadata / Open Graph fields are silent in MCP responses â€”
+      inherited Page Content / Metadata / Open Graph fields are silent in MCP responses —
       verify in Content Editor. ogImage left empty (no DAM assets assigned).
     items:
       - { name: "Blogs", itemId: "{612AE84F-C0C8-451A-859B-1712FB3149D2}" }
@@ -4485,7 +4485,7 @@ ia:
       with attorney profile fields. Created Data/Taxonomy folders + Tag seed items. Office Droplink
       sources Home/Lawyers/Offices. Multilists source Taxonomy/*. DownloadVCard uses File (Sitecore
       media field; closest to Media Link). Insert options set on Lawyers/Bios for Bio template
-      (silent-write â€” verify in Content Editor).
+      (silent-write — verify in Content Editor).
     templates:
       pageTemplate:
         name: "Bio"
@@ -4560,7 +4560,7 @@ ia:
         path: "/sitecore/content/pillsbury/pillsburylaw/Home/Lawyers/Bios"
         itemId: "{5DAD4C5C-84CD-471A-80EF-C805570BE79A}"
         insertOptions: ["Bio"]
-        insertOptionsNote: "silent-write â€” verify __Masters in Content Editor"
+        insertOptionsNote: "silent-write — verify __Masters in Content Editor"
     verification:
       checkedAt: "2026-08-04T19:40:00Z"
       passed:
@@ -4584,8 +4584,8 @@ ia:
     siteName: "pillsburylaw"
     notes: >
       Populated 20 attorney Bio items under Home/Lawyers/Bios from public directory listing
-      https://www.pillsburylaw.com/en/lawyers/?v=attorney (Aâ€“A surnames). Skipped Consultant
-      Chris Albrecht. Emails are first.last@pillsburylaw.com conventions (not scraped â€” emails
+      https://www.pillsburylaw.com/en/lawyers/?v=attorney (A–A surnames). Skipped Consultant
+      Chris Albrecht. Emails are first.last@pillsburylaw.com conventions (not scraped — emails
       not exposed in listing). Headshot left empty (no DAM assets). Added 6 Practice Area Tags
       for practices not previously seeded.
     source: "https://www.pillsburylaw.com/en/lawyers/?v=attorney"
@@ -4655,7 +4655,7 @@ ia:
       Populated Headshot Image fields on 18 Bio pages with external Unsplash professional
       portraits (square crop). Left Andrew-V-Alfano and Ata-A-Akiner DAM headshots unchanged.
       BioListing/BioDetail render Unsplash via next/image (unoptimized); DAM via ContentSdkImage.
-      2026-08-05: Edge GraphQL does not return external Image src â€” added bio-headshots.ts
+      2026-08-05: Edge GraphQL does not return external Image src — added bio-headshots.ts
       fallback map (same pattern as blog-listing.taxonomy) so listing + detail always resolve URLs.
     skipped:
       - { name: "Andrew-V-Alfano", reason: "existing Content Hub DAM headshot" }
@@ -4808,7 +4808,7 @@ ia:
       footerSTId: "{5DF38B0D-6C45-44AE-A4CC-1B1B151F06BB}"
       branding:
         title: "Client-focused counsel."
-        copyright: "Â© 2001â€“2026 Pillsbury Winthrop Shaw Pittman LLP. Attorney Advertising."
+        copyright: "© 2001–2026 Pillsbury Winthrop Shaw Pittman LLP. Attorney Advertising."
         linkedIn: "https://www.linkedin.com/company/pillsbury-winthrop-shaw-pittman"
       primaryLinks:
         - { text: "Lawyers", pageId: "{28CDB0B8-594B-4FBE-97E2-8F224740EE79}" }
@@ -4868,7 +4868,7 @@ ia:
         - "Five mega menus Title/Link remapped to Lawyers/Capabilities/Insights/Connect/Contact"
         - "Primary LinkLists remapped to L2/L3 IA pages"
         - "Secondary LinkLists retitled and pointed at Offices/Services/Insights"
-        - "Header SupportLink â†’ Contact; Image 1 TargetUrl â†’ Lawyers"
+        - "Header SupportLink → Contact; Image 1 TargetUrl → Lawyers"
       failed: []
       pendingManual:
         - "Publish Header Partial Design + Header/Data for Edge"
@@ -4893,9 +4893,9 @@ ia:
     totalCreated: 81
     notes: >
       3-level IA from pillsburylaw.com mega-nav + utility. All pages use Services Page template
-      (Detail + image fields). create_page with branch ID created items named "name" â€” used
+      (Detail + image fields). create_page with branch ID created items named "name" — used
       create_content_item with template {B08EC32B-...} instead. Services L3 uses sector/practice
-      categories (not full Aâ€“Z index). Top-level Careers utility folded under Lawyers/Careers.
+      categories (not full A–Z index). Top-level Careers utility folded under Lawyers/Careers.
       Workflow: Draft. Home/Speakers and Home/Video pre-existed and were left alone.
     pages:
       - { displayName: "Lawyers", name: "Lawyers", itemId: "{28CDB0B8-594B-4FBE-97E2-8F224740EE79}", path: "/sitecore/content/pillsbury/pillsburylaw/Home/Lawyers" }
@@ -4914,7 +4914,7 @@ ia:
         - "Publish new pages for Edge"
         - "Populate image fields and richer Detail content"
         - "Optionally add Services Page to Home insert options / use branch correctly"
-        - "Header nav remapped (see pillsburylaw-header-nav-remap) â€” publish Header Partial Design"
+        - "Header nav remapped (see pillsburylaw-header-nav-remap) — publish Header Partial Design"
 
   - name: "pillsburylaw-saudi-expansion-search-demo"
     status: "complete"
@@ -4930,10 +4930,10 @@ ia:
       create_page failed (field name); used create_content_item with Detail only.
       Search catalog + AI rules updated in examples/pillsbury/src/components/search-results/.
       2026-08-06: Added Global Trade blog post Saudi-Expansion-and-US-Export-Controls; Ata bio
-      related-content cards in BioDetail. Workflow: Draft â€” publish for Edge when ready.
+      related-content cards in BioDetail. Workflow: Draft — publish for Edge when ready.
       2026-08-06: Populated pageTitle/pageHeaderTitle/pageShortTitle/pageSubtitle/pageSummary +
       metadata/og on all 9 Saudi demo Services Pages (MCP silent for inherited fields; verified
-      via get_page_html preview â€” titles present; publish required for Vercel Edge).
+      via get_page_html preview — titles present; publish required for Vercel Edge).
     pages:
       - { displayName: "Expanding into Saudi Arabia: Export Controls 101", name: "Expanding-into-Saudi-Arabia-Export-Controls-101", itemId: "{FC3F756B-EF7C-4A68-9CD6-97FD0202EE72}", path: "/sitecore/content/pillsbury/pillsburylaw/Home/Insights/Events/Webinar/Expanding-into-Saudi-Arabia-Export-Controls-101" }
       - { displayName: "MENA Corporate Setup and US Export Compliance", name: "MENA-Corporate-Setup-and-US-Export-Compliance", itemId: "{021363E1-C472-4752-878D-55C455EA8BB5}", path: "/sitecore/content/pillsbury/pillsburylaw/Home/Insights/Events/Webinar/MENA-Corporate-Setup-and-US-Export-Compliance" }
@@ -4947,7 +4947,7 @@ ia:
     verification:
       checkedAt: "2026-08-06T13:30:00Z"
       passed:
-        - "MCP authenticated; webinar item FC3F756Bâ€¦ readable with Detail HTML"
+        - "MCP authenticated; webinar item FC3F756B… readable with Detail HTML"
         - "SearchResults event/podcast icons + CTAs; popular search led by demo question"
         - "Ata bio related-content cards + new Global Trade blog post"
       failed: []
@@ -4964,7 +4964,7 @@ ia:
     notes: >
       MultiPromo datasource for homepage personalization aligned to the Saudi expansion /
       export-control search demo (Ata Akiner journey). Parent + 3 SimplePromo children.
-      Personalization rules not wired â€” content only per request.
+      Personalization rules not wired — content only per request.
     pages:
       - { displayName: "Saudi Expansion Export Controls", name: "Saudi-Expansion-Export-Controls", itemId: "{6B3B01D5-0DCE-4AEB-AC18-44D19977D9F7}", path: "/sitecore/content/pillsbury/pillsburylaw/Data/MultiPromos/Saudi-Expansion-Export-Controls" }
       - { displayName: "Ata A. Akiner", name: "Ata-A-Akiner", itemId: "{79483B92-D9B9-4494-834B-4FC4E65F4D02}", path: "/sitecore/content/pillsbury/pillsburylaw/Data/MultiPromos/Saudi-Expansion-Export-Controls/Ata-A-Akiner" }
@@ -4988,7 +4988,7 @@ ia:
     notes: >
       MultiPromo datasource for career-search personalization. Parent + 3 SimplePromo children
       linking to Careers listings (Trade associate DC, Corporate associate NY, Summer Associate).
-      Personalization rules not wired â€” content only per request.
+      Personalization rules not wired — content only per request.
     pages:
       - { displayName: "Career Searches", name: "Career-Searches", itemId: "{021E7ED4-8CE3-4236-969F-E0726DEE0390}", path: "/sitecore/content/pillsbury/pillsburylaw/Data/MultiPromos/Career-Searches" }
       - { displayName: "Associate International Trade DC", name: "Associate-International-Trade-DC", itemId: "{C91AA520-AE3F-4A0C-B329-EB78BB83B246}", path: "/sitecore/content/pillsbury/pillsburylaw/Data/MultiPromos/Career-Searches/Associate-International-Trade-DC" }
@@ -5019,7 +5019,7 @@ ia:
       AI insight, and Pulse playbook intent careers-find-opening. Canonical ask:
       "I'm looking for a career in international trade. What openings do you have?"
       Code: search-results/data.ts (career lob + bucket), SearchResults CTAs, pulse-demo-playbook.ts,
-      pulse-answer.ts career framing. Careers hub Detail enriched. Workflow: Draft â€” publish for Edge.
+      pulse-answer.ts career framing. Careers hub Detail enriched. Workflow: Draft — publish for Edge.
     pages:
       - { displayName: "Careers", name: "Careers", itemId: "{C30AB91F-550F-4452-8725-5BCCAF1B674B}", path: "/sitecore/content/pillsbury/pillsburylaw/Home/Lawyers/Careers" }
       - { displayName: "Associate International Trade Washington DC", name: "Associate-International-Trade-Washington-DC", itemId: "{F03B5B2C-D343-4C6B-9635-D876CD81150A}", path: "/sitecore/content/pillsbury/pillsburylaw/Home/Lawyers/Careers/Associate-International-Trade-Washington-DC" }
@@ -5125,7 +5125,7 @@ ia:
     notes: "Created 10 manufacturing brand articles with ArticleBody + Page Content / metadata fields. Workflow state: Draft."
     pages:
       - { displayName: "How Rockwell Automation Is Building the Connected Factory", name: "rockwell-connected-factory", itemId: "{15AFBC43-951E-4413-B422-6EDCFBA0174D}", path: "/sitecore/content/manufacturing/dwyeromega/Home/Resources/Featured Articles/rockwell-connected-factory" }
-      - { displayName: "Honeywellâ€™s Playbook for Safer, Smarter Process Manufacturing", name: "honeywell-process-safety", itemId: "{6AEDFBBB-56C5-4CDA-A9F4-C6B061AA6CA6}", path: "/sitecore/content/manufacturing/dwyeromega/Home/Resources/Featured Articles/honeywell-process-safety" }
+      - { displayName: "Honeywell’s Playbook for Safer, Smarter Process Manufacturing", name: "honeywell-process-safety", itemId: "{6AEDFBBB-56C5-4CDA-A9F4-C6B061AA6CA6}", path: "/sitecore/content/manufacturing/dwyeromega/Home/Resources/Featured Articles/honeywell-process-safety" }
       - { displayName: "Emerson DeltaV and the Future of Precision Process Control", name: "emerson-deltav-process-control", itemId: "{6BF04604-B5BB-4148-B343-61A79CD6152C}", path: "/sitecore/content/manufacturing/dwyeromega/Home/Resources/Featured Articles/emerson-deltav-process-control" }
       - { displayName: "Schneider Electric EcoStruxure: Energy Efficiency as a Manufacturing Advantage", name: "schneider-ecostruxure-energy-plants", itemId: "{5BCE09BA-495F-499C-8E21-9E93302E16E2}", path: "/sitecore/content/manufacturing/dwyeromega/Home/Resources/Featured Articles/schneider-ecostruxure-energy-plants" }
       - { displayName: "ABB Robotics: How Flexible Automation Is Reshaping Production Lines", name: "abb-robotics-flexible-automation", itemId: "{61547577-4FE3-43B8-A204-9C04AF36F15E}", path: "/sitecore/content/manufacturing/dwyeromega/Home/Resources/Featured Articles/abb-robotics-flexible-automation" }
@@ -5482,7 +5482,6 @@ ia:
     category: "Page Content"
     status: "complete"
     createdAt: "2026-07-29T19:45:00Z"
-    updatedAt: "2026-07-29T19:55:00Z"
     siteName: "pkm"
     siteCollection: "progressive"
     notes: >
@@ -5681,7 +5680,7 @@ ia:
     siteCollection: "progressive"
     notes: >
       Context component for Knowledge Article.sharedContent Treelist (KnowledgeChunks
-      {BDF6C974-â€¦}). Groups by Shared Content section folder and renders Content Rich Text
+      {BDF6C974-…}). Groups by Shared Content section folder and renders Content Rich Text
       in teal callout cards contrasting KmArticleContent. ComponentQuery expands
       MultilistField targetItems with path + Content. Placed on Final layout headless-main
       below KmArticleContent for all 20 KA items + Knowledge Article page branch $name.
@@ -5828,7 +5827,7 @@ ia:
     notes: >
       Copied Final presentation from Knowledge Article page branch $name
       {DC3CB448-CAE9-4129-ADF8-3EC3C2D7A9C6} onto Knowledge Article items by adding
-      KmArticleContent {F44005E1-â€¦} to headless-main Final layout (via add_component_on_page).
+      KmArticleContent {F44005E1-…} to headless-main Final layout (via add_component_on_page).
       Shared Layout already had a non-editable KmArticleContent instance; Final adds an editable
       headless-main instance matching the page branch. Skipped items that already had headless-main
       (KB-AU-1001-FNOL, KB-AU-1002-CoverageDetermination-FL).
@@ -5886,7 +5885,7 @@ ia:
     notes: >
       Renamed KnowledgeChunks items under Shared Content/*/StateSpecific/{FL,NC,TX}
       by appending -{STATE} to the item name (IDs preserved via authoring renameItem).
-      Example: KB-AU-1001-FNOL â†’ KB-AU-1001-FNOL-FL. Empty state folders under other
+      Example: KB-AU-1001-FNOL → KB-AU-1001-FNOL-FL. Empty state folders under other
       sections had no children. FL/NC/TX folder items themselves were not renamed.
     itemCount: 15
     items:
@@ -5929,7 +5928,7 @@ ia:
     iaSpecPath: "docs/ai/ia/pkm-personal-lines-kb-articles-ia.md"
     notes: >
       Created 4 Progressive SME Knowledge Articles under existing PersonalLines/Auto and
-      PersonalLines/Homeowners (Services Page parents). Populated all KA sections 01â€“06 plus
+      PersonalLines/Homeowners (Services Page parents). Populated all KA sections 01–06 plus
       pageTitle/pageShortTitle/pageHeaderTitle/pageSummary. Added Wind Hail peril taxonomy
       topic {F27BF167-...} for KB-HO-1002. Auto articles have Personal Auto LOB; HO articles
       have Personal Home LOB + Water Damage or Wind Hail peril.
@@ -5939,10 +5938,10 @@ ia:
       - { name: "KB-AU-1001-FNOL", itemId: "{8134326F-FF16-4B77-8D34-9EDB10353DA1}", hasPurpose: true, lob: "Personal Auto" }
       - { name: "KB-HO-1001-WaterDamage", itemId: "{8EB3B901-6561-463B-B09B-012F7EB4FC2D}", hasPurpose: true, lob: "Personal Home", peril: "Water Damage" }
     items:
-      - { name: "KB-AU-1001-FNOL", kbId: "KB-AU-1001", title: "Personal Auto FNOL â€” First Notice of Loss Intake", itemId: "{8134326F-FF16-4B77-8D34-9EDB10353DA1}", parent: "Auto" }
+      - { name: "KB-AU-1001-FNOL", kbId: "KB-AU-1001", title: "Personal Auto FNOL — First Notice of Loss Intake", itemId: "{8134326F-FF16-4B77-8D34-9EDB10353DA1}", parent: "Auto" }
       - { name: "KB-AU-1002-CoverageDetermination", kbId: "KB-AU-1002", title: "Personal Auto Coverage Determination", itemId: "{BC70A3A2-56ED-4798-AC9F-A28B7531A205}", parent: "Auto" }
-      - { name: "KB-HO-1001-WaterDamage", kbId: "KB-HO-1001", title: "Homeowners Water Damage â€” Intake to Mitigation", itemId: "{8EB3B901-6561-463B-B09B-012F7EB4FC2D}", parent: "Homeowners" }
-      - { name: "KB-HO-1002-WindHail", kbId: "KB-HO-1002", title: "Homeowners Wind and Hail â€” Storm Damage Handling", itemId: "{02878C46-F3A7-4034-A056-9CEBBF9BCA11}", parent: "Homeowners" }
+      - { name: "KB-HO-1001-WaterDamage", kbId: "KB-HO-1001", title: "Homeowners Water Damage — Intake to Mitigation", itemId: "{8EB3B901-6561-463B-B09B-012F7EB4FC2D}", parent: "Homeowners" }
+      - { name: "KB-HO-1002-WindHail", kbId: "KB-HO-1002", title: "Homeowners Wind and Hail — Storm Damage Handling", itemId: "{02878C46-F3A7-4034-A056-9CEBBF9BCA11}", parent: "Homeowners" }
     verification:
       checkedAt: "2026-07-30T19:55:00Z"
       passed:
@@ -5966,13 +5965,13 @@ ia:
     itemCount: 5
     notes: >
       Five Progressive SME Knowledge Articles across CommercialAuto (2), CommercialProperty (1),
-      Personal Auto (1), and Homeowners (1). Full sections 01â€“06 populated; LOB/Peril taxonomy set.
+      Personal Auto (1), and Homeowners (1). Full sections 01–06 populated; LOB/Peril taxonomy set.
       Commercial articles use Knowledge Domain "Commercial Claims"; personal use Personal Auto / Personal Home.
     items:
-      - { name: "KB-CA-1001-CommercialAutoFNOL", kbId: "KB-CA-1001", title: "Commercial Auto FNOL â€” Business Vehicle Intake", itemId: "{D99BB2BD-2AAF-4742-8620-905CCB3892C2}", parent: "CommercialAuto", lob: "Commercial Claims" }
-      - { name: "KB-CA-1002-HiredNonOwnedAuto", kbId: "KB-CA-1002", title: "Hired and Non-Owned Auto â€” Coverage Triage", itemId: "{6E6F8315-B910-48D9-BCD7-7CC196610CA5}", parent: "CommercialAuto", lob: "Commercial Claims" }
-      - { name: "KB-CP-1001-FireLoss", kbId: "KB-CP-1001", title: "Commercial Property Fire â€” Intake to Mitigation", itemId: "{8334CBA5-15F1-476D-9944-CD90BB701C76}", parent: "CommercialProperty", lob: "Commercial Claims", peril: "Fire" }
-      - { name: "KB-AU-1003-VehicleTheft", kbId: "KB-AU-1003", title: "Personal Auto Vehicle Theft â€” Recovery and Total Loss", itemId: "{DD437660-8828-4608-9B1D-06C6B0E73559}", parent: "Auto", lob: "Personal Auto", peril: "Theft" }
+      - { name: "KB-CA-1001-CommercialAutoFNOL", kbId: "KB-CA-1001", title: "Commercial Auto FNOL — Business Vehicle Intake", itemId: "{D99BB2BD-2AAF-4742-8620-905CCB3892C2}", parent: "CommercialAuto", lob: "Commercial Claims" }
+      - { name: "KB-CA-1002-HiredNonOwnedAuto", kbId: "KB-CA-1002", title: "Hired and Non-Owned Auto — Coverage Triage", itemId: "{6E6F8315-B910-48D9-BCD7-7CC196610CA5}", parent: "CommercialAuto", lob: "Commercial Claims" }
+      - { name: "KB-CP-1001-FireLoss", kbId: "KB-CP-1001", title: "Commercial Property Fire — Intake to Mitigation", itemId: "{8334CBA5-15F1-476D-9944-CD90BB701C76}", parent: "CommercialProperty", lob: "Commercial Claims", peril: "Fire" }
+      - { name: "KB-AU-1003-VehicleTheft", kbId: "KB-AU-1003", title: "Personal Auto Vehicle Theft — Recovery and Total Loss", itemId: "{DD437660-8828-4608-9B1D-06C6B0E73559}", parent: "Auto", lob: "Personal Auto", peril: "Theft" }
       - { name: "KB-HO-1003-KitchenFireSmoke", kbId: "KB-HO-1003", title: "Homeowners Kitchen Fire and Smoke Damage", itemId: "{13DA39AD-0778-4BEB-BECA-421106229DA0}", parent: "Homeowners", lob: "Personal Home", peril: "Fire|Smoke Damage" }
     verification:
       checkedAt: "2026-08-02T13:35:00Z"
@@ -5997,15 +5996,15 @@ ia:
     notes: >
       Ten additional Progressive SME Knowledge Articles spread across the four main LOB folders:
       CommercialAuto (3), CommercialProperty (3), Personal Auto (2), Homeowners (2).
-      Full sections 01â€“06 populated; LOB/Peril taxonomy set where applicable.
+      Full sections 01–06 populated; LOB/Peril taxonomy set where applicable.
     items:
-      - { name: "KB-CA-1003-LiabilityTriage", kbId: "KB-CA-1003", title: "Commercial Auto Liability â€” Third-Party Injury and PD", itemId: "{6603D085-B8AD-44B1-8656-FE5F26C41DCE}", parent: "CommercialAuto", lob: "Commercial Claims" }
+      - { name: "KB-CA-1003-LiabilityTriage", kbId: "KB-CA-1003", title: "Commercial Auto Liability — Third-Party Injury and PD", itemId: "{6603D085-B8AD-44B1-8656-FE5F26C41DCE}", parent: "CommercialAuto", lob: "Commercial Claims" }
       - { name: "KB-CA-1004-GlassComprehensive", kbId: "KB-CA-1004", title: "Commercial Auto Glass and Comprehensive Damage", itemId: "{C102B50B-3537-4BDB-8E62-2CFA6BCA45AC}", parent: "CommercialAuto", lob: "Commercial Claims" }
-      - { name: "KB-CA-1005-ToolsCargo", kbId: "KB-CA-1005", title: "Commercial Auto â€” Tools, Equipment, and Cargo After Collision", itemId: "{3E173CFE-F7A6-4CCE-9D44-64B3EA20DA76}", parent: "CommercialAuto", lob: "Commercial Claims" }
-      - { name: "KB-CP-1002-BusinessInterruption", kbId: "KB-CP-1002", title: "Commercial Property Business Interruption â€” After a Covered Loss", itemId: "{FC8F587F-0354-452B-AE90-E8FEE418C90B}", parent: "CommercialProperty", lob: "Commercial Claims", peril: "Business Interruption" }
+      - { name: "KB-CA-1005-ToolsCargo", kbId: "KB-CA-1005", title: "Commercial Auto — Tools, Equipment, and Cargo After Collision", itemId: "{3E173CFE-F7A6-4CCE-9D44-64B3EA20DA76}", parent: "CommercialAuto", lob: "Commercial Claims" }
+      - { name: "KB-CP-1002-BusinessInterruption", kbId: "KB-CP-1002", title: "Commercial Property Business Interruption — After a Covered Loss", itemId: "{FC8F587F-0354-452B-AE90-E8FEE418C90B}", parent: "CommercialProperty", lob: "Commercial Claims", peril: "Business Interruption" }
       - { name: "KB-CP-1003-WaterSprinkler", kbId: "KB-CP-1003", title: "Commercial Property Water and Sprinkler Damage", itemId: "{0CE5A1F4-120B-4B41-9212-DAFFD1B5B92C}", parent: "CommercialProperty", lob: "Commercial Claims", peril: "Water Damage" }
-      - { name: "KB-CP-1004-WindHail", kbId: "KB-CP-1004", title: "Commercial Property Wind and Hail â€” Roof and Exterior", itemId: "{65ED85FB-5915-4E87-B7BB-F46CD2C254F4}", parent: "CommercialProperty", lob: "Commercial Claims", peril: "Wind Hail" }
-      - { name: "KB-AU-1004-GlassClaims", kbId: "KB-AU-1004", title: "Personal Auto Glass Claims â€” ADAS and Network Handling", itemId: "{E35EE802-3082-41D5-B10D-73A1154CA238}", parent: "Auto", lob: "Personal Auto" }
+      - { name: "KB-CP-1004-WindHail", kbId: "KB-CP-1004", title: "Commercial Property Wind and Hail — Roof and Exterior", itemId: "{65ED85FB-5915-4E87-B7BB-F46CD2C254F4}", parent: "CommercialProperty", lob: "Commercial Claims", peril: "Wind Hail" }
+      - { name: "KB-AU-1004-GlassClaims", kbId: "KB-AU-1004", title: "Personal Auto Glass Claims — ADAS and Network Handling", itemId: "{E35EE802-3082-41D5-B10D-73A1154CA238}", parent: "Auto", lob: "Personal Auto" }
       - { name: "KB-AU-1005-UMUIMIntake", kbId: "KB-AU-1005", title: "Personal Auto Uninsured and Underinsured Motorist Intake", itemId: "{533E1C5F-A219-491D-BA13-F9EB069E3753}", parent: "Auto", lob: "Personal Auto" }
       - { name: "KB-HO-1004-TheftBurglary", kbId: "KB-HO-1004", title: "Homeowners Theft and Burglary Claims", itemId: "{498591A1-5845-44D9-B5EA-97C6BC2A9966}", parent: "Homeowners", lob: "Personal Home", peril: "Theft" }
       - { name: "KB-HO-1005-FallenTreeWind", kbId: "KB-HO-1005", title: "Homeowners Fallen Tree and Wind Damage", itemId: "{DE28564F-C405-4461-8793-A2923DF67115}", parent: "Homeowners", lob: "Personal Home", peril: "Wind Hail" }
@@ -6024,7 +6023,7 @@ ia:
     kind: "ia"
     status: "complete"
     createdAt: "2026-07-31T01:05:00Z"
-    updatedAt: "2026-07-31T01:25:00Z"
+    updatedAt: "2026-07-31T01:30:00Z"
     siteName: "pkm"
     contentRootPath: "/sitecore/content/progressive/pkm/Home"
     contentRootItemId: "{6D0A0F2F-BF24-4FA4-9562-00B59DD05063}"
@@ -6036,10 +6035,9 @@ ia:
     iaSpecPath: "docs/ai/ia/pkm-home-shared-content-ia.md"
     notes: >
       Shared Content under Home with 10 numbered section folders. Nested structure reduced to
-      StateSpecific (FL/NC/TX) only â€” National, LOBSpecific, and PerilSpecific removed from all
-      sections 01â€“09. 10-FAQs was missing and recreated as {72305A56-02E1-4D85-AC58-EB881E221CB3}
+      StateSpecific (FL/NC/TX) only — National, LOBSpecific, and PerilSpecific removed from all
+      sections 01–09. 10-FAQs was missing and recreated as {72305A56-02E1-4D85-AC58-EB881E221CB3}
       with StateSpecific/FL/NC/TX.
-    updatedAt: "2026-07-31T01:30:00Z"
     nestedStructurePerSection:
       - StateSpecific: [FL, NC, TX]
     items:
@@ -6057,7 +6055,7 @@ ia:
     verification:
       checkedAt: "2026-07-31T01:30:00Z"
       passed:
-        - "Deleted National/LOBSpecific/PerilSpecific under sections 01â€“09"
+        - "Deleted National/LOBSpecific/PerilSpecific under sections 01–09"
         - "StateSpecific retained under those sections"
         - "10-FAQs recreated with StateSpecific/FL/NC/TX only"
       failed: []
@@ -6143,7 +6141,7 @@ ia:
     notes: >
       Fully dynamic selection from Home/Knowledge Articles via Edge GraphQL (no FeaturedArticles).
       ListingMode Droplist: Recently Updated (updatedDate), Recently Viewed (localStorage history),
-      Favorites (AverageRating then PositiveCount â€” community top-rated). MaxItems caps results.
+      Favorites (AverageRating then PositiveCount — community top-rated). MaxItems caps results.
       Headless variants Default (Card), ListView, DetailView.
     react:
       filePath: "src/components/knowledge-listing/KnowledgeListing.tsx"
@@ -6375,13 +6373,13 @@ ia:
     siteCollection: "quanex"
     notes:
       - "2026-08-29: Amkor HeroCarousel Headless Variants container + 4 variant definitions (Default, FocusProduct, SplitPanel, Version1) created; HeroCarousels folder + 4 parent datasources + 12 slides. See demoContent amkor-herocarousel-homepage-datasources. React exports Version1 (already in HeroCarousel.tsx)."
-      - "2026-08-13: Quanex homepage hero carousel (intro brand slide + left CTA card slides + right Contact Us/dots rail). Created under Project/quanex despite docs/ai/config/project.yaml pointing at progressive/pkm — design + content tree are quanex."
+      - "2026-08-13: Quanex homepage hero carousel (intro brand slide + left CTA card slides + right Contact Us/dots rail). Created under Project/quanex despite docs/ai/config/project.yaml pointing at progressive/pkm � design + content tree are quanex."
       - "AE018465-4E68-4A49-8B15-9702274FA75A is click-click-launch Hero (badge/title/image/description/bannerText/bannerCTA/searchLink), NOT a slide child template. New HeroCarouselSlide created instead (SlideName/Description/Summary + Image/Link/IsIntroSlide)."
       - "SlideName used instead of Name (collision-prone). Display Title remains Name for authors."
       - "2026-08-13: Added FocusProduct variant (AT-style: BackgroundImage backdrop + Image product + horizontal dots). BackgroundImage field on slide. Theme tokens only (bg-dark/primary). Variants registered on quanex + amesburytruth sites."
-      - "2026-08-13: Family marketing datasources — ERA + AmesburyTruth HeroCarousels folders + 3 carousels each; Quanex +2 new carousels (Solar/Extrusions, Part of Something Bigger). Matching MultiPromos under each site Data/MultiPromos. See ia entry quanex-family-hero-multipromo-datasources."
+      - "2026-08-13: Family marketing datasources � ERA + AmesburyTruth HeroCarousels folders + 3 carousels each; Quanex +2 new carousels (Solar/Extrusions, Part of Something Bigger). Matching MultiPromos under each site Data/MultiPromos. See ia entry quanex-family-hero-multipromo-datasources."
       - "2026-08-13: Added SplitPanel variant (ERA-style solid content panel + large image split). Layout is the variant; colors via theme tokens (bg-background/text-foreground/bg-primary). ImageOnLeft checkbox toggles Fab&Fix (image left) vs Trade Account (content left). Do NOT force ERA look into Default/FocusProduct via theme alone. Variants on quanex + amesburytruth + era (ERA container created with Default/FocusProduct/SplitPanel)."
-      - "2026-08-19: Created full HeroCarousel infrastructure on dfs XM Cloud instance under Project/click-click-launch (templates, rendering, Data/HeroCarousels). Quanex manifest IDs are 404 on dfs MCP — separate item IDs recorded in sitecoreEnvironments.dfs. Sample portal heroes for Chipotle and Taco Bell customers."
+      - "2026-08-19: Created full HeroCarousel infrastructure on dfs XM Cloud instance under Project/click-click-launch (templates, rendering, Data/HeroCarousels). Quanex manifest IDs are 404 on dfs MCP � separate item IDs recorded in sitecoreEnvironments.dfs. Sample portal heroes for Chipotle and Taco Bell customers."
     react:
       filePath: "src/components/uiim/banners/HeroCarousel.tsx"
       componentMapKey: "HeroCarousel"
@@ -6619,12 +6617,12 @@ ia:
     siteName: "quanex"
     siteCollection: "quanex"
     notes:
-      - "2026-08-13: Quanex PDP architecture — Product Detail Page (route template inheriting Services Page) + ProductDetail context component. Did NOT reuse starter Product Page (SYNC audio fields)."
+      - "2026-08-13: Quanex PDP architecture � Product Detail Page (route template inheriting Services Page) + ProductDetail context component. Did NOT reuse starter Product Page (SYNC audio fields)."
       - "Main product image reuses inherited Services Page `image`. Title prefers Product Data ProductName, then pageHeaderTitle, then pageTitle."
       - "2026-08-14: Added Product Data fields ProductID {CA94EC7F-2908-4E34-A9E5-F8EC8DD7A91D}, ProductSKU {C5B02812-DEB7-4B51-8A68-8019A44F0DB3}, ProductName {F2FA4F60-BFEC-4B8A-858C-F5AE25DF459B}. Populated on Quanex 9 + AT 10 + ERA 10 PDPs. ProductDetail shows ID/SKU under the h1."
       - "Available Renderings briefly overwritten with HeroCarousel|ProductDetail only; restored to 75 GUIDs reconstructed from list_components (includes ProductDetail)."
-      - "2026-08-13 safety check: get_allowed_comps_by_ph(headless-main) on Mikron returned 75 allowed comps including ProductDetail {9AFBB222…}, HeroCarousel, MultiPromo, HeaderST — NOT a 2-item list. Renderings field itself is silent-read (fields:{}). Status OK (proxy-verified)."
-      - "2026-08-13: ProductDetail placed on all 9 sample PDP Final layouts + Page Designs/ProductPage headless-main. Product Detail Page __Standard Values not API-editable (no site root) — wire SV/Page Design assignment manually in CE."
+      - "2026-08-13 safety check: get_allowed_comps_by_ph(headless-main) on Mikron returned 75 allowed comps including ProductDetail {9AFBB222�}, HeroCarousel, MultiPromo, HeaderST � NOT a 2-item list. Renderings field itself is silent-read (fields:{}). Status OK (proxy-verified)."
+      - "2026-08-13: ProductDetail placed on all 9 sample PDP Final layouts + Page Designs/ProductPage headless-main. Product Detail Page __Standard Values not API-editable (no site root) � wire SV/Page Design assignment manually in CE."
       - "2026-08-13: Sample PDP Image + ImageSecondary set from public quanex.com wp-content URLs (not Content Hub/DAM). Inherited `image`/`pageTitle`/`pageHeaderTitle` silent in MCP reads but written via update_fields_on_item. ImageSecondary verified on re-read."
       - "2026-08-14: Product Detail Page __Base template was empty (MCP); OG fields missing. Set __Base template to Services Page {274FC64E-530F-457E-BD04-8B195DF94646}. get_page_template_by_id now includes ogTitle/ogDescription/ogImage via Detail Page {A9919790-3389-4FC2-ABC8-24F73C847C8E}."
     react:
@@ -6796,7 +6794,7 @@ ia:
       failed: []
       pendingManual:
         - "Optional CE Raw Values: confirm Available Renderings/Page Content Renderings [shared] is ~75 GUIDs (not 2)"
-        - "Assign Product Detail Page __Standard Values → Page Design 'ProductPage' (or place ProductDetail on SV Final layout in CE) so new PDPs inherit it"
+        - "Assign Product Detail Page __Standard Values ? Page Design 'ProductPage' (or place ProductDetail on SV Final layout in CE) so new PDPs inherit it"
         - "Verify pageTitle/pageHeaderTitle/image on samples in CE (inherited fields silent in MCP)"
         - "Verify __Standard values link on Product Detail Page + Rendering Params templates"
         - "Verify __Masters insert options on IG Spacers / Extruded Solutions / Weatherseals / Security Screens"
@@ -7003,8 +7001,8 @@ ia:
         - "Confirm Available Renderings Raw Values include {4A6F68B9-709B-4AA8-9444-B695EFDC7180} on all 3 sites"
         - "Publish ProductCarousel template field Source + Data/ProductCarousels samples for Edge"
         - "Place on ERA Home (ProductStrip) and AT Home (Default) with sample datasources"
-        - "In CE: click Featured Products, Popular Products, AmesburyTruth Highlights — editor should load (no Runtime Error); Treelist should root at that site Home"
-        - "Component map regenerates on npm run build/dev — verify ProductCarousel key present"
+        - "In CE: click Featured Products, Popular Products, AmesburyTruth Highlights � editor should load (no Runtime Error); Treelist should root at that site Home"
+        - "Component map regenerates on npm run build/dev � verify ProductCarousel key present"
 
   - name: "EraAmesburyTruthProductDetailPages"
     kind: "content"
@@ -7017,8 +7015,8 @@ ia:
       - "2026-08-13: Created 20 Product Detail Pages (10 era + 10 amesburytruth) under existing IA product-line folders (not a new Home/Products tree)."
       - "Template Product Detail Page {7629F514-E156-4543-ADC6-051453441B33}; ImageUrl/ImageSecondaryUrl Single-Line Text (not Image XML)."
       - "ProductDetail rendering {9AFBB222-DFDC-400D-9385-E50BA119B0C0} placed on Final layout headless-main for all 20."
-      - "pageTitle/pageHeaderTitle not writable via MCP (Cannot find field) — item Display Name used as title; set pageHeaderTitle in CE if needed."
-      - "Some pages may show duplicate ProductDetail if Page Design/SV already injects one (shared rendering instance id 5c1c1af6…) — remove page-level duplicate in CE if observed."
+      - "pageTitle/pageHeaderTitle not writable via MCP (Cannot find field) � item Display Name used as title; set pageHeaderTitle in CE if needed."
+      - "Some pages may show duplicate ProductDetail if Page Design/SV already injects one (shared rendering instance id 5c1c1af6�) � remove page-level duplicate in CE if observed."
       - "Draft OK; publish all 20 PDPs for Edge."
     amesburytruth:
       siteName: "amesburytruth"
@@ -7368,7 +7366,7 @@ ia:
         - "Reload Pages/localhost after ComponentQuery chrome-only update; confirm Testing Headr renders with MainNav"
         - "Place MainNav on Header partial designs and assign site datasource"
         - "Set Logo, SearchPage, UserLink, optional ShowCart/CartLink, SupportLink URLs"
-        - "Component map regenerates on npm run build/dev — verify MainNav key"
+        - "Component map regenerates on npm run build/dev � verify MainNav key"
 
   - name: "FeatureBanner"
     kind: "list"
@@ -7535,7 +7533,7 @@ ia:
           - { name: "title", type: "Single-Line Text", itemId: "{9B054522-3B7A-462B-9763-44FFDC0635EC}" }
           - { name: "subtitle", type: "Single-Line Text", itemId: "{BC0DA429-C7C9-453C-81A9-B8F24DD50A19}" }
           - { name: "logo", type: "Image", itemId: "{15FDC17E-D21A-40D4-8101-C06EF797B37C}" }
-          - { name: "customerSlug", type: "Single-Line Text", itemId: "{EC67B273-2675-4F12-AFD2-390B1C3A8AB9}", deprecated: true, note: "Unused — customer comes from User record at login; safe to leave on template until removed in CM" }
+          - { name: "customerSlug", type: "Single-Line Text", itemId: "{EC67B273-2675-4F12-AFD2-390B1C3A8AB9}", deprecated: true, note: "Unused � customer comes from User record at login; safe to leave on template until removed in CM" }
           - { name: "postLoginRedirect", type: "General Link", itemId: "{79567B03-BCD0-4B04-BFFC-1CB9FFA1A658}" }
           - { name: "loginButtonText", type: "Single-Line Text", itemId: "{402E9FAF-46BE-422A-BB8D-A75114C91C98}" }
           - { name: "logoutButtonText", type: "Single-Line Text", itemId: "{39145D70-68A5-451A-B927-A0770476E878}" }
@@ -7627,10 +7625,10 @@ ia:
       - "Portal auth MVP docs: docs/auth-portal-mvp.md"
       - "Extends existing Auth.js setup; AuthPanel remains for legacy demo credentials"
       - "Single login pattern: email+password only; customerSlug from User DB record, not datasource"
-      - "Field names use camelCase (Portal/Auth convention), not PascalCase from original fmc-custom-demo plan — matches React props exactly"
+      - "Field names use camelCase (Portal/Auth convention), not PascalCase from original fmc-custom-demo plan � matches React props exactly"
       - "2026-08-19: All Sitecore artifacts created via Marketer MCP in dfs/Portal project"
       - "2026-08-19: Refactored to shared Portal Login datasource; customerSlug template field deprecated"
-      - "2026-08-24: MCP tenant has no dfs/Portal — Authentication recreated under progressive/pkm (see Authentication progressive/pkm entry)"
+      - "2026-08-24: MCP tenant has no dfs/Portal � Authentication recreated under progressive/pkm (see Authentication progressive/pkm entry)"
 
   - name: "Authentication"
     kind: "simple"
@@ -7644,7 +7642,7 @@ ia:
       Recreated for current Marketer MCP tenant (project.yaml: progressive/pkm).
       dfs/Portal Authentication (category Portal) is not present in this environment.
       React already existed; Sitecore templates/rendering/data mirrored from Portal field set (camelCase, no deprecated customerSlug).
-      2026-08-24T12:50: Re-verified live via Marketer MCP — all items present; no create/repair needed.
+      2026-08-24T12:50: Re-verified live via Marketer MCP � all items present; no create/repair needed.
       Authentication still NOT in get_allowed_comps_by_ph(headless-main) until Available Renderings updated.
 
     react:
@@ -7741,11 +7739,11 @@ ia:
         - "JSON Rendering; get_component confirms datasource template, location, and fields"
         - "Headless Variants Default created"
         - "Workflow null on Portal Login / Data folder (publish-ready)"
-        - "2026-08-24 re-verify: rendering {203D59C9…}, templates, Data folder, Portal Login, variants all found via MCP"
+        - "2026-08-24 re-verify: rendering {203D59C9�}, templates, Data folder, Portal Login, variants all found via MCP"
         - "list_components(pkm) includes Authentication under category progressive"
       failed: []
       pendingManual:
-        - "Register Authentication {203D59C9-BCDF-4BED-859D-F81F0BE44266} on Presentation/Available Renderings/Page Content (needs current Renderings value from CE — do not overwrite with partial list); confirmed still missing from get_allowed_comps_by_ph headless-main"
+        - "Register Authentication {203D59C9-BCDF-4BED-859D-F81F0BE44266} on Presentation/Available Renderings/Page Content (needs current Renderings value from CE � do not overwrite with partial list); confirmed still missing from get_allowed_comps_by_ph headless-main"
         - "Verify Datasource Template/Location and __Masters silent-writes in Content Editor"
         - "Publish Authentication templates, rendering, Data folder, and Portal Login for Edge"
         - "Create Login page under Home (none exists yet) and add Authentication rendering in Pages"
@@ -7761,7 +7759,7 @@ ia:
     react:
       filePath: "src/components/portal-hub/PortalHub.tsx"
       componentMapKey: "PortalHub"
-      dataStrategy: "Edge GraphQL under hubItemPath (industry folder → module rows); component datasource supplies title/subtitle only"
+      dataStrategy: "Edge GraphQL under hubItemPath (industry folder ? module rows); component datasource supplies title/subtitle only"
       variants:
         - "Default"
 
@@ -7769,7 +7767,7 @@ ia:
       siteName: "dfs"
       siteCollection: "dfs"
       projectKey: "Portal"
-      note: "Generic single hub for all portal customers (Chipotle, Taco Bell, etc.). Tenant/customer resolved from Auth.js session — NOT separate hub datasources per chain."
+      note: "Generic single hub for all portal customers (Chipotle, Taco Bell, etc.). Tenant/customer resolved from Auth.js session � NOT separate hub datasources per chain."
 
     templates:
       industryFolder:
@@ -7914,7 +7912,7 @@ ia:
 
     notes:
       - "Module grid loads via Edge GraphQL (portal-hub-from-edge.ts), not ComponentQuery"
-      - "industryType rendering param (or ?industry= query) selects industry folder by Industry Key — same modules for all authenticated customers"
+      - "industryType rendering param (or ?industry= query) selects industry folder by Industry Key � same modules for all authenticated customers"
       - "hubItemPath overrides env PORTAL_HUB_ITEM_PATH; default suffix /Data/Portal Hub uses sync site name if unset"
       - "GraphQL fragment types: PortalIndustryFolder, PortalHubModule (env PORTAL_GRAPHQL_* overrides)"
       - "2026-08-19: Maintenance Requests module Link corrected to /portal/maintenance-requests (was /portal/maintenance)"
@@ -8024,7 +8022,7 @@ ia:
         - "Verify module card links resolve after publish on deployed host"
 
     notes:
-      - "Generic DFS restaurant-manager mock content — not Chipotle/Taco Bell specific"
+      - "Generic DFS restaurant-manager mock content � not Chipotle/Taco Bell specific"
       - "PortalPageDetail.tsx unchanged; existing not-prose body wrapper handles RTE layout HTML"
 
   - name: "LocationSearch"
@@ -8045,11 +8043,11 @@ ia:
         - "MapLeftTitleZipCentered"
         - "Version1"
         - "Version2"
-      note: "Version1 added 2026-08-29 — Amkor-style global footprint map (centered navy heading, full-width map, typed pins, legend). Default and other variants unchanged."
+      note: "Version1 added 2026-08-29 � Amkor-style global footprint map (centered navy heading, full-width map, typed pins, legend). Default and other variants unchanged."
       version2Note: >
-        Version2 added 2026-08-30 — world view matching amkor.com, with no Google Maps dependency
+        Version2 added 2026-08-30 � world view matching amkor.com, with no Google Maps dependency
         or API key. Land outlines come from Natural Earth 110m (public domain) baked into
-        world-land.data.ts and projected with Pacific-centred Mercator (centre 150E, crop 72N–55S)
+        world-land.data.ts and projected with Pacific-centred Mercator (centre 150E, crop 72N�55S)
         by world-map.utils.ts. Includes zoom in/out, drag pan, reset view, teardrop pins and legend.
       version2Files:
         - "src/components/location-search/LocationSearchVersion2.dev.tsx"
@@ -8069,10 +8067,10 @@ ia:
       datasourceTemplatePath: "/sitecore/templates/Project/click-click-launch/Components/Location Search/Location Search"
       datasourceTemplateId: "{F03FD970-82A7-44E0-8B87-6EE7B2D39939}"
       datasourceLocationQuery: "query:$site/*[@@name='Data']/*[@@name='Locations']|query:$sharedSites/*[@@name='Data']/*[@@name='Locations']|query:$site/*[@@name='Data']/*[@@templatename='Location Search Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='Location Search Folder']"
-      componentQuery: "EMPTY on this rendering — Version1 gets no data if this rendering is used"
+      componentQuery: "EMPTY on this rendering � Version1 gets no data if this rendering is used"
       parametersTemplateId: "{673C2756-3107-4C99-9CFB-75CC27B080BA}"
 
-    # Second rendering with the same componentName — this is the one placed on Amkor Home.
+    # Second rendering with the same componentName � this is the one placed on Amkor Home.
     # Headless Variants container name must match the rendering item name (LocationSearch).
     renderingPortal:
       name: "LocationSearch"
@@ -8138,10 +8136,10 @@ ia:
         - "Select Version1 in Pages on the Home LocationSearch instance {769842A2-4905-42C9-AE65-8316B19C8C8D} (FieldNames was null)"
 
     notes:
-      - "2026-08-30: Version1 Google map uses political globe styles (roads/POI/labels off, zoom 2–4). Static world fallback when NEXT_PUBLIC_GOOGLE_MAPS_API_KEY is unset. Amkor Headless Variants already present: Default, MapLeftTitleZipCentered, MapRight, MapRightTitleZipCentered, MapTopAllCentered, Version1."
+      - "2026-08-30: Version1 Google map uses political globe styles (roads/POI/labels off, zoom 2�4). Static world fallback when NEXT_PUBLIC_GOOGLE_MAPS_API_KEY is unset. Amkor Headless Variants already present: Default, MapLeftTitleZipCentered, MapRight, MapRightTitleZipCentered, MapTopAllCentered, Version1."
       - "2026-08-30: Version2 rendered NoDataFallback even with the datasource assigned. Root cause: the Portal LocationSearch ComponentQuery used children(first: 50) with 8 field(name:){jsonValue} selections, which Experience Edge rejects with 'Query is too complex to execute' (INVALID_OPERATION). A failed ComponentQuery yields fields: {} in layout data, so fields.data.datasource was undefined. Fix: ComponentQuery reverted to children without arguments (returns the first 10 children only), and the full location list is loaded from the Content API via src/lib/location-footprint-from-edge.ts behind /api/location-footprint, paging 10 children at a time (pageInfo.hasNext/endCursor) with only Name, Type and GEO requested as value. Verified 30/30 locations with GEO. Same complexity limit applies to Version1 if it is ever used with more than 10 locations."
-      - "2026-08-30: Version2 world view created (Amkor Headless Variant {DB0994AC-24C7-4070-A248-03173C3B7148}). Renders entirely from SVG — no Google Maps script, API key or billing. Publish Presentation/Headless Variants/LocationSearch and select Version2 on the Home LocationSearch instance {769842A2-4905-42C9-AE65-8316B19C8C8D}."
-      - "2026-08-30: Root cause of missing variant dropdown in Pages — Portal LocationSearch rendering {09F20AFE-ABD8-4A55-839F-F16CBCBDB7C9} had an empty Parameters Template, so there was no FieldNames field for Pages to bind a variant selector to. Set to {673C2756-3107-4C99-9CFB-75CC27B080BA} (inherits BaseRenderingParameters -> IComponentVariant) and extended ComponentQuery with jsonValue aliases + Type + title. Compatible Renderings and Headless Variants were already correct — the parameters template was the missing piece."
+      - "2026-08-30: Version2 world view created (Amkor Headless Variant {DB0994AC-24C7-4070-A248-03173C3B7148}). Renders entirely from SVG � no Google Maps script, API key or billing. Publish Presentation/Headless Variants/LocationSearch and select Version2 on the Home LocationSearch instance {769842A2-4905-42C9-AE65-8316B19C8C8D}."
+      - "2026-08-30: Root cause of missing variant dropdown in Pages � Portal LocationSearch rendering {09F20AFE-ABD8-4A55-839F-F16CBCBDB7C9} had an empty Parameters Template, so there was no FieldNames field for Pages to bind a variant selector to. Set to {673C2756-3107-4C99-9CFB-75CC27B080BA} (inherits BaseRenderingParameters -> IComponentVariant) and extended ComponentQuery with jsonValue aliases + Type + title. Compatible Renderings and Headless Variants were already correct � the parameters template was the missing piece."
 
   - name: "HeaderST"
     kind: "update"
@@ -8297,18 +8295,18 @@ ia:
         - "Optional: add postLogoutRedirect to HeaderST rendering parameters template"
 
     notes:
-      - "2026-08-29: Version1 cascade megamenu (MegaMenuCascade.tsx). MENU opens dark overlay; L1 column → L2 → L3 (Careers countries split). MegaMenuItem Default + LinkList HeaderPrimaryLinks/HeaderSecondaryLinks register into cascade when MegaMenuCascadeProvider wraps header-navigation (Version1 only). MobileMenuWrapper exports useMobileMenu + darkPanel. Default/Version2/Version3 unchanged."
-      - "2026-08-29: Version1 cascade fix — darkPanel uses sr-only (not opacity-0 fixed overlay) when closed; L1 registration runs in Pages editing mode; utility/main rows z-[60] keep logo + lang row above overlay; partial-editing-mode still expands sr-only slot for Header PD authoring."
-      - "2026-08-26: Version1 pixel-perfect to amkor.com. Two-tone Amkor tokens (--color-header-utility #4E4E4E top, --color-header-background #1E1E1E main, --color-header-menu #111 MENU box, --color-header-muted SEARCH...). Version1-hardcoded langs (English current / 한국어 / 日本語 / 简体中文 → amkor.com/kr|/jp|/cn) and six utility links (Document Library, Factory Certs, Investors, Cloud Services, Careers, Contact Us) — no new datasource fields. SupportLink skipped when it duplicates a utility label. HideCart still honored. Logo mix-blend lighten on [data-theme=amkor] Version1 to drop a baked-in black plate; authors should still upload Amkor-white.svg. Default/Version2/Version3 unchanged. Code-only."
+      - "2026-08-29: Version1 cascade megamenu (MegaMenuCascade.tsx). MENU opens dark overlay; L1 column ? L2 ? L3 (Careers countries split). MegaMenuItem Default + LinkList HeaderPrimaryLinks/HeaderSecondaryLinks register into cascade when MegaMenuCascadeProvider wraps header-navigation (Version1 only). MobileMenuWrapper exports useMobileMenu + darkPanel. Default/Version2/Version3 unchanged."
+      - "2026-08-29: Version1 cascade fix � darkPanel uses sr-only (not opacity-0 fixed overlay) when closed; L1 registration runs in Pages editing mode; utility/main rows z-[60] keep logo + lang row above overlay; partial-editing-mode still expands sr-only slot for Header PD authoring."
+      - "2026-08-26: Version1 pixel-perfect to amkor.com. Two-tone Amkor tokens (--color-header-utility #4E4E4E top, --color-header-background #1E1E1E main, --color-header-menu #111 MENU box, --color-header-muted SEARCH...). Version1-hardcoded langs (English current / ??? / ??? / ???? ? amkor.com/kr|/jp|/cn) and six utility links (Document Library, Factory Certs, Investors, Cloud Services, Careers, Contact Us) � no new datasource fields. SupportLink skipped when it duplicates a utility label. HideCart still honored. Logo mix-blend lighten on [data-theme=amkor] Version1 to drop a baked-in black plate; authors should still upload Amkor-white.svg. Default/Version2/Version3 unchanged. Code-only."
       - "2026-08-25: Version3 L1 clip was CSS, not missing Sitecore items. MCP get_components_on_page on LCMC Header {7D1AB59C-D03F-420A-AE9B-D97F511CF28E} confirmed 5 MegaMenuItem renderings in header-navigation-1 (Speakers/Headphones/Amps/Pro/Artist Services). shrink-0 + nowrap + ml-auto + min-w-0 parent overflowed LEFT under the logo (relative z-10); compact padding only targeted a, while MegaMenuToggle uses span.p-4. Fix: nav column flex-1, drop shrink-0/ml-auto, overflow-visible, compact a/span/button, force li w-auto/basis-auto. Did not use overflow-x-auto (would trap lg:absolute mega menus). Default/Version1/Version2 unchanged. HeaderST.test.tsx Version3 nowrap + not overflow-hidden."
       - "2026-08-25: Version3 primary nav no longer uses flex-wrap/min-w-0. Those classes let the ul shrink until each MegaMenuItem sat on its own line. Primary ul is now flex-nowrap shrink-0; utility row may still wrap. Logo/gap/search min-width lg tuning kept so the row cannot slide under the logo at 1024px. Partial-editing-mode !flex-col is unchanged."
       - "2026-08-25: Version3 responsive fix for the lg band (1024-1279px), where the placeholder nav overflowed left and rendered underneath the logo. Logo capped at lg:h-11/190px, container gap lg:gap-3, nav links compacted to px-2/13px via [&>li>a], utility links to 11px, both nav rows flex-wrap, and the contained search pill min-width lowered to 10rem (touches SearchBox.tsx + HeaderPreviewSearch.tsx contained appearance, which is Version3-only). Full sizing restored at xl. Code-only; no Sitecore items touched."
-      - "2026-08-25: Version3 utility row now renders LCMC's five live links (Notice of Non-Discrimination, Careers, Patient Portal/Pay my Bill, For Providers, Contact Us) from the version3UtilityLinks constant in HeaderST.tsx. Code-only change — no Sitecore items touched, and Default/Version1/Version2 are unaffected. HeaderST's datasource exposes a single SupportLink and the template is shared across sites, so the list is demo-fixed rather than authorable; SupportLink still renders after the five unless its text duplicates one of them. Careers targets https://careers.lcmchealth.org/us/en/ in a new tab; the other four target existing lcmc demo pages (/notice-of-non-discrimination, /for-patients/patient-portal, /for-providers, /contact-us). HeaderST.test.tsx 58 tests passed."
+      - "2026-08-25: Version3 utility row now renders LCMC's five live links (Notice of Non-Discrimination, Careers, Patient Portal/Pay my Bill, For Providers, Contact Us) from the version3UtilityLinks constant in HeaderST.tsx. Code-only change � no Sitecore items touched, and Default/Version1/Version2 are unaffected. HeaderST's datasource exposes a single SupportLink and the template is shared across sites, so the list is demo-fixed rather than authorable; SupportLink still renders after the five unless its text duplicates one of them. Careers targets https://careers.lcmchealth.org/us/en/ in a new tab; the other four target existing lcmc demo pages (/notice-of-non-discrimination, /for-patients/patient-portal, /for-providers, /contact-us). HeaderST.test.tsx 58 tests passed."
       - "2026-08-24: Version3 LCMC-style header (single white bar, logo left, stacked utility+primary nav, muted rounded search bar). Headless variants on pkm, site-base, and lcmc. No new RP fields."
       - "2026-08-24: Version2 Andmore-style header (dark utility row, logo left, inline nav, search icon). Headless variants on amkor, americasmart, atlanta-apparel, and site-base."
       - "2026-08-24: HeaderST Version1 also added under amkor, andmore/americasmart, andmore/atlanta-apparel Headless Variants."
       - "2026-08-24: Version1 cosmetic variant for Amkor-style inverted two-row header (MENU + search + logo-right). HideCart rendering param (default off)."
-      - "2026-08-19: Portal auth header update — LoginLink (PascalCase, matches SupportLink/SearchLink/CartLink)"
+      - "2026-08-19: Portal auth header update � LoginLink (PascalCase, matches SupportLink/SearchLink/CartLink)"
       - "LoginRequired variant hides header-navigation placeholder until Auth.js session is authenticated"
       - "Utility row (Support, Search, Cart, LoginLink) remains visible when unauthenticated"
 
@@ -8443,7 +8441,7 @@ ia:
     notes:
       - "2026-08-19: HeroCarousel Headless Variants container + 3 variants created on dfs (missed in initial audit)"
       - "2026-08-19: Audited dfs Headless Variants against React named exports for click-click-launch and Portal renderings"
-      - "MultiPromoItem container exists in Sitecore but is a child datasource template, not a page rendering — skipped"
+      - "MultiPromoItem container exists in Sitecore but is a child datasource template, not a page rendering � skipped"
       - "MultiPromoTabs is a separate rendering from MultiPromo tab variants (SideTabs/TopTabs/TopTabsNoImage)"
 
     verification:
@@ -8541,7 +8539,7 @@ ia:
       - pageSummary
       - metadataTitle
     notes:
-      - "2026-08-20: Built Knowledge Hub IA for DFS foodservice portal — help, policies, training, service docs, FAQs."
+      - "2026-08-20: Built Knowledge Hub IA for DFS foodservice portal � help, policies, training, service docs, FAQs."
       - "Root Knowledge Hub already existed; L1/L2 created via create_content_item (create_page failed on name field)."
       - "Hub field update on root returned empty updatedFields (silent-write); verify titles in CE if needed."
       - "2026-08-20: Cleared __Workflow + __Workflow state on all 28 Knowledge Hub pages so they are publish-ready (no Draft state)."
@@ -8616,9 +8614,9 @@ ia:
     siteCollection: "dfs"
     notes:
       - "2026-08-20: Remapped Header/Data mega menus + LinkLists to Knowledge Hub IA. MCP cannot rename item names; created named KH datasources and updated starter Speakers/Headphones/Amps/Pro/Artist Services Title+Link as fallback for local:/Data bindings."
-      - "Starter Titles: Speakers→Getting Started, Headphones→Help Articles, Amps→Policies, Pro→Training, Artist Services→Service Documentation; FAQs_Nav added as 6th mega."
-      - "Link list Titles + children remapped; Loud for less→Training, By feature→Service Documentation, More speakers→FAQs."
-      - "SupportLink → Knowledge Hub; Image 1 TargetUrl → Knowledge Hub."
+      - "Starter Titles: Speakers?Getting Started, Headphones?Help Articles, Amps?Policies, Pro?Training, Artist Services?Service Documentation; FAQs_Nav added as 6th mega."
+      - "Link list Titles + children remapped; Loud for less?Training, By feature?Service Documentation, More speakers?FAQs."
+      - "SupportLink ? Knowledge Hub; Image 1 TargetUrl ? Knowledge Hub."
     relatedItems:
       headerPartialDesignId: "{8ED2B2B7-85DE-40C1-AA54-0A1E8BE05274}"
       headerDataFolderId: "{D788F737-3DA9-49BA-9767-8583E494963C}"
@@ -8690,7 +8688,7 @@ ia:
       Titles from IA node names (no live scrape). Item names: spaces preserved; "&" -> "and".
       Services Page was NOT in Home insert options (Article/Audio/Detail/Landing/Product/Page Folder);
       create_content_item still succeeded. MCP read-back only echoes Detail+image; pageTitle/
-      pageHeaderTitle/pageShortTitle/pageSubtitle/pageSummary are silent-write — verify in Content Editor.
+      pageHeaderTitle/pageShortTitle/pageSubtitle/pageSummary are silent-write � verify in Content Editor.
       No [folder]/shared nodes; folder template not used.
       2026-08-25: Cleared __Workflow + __Workflow state on 32 IA pages to match Home (workflow: null). No Final GUID used.
       2026-08-25T12:00:00Z: Populated all 32 AmericasMart Services Pages from validated
@@ -8744,7 +8742,7 @@ ia:
         - "L1 children present under Home; L3 children present under Plan Your Market and Shop Year Round"
       failed: []
       pendingManual:
-        - "pageTitle / pageHeaderTitle / pageShortTitle / pageSubtitle / pageSummary / metadata* / og* (silent-write — verify in Content Editor)"
+        - "pageTitle / pageHeaderTitle / pageShortTitle / pageSubtitle / pageSummary / metadata* / og* (silent-write � verify in Content Editor)"
         - "External image XML uses a confirmed AmericasMart-hosted Events image; replace with page-specific Content Hub assets when credentials are available"
         - "Add Services Page to Home insert options for authors"
         - "Publish /sitecore/content/andmore/americasmart/Home subtree for Edge"
@@ -8782,7 +8780,7 @@ ia:
       (Children's -> Childrens, Men's -> Mens). Discover is a Page Folder because /Discover 404s on the live site.
       Services Page was NOT in Home or Discover insert options (Article/Audio/Detail/Landing/Product/Page Folder);
       create_content_item still succeeded. MCP read-back only echoes Detail+image; pageTitle/
-      pageHeaderTitle/pageShortTitle/pageSubtitle/pageSummary are silent-write — verify in Content Editor.
+      pageHeaderTitle/pageShortTitle/pageSubtitle/pageSummary are silent-write � verify in Content Editor.
       2026-08-25: Cleared __Workflow + __Workflow state on 54 IA items to match Home (workflow: null). No Final GUID used.
       2026-08-25T11:55:00Z: Populated all 53 Services Pages from atlanta-apparel.com live copy and
       section-level fallback copy. Skipped Home (Home Page) and Discover (Page Folder). Wrote semantic Detail HTML,
@@ -8859,7 +8857,7 @@ ia:
         - "Buyer and exhibitor First Finds pages use distinct live source URLs and distinct copy"
       failed: []
       pendingManual:
-        - "pageTitle / pageHeaderTitle / pageShortTitle / pageSubtitle / pageSummary / metadata* / og* (silent-write — verify in Content Editor)"
+        - "pageTitle / pageHeaderTitle / pageShortTitle / pageSubtitle / pageSummary / metadata* / og* (silent-write � verify in Content Editor)"
         - "External image XML uses confirmed Atlanta Apparel-hosted fashion gallery images; replace with Content Hub assets when credentials are available"
         - "Add Services Page to Home and Page Folder insert options for authors"
         - "Publish /sitecore/content/andmore/atlanta-apparel/Home subtree for Edge"
@@ -8921,7 +8919,7 @@ ia:
       pendingManual:
         - "Publish /sitecore/content/amkor/amkor/Presentation/Partial Designs/Global/Header for Edge"
         - "Optional: set LinkList variant HeaderPrimaryLinks on Services/Applications in Pages (Default works via L1-scope cascade registration)"
-        - "Test Services + Quality are leaf L1 pages (no L2 children in IA) — direct nav links expected"
+        - "Test Services + Quality are leaf L1 pages (no L2 children in IA) � direct nav links expected"
 
   - name: "amkor-ia-tree"
     kind: "ia-create"
@@ -8944,12 +8942,12 @@ ia:
       Created Amkor IA tree (99 Services Page items) under Home from amkor-ia.md.
       Home already existed (Home Page) and was skipped. Starter Data/Speakers/Video left untouched.
       Titles from IA node names (no live scrape). Item names: spaces preserved; "/" -> space;
-      "+" -> "Plus"; stripped "." "®" "™" and non-digit parentheses to satisfy ItemNameValidation
+      "+" -> "Plus"; stripped "." "�" "�" and non-digit parentheses to satisfy ItemNameValidation
       ^[\\w\\*\\$][\\w\\s\\-\\$]*(\\(\\d{1,}\\)){0,1}$. pageTitle fields keep original IA labels
       (e.g. item Smart Manufacturing I40 / title Smart Manufacturing (I4.0)).
       Services Page was NOT in Home insert options (Article/Audio/Detail/Landing/Product/Page Folder);
       create_content_item still succeeded. MCP read-back only echoes Detail+image; pageTitle/
-      pageHeaderTitle/pageShortTitle/pageSubtitle/pageSummary are silent-write — verify in Content Editor.
+      pageHeaderTitle/pageShortTitle/pageSubtitle/pageSummary are silent-write � verify in Content Editor.
       No [folder]/shared nodes; folder template not used.
       2026-08-25: Cleared __Workflow + __Workflow state on 99 IA pages to match Home (workflow: null). No Final GUID used.
       2026-08-25T12:15:00Z: Populated all 99 Amkor Services Pages from live amkor.com copy.
@@ -9084,7 +9082,7 @@ ia:
         - "About Us L2 children present; Careers/News/Customer Center L3 present"
       failed: []
       pendingManual:
-        - "pageTitle / pageHeaderTitle / pageShortTitle / pageSubtitle / pageSummary (silent-write — verify in Content Editor)"
+        - "pageTitle / pageHeaderTitle / pageShortTitle / pageSubtitle / pageSummary (silent-write � verify in Content Editor)"
         - "Add Services Page to Home insert options for authors"
         - "Approve Draft workflow and publish /sitecore/content/amkor/amkor/Home subtree for Edge"
         - "Wire navigation to new IA pages; starter Speakers/Video/Data left in tree"
@@ -9122,13 +9120,13 @@ ia:
       original punctuation in pageTitle/pageHeaderTitle/pageShortTitle/pageSubtitle/pageSummary/Detail.
       Services Page was NOT in Home insert options (Article/Audio/Detail/Landing/Product/Page Folder);
       create_content_item still succeeded. MCP read-back only echoes Detail+image; page* fields
-      are silent-write — verify in Content Editor. No [folder]/shared nodes; folder template not used.
+      are silent-write � verify in Content Editor. No [folder]/shared nodes; folder template not used.
       image left empty (no live scrape / no DAM).
       2026-08-25: Cleared __Workflow + __Workflow state on 115 IA pages to match Home (workflow: null). No Final GUID used.
       2026-08-25: Live-copy test on Communication and Translation {AF99D6E0-1858-477D-8DA7-9E1527E7C142} only.
       Source: https://www.lcmchealth.org/university-medical-center-new-orleans/patients-visitors/communication-translation/
       (no system-level /for-patients/communication-and-translation/ URL). Detail HTML + external image XML confirmed.
-      page*/metadata*/og* sent, silent on read-back. No credentials.local.yaml — image is live URL, not DAM.
+      page*/metadata*/og* sent, silent on read-back. No credentials.local.yaml � image is live URL, not DAM.
       Do not bulk-update remaining 114 pages until this pattern is approved.
       2026-08-25: Approved bulk live-copy population resumed. Updated and MCP-confirmed Detail+image on 52 of
       114 remaining Services Pages: all 28 About Us pages, all 9 remaining For Patients pages, and the first
@@ -9334,7 +9332,7 @@ ia:
         - "Detail and image read-back passed for About Us, For Patients, Our Services, Our Locations, Find a Provider, For Providers, Contact Us, and Notice of Non-Discrimination"
       failed: []
       pendingManual:
-        - "pageTitle / pageHeaderTitle / pageShortTitle / pageSubtitle / pageSummary / metadata* / og* on all 115 pages (silent-write — verify in Content Editor)"
+        - "pageTitle / pageHeaderTitle / pageShortTitle / pageSubtitle / pageSummary / metadata* / og* on all 115 pages (silent-write � verify in Content Editor)"
         - "Replace external image URLs with DAM dam-id XML when Content Hub credentials exist"
         - "Add Services Page to Home insert options for authors"
         - "Approve Draft workflow and publish /sitecore/content/lcmc/lcmc/Home subtree for Edge"
@@ -9352,7 +9350,7 @@ ia:
       Updated Footer Partial Design Data under /sitecore/content/lcmc/lcmc/Presentation/Partial Designs/Global/Footer/Data
       to match live lcmchealth.org footer + LCMC IA. Did not edit Header/mega menu or FooterST Default layout.
       Starter Speakers/Headphones/Amps/Artist Services and About us/Contact/Warranty/Shipping/Returns remapped in place
-      (item names Link 1–n kept). Six additional Primary Link items created. __Workflow + __Workflow state set to empty
+      (item names Link 1�n kept). Six additional Primary Link items created. __Workflow + __Workflow state set to empty
       on 16 Footer Data items to match Home (no Final GUID).
     relatedItems:
       footerPartialDesignId: "{BE2A0E7E-6FBB-4EE7-8968-41B6D1AE01C4}"
@@ -9362,7 +9360,7 @@ ia:
       secondaryLinksId: "{F233BBB1-712D-43B6-83A1-348E2E81E7C3}"
       branding:
         title: "Let's stay connected."
-        copyright: "1100 Poydras St., New Orleans, LA 70163 — © 2026 LCMC Health. All rights reserved."
+        copyright: "1100 Poydras St., New Orleans, LA 70163 � � 2026 LCMC Health. All rights reserved."
         facebook: "https://www.facebook.com/LCMCHealth"
         instagram: "https://www.instagram.com/lcmchealth/"
         linkedIn: "https://www.linkedin.com/company/lcmchealth"
@@ -9394,125 +9392,8 @@ ia:
       pendingManual:
         - "Publish Footer Partial Design + Footer/Data for Edge"
         - "FooterST cannot show ADA.gov service-animal block, X/YouTube, or GFE/balance-billing PDFs as dedicated columns"
-        - "Notice of Privacy Practices has no IA page — linked to live UMC notice URL"
+        - "Notice of Privacy Practices has no IA page � linked to live UMC notice URL"
 
-# Shared homepage kit (click-click-launch Global Elements) — 2026-08-25
-# Do not treat these as FMC/progressive items. HeaderST Default was not restyled.
-homepageKit:
-  status: "partial"
-  createdAt: "2026-08-25T01:00:00Z"
-  updatedAt: "2026-08-25T03:30:00Z"
-  projectTemplatesRoot: "/sitecore/templates/Project/click-click-launch/Components/Global Elements"
-  renderingsRoot: "/sitecore/layout/Renderings/Project/click-click-launch/Global Elements"
-  availableRenderingsGroup: "Homepage Kit"
-  availableRenderingsValue: "{916AD4EA-646B-4F69-BA9D-594CEA0D59C7}|{FD183076-E346-49B5-A3F1-22D2E45B4A63}|{1745BCF4-CD31-4182-A3DF-8874E979DD60}|{0B67AE92-7387-4EE5-8A97-217AE6BDE765}|{B644D425-E162-45A9-A59E-FCFE3F14B90D}|{8792FF9C-9B69-4F56-A0CD-B5EC8F2647BD}"
-  sitesWired:
-    - { name: "lcmc", homeId: "{194F8944-6400-40DD-BDCB-931686A42643}", arItemId: "{72E55B4F-12C7-4D15-9E7C-71F88370D501}" }
-    - { name: "amkor", homeId: "{BB13BF5A-B102-4FE8-B410-63E3DA7AA448}", arItemId: "{E72EC5E7-E264-404A-8137-004BEC46E7CE}" }
-    - { name: "americasmart", homeId: "{3BD35058-A302-42FE-98A6-7ECA10407DE2}", arItemId: "{99FD24DA-DBEA-4824-9AA9-35C32D4EE44C}" }
-    - { name: "atlanta-apparel", homeId: "{011D81AC-F13E-4DC1-A142-88119D17A7B5}", arItemId: "{4AA4093B-EE42-421B-BF5A-FEA56CEF911A}" }
-  notes:
-    - "2026-08-25: Shared kit created under click-click-launch (not client-named). Wired onto four Homes. Variants must be set in Pages. Images empty."
-    - "2026-08-25: Homepage Kit templates/renderings and sample datasources already workflow:null (same as Home). Not field-cleared. No executeWorkflowCommand on Marketer MCP."
-    - "2026-08-25: HeroQuickLinks added (LCMC-style search hero + overlapping icon CTAs). Rendering {8792FF9C-9B69-4F56-A0CD-B5EC8F2647BD}."
-  components:
-    - name: "HeroQuickLinks"
-      kind: "list"
-      category: "Global Elements"
-      status: "complete"
-      react:
-        filePath: "src/components/uiim/global-elements/HeroQuickLinks.tsx"
-        variants: ["Default"]
-        notes: "2026-08-25: Removed on-canvas SpecialtyOptions editor panel from Pages; authors edit the field in the right-hand data panel. Pages editing chrome — empty/invalid BackgroundImage was rendering a giant broken-image placeholder over the headline because NextImage's EE wrapper ignores absolute on the img. Background is now in an overflow-hidden absolute frame that sizes chrome/img/svg. Placeholders stay sr-only. Quick-link icons clipped to 48px. BackgroundImage on LCMC Home Hero still reports invalid XML in Pages — reset that field in Content Editor and re-pick media (MCP was unavailable)."
-      templates:
-        datasource: { name: "HeroQuickLinks", itemId: "{CFF35DC3-7968-4ADB-B146-417CB0AA6BBB}", standardValues: "{9E6545BD-7901-436A-A025-D99DE3A9AC0D}" }
-        child: { name: "HeroQuickLinkItem", itemId: "{FE0A7F7E-7242-4126-B07F-2A6FA7BD4807}" }
-        folder: { name: "HeroQuickLinks Folder", itemId: "{E1E5CD81-25A7-4149-AD89-50F4707D63FC}" }
-        renderingParams: { itemId: "{FA743BF1-9160-4CBA-832E-456BE90C36D2}" }
-      rendering: { itemId: "{8792FF9C-9B69-4F56-A0CD-B5EC8F2647BD}", path: "/sitecore/layout/Renderings/Project/click-click-launch/Global Elements/HeroQuickLinks" }
-      exampleDatasource: { itemId: "{6E0C9D38-0C38-471A-BE3C-B7FAD2AAEA06}", path: "/sitecore/content/lcmc/lcmc/Data/Hero Quick Links/LCMC Home Hero" }
-    - name: "IconLinkBar"
-      kind: "list"
-      category: "Global Elements"
-      status: "complete"
-      react:
-        filePath: "src/components/uiim/global-elements/IconLinkBar.tsx"
-        variants: ["Default", "DarkBand", "CircleGrid"]
-        notes: "2026-08-25: item row switched from a fixed-column grid to flex-wrap + justify-center. The grid sized every column even when empty, so a row with fewer items than columns (e.g. 4 items in CircleGrid's 5 columns) was pushed left while the title, description, and search button stayed centered. Items now carry explicit widths (2-up on mobile, sm:w-52 md:w-60 default/dark, sm:w-44 md:w-48 circle) so any count stays centered."
-      templates:
-        datasource: { name: "IconLinkBar", itemId: "{5AD908DA-DEB0-4B6F-8A3D-00FDFC802915}", standardValues: "{409BB427-78DC-4D52-9686-FE5FC50BED0B}" }
-        child: { name: "IconLinkItem", itemId: "{3D6D2E42-D566-4A98-ABF3-F1487BC2E603}" }
-        folder: { name: "IconLinkBar Folder", itemId: "{0B6BE34E-726E-4B50-8CBF-C7A86106C52D}" }
-        renderingParams: { itemId: "{0839B4BD-6F76-453F-94DA-C32199690BD4}" }
-      rendering: { itemId: "{916AD4EA-646B-4F69-BA9D-594CEA0D59C7}", path: "/sitecore/layout/Renderings/Project/click-click-launch/Global Elements/IconLinkBar" }
-    - name: "LinkColumnsBand"
-      kind: "list"
-      category: "Global Elements"
-      status: "complete"
-      react:
-        filePath: "src/components/uiim/global-elements/LinkColumnsBand.tsx"
-        variants: ["Default", "TwoColumn"]
-      templates:
-        datasource: { name: "LinkColumnsBand", itemId: "{F382ED37-1016-4449-BC8F-E46499A451BC}", standardValues: "{4B4F0A40-3ADD-400C-BAF2-E51FD10BFA34}" }
-        child: { name: "LinkColumnsItem", itemId: "{8A768EF4-DE41-4E4A-B7B4-0D3665AB0407}" }
-        folder: { name: "LinkColumnsBand Folder", itemId: "{EEAEE4F5-79BA-4FAF-945D-09AC441654F7}" }
-        renderingParams: { itemId: "{76389824-CC06-447A-ABF9-1F3C6A54EC38}" }
-      rendering: { itemId: "{FD183076-E346-49B5-A3F1-22D2E45B4A63}", path: "/sitecore/layout/Renderings/Project/click-click-launch/Global Elements/LinkColumnsBand" }
-    - name: "SplitFeature"
-      kind: "simple"
-      category: "Global Elements"
-      status: "complete"
-      react:
-        filePath: "src/components/uiim/global-elements/SplitFeature.tsx"
-        variants: ["Default", "ImageLeft"]
-      templates:
-        datasource: { name: "SplitFeature", itemId: "{70780390-A3EB-478D-B5DE-062BA3C9E897}", standardValues: "{FB71B394-76BC-4CDA-ABBE-9A40AE24E9F3}" }
-        folder: { name: "SplitFeature Folder", itemId: "{DA07889E-03D4-4FD7-A9EA-73D4B987C623}" }
-        renderingParams: { itemId: "{52C2A8BB-4C8B-4F54-9892-BF81C0377505}" }
-      rendering: { itemId: "{1745BCF4-CD31-4182-A3DF-8874E979DD60}", path: "/sitecore/layout/Renderings/Project/click-click-launch/Global Elements/SplitFeature" }
-    - name: "ButtonRow"
-      kind: "list"
-      category: "Global Elements"
-      status: "complete"
-      react:
-        filePath: "src/components/uiim/global-elements/ButtonRow.tsx"
-        variants: ["Default", "DarkGhost"]
-      templates:
-        datasource: { name: "ButtonRow", itemId: "{183C1B07-EAEC-48FE-9D2F-B94A4C630960}", standardValues: "{94FDDAEB-081D-4964-81FB-4B2A96309254}" }
-        child: { name: "ButtonRowItem", itemId: "{EF69B5F3-3E95-4FF1-8A42-EB5A95F43F0E}" }
-        folder: { name: "ButtonRow Folder", itemId: "{360C592A-81D3-41FD-85B9-8BD71DED2711}" }
-        renderingParams: { itemId: "{83CB0F59-9ABB-49EC-A6F4-C0707621E7B7}" }
-      rendering: { itemId: "{0B67AE92-7387-4EE5-8A97-217AE6BDE765}", path: "/sitecore/layout/Renderings/Project/click-click-launch/Global Elements/ButtonRow" }
-    - name: "ListingBlock"
-      kind: "list"
-      category: "Global Elements"
-      status: "complete"
-      react:
-        filePath: "src/components/uiim/global-elements/ListingBlock.tsx"
-        variants: ["Default", "TextList", "Split"]
-      templates:
-        datasource: { name: "ListingBlock", itemId: "{4A77FD9B-93B9-4AB2-91F7-936173963913}", standardValues: "{0ED2B36E-A8CA-4871-AAAE-3A87729F1C42}" }
-        child: { name: "ListingItem", itemId: "{13C565FE-09C3-4994-8B5A-580DA061BE0C}" }
-        folder: { name: "ListingBlock Folder", itemId: "{F865AD91-D7B8-4499-A658-60D90F08F4E8}" }
-        renderingParams: { itemId: "{F570D6F0-BC7E-4720-A681-0B19EBE0EF65}" }
-      rendering: { itemId: "{B644D425-E162-45A9-A59E-FCFE3F14B90D}", path: "/sitecore/layout/Renderings/Project/click-click-launch/Global Elements/ListingBlock" }
-  verification:
-    checkedAt: "2026-08-25T03:30:00Z"
-    passed:
-      - "Five React components + Jest tests (17 passed)"
-      - "Templates, folder templates, RP templates, and JSON renderings created under click-click-launch"
-      - "Homepage Kit Available Renderings group created on lcmc, amkor, americasmart, atlanta-apparel"
-      - "Headless Variants containers + definitions created on all four sites (LCMC full set; others have the variants they use)"
-      - "Data folders created on all four sites"
-      - "Components added to all four Home pages (headless-main) and authored datasources assigned where instance IDs were known"
-      - "sitecore-tools:generate-map registered IconLinkBar, LinkColumnsBand, SplitFeature, ButtonRow, ListingBlock"
-    pendingManual:
-      - "Datasource Template / Datasource Location / __Standard values / __Masters / Homepage Kit Renderings (silent-write)"
-      - "Set FieldNames variants in Pages (see homepage-kit-variant-checklist.md)"
-      - "Upload DAM images"
-      - "Assign remaining Amkor ListingBlock datasources (Events, Press) and extra Atlanta SplitFeature datasources in Pages"
-      - "Add ImageBanner (Amkor map) and AccordionBlock (AmericasMart FAQ) if authors want those existing components on Home"
-      - "Publish Home + Data + renderings for Edge"
 
   - name: "MultiPromo"
     kind: "update"
@@ -9607,7 +9488,7 @@ homepageKit:
       name: "MultiPromo 2"
       itemId: "{A48AADE0-A051-4865-932E-0A1D5FF7633B}"
       path: "/sitecore/content/lcmc/lcmc/Home/Data/MultiPromo 2"
-      note: "Still unused. Home now has a new empty MultiPromo datasource at Home/Data/MultiPromo. Leftover contains Sonic Sound starter copy — do not assign to LCMC Home."
+      note: "Still unused. Home now has a new empty MultiPromo datasource at Home/Data/MultiPromo. Leftover contains Sonic Sound starter copy � do not assign to LCMC Home."
 
     lcmcHomePlacement:
       pageId: "{194F8944-6400-40DD-BDCB-931686A42643}"
@@ -9617,7 +9498,7 @@ homepageKit:
       datasourceId: "{FC5AF998-34DB-40F4-A3D2-AE45DC0E24D3}"
       datasourcePath: "/sitecore/content/lcmc/lcmc/Home/Data/MultiPromo"
       currentFieldNames: "{53094257-4E18-40AD-AC8B-8F70BACC45F5}"
-      currentFieldNamesNote: "Default variant. set_component_datasource variantId failed (404 — that API is personalization, not Headless Variants). Select Version1 in Pages."
+      currentFieldNamesNote: "Default variant. set_component_datasource variantId failed (404 � that API is personalization, not Headless Variants). Select Version1 in Pages."
 
     verification:
       checkedAt: "2026-08-25T13:56:00Z"
@@ -9634,7 +9515,7 @@ homepageKit:
       pendingManual:
         - "Publish Headless Variants (lcmc, site-base, pkm) + MultiPromo template/rendering + Home/Data/MultiPromo for Edge"
         - "In Pages on LCMC Home, select variant Version1 (FieldNames = {06714DB7-4BC2-430E-8990-82F264AA101F})"
-        - "Check Advanced styling → Background image (ShowBackgroundImage) when a portrait is assigned"
+        - "Check Advanced styling ? Background image (ShowBackgroundImage) when a portrait is assigned"
         - "Add three SimplePromo children under Home/Data/MultiPromo; leave BackgroundImage empty until a DAM asset is available (do not invent media IDs)"
         - "Approve Draft workflow on Home/Data/MultiPromo"
         - "set_component_datasource variantId cannot set Headless Variants (404); FieldNames must be set in Pages"
@@ -9653,7 +9534,7 @@ homepageKit:
         - { name: "Version2", itemId: "{CB060119-C9A8-4871-A790-68827ECBEFDC}" }
 
     notes:
-      - "2026-08-29: Amkor Headless Variants completed — added SideTabs, TopTabs, TopTabsNoImage, Version1, Version2. HeroST already had all 5 exports."
+      - "2026-08-29: Amkor Headless Variants completed � added SideTabs, TopTabs, TopTabsNoImage, Version1, Version2. HeroST already had all 5 exports."
       - "2026-08-25: Added MultiPromo Version1 (LCMC teal/white split + optional portrait/arc). Headless Variants on lcmc, site-base, and pkm. ShowBackgroundImage RP checkbox defaults off."
       - "2026-08-25: Implemented Version1 React export. Added BackgroundImage Image field on shared MultiPromo datasource template (empty SV). Updated ComponentQuery. Added MultiPromo to LCMC Home; variant selection still requires Pages."
 
@@ -9754,7 +9635,7 @@ homepageKit:
     siteCollection: "amkor"
     notes: >
       Reused Cooley NewsListing rendering/template. Authors select blog pages via FeaturedItems Treelist
-      (Cooley template source still Media and Insight — authors can pick any item by ID; datasource has all 10 blogs).
+      (Cooley template source still Media and Insight � authors can pick any item by ID; datasource has all 10 blogs).
       Placed on News parent page headless-main.
     rendering:
       path: "/sitecore/layout/Renderings/Project/Cooley/News/NewsListing"
@@ -9836,7 +9717,7 @@ homepageKit:
       addedFields:
         - { name: "CtaLink", itemId: "{4CA382AF-BE31-48D5-A714-7C7173D3B002}", type: "General Link" }
         - { name: "CtaText", itemId: "{7CFFB21E-1450-4FC5-96B1-4BF1B8390DC7}", type: "Single-Line Text" }
-      note: "Additive only — existing Cooley/amkor datasources keep working with both fields empty."
+      note: "Additive only � existing Cooley/amkor datasources keep working with both fields empty."
     renderingChanges:
       path: "/sitecore/layout/Renderings/Project/Cooley/News/NewsListing"
       itemId: "{29419ABC-5E18-40B5-A113-26D89297D1A5}"
@@ -9905,7 +9786,7 @@ homepageKit:
         - "3 Variant Definition items created and verified under amkor Headless Variants/NewsListing"
         - "CtaLink/CtaText fields created on the NewsListing template"
         - "ComponentQuery returns ctaLink href /About-Us/News/Blog, ctaText and per-item image src via Edge"
-        - "Jest NewsListing.test.tsx — 9 tests pass (cards, accent, CTA, CtaText override, category rules, press rows, fallbacks)"
+        - "Jest NewsListing.test.tsx � 9 tests pass (cards, accent, CTA, CtaText override, category rules, press rows, fallbacks)"
         - "Events + Press Releases datasources resolve via Edge with CTA hrefs and event image srcs"
       failed: []
       pendingManual:
@@ -9926,7 +9807,7 @@ homepageKit:
       Amkor footer aligned to live amkor.com two-row layout via FooterST Version1 cosmetic variant
       (Default/LogoLeft/LogoRight/Centered unchanged). Top row: logo + Constant Contact newsletter CTA +
       social (WeChat/YouTube/Twitter hardcoded; FB/IG/LinkedIn from datasource). Bottom row: copyright +
-      pipe-separated legal links. Primary Links 1–4 + Secondary Links 1–3 remapped; Secondary 4–5 cleared.
+      pipe-separated legal links. Primary Links 1�4 + Secondary Links 1�3 remapped; Secondary 4�5 cleared.
       Did not edit HeaderST or mega menu.
     relatedItems:
       footerPartialDesignId: "{A666B913-4E79-4A8C-89CD-C29B55A4F2DC}"
@@ -9937,7 +9818,7 @@ homepageKit:
       headlessVariantVersion1Id: "{D4E5C4CD-F853-45CF-8327-00B52E214474}"
       branding:
         title: "Connect with us"
-        copyright: "© Copyright 2026 Amkor Technology"
+        copyright: "� Copyright 2026 Amkor Technology"
         facebook: "https://www.facebook.com/AmkorTechnology/"
         instagram: "https://www.instagram.com/amkortechnology/"
         linkedIn: "https://www.linkedin.com/company/amkor-technology/"
@@ -9968,6 +9849,569 @@ homepageKit:
         - "Publish Footer Partial Design + Footer/Data + Headless Variants/FooterST/Version1 for Edge"
         - "Newsletter URL + WeChat/YouTube/Twitter are hardcoded in Version1 (live Constant Contact + amkor.com paths)"
 
+  - name: "amkor-services-page-presentation-copy"
+    kind: "presentation-copy"
+    category: "Layout"
+    status: "complete"
+    createdAt: "2026-08-31T09:10:00Z"
+    updatedAt: "2026-08-31T13:20:00Z"
+    siteName: "amkor"
+    siteCollection: "amkor"
+    notes: >
+      Copied the Final Renderings layout from source page About Us {7B4C11A5-F4EC-451B-A23B-E49127B25467}
+      (route /About-Us, template Services Page) to every empty Services Page
+      {B2B918C3-ACDA-433F-A11B-718466493AEC} descendant of /sitecore/content/amkor/amkor/Home.
+      The source carries exactly one component (ArticleContent, placeholder headless-main,
+      no datasource, DynamicPlaceholderId=1, no FieldNames/GridParameters/Styles), so the copy is a
+      complete replication � nothing was lost. Home itself (Home Page template) was excluded and the
+      source item was not modified.
+    method:
+      tool: "update_fields_on_item"
+      field: "__Final Renderings"
+      note: >
+        update_fields_on_item CAN write the layout field on a page item, including rendering
+        parameters (s:par), which add_component_on_page / set_component_datasource cannot.
+        Verified by read-back with get_components_on_page after each batch. Writes bump the page
+        to version 2. Each target got a freshly generated rendering uid
+        {1A2B3C4D-00NN-4000-8000-0000000000NN} so no uid is duplicated across pages.
+      layoutXml: >
+        <r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}"><r uid="{...}" s:ds=""
+        s:id="{B1136CF1-94BE-468C-B78D-9BE212AF5428}" s:par="DynamicPlaceholderId=1"
+        s:ph="headless-main" /></d></r>
+    source:
+      itemId: "{7B4C11A5-F4EC-451B-A23B-E49127B25467}"
+      path: "/sitecore/content/amkor/amkor/Home/About Us"
+      template: "Services Page {B2B918C3-ACDA-433F-A11B-718466493AEC}"
+      layoutEditingKind: "FINAL"
+      components:
+        - { name: "ArticleContent", renderingId: "{B1136CF1-94BE-468C-B78D-9BE212AF5428}", placeholder: "headless-main", dataSource: "(none)", fieldNames: "(none)", parameters: "DynamicPlaceholderId=1" }
+    counts:
+      servicesPageTargetsFound: 116
+      modified: 114
+      skippedAlreadyPopulated: 1
+      skippedUnreadable: 1
+    scope:
+      sections:
+        - "Home/About Us (+ Careers 12 country pages, Customer Center, Contact Us, Company History, Corporate Responsibility, Leadership, Memberships and Partnerships, Mission, Amkor Overview, Smart Manufacturing I40)"
+        - "Home/About Us/News/Blog, Events, Press Releases leaf pages"
+        - "Home/Applications (+ 8 children)"
+        - "Home/Packaging (Wafer Level, Power, Leadframe, Laminate, Memory, MEMS, SiP and leaf package pages)"
+        - "Home/Services (+ Wafer Bumping, Package Characterization, Design Services)"
+        - "Home/Technology (+ 13 children)"
+        - "Home/Quality"
+    skipped:
+      - itemId: "{BE42D3F0-C644-4ADE-9CEB-E72208ACFD8E}"
+        path: "/sitecore/content/amkor/amkor/Home/About Us/News"
+        reason: "Already populated with NewsListing (FieldNames Default) � not overwritten"
+      - itemId: "{2654163D-7840-4EA1-AAFF-AB12FD524787}"
+        path: "/sitecore/content/amkor/amkor/Home/About Us/Events (per get_all_pages_by_site)"
+        reason: "get_components_on_page returns 'Site root not found' (404); layout not read or written"
+    excluded:
+      - { itemId: "{BB13BF5A-B102-4FE8-B410-63E3DA7AA448}", path: "/sitecore/content/amkor/amkor/Home", reason: "Home Page template {B6DAFB99-CB07-4927-83EA-56F5A0631A0E}" }
+      - { itemId: "{7B4C11A5-F4EC-451B-A23B-E49127B25467}", reason: "source item, left untouched (already had the layout)" }
+    orphanedDatasources: []
+    verification:
+      checkedAt: "2026-08-31T13:20:00Z"
+      passed:
+        - "Source presentation read via get_components_on_page (1 ArticleContent, FINAL layout)"
+        - "Non-destructive POC write on Home/Test Services verified by read-back"
+        - "Spot-check read-back after mass apply: Applications, Technology, Services/Wafer Bumping, About Us/Mission, About Us/Careers/Vietnam, Packaging/Power/TSON8-FL all return 1 ArticleContent on headless-main with DynamicPlaceholderId=1 and the expected unique uid"
+      failed: []
+      pendingManual:
+        - "Publish the 114 updated pages for Edge delivery (writes created version 2 on each)"
+        - "Investigate /Home/About Us/Events {2654163D-7840-4EA1-AAFF-AB12FD524787} � MCP cannot resolve its site root, so its layout must be set in Pages/Content Editor"
+        - "ArticleContent renders route/page fields, so no datasource assignment is needed; if a future source layout carries FieldNames, the same update_fields_on_item approach can write it"
+
+  - name: "amkor-article-content-image-variants"
+    kind: "variants"
+    category: "Page Content"
+    status: "complete"
+    createdAt: "2026-08-31T18:05:00Z"
+    updatedAt: "2026-08-31T18:05:00Z"
+    siteName: "amkor"
+    siteCollection: "amkor"
+    component: "ArticleContent"
+    renderingId: "{B1136CF1-94BE-468C-B78D-9BE212AF5428}"
+    rootCause: >
+      Two independent defects made the populated page `image` field invisible in the Pages canvas.
+      (1) The `Default` export of src/components/article-content/ArticleContent.tsx never rendered an
+      image at all � it destructured only text fields from mergeArticleContentFields and had no image
+      JSX; only the `kmpage` variant rendered one. amkor's 114 pages carry ArticleContent with no
+      FieldNames parameter, so they render `Default`. (2) pickResolvedImage in
+      src/components/article-content/article-content.fields.ts gated image resolution on
+      `field.value?.src`, which is always empty for external-URL Image XML. amkor pages store
+      `image` as `<image src="https://amkormarcomexternal.blob.core.windows.net/..." alt="..." />`
+      (verified on /Home/About Us and 10 siblings), and Sitecore Edge returns an empty jsonValue for
+      that shape, so the field was dropped before any variant could render it. Field name casing was
+      NOT the cause � IMAGE_ALIASES already covers `image`, `Image`, `pageThumbnail`.
+    codeChanges:
+      - "src/lib/sitecore-image-field.ts: added extractImageAlt + hydrateExternalImageField, rebuilding an ImageField from raw external Image XML (same regex-attribute approach as NewsListing itemImage/attributeValue)"
+      - "src/components/article-content/article-content.fields.ts: pickResolvedImage now hydrates the field and accepts it when extractImageSrc resolves a URL, instead of requiring value.src"
+      - "src/components/article-content/ArticleContent.tsx: Default body extracted into internal ArticleContentLayout(showImage); new named exports WithImage (image between summary and body) and TextOnly (image suppressed). Default output unchanged � still copy-only"
+    defaultBehaviourChanged: false
+    blastRadius: >
+      Rendering {B1136CF1-...} is shared across sites in this instance. progressive/pkm has its own
+      ArticleContent Headless Variants container {5CAB3B17-8A72-46E7-A6E3-FBF6DA968DD7} with Default,
+      ServicePageVariant and kmpage, and its Services Page / Knowledge Article pages also author an
+      `image` field. Making `Default` render the image would therefore have added a large featured
+      image to pkm (and any other site whose pages use Default with a populated image), so Default
+      was deliberately left copy-only and an explicit WithImage variant was added instead. The
+      pickResolvedImage fix does change pkm `kmpage` pages whose image is external XML: those images
+      now appear, which is the documented intent of that variant.
+    variants:
+      containerPath: "/sitecore/content/amkor/amkor/Presentation/Headless Variants/ArticleContent"
+      containerItemId: "{8972242F-EAEF-44DD-80C8-6A88C1683097}"
+      containerTemplate: "HeadlessVariants {49C111D0-6867-4798-A724-1F103166E6E9}"
+      variantTemplate: "Variant Definition {4D50CDAE-C2D9-4DE8-B080-8F992BFB1B55}"
+      items:
+        - { name: "Default", itemId: "{0031EFBB-7035-4F6A-8CB5-84CE36C79540}", path: "/sitecore/content/amkor/amkor/Presentation/Headless Variants/ArticleContent/Default", renders: "copy only" }
+        - { name: "WithImage", itemId: "{AA41D913-0CFD-44C6-92E7-52C3D1D99599}", path: "/sitecore/content/amkor/amkor/Presentation/Headless Variants/ArticleContent/WithImage", renders: "copy + page image" }
+        - { name: "TextOnly", itemId: "{A900894D-AE1A-4259-BC78-2E9FCE84A7CF}", path: "/sitecore/content/amkor/amkor/Presentation/Headless Variants/ArticleContent/TextOnly", renders: "copy only, image explicitly suppressed" }
+    verification:
+      checkedAt: "2026-08-31T18:05:00Z"
+      passed:
+        - "amkor Headless Variants read before create � no ArticleContent container existed"
+        - "Container + Default/WithImage/TextOnly verified by read-back of the container children (template Variant Definition, correct names and casing)"
+        - "Raw external Image XML on /Home/About Us and siblings confirmed via get_content_item_by_path"
+        - "npx jest src/__tests__/article-content � 23/24 pass; new cases cover jsonValue image, external-XML image, missing image field, TextOnly suppression, Default staying copy-only"
+        - "npm run lint � 0 errors (12 pre-existing warnings elsewhere); prettier applied to touched files"
+        - "npx tsc --noEmit � no new errors introduced in touched files"
+      failed:
+        - "Pre-existing kmpage test 'renders image, titles, summary callout, and Detail body' asserts the ImageWrapper test id while the component renders next/image for sitecoresandbox.cloud URLs. Confirmed failing on stashed HEAD too � not caused by this change, left untouched"
+      pendingManual:
+        - "Select the WithImage rendering variant per ArticleContent instance in Pages � MCP cannot set the FieldNames rendering parameter via set_component_datasource (variantId is a personalization variant); only Pages UI or a direct __Final Renderings write can do it"
+        - "Publish amkor pages after variant selection so Edge delivers the change"
+        - "Page image field VALUES were not modified (concurrent Unsplash population task owns them)"
+
+  - name: "blog-listing-site-scoped-filter-facets"
+    kind: "component-enhancement"
+    category: "Insights"
+    status: "complete"
+    createdAt: "2026-08-31T18:20:00Z"
+    updatedAt: "2026-08-31T18:20:00Z"
+    siteName: "amkor"
+    siteCollection: "amkor"
+    notes: >
+      BlogListing is shared by the single site-base editing host, but its filter facets came from a
+      hardcoded legal taxonomy module (blog-listing.taxonomy.ts: BLOG_TOPIC_BY_NAME keyed by Pillsbury
+      blog item names plus a SPECIALTY_INFERENCE token list and a LAWYERS map of /Lawyers/Bios hrefs).
+      Filter options were therefore always legal, regardless of site.
+    design:
+      chosen: "Site-scoped filter facets authored as Sitecore CONTENT on the per-site datasource item"
+      mechanism: >
+        Three additive fields on the shared BlogListing datasource template. FilterFacets holds one
+        facet per line as `Label | keyword, keyword`; the component derives each blog's tags by keyword
+        match against title + summary + item name, then builds the dropdown from the tags actually
+        present in that site's content. FilterFacetLabel renames the dropdown ("Topics"), and
+        SearchPlaceholder replaces the legal search hint.
+      fallback: >
+        When FilterFacets is empty the component takes the legacy path unchanged � curated legal
+        taxonomy, the related-lawyer dropdown, the "Related counsel" row and the original placeholder.
+        Configured sites bypass the legal taxonomy entirely and hide the lawyer dropdown.
+      rejected:
+        - "Purely dynamic facets from a taxonomy field on blog items � amkor blog pages use the shared Services Page template with no taxonomy field, so it would require a template change per site anyway"
+        - "Headless Variant per site � variants are cosmetic; encoding taxonomy in code per site still needs a code change per demo"
+        - "Per-site config map in src/lib keyed by site name (the search-packs/pulse-packs precedent) � rejected because it requires a code change and deploy for every new demo site"
+      graphqlNote: >
+        ComponentQuery growth kept minimal: three scalar `field(name){ jsonValue }` selections at the
+        datasource level plus `value` alongside `jsonValue` on the per-blog image. The existing
+        `children(first: 100)` pagination was left exactly as it was; no new list traversal was added.
+    templateChanges:
+      path: "/sitecore/templates/Project/pillsbury/Components/Insights/BlogListing/Data"
+      parentId: "{12EB407A-3498-44AD-A537-817B84CCE96F}"
+      addedFields:
+        - { name: "FilterFacets", itemId: "{9310868D-E58D-43BE-82F1-ECE72B6BD681}", type: "Multi-Line Text", title: "Filter Facets" }
+        - { name: "FilterFacetLabel", itemId: "{32706D55-28A3-4242-9928-B4A1B4BCAB9B}", type: "Single-Line Text", title: "Filter Facet Label" }
+        - { name: "SearchPlaceholder", itemId: "{A8FB3561-98AB-4DA6-BC6A-D395490071F1}", type: "Single-Line Text", title: "Search Placeholder" }
+      note: "Additive only � pillsburylaw's existing datasource keeps working with all three empty."
+    renderingChanges:
+      path: "/sitecore/layout/Renderings/Project/pillsbury/Insights/BlogListing"
+      itemId: "{8278F36C-8492-4641-A401-9C19AA69D08A}"
+      componentQuery: "added filterFacets, filterFacetLabel, searchPlaceholder; added `value` next to `jsonValue` on the per-blog image field"
+      imageFieldNote: >
+        amkor blog posts store external blob URLs and Edge returns an empty jsonValue for those, so
+        BlogListing now falls back to parsing src/alt from the raw field XML via
+        src/lib/sitecore-image-field.ts (same pattern as NewsListing).
+    datasourceUpdates:
+      - itemId: "{BCA09BD3-B05F-4916-B1BD-EB9D4C5FB29C}"
+        path: "/sitecore/content/amkor/amkor/Data/Blog Listings/BlogListing_2049bc591ffe43aca2dd4ab8d4b11510"
+        showFilters: "0 -> 1"
+        filterFacetLabel: "Topics"
+        searchPlaceholder: "Search blog posts (e.g. advanced packaging, Peoria, workforce)"
+        filterFacets: "Advanced Packaging / Test & Assembly / AI & HPC / Memory / Sustainability / Workforce & Education / Investment & Expansion / Awards & Recognition � keywords derived from the 11 real blog posts under /Home/About Us/News/Blog"
+    unchanged:
+      - { itemId: "{87815B12-79A7-43EB-AAEF-14E6492A01E1}", path: "/sitecore/content/pillsbury/pillsburylaw/Data/Blog Listings/Insights Blogs", note: "read back after the template change � FilterFacets, FilterFacetLabel and SearchPlaceholder are all empty, so the legal behaviour is byte-identical" }
+    codeChanges:
+      - "src/components/uiim/insights/blog-listing.facets.ts (new) � parseFacetConfig / hasFacetConfig / matchFacets"
+      - "src/components/uiim/insights/BlogListing.tsx � facet-driven tags and dropdown, authorable facet label and search placeholder, lawyer dropdown gated to the legacy path, image src/alt via @/lib/sitecore-image-field"
+      - "src/components/uiim/insights/blog-listing.props.ts � optional filterFacets / filterFacetLabel / searchPlaceholder, image.value"
+      - "src/__tests__/blog-listing/blog-listing.facets.test.ts (new)"
+      - "blog-listing.taxonomy.ts left untouched � it is now the fallback for unconfigured sites"
+    verification:
+      passed:
+        - "npx jest src/__tests__/blog-listing/blog-listing.facets.test.ts � 10/10 pass (configured facets, label-only lines, duplicate merge, empty/missing config, legacy legal taxonomy)"
+        - "http://localhost:3000/About-Us/News/Blog?site=amkor � one Topics dropdown with 7 semiconductor options, no lawyer dropdown, no 'Related counsel', quick-filter chips present, 11/11 blogs listed, external blob images resolving"
+        - "http://localhost:3000/Insights/Blogs?site=pillsburylaw � two dropdowns, legal specialty list, 'All related lawyers', 'Related counsel', original 'sanctions, Asay' placeholder"
+        - "npm run lint � 0 errors (12 pre-existing warnings elsewhere); prettier applied to touched files"
+        - "npx tsc --noEmit � no new errors in touched files"
+      notes:
+        - "'Test & Assembly' currently yields no matches because no amkor blog title or summary uses those words; the dropdown only lists facets present in content, which is the intended behaviour"
+    pendingManual:
+      - "Publish the BlogListing rendering item, the datasource template and the amkor datasource so Edge delivers the new fields outside local dev"
+      - "For andmore: create a BlogListing datasource under /sitecore/content/<collection>/andmore/Data/Blog Listings, point BlogsRoot at the blog folder, tick ShowFilters and author FilterFacets � no code change required"
+
+  - name: "amkor-page-image-unsplash-backfill"
+    kind: "content-update"
+    category: "Content"
+    status: "complete"
+    createdAt: "2026-08-31T18:05:00Z"
+    updatedAt: "2026-08-31T19:05:00Z"
+    siteName: "amkor"
+    siteCollection: "amkor"
+    contentRoot: "/sitecore/content/amkor/amkor/Home"
+    notes: >
+      Replaced the generic Amkor-logo-PMS293-transparent.jpg placeholder in the `image` field of every
+      Services Page ({B2B918C3-ACDA-433F-A11B-718466493AEC}) under /Home with a topic-relevant, validated
+      Unsplash photo, and gave the three Press Release pages (which had no image at all) their first image.
+      Only the `image` content field was touched � no presentation, layout or template changes.
+      Field values are Sitecore image XML pointing at an external URL:
+      `<image src="https://images.unsplash.com/photo-XXXX?w=1200&amp;q=80" alt="..." />`.
+    method:
+      read: >
+        Page inventory came from get_all_pages_by_site (amkor). Current `image` / `Detail` values were read in
+        bulk from Experience Edge GraphQL, batched 4 items per query � the endpoint sums alias depth, so more
+        than 4 `item -> field -> value` aliases trips its 15-level nesting limit.
+      sourcing: >
+        Unsplash photo IDs were never invented. unsplash.com now fronts both its search HTML and its /napi JSON
+        with an Anubis proof-of-work bot challenge (plain fetch and headless Chromium both get HTTP 401), and the
+        old source.unsplash.com redirect service is discontinued. Photos were therefore scraped from the rendered
+        search results in a headed Playwright Chromium session. UNSPLASH_ACCESS_KEY was checked for and is not set
+        in this environment; the script prefers the official api.unsplash.com endpoint when it is present.
+      validation: >
+        Every candidate was normalised to https://images.unsplash.com/photo-<id>?w=1200&q=80 and fetched over HTTP;
+        only HTTP 200 with an image/* content-type was accepted. 104/104 planned URLs passed. Photos were deduped
+        globally, so all 103 written images are unique and no sibling pages share one.
+    scripts:
+      - "docs/ai/demos/amkor/_tmp-read-amkor-images.mjs � bulk-reads current image/Detail from Edge"
+      - "docs/ai/demos/amkor/_tmp-amkor-image-queries.mjs � page -> search query + alt text map"
+      - "docs/ai/demos/amkor/_tmp-unsplash-fetch-pools.mjs � headed Playwright scrape of Unsplash search results (cached)"
+      - "docs/ai/demos/amkor/_tmp-unsplash-source.mjs � validates, dedupes and emits the page -> image plan"
+      - "docs/ai/demos/amkor/_tmp-amkor-build-writes.mjs � renders the Sitecore image XML field values"
+      - "Data artefacts: _tmp-amkor-page-ids.json, _tmp-amkor-pages.json, _tmp-unsplash-pools.json, _tmp-amkor-image-plan.json, _tmp-amkor-image-writes.json"
+      - "All throwaway `_tmp-` scripts; not imported by app code."
+    counts:
+      pagesFound: 117
+      attemptedWrite: 104
+      updated: 103
+      skippedExistingImage: 13
+      skippedNoImageField: 1
+      failed: 0
+    queryMapping:
+      note: "Section parents and their children share a query; dedupe guarantees distinct photos per sibling."
+      examples:
+        - { page: "/", query: "semiconductor cleanroom factory", alt: "Semiconductor manufacturing cleanroom", result: "SKIPPED � Home Page template has no image field" }
+        - { page: "/Packaging", query: "microchip macro", alt: "Close-up of an integrated circuit package" }
+        - { page: "/Packaging/Wafer-Level/WLCSP", query: "silicon wafer", alt: "WLCSP � silicon wafer used in wafer-level packaging" }
+        - { page: "/Packaging/Power/TOLL", query: "electrical components", alt: "TOLL � power semiconductor components" }
+        - { page: "/Technology/Flip-Chip", query: "semiconductor technology", alt: "Flip Chip � advanced semiconductor technology" }
+        - { page: "/Test-Services", query: "laboratory electronics", alt: "Electronics test and measurement laboratory" }
+        - { page: "/Quality", query: "precision inspection microscope", alt: "Precision inspection under a microscope" }
+        - { page: "/Applications/Automotive", query: "automotive electronics dashboard", alt: "Automotive electronics and dashboard technology" }
+        - { page: "/About-Us/Corporate-Responsibility", query: "solar panels sustainability", alt: "Renewable energy and sustainability" }
+        - { page: "/About-Us/Leadership", query: "boardroom meeting", alt: "Leadership team in a boardroom" }
+        - { page: "/About-Us/Careers/Japan", query: "tokyo skyline", alt: "Tokyo skyline, Japan" }
+        - { page: "/About-Us/News/Press-Releases/Amkor-Technology-Announces-Strategic-Partnership-with-NVIDIA", query: "gpu data center hardware", alt: "AI accelerator hardware in a data center" }
+    skipped:
+      reason: "Already held a real, non-placeholder Amkor asset � left untouched."
+      blogPosts:
+        - "/About-Us/News/Blog/Amkor-Semiconductor-Educator-Bootcamp"
+        - "/About-Us/News/Blog/Amkor-2026-Investor-Day-Nasdaq"
+        - "/About-Us/News/Blog/Amkor-Peoria-Number-One-Deal-North-America"
+        - "/About-Us/News/Blog/Amkor-Receives-Kioxia-Best-Partner-Award"
+        - "/About-Us/News/Blog/Arizona-Next-Chip-Leaders-CUSD-SEMI-CTE"
+        - "/About-Us/News/Blog/Building-Talent-Pipeline-West-MEC-Students"
+        - "/About-Us/News/Blog/Amkor-Vietnam-Industry-Award-SEMIExpo-2025"
+        - "/About-Us/News/Blog/Amkor-ECTC-2026-Advanced-Packaging"
+        - "/About-Us/News/Blog/Arizona-Korea-Semiconductor-Delegation"
+        - "/About-Us/News/Blog/Amkor-Earns-Environmental-Leadership-CDP"
+      eventPages:
+        - "/About-Us/News/Events/ISIG-Executive-Summit-Europe (ISIG logo)"
+        - "/About-Us/News/Events/ISIG-Executive-Summit-Korea (ISIG logo)"
+        - "/About-Us/News/Events/Smart-Semiconductor-Academy (academy logo)"
+      other:
+        - { path: "/", itemId: "{BB13BF5A-B102-4FE8-B410-63E3DA7AA448}", reason: "Home Page template {B6DAFB99-CB07-4927-83EA-56F5A0631A0E} has no `image` field � write returned 'Cannot find a field with the name image'" }
+        - { path: "/About-Us/Events", itemId: "{2654163D-7840-4EA1-AAFF-AB12FD524787}", reason: "known-bad item, not returned by get_all_pages_by_site � not attempted" }
+    codeChanges: "none"
+    configVerified:
+      - "next.config.ts images.remotePatterns already allow-lists images.unsplash.com (/**) � unchanged"
+      - "src/lib/sitecore-image-loader.ts shouldBypassOptimizer() already returns true for images.unsplash.com � unchanged"
+    verification:
+      passed:
+        - "update_fields_on_item echoed the new `image` value in updatedFields for all 103 successful writes"
+        - "Independent read-back via get_content_item_by_id on /Home (children: About Us, Applications, Packaging, Quality, Services, Technology, Test Services) � all seven show the new Unsplash XML"
+        - "Independent read-back via get_content_item_by_id on /Packaging/Power/TOLL � new Unsplash XML present, `&amp;` round-trips correctly"
+        - "104/104 candidate URLs returned HTTP 200 with an image/* content-type before being written"
+      notes:
+        - "No page showed a silent write: every echoed value matched what was sent."
+        - "Edge still serves the old placeholder for these pages until they are published."
+    pendingManual:
+      - "Publish /sitecore/content/amkor/amkor/Home (and subtree) so Experience Edge delivers the new images � all 103 items are in Draft workflow state"
+      - "Decide whether /Home needs a hero image; its Home Page template would need an image field added first"
+
+  - name: "amkor-services-page-withimage-variant-apply"
+    kind: "presentation-variant-apply"
+    category: "Layout"
+    status: "complete"
+    createdAt: "2026-08-31T19:20:00Z"
+    updatedAt: "2026-08-31T19:35:00Z"
+    siteName: "amkor"
+    siteCollection: "amkor"
+    component: "ArticleContent"
+    renderingId: "{B1136CF1-94BE-468C-B78D-9BE212AF5428}"
+    notes: >
+      Switched the ArticleContent rendering variant from Default (implicit � FieldNames was absent)
+      to WithImage {AA41D913-0CFD-44C6-92E7-52C3D1D99599} on every Services Page
+      {B2B918C3-ACDA-433F-A11B-718466493AEC} item under /sitecore/content/amkor/amkor/Home.
+      Content-only operation: no repo files were changed. Page `image` field VALUES were not touched
+      (owned by amkor-page-image-unsplash-backfill). The variant is carried in the FieldNames
+      RENDERING PARAMETER inside the page's __Final Renderings XML, written with
+      update_fields_on_item. set_component_datasource cannot do this � its `variantId` argument is a
+      PERSONALIZATION variant and rejects a Headless Variant id.
+    method:
+      tool: "update_fields_on_item"
+      field: "__Final Renderings"
+      sParWritten: "DynamicPlaceholderId=1&amp;FieldNames=%7bAA41D913-0CFD-44C6-92E7-52C3D1D99599%7d"
+      sParDecoded: "DynamicPlaceholderId=1&FieldNames={AA41D913-0CFD-44C6-92E7-52C3D1D99599}"
+      encodingNotes: >
+        s:par is a URL-encoded query string; the whole attribute value is then XML-attribute-encoded.
+        So the `&` separator is written as `&amp;` and the GUID braces as %7b / %7d. The pre-existing
+        DynamicPlaceholderId=1 parameter was preserved on every page � nothing was clobbered.
+        GridParameters, Styles, RenderingIdentifier and CSSStyles were null before and remain null.
+      layoutXml: >
+        <r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}"><r uid="{<per-page existing uid>}" s:ds=""
+        s:id="{B1136CF1-94BE-468C-B78D-9BE212AF5428}"
+        s:par="DynamicPlaceholderId=1&amp;FieldNames=%7bAA41D913-0CFD-44C6-92E7-52C3D1D99599%7d"
+        s:ph="headless-main" /></d></r>
+      uidHandling: >
+        Each page's EXISTING rendering uid was read first via get_components_on_page and re-emitted
+        verbatim. No uid was regenerated, so Pages/personalization references remain intact.
+    variantApplied:
+      name: "WithImage"
+      itemId: "{AA41D913-0CFD-44C6-92E7-52C3D1D99599}"
+      path: "/sitecore/content/amkor/amkor/Presentation/Headless Variants/ArticleContent/WithImage"
+      previousVariant: "Default {0031EFBB-7035-4F6A-8CB5-84CE36C79540} (implicit � FieldNames parameter absent)"
+    counts:
+      pagesInSite: 118
+      servicesPageTargets: 115
+      attempted: 115
+      succeeded: 115
+      skipped: 3
+      failed: 0
+    scope:
+      sections:
+        - "Home/About Us (+ Careers 12 country pages, Customer Center + 3 children, Company History, Corporate Responsibility, Leadership, Memberships and Partnerships, Mission, Amkor Overview, Smart Manufacturing I40, Contact Us)"
+        - "Home/About Us/News/Blog leaf pages (11), Press Releases landing + 3 leaves, Events landing + 3 leaves"
+        - "Home/Applications (+ 8 children)"
+        - "Home/Packaging (+ Laminate, Leadframe, Power, Wafer Level, Memory, MEMS and Sensors, System in Package SiP and all leaf package pages incl. PSMC)"
+        - "Home/Services (+ Wafer Bumping, Package Characterization, Design Services)"
+        - "Home/Technology (+ 13 children)"
+        - "Home/Quality"
+        - "Home/Test Services (pilot)"
+    skipped:
+      - itemId: "{BB13BF5A-B102-4FE8-B410-63E3DA7AA448}"
+        path: "/sitecore/content/amkor/amkor/Home"
+        reason: "Home Page template {B6DAFB99-CB07-4927-83EA-56F5A0631A0E}, not a Services Page � out of scope"
+      - itemId: "{BE42D3F0-C644-4ADE-9CEB-E72208ACFD8E}"
+        path: "/sitecore/content/amkor/amkor/Home/About Us/News"
+        reason: >
+          Services Page template but presentation does NOT match the expected shape � carries
+          NewsListing {29419ABC-5E18-40B5-A113-26D89297D1A5} with its own FieldNames
+          {E8F1E7B7-8C6F-4953-8843-33DABDD94F47} and GridParameters, no ArticleContent. Not written,
+          per the do-not-clobber-custom-presentation guardrail.
+      - itemId: "{893BBB60-2B8C-4A97-BB8E-541E744F2B33}"
+        path: "/sitecore/content/amkor/amkor/Home/About Us/News/Blog"
+        reason: >
+          Services Page template but carries BlogListing {8278F36C-8492-4641-A401-9C19AA69D08A} with
+          datasource {BCA09BD3-B05F-4916-B1BD-EB9D4C5FB29C}, FieldNames
+          {17BE22E6-363D-476D-B22D-077790392C67} and GridParameters � no ArticleContent. Also under
+          concurrent edit by another agent. Not written.
+    manifestCorrections:
+      - >
+        amkor-services-page-presentation-copy records its source page as
+        "{7B4C11A5-F4EC-451B-A23B-E49127B25467} = /sitecore/content/amkor/amkor/Home/About Us".
+        That is WRONG. {7B4C11A5-...} is actually the Page Branch item
+        /sitecore/content/amkor/amkor/Presentation/Page Branches/News/$name (Services Page template,
+        one ArticleContent, DynamicPlaceholderId=1, FieldNames null). The real /About-Us page is
+        {86E9AAED-39B1-4E89-9E41-9C3E778F8E1D}, which was updated in this pass (uid 1a2b3c4d-0002-...).
+      - >
+        amkor-services-page-presentation-copy lists /Home/About Us/Events as
+        {2654163D-7840-4EA1-AAFF-AB12FD524787} and "unreadable � Site root not found". That id does not
+        appear in the live tree. The live Events landing page is
+        {931ADD10-6857-451F-ABF5-A9D14B1F1757}, it reads fine, and it was updated successfully here.
+        The earlier "problematic Events item" is therefore resolved / was a stale id.
+    verification:
+      checkedAt: "2026-08-31T19:35:00Z"
+      passed:
+        - "Pilot 1 � /Test-Services {C39BC746-...}: written, read back via get_components_on_page, FieldNames = {AA41D913-...}, DynamicPlaceholderId=1 preserved, uid 1a2b3c4d-0001-... unchanged, still exactly one ArticleContent on headless-main"
+        - "Pilot 2 � /About-Us {86E9AAED-...}: same read-back result; rendered at http://localhost:3000/About-Us?site=amkor and the served HTML contains data-variant=\"WithImage\", confirming the FieldNames GUID resolves to the WithImage named export in ArticleContent.tsx"
+        - "Image render proven end-to-end on /About-Us/News/Blog/Amkor-2029 (Sitecore DAM image) � <img> present under the WithImage layout"
+        - "Every one of the 115 target pages had its presentation READ before writing; all 115 matched the expected shape (single ArticleContent, headless-main, no datasource, DynamicPlaceholderId=1, FieldNames null)"
+        - >
+          Final read-back sample of 19 pages spread across all write batches � all show
+          FieldNames={AA41D913-0CFD-44C6-92E7-52C3D1D99599} with DynamicPlaceholderId=1 and the
+          original uid: /About-Us, /Test-Services, /About-Us/News/Blog/Amkor-2029,
+          /About-Us/Careers/Vietnam, /About-Us/Mission, /Technology, /About-Us/Customer-Center,
+          /About-Us/Customer-Center/Document-Library, /Quality, /Services/Wafer-Bumping,
+          /Applications, /Packaging/System-in-Package-SiP, /Packaging/Leadframe/MicroLeadFrame,
+          /Packaging/Power, /Packaging/Wafer-Level, /Packaging,
+          /About-Us/News/Blog/Amkor-Semiconductor-Educator-Bootcamp, /Packaging/Power/PSMC,
+          /About-Us/News/Events
+        - "No page reported a write error, so there were no error-driven re-reads to perform"
+        - "No other site was touched � progressive/pkm ArticleContent variants and its own Headless Variants container {5CAB3B17-8A72-46E7-A6E3-FBF6DA968DD7} were not read or written"
+      failed: []
+      knownLimitations:
+        - >
+          Pages whose `image` field holds EXTERNAL Image XML (the amkormarcomexternal.blob.core.windows.net
+          URLs on most blog/event items) still render without a visible image on the locally-served
+          Edge content, because Sitecore Edge returns "image":{"value":{}} for that shape. The
+          WithImage variant IS applied and honoured on those pages; the missing image is a field-value
+          / Edge serialization issue, not a presentation issue. Pages with Sitecore DAM or Unsplash
+          values render the image correctly.
+        - >
+          The local dev server serves PUBLISHED Edge content, so unpublished CM layout changes are not
+          visible at localhost until the pages are published. Pilot verification relied on pages whose
+          content was already published.
+    pendingManual:
+      - "PUBLISH the 115 updated pages (/sitecore/content/amkor/amkor/Home and subtree) so Experience Edge delivers the WithImage variant � writes bumped most pages to a new version and they sit in Draft"
+      - "Set the variant in the Pages UI for the two skipped listing pages if ArticleContent is ever wanted there: /About-Us/News (NewsListing) and /About-Us/News/Blog (BlogListing)"
+      - >
+        Consider setting FieldNames=WithImage on the Page Branch
+        /Presentation/Page Branches/News/$name {7B4C11A5-...} so NEW pages created from that branch
+        inherit WithImage instead of Default. Left untouched here � it is outside /Home and therefore
+        outside this task's scope.
+      - "Migrate the external-blob `image` values to Sitecore DAM (or fix Edge handling) so those pages actually show an image under WithImage"
+      - "Fix the two stale ids in amkor-services-page-presentation-copy (see manifestCorrections above)"
+
+# Shared homepage kit (click-click-launch Global Elements) � 2026-08-25
+# Do not treat these as FMC/progressive items. HeaderST Default was not restyled.
+homepageKit:
+  status: "partial"
+  createdAt: "2026-08-25T01:00:00Z"
+  updatedAt: "2026-08-25T03:30:00Z"
+  projectTemplatesRoot: "/sitecore/templates/Project/click-click-launch/Components/Global Elements"
+  renderingsRoot: "/sitecore/layout/Renderings/Project/click-click-launch/Global Elements"
+  availableRenderingsGroup: "Homepage Kit"
+  availableRenderingsValue: "{916AD4EA-646B-4F69-BA9D-594CEA0D59C7}|{FD183076-E346-49B5-A3F1-22D2E45B4A63}|{1745BCF4-CD31-4182-A3DF-8874E979DD60}|{0B67AE92-7387-4EE5-8A97-217AE6BDE765}|{B644D425-E162-45A9-A59E-FCFE3F14B90D}|{8792FF9C-9B69-4F56-A0CD-B5EC8F2647BD}"
+  sitesWired:
+    - { name: "lcmc", homeId: "{194F8944-6400-40DD-BDCB-931686A42643}", arItemId: "{72E55B4F-12C7-4D15-9E7C-71F88370D501}" }
+    - { name: "amkor", homeId: "{BB13BF5A-B102-4FE8-B410-63E3DA7AA448}", arItemId: "{E72EC5E7-E264-404A-8137-004BEC46E7CE}" }
+    - { name: "americasmart", homeId: "{3BD35058-A302-42FE-98A6-7ECA10407DE2}", arItemId: "{99FD24DA-DBEA-4824-9AA9-35C32D4EE44C}" }
+    - { name: "atlanta-apparel", homeId: "{011D81AC-F13E-4DC1-A142-88119D17A7B5}", arItemId: "{4AA4093B-EE42-421B-BF5A-FEA56CEF911A}" }
+  notes:
+    - "2026-08-25: Shared kit created under click-click-launch (not client-named). Wired onto four Homes. Variants must be set in Pages. Images empty."
+    - "2026-08-25: Homepage Kit templates/renderings and sample datasources already workflow:null (same as Home). Not field-cleared. No executeWorkflowCommand on Marketer MCP."
+    - "2026-08-25: HeroQuickLinks added (LCMC-style search hero + overlapping icon CTAs). Rendering {8792FF9C-9B69-4F56-A0CD-B5EC8F2647BD}."
+  components:
+    - name: "HeroQuickLinks"
+      kind: "list"
+      category: "Global Elements"
+      status: "complete"
+      react:
+        filePath: "src/components/uiim/global-elements/HeroQuickLinks.tsx"
+        variants: ["Default"]
+        notes: "2026-08-25: Removed on-canvas SpecialtyOptions editor panel from Pages; authors edit the field in the right-hand data panel. Pages editing chrome � empty/invalid BackgroundImage was rendering a giant broken-image placeholder over the headline because NextImage's EE wrapper ignores absolute on the img. Background is now in an overflow-hidden absolute frame that sizes chrome/img/svg. Placeholders stay sr-only. Quick-link icons clipped to 48px. BackgroundImage on LCMC Home Hero still reports invalid XML in Pages � reset that field in Content Editor and re-pick media (MCP was unavailable)."
+      templates:
+        datasource: { name: "HeroQuickLinks", itemId: "{CFF35DC3-7968-4ADB-B146-417CB0AA6BBB}", standardValues: "{9E6545BD-7901-436A-A025-D99DE3A9AC0D}" }
+        child: { name: "HeroQuickLinkItem", itemId: "{FE0A7F7E-7242-4126-B07F-2A6FA7BD4807}" }
+        folder: { name: "HeroQuickLinks Folder", itemId: "{E1E5CD81-25A7-4149-AD89-50F4707D63FC}" }
+        renderingParams: { itemId: "{FA743BF1-9160-4CBA-832E-456BE90C36D2}" }
+      rendering: { itemId: "{8792FF9C-9B69-4F56-A0CD-B5EC8F2647BD}", path: "/sitecore/layout/Renderings/Project/click-click-launch/Global Elements/HeroQuickLinks" }
+      exampleDatasource: { itemId: "{6E0C9D38-0C38-471A-BE3C-B7FAD2AAEA06}", path: "/sitecore/content/lcmc/lcmc/Data/Hero Quick Links/LCMC Home Hero" }
+    - name: "IconLinkBar"
+      kind: "list"
+      category: "Global Elements"
+      status: "complete"
+      react:
+        filePath: "src/components/uiim/global-elements/IconLinkBar.tsx"
+        variants: ["Default", "DarkBand", "CircleGrid"]
+        notes: "2026-08-25: item row switched from a fixed-column grid to flex-wrap + justify-center. The grid sized every column even when empty, so a row with fewer items than columns (e.g. 4 items in CircleGrid's 5 columns) was pushed left while the title, description, and search button stayed centered. Items now carry explicit widths (2-up on mobile, sm:w-52 md:w-60 default/dark, sm:w-44 md:w-48 circle) so any count stays centered."
+      templates:
+        datasource: { name: "IconLinkBar", itemId: "{5AD908DA-DEB0-4B6F-8A3D-00FDFC802915}", standardValues: "{409BB427-78DC-4D52-9686-FE5FC50BED0B}" }
+        child: { name: "IconLinkItem", itemId: "{3D6D2E42-D566-4A98-ABF3-F1487BC2E603}" }
+        folder: { name: "IconLinkBar Folder", itemId: "{0B6BE34E-726E-4B50-8CBF-C7A86106C52D}" }
+        renderingParams: { itemId: "{0839B4BD-6F76-453F-94DA-C32199690BD4}" }
+      rendering: { itemId: "{916AD4EA-646B-4F69-BA9D-594CEA0D59C7}", path: "/sitecore/layout/Renderings/Project/click-click-launch/Global Elements/IconLinkBar" }
+    - name: "LinkColumnsBand"
+      kind: "list"
+      category: "Global Elements"
+      status: "complete"
+      react:
+        filePath: "src/components/uiim/global-elements/LinkColumnsBand.tsx"
+        variants: ["Default", "TwoColumn"]
+      templates:
+        datasource: { name: "LinkColumnsBand", itemId: "{F382ED37-1016-4449-BC8F-E46499A451BC}", standardValues: "{4B4F0A40-3ADD-400C-BAF2-E51FD10BFA34}" }
+        child: { name: "LinkColumnsItem", itemId: "{8A768EF4-DE41-4E4A-B7B4-0D3665AB0407}" }
+        folder: { name: "LinkColumnsBand Folder", itemId: "{EEAEE4F5-79BA-4FAF-945D-09AC441654F7}" }
+        renderingParams: { itemId: "{76389824-CC06-447A-ABF9-1F3C6A54EC38}" }
+      rendering: { itemId: "{FD183076-E346-49B5-A3F1-22D2E45B4A63}", path: "/sitecore/layout/Renderings/Project/click-click-launch/Global Elements/LinkColumnsBand" }
+    - name: "SplitFeature"
+      kind: "simple"
+      category: "Global Elements"
+      status: "complete"
+      react:
+        filePath: "src/components/uiim/global-elements/SplitFeature.tsx"
+        variants: ["Default", "ImageLeft"]
+      templates:
+        datasource: { name: "SplitFeature", itemId: "{70780390-A3EB-478D-B5DE-062BA3C9E897}", standardValues: "{FB71B394-76BC-4CDA-ABBE-9A40AE24E9F3}" }
+        folder: { name: "SplitFeature Folder", itemId: "{DA07889E-03D4-4FD7-A9EA-73D4B987C623}" }
+        renderingParams: { itemId: "{52C2A8BB-4C8B-4F54-9892-BF81C0377505}" }
+      rendering: { itemId: "{1745BCF4-CD31-4182-A3DF-8874E979DD60}", path: "/sitecore/layout/Renderings/Project/click-click-launch/Global Elements/SplitFeature" }
+    - name: "ButtonRow"
+      kind: "list"
+      category: "Global Elements"
+      status: "complete"
+      react:
+        filePath: "src/components/uiim/global-elements/ButtonRow.tsx"
+        variants: ["Default", "DarkGhost"]
+      templates:
+        datasource: { name: "ButtonRow", itemId: "{183C1B07-EAEC-48FE-9D2F-B94A4C630960}", standardValues: "{94FDDAEB-081D-4964-81FB-4B2A96309254}" }
+        child: { name: "ButtonRowItem", itemId: "{EF69B5F3-3E95-4FF1-8A42-EB5A95F43F0E}" }
+        folder: { name: "ButtonRow Folder", itemId: "{360C592A-81D3-41FD-85B9-8BD71DED2711}" }
+        renderingParams: { itemId: "{83CB0F59-9ABB-49EC-A6F4-C0707621E7B7}" }
+      rendering: { itemId: "{0B67AE92-7387-4EE5-8A97-217AE6BDE765}", path: "/sitecore/layout/Renderings/Project/click-click-launch/Global Elements/ButtonRow" }
+    - name: "ListingBlock"
+      kind: "list"
+      category: "Global Elements"
+      status: "complete"
+      react:
+        filePath: "src/components/uiim/global-elements/ListingBlock.tsx"
+        variants: ["Default", "TextList", "Split"]
+      templates:
+        datasource: { name: "ListingBlock", itemId: "{4A77FD9B-93B9-4AB2-91F7-936173963913}", standardValues: "{0ED2B36E-A8CA-4871-AAAE-3A87729F1C42}" }
+        child: { name: "ListingItem", itemId: "{13C565FE-09C3-4994-8B5A-580DA061BE0C}" }
+        folder: { name: "ListingBlock Folder", itemId: "{F865AD91-D7B8-4499-A658-60D90F08F4E8}" }
+        renderingParams: { itemId: "{F570D6F0-BC7E-4720-A681-0B19EBE0EF65}" }
+      rendering: { itemId: "{B644D425-E162-45A9-A59E-FCFE3F14B90D}", path: "/sitecore/layout/Renderings/Project/click-click-launch/Global Elements/ListingBlock" }
+  verification:
+    checkedAt: "2026-08-25T03:30:00Z"
+    passed:
+      - "Five React components + Jest tests (17 passed)"
+      - "Templates, folder templates, RP templates, and JSON renderings created under click-click-launch"
+      - "Homepage Kit Available Renderings group created on lcmc, amkor, americasmart, atlanta-apparel"
+      - "Headless Variants containers + definitions created on all four sites (LCMC full set; others have the variants they use)"
+      - "Data folders created on all four sites"
+      - "Components added to all four Home pages (headless-main) and authored datasources assigned where instance IDs were known"
+      - "sitecore-tools:generate-map registered IconLinkBar, LinkColumnsBand, SplitFeature, ButtonRow, ListingBlock"
+    pendingManual:
+      - "Datasource Template / Datasource Location / __Standard values / __Masters / Homepage Kit Renderings (silent-write)"
+      - "Set FieldNames variants in Pages (see homepage-kit-variant-checklist.md)"
+      - "Upload DAM images"
+      - "Assign remaining Amkor ListingBlock datasources (Events, Press) and extra Atlanta SplitFeature datasources in Pages"
+      - "Add ImageBanner (Amkor map) and AccordionBlock (AmericasMart FAQ) if authors want those existing components on Home"
+      - "Publish Home + Data + renderings for Edge"
+
 workflowApproval:
   siteCollection: "amkor"
   siteName: "amkor"
@@ -9992,12 +10436,46 @@ workflowApproval:
     Batch workflow approval across manifest checklist (217 amkor-related IDs) plus site pages and
     structural roots (224 unique IDs). Items with __Workflow state set to Sample Workflow Approved
     verified via spot-check on HeroST and SimplePromo datasources (final=true, displayName=Approved).
-    IA Services Page items and presentation folders typically have no workflow field — skipped.
+    IA Services Page items and presentation folders typically have no workflow field � skipped.
     Stale manifest GUIDs (andmore/lcmc template copies) returned 404. Template items without
     __Workflow state returned 400. Did not execute Approved/Auto Publish workflow action or Edge publish.
   pendingManual:
     - "Publish Amkor content subtrees in Pages for Edge delivery (HeroST, MultiPromos, HeroCarousels, Locations, Header/Footer partial designs, etc.)"
-    - "Stale/deleted manifest IDs — remove or refresh: {06A429E2-A31F-40ED-AF05-AAC53F54401D}, {453D5D4E-D9C0-4B99-8099-CD6E66584D3F}, {5F8FF7C8-88D8-429F-ABE9-CDF92B89863A}, {61979ED4-3BAD-49C2-AF3D-0D725DF1884A}, {7C2EDB0E-035E-4A22-B069-F8242035EA9D}, {96A42097-34D6-465C-990D-B801882D7B27}, {D477F40A-6C82-40B2-AEAC-4F2F8DB5F03A}, {DFC20993-D8F0-44B4-BA5C-846540B4E0EC}, {E5B4577C-12CD-4196-AD2F-FE60E49B5567}, {FC928466-98E1-46E8-9842-5FE7DD44271D}"
+    - "Stale/deleted manifest IDs � remove or refresh: {06A429E2-A31F-40ED-AF05-AAC53F54401D}, {453D5D4E-D9C0-4B99-8099-CD6E66584D3F}, {5F8FF7C8-88D8-429F-ABE9-CDF92B89863A}, {61979ED4-3BAD-49C2-AF3D-0D725DF1884A}, {7C2EDB0E-035E-4A22-B069-F8242035EA9D}, {96A42097-34D6-465C-990D-B801882D7B27}, {D477F40A-6C82-40B2-AEAC-4F2F8DB5F03A}, {DFC20993-D8F0-44B4-BA5C-846540B4E0EC}, {E5B4577C-12CD-4196-AD2F-FE60E49B5567}, {FC928466-98E1-46E8-9842-5FE7DD44271D}"
     - "Template items without workflow field (not content): {25CF32E0-C2D1-4E72-8CB9-FDEB000BE0D7}, {69728677-52E5-4482-A415-94F0222799B8}, {A9919790-3389-4FC2-ABC8-24F73C847C8E}, {B2B918C3-ACDA-433F-A11B-718466493AEC}, {D77937AC-BAE4-4EB0-8D7E-69EC09D5BBFC}"
-    - "Dictionary leaf items and Media library assets not exhaustively tree-walked — approve/publish manually if workflow-enabled"
+    - "Dictionary leaf items and Media library assets not exhaustively tree-walked � approve/publish manually if workflow-enabled"
 
+
+externalImageRenderingVerdict:
+  checkedAt: "2026-08-31T19:20:00Z"
+  siteName: "amkor"
+  component: "ArticleContent"
+  variant: "WithImage {AA41D913-0CFD-44C6-92E7-52C3D1D99599}"
+  rendering: "{B1136CF1-94BE-468C-B78D-9BE212AF5428}"
+  verdict: >
+    Experience Edge returns image {value:{}} in the layout response for page (route) Image fields
+    whose value is external-URL XML, and the raw XML string is NOT present anywhere in the layout
+    payload. Client-side hydration therefore had nothing to work with: hydrateExternalImageField
+    was correctly wired into the WithImage path but could never recover a src. Claim B (no image
+    rendered) was right about the symptom; Claim A was wrong about the cause (the raw value is not
+    returned for route fields). Migration to DAM was NOT required.
+  evidence:
+    - "Sitecore /Home/Packaging image = <image src=\"https://images.unsplash.com/photo-1760842543713-...?w=1200&amp;q=80\" alt=\"...\" />"
+    - "Pre-fix RSC payload at http://localhost:3000/Packaging?site=amkor contained \"image\":{\"value\":{}}"
+    - "Pre-fix served HTML had data-variant=\"WithImage\" but no external <img>"
+    - "Control /About-Us/News/Blog/Amkor-2029 (Sitecore DAM image) rendered before and after"
+  fix:
+    - "src/lib/route-image-from-edge.ts - fetchRouteImageXml / applyExternalRouteImage use the Content API field(name:\"image\"){value} resolver (same workaround as location-footprint-from-edge and the NewsListing ComponentQuery) to recover the raw XML"
+    - "src/app/[site]/[locale]/[[...path]]/page.tsx - awaits applyExternalRouteImage(page, locale); additive only, no-op when the field is already populated or the lookup fails"
+    - "src/lib/sitecore-image-field.ts - decodeXmlEntities applied to src/alt attribute extraction so &amp; in query strings resolves correctly"
+  verification:
+    localDev: >
+      Verified rendered <img> with the expected external URL on /Packaging, /Quality, /Technology,
+      /Test-Services, /Applications/Automotive (Unsplash) and on six blog detail pages using
+      amkormarcomexternal.blob.core.windows.net. DAM control unchanged.
+    tests: "npx jest src/__tests__/article-content - 28 passed, 1 pre-existing kmpage failure (unchanged)"
+    lint: "npm run lint - 0 errors, 12 pre-existing warnings"
+    editingHost: "NOT verified - the deployed Default editing host runs an older build and needs a redeploy before Sitecore Pages shows these images"
+  pendingManual:
+    - "Redeploy the Default editing host so Sitecore Pages picks up the route-image fix"
+    - "Publish amkor content to Edge so published delivery reflects the backfilled image values"

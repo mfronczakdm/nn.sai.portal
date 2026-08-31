@@ -1,7 +1,11 @@
 import type { Field, ImageField, Page, RichTextField } from '@sitecore-content-sdk/nextjs';
 
 import type { JsonWrappedImageField } from '@/lib/sitecore-image-field';
-import { unwrapImageField } from '@/lib/sitecore-image-field';
+import {
+  extractImageSrc,
+  hydrateExternalImageField,
+  unwrapImageField,
+} from '@/lib/sitecore-image-field';
 
 import type { ArticleContentFields, ArticleContentProps } from './article-content.props';
 
@@ -33,7 +37,12 @@ function hasText(field?: { value?: string | null }) {
 }
 
 function unwrapCell(
-  cell: Field<string> | RichTextField | ImageField | { jsonValue?: Field<string> | RichTextField | ImageField } | undefined,
+  cell:
+    | Field<string>
+    | RichTextField
+    | ImageField
+    | { jsonValue?: Field<string> | RichTextField | ImageField }
+    | undefined
 ): Field<string> | RichTextField | ImageField | undefined {
   if (!cell) return undefined;
   if (typeof cell === 'object' && 'jsonValue' in cell && cell.jsonValue !== undefined) {
@@ -45,7 +54,7 @@ function unwrapCell(
 function pickResolvedField(
   bag: Record<string, unknown> | undefined,
   key: keyof Omit<ArticleContentFields, 'image'>,
-  requireNonEmpty: boolean,
+  requireNonEmpty: boolean
 ): Field<string> | RichTextField | undefined {
   if (!bag) return undefined;
   for (const name of MIGRATION_ALIASES[key]) {
@@ -66,20 +75,21 @@ function pickResolvedField(
 
 function pickResolvedImage(
   bag: Record<string, unknown> | undefined,
-  requireSrc: boolean,
+  requireSrc: boolean
 ): ImageField | undefined {
   if (!bag) return undefined;
   for (const name of IMAGE_ALIASES) {
     const raw = bag[name];
-    const field = unwrapImageField(
+    const unwrapped = unwrapImageField(
       unwrapCell(raw as ImageField | JsonWrappedImageField | undefined) as
         | ImageField
         | JsonWrappedImageField
-        | undefined,
+        | undefined
     );
-    if (!field) continue;
+    if (!unwrapped) continue;
+    const field = hydrateExternalImageField(unwrapped as ImageField | string) ?? unwrapped;
     if (requireSrc) {
-      if (field.value?.src) return field;
+      if (extractImageSrc(field)) return field;
     } else {
       return field;
     }
@@ -93,7 +103,7 @@ type TextFieldKey = (typeof TEXT_FIELD_KEYS)[number];
 function setTextField(
   out: Partial<ArticleContentFields>,
   key: TextFieldKey,
-  field: Field<string> | RichTextField,
+  field: Field<string> | RichTextField
 ) {
   (out as Record<TextFieldKey, Field<string> | RichTextField | undefined>)[key] = field;
 }
@@ -118,7 +128,9 @@ function flatFieldsWithoutData(fields: unknown): Record<string, unknown> {
   return obj;
 }
 
-function hasLayoutData(fields: unknown): fields is { data: { datasource?: unknown; externalFields?: unknown } } {
+function hasLayoutData(
+  fields: unknown
+): fields is { data: { datasource?: unknown; externalFields?: unknown } } {
   if (typeof fields !== 'object' || fields === null || !('data' in fields)) return false;
   const data = (fields as { data: unknown }).data;
   return typeof data === 'object' && data !== null;
@@ -148,7 +160,10 @@ function readRouteFields(page: Page): Partial<ArticleContentFields> {
  *
  * Each canonical field also accepts legacy keys (e.g. `Title` → `pageTitle`) when reading from bags.
  */
-export function mergeArticleContentFields(props: ArticleContentProps, isEditing: boolean): ArticleContentFields {
+export function mergeArticleContentFields(
+  props: ArticleContentProps,
+  isEditing: boolean
+): ArticleContentFields {
   const { fields, externalFields, page } = props;
   const pageFromProps = externalFields || {};
 

@@ -4,18 +4,16 @@ import type React from 'react';
 import { useMemo, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import {
-  RichText as ContentSdkRichText,
-  Text,
-  useSitecore,
-} from '@sitecore-content-sdk/nextjs';
+import { RichText as ContentSdkRichText, Text, useSitecore } from '@sitecore-content-sdk/nextjs';
 import { ChevronRight, Newspaper, Search, UserRound, X } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { extractImageAlt, extractImageSrc } from '@/lib/sitecore-image-field';
 import { cn } from '@/lib/utils';
 import { NoDataFallback } from '@/utils/NoDataFallback';
 
+import { matchFacets, parseFacetConfig, type BlogFacetRule } from './blog-listing.facets';
 import type { BlogListingBlog, BlogListingProps } from './blog-listing.props';
 import {
   blogImageFallback,
@@ -24,6 +22,9 @@ import {
   type BlogSpecialty,
   type RelatedLawyer,
 } from './blog-listing.taxonomy';
+
+const LEGACY_FACET_LABEL = 'Specialties';
+const LEGACY_SEARCH_PLACEHOLDER = 'Search by topic, specialty, or lawyer (e.g. sanctions, Asay)';
 
 /** Shared with BioListing / MultiPromo card hover. */
 const hoverSurfaceClassName =
@@ -64,29 +65,16 @@ function blogSummary(blog: BlogListingBlog): string {
   return stripHtml(raw);
 }
 
-/** Pull a usable URL from Sitecore Image jsonValue (media, DAM, or raw XML/external). */
+/**
+ * Edge returns an empty `jsonValue` for Image fields holding external URLs, so the raw
+ * field `value` XML is the fallback source of truth.
+ */
 function sitecoreImageSrc(image?: BlogListingBlog['image']): string {
-  const raw = image?.jsonValue as
-    | {
-        value?:
-          | string
-          | {
-              src?: string;
-              href?: string;
-              url?: string;
-            };
-      }
-    | undefined;
-  const value = raw?.value;
-  if (!value) return '';
-  if (typeof value === 'string') {
-    const fromAttr = value.match(/\bsrc=["']([^"']+)["']/i)?.[1];
-    if (fromAttr) return fromAttr.trim();
-    if (/^https?:\/\//i.test(value.trim())) return value.trim();
-    return '';
-  }
-  const src = (value.src || value.href || value.url || '').trim();
-  return src;
+  return extractImageSrc(image?.jsonValue) || extractImageSrc(image?.value);
+}
+
+function sitecoreImageAlt(image?: BlogListingBlog['image']): string {
+  return extractImageAlt(image?.jsonValue) || extractImageAlt(image?.value);
 }
 
 type ResolvedBlog = {
@@ -97,26 +85,35 @@ type ResolvedBlog = {
   href: string;
   imageSrc: string;
   imageAlt: string;
-  specialties: BlogSpecialty[];
+  specialties: string[];
   lawyers: RelatedLawyer[];
   keywords: string[];
   searchText: string;
 };
 
-function resolveBlog(blog: BlogListingBlog): ResolvedBlog {
+function resolveBlog(blog: BlogListingBlog, facetRules: BlogFacetRule[]): ResolvedBlog {
   const title = blogTitle(blog);
   const summary = blogSummary(blog);
-  const meta = resolveBlogTopicMeta(blog.name, [title, summary, blog.name || ''].join(' '));
+  const haystack = [title, summary, blog.name || ''].join(' ');
+  const configured = facetRules.length > 0;
+  const meta = configured
+    ? {
+        specialties: [] as BlogSpecialty[],
+        lawyers: [] as RelatedLawyer[],
+        keywords: [] as string[],
+      }
+    : resolveBlogTopicMeta(blog.name, haystack);
+  const specialties = configured ? matchFacets(facetRules, haystack) : meta.specialties;
   const lawyerNames = meta.lawyers.map((lawyer) => lawyer.name);
-  const fallback = blogImageFallback(blog.name);
+  const fallback = configured ? null : blogImageFallback(blog.name);
   const fromSitecore = sitecoreImageSrc(blog.image);
   const imageSrc = fromSitecore || fallback?.src || '';
-  const imageAlt = fallback?.alt || title;
+  const imageAlt = fallback?.alt || sitecoreImageAlt(blog.image) || title;
   const searchText = [
     title,
     summary,
     blog.name || '',
-    ...meta.specialties,
+    ...specialties,
     ...meta.keywords,
     ...lawyerNames,
   ]
@@ -131,7 +128,7 @@ function resolveBlog(blog: BlogListingBlog): ResolvedBlog {
     href: blogHref(blog),
     imageSrc,
     imageAlt,
-    specialties: meta.specialties,
+    specialties,
     lawyers: meta.lawyers,
     keywords: meta.keywords,
     searchText,
@@ -194,8 +191,8 @@ function SpecialtyTags({
   specialties,
   onSelect,
 }: {
-  specialties: BlogSpecialty[];
-  onSelect?: (specialty: BlogSpecialty) => void;
+  specialties: string[];
+  onSelect?: (specialty: string) => void;
 }) {
   if (!specialties.length) return null;
   return (
@@ -249,7 +246,7 @@ function RowItem({
   onSpecialty,
 }: {
   blog: ResolvedBlog;
-  onSpecialty: (specialty: BlogSpecialty) => void;
+  onSpecialty: (specialty: string) => void;
 }) {
   return (
     <li className={cn('group px-4 py-5 sm:px-6', hoverSurfaceClassName)}>
@@ -299,7 +296,7 @@ function CardItem({
   onSpecialty,
 }: {
   blog: ResolvedBlog;
-  onSpecialty: (specialty: BlogSpecialty) => void;
+  onSpecialty: (specialty: string) => void;
 }) {
   return (
     <li
@@ -354,10 +351,19 @@ function BlogListingView({ props, layout }: { props: BlogListingProps; layout: L
   const [specialty, setSpecialty] = useState('all');
   const [lawyer, setLawyer] = useState('all');
 
-  const resolved = useMemo(() => blogs.map(resolveBlog), [blogs]);
+  const facetRules = useMemo(
+    () => parseFacetConfig(fieldValue(datasource?.filterFacets)),
+    [datasource?.filterFacets]
+  );
+  const hasConfiguredFacets = facetRules.length > 0;
+
+  const resolved = useMemo(
+    () => blogs.map((blog) => resolveBlog(blog, facetRules)),
+    [blogs, facetRules]
+  );
 
   const specialtyOptions = useMemo(() => {
-    const set = new Set<BlogSpecialty>();
+    const set = new Set<string>();
     for (const blog of resolved) {
       for (const item of blog.specialties) set.add(item);
     }
@@ -382,7 +388,7 @@ function BlogListingView({ props, layout }: { props: BlogListingProps; layout: L
 
     return resolved
       .filter((blog) => {
-        if (specialty !== 'all' && !blog.specialties.includes(specialty as BlogSpecialty)) {
+        if (specialty !== 'all' && !blog.specialties.includes(specialty)) {
           return false;
         }
         if (lawyer !== 'all' && !blog.lawyers.some((item) => item.href === lawyer)) {
@@ -402,6 +408,10 @@ function BlogListingView({ props, layout }: { props: BlogListingProps; layout: L
   const emptyText = fieldValue(datasource.emptyResultsText) || 'No blogs match your filters.';
   const sectionId = params?.RenderingIdentifier || 'blog-listing';
   const hasActiveFilters = query.trim() !== '' || specialty !== 'all' || lawyer !== 'all';
+  const facetLabel = fieldValue(datasource.filterFacetLabel) || LEGACY_FACET_LABEL;
+  const allFacetsLabel = `All ${facetLabel.toLowerCase()}`;
+  const searchPlaceholder = fieldValue(datasource.searchPlaceholder) || LEGACY_SEARCH_PLACEHOLDER;
+  const showLawyerFilter = !hasConfiguredFacets;
 
   const clearFilters = () => {
     setQuery('');
@@ -409,7 +419,7 @@ function BlogListingView({ props, layout }: { props: BlogListingProps; layout: L
     setLawyer('all');
   };
 
-  const selectSpecialty = (value: BlogSpecialty) => {
+  const selectSpecialty = (value: string) => {
     setSpecialty(value);
   };
 
@@ -438,7 +448,14 @@ function BlogListingView({ props, layout }: { props: BlogListingProps; layout: L
 
         {showFilters && (
           <div className="border-border bg-muted/20 mb-8 rounded-2xl border p-4 sm:p-5">
-            <div className="grid gap-3 md:grid-cols-[1.4fr_1fr_1fr_auto]">
+            <div
+              className={cn(
+                'grid gap-3',
+                showLawyerFilter
+                  ? 'md:grid-cols-[1.4fr_1fr_1fr_auto]'
+                  : 'md:grid-cols-[1.6fr_1fr_auto]'
+              )}
+            >
               <label className="relative block">
                 <span className="sr-only">Search blogs</span>
                 <Search
@@ -448,19 +465,19 @@ function BlogListingView({ props, layout }: { props: BlogListingProps; layout: L
                 <Input
                   value={query}
                   onChange={(event) => setQuery(event.target.value)}
-                  placeholder="Search by topic, specialty, or lawyer (e.g. sanctions, Asay)"
+                  placeholder={searchPlaceholder}
                   className="bg-background h-11 pl-9"
                 />
               </label>
 
               <label className="block">
-                <span className="sr-only">Specialty</span>
+                <span className="sr-only">{facetLabel}</span>
                 <select
                   value={specialty}
                   onChange={(event) => setSpecialty(event.target.value)}
                   className="border-input bg-background focus-visible:ring-ring h-11 w-full rounded-md border px-3 text-sm outline-none focus-visible:ring-2"
                 >
-                  <option value="all">All specialties</option>
+                  <option value="all">{allFacetsLabel}</option>
                   {specialtyOptions.map((option) => (
                     <option key={option} value={option}>
                       {option}
@@ -469,21 +486,23 @@ function BlogListingView({ props, layout }: { props: BlogListingProps; layout: L
                 </select>
               </label>
 
-              <label className="block">
-                <span className="sr-only">Related lawyer</span>
-                <select
-                  value={lawyer}
-                  onChange={(event) => setLawyer(event.target.value)}
-                  className="border-input bg-background focus-visible:ring-ring h-11 w-full rounded-md border px-3 text-sm outline-none focus-visible:ring-2"
-                >
-                  <option value="all">All related lawyers</option>
-                  {lawyerOptions.map((option) => (
-                    <option key={option.id} value={option.id}>
-                      {option.label}
-                    </option>
-                  ))}
-                </select>
-              </label>
+              {showLawyerFilter && (
+                <label className="block">
+                  <span className="sr-only">Related lawyer</span>
+                  <select
+                    value={lawyer}
+                    onChange={(event) => setLawyer(event.target.value)}
+                    className="border-input bg-background focus-visible:ring-ring h-11 w-full rounded-md border px-3 text-sm outline-none focus-visible:ring-2"
+                  >
+                    <option value="all">All related lawyers</option>
+                    {lawyerOptions.map((option) => (
+                      <option key={option.id} value={option.id}>
+                        {option.label}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+              )}
 
               <Button
                 type="button"

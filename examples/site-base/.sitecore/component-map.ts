@@ -22,6 +22,7 @@ import * as BioDetail from 'src/components/uiim/lawyers/BioDetail';
 import * as biorelatedcontent from 'src/components/uiim/lawyers/bio-related-content';
 import * as biodetailprops from 'src/components/uiim/lawyers/bio-detail.props';
 import * as BlogListing from 'src/components/uiim/insights/BlogListing';
+import * as bloglistingfacets from 'src/components/uiim/insights/blog-listing.facets';
 import * as SplitFeature from 'src/components/uiim/global-elements/SplitFeature';
 import * as ListingBlock from 'src/components/uiim/global-elements/ListingBlock';
 import * as LinkColumnsBand from 'src/components/uiim/global-elements/LinkColumnsBand';
@@ -336,6 +337,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['bio-related-content', { ...biorelatedcontent }],
   ['bio-detail', { ...biodetailprops }],
   ['BlogListing', { ...BlogListing, componentType: 'client' }],
+  ['blog-listing', { ...bloglistingfacets }],
   ['SplitFeature', { ...SplitFeature }],
   ['ListingBlock', { ...ListingBlock }],
   ['LinkColumnsBand', { ...LinkColumnsBand }],

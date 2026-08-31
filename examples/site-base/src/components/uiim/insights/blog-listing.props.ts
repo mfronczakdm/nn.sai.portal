@@ -12,7 +12,7 @@ export type BlogListingBlog = {
   displayName?: string;
   url?: { path?: string };
   detail?: { jsonValue?: RichTextField };
-  image?: { jsonValue?: ImageField };
+  image?: { jsonValue?: ImageField; value?: string };
 };
 
 export type BlogListingDatasource = {
@@ -20,6 +20,9 @@ export type BlogListingDatasource = {
   intro?: { jsonValue?: RichTextField };
   emptyResultsText?: BlogListingJsonField;
   showFilters?: BlogListingJsonField<boolean | string>;
+  filterFacets?: BlogListingJsonField;
+  filterFacetLabel?: BlogListingJsonField;
+  searchPlaceholder?: BlogListingJsonField;
   blogsRoot?: {
     targetItem?: {
       id?: string;

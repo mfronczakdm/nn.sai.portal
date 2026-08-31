@@ -7,6 +7,7 @@ import sites from '.sitecore/sites.json';
 import { routing } from 'src/i18n/routing';
 import scConfig from 'sitecore.config';
 import client from 'src/lib/sitecore-client';
+import { applyExternalRouteImage } from 'src/lib/route-image-from-edge';
 import Layout, { RouteFields } from 'src/Layout';
 import components from '.sitecore/component-map';
 import Providers from 'src/Providers';
@@ -65,6 +66,8 @@ export default async function Page({ params, searchParams }: PageProps) {
   if (!page?.layout?.sitecore?.route) {
     notFound();
   }
+
+  await applyExternalRouteImage(page, locale);
 
   // Fetch the component data from Sitecore (Likely will be deprecated)
   const componentProps = await client.getComponentData(page.layout, {}, components);

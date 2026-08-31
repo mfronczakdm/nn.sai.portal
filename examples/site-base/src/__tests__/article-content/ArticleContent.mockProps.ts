@@ -106,7 +106,9 @@ export const pageViaNestedExternalFieldsProps: ArticleContentProps = {
     data: {
       externalFields: {
         pageTitle: { jsonValue: { value: 'Title from nested externalFields' } as Field<string> },
-        pageSummary: { jsonValue: { value: 'Summary from nested externalFields.' } as Field<string> },
+        pageSummary: {
+          jsonValue: { value: 'Summary from nested externalFields.' } as Field<string>,
+        },
       },
     },
   },
@@ -117,6 +119,66 @@ export const emptyProps: ArticleContentProps = {
   params: {},
   page: mockPage,
   fields: {},
+};
+
+/** Page image resolved from `page.layout.sitecore.route.fields` as a normal jsonValue shape. */
+export const routeImageProps: ArticleContentProps = {
+  rendering: mockRendering,
+  params: {},
+  page: {
+    ...mockPage,
+    layout: {
+      sitecore: {
+        context: {},
+        route: {
+          name: 'About Us',
+          placeholders: {},
+          fields: {
+            pageHeaderTitle: { value: 'About Us' } as Field<string>,
+            pageSummary: {
+              value: 'Global semiconductor packaging and test services.',
+            } as Field<string>,
+            image: {
+              value: {
+                src: 'https://images.unsplash.com/photo-amkor-about?w=1600',
+                alt: 'Amkor facility',
+              },
+            },
+          },
+        },
+      },
+    },
+  } as unknown as Page,
+  fields: {},
+};
+
+/**
+ * External-URL Image XML: Sitecore Edge returns an empty jsonValue, so only the raw
+ * `value` string carries `src`/`alt` (the amkor page shape).
+ */
+export const externalXmlImageProps: ArticleContentProps = {
+  rendering: mockRendering,
+  params: {},
+  page: mockPage,
+  fields: {
+    pageHeaderTitle: { value: 'About Us' } as Field<string>,
+    pageSummary: { value: 'Global semiconductor packaging and test services.' } as Field<string>,
+    image: {
+      value:
+        '<image src="https://amkormarcomexternal.blob.core.windows.net/amkordotcom/Amkor-logo.jpg" alt="Amkor Technology" />',
+    },
+  } as unknown as ArticleContentProps['fields'],
+};
+
+/** Copy present, page image field entirely absent. */
+export const noImageFieldProps: ArticleContentProps = {
+  rendering: mockRendering,
+  params: {},
+  page: mockPage,
+  fields: {
+    pageHeaderTitle: { value: 'About Us' } as Field<string>,
+    pageSummary: { value: 'Global semiconductor packaging and test services.' } as Field<string>,
+  },
 };
 
 /** Progressive KM employee portal page — all kmpage fields populated. */
