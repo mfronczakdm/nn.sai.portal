@@ -30,6 +30,7 @@ import {
 } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
+import { shouldBypassOptimizer } from '@/lib/sitecore-image-loader';
 import { NoDataFallback } from '@/utils/NoDataFallback';
 
 import type { BioDetailFields, BioDetailProps } from './bio-detail.props';
@@ -93,13 +94,7 @@ function initials(name: string): string {
     .join('');
 }
 
-function TaxonomyList({
-  label,
-  items,
-}: {
-  label: string;
-  items: TaxonomyLike[];
-}) {
+function TaxonomyList({ label, items }: { label: string; items: TaxonomyLike[] }) {
   if (items.length === 0) return null;
   return (
     <div>
@@ -136,7 +131,9 @@ function RichSection({
   if (!richHasContent(field) && !isEditing) return null;
   return (
     <section className="mt-10">
-      <h2 className="font-heading text-foreground text-2xl font-semibold tracking-tight">{title}</h2>
+      <h2 className="font-heading text-foreground text-2xl font-semibold tracking-tight">
+        {title}
+      </h2>
       <div className="prose prose-neutral dark:prose-invert text-foreground mt-4 max-w-none text-base leading-relaxed">
         <ContentSdkRichText field={field} />
       </div>
@@ -184,7 +181,10 @@ function RelatedContentCard({ item }: { item: BioRelatedContentItem }) {
         <p className="text-muted-foreground flex-1 text-sm leading-relaxed">{item.description}</p>
         <span className="text-primary inline-flex items-center gap-1 text-sm font-medium">
           Open
-          <ArrowUpRight className="size-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden />
+          <ArrowUpRight
+            className="size-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+            aria-hidden
+          />
         </span>
       </Link>
     </li>
@@ -195,10 +195,7 @@ function RelatedContentSection({ profile }: { profile: BioRelatedContentProfile 
   if (!profile.items.length) return null;
 
   return (
-    <section
-      aria-labelledby="bio-related-content-heading"
-      className="border-border border-t"
-    >
+    <section aria-labelledby="bio-related-content-heading" className="border-border border-t">
       <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
         <div className="max-w-2xl">
           <h2
@@ -246,8 +243,7 @@ export const Default: React.FC<BioDetailProps> = (props) => {
   });
   const headshotSrc = headshotResolved.src;
   const headshotAlt = headshotResolved.alt;
-  const bypassOptimizer =
-    headshotSrc.includes('images.unsplash.com') || headshotSrc.includes('sitecoresandbox.cloud');
+  const bypassOptimizer = shouldBypassOptimizer(headshotSrc);
   const linkedIn = fields.LinkedIn as LinkField | undefined;
 
   const practiceAreas = resolveTaxonomy(fields.PracticeAreas);

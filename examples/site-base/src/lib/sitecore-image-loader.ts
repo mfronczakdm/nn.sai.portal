@@ -38,6 +38,11 @@ function isDirectProductMediaHost(hostname: string): boolean {
   );
 }
 
+/** Azure blob media referenced by external Image fields on demo sites (amkor and similar). */
+function isExternalDemoMediaHost(hostname: string): boolean {
+  return hostname.endsWith('.blob.core.windows.net');
+}
+
 export function shouldBypassOptimizer(src: string): boolean {
   try {
     const hostname = new URL(src, 'https://localhost').hostname.toLowerCase();
@@ -46,7 +51,8 @@ export function shouldBypassOptimizer(src: string): boolean {
       hostname.endsWith('.sitecorecontenthub.cloud') ||
       hostname.includes('stylelabs.cloud') ||
       hostname === 'images.unsplash.com' ||
-      isDirectProductMediaHost(hostname)
+      isDirectProductMediaHost(hostname) ||
+      isExternalDemoMediaHost(hostname)
     );
   } catch {
     return false;

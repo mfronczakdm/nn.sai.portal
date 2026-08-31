@@ -8,6 +8,7 @@ import { Field, LinkField, Text, useSitecore } from '@sitecore-content-sdk/nextj
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
+import { shouldBypassOptimizer } from '@/lib/sitecore-image-loader';
 import type { ComponentProps } from '@/lib/component-props';
 import { NoDataFallback } from '@/utils/NoDataFallback';
 
@@ -408,6 +409,7 @@ function NewsImageCard({
         fill
         sizes="(min-width: 992px) 33vw, (min-width: 576px) 50vw, 100vw"
         className="object-cover transition-transform duration-300 group-hover:scale-110"
+        unoptimized={shouldBypassOptimizer(item.imageSrc)}
       />
     </div>
   ) : (

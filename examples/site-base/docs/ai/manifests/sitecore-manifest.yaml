@@ -1,5 +1,5 @@
 ﻿generatedAt: "2026-03-20T09:00:00Z"
-lastUpdatedAt: "2026-08-31T19:50:00Z"
+lastUpdatedAt: "2026-08-31T21:05:00Z"
 lastUpdatedBy: "cursor-agent"
 
 project:
@@ -10479,3 +10479,84 @@ externalImageRenderingVerdict:
   pendingManual:
     - "Redeploy the Default editing host so Sitecore Pages picks up the route-image fix"
     - "Publish amkor content to Edge so published delivery reflects the backfilled image values"
+  blogListingCardImages:
+    checkedAt: "2026-08-31T20:45:00Z"
+    siteName: "amkor"
+    component: "BlogListing"
+    variant: "Cards"
+    rendering: "{8278F36C-8492-4641-A401-9C19AA69D08A}"
+    datasource: "{BCA09BD3-B05F-4916-B1BD-EB9D4C5FB29C}"
+    verdict: >
+      Distinct from the route-image bug: the src attribute IS emitted and the Azure blob URLs are
+      valid. Failure is confined to the Next.js image optimizer path. next.config.ts sets
+      unoptimized only when NODE_ENV=development, so local dev emits direct blob URLs and works,
+      while the production editing host routes every card image through /_next/image via the custom
+      loader. shouldBypassOptimizer did not cover the blob host and BlogListing hard-coded
+      unoptimized only for images.unsplash.com, so blob cards went through the optimizer and broke
+      in Pages. The one working card (Amkor 2029) uses a sitecoresandbox.cloud DAM URL, which
+      shouldBypassOptimizer already exempts. Content values are correct and were not changed.
+    evidence:
+      - "All 10 emitted card srcs are direct https://amkormarcomexternal.blob.core.windows.net/... URLs on local dev (0 /_next/image wrappers)"
+      - "curl of each of the 10 URLs returned HTTP 200 with image/png or image/jpeg"
+      - "next.config.ts images.unoptimized = process.env.NODE_ENV === 'development'; loader custom -> src/lib/sitecore-image-loader.ts"
+      - "Local /_next/image returns 404 in dev because optimization is disabled there, so the production optimizer response could not be reproduced locally"
+    fix:
+      - "src/lib/sitecore-image-loader.ts - added isExternalDemoMediaHost (*.blob.core.windows.net) to shouldBypassOptimizer"
+      - "src/components/uiim/insights/BlogListing.tsx - BlogImage now uses unoptimized={shouldBypassOptimizer(src)} instead of the images.unsplash.com string check"
+    verification:
+      localDev: "http://localhost:3000/About-Us/News/Blog?site=amkor still emits 10 direct blob srcs, all HTTP 200 image/*; filter facets untouched"
+      tests: "npx jest src/__tests__/blog-listing src/__tests__/lib/sitecore-image-loader - 14 passed (10 blog-listing unchanged, 4 loader incl. new blob case)"
+      lint: "npm run lint - 0 errors, 12 pre-existing warnings; tsc introduced no new errors in touched files"
+      editingHost: "NOT verified - Sitecore Pages runs an older editing-host build; a redeploy is required for this fix to appear"
+    pendingManual:
+      - "Redeploy the Default editing host so Sitecore Pages serves blob card images unoptimized"
+
+externalImageOptimizerAudit:
+  checkedAt: "2026-08-31T21:05:00Z"
+  scope: "Repo-wide audit for the BlogListing optimizer-bypass bug class, prioritised on site amkor"
+  verdict: >
+    No further production breaks expected on amkor. Because next.config.ts sets images.loader to
+    custom, the loaderFile (src/lib/sitecore-image-loader.ts) is the single funnel for EVERY
+    next/image consumer, including the Content SDK NextImage component and ImageWrapper. Adding
+    *.blob.core.windows.net to shouldBypassOptimizer therefore closed the gap globally, not just in
+    BlogListing; per-component unoptimized props are defence in depth rather than the fix. Verified
+    against a real production build: eight amkor pages emitted zero /_next/image wrappers.
+  criticalMechanismCorrection: >
+    With images.loader set to custom, Next.js does not serve the built-in /_next/image route at all -
+    it returns 404 in PRODUCTION, not only in dev as previously recorded. Any URL the loader does not
+    bypass is therefore a guaranteed break regardless of remotePatterns. The next.config.ts
+    remotePatterns list is effectively dead configuration in this app; shouldBypassOptimizer is the
+    only mechanism that makes an external image work.
+  amkorContentHosts:
+    - host: "images.unsplash.com"
+      covered: true
+      via: "shouldBypassOptimizer exact-host match"
+    - host: "amkormarcomexternal.blob.core.windows.net"
+      covered: true
+      via: "shouldBypassOptimizer isExternalDemoMediaHost (*.blob.core.windows.net)"
+    - host: "mrfbasech2.sitecoresandbox.cloud"
+      covered: true
+      via: "shouldBypassOptimizer *.sitecoresandbox.cloud (XM Cloud media host for this environment)"
+  evidence:
+    - "npm run build completed exit 0, then npx next start -p 3001 (NODE_ENV=production, optimization ON)"
+    - "8 amkor pages returned HTTP 200 with 0 /_next/image wrappers: /, /About-Us, /About-Us/News, /About-Us/News/Blog, /About-Us/News/Events, /About-Us/News/Press-Releases, /Packaging, /Test-Services"
+    - "amkor home emitted 10 img tags: 6 amkormarcomexternal.blob.core.windows.net + 4 mrfbasech2.sitecoresandbox.cloud, all direct, 0 srcset optimizer refs"
+    - "Control: GET /_next/image?url=<blob tile>&w=640&q=75 returned 404 and the unsplash equivalent returned 404, while both raw URLs returned 200 - confirms the custom loader disables the optimizer route entirely"
+    - "Default site and ?site=pkm also returned 0 optimizer refs"
+  rootCauseClassFixes:
+    - "src/components/uiim/lawyers/BioListing.tsx - replaced hardcoded unsplash/sitecoresandbox string check with shouldBypassOptimizer(src)"
+    - "src/components/uiim/lawyers/BioDetail.tsx - replaced hardcoded unsplash/sitecoresandbox string check with shouldBypassOptimizer(headshotSrc)"
+    - "src/components/article-content/ArticleContent.tsx - kmpage variant useNextImage now uses shouldBypassOptimizer(featuredSrc); Default and WithImage variants untouched"
+    - "src/components/uiim/news/NewsListing.tsx - NewsImageCard now passes unoptimized={shouldBypassOptimizer(item.imageSrc)}"
+  safeByConstruction:
+    - "CSS background-image renderers (sxa/Container, sxa/Image, site-three/ImageCarousel, site-three/ProductPageHeader, ProductCarousel band) never touch next/image"
+    - "video/Video.tsx isAllowedYouTubeImageHost already forces unoptimized for youtube/ytimg thumbnails"
+    - "ArticleContent WithImage hardcodes unoptimized - confirmed by reading the variant"
+  verification:
+    tests: "npx jest loader + blog-listing + news + article-content - 42 passed, 1 pre-existing kmpage ImageWrapper-branch failure (confirmed present on stashed HEAD, unchanged by this work)"
+    lint: "npm run lint - 0 errors, 12 pre-existing warnings"
+    prettier: "npx prettier --write on all touched files"
+  pendingManual:
+    - "Redeploy the Default editing host so Sitecore Pages picks up the loader fix - the deployed host still runs an older build"
+    - "Optional cleanup: next.config.ts images.remotePatterns is dead config while loader is custom; consider removing or documenting it"
+    - "Optional: fix the pre-existing ArticleContent kmpage test, which still asserts the ImageWrapper branch for sitecoresandbox URLs"

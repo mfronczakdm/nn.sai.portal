@@ -10,6 +10,7 @@ import { ChevronRight, Newspaper, Search, UserRound, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { extractImageAlt, extractImageSrc } from '@/lib/sitecore-image-field';
+import { shouldBypassOptimizer } from '@/lib/sitecore-image-loader';
 import { cn } from '@/lib/utils';
 import { NoDataFallback } from '@/utils/NoDataFallback';
 
@@ -178,7 +179,7 @@ function BlogImage({
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           className="object-cover"
-          unoptimized={src.includes('images.unsplash.com')}
+          unoptimized={shouldBypassOptimizer(src)}
         />
       ) : (
         <Newspaper className="size-8 opacity-50" aria-hidden />

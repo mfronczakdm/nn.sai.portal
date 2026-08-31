@@ -12,6 +12,7 @@ import {
   normalizeImageFieldSrc,
   unwrapImageField,
 } from '@/lib/sitecore-image-field';
+import { shouldBypassOptimizer } from '@/lib/sitecore-image-loader';
 
 import { mergeArticleContentFields } from './article-content.fields';
 import type { ArticleContentProps } from './article-content.props';
@@ -294,8 +295,7 @@ export const kmpage: React.FC<ArticleContentProps> = (props) => {
     pageTitle?.value ||
     'Article image';
   const hasFeaturedImage = Boolean(featuredSrc);
-  const useNextImage =
-    featuredSrc.includes('images.unsplash.com') || featuredSrc.includes('sitecoresandbox.cloud');
+  const useNextImage = shouldBypassOptimizer(featuredSrc);
 
   const hasPageHeaderTitle = hasText(pageHeaderTitle);
   const hasPageTitle = hasText(pageTitle);
