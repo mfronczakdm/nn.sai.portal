@@ -21,6 +21,24 @@ export const revalidate = 300;
 /** Allow pages created after build to render on first request, then enter ISR. */
 export const dynamicParams = true;
 
+/**
+ * Pages that have no version in the requested language fall back to the default language
+ * so a language switch degrades to readable content instead of a 404.
+ */
+async function getPageWithLanguageFallback(path: string[], site: string, locale: string) {
+  const requestedPage = await client.getPage(path, { site, locale }).catch((error: unknown) => {
+    console.error('Sitecore page unavailable in requested language', { site, locale, path, error });
+    return null;
+  });
+
+  if (requestedPage?.layout?.sitecore?.route || locale === routing.defaultLocale) {
+    return requestedPage;
+  }
+
+  console.warn('Falling back to default language for Sitecore page', { site, locale, path });
+  return await client.getPage(path, { site, locale: routing.defaultLocale });
+}
+
 type PageProps = {
   params: Promise<{
     site: string;
@@ -55,7 +73,7 @@ export default async function Page({ params, searchParams }: PageProps) {
         page = await client.getPreview(editingParams);
       }
     } else {
-      page = await client.getPage(path ?? [], { site, locale });
+      page = await getPageWithLanguageFallback(path ?? [], site, locale);
     }
   } catch (error) {
     console.error('Failed to load Sitecore page layout', { site, locale, path, error });
@@ -111,7 +129,7 @@ export const generateMetadata = async ({ params }: PageProps) => {
   const canonicalUrl = baseUrl ? `${baseUrl}${pathSegment}` : undefined;
 
   // The same call as for rendering the page. Should be cached by default react behavior
-  const page = await client.getPage(path ?? [], { site, locale });
+  const page = await getPageWithLanguageFallback(path ?? [], site, locale).catch(() => null);
 
   // Cast route fields once to the expected RouteFields shape to avoid accessing unknown {}
   const routeFields = (page?.layout?.sitecore?.route?.fields ?? {}) as RouteFields;

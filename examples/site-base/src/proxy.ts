@@ -1,4 +1,4 @@
-import { type NextRequest, NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import type { SiteInfo } from '@sitecore-content-sdk/nextjs';
 import { resolveTheme } from './lib/theme';
 import {
@@ -12,6 +12,13 @@ import {
 import sitesJson from '.sitecore/sites.json';
 import scConfig from 'sitecore.config';
 import { routing } from './i18n/routing';
+import {
+  DEFAULT_LOCALE,
+  LOCALE_COOKIE_NAME,
+  buildLocalePathname,
+  getLocaleFromPathname,
+  isSupportedLocale,
+} from './lib/locale';
 import client from './lib/sitecore-client';
 import { tryScrunchAxp } from './lib/scrunch-axp';
 
@@ -124,11 +131,37 @@ function applyAppTheme(req: NextRequest, res: NextResponse): NextResponse {
   return res;
 }
 
+/**
+ * Sitecore renders internal links without a locale prefix, so a visitor who picked a language
+ * would drop back to the default one on the next click. Remember the language chosen via a
+ * locale-prefixed URL and replay it on subsequent unprefixed requests.
+ */
+function resolveLocaleRequest(req: NextRequest): { request: NextRequest; locale?: string } {
+  const localeFromPath = getLocaleFromPathname(req.nextUrl.pathname);
+  if (localeFromPath) {
+    return { request: req, locale: localeFromPath };
+  }
+
+  const cookieLocale = req.cookies.get(LOCALE_COOKIE_NAME)?.value;
+  if (!isSupportedLocale(cookieLocale) || cookieLocale === DEFAULT_LOCALE) {
+    return { request: req };
+  }
+
+  const url = req.nextUrl.clone();
+  url.pathname = buildLocalePathname(req.nextUrl.pathname, cookieLocale as string);
+  return { request: new NextRequest(url, req), locale: cookieLocale };
+}
+
 export default async function proxy(req: NextRequest) {
   const axp = await tryScrunchAxp(req);
   if (axp) return axp;
 
-  const res = await defineProxy(locale, preview, multisite, redirects, personalize).exec(req);
+  const { request, locale: activeLocale } = resolveLocaleRequest(req);
+
+  const res = await defineProxy(locale, preview, multisite, redirects, personalize).exec(request);
+  if (activeLocale) {
+    res.cookies.set(LOCALE_COOKIE_NAME, activeLocale, { path: '/', sameSite: 'lax' });
+  }
   return applyAppTheme(req, res);
 }
 

@@ -18,6 +18,15 @@ import { MobileMenuWrapper } from './MobileMenuWrapper';
 import { MegaMenuCascadeProvider } from './MegaMenuCascade';
 import { HeaderSTAuthControls, useHeaderSTNavigationVisibility } from './HeaderSTAuthControls';
 import { cn } from '@/lib/utils';
+import { usePathname, useSearchParams } from 'next/navigation';
+import {
+  DEFAULT_LOCALE,
+  JAPANESE_LOCALE,
+  KOREAN_LOCALE,
+  SIMPLIFIED_CHINESE_LOCALE,
+  buildLanguageSwitchPathname,
+  getLocaleFromPathname,
+} from '@/lib/locale';
 
 type ComponentMap = typeof import('.sitecore/component-map').default;
 
@@ -125,13 +134,21 @@ const HeaderSTView = (props: HeaderSTViewProps) => {
 
             <ul className="flex min-h-[3.5rem] list-none flex-row items-center justify-end gap-0 p-0 lg:min-h-[4.5rem]">
               <li className="hidden lg:block">
-                <ContentSdkLink field={fields?.SupportLink} prefetch={false} className={navLinkClass} />
+                <ContentSdkLink
+                  field={fields?.SupportLink}
+                  prefetch={false}
+                  className={navLinkClass}
+                />
               </li>
               <li className="mr-auto flex min-w-0 flex-1 justify-end lg:mr-0 lg:justify-center lg:px-4">
                 {params.showSearchBox ? (
                   <HeaderPreviewSearch searchLink={fields?.SearchLink} />
                 ) : (
-                  <ContentSdkLink field={fields?.SearchLink} prefetch={false} className={navLinkClass} />
+                  <ContentSdkLink
+                    field={fields?.SearchLink}
+                    prefetch={false}
+                    className={navLinkClass}
+                  />
                 )}
               </li>
               <HeaderSTAuthControls
@@ -167,19 +184,19 @@ const HeaderSTView = (props: HeaderSTViewProps) => {
                 </MobileMenuWrapper>
               ) : null}
               {!isTruthyParam(params?.HideCart) ? (
-              <li>
-                {params.showMiniCart ? (
-                  <MiniCart cartLink={fields?.CartLink} />
-                ) : (
-                  <ContentSdkLink
-                    field={fields?.CartLink}
-                    prefetch={false}
-                    className="block p-4 text-foreground hover:text-primary"
-                  >
-                    <FontAwesomeIcon icon={faShoppingCart} width={24} height={24} />
-                  </ContentSdkLink>
-                )}
-              </li>
+                <li>
+                  {params.showMiniCart ? (
+                    <MiniCart cartLink={fields?.CartLink} />
+                  ) : (
+                    <ContentSdkLink
+                      field={fields?.CartLink}
+                      prefetch={false}
+                      className="block p-4 text-foreground hover:text-primary"
+                    >
+                      <FontAwesomeIcon icon={faShoppingCart} width={24} height={24} />
+                    </ContentSdkLink>
+                  )}
+                </li>
               ) : null}
             </ul>
           </div>
@@ -236,12 +253,13 @@ const version1SearchClass =
   'w-full min-w-0 bg-transparent py-2 text-left text-[0.8125rem] font-normal uppercase tracking-[0.14em] text-[color:var(--color-header-muted,var(--color-muted-foreground))] hover:text-[color:var(--color-header-foreground,var(--color-background))]';
 
 /* HeaderST's datasource exposes one SupportLink and the template is shared with the other sites,
-   so Amkor's utility + language row stays in code for this demo variant. */
+   so Amkor's utility + language row stays in code for this demo variant.
+   Locale codes are the Sitecore language names — they become the URL segment. */
 const version1LanguageLinks = [
-  { text: 'English', href: '/', lang: 'en', current: true },
-  { text: '한국어', href: 'https://amkor.com/kr/', lang: 'ko', current: false },
-  { text: '日本語', href: 'https://amkor.com/jp/', lang: 'ja', current: false },
-  { text: '简体中文', href: 'https://amkor.com/cn/', lang: 'zh-Hans', current: false },
+  { text: 'English', locale: DEFAULT_LOCALE },
+  { text: '한국어', locale: KOREAN_LOCALE },
+  { text: '日本語', locale: JAPANESE_LOCALE },
+  { text: '简体中文', locale: SIMPLIFIED_CHINESE_LOCALE },
 ] as const;
 
 const version1UtilityLinks = [
@@ -294,6 +312,25 @@ const Version1HardcodedLink = ({
   );
 };
 
+/**
+ * Language switching for Version1. Keeps the visitor on the current page and preserves the
+ * `site` query parameter that local multisite development relies on.
+ */
+function useLanguageSwitcher() {
+  const pathname = usePathname() || '/';
+  const searchParams = useSearchParams();
+  const activeLocale = getLocaleFromPathname(pathname) ?? DEFAULT_LOCALE;
+  const query = searchParams?.toString();
+
+  return {
+    activeLocale,
+    buildLanguageSwitchHref: (locale: string) => {
+      const target = buildLanguageSwitchPathname(pathname, locale);
+      return query ? `${target}?${query}` : target;
+    },
+  };
+}
+
 /* Version1 — inverted two-row header: langs + utilities on top, MENU + search + logo-right below. */
 const HeaderSTVersion1View = (props: HeaderSTViewProps) => {
   const { fields, params, requireAuthForNav } = props;
@@ -303,6 +340,7 @@ const HeaderSTVersion1View = (props: HeaderSTViewProps) => {
   const supportLinkText = String(fields?.SupportLink?.value?.text ?? '').trim();
   const showSupportLink =
     supportLinkText.length > 0 && !version1UtilityLabels.has(supportLinkText.toLowerCase());
+  const { activeLocale, buildLanguageSwitchHref } = useLanguageSwitcher();
 
   return (
     <section
@@ -324,24 +362,30 @@ const HeaderSTVersion1View = (props: HeaderSTViewProps) => {
               className="m-0 flex min-h-8 list-none flex-row items-stretch gap-0 p-0"
               aria-label="Language"
             >
-              {version1LanguageLinks.map((link) => (
-                <li
-                  key={link.lang}
-                  className={cn(
-                    'flex items-stretch',
-                    link.current &&
-                      'bg-[var(--color-header-lang-active,color-mix(in_srgb,var(--color-foreground)_75%,black))]'
-                  )}
-                >
-                  <Version1HardcodedLink
-                    text={link.text}
-                    href={link.href}
-                    lang={link.lang}
-                    current={link.current}
-                    className={version1LangClass}
-                  />
-                </li>
-              ))}
+              {version1LanguageLinks.map((link) => {
+                const isActive = link.locale === activeLocale;
+                return (
+                  <li
+                    key={link.locale}
+                    className={cn(
+                      'flex items-stretch',
+                      isActive &&
+                        'bg-[var(--color-header-lang-active,color-mix(in_srgb,var(--color-foreground)_75%,black))]'
+                    )}
+                  >
+                    <Link
+                      href={buildLanguageSwitchHref(link.locale)}
+                      prefetch={false}
+                      className={version1LangClass}
+                      lang={link.locale}
+                      hrefLang={link.locale}
+                      aria-current={isActive ? 'true' : undefined}
+                    >
+                      {link.text}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
             <ul className="m-0 flex list-none flex-row flex-wrap items-center justify-end gap-0 p-0">
               {version1UtilityLinks.map((link) => (

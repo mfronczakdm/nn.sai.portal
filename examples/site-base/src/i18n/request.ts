@@ -15,10 +15,16 @@ export default getRequestConfig(async ({ requestLocale }: GetRequestConfigParams
   const [parsedSite, parsedLocale] = requested?.split('_') || [];
   const locale = hasLocale(routing.locales, parsedLocale) ? parsedLocale : routing.defaultLocale;
 
-  const sitecoreMessages = await client.getDictionary({
-    locale,
-    site: parsedSite,
-  });
+  // A site without a dictionary in the requested language must not break the page.
+  let sitecoreMessages: Record<string, string> = {};
+  try {
+    sitecoreMessages = await client.getDictionary({
+      locale,
+      site: parsedSite,
+    });
+  } catch (error) {
+    console.error('Failed to load Sitecore dictionary', { site: parsedSite, locale, error });
+  }
 
   return {
     locale,

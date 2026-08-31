@@ -68,10 +68,19 @@ jest.mock('next-auth/react', () => ({
   signOut: (...args: unknown[]) => mockSignOut(...args),
 }));
 
+let mockPathname = '/';
+let mockSearch = '';
+
 jest.mock('next/navigation', () => ({
   useRouter: () => ({ push: jest.fn(), refresh: jest.fn() }),
-  useSearchParams: () => ({ get: () => null }),
+  useSearchParams: () => new URLSearchParams(mockSearch),
+  usePathname: () => mockPathname,
 }));
+
+beforeEach(() => {
+  mockPathname = '/';
+  mockSearch = '';
+});
 
 // Mock Sitecore Content SDK components
 jest.mock('@sitecore-content-sdk/nextjs', () => ({
@@ -351,7 +360,7 @@ describe('HeaderST Component', () => {
       // Check for responsive classes - desktop navigation should be hidden on mobile
       const desktopNavigation = screen.getByRole('navigation');
       expect(desktopNavigation).toBeInTheDocument();
-      
+
       // Check that mobile menu wrapper exists
       const mobileMenuButton = screen.getByLabelText('Toggle mobile menu');
       expect(mobileMenuButton).toBeInTheDocument();
@@ -565,7 +574,7 @@ describe('HeaderST Component', () => {
             ...defaultHeaderSTProps.params,
             FieldNames: '{197F5333-48FF-42CF-8357-B49796219679}',
           }}
-        />,
+        />
       );
 
       expect(screen.queryAllByTestId('app-placeholder')).toHaveLength(0);
@@ -668,15 +677,42 @@ describe('HeaderST Component', () => {
       expect(menuLabel.closest('li')?.className).toMatch(/--color-header-menu/);
     });
 
-    it('renders language links with English current', () => {
+    it('renders locale-prefixed language links with English current by default', () => {
       render(<HeaderSTVersion1 {...headerSTPropsVersion1} />);
 
       const english = screen.getByText('English');
-      expect(english).toHaveAttribute('href', '/');
-      expect(english).toHaveAttribute('aria-current', 'page');
-      expect(screen.getByText('한국어')).toHaveAttribute('href', 'https://amkor.com/kr/');
-      expect(screen.getByText('日本語')).toHaveAttribute('href', 'https://amkor.com/jp/');
-      expect(screen.getByText('简体中文')).toHaveAttribute('href', 'https://amkor.com/cn/');
+      expect(english).toHaveAttribute('href', '/en');
+      expect(english).toHaveAttribute('aria-current', 'true');
+      expect(screen.getByText('한국어')).toHaveAttribute('href', '/ko-KR');
+      expect(screen.getByText('日本語')).toHaveAttribute('href', '/ja-JP');
+      expect(screen.getByText('简体中文')).toHaveAttribute('href', '/zh-CN');
+    });
+
+    it('keeps the visitor on the current page when switching language', () => {
+      mockPathname = '/about-us/careers';
+      render(<HeaderSTVersion1 {...headerSTPropsVersion1} />);
+
+      expect(screen.getByText('日本語')).toHaveAttribute('href', '/ja-JP/about-us/careers');
+      expect(screen.getByText('English')).toHaveAttribute('href', '/en/about-us/careers');
+    });
+
+    it('marks the active language and swaps the locale segment', () => {
+      mockPathname = '/ja-JP/about-us/careers';
+      render(<HeaderSTVersion1 {...headerSTPropsVersion1} />);
+
+      const japanese = screen.getByText('日本語');
+      expect(japanese).toHaveAttribute('aria-current', 'true');
+      expect(screen.getByText('English')).toHaveAttribute('href', '/en/about-us/careers');
+      expect(screen.getByText('English')).not.toHaveAttribute('aria-current');
+      expect(screen.getByText('한국어')).toHaveAttribute('href', '/ko-KR/about-us/careers');
+    });
+
+    it('preserves the site query parameter used by local multisite development', () => {
+      mockPathname = '/quality';
+      mockSearch = 'site=amkor';
+      render(<HeaderSTVersion1 {...headerSTPropsVersion1} />);
+
+      expect(screen.getByText('日本語')).toHaveAttribute('href', '/ja-JP/quality?site=amkor');
     });
 
     it('renders the six Amkor utility links in live order', () => {
