@@ -56,11 +56,21 @@ describe('SearchResults site packs', () => {
     expect(screen.queryByRole('heading', { name: /Mark Abate/i })).not.toBeInTheDocument();
   });
 
+  it('shows Amkor packaging results, not Quanex products', () => {
+    render(<SearchResults siteName="amkor" disableUrlSync initialQuery="S-Connect" />);
+
+    expect(screen.getByText('Amkor search')).toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 3, name: 'S-Connect' })).toBeInTheDocument();
+    expect(screen.queryByRole('heading', { name: 'Super Spacer' })).not.toBeInTheDocument();
+  });
+
   it('keeps Pillsbury lawyer results on pillsburylaw', () => {
     render(<SearchResults siteName="pillsburylaw" disableUrlSync initialQuery="Mark Abate" />);
 
     expect(screen.getByText('Pillsbury search')).toBeInTheDocument();
     expect(screen.getByRole('heading', { level: 3, name: /Mark Abate/i })).toBeInTheDocument();
-    expect(screen.queryByRole('heading', { level: 3, name: 'Super Spacer' })).not.toBeInTheDocument();
+    expect(
+      screen.queryByRole('heading', { level: 3, name: 'Super Spacer' })
+    ).not.toBeInTheDocument();
   });
 });

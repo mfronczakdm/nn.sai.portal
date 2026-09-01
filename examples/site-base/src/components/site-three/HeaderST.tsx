@@ -277,36 +277,21 @@ const Version1HardcodedLink = ({
   text,
   href,
   className,
-  lang,
-  current,
 }: {
   text: string;
   href: string;
   className: string;
-  lang?: string;
-  current?: boolean;
 }) => {
-  const extra = {
-    ...(lang ? { lang, hrefLang: lang } : {}),
-    ...(current ? { 'aria-current': 'page' as const } : {}),
-  };
-
   if (/^https?:\/\//i.test(href)) {
-    const isLocale = Boolean(lang);
     return (
-      <a
-        href={href}
-        className={className}
-        {...extra}
-        {...(isLocale ? {} : { target: '_blank', rel: 'noopener noreferrer' })}
-      >
+      <a href={href} className={className} target="_blank" rel="noopener noreferrer">
         {text}
       </a>
     );
   }
 
   return (
-    <Link href={href} prefetch={false} className={className} {...extra}>
+    <Link href={href} prefetch={false} className={className}>
       {text}
     </Link>
   );

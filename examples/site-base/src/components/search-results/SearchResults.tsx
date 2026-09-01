@@ -104,7 +104,13 @@ function SearchFacetsPanel({
       <div className="flex items-center justify-between border-b border-border/60 px-4 py-3.5">
         <span className="text-sm font-semibold tracking-tight text-foreground">Refine results</span>
         {activeFilterCount > 0 ? (
-          <Button type="button" variant="ghost" size="sm" className="h-8 text-primary" onClick={clearFilters}>
+          <Button
+            type="button"
+            variant="ghost"
+            size="sm"
+            className="h-8 text-primary"
+            onClick={clearFilters}
+          >
             Clear all
           </Button>
         ) : null}
@@ -113,7 +119,10 @@ function SearchFacetsPanel({
         <FacetSection title={pack.copy.facetLob}>
           <div className="flex flex-col gap-2.5">
             {lobs.map((key) => (
-              <label key={key} className="flex cursor-pointer items-start gap-2.5 text-sm text-foreground/90">
+              <label
+                key={key}
+                className="flex cursor-pointer items-start gap-2.5 text-sm text-foreground/90"
+              >
                 <Checkbox
                   checked={selectedLobs.has(key)}
                   onCheckedChange={() => onToggleLob(key)}
@@ -121,7 +130,9 @@ function SearchFacetsPanel({
                 />
                 <span className="flex flex-1 flex-wrap items-baseline justify-between gap-x-1">
                   <span>{pack.facetLabels.lob[key]}</span>
-                  <span className="text-xs tabular-nums text-muted-foreground">({countsLobs[key] ?? 0})</span>
+                  <span className="text-xs tabular-nums text-muted-foreground">
+                    ({countsLobs[key] ?? 0})
+                  </span>
                 </span>
               </label>
             ))}
@@ -130,7 +141,10 @@ function SearchFacetsPanel({
         <FacetSection title={pack.copy.facetPeril}>
           <div className="flex flex-col gap-2.5">
             {perils.map((key) => (
-              <label key={key} className="flex cursor-pointer items-start gap-2.5 text-sm text-foreground/90">
+              <label
+                key={key}
+                className="flex cursor-pointer items-start gap-2.5 text-sm text-foreground/90"
+              >
                 <Checkbox
                   checked={selectedPerils.has(key)}
                   onCheckedChange={() => onTogglePeril(key)}
@@ -138,7 +152,9 @@ function SearchFacetsPanel({
                 />
                 <span className="flex flex-1 flex-wrap items-baseline justify-between gap-x-1">
                   <span>{pack.facetLabels.peril[key]}</span>
-                  <span className="text-xs tabular-nums text-muted-foreground">({countsPerils[key] ?? 0})</span>
+                  <span className="text-xs tabular-nums text-muted-foreground">
+                    ({countsPerils[key] ?? 0})
+                  </span>
                 </span>
               </label>
             ))}
@@ -147,7 +163,10 @@ function SearchFacetsPanel({
         <FacetSection title={pack.copy.facetTopic} defaultOpen={false}>
           <div className="flex flex-col gap-2.5">
             {topics.map((key) => (
-              <label key={key} className="flex cursor-pointer items-start gap-2.5 text-sm text-foreground/90">
+              <label
+                key={key}
+                className="flex cursor-pointer items-start gap-2.5 text-sm text-foreground/90"
+              >
                 <Checkbox
                   checked={selectedTopics.has(key)}
                   onCheckedChange={() => onToggleTopic(key)}
@@ -155,7 +174,9 @@ function SearchFacetsPanel({
                 />
                 <span className="flex flex-1 flex-wrap items-baseline justify-between gap-x-1">
                   <span>{pack.facetLabels.topic[key]}</span>
-                  <span className="text-xs tabular-nums text-muted-foreground">({countsTopics[key] ?? 0})</span>
+                  <span className="text-xs tabular-nums text-muted-foreground">
+                    ({countsTopics[key] ?? 0})
+                  </span>
                 </span>
               </label>
             ))}
@@ -176,7 +197,10 @@ function FacetSection({
   defaultOpen?: boolean;
 }) {
   return (
-    <Collapsible defaultOpen={defaultOpen} className="border-b border-border/60 py-3 last:border-b-0">
+    <Collapsible
+      defaultOpen={defaultOpen}
+      className="border-b border-border/60 py-3 last:border-b-0"
+    >
       <CollapsibleTrigger className="flex w-full items-center justify-between gap-2 py-2 text-left text-[11px] font-bold uppercase tracking-wider text-muted-foreground outline-none [&[data-state=open]_svg]:rotate-180">
         {title}
         <ChevronDown className="size-4 shrink-0 text-primary transition-transform duration-200" />
@@ -189,7 +213,10 @@ function FacetSection({
 function ResultCard({ item, pack }: { item: SearchResultItem; pack: SearchSitePack }) {
   const pathname = usePathname();
   const meta = itemMetadataLine(item, pack.facetLabels);
-  const practiceLabels = item.perils.map((p) => pack.facetLabels.peril[p]).filter(Boolean).slice(0, 2);
+  const practiceLabels = item.perils
+    .map((p) => pack.facetLabels.peril[p])
+    .filter(Boolean)
+    .slice(0, 2);
   const isFeatured = pack.featuredLob ? item.lob === pack.featuredLob : false;
   const href = toSiteAwareHref(item.href, pathname, listSearchPackSiteNames());
 
@@ -214,10 +241,15 @@ function ResultCard({ item, pack }: { item: SearchResultItem; pack: SearchSitePa
         </div>
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-center gap-2">
-            <Badge variant="secondary" className="rounded-md font-mono text-[10px] uppercase tracking-wide">
+            <Badge
+              variant="secondary"
+              className="rounded-md font-mono text-[10px] uppercase tracking-wide"
+            >
               {item.kbId}
             </Badge>
-            <span className="text-xs font-medium text-muted-foreground">{pack.facetLabels.lob[item.lob]}</span>
+            <span className="text-xs font-medium text-muted-foreground">
+              {pack.facetLabels.lob[item.lob]}
+            </span>
             {item.isNew ? (
               <span className="rounded-full bg-primary px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-primary-foreground">
                 Featured
@@ -230,7 +262,9 @@ function ResultCard({ item, pack }: { item: SearchResultItem; pack: SearchSitePa
           {item.subtitle ? (
             <p className="mt-0.5 text-sm font-medium text-primary/90">{item.subtitle}</p>
           ) : null}
-          <p className="mt-1.5 line-clamp-2 text-sm leading-relaxed text-muted-foreground">{item.description}</p>
+          <p className="mt-1.5 line-clamp-2 text-sm leading-relaxed text-muted-foreground">
+            {item.description}
+          </p>
           <p className="mt-2 line-clamp-1 text-xs text-muted-foreground">{meta}</p>
           <div className="mt-3 flex flex-wrap gap-1.5">
             {practiceLabels.map((label) => (
@@ -267,18 +301,28 @@ function AiQaPanel({ insight, pack }: { insight: AiSearchInsight; pack: SearchSi
             <Sparkles className="size-5" aria-hidden />
           </div>
           <div className="min-w-0 flex-1 space-y-2">
-            <p id="ai-qa-heading" className="text-[11px] font-bold uppercase tracking-[0.18em] text-primary">
+            <p
+              id="ai-qa-heading"
+              className="text-[11px] font-bold uppercase tracking-[0.18em] text-primary"
+            >
               {pack.copy.aiHeading}
             </p>
             <div className="flex items-start gap-2 rounded-xl border border-border/60 bg-background/80 px-3 py-2.5">
-              <MessageSquareText className="mt-0.5 size-4 shrink-0 text-muted-foreground" aria-hidden />
+              <MessageSquareText
+                className="mt-0.5 size-4 shrink-0 text-muted-foreground"
+                aria-hidden
+              />
               <p className="text-sm font-medium leading-snug text-foreground">
                 <span className="sr-only">Question: </span>
                 {insight.question}
               </p>
             </div>
-            <h2 className="text-lg font-semibold leading-snug tracking-tight text-foreground">{insight.headline}</h2>
-            <p className="whitespace-pre-line text-sm leading-relaxed text-muted-foreground">{insight.answer}</p>
+            <h2 className="text-lg font-semibold leading-snug tracking-tight text-foreground">
+              {insight.headline}
+            </h2>
+            <p className="whitespace-pre-line text-sm leading-relaxed text-muted-foreground">
+              {insight.answer}
+            </p>
             {insight.stateCallout ? (
               <p className="inline-flex rounded-lg border border-primary/25 bg-primary/5 px-2.5 py-1 text-xs font-medium text-primary">
                 {insight.stateCallout}
@@ -317,7 +361,9 @@ function AiQaPanel({ insight, pack }: { insight: AiSearchInsight; pack: SearchSi
                       <Briefcase className="size-3" aria-hidden />
                       {c.kbId ?? 'Resource'}
                     </span>
-                    <span className="mt-1 text-sm font-semibold leading-snug text-foreground">{c.title}</span>
+                    <span className="mt-1 text-sm font-semibold leading-snug text-foreground">
+                      {c.title}
+                    </span>
                     {c.excerpt ? (
                       <span className="mt-1 line-clamp-2 text-xs leading-relaxed text-muted-foreground">
                         {c.excerpt}
@@ -654,7 +700,11 @@ export const SearchResults: FC<SearchResultsProps> = ({
                 </button>
               ) : null}
             </div>
-            <Button type="button" className="h-12 shrink-0 rounded-xl px-8 font-semibold shadow-sm" onClick={runSearch}>
+            <Button
+              type="button"
+              className="h-12 shrink-0 rounded-xl px-8 font-semibold shadow-sm"
+              onClick={runSearch}
+            >
               Search
             </Button>
           </div>
@@ -673,13 +723,15 @@ export const SearchResults: FC<SearchResultsProps> = ({
               </button>
             ))}
           </div>
-          <SearchTips pack={pack} />
+          {pack.copy.tips.length > 0 ? <SearchTips pack={pack} /> : null}
         </div>
 
         <header className="mt-10">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
-              <p className="text-xs font-medium uppercase tracking-widest text-primary/90">{pack.copy.kicker}</p>
+              <p className="text-xs font-medium uppercase tracking-widest text-primary/90">
+                {pack.copy.kicker}
+              </p>
               <h1 className="mt-1 text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
                 {normalizeQuery(query) ? (
                   <>
@@ -689,7 +741,9 @@ export const SearchResults: FC<SearchResultsProps> = ({
                   pack.copy.headingEmpty
                 )}
               </h1>
-              <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">{pack.copy.intro}</p>
+              <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+                {pack.copy.intro}
+              </p>
             </div>
             {pack.enableDemoPersona ? (
               <div className="rounded-xl border border-dashed border-primary/25 bg-primary/5 px-3 py-2 text-xs text-muted-foreground">
@@ -733,7 +787,9 @@ export const SearchResults: FC<SearchResultsProps> = ({
               )}
             >
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                {isSearching ? <Loader2 className="size-4 shrink-0 animate-spin text-primary" aria-hidden /> : null}
+                {isSearching ? (
+                  <Loader2 className="size-4 shrink-0 animate-spin text-primary" aria-hidden />
+                ) : null}
                 <span>
                   <strong className="font-semibold text-foreground">{filtered.length}</strong>{' '}
                   {filtered.length === 1 ? 'result' : 'results'}
@@ -820,7 +876,10 @@ export const SearchResults: FC<SearchResultsProps> = ({
                       <span className="font-semibold tabular-nums text-foreground">
                         {Math.min(safeResultsPage * RESULTS_PAGE_SIZE, filtered.length)}
                       </span>{' '}
-                      of <span className="font-semibold tabular-nums text-foreground">{filtered.length}</span>
+                      of{' '}
+                      <span className="font-semibold tabular-nums text-foreground">
+                        {filtered.length}
+                      </span>
                     </p>
                     <div className="flex flex-wrap items-center gap-2">
                       <Button
@@ -852,9 +911,16 @@ export const SearchResults: FC<SearchResultsProps> = ({
               </>
             ) : (
               <div className="mt-10 rounded-2xl border border-dashed border-border bg-muted/25 px-6 py-12 text-center">
-                <p className="text-sm font-medium text-secondary-foreground">No results for that combination.</p>
+                <p className="text-sm font-medium text-secondary-foreground">
+                  No results for that combination.
+                </p>
                 <p className="mt-1 text-sm text-muted-foreground">{pack.copy.emptyHint}</p>
-                <Button type="button" variant="secondary" className="mt-5 rounded-lg" onClick={clearFilters}>
+                <Button
+                  type="button"
+                  variant="secondary"
+                  className="mt-5 rounded-lg"
+                  onClick={clearFilters}
+                >
                   Clear filters
                 </Button>
               </div>
@@ -867,5 +933,7 @@ export const SearchResults: FC<SearchResultsProps> = ({
 };
 
 export const Default = (props: ComponentProps) => (
-  <SearchResults className={typeof props.params?.styles === 'string' ? props.params.styles : undefined} />
+  <SearchResults
+    className={typeof props.params?.styles === 'string' ? props.params.styles : undefined}
+  />
 );

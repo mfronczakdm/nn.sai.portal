@@ -1,5 +1,5 @@
 ﻿generatedAt: "2026-03-20T09:00:00Z"
-lastUpdatedAt: "2026-08-31T21:05:00Z"
+lastUpdatedAt: "2026-09-01T12:20:00Z"
 lastUpdatedBy: "cursor-agent"
 
 project:
@@ -7504,6 +7504,44 @@ ia:
         - "Confirm SearchResults is allowed on headless-main in Pages (add may have bypassed placeholder whitelist)"
         - "Open /quanex/en/Search-Results?q=super+spacer on the shared editing host"
 
+  - name: "amkor-search-results-site-pack"
+    kind: "content"
+    status: "complete"
+    createdAt: "2026-09-01T12:20:00Z"
+    updatedAt: "2026-09-01T12:20:00Z"
+    siteCollection: "amkor"
+    siteName: "amkor"
+    notes:
+      - "2026-09-01: Added Amkor SearchResults site pack (src/lib/search-packs/amkor.ts) keyed by site name amkor. Same Default SearchResults component as Quanex/Pillsbury; catalog, facets, popular searches, and AI insight rules are Amkor-only. Unknown sites still fall back to env default then Quanex."
+      - "2026-09-01: Confirmed SearchResults ({7691AC50-2BAE-4FBD-9BA9-05480FD844E4}) already on Amkor Search Results headless-main. HeaderST SearchLink already pointed at Search Results {45F745C1-A6B1-4ECE-A053-84A109CEC45F}."
+      - "2026-09-01: Authored pageTitle/metadata on Search Results. No new Headless Variant — Default export is shared."
+    pages:
+      - { displayName: "Search Results", name: "Search Results", itemId: "{45F745C1-A6B1-4ECE-A053-84A109CEC45F}", path: "/sitecore/content/amkor/amkor/Home/Search Results", route: "/Search-Results" }
+    exampleItems:
+      - { name: "HeaderST datasource", itemId: "{ADA24C39-A4DC-4D06-8E81-9D433D8DEF7F}", path: "/sitecore/content/amkor/amkor/Presentation/Partial Designs/Global/Header/Data/Header", note: "SearchLink already internal to Search Results" }
+    rendering:
+      name: "SearchResults"
+      path: "/sitecore/layout/Renderings/Project/Portal/SearchResults/SearchResults"
+      itemId: "{7691AC50-2BAE-4FBD-9BA9-05480FD844E4}"
+      componentName: "SearchResults"
+    codeChanges:
+      - "src/lib/search-packs/amkor.ts"
+      - "src/lib/search-packs/index.ts"
+      - "src/components/search-results/SearchResults.tsx"
+      - "src/__tests__/lib/search-packs.test.ts"
+      - "src/__tests__/search-results/SearchResults.test.tsx"
+    verification:
+      checkedAt: "2026-09-01T12:20:00Z"
+      passed:
+        - "get_components_on_page shows SearchResults on Amkor Search Results"
+        - "HeaderST SearchLink id={45F745C1-A6B1-4ECE-A053-84A109CEC45F}"
+        - "Jest search-packs + SearchResults: 18 passed"
+      failed: []
+      pendingManual:
+        - "Publish Search Results page for Edge"
+        - "Open /amkor/en/Search-Results?q=S-Connect on the shared editing host and confirm AI panel + packaging facets"
+        - "Confirm Quanex /Search-Results?q=super+spacer is unchanged"
+
   - name: "Authentication"
     kind: "simple"
     category: "Portal"
@@ -8295,6 +8333,7 @@ ia:
         - "Optional: add postLogoutRedirect to HeaderST rendering parameters template"
 
     notes:
+      - "2026-08-31: Version1 language selector is now functional. English/Korean/Japanese/Simplified Chinese link to locale-prefixed URLs for the CURRENT page (/en/..., /ko-KR/..., /ja-JP/..., /zh-CN/...) instead of the old external amkor.com/kr|/jp|/cn hrefs, and the active language is highlighted via aria-current + --color-header-lang-active. Locale codes are the Sitecore language names (ja-JP, ko-KR, zh-CN). Shared plumbing: src/lib/locale.ts (new), routing.locales extended from [en] to [en, ja-JP, ko-KR, zh-CN], proxy.ts remembers the chosen language in an app-locale cookie and replays it on Sitecore's unprefixed links, and the catch-all page falls back to the default language when a page has no version in the requested language. amkor Home + children have real ja-JP content; ko-KR and zh-CN have no versions and therefore render the English fallback. No Sitecore items created or changed (amkor Version1 variant {3C5FBC3A-F12E-4EAF-A2B2-17DF9BEECE5A} already existed). Default/LoginRequired/Version2/Version3 unchanged."
       - "2026-08-29: Version1 cascade megamenu (MegaMenuCascade.tsx). MENU opens dark overlay; L1 column ? L2 ? L3 (Careers countries split). MegaMenuItem Default + LinkList HeaderPrimaryLinks/HeaderSecondaryLinks register into cascade when MegaMenuCascadeProvider wraps header-navigation (Version1 only). MobileMenuWrapper exports useMobileMenu + darkPanel. Default/Version2/Version3 unchanged."
       - "2026-08-29: Version1 cascade fix � darkPanel uses sr-only (not opacity-0 fixed overlay) when closed; L1 registration runs in Pages editing mode; utility/main rows z-[60] keep logo + lang row above overlay; partial-editing-mode still expands sr-only slot for Header PD authoring."
       - "2026-08-26: Version1 pixel-perfect to amkor.com. Two-tone Amkor tokens (--color-header-utility #4E4E4E top, --color-header-background #1E1E1E main, --color-header-menu #111 MENU box, --color-header-muted SEARCH...). Version1-hardcoded langs (English current / ??? / ??? / ???? ? amkor.com/kr|/jp|/cn) and six utility links (Document Library, Factory Certs, Investors, Cloud Services, Careers, Contact Us) � no new datasource fields. SupportLink skipped when it duplicates a utility label. HideCart still honored. Logo mix-blend lighten on [data-theme=amkor] Version1 to drop a baked-in black plate; authors should still upload Amkor-white.svg. Default/Version2/Version3 unchanged. Code-only."
@@ -10444,6 +10483,72 @@ workflowApproval:
     - "Stale/deleted manifest IDs � remove or refresh: {06A429E2-A31F-40ED-AF05-AAC53F54401D}, {453D5D4E-D9C0-4B99-8099-CD6E66584D3F}, {5F8FF7C8-88D8-429F-ABE9-CDF92B89863A}, {61979ED4-3BAD-49C2-AF3D-0D725DF1884A}, {7C2EDB0E-035E-4A22-B069-F8242035EA9D}, {96A42097-34D6-465C-990D-B801882D7B27}, {D477F40A-6C82-40B2-AEAC-4F2F8DB5F03A}, {DFC20993-D8F0-44B4-BA5C-846540B4E0EC}, {E5B4577C-12CD-4196-AD2F-FE60E49B5567}, {FC928466-98E1-46E8-9842-5FE7DD44271D}"
     - "Template items without workflow field (not content): {25CF32E0-C2D1-4E72-8CB9-FDEB000BE0D7}, {69728677-52E5-4482-A415-94F0222799B8}, {A9919790-3389-4FC2-ABC8-24F73C847C8E}, {B2B918C3-ACDA-433F-A11B-718466493AEC}, {D77937AC-BAE4-4EB0-8D7E-69EC09D5BBFC}"
     - "Dictionary leaf items and Media library assets not exhaustively tree-walked � approve/publish manually if workflow-enabled"
+  headerDataFolderPass:
+    checkedAt: "2026-08-31T21:55:00Z"
+    scope: "/sitecore/content/amkor/amkor/Presentation/Partial Designs/Global/Header/Data and ALL descendants"
+    folderItemId: "{45493019-F268-4CF4-9BC1-F23C9E6DFC40}"
+    totalItemsInSubtree: 84
+    mechanism: >
+      MCP user-marketer update_fields_on_item writing field "__Workflow state" =
+      {FCA998C5-0CC3-4F91-94D8-0A4E6CAECE88} (Sample Workflow / Approved, final=true).
+      No workflow command executed, no publish, no other field values changed.
+    readBackPitfall: >
+      get_content_item_by_path always returns workflow: null; ONLY get_content_item_by_id
+      surfaces workflow.workflowState. The update_fields_on_item response also omits
+      __Workflow state from its updatedFields echo, so the write looks silent even when it
+      succeeded. Always verify with get_content_item_by_id.
+    approved:
+      - { name: "Amps", itemId: "{B360D712-0ED3-4DF2-A27A-AFC47827EF4A}", template: "MegaMenuItem", before: "Draft", after: "Approved" }
+      - { name: "Applications", itemId: "{23698738-6225-468E-8CA7-680C76B3F4E9}", template: "MegaMenuItem", after: "Approved" }
+      - { name: "Applications_Nav", itemId: "{8412B1CD-D181-4F0E-82BE-660BD27135CA}", template: "MegaMenuItem", after: "Approved" }
+      - { name: "Artist Services", itemId: "{064532F1-C321-4BD4-87A9-D06A88B36402}", template: "MegaMenuItem", after: "Approved" }
+      - { name: "Header (HeaderST datasource)", itemId: "{ADA24C39-A4DC-4D06-8E81-9D433D8DEF7F}", template: "HeaderST", after: "Approved" }
+      - { name: "Headphones", itemId: "{44E6D296-49CA-4AD2-B8C9-F6F1085EF529}", template: "MegaMenuItem", after: "Approved" }
+      - { name: "Pro", itemId: "{2276E4D3-3234-4AC6-AB25-515F73A5611D}", template: "MegaMenuItem", after: "Approved" }
+      - { name: "Quality", itemId: "{D7A4667E-B2AC-48DF-93FE-94654A065F8C}", template: "MegaMenuItem", after: "Approved" }
+      - { name: "Quality_Mega", itemId: "{E0ED4D17-81A1-45A8-A774-C5F678BC10DD}", template: "MegaMenuItem", after: "Approved" }
+      - { name: "Quality_Nav", itemId: "{D65D06AE-EF5D-4DDF-94D3-1783F0F63001}", template: "MegaMenuItem", after: "Approved" }
+      - { name: "Speakers", itemId: "{31AD7DBB-CB85-478E-8964-CAB33D36B82B}", template: "MegaMenuItem", after: "Approved" }
+    counts:
+      totalAttempted: 84
+      approvedAndVerified: 11
+      alreadyApproved: 0
+      noWorkflowAssigned: 73
+      failed: 0
+    noWorkflowAssigned: >
+      73 items in the subtree have NO workflow assigned at all (__Workflow empty), so
+      __Workflow state is inert on them and get_content_item_by_id returns workflow: null
+      after the write. Templates involved: Page Data (the Data folder itself,
+      {45493019-F268-4CF4-9BC1-F23C9E6DFC40}), Link List (10 items:
+      {723556A7-A15A-4055-A8C0-63C1347FAB21}, {5E63CB6C-F4F3-40CE-BBB0-B8FEA09CEFB4},
+      {3435E045-6B34-473C-8135-102FA4FFDF1D}, {F449D25B-E169-47DB-927E-1E41367FCE7C},
+      {CC008753-10B0-4A2D-B310-959AE61F9A69}, {D26400BE-7189-4B25-8223-AC7503EE92F2},
+      {BA9677AA-DCFB-4A32-867F-BB464360039B}, {4615C242-EB1C-4AEB-AB27-589837931C1D},
+      {E11366B7-8657-4ABB-B19E-79263259AF3D}, {00549EC3-E9B2-4B1B-9157-8A85633B9FF7}),
+      Image (1 item: {82F7CE01-5D96-4BF6-9C7B-7675B043C45F}), and Link (61 leaf link items
+      under the ten Link List parents). Items outside workflow are NOT blocked from
+      publishing, so this is not a demo blocker.
+    verification:
+      exhaustive: >
+        All 11 workflow-enabled items read back individually via get_content_item_by_id and
+        confirmed workflow.workflowState = { final: true, displayName: "Approved" }.
+        The Data folder, all 10 Link List items and Image 1 read back individually and
+        confirmed workflow: null (no workflow assigned).
+      sampled: >
+        Link leaf items verified by sample, not exhaustively: 8 of 61 read back by id
+        ({A9FCF0EE-CB44-417C-B7F6-C08BDF6603FD}, {3B515B03-88EC-4D15-8F82-DF00DCFBF384},
+        {D5490E5D-4880-427A-83D8-38093F785D30}, {769F7AD9-2EB5-4058-BBA5-F01ACC36F0E1},
+        {F67DA0E0-33E3-4345-B759-8036816A9726}, {BC8F90AE-12E4-40CA-85A9-4B71DA7C970B},
+        {1447E9ED-C4C0-4CA8-9BE1-31C39C65D754}, {774B3E10-2D26-471D-A08D-D65E944AC8EF}),
+        all returning workflow: null. The remaining 53 share the identical Link template
+        {6F108E3C-5D57-42F8-A910-C22920269B0A} and are assumed to behave identically.
+    concurrentTaskNote: >
+      Re-enumerated the Data folder immediately before and after the writes; both passes
+      returned the same 22 direct children. No language-selector datasource item had
+      appeared under this folder from the concurrent HeaderST Version1 work at the time of
+      this pass. If one is added later it will need approving separately.
+    pendingManual:
+      - "Publish the amkor Header partial design subtree (including Data) to Experience Edge � approval alone does not push content to Edge"
 
 
 externalImageRenderingVerdict:

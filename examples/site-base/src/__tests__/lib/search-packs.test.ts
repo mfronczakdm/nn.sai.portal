@@ -20,8 +20,10 @@ jest.mock('lucide-react', () => {
 const KNOWN = listSearchPackSiteNames();
 
 describe('search pack registry', () => {
-  it('registers quanex, era, amesburytruth, and pillsburylaw', () => {
-    expect(KNOWN.sort()).toEqual(['amesburytruth', 'era', 'pillsburylaw', 'quanex'].sort());
+  it('registers quanex, era, amesburytruth, pillsburylaw, and amkor', () => {
+    expect(KNOWN.sort()).toEqual(
+      ['amesburytruth', 'amkor', 'era', 'pillsburylaw', 'quanex'].sort()
+    );
   });
 
   it('resolves packs by siteName (case-insensitive)', () => {
@@ -96,9 +98,9 @@ describe('Quanex catalog matching', () => {
       itemMatchesQuery(item, 'warm-edge spacer for residential IG', pack.bucketSynonyms)
     );
     expect(hits.some((item) => /super spacer/i.test(item.title))).toBe(true);
-    expect(hits.every((item) => !/lawyer|abate|pillsbury/i.test(`${item.title} ${item.href}`))).toBe(
-      true
-    );
+    expect(
+      hits.every((item) => !/lawyer|abate|pillsbury/i.test(`${item.title} ${item.href}`))
+    ).toBe(true);
   });
 
   it('selects application-aware IG insight copy', () => {
@@ -110,6 +112,31 @@ describe('Quanex catalog matching', () => {
   it('does not leak Pillsbury popular searches', () => {
     const joined = pack.popularSearches.join(' ').toLowerCase();
     expect(joined).not.toMatch(/lawyer|saudi|export-control|mark abate/);
+  });
+});
+
+describe('Amkor catalog matching', () => {
+  const pack = getSearchPack('amkor');
+
+  it('returns S-Connect and FCBGA for AI packaging queries, not Quanex spacers', () => {
+    const hits = pack.catalog.filter((item) =>
+      itemMatchesQuery(item, 'S-Connect for AI accelerators', pack.bucketSynonyms)
+    );
+    expect(hits.some((item) => /s-connect/i.test(item.title))).toBe(true);
+    expect(
+      hits.every((item) => !/super spacer|duralite|quanex/i.test(`${item.title} ${item.href}`))
+    ).toBe(true);
+  });
+
+  it('selects AI interconnect insight copy', () => {
+    const insight = selectAiSearchInsight('S-Connect for AI accelerators', pack.insightRules);
+    expect(insight?.id).toBe('ai-amkor-ai');
+    expect(insight?.headline.toLowerCase()).toMatch(/interconnect|package/);
+  });
+
+  it('does not leak Quanex or Pillsbury popular searches', () => {
+    const joined = pack.popularSearches.join(' ').toLowerCase();
+    expect(joined).not.toMatch(/super spacer|lawyer|mark abate/);
   });
 });
 
