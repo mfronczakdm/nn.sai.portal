@@ -20,6 +20,7 @@ import {
   defaultCalendarMonth,
   filterEvents,
   groupEventsByDate,
+  listingFieldJson,
   listingFieldString,
   resolveEvent,
   type EventListingDatasource,
@@ -34,10 +35,6 @@ export type EventListingProps = ComponentProps & {
 };
 
 const EventListingEmpty = (): JSX.Element => <NoDataFallback componentName="EventListing" />;
-
-function fieldText(field?: { jsonValue?: { value?: string } }): { value?: string } | undefined {
-  return field?.jsonValue as { value?: string } | undefined;
-}
 
 export const Default = ({ fields, params }: EventListingProps): JSX.Element => {
   const { page } = useSitecore();
@@ -73,7 +70,7 @@ export const Default = ({ fields, params }: EventListingProps): JSX.Element => {
   const moreInfoLabel = listingFieldString(datasource.moreInfoLabel) || 'More Info';
   const clearLabel = listingFieldString(datasource.clearCalendarLabel) || 'CLEAR CALENDAR SELECTION';
   const emptyText = listingFieldString(datasource.emptyResultsText) || 'No events match your filters.';
-  const listingTitle = fieldText(datasource.listingTitle);
+  const listingTitle = listingFieldJson(datasource.listingTitle);
 
   const toggleType = (type: string) => {
     setSelectedTypes((current) =>

@@ -67,14 +67,27 @@ export type EventDateGroup = {
   events: ResolvedEvent[];
 };
 
-function fieldString(field?: JsonField | null): string {
+function jsonRawValue(field?: JsonField | null): unknown {
   const fromJson = field?.jsonValue as { value?: unknown } | undefined;
-  const value = fromJson?.value ?? field?.value;
+  return fromJson?.value ?? field?.value;
+}
+
+function fieldString(field?: JsonField | null): string {
+  const value = jsonRawValue(field);
   return typeof value === 'string' ? value.trim() : '';
 }
 
 export function listingFieldString(field?: JsonField | null): string {
   return fieldString(field);
+}
+
+/** Sitecore `<Text field>` value from GraphQL jsonValue (unknown → string). */
+export function listingFieldJson(field?: JsonField | null): { value?: string } | undefined {
+  if (!field) return undefined;
+  const fromJson = field.jsonValue as { value?: unknown } | undefined;
+  if (!fromJson && field.value === undefined) return undefined;
+  const value = jsonRawValue(field);
+  return { value: typeof value === 'string' ? value : undefined };
 }
 
 export function itemHref(item: EventListingChild): string {
@@ -104,7 +117,7 @@ export function resolveEvent(item: EventListingChild): ResolvedEvent {
     eventType: fieldString(item.eventType),
     timezone,
     listingDateTime: start ? formatListingDateTime(start, end, timezone) : '',
-    titleField: item.pageTitle?.jsonValue as { value?: string } | undefined,
+    titleField: listingFieldJson(item.pageTitle),
   };
 }
 

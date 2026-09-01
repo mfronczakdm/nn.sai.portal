@@ -11,6 +11,8 @@ import {
   collectEventTypes,
   filterEvents,
   groupEventsByDate,
+  listingFieldJson,
+  listingFieldString,
   resolveEvent,
   type EventListingChild,
 } from '@/lib/event-listing-model';
@@ -107,5 +109,14 @@ describe('event-listing-model', () => {
 
   it('collects taxonomy types from authored event pages', () => {
     expect(collectEventTypes(events)).toEqual(['Networking', 'Trend Talk']);
+  });
+
+  it('narrows GraphQL jsonValue unknown to a string Text field', () => {
+    expect(listingFieldJson({ jsonValue: { value: 'Upcoming Events' } })).toEqual({
+      value: 'Upcoming Events',
+    });
+    expect(listingFieldString({ jsonValue: { value: 'Upcoming Events' } })).toBe('Upcoming Events');
+    expect(listingFieldJson({ jsonValue: { value: 42 } })).toEqual({ value: undefined });
+    expect(listingFieldJson(undefined)).toBeUndefined();
   });
 });

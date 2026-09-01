@@ -3355,6 +3355,31 @@ lookups:
     itemId: "{EE1C620E-FEC0-4F01-B094-2BB79AB8BA19}"
     lastReadAt: "2026-09-01T20:50:00Z"
     note: "Available Renderings — MCP Renderings read returned only 4 GUIDs (truncated). NEVER replace. Append EventListing {17C29F6F-B7BD-41F6-864B-1FEDF1052B05} and EventDetail {CDB363AE-7A5E-4C9E-83FB-A35C21EA8206} in Content Editor."
+  - path: "/sitecore/content/andmore/atlanta-apparel/Presentation/Partial Designs/Global"
+    itemId: "{8549F804-0153-4E80-8D46-DE2485C9BF0F}"
+    lastReadAt: "2026-09-01T21:00:00Z"
+  - path: "/sitecore/content/andmore/atlanta-apparel/Presentation/Partial Designs/Global/Header"
+    itemId: "{506BF874-2F4C-4415-8A7B-A17014A1E65C}"
+    lastReadAt: "2026-09-01T21:00:00Z"
+  - path: "/sitecore/content/andmore/atlanta-apparel/Presentation/Partial Designs/Global/Header/Data"
+    itemId: "{E3728B9D-B349-4E33-8C12-7798FDF73703}"
+    lastReadAt: "2026-09-01T21:05:00Z"
+  - path: "/sitecore/content/andmore/atlanta-apparel/Presentation/Partial Designs/Global/Header/Data/Header"
+    itemId: "{7F8DB448-8595-469D-A161-0364133D562C}"
+    lastReadAt: "2026-09-01T21:05:00Z"
+    note: "HeaderST datasource — SupportLink retargeted to Visit/Registration"
+  - path: "/sitecore/content/andmore/atlanta-apparel/Presentation/Partial Designs/Global/Footer"
+    itemId: "{372C49C6-C06B-4ACD-A184-E59A0FA17648}"
+    lastReadAt: "2026-09-01T21:00:00Z"
+  - path: "/sitecore/content/andmore/atlanta-apparel/Presentation/Partial Designs/Global/Footer/Data"
+    itemId: "{9C81AEB5-F1DB-4840-8544-220617CB97D5}"
+    lastReadAt: "2026-09-01T21:00:00Z"
+  - path: "/sitecore/content/andmore/atlanta-apparel/Home"
+    itemId: "{011D81AC-F13E-4DC1-A142-88119D17A7B5}"
+    lastReadAt: "2026-09-01T21:00:00Z"
+  - path: "/sitecore/content/andmore/atlanta-apparel/Home/Visit/Events"
+    itemId: "{47CEA21C-AEC1-4775-93BC-7F5D5B92DFAF}"
+    lastReadAt: "2026-09-01T21:00:00Z"
   - path: "/sitecore/content/lcmc/lcmc/Presentation/Available Renderings/Homepage Kit"
     itemId: "{72E55B4F-12C7-4D15-9E7C-71F88370D501}"
     lastReadAt: "2026-08-25T03:00:00Z"
@@ -7859,6 +7884,77 @@ ia:
       pendingManual:
         - "Set insert options on Visit/Events to Event Page so authors can insert from Content Editor (__Masters silent-write)"
         - "Publish Event Page template + event items (currently Draft workflow)"
+
+  - name: "atlanta-apparel-header-footer-nav-remap"
+    kind: "content-update"
+    category: "Navigation"
+    status: "complete"
+    createdAt: "2026-09-01T21:00:00Z"
+    updatedAt: "2026-09-01T21:10:00Z"
+    siteCollection: "andmore"
+    siteName: "atlanta-apparel"
+    notes:
+      - "2026-09-01: Remapped Header + Footer Partial Design datasources under /Presentation/Partial Designs/Global to atlanta-apparel Home IA. Did not restyle other sites or change HeroST Default. HeaderST variants not renamed. Available Renderings not written."
+      - "L1 megas kept starter item names (Speakers/Headphones/Amps/Pro/Artist Services) because layout binds local:/Data/...; Title+Link remapped to Exhibitor Directory, Markets & Events, Visit, Discover→Categories, Exhibit."
+      - "Markets & Visit Events nav points at Home/Visit/Events {47CEA21C-AEC1-4775-93BC-7F5D5B92DFAF}. HeaderST SupportLink → Registration."
+      - "Added Discover/Exhibit LinkLists via add_component_on_page (auto-created underscore local lists populated as layout-bound copies). Unique named secondaries created; set_component_datasource reported success (MCP get_components_on_page often still shows local:/Data starter names). Loud for less / By feature updated in place as fallback."
+    relatedItems:
+      headerPartialDesignId: "{506BF874-2F4C-4415-8A7B-A17014A1E65C}"
+      headerDataFolderId: "{E3728B9D-B349-4E33-8C12-7798FDF73703}"
+      footerPartialDesignId: "{372C49C6-C06B-4ACD-A184-E59A0FA17648}"
+      footerDataFolderId: "{9C81AEB5-F1DB-4840-8544-220617CB97D5}"
+      headerstDatasourceId: "{7F8DB448-8595-469D-A161-0364133D562C}"
+      footerstDatasourceId: "{18C99EBE-56DD-4285-A66B-F917395E152D}"
+      eventsPageId: "{47CEA21C-AEC1-4775-93BC-7F5D5B92DFAF}"
+      megaMenus:
+        - { itemName: "Speakers", itemId: "{0B0BEFC7-2E6D-4234-B4D9-63D8C5FDA738}", title: "Exhibitor Directory", pageId: "{21A89CBC-2730-4989-8289-085CEA0B6BA5}" }
+        - { itemName: "Headphones", itemId: "{A2316A4A-F6B9-4E8A-843A-4B1AF106E592}", title: "Markets & Events", pageId: "{ECB4D5C8-A179-428C-A897-1A6626F82E13}" }
+        - { itemName: "Amps", itemId: "{6651F1E2-B3CB-42C2-9F94-39B33DA4EE52}", title: "Visit", pageId: "{F6CAECE4-C4C6-466A-9D9F-170D90294CE0}" }
+        - { itemName: "Pro", itemId: "{7102C054-2BF3-4D20-B431-E61AD3412F6F}", title: "Discover", pageId: "{64CE9116-4EC0-4C65-947F-96E60D324C4B}" }
+        - { itemName: "Artist Services", itemId: "{0D05E541-A246-4065-B766-7830A0C05972}", title: "Exhibit", pageId: "{1DAB23FB-1431-430C-95B9-18D374F86720}" }
+      primaryLinkLists:
+        - { itemName: "Speakers Primary Links", itemId: "{E5F6C884-92F0-48B5-94ED-BA68C5F2801E}", note: "Brand Directory only" }
+        - { itemName: "Headphones Primary Links", itemId: "{B37F15E8-A7BB-4BD3-82B7-E9FF31C44745}", note: "Atlanta Apparel, Formal Markets, Press Center, Events" }
+        - { itemName: "Amps Primary Links", itemId: "{E3C5393B-1251-4ED3-8B24-D164AA983189}", note: "Visit L2 including Events" }
+        - { itemName: "Discover_Primary_Links", itemId: "{0D86F9FA-DC68-4BC5-94D7-2843F58B0307}", note: "Layout-bound auto-created list" }
+        - { itemName: "Exhibit_Primary_Links", itemId: "{83ABBD6F-FB61-41D4-A385-68DD3BA40128}", note: "Layout-bound auto-created list" }
+      secondaryLinkLists:
+        - { itemName: "Plan Your Visit", itemId: "{D7C4681A-E377-44BB-A13E-A5DFC6453C22}" }
+        - { itemName: "Atlanta Apparel Markets", itemId: "{B57CDBE2-B257-4921-8337-73A3609A1B63}" }
+        - { itemName: "Formal Markets Links", itemId: "{4443F2A6-CB68-4EA0-A5B4-7D0FEBC2DFE5}" }
+        - { itemName: "Press Center Links", itemId: "{42F579FD-D565-4CBB-89DE-4A96F831EE50}" }
+        - { itemName: "Press_Center_Links", itemId: "{7784A400-A1E3-4DDE-85D0-1BA7BC9704CF}", note: "Layout-bound copy" }
+        - { itemName: "Registration Links", itemId: "{2AC3015F-72F4-4422-A18B-3C753C0E523F}" }
+        - { itemName: "Travel Links", itemId: "{D9914739-9E56-4DE4-AEA2-E9AB71FCAF77}" }
+        - { itemName: "Discover Categories", itemId: "{9BF597A7-1200-457E-ADA4-535F6EA38C91}" }
+        - { itemName: "Discover_Categories", itemId: "{56597768-B546-45EE-AE88-255967006F45}", note: "Layout-bound copy" }
+        - { itemName: "Exhibit at Atlanta Apparel Links", itemId: "{81E4E084-CEA0-407A-851E-F3A57704AB59}" }
+        - { itemName: "Exhibit_at_Atlanta_Apparel_Links", itemId: "{A411F15C-6ADE-4F6F-BE7E-A4F8AA9E6D58}", note: "Layout-bound copy" }
+        - { itemName: "Exhibitor Resources Links", itemId: "{6041737F-37E6-466D-A632-E4454B6A4504}" }
+        - { itemName: "Exhibitor_Resources_Links", itemId: "{0DED2B97-B4BA-4AC7-AC5A-AE83EB9C20FF}", note: "Layout-bound copy" }
+        - { itemName: "Loud for less", itemId: "{F5849D67-7594-43E5-94CC-F9E0DF804A5F}", note: "Fallback retitled Plan Your Visit" }
+        - { itemName: "By feature", itemId: "{410AD6AD-FC2C-407D-AC2E-B2DCCC298949}", note: "Fallback retitled Formal Markets" }
+      footerLinkLists:
+        - { itemName: "Primary Links", itemId: "{27F4AE94-B2BA-4E3E-97A0-D7ACC1BE1DCF}", title: "Explore" }
+        - { itemName: "Secondary Links", itemId: "{87AEB3D2-290C-4F58-9520-6C8005C29282}", title: "Visit" }
+    verification:
+      checkedAt: "2026-09-01T21:10:00Z"
+      passed:
+        - "Five MegaMenuItems Title+Link remapped to Home L1 (Discover L1 points at Categories folder landing)"
+        - "Markets primary Link 4 and footer secondary Link 2 point at Visit/Events {47CEA21C-...}"
+        - "Visit primary includes Registration through Safety and Security"
+        - "Discover_Primary_Links and Exhibit_Primary_Links populated and placed on megas"
+        - "Footer Primary = five L1s; Secondary = Registration/Events/Floor Plans/Hotels/Press Center/Plan Your Market/Brand Directory"
+        - "HeaderST SupportLink = Register → Registration; FooterST Title/Copyright Atlanta Apparel"
+        - "Did not overwrite Available Renderings; did not edit HeroST.tsx"
+      failed: []
+      pendingManual:
+        - "Publish Header + Footer Partial Designs and Header/Data + Footer/Data (MegaMenuItems in Draft) for Edge"
+        - "Confirm in Experience Editor that Discover/Exhibit dropdowns use the new LinkLists and Markets/Visit secondaries are unique (not shared Loud for less)"
+        - "Optional: remove empty More speakers LinkList rendering from Exhibitor Directory mega"
+        - "Optional: delete unused starter Speakers/Headphones/Amps item names after confirming Title fields render"
+        - "Leftover Home pages Speakers and Video are SYNC starter remnants — not in live Atlanta Apparel IA; left out of nav"
+        - "Footer Our Markets sister brands and Contact/Careers are external (no Home equivalents) — not added"
 
   - name: "amkor-download-list-related-downloads"
     kind: "content"
