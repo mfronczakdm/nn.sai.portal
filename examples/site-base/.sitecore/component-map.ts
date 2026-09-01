@@ -29,6 +29,8 @@ import * as LinkColumnsBand from 'src/components/uiim/global-elements/LinkColumn
 import * as IconLinkBar from 'src/components/uiim/global-elements/IconLinkBar';
 import * as HeroQuickLinks from 'src/components/uiim/global-elements/HeroQuickLinks';
 import * as ButtonRow from 'src/components/uiim/global-elements/ButtonRow';
+import * as EventListing from 'src/components/uiim/events/EventListing';
+import * as EventDetail from 'src/components/uiim/events/EventDetail';
 import * as MediaCanvas from 'src/components/uiim/banners/MediaCanvas';
 import * as HeroCarousel from 'src/components/uiim/banners/HeroCarousel';
 import * as TopicListing from 'src/components/topic-listing/TopicListing';
@@ -345,6 +347,8 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['IconLinkBar', { ...IconLinkBar }],
   ['HeroQuickLinks', { ...HeroQuickLinks, componentType: 'client' }],
   ['ButtonRow', { ...ButtonRow }],
+  ['EventListing', { ...EventListing, componentType: 'client' }],
+  ['EventDetail', { ...EventDetail, componentType: 'client' }],
   ['MediaCanvas', { ...MediaCanvas }],
   ['HeroCarousel', { ...HeroCarousel, componentType: 'client' }],
   ['TopicListing', { ...TopicListing }],

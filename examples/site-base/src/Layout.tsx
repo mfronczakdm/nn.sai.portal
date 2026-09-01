@@ -76,6 +76,15 @@ export interface RouteFields {
   TechnicalData?: Field;
   StylesAvailable?: Field;
   Benefits?: Field;
+  /** Atlanta Apparel Event Page fields */
+  EventStart?: Field;
+  EventEnd?: Field;
+  EventLocation?: Field;
+  EventType?: Field;
+  EventTimezone?: Field;
+  BackLinkText?: Field;
+  AddToCalendarLabel?: Field;
+  DetailsHeading?: Field;
 }
 
 const Layout = ({ page, baseUrl: baseUrlProp }: LayoutProps): JSX.Element => {

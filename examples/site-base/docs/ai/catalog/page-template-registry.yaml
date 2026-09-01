@@ -7,6 +7,37 @@
 
 pageTemplates:
 
+  - id: event
+    name: "Event Page"
+    inheritsFrom: "andmore-services-page"
+    description: "Atlanta Apparel (andmore) event detail page with listing children under Visit/Events"
+    templatePath: "/sitecore/templates/Project/andmore/Event Page"
+    templateId: "{6CCF3409-0A26-4069-92EC-2099DAE63088}"
+    templateSection: "Event Data"
+    fields:
+      - { name: "EventStart", type: "Datetime", purpose: "event start wall-clock" }
+      - { name: "EventEnd", type: "Datetime", purpose: "event end wall-clock" }
+      - { name: "EventLocation", type: "Single-Line Text", purpose: "building / floor / suite" }
+      - { name: "EventType", type: "Droplist", purpose: "Seminar|Networking|Trend Talk|Amenity" }
+      - { name: "EventTimezone", type: "Single-Line Text", purpose: "display timezone, default EST" }
+      - { name: "BackLinkText", type: "Single-Line Text", purpose: "listing back link label" }
+      - { name: "AddToCalendarLabel", type: "Single-Line Text", purpose: "ICS download link label" }
+      - { name: "DetailsHeading", type: "Single-Line Text", purpose: "details section heading" }
+    inheritedFieldsUsed:
+      - "pageTitle"
+      - "image"
+      - "Detail"
+      - "pageSummary"
+    contextComponents:
+      - id: event-detail
+        name: "EventDetail"
+        category: "events"
+        filePath: "src/components/uiim/events/EventDetail.tsx"
+      - id: event-listing
+        name: "EventListing"
+        category: "events"
+        filePath: "src/components/uiim/events/EventListing.tsx"
+
   - id: article
     name: "Article Page"
     inheritsFrom: "base-page-template"  # resolved via MCP at implementation time

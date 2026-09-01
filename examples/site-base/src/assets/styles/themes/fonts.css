@@ -272,7 +272,12 @@ html[data-theme='atlanta-apparel'] :where(h1, .h1, h2, .h2, h3, .h3) {
   text-transform: uppercase;
 }
 
-html[data-theme='atlanta-apparel'] .btn.btn-primary {
+html[data-theme='atlanta-apparel'] .btn,
+html[data-theme='atlanta-apparel'] .btn.btn-primary,
+html[data-theme='atlanta-apparel'] .btn.btn-secondary,
+html[data-theme='atlanta-apparel'] .btn.btn-outline,
+html[data-theme='atlanta-apparel'] .btn.btn-ghost,
+html[data-theme='atlanta-apparel'] .hero-st-version1 .btn {
   border-radius: 0;
   text-transform: uppercase;
   letter-spacing: 0.03em;
@@ -281,6 +286,13 @@ html[data-theme='atlanta-apparel'] .btn.btn-primary {
 html[data-theme='atlanta-apparel'] .btn.btn-primary:hover {
   background-color: var(--color-primary-hover);
   color: var(--color-primary-foreground);
+}
+
+html[data-theme='atlanta-apparel'] .btn.btn-secondary,
+html[data-theme='atlanta-apparel'] .hero-st-version1 .btn.btn-secondary {
+  background-color: transparent;
+  color: var(--color-foreground);
+  border: 1px solid var(--color-foreground);
 }
 
 /* lcmchealth.org: Jubilat display → Zilla Slab; Gilroy/Arial body → Open Sans; green rounded CTAs. */

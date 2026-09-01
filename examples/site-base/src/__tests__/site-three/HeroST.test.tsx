@@ -7,6 +7,7 @@ import {
   Centered as HeroSTCentered,
   SplitScreen as HeroSTSplitScreen,
   Stacked as HeroSTStacked,
+  Version1 as HeroSTVersion1,
 } from '@/components/site-three/HeroST';
 
 // Mock useContainerOffsets hook
@@ -310,6 +311,80 @@ describe('HeroST', () => {
       const { container } = render(<HeroSTStacked {...mockProps} />);
       const section = container.querySelector('section');
       expect(section).toHaveClass('test-styles');
+    });
+  });
+
+  describe('Version1 variant', () => {
+    it('renders title as the terracotta headline', () => {
+      render(<HeroSTVersion1 {...mockProps} />);
+      expect(screen.getByText('Premium Audio Experience')).toBeInTheDocument();
+    });
+
+    it('renders eyebrow as the dates line below the title', () => {
+      const { container } = render(<HeroSTVersion1 {...mockProps} />);
+      expect(screen.getByText('New Collection')).toBeInTheDocument();
+      const title = container.querySelector('h1');
+      const dates = container.querySelector('p');
+      expect(title).toHaveClass('text-[var(--color-hero-headline)]');
+      expect(dates).toHaveTextContent('New Collection');
+    });
+
+    it('uses a collage-left copy-right split, not a full-bleed overlay', () => {
+      const { container } = render(<HeroSTVersion1 {...mockProps} />);
+      const section = container.querySelector('section');
+      expect(section).toHaveAttribute('data-hero-st-variant', 'Version1');
+      expect(section).toHaveClass('hero-st-version1');
+      expect(section).toHaveClass('test-styles');
+      expect(container.querySelector('[data-hero-st-collage-mosaic]')).toBeInTheDocument();
+      expect(container.querySelector('.lg\\:grid-cols-2')).toBeInTheDocument();
+    });
+
+    it('keeps collage panels rectangular', () => {
+      const { container } = render(<HeroSTVersion1 {...mockProps} />);
+      const mosaic = container.querySelector('[data-hero-st-collage-mosaic]');
+      expect(mosaic).toHaveClass('rounded-none');
+      mosaic?.querySelectorAll(':scope > div').forEach((panel) => {
+        expect(panel).toHaveClass('rounded-none');
+      });
+    });
+
+    it('renders square primary and secondary CTAs', () => {
+      const { container } = render(<HeroSTVersion1 {...mockProps} />);
+      expect(screen.getByText('Shop Now')).toHaveClass('btn', 'btn-primary', 'rounded-none');
+      expect(screen.getByText('Learn More')).toHaveClass('btn', 'btn-secondary', 'rounded-none');
+      expect(container.querySelector('.btn.rounded-full')).not.toBeInTheDocument();
+    });
+
+    it('treats Image1 as a composite cover when Image2 is absent', () => {
+      const propsWithoutImage2: any = {
+        ...mockProps,
+        fields: {
+          ...mockProps.fields,
+          Image2: undefined,
+        },
+      };
+      const { container } = render(<HeroSTVersion1 {...propsWithoutImage2} />);
+      const images = screen.getAllByRole('img');
+      expect(images[0]).toHaveClass('object-cover');
+      expect(container.querySelector('[data-hero-st-collage-mosaic]')).toBeInTheDocument();
+    });
+
+    it('overlays Image1 on the mosaic when Image2 is present', () => {
+      render(<HeroSTVersion1 {...mockProps} />);
+      const images = screen.getAllByRole('img');
+      expect(images.length).toBeGreaterThan(1);
+      expect(images[0]).toHaveAttribute('src', '/images/hero-product.jpg');
+      expect(images[1]).toHaveClass('object-contain');
+    });
+
+    it('does not change Default layout classes', () => {
+      const { container } = render(<HeroSTDefault {...mockProps} />);
+      expect(container.querySelector('section')).not.toHaveAttribute(
+        'data-hero-st-variant',
+        'Version1'
+      );
+      expect(container.querySelector('[data-hero-st-collage-mosaic]')).not.toBeInTheDocument();
+      expect(container.querySelector('section')).toHaveClass('border-8');
     });
   });
 

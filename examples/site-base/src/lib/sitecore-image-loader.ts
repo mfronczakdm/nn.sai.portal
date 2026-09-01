@@ -34,7 +34,9 @@ function isDirectProductMediaHost(hostname: string): boolean {
     hostname === 'eraeverywhere.com' ||
     hostname.endsWith('.eraeverywhere.com') ||
     hostname === 'amesburytruth.com' ||
-    hostname.endsWith('.amesburytruth.com')
+    hostname.endsWith('.amesburytruth.com') ||
+    hostname === 'atlanta-apparel.com' ||
+    hostname.endsWith('.atlanta-apparel.com')
   );
 }
 

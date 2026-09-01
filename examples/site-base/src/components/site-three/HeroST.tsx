@@ -333,3 +333,107 @@ export const Stacked = (props: PageHeaderSTProps) => {
     </section>
   );
 };
+
+function hasImageSrc(field?: ImageField): boolean {
+  return Boolean(field?.value?.src);
+}
+
+/** Rectangular earth-tone mosaic with white gutters — not MediaCanvas ovals. */
+function CollageMosaicBackdrop() {
+  return (
+    <div
+      aria-hidden="true"
+      data-hero-st-collage-mosaic=""
+      className="absolute inset-0 grid grid-cols-6 grid-rows-6 gap-1.5 rounded-none bg-[var(--color-hero-surface,var(--color-background))]"
+    >
+      <div className="col-span-6 row-span-2 rounded-none bg-[var(--color-hero-headline)]" />
+      <div className="col-span-2 row-span-4 rounded-none bg-[var(--color-primary)]" />
+      <div className="col-span-2 row-span-2 rounded-none bg-[var(--color-accent)]" />
+      <div className="col-span-2 row-span-2 rounded-none bg-[color-mix(in_srgb,var(--color-primary)_50%,white)]" />
+      <div className="col-span-2 row-span-2 rounded-none bg-[color-mix(in_srgb,var(--color-hero-headline)_75%,var(--color-accent))]" />
+      <div className="col-span-2 row-span-2 rounded-none bg-[color-mix(in_srgb,var(--color-accent)_70%,black)]" />
+    </div>
+  );
+}
+
+/* Version1 — Atlanta Apparel collage-left / copy-right. Default and other exports are unchanged. */
+export const Version1 = (props: PageHeaderSTProps) => {
+  const portraitOrComposite = props?.fields?.Image1;
+  const mosaicImage = props?.fields?.Image2;
+  const hasMosaicImage = hasImageSrc(mosaicImage);
+
+  return (
+    <section
+      {...heroSectionProps(
+        props.params,
+        'hero-st-version1 relative bg-[var(--color-hero-surface,var(--color-light))]'
+      )}
+      data-hero-st-variant="Version1"
+    >
+      <div className="mx-auto grid w-full lg:grid-cols-2 lg:items-stretch">
+        <div className="relative min-h-[340px] w-full p-2 md:min-h-[480px] lg:min-h-[560px] lg:p-3">
+          <div className="relative h-full min-h-[320px] w-full overflow-hidden rounded-none">
+            <CollageMosaicBackdrop />
+            {hasMosaicImage && (
+              <ContentSdkImage
+                field={mosaicImage}
+                width={1200}
+                height={1200}
+                className="absolute inset-0 z-[1] h-full w-full rounded-none object-cover object-center"
+              />
+            )}
+            <div
+              className={cn(
+                'absolute z-[2]',
+                hasMosaicImage
+                  ? 'inset-x-[10%] bottom-0 top-[16%] flex items-end justify-center'
+                  : 'inset-0'
+              )}
+            >
+              <ContentSdkImage
+                field={portraitOrComposite}
+                width={1200}
+                height={1400}
+                priority={true}
+                fetchPriority="high"
+                className={
+                  hasMosaicImage
+                    ? 'h-full w-auto max-w-[78%] object-contain object-bottom'
+                    : 'h-full w-full rounded-none object-cover object-center'
+                }
+              />
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col justify-center px-6 py-10 md:px-10 lg:px-14 lg:py-16 xl:pr-28">
+          <div className="max-w-xl">
+            <h1
+              className="max-w-[11ch] text-[clamp(2.35rem,4.6vw,4.35rem)] font-black uppercase leading-[0.92] tracking-tight text-[var(--color-hero-headline)]"
+              style={{ fontFamily: 'var(--font-heading)' }}
+            >
+              <ContentSdkText field={props?.fields?.Title} />
+            </h1>
+            <p
+              className="mt-5 text-base font-medium normal-case tracking-normal text-[var(--color-foreground)] md:text-lg"
+              style={{ fontFamily: 'var(--font-body)' }}
+            >
+              <ContentSdkText field={props?.fields?.Eyebrow} />
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <TrackedCtaLink
+                field={props?.fields?.Link1}
+                prefetch={false}
+                className="btn btn-primary rounded-none px-6 py-3 text-sm font-bold uppercase tracking-wide"
+              />
+              <TrackedCtaLink
+                field={props?.fields?.Link2}
+                prefetch={false}
+                className="btn btn-secondary rounded-none px-6 py-3 text-sm font-bold uppercase tracking-wide"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};

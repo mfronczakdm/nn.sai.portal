@@ -4,8 +4,9 @@
  * Source: https://www.atlanta-apparel.com/ (screenshot primary + Playwright extraction)
  * Activate via Sitecore Site definition Skin field (mirrored in src/lib/theme/site-skins.ts).
  *
- * Dark olive primary (#4A5844) for CTAs and lead-gen bands. Tan accent (#8C6D52) for
- * hero/section display headings. White surfaces, black body text, sharp rectangular CTAs.
+ * Dark olive primary (#4A5844) for CTAs and lead-gen bands. Terracotta (#9A5340) for
+ * hero headlines; tan accent (#8C6D52) for other section headings. Cream hero surface
+ * (#FAF9F6), black body text, sharp rectangular CTAs.
  */
 
 [data-theme='atlanta-apparel'] {
@@ -68,6 +69,8 @@
   --color-link: #ec5115;
   --color-section-heading: #8c6d52;
   --color-cta-band: #4a5844;
+  --color-hero-surface: #faf9f6;
+  --color-hero-headline: #9a5340;
 }
 
 [data-theme='atlanta-apparel'] .bg-primary {
@@ -81,4 +84,53 @@
 
 [data-theme='atlanta-apparel'] a:not([class]) {
   color: var(--color-link);
+}
+
+/* Events listing + detail — screenshot links are corporate blue; image uses a navy frame. */
+[data-theme='atlanta-apparel'] .aa-events-listing .aa-event-title,
+[data-theme='atlanta-apparel'] .aa-events-listing .aa-more-info,
+[data-theme='atlanta-apparel'] .aa-events-listing .aa-clear-calendar,
+[data-theme='atlanta-apparel'] .aa-event-detail .aa-event-back,
+[data-theme='atlanta-apparel'] .aa-event-detail .aa-add-to-calendar {
+  color: #1a5fb4;
+}
+
+[data-theme='atlanta-apparel'] .aa-event-detail .aa-event-hero-image {
+  border: 10px solid #1b2a4a;
+}
+
+[data-theme='atlanta-apparel'] .aa-event-detail .aa-event-info-box {
+  background: #f3f3f3;
+}
+
+[data-theme='atlanta-apparel'] .aa-events-listing .aa-calendar-day-selected {
+  background: #000;
+  color: #fff;
+}
+
+/*
+ * Square CTAs (90°) — globals.css .btn uses rounded-full inside @layer base.
+ * Unlayered [data-theme] rules beat that layer. Includes HeroST .btn.
+ */
+[data-theme='atlanta-apparel'] .btn,
+[data-theme='atlanta-apparel'] .btn.btn-primary,
+[data-theme='atlanta-apparel'] .btn.btn-secondary,
+[data-theme='atlanta-apparel'] .btn.btn-outline,
+[data-theme='atlanta-apparel'] .btn.btn-ghost,
+[data-theme='atlanta-apparel'] .btn.btn-sharp,
+[data-theme='atlanta-apparel'] .hero-st-version1 .btn {
+  border-radius: 0;
+}
+
+[data-theme='atlanta-apparel'] .btn.btn-secondary,
+[data-theme='atlanta-apparel'] .hero-st-version1 .btn.btn-secondary {
+  background-color: transparent;
+  color: var(--color-foreground);
+  border: 1px solid var(--color-foreground);
+}
+
+[data-theme='atlanta-apparel'] .btn.btn-secondary:hover,
+[data-theme='atlanta-apparel'] .hero-st-version1 .btn.btn-secondary:hover {
+  background-color: var(--color-foreground);
+  color: var(--color-background);
 }

@@ -1,5 +1,5 @@
 ﻿generatedAt: "2026-03-20T09:00:00Z"
-lastUpdatedAt: "2026-09-01T20:20:00Z"
+lastUpdatedAt: "2026-09-01T21:20:00Z"
 lastUpdatedBy: "cursor-agent"
 
 project:
@@ -3326,6 +3326,35 @@ lookups:
   - path: "/sitecore/content/andmore/atlanta-apparel/Data"
     itemId: "{1DF8C830-7FB6-43F7-9D03-14B897DD2BF8}"
     lastReadAt: "2026-08-25T02:00:00Z"
+  - path: "/sitecore/content/andmore/atlanta-apparel/Presentation/Headless Variants/HeroST"
+    itemId: "{F206BF13-F9AE-49B4-AA3E-97E70D7C5BA5}"
+    lastReadAt: "2026-09-01T21:10:00Z"
+    note: "HeroST Headless Variants including Version1 {E5BC4E36-322C-4315-B747-D9435A27B507}"
+  - path: "/sitecore/templates/Project/andmore/Components"
+    itemId: "{3C22EB28-A298-4C70-826F-AA1FF7BF416C}"
+    lastReadAt: "2026-09-01T20:50:00Z"
+  - path: "/sitecore/templates/Project/andmore/Components/Events"
+    itemId: "{0D9FA5CF-7D84-4637-91A5-506CAA85A4A2}"
+    lastReadAt: "2026-09-01T20:50:00Z"
+  - path: "/sitecore/templates/Project/andmore/Rendering Parameters"
+    itemId: "{DE1225F3-6E84-453C-82B5-5B5BDCD30091}"
+    lastReadAt: "2026-09-01T20:50:00Z"
+  - path: "/sitecore/templates/Project/andmore/Rendering Parameters/Events"
+    itemId: "{96A3E497-A625-4E66-9B9E-D4420534649D}"
+    lastReadAt: "2026-09-01T20:50:00Z"
+  - path: "/sitecore/layout/Renderings/Project/andmore"
+    itemId: "{DF238522-ADE4-4A81-9858-B37954381281}"
+    lastReadAt: "2026-09-01T20:50:00Z"
+  - path: "/sitecore/layout/Renderings/Project/andmore/Events"
+    itemId: "{A9713239-443C-43E9-AF89-2A94356CB9C0}"
+    lastReadAt: "2026-09-01T20:50:00Z"
+  - path: "/sitecore/content/andmore/atlanta-apparel/Presentation/Headless Variants"
+    itemId: "{A35D48FD-3026-4814-AF2D-9BAEF73ECBDA}"
+    lastReadAt: "2026-09-01T20:50:00Z"
+  - path: "/sitecore/content/andmore/atlanta-apparel/Presentation/Available Renderings/Page Content"
+    itemId: "{EE1C620E-FEC0-4F01-B094-2BB79AB8BA19}"
+    lastReadAt: "2026-09-01T20:50:00Z"
+    note: "Available Renderings — MCP Renderings read returned only 4 GUIDs (truncated). NEVER replace. Append EventListing {17C29F6F-B7BD-41F6-864B-1FEDF1052B05} and EventDetail {CDB363AE-7A5E-4C9E-83FB-A35C21EA8206} in Content Editor."
   - path: "/sitecore/content/lcmc/lcmc/Presentation/Available Renderings/Homepage Kit"
     itemId: "{72E55B4F-12C7-4D15-9E7C-71F88370D501}"
     lastReadAt: "2026-08-25T03:00:00Z"
@@ -7630,6 +7659,207 @@ ia:
         - "Run sitecore-tools:generate-map / npm run dev so MediaCanvas is in the component map"
         - "Publish templates, rendering, Headless Variants, and Data folders"
 
+  - name: "EventListing"
+    kind: "simple"
+    category: "Events"
+    status: "complete"
+    createdAt: "2026-09-01T20:50:00Z"
+    updatedAt: "2026-09-01T21:15:00Z"
+    siteCollection: "andmore"
+    siteName: "atlanta-apparel"
+    notes:
+      - "2026-09-01: Atlanta Apparel events listing. Datasource Droptree EventsRoot expands Event Page children. Default variant only. Theme extras under [data-theme=atlanta-apparel]. Did not write Available Renderings — MCP Page Content Renderings read looked truncated (4 GUIDs)."
+    react:
+      filePath: "src/components/uiim/events/EventListing.tsx"
+      componentMapKey: "EventListing"
+      propsShape: "graphql-datasource"
+      variants:
+        - "Default"
+    templates:
+      parent:
+        name: "EventListing"
+        path: "/sitecore/templates/Project/andmore/Components/Events/EventListing"
+        itemId: "{67AD4631-F2BD-4F8E-8539-DFAA4EBEA596}"
+        sectionName: "Data"
+        fields:
+          - { name: "ListingTitle", type: "Single-Line Text", itemId: "{729D4F5C-0587-4DEA-8732-E8030A5898A4}" }
+          - { name: "SearchPlaceholder", type: "Single-Line Text", itemId: "{52140C22-1FFD-4248-9B15-74FB33DF371E}" }
+          - { name: "EventTypeLabel", type: "Single-Line Text", itemId: "{8ACB127A-1594-448F-ABA8-7D3E9A0A08AC}" }
+          - { name: "MoreInfoLabel", type: "Single-Line Text", itemId: "{34AAAE53-B693-4908-91EA-4675AC9ECD06}" }
+          - { name: "ClearCalendarLabel", type: "Single-Line Text", itemId: "{A1D44340-BB4C-40A7-BEFA-2FE87431106F}" }
+          - { name: "EmptyResultsText", type: "Single-Line Text", itemId: "{60CFBECE-606D-403F-AEAA-203256DC53FC}" }
+          - { name: "EventsRoot", type: "Droptree", itemId: "{EF2078F6-2D78-4FF7-8C50-2052282CA40D}", source: "/sitecore/content/andmore/atlanta-apparel/Home/Visit" }
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{44F9E6D5-10C2-4BCE-A49D-B9773B78F3D6}"
+          linked: true
+      folder:
+        name: "EventListing Folder"
+        path: "/sitecore/templates/Project/andmore/Components/Events/EventListing Folder"
+        itemId: "{FF5F4A2F-C5E9-499A-BCB3-25D684E62CF5}"
+        standardValues:
+          itemId: "{65624FD1-B0A7-4C45-9CF5-B567728615BF}"
+          linked: true
+          masters: ["EventListing"]
+      renderingParams:
+        name: "EventListing"
+        path: "/sitecore/templates/Project/andmore/Rendering Parameters/Events/EventListing"
+        itemId: "{87763C6E-72C6-409C-8C3B-3346755CC9BC}"
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{B892F02F-C5F6-472B-B218-08539ED53B61}"
+    datasourceFolder:
+      name: "Event Listings"
+      path: "/sitecore/content/andmore/atlanta-apparel/Data/Event Listings"
+      itemId: "{3290960D-8079-47C1-8CE9-CB404BC4E375}"
+      insertOptionsSet: true
+      exampleItem:
+        name: "Atlanta Apparel Events"
+        itemId: "{684FA81B-14A4-4383-B115-2A766CA44AFB}"
+    rendering:
+      name: "EventListing"
+      path: "/sitecore/layout/Renderings/Project/andmore/Events/EventListing"
+      itemId: "{17C29F6F-B7BD-41F6-864B-1FEDF1052B05}"
+      componentName: "EventListing"
+      datasourceTemplatePath: "/sitecore/templates/Project/andmore/Components/Events/EventListing"
+      parametersTemplateId: "{87763C6E-72C6-409C-8C3B-3346755CC9BC}"
+      useComponentQuery: true
+      registeredInAvailableRenderings: false
+    pagePlacement:
+      pagePath: "/sitecore/content/andmore/atlanta-apparel/Home/Visit/Events"
+      pageId: "{47CEA21C-AEC1-4775-93BC-7F5D5B92DFAF}"
+      placeholder: "headless-main"
+      instanceId: "{9DA520BD-3281-4F6F-B249-0818538D8EEF}"
+      localDatasource: "{B6D86425-4863-4858-B130-EC1C81C8EA15}"
+    headlessVariants:
+      containerPath: "/sitecore/content/andmore/atlanta-apparel/Presentation/Headless Variants/EventListing"
+      containerId: "{FE55B4A5-85F6-4C05-9BB3-CFC17F674635}"
+      variants:
+        - { name: "Default", itemId: "{B159DF6B-4CA9-4C7E-BFA4-495B3848885D}" }
+    verification:
+      checkedAt: "2026-09-01T21:15:00Z"
+      passed:
+        - "EventListing template + fields + Types verified"
+        - "JSON Rendering ComponentQuery uses field(name) + LookupField EventsRoot children"
+        - "Parameters Template GUID set"
+        - "Default Headless Variant on atlanta-apparel"
+        - "Placed on Visit/Events headless-main with local datasource EventsRoot=Events page"
+        - "React EventListing.tsx + generate-map"
+        - "Jest src/__tests__/uiim/events — 10 passed"
+      failed: []
+      pendingManual:
+        - "Append EventListing {17C29F6F-B7BD-41F6-864B-1FEDF1052B05} to atlanta-apparel Available Renderings/Page Content (MCP read truncated; do not overwrite)"
+        - "Publish Event Page template, EventListing rendering, Headless Variants, Visit/Events tree"
+        - "__Masters on EventListing Folder SV and Data/Event Listings folder (silent-write)"
+
+  - name: "EventDetail"
+    kind: "context-only"
+    category: "Events"
+    status: "complete"
+    createdAt: "2026-09-01T20:50:00Z"
+    updatedAt: "2026-09-01T21:15:00Z"
+    siteCollection: "andmore"
+    siteName: "atlanta-apparel"
+    notes:
+      - "2026-09-01: Context component for Event Page route fields. No datasource. Add to Calendar downloads .ics. Back link uses parent item path (/Visit/Events)."
+    react:
+      filePath: "src/components/uiim/events/EventDetail.tsx"
+      componentMapKey: "EventDetail"
+      propsShape: "context-route"
+      variants:
+        - "Default"
+    templates:
+      renderingParams:
+        name: "EventDetail"
+        path: "/sitecore/templates/Project/andmore/Rendering Parameters/Events/EventDetail"
+        itemId: "{78C5CA1B-7E05-4D7B-BA1C-9D61BE1DC4E3}"
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{539102A8-395E-4675-B66F-5E34496C73B2}"
+    rendering:
+      name: "EventDetail"
+      path: "/sitecore/layout/Renderings/Project/andmore/Events/EventDetail"
+      itemId: "{CDB363AE-7A5E-4C9E-83FB-A35C21EA8206}"
+      componentName: "EventDetail"
+      datasourceTemplatePath: ""
+      parametersTemplateId: "{78C5CA1B-7E05-4D7B-BA1C-9D61BE1DC4E3}"
+      useComponentQuery: false
+      registeredInAvailableRenderings: false
+    headlessVariants:
+      containerPath: "/sitecore/content/andmore/atlanta-apparel/Presentation/Headless Variants/EventDetail"
+      containerId: "{8D13DFC3-E74D-4EDB-968A-B100C575E72B}"
+      variants:
+        - { name: "Default", itemId: "{D9B009DB-AE44-4331-A05A-0C83982A4B3D}" }
+    verification:
+      checkedAt: "2026-09-01T21:15:00Z"
+      passed:
+        - "JSON Rendering has empty Datasource Template/Location/ComponentQuery"
+        - "Parameters Template GUID set"
+        - "Default Headless Variant on atlanta-apparel"
+        - "Placed on all eight Event Page items headless-main"
+        - "React EventDetail.tsx reads route fields"
+      failed: []
+      pendingManual:
+        - "Append EventDetail {CDB363AE-7A5E-4C9E-83FB-A35C21EA8206} to atlanta-apparel Available Renderings/Page Content (MCP read truncated; do not overwrite)"
+        - "Add EventDetail to Event Page __Standard Values presentation so new events inherit it (MCP add_component_on_page cannot target SV items)"
+        - "Publish EventDetail rendering + event pages"
+
+  - name: "Event Page"
+    kind: "page-template"
+    category: "Events"
+    status: "complete"
+    createdAt: "2026-09-01T20:50:00Z"
+    updatedAt: "2026-09-01T21:15:00Z"
+    siteCollection: "andmore"
+    siteName: "atlanta-apparel"
+    notes:
+      - "2026-09-01: Event Page inherits andmore Services Page. Eight sample events under Visit/Events matching Atlanta Apparel Sep 2026 listing screenshot."
+    templates:
+      page:
+        name: "Event Page"
+        path: "/sitecore/templates/Project/andmore/Event Page"
+        itemId: "{6CCF3409-0A26-4069-92EC-2099DAE63088}"
+        baseTemplate: "{69728677-52E5-4482-A415-94F0222799B8}"
+        sectionName: "Event Data"
+        sectionId: "{7B49E5A6-2B78-4058-8365-D91631FD28E2}"
+        fields:
+          - { name: "EventStart", type: "Datetime", itemId: "{0C53E23D-511C-4D88-8E5F-91D9694C5A1E}" }
+          - { name: "EventEnd", type: "Datetime", itemId: "{81207B62-0E77-4615-A847-81B17FECC08D}" }
+          - { name: "EventLocation", type: "Single-Line Text", itemId: "{F8A54AE2-6934-4632-8CF1-A261B2EFBDEB}" }
+          - { name: "EventType", type: "Droplist", itemId: "{61328B9E-A72A-4A8F-A830-29ED998F3FD5}", source: "Seminar|Networking|Trend Talk|Amenity" }
+          - { name: "EventTimezone", type: "Single-Line Text", itemId: "{CFEA61D0-052C-4776-8934-ECFE8251F671}" }
+          - { name: "BackLinkText", type: "Single-Line Text", itemId: "{522C25DA-DB65-4CDC-90C5-29637621CB83}" }
+          - { name: "AddToCalendarLabel", type: "Single-Line Text", itemId: "{761FC30D-946C-4B17-9297-5A55EB4A56D0}" }
+          - { name: "DetailsHeading", type: "Single-Line Text", itemId: "{A4838A5A-71FB-4317-A6C5-B3B753501D82}" }
+        standardValues:
+          itemId: "{BCDE3D25-36EE-4652-A8FB-0996D966A343}"
+          linked: true
+    content:
+      listingPage:
+        path: "/sitecore/content/andmore/atlanta-apparel/Home/Visit/Events"
+        itemId: "{47CEA21C-AEC1-4775-93BC-7F5D5B92DFAF}"
+        route: "/Visit/Events"
+      events:
+        - { name: "Shoe and All Accessories Market Grand Opening", itemId: "{3A0AF5AB-111F-4DFE-B3EB-FA345F69C6FF}", date: "2026-09-14", type: "Networking" }
+        - { name: "Outdoor Living Trends Talk", itemId: "{AB056721-5D0E-4E80-8A05-62258E42679A}", date: "2026-09-15", type: "Trend Talk", route: "/Visit/Events/Outdoor-Living-Trends-Talk" }
+        - { name: "Buyer Grab-n-Go Hub", itemId: "{F68C01D1-1069-4B42-844B-3518189B6D2F}", date: "2026-09-15", type: "Amenity" }
+        - { name: "Best Brands A Mid-day Mix", itemId: "{21480263-A6C0-4BAE-AC58-48CE1CD53F1B}", date: "2026-09-15", type: "Networking" }
+        - { name: "Buyer Grab-n-Go Hub Wednesday", itemId: "{7B3BC71F-4219-4AD8-AE08-5F120B7EB275}", date: "2026-09-16", type: "Amenity" }
+        - { name: "New Vibe Junior Fashion", itemId: "{46ED2003-BAA1-4BFC-82BA-A7DC03912109}", date: "2026-09-16", type: "Seminar" }
+        - { name: "Keynote Supportive Styling", itemId: "{6AD21027-43B5-42C6-A618-1C3A4E649E4F}", date: "2026-09-17", type: "Seminar" }
+        - { name: "Celebrate Success Closing Toast", itemId: "{729375CB-4BBF-4F73-B78F-A90F1818B75C}", date: "2026-09-18", type: "Networking" }
+    verification:
+      checkedAt: "2026-09-01T21:15:00Z"
+      passed:
+        - "Event Page inherits Services Page {69728677-...}"
+        - "Event Data fields Type verified (Datetime + Droplist source)"
+        - "Eight Event Page items created under Visit/Events"
+        - "Outdoor Living Trends Talk fields match screenshot (Tue Sep 15 2026 08:30–09:30 EST, Oasis Meeting Space)"
+      failed: []
+      pendingManual:
+        - "Set insert options on Visit/Events to Event Page so authors can insert from Content Editor (__Masters silent-write)"
+        - "Publish Event Page template + event items (currently Draft workflow)"
+
   - name: "amkor-download-list-related-downloads"
     kind: "content"
     status: "partial"
@@ -9057,6 +9287,63 @@ ia:
         - "Publish /sitecore/content/andmore/atlanta-apparel/Home subtree for Edge"
         - "Wire navigation to new IA pages; starter Speakers/Video left in tree"
         - "Display names for Childrens/Mens still show item names; titles kept Children's/Men's"
+
+  - name: "atlanta-apparel-herost-version1"
+    kind: "update"
+    category: "Banners"
+    status: "complete"
+    createdAt: "2026-09-01T20:51:00Z"
+    updatedAt: "2026-09-01T21:10:00Z"
+    siteCollection: "andmore"
+    siteName: "atlanta-apparel"
+    componentName: "HeroST"
+    notes: >
+      Added HeroST Version1 for Atlanta Apparel homepage collage-split (IN SEASON. IN ATLANTA.).
+      React named export Version1; Default/Right/Centered/SplitScreen/Stacked unchanged.
+      Variant Definition created only on atlanta-apparel Headless Variants (not americasmart/amkor).
+      Theme tokens --color-hero-headline and --color-hero-surface; square .btn including secondary ghost.
+    react:
+      filePath: "src/components/site-three/HeroST.tsx"
+      variants:
+        - "Default"
+        - "Right"
+        - "Centered"
+        - "SplitScreen"
+        - "Stacked"
+        - "Version1"
+    heroST:
+      containerPath: "/sitecore/content/andmore/atlanta-apparel/Presentation/Headless Variants/HeroST"
+      containerId: "{F206BF13-F9AE-49B4-AA3E-97E70D7C5BA5}"
+      variants:
+        - { name: "Default", itemId: "{1132F70A-68EB-49D2-8306-5C1418F708F7}", preexisting: true }
+        - { name: "Centered", itemId: "{5673AE63-8364-4001-B7C9-3336B4D670C7}", preexisting: true }
+        - { name: "Right", itemId: "{39A81537-9FD6-4D4A-80C6-5DEBC3614525}", preexisting: true }
+        - { name: "SplitScreen", itemId: "{DA58C8E5-0E99-44D7-98A0-6ED44E236FE6}", preexisting: true }
+        - { name: "Stacked", itemId: "{943E1901-3BF6-4064-B260-828A63F27D2C}", preexisting: true }
+        - { name: "Version1", itemId: "{E5BC4E36-322C-4315-B747-D9435A27B507}" }
+    homeHero:
+      pageId: "{011D81AC-F13E-4DC1-A142-88119D17A7B5}"
+      renderingUid: "{A52FA94F-72E6-4879-9BE8-163FC9F2A2D3}"
+      datasourceId: "{253F7B60-292E-478E-BFF7-9AD6766448EB}"
+      currentFieldNames: "{1132F70A-68EB-49D2-8306-5C1418F708F7}"
+      currentFieldNamesNote: "Default. MCP set_component_variant is personalization, not Headless Variants — do not patch __Final Renderings."
+    themeTokens:
+      - { name: "--color-hero-headline", value: "#9A5340" }
+      - { name: "--color-hero-surface", value: "#FAF9F6" }
+    verification:
+      checkedAt: "2026-09-01T21:10:00Z"
+      passed:
+        - "HeroST Version1 Variant Definition created and verified at atlanta-apparel Headless Variants"
+        - "Export name Version1 matches Variant Definition item name"
+        - "Default and existing variants left in TSX and Sitecore"
+        - "Home HeroST 1 Title/Eyebrow/Link1/Link2 copy updated"
+        - "Jest 48 passed (HeroST.test.tsx + atlanta-apparel-theme.test.ts)"
+      failed: []
+      pendingManual:
+        - "In Pages on atlanta-apparel Home, select HeroST variant Version1 (FieldNames {E5BC4E36-322C-4315-B747-D9435A27B507}) on instance {A52FA94F-72E6-4879-9BE8-163FC9F2A2D3}"
+        - "Publish Presentation/Headless Variants/HeroST/Version1 for Edge"
+        - "Upload collage composite to Image1 (or portrait on Image1 + texture on Image2) on Home/Data/HeroST/HeroST 1"
+        - "Publish Home/Data/HeroST/HeroST 1 for Edge"
 
   - name: "amkor-header-cascade-megamenu"
     kind: "content-update"

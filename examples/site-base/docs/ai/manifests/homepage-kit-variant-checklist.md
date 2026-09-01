@@ -31,7 +31,7 @@ HeaderST Default / LoginRequired were not restyled. Use existing Version1 (Amkor
 
 | Component | Recommended variant | Why |
 |---|---|---|
-| HeroST (existing) | **SplitScreen** | Image collage + headline / dates / CTAs. |
+| HeroST (existing) | **Version1** | Atlanta Apparel collage-left / copy-right hero. FieldNames `{E5BC4E36-322C-4315-B747-D9435A27B507}`. |
 | MultiPromo (existing) | existing | 3-up cards. |
 | SplitFeature | Default then **ImageLeft** | Alternate image side for each feature. A second feature datasource is at `/sitecore/content/andmore/atlanta-apparel/Data/Split Features/Atlanta Exhibit`. |
 | ButtonRow | **Default** | Additional-resources button row. |
