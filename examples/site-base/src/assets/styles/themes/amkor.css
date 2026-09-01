@@ -96,6 +96,7 @@
   --color-news-cta: #0f4c8d;
   --color-news-cta-hover: #053360;
   --color-news-cta-foreground: #ffffff;
+  --color-brand-black: #212529;
 }
 
 /*
@@ -150,4 +151,94 @@
   color: var(--color-footer-mid);
   content: '|';
   margin-inline: 0.75rem;
+}
+
+/*
+ * HeroST Dark Image: live amkor.com uses white overlay type on photography.
+ * Force white on headings + Sitecore Text spans so primary-foreground / brand-black cannot win.
+ */
+[data-theme='amkor'] [data-hero-st-dark-image='true'] h1,
+[data-theme='amkor'] [data-hero-st-dark-image='true'] h1 span {
+  color: #ffffff !important;
+}
+
+/*
+ * MultiPromo TopTabs — live amkor.com Memory tabs:
+ * inactive dark teal + white text; active white + light teal text; square, flush tabs;
+ * triangle bullets; navy uppercase CTA. Image Left/Right is a rendering param, not a variant.
+ */
+[data-theme='amkor'] {
+  --color-tab-inactive: var(--color-news-accent-to);
+  --color-tab-inactive-foreground: #ffffff;
+  --color-tab-active: var(--color-background);
+  --color-tab-active-foreground: var(--color-news-accent-from);
+}
+
+[data-theme='amkor'] .multi-promo-top-tabs,
+[data-theme='amkor'] .multi-promo-top-tabs-no-image {
+  background-color: var(--color-light);
+}
+
+[data-theme='amkor'] .multi-promo-top-tabs [role='tablist'] [role='tab'],
+[data-theme='amkor'] .multi-promo-top-tabs-no-image [role='tablist'] [role='tab'] {
+  border-radius: 0;
+  border-right-width: 0;
+  text-transform: none;
+  letter-spacing: 0.01em;
+  font-weight: 600;
+}
+
+[data-theme='amkor'] .multi-promo-top-tabs [role='tablist'] [role='tab']:not([aria-selected='true']),
+[data-theme='amkor']
+  .multi-promo-top-tabs-no-image
+  [role='tablist']
+  [role='tab']:not([aria-selected='true']) {
+  background-color: var(--color-tab-inactive) !important;
+  color: var(--color-tab-inactive-foreground) !important;
+}
+
+[data-theme='amkor'] .multi-promo-top-tabs [role='tablist'] [role='tab'][aria-selected='true'],
+[data-theme='amkor']
+  .multi-promo-top-tabs-no-image
+  [role='tablist']
+  [role='tab'][aria-selected='true'] {
+  background-color: var(--color-tab-active) !important;
+  color: var(--color-tab-active-foreground) !important;
+  z-index: 10;
+}
+
+[data-theme='amkor'] .multi-promo-top-tabs [data-tab-caret],
+[data-theme='amkor'] .multi-promo-top-tabs-no-image [data-tab-caret] {
+  display: none;
+}
+
+[data-theme='amkor'] .multi-promo-top-tabs [role='tabpanel'] ul,
+[data-theme='amkor'] .multi-promo-top-tabs-no-image [role='tabpanel'] ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+[data-theme='amkor'] .multi-promo-top-tabs [role='tabpanel'] li,
+[data-theme='amkor'] .multi-promo-top-tabs-no-image [role='tabpanel'] li {
+  position: relative;
+  padding-left: 1.15rem;
+  margin-bottom: 0.45rem;
+  color: var(--color-muted-foreground);
+}
+
+[data-theme='amkor'] .multi-promo-top-tabs [role='tabpanel'] li::before,
+[data-theme='amkor'] .multi-promo-top-tabs-no-image [role='tabpanel'] li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  border-style: solid;
+  border-width: 0.28em 0 0.28em 0.42em;
+  border-color: transparent transparent transparent var(--color-primary);
+}
+
+[data-theme='amkor'] .multi-promo-top-tabs [role='tabpanel'] a,
+[data-theme='amkor'] .multi-promo-top-tabs-no-image [role='tabpanel'] a {
+  border-radius: 0;
 }

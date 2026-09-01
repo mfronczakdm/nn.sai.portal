@@ -1,3 +1,4 @@
+import { amkorPulsePack } from './amkor';
 import { amesburytruthPulsePack } from './amesburytruth';
 import { eraPulsePack } from './era';
 import { matchPulsePackIntent } from './match';
@@ -10,12 +11,13 @@ export { matchPulsePackIntent, normalizePulseQuestion } from './match';
 
 const DEFAULT_PACK_SITE = 'pillsburylaw';
 
-/** Registry of Pulse site packs. Add a new demo site = new pack file + entry here. */
+/** Registry of Pulse site packs. Keys match Sitecore site names / Search packs. */
 export const PULSE_SITE_PACKS: Readonly<Record<string, PulseSitePack>> = {
   quanex: quanexPulsePack,
   era: eraPulsePack,
   amesburytruth: amesburytruthPulsePack,
   pillsburylaw: pillsburylawPulsePack,
+  amkor: amkorPulsePack,
 };
 
 export function normalizePulseSiteName(siteName?: string | null): string {

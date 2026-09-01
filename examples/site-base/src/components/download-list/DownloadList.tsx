@@ -9,13 +9,42 @@ import type { LinkField } from '@sitecore-content-sdk/nextjs';
 
 import { cn } from '@/lib/utils';
 import { DEMO_TAXONOMY_CHANGE_EVENT, DEMO_TAXONOMY_STORAGE_KEY } from '@/lib/demo-taxonomy';
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 
 import {
   extractDownloadLinks,
   extractGraphqlQueryFromDownloadContentField,
   resolveDownloadListFields,
 } from './download-list.fields';
-import type { DownloadListProps } from './download-list.props';
+import type { DownloadListParams, DownloadListProps } from './download-list.props';
+
+type RelatedListAlign = 'left' | 'center' | 'right';
+
+/**
+ * RelatedDownloads list justification.
+ * Prefer SXA Content alignment styles (position-left | position-center | position-right)
+ * over a one-off checkbox — radio Left/Center/Right already exists on the site.
+ * Variant default is center (Amkor related-downloads screenshot).
+ */
+export function resolveRelatedListAlign(params: DownloadListParams | undefined): RelatedListAlign {
+  const blob = [params?.styles, params?.Styles]
+    .filter((s): s is string => typeof s === 'string')
+    .join(' ')
+    .toLowerCase();
+
+  const matches = [...blob.matchAll(/\b(?:position|text)-(left|center|right)\b/g)];
+  const last = matches.at(-1);
+  if (last?.[1] === 'left' || last?.[1] === 'center' || last?.[1] === 'right') {
+    return last[1];
+  }
+  return 'center';
+}
+
+function relatedListAlignClass(align: RelatedListAlign): string {
+  if (align === 'right') return 'ml-auto w-max max-w-full';
+  if (align === 'left') return 'mr-auto w-max max-w-full';
+  return 'mx-auto w-max max-w-full';
+}
 
 function displayNameForLink(link: LinkField): string {
   const text = link.value?.text?.trim();
@@ -48,7 +77,19 @@ function renderFileGlyph(href: string, className: string) {
 
 type PlanAssetsApiResponse = { fileNames?: string[]; error?: string };
 
-export const Default: FC<DownloadListProps> = ({ fields, page }) => {
+type DownloadListModel = {
+  isEditing: boolean;
+  title: ReturnType<typeof resolveDownloadListFields>['title'];
+  subtitle: ReturnType<typeof resolveDownloadListFields>['subtitle'];
+  links: LinkField[];
+  planAssetFileNames: string[];
+  planAssetsFailed: boolean;
+  planAssetsMissingTaxonomy: boolean;
+  planAssetsFetched: boolean;
+  hasPlanAssets: boolean;
+};
+
+function useDownloadListModel({ fields, page }: DownloadListProps): DownloadListModel {
   const { data: session, status: sessionStatus } = useSession();
   const resolved = resolveDownloadListFields(fields);
   const links = extractDownloadLinks(resolved.featuredContent);
@@ -131,13 +172,65 @@ export const Default: FC<DownloadListProps> = ({ fields, page }) => {
     };
   }, [downloadGraphqlQuery, sessionTaxonomy, sessionStatus, taxonomy]);
 
-  const hasPlanAssets = planAssetFileNames.length > 0;
+  return {
+    isEditing,
+    title: resolved.title,
+    subtitle: resolved.subtitle,
+    links,
+    planAssetFileNames,
+    planAssetsFailed,
+    planAssetsMissingTaxonomy,
+    planAssetsFetched,
+    hasPlanAssets: planAssetFileNames.length > 0,
+  };
+}
+
+const DownloadListEmpty = (): JSX.Element => (
+  <div className="component download-list">
+    <div className="component-content">
+      <span className="is-empty-hint">DownloadList</span>
+    </div>
+  </div>
+);
+
+function EditorHints({ model }: { model: DownloadListModel }) {
+  const { isEditing, links, hasPlanAssets, planAssetsFetched, planAssetsMissingTaxonomy, planAssetsFailed } =
+    model;
+  if (!isEditing) return null;
+  return (
+    <>
+      {links.length === 0 && !hasPlanAssets && planAssetsFetched && (
+        <p className="text-muted-foreground rounded-lg border border-dashed border-border bg-muted/30 p-4 text-sm">
+          Add <strong>child items</strong> under this Download List (each with a general / external link),
+          or use <strong>FeaturedContent</strong>, to list downloads here.
+        </p>
+      )}
+      {planAssetsMissingTaxonomy && (
+        <p className="text-muted-foreground mb-4 rounded-lg border border-dashed border-border bg-muted/30 p-4 text-sm">
+          This query uses <code className="text-xs">$taxonomy</code>. Sign in with a profile that includes{' '}
+          <strong>taxonomy</strong> (see NextAuth session), or remove <code className="text-xs">$taxonomy</code> from
+          the query for anonymous previews.
+        </p>
+      )}
+      {planAssetsFailed && (
+        <p className="text-muted-foreground mb-4 rounded-lg border border-dashed border-border bg-muted/30 p-4 text-sm">
+          Plan asset GraphQL failed. Check the <strong>DownloadContent</strong> query, set{' '}
+          <code className="text-xs">BCBS_GRAPHQL_ENDPOINT</code> and <code className="text-xs">BCBS_GRAPHQL_TOKEN</code>{' '}
+          on the server, and review logs.
+        </p>
+      )}
+    </>
+  );
+}
+
+export const Default: FC<DownloadListProps> = (props) => {
+  const model = useDownloadListModel(props);
+  if (!props.fields) return <DownloadListEmpty />;
+  const { isEditing, title, subtitle, links, planAssetFileNames, planAssetsFetched, hasPlanAssets } = model;
 
   if (!isEditing && links.length === 0 && planAssetsFetched && !hasPlanAssets) {
     return null;
   }
-
-  const { title, subtitle } = resolved;
 
   return (
     <section
@@ -165,28 +258,7 @@ export const Default: FC<DownloadListProps> = ({ fields, page }) => {
           <p className="text-muted-foreground mb-4 text-sm">Loading plan documents…</p>
         )}
 
-        {links.length === 0 && !hasPlanAssets && planAssetsFetched && isEditing && (
-          <p className="text-muted-foreground rounded-lg border border-dashed border-border bg-muted/30 p-4 text-sm">
-            Add <strong>child items</strong> under this Download List (each with a general / external link),
-            or use <strong>FeaturedContent</strong>, to list downloads here.
-          </p>
-        )}
-
-        {planAssetsMissingTaxonomy && isEditing && (
-          <p className="text-muted-foreground mb-4 rounded-lg border border-dashed border-border bg-muted/30 p-4 text-sm">
-            This query uses <code className="text-xs">$taxonomy</code>. Sign in with a profile that includes{' '}
-            <strong>taxonomy</strong> (see NextAuth session), or remove <code className="text-xs">$taxonomy</code> from the
-            query for anonymous previews.
-          </p>
-        )}
-
-        {planAssetsFailed && isEditing && (
-          <p className="text-muted-foreground mb-4 rounded-lg border border-dashed border-border bg-muted/30 p-4 text-sm">
-            Plan asset GraphQL failed. Check the <strong>DownloadContent</strong> query, set{' '}
-            <code className="text-xs">BCBS_GRAPHQL_ENDPOINT</code> and <code className="text-xs">BCBS_GRAPHQL_TOKEN</code>{' '}
-            on the server, and review logs.
-          </p>
-        )}
+        <EditorHints model={model} />
 
         {hasPlanAssets && (
           <ul
@@ -222,6 +294,115 @@ export const Default: FC<DownloadListProps> = ({ fields, page }) => {
   );
 };
 
+/**
+ * Accordion list matching Amkor “View related downloads”: full-width muted trigger,
+ * expanding document links with circular file icons. Default stays the card list.
+ */
+export const RelatedDownloads: FC<DownloadListProps> = (props) => {
+  const model = useDownloadListModel(props);
+  if (!props.fields) return <DownloadListEmpty />;
+  const { isEditing, title, links, planAssetFileNames, planAssetsFetched, hasPlanAssets } = model;
+
+  if (!isEditing && links.length === 0 && planAssetsFetched && !hasPlanAssets) {
+    return null;
+  }
+
+  const heading = title?.value ? String(title.value) : 'View related downloads';
+  const listAlign = resolveRelatedListAlign(props.params);
+  const listAlignClass = relatedListAlignClass(listAlign);
+  const styles = [props.params?.styles, props.params?.Styles].filter(Boolean).join(' ');
+
+  return (
+    <section
+      data-component="DownloadList"
+      data-variant="RelatedDownloads"
+      data-list-align={listAlign}
+      className={cn('w-full @container', styles)}
+      aria-label={heading}
+    >
+      <Collapsible defaultOpen className="w-full">
+        <CollapsibleTrigger
+          className="flex w-full items-center justify-center bg-muted px-4 py-3.5 text-center text-[13px] font-semibold uppercase tracking-[0.14em] text-muted-foreground outline-none transition-colors hover:bg-muted/80 focus-visible:ring-2 focus-visible:ring-ring"
+          aria-label={heading}
+        >
+          {title ? (
+            <Text tag="span" field={title} className="uppercase tracking-[0.14em]" />
+          ) : (
+            <span>View related downloads</span>
+          )}
+        </CollapsibleTrigger>
+        <CollapsibleContent>
+          <div className="bg-secondary/40 px-6 py-6 sm:px-10 sm:py-8">
+            <EditorHints model={model} />
+            {hasPlanAssets ? (
+              <ul
+                className={cn('flex flex-col gap-4', listAlignClass)}
+                aria-label="Plan documents from directory"
+              >
+                {planAssetFileNames.map((fileName) => (
+                  <li key={fileName} className="flex items-center gap-3">
+                    <RelatedFileIcon href={fileName} />
+                    <span className="text-sm font-medium text-primary">{fileName}</span>
+                  </li>
+                ))}
+              </ul>
+            ) : null}
+            {links.length > 0 ? (
+              <ul className={cn('flex flex-col gap-4', listAlignClass, hasPlanAssets && 'mt-4')}>
+                {links.map((link, index) => (
+                  <RelatedDownloadRow
+                    key={`${link.value?.href ?? index}-${index}`}
+                    link={link}
+                    isEditing={isEditing}
+                  />
+                ))}
+              </ul>
+            ) : null}
+          </div>
+        </CollapsibleContent>
+      </Collapsible>
+    </section>
+  );
+};
+
+function RelatedFileIcon({ href }: { href: string }) {
+  return (
+    <span
+      className="flex size-8 shrink-0 items-center justify-center rounded-full border-2 border-primary text-primary"
+      aria-hidden
+    >
+      {renderFileGlyph(href, 'size-4')}
+    </span>
+  );
+}
+
+function RelatedDownloadRow({ link, isEditing }: { link: LinkField; isEditing: boolean }) {
+  const href = link.value?.href ?? '';
+  const label = displayNameForLink(link);
+
+  return (
+    <li className="flex items-center gap-3">
+      <RelatedFileIcon href={href || label} />
+      {isEditing ? (
+        <ContentSdkLink
+          field={link}
+          className="text-sm font-medium text-primary underline-offset-4 hover:underline"
+          prefetch={false}
+        />
+      ) : (
+        <a
+          href={href}
+          className="text-sm font-medium text-primary underline-offset-4 hover:underline"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {label}
+        </a>
+      )}
+    </li>
+  );
+}
+
 function PlanAssetFileNameRow({
   fileName,
   isFirst,
@@ -236,7 +417,7 @@ function PlanAssetFileNameRow({
       className={cn(
         'border-border flex items-center gap-3 border-b p-4 text-sm last:border-b-0',
         isFirst && 'rounded-t-xl',
-        isLast && 'rounded-b-xl',
+        isLast && 'rounded-b-xl'
       )}
     >
       <span className="text-muted-foreground shrink-0" aria-hidden>
@@ -267,7 +448,7 @@ function DownloadRow({
         className={cn(
           'border-border flex items-center gap-3 border-b p-4 text-sm last:border-b-0',
           isFirst && 'rounded-t-xl',
-          isLast && 'rounded-b-xl',
+          isLast && 'rounded-b-xl'
         )}
       >
         <span className="text-muted-foreground shrink-0">{renderFileGlyph(href, 'size-5')}</span>
@@ -285,7 +466,7 @@ function DownloadRow({
       className={cn(
         'border-border hover:bg-muted/40 flex flex-col gap-1 border-b transition-colors last:border-b-0 sm:flex-row sm:items-center sm:justify-between sm:gap-4',
         isFirst && 'rounded-t-xl',
-        isLast && 'rounded-b-xl',
+        isLast && 'rounded-b-xl'
       )}
     >
       <div className="flex min-w-0 flex-1 items-center gap-3 p-4 sm:py-3">

@@ -30,6 +30,9 @@ jest.mock('@sitecore-content-sdk/nextjs', () => ({
       {children || field?.value?.text || ''}
     </a>
   ),
+  useSitecore: () => ({
+    page: { mode: { isEditing: false, isPreview: false } },
+  }),
 }));
 
 describe('HeroST', () => {
@@ -99,8 +102,9 @@ describe('HeroST', () => {
         <HeroSTDefault {...mockProps} params={{ ...mockProps.params, DarkImage: '1' }} />
       );
       const headings = container.querySelectorAll('h1');
-      expect(headings[0]).toHaveClass('text-primary-foreground');
-      expect(headings[1]).toHaveClass('text-primary-foreground');
+      expect(headings[0]).toHaveClass('text-white');
+      expect(headings[1]).toHaveClass('text-white');
+      expect(container.querySelector('section')).toHaveAttribute('data-hero-st-dark-image', 'true');
     });
 
     it('recognizes Dark Image checkbox under alternate param key spellings', () => {
@@ -108,8 +112,8 @@ describe('HeroST', () => {
         <HeroSTDefault {...mockProps} params={{ ...mockProps.params, 'Dark Image': 'true' }} />
       );
       const headings = container.querySelectorAll('h1');
-      expect(headings[0]).toHaveClass('text-primary-foreground');
-      expect(headings[1]).toHaveClass('text-primary-foreground');
+      expect(headings[0]).toHaveClass('text-white');
+      expect(headings[1]).toHaveClass('text-white');
     });
 
     it('does not force light text when Dark Image is off', () => {
@@ -117,8 +121,8 @@ describe('HeroST', () => {
         <HeroSTDefault {...mockProps} params={{ ...mockProps.params, DarkImage: '0' }} />
       );
       const headings = container.querySelectorAll('h1');
-      expect(headings[0]).not.toHaveClass('text-primary-foreground');
-      expect(headings[1]).not.toHaveClass('text-primary-foreground');
+      expect(headings[0]).not.toHaveClass('text-white');
+      expect(headings[1]).not.toHaveClass('text-white');
     });
   });
 
@@ -142,6 +146,37 @@ describe('HeroST', () => {
       const { container } = render(<HeroSTCentered {...mockProps} />);
       const section = container.querySelector('section');
       expect(section).toHaveClass('test-styles');
+    });
+
+    it('applies white overlay text when Dark Image is selected', () => {
+      const { container } = render(
+        <HeroSTCentered {...mockProps} params={{ ...mockProps.params, DarkImage: '1' }} />
+      );
+      const headings = container.querySelectorAll('h1');
+      expect(headings[0]).toHaveClass('text-white');
+      expect(headings[1]).toHaveClass('text-white');
+      expect(container.querySelector('section')).toHaveAttribute('data-hero-st-dark-image', 'true');
+    });
+
+    it('recognizes the Sitecore field name Dark Imge (typo) as Dark Image', () => {
+      const { container } = render(
+        <HeroSTCentered {...mockProps} params={{ ...mockProps.params, 'Dark Imge': '1' }} />
+      );
+      const headings = container.querySelectorAll('h1');
+      expect(headings[0]).toHaveClass('text-white');
+      expect(headings[1]).toHaveClass('text-white');
+      expect(container.querySelector('section')).toHaveAttribute('data-hero-st-dark-image', 'true');
+    });
+
+    it('treats Dark Image in Advanced styling (params.styles) as a dark overlay', () => {
+      const { container } = render(
+        <HeroSTCentered
+          {...mockProps}
+          params={{ styles: 'test-styles dark-image' }}
+        />
+      );
+      expect(container.querySelector('section')).toHaveAttribute('data-hero-st-dark-image', 'true');
+      expect(container.querySelectorAll('h1')[1]).toHaveClass('text-white');
     });
   });
 

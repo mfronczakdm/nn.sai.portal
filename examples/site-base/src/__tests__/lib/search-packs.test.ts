@@ -134,6 +134,21 @@ describe('Amkor catalog matching', () => {
     expect(insight?.headline.toLowerCase()).toMatch(/interconnect|package/);
   });
 
+  it('selects careers insight for talent queries', () => {
+    const insight = selectAiSearchInsight('engineering careers in Arizona', pack.insightRules);
+    expect(insight?.id).toBe('ai-amkor-careers');
+  });
+
+  it('returns Careers pages for talent queries, not Quanex products', () => {
+    const hits = pack.catalog.filter((item) =>
+      itemMatchesQuery(item, 'engineering careers in Arizona', pack.bucketSynonyms)
+    );
+    expect(hits.some((item) => /careers/i.test(item.title))).toBe(true);
+    expect(
+      hits.every((item) => !/super spacer|duralite|quanex/i.test(`${item.title} ${item.href}`))
+    ).toBe(true);
+  });
+
   it('does not leak Quanex or Pillsbury popular searches', () => {
     const joined = pack.popularSearches.join(' ').toLowerCase();
     expect(joined).not.toMatch(/super spacer|lawyer|mark abate/);

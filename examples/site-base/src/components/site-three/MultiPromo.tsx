@@ -144,6 +144,30 @@ const isShowBackgroundImage = (params: MultiPromoProps['params'] | undefined): b
   return false;
 };
 
+export type TopTabsImagePosition = 'top' | 'left' | 'right';
+
+const normalizeParamKey = (key: string): string => key.replace(/[\s_-]/g, '').toLowerCase();
+
+/**
+ * Reads the ImagePosition rendering parameter (Droplist).
+ * Empty / unknown values keep the historical image-on-top layout so other sites stay unchanged.
+ */
+export const resolveTopTabsImagePosition = (
+  params: MultiPromoProps['params'] | undefined
+): TopTabsImagePosition => {
+  if (!params) return 'top';
+  for (const [key, value] of Object.entries(params)) {
+    if (normalizeParamKey(key) !== 'imageposition') continue;
+    const normalizedValue = String(value ?? '')
+      .replace(/[\s_-]/g, '')
+      .toLowerCase();
+    if (normalizedValue === 'imageright' || normalizedValue === 'right') return 'right';
+    if (normalizedValue === 'imageleft' || normalizedValue === 'left') return 'left';
+    if (normalizedValue === 'imagetop' || normalizedValue === 'top') return 'top';
+  }
+  return 'top';
+};
+
 export const Default = (props: MultiPromoProps) => {
   const datasource = useMemo(
     () => props.fields?.data?.datasource,
@@ -428,52 +452,80 @@ const TopTabsPromoPanel = ({
   panelId,
   isEditing,
   showImage = true,
+  imagePosition = 'top',
 }: {
   promo: SimplePromoFields;
   tabId: string;
   panelId: string;
   isEditing: boolean;
   showImage?: boolean;
+  imagePosition?: TopTabsImagePosition;
 }) => {
   const { image, heading, description, link } = promo ?? {};
   const headingField = heading?.jsonValue;
   const descriptionField = description?.jsonValue;
   const imageField = image?.jsonValue;
   const linkField = link?.jsonValue;
+  const isSideBySide = showImage && (imagePosition === 'left' || imagePosition === 'right');
+  const showImageBlock = Boolean(
+    showImage && (imageField?.value?.src || isEditing) && imageField
+  );
 
   return (
     <div
       id={panelId}
       role="tabpanel"
       aria-labelledby={tabId}
-      className="bg-background px-6 py-8 sm:px-10 sm:py-10 lg:px-12 lg:py-12"
+      data-image-position={showImage ? imagePosition : undefined}
+      className={cn(
+        'bg-background px-6 py-8 sm:px-10 sm:py-10 lg:px-12 lg:py-12',
+        isSideBySide && 'grid gap-8 lg:grid-cols-2 lg:items-center'
+      )}
     >
-      {showImage && (imageField?.value?.src || isEditing) && imageField && (
-        <div className="mb-8 overflow-hidden">
+      {showImageBlock && imageField && (
+        <div
+          data-promo-image
+          className={cn(
+            'overflow-hidden',
+            !isSideBySide && 'mb-8',
+            imagePosition === 'right' && 'lg:order-2',
+            imagePosition === 'left' && 'lg:order-1'
+          )}
+        >
           <ContentSdkEditableImage
             field={imageField}
-            className="h-auto max-h-[320px] w-full object-cover object-center"
+            className={cn(
+              'h-auto w-full object-cover object-center',
+              isSideBySide ? 'max-h-[420px]' : 'max-h-[320px]'
+            )}
           />
         </div>
       )}
-      {(headingField?.value || isEditing) && headingField && (
-        <h3 className="font-heading text-primary mb-6 text-pretty text-2xl leading-tight tracking-tight sm:text-3xl lg:text-4xl">
-          <ContentSdkText field={headingField} />
-        </h3>
-      )}
-      {(descriptionField?.value || isEditing) && descriptionField && (
-        <div className="font-body text-foreground max-w-prose text-base leading-relaxed sm:text-lg [&_p+p]:mt-4 [&_p]:mb-0 [&_strong]:font-semibold">
-          <ContentSdkRichText field={descriptionField} />
-        </div>
-      )}
-      {(linkField?.value?.href || isEditing) && linkField && (
-        <div className="mt-8">
-          <TrackedCtaLink
-            field={linkField}
-            className="font-body inline-flex w-fit items-center bg-primary px-6 py-2.5 text-sm font-semibold uppercase tracking-wide text-primary-foreground transition-colors hover:bg-primary-hover"
-          />
-        </div>
-      )}
+      <div
+        className={cn(
+          imagePosition === 'right' && 'lg:order-1',
+          imagePosition === 'left' && 'lg:order-2'
+        )}
+      >
+        {(headingField?.value || isEditing) && headingField && (
+          <h3 className="font-heading text-primary mb-6 text-pretty text-2xl leading-tight tracking-tight sm:text-3xl lg:text-4xl">
+            <ContentSdkText field={headingField} />
+          </h3>
+        )}
+        {(descriptionField?.value || isEditing) && descriptionField && (
+          <div className="font-body text-foreground max-w-prose text-base leading-relaxed sm:text-lg [&_p+p]:mt-4 [&_p]:mb-0 [&_strong]:font-semibold">
+            <ContentSdkRichText field={descriptionField} />
+          </div>
+        )}
+        {(linkField?.value?.href || isEditing) && linkField && (
+          <div className="mt-8">
+            <TrackedCtaLink
+              field={linkField}
+              className="font-body inline-flex w-fit items-center bg-primary px-6 py-2.5 text-sm font-semibold uppercase tracking-wide text-primary-foreground transition-colors hover:bg-primary-hover"
+            />
+          </div>
+        )}
+      </div>
     </div>
   );
 };
@@ -495,12 +547,14 @@ const TopTabsLayout = ({
     () => props.fields?.data?.datasource?.children?.results?.filter(Boolean) ?? [],
     [props.fields?.data?.datasource?.children?.results]
   );
+  const imagePosition = resolveTopTabsImagePosition(props.params);
 
   if (props.fields) {
     return (
       <section
         className={cn(layoutClass, 'relative w-full', props.params?.styles || '')}
         data-class-change
+        data-image-position={showImage ? imagePosition : undefined}
       >
         <div className="container mx-auto px-4 py-8 lg:py-12">
           <div className="border-border overflow-hidden rounded-none border shadow-sm">
@@ -536,6 +590,7 @@ const TopTabsLayout = ({
                     )}
                     {isActive && (
                       <span
+                        data-tab-caret
                         aria-hidden="true"
                         className="border-t-primary absolute bottom-0 left-1/2 h-0 w-0 -translate-x-1/2 translate-y-full border-x-[0.65rem] border-t-[0.65rem] border-x-transparent"
                       />
@@ -562,6 +617,7 @@ const TopTabsLayout = ({
                       panelId={`multi-promo-top-tab-panel-${promo.id}`}
                       isEditing={isEditing}
                       showImage={showImage}
+                      imagePosition={imagePosition}
                     />
                   </div>
                 );

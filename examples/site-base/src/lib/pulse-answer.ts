@@ -60,7 +60,7 @@ function isCareerSource(source: PulseSource): boolean {
   const hay = `${source.title} ${source.url} ${source.path || ''}`.toLowerCase();
   return (
     /\/careers/i.test(hay) ||
-    /career|open role|summer associate|how to apply|legal operations|lateral partner|job opening/i.test(
+    /career|open role|summer associate|how to apply|legal operations|lateral partner|job opening|talent pipeline|intern|hiring|bootcamp/i.test(
       hay
     )
   );
@@ -70,6 +70,11 @@ function isProductLike(source: PulseSource): boolean {
   if (source.type === 'product') return true;
   const hay = `${source.path || ''} ${source.url}`.toLowerCase();
   return (
+    /\/packaging/i.test(hay) ||
+    /\/technology/i.test(hay) ||
+    /\/applications/i.test(hay) ||
+    /\/test-services/i.test(hay) ||
+    /\/services/i.test(hay) ||
     /\/products?\//i.test(hay) ||
     /\/capabilities\//i.test(hay) ||
     /\/window/i.test(hay) ||

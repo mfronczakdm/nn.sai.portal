@@ -169,6 +169,11 @@ export function classifySourceType(path?: string): PulseSourceType {
   if (
     /\/Products?(?:\/|$)/i.test(p) ||
     /\/Capabilities(?:\/|$)/i.test(p) ||
+    /\/Packaging(?:\/|$)/i.test(p) ||
+    /\/Technology(?:\/|$)/i.test(p) ||
+    /\/Applications(?:\/|$)/i.test(p) ||
+    /\/Test(?:%20|-)?Services(?:\/|$)/i.test(p) ||
+    /\/Services(?:\/|$)/i.test(p) ||
     /\/Window(?:%20|[- ])?Hardware(?:\/|$)/i.test(p) ||
     /\/Door(?:%20|[- ])?Hardware(?:\/|$)/i.test(p) ||
     /\/Window(?:%20|[- ])?Components(?:\/|$)/i.test(p) ||

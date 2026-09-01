@@ -11,7 +11,9 @@ import {
   readStoredDemoTaxonomy,
   type DemoUserTaxonomy,
 } from '@/lib/demo-taxonomy';
-import { getPulsePack, getPulseStarterPrompts } from '@/lib/pulse-packs';
+import { useParams, usePathname } from 'next/navigation';
+import { getPulsePack, getPulseStarterPrompts, listPulsePackSiteNames } from '@/lib/pulse-packs';
+import { resolveSearchSiteName } from '@/lib/search-packs/helpers';
 import { cn } from '@/lib/utils';
 import type { PulseAskResponse, PulseSource, PulseStateCode } from '@/lib/pulse-types';
 
@@ -100,12 +102,26 @@ function SourceCards({
 export type PulseAssistantProps = {
   /** When true, the widget is not rendered (Experience Editor / Design Library). */
   hidden?: boolean;
-  /** Site key matching theme/skin packs (quanex, era, amesburytruth, pillsburylaw). */
+  /** Sitecore page.siteName; URL `[site]` wins on the shared editing host when it is a known pack. */
   siteName?: string | null;
 };
 
 export function PulseAssistant({ hidden = false, siteName = null }: PulseAssistantProps) {
   const panelId = useId();
+  const pathname = usePathname();
+  const params = useParams();
+  const routeSite =
+    typeof params?.site === 'string'
+      ? params.site
+      : Array.isArray(params?.site)
+        ? params.site[0]
+        : null;
+  const resolvedSiteName = resolveSearchSiteName({
+    sitecoreSite: siteName,
+    routeSite,
+    pathname,
+    knownSites: listPulsePackSiteNames(),
+  });
   const [open, setOpen] = useState(false);
   const [input, setInput] = useState('');
   const [busy, setBusy] = useState(false);
@@ -115,7 +131,7 @@ export function PulseAssistant({ hidden = false, siteName = null }: PulseAssista
   const inputRef = useRef<HTMLInputElement>(null);
   const latestTurnRef = useRef<HTMLDivElement>(null);
 
-  const pack = getPulsePack(siteName);
+  const pack = getPulsePack(resolvedSiteName);
   const starterPrompts = [...getPulseStarterPrompts(pack.siteName)];
   const typeBadges: Record<PulseSource['type'], string> = {
     ...DEFAULT_TYPE_BADGE,

@@ -10,9 +10,9 @@ import { composePulseAnswer } from '@/lib/pulse-answer';
 import type { PulseSource } from '@/lib/pulse-types';
 
 describe('pulse pack registry', () => {
-  it('registers quanex, era, amesburytruth, and pillsburylaw', () => {
+  it('registers quanex, era, amesburytruth, pillsburylaw, and amkor', () => {
     expect(listPulsePackSiteNames().sort()).toEqual(
-      ['amesburytruth', 'era', 'pillsburylaw', 'quanex'].sort()
+      ['amesburytruth', 'amkor', 'era', 'pillsburylaw', 'quanex'].sort()
     );
   });
 
@@ -22,6 +22,8 @@ describe('pulse pack registry', () => {
     expect(getPulsePack('amesburytruth').homeRootId).toBe(
       '{A57ED898-AA1D-46E6-B7CF-7C7804688EC8}'
     );
+    expect(getPulsePack('Amkor').homeRootId).toBe('{BB13BF5A-B102-4FE8-B410-63E3DA7AA448}');
+    expect(getPulsePack('amkor').brandName).toBe('Amkor');
   });
 
   it('falls back safely when siteName is missing', () => {
@@ -42,6 +44,14 @@ describe('pulse pack registry', () => {
       const joined = prompts.join(' ').toLowerCase();
       expect(joined).not.toMatch(/lawyer|saudi|export-control|portfolio company/);
     }
+  });
+
+  it('returns Amkor packaging and careers starters, not Quanex or law-firm copy', () => {
+    const prompts = getPulseStarterPrompts('amkor');
+    const joined = prompts.join(' ').toLowerCase();
+    expect(joined).toMatch(/s-connect|swift|packaging/);
+    expect(joined).toMatch(/career/);
+    expect(joined).not.toMatch(/lawyer|super spacer|saudi/);
   });
 
   it('keeps Pillsbury Saudi / careers starters', () => {
@@ -89,6 +99,33 @@ describe('pulse pack intent matching', () => {
       'pillsburylaw'
     );
     expect(intent?.id).toBe('careers-find-opening');
+  });
+
+  it('matches amkor S-Connect / AI packaging intent', () => {
+    const intent = matchPulseIntentForSite(
+      'Which packaging should I use for an AI accelerator with HBM?',
+      'amkor'
+    );
+    expect(intent?.id).toBe('ai-advanced-packaging');
+    expect(intent?.citationItemIds[0]).toBe('{1F93ED97-C9E0-4A5E-9B79-ABA7BEFD2157}');
+  });
+
+  it('matches amkor careers intent', () => {
+    const intent = matchPulseIntentForSite(
+      'I am looking for engineering careers at Amkor in Arizona',
+      'amkor'
+    );
+    expect(intent?.id).toBe('careers-talent');
+    expect(intent?.citationItemIds).toContain('{6F39EC02-DAA7-4FED-9E65-E31A9DAF37F1}');
+  });
+
+  it('does not cross-match amkor prompts against pillsbury pack', () => {
+    const pack = getPulsePack('pillsburylaw');
+    const intent = matchPulsePackIntent(
+      'Which packaging should I use for an AI accelerator with HBM?',
+      pack
+    );
+    expect(intent).toBeNull();
   });
 
   it('does not cross-match quanex prompts against pillsbury pack', () => {
@@ -171,5 +208,33 @@ describe('composePulseAnswer (multi-site)', () => {
     expect(result.answer).toMatch(/Pillsbury/);
     expect(result.answer).toMatch(/openings/i);
     expect(result.stateCallout).toMatch(/career/i);
+  });
+
+  it('uses Amkor brand and career framing for Amkor career pages', () => {
+    const pack = getPulsePack('amkor');
+    const careers: PulseSource[] = [
+      {
+        id: '{6F39EC02-DAA7-4FED-9E65-E31A9DAF37F1}',
+        title: 'Careers',
+        url: '/About-Us/Careers',
+        path: '/sitecore/content/amkor/amkor/Home/About Us/Careers',
+        excerpt: 'Engineering, operations, and corporate careers.',
+        type: 'other',
+        score: 1000,
+      },
+      {
+        id: '{74297BC9-7EA0-496D-A956-882BEFEE3230}',
+        title: 'Careers — United States',
+        url: '/About-Us/Careers/United-States',
+        path: '/sitecore/content/amkor/amkor/Home/About Us/Careers/United-States',
+        excerpt: 'U.S. roles including Arizona.',
+        type: 'other',
+        score: 900,
+      },
+    ];
+    const result = composePulseAnswer('engineering careers in Arizona', careers, { pack });
+    expect(result.answer).toMatch(/Amkor/);
+    expect(result.answer).not.toMatch(/Quanex|Pillsbury|lawyer/i);
+    expect(result.answer).toMatch(/career/i);
   });
 });

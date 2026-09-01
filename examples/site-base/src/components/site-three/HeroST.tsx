@@ -37,8 +37,8 @@ const HERO_CONTENT_BAND_CLASS =
 /** Main headline scale (smaller than previous display sizes for shorter hero band) */
 const HERO_TITLE_CLASS = 'text-3xl md:text-4xl lg:text-5xl';
 
-/** Light text over dark hero imagery (theme token — typically white / near-white). */
-const HERO_TEXT_ON_DARK_IMAGE_CLASS = 'text-primary-foreground';
+/** Light text over dark photography. Do not use text-primary-foreground — that token is black in the default @theme. */
+const HERO_TEXT_ON_DARK_IMAGE_CLASS = 'text-white [text-shadow:0_1px_8px_rgb(0_0_0_/_0.45)]';
 
 type PageHeaderSTProps = {
   params: { [key: string]: string };
@@ -46,25 +46,40 @@ type PageHeaderSTProps = {
 };
 
 /** Sitecore checkbox rendering parameters often arrive as 1 / true / yes / on (strings). */
-function isCheckboxParamEnabled(value: string | undefined): boolean {
-  if (value == null || typeof value !== 'string') return false;
-  const v = value.trim().toLowerCase();
+function isCheckboxParamEnabled(value: unknown): boolean {
+  if (value === true || value === 1) return true;
+  if (value == null) return false;
+  const v = String(value).trim().toLowerCase();
   return v === '1' || v === 'true' || v === 'yes' || v === 'on';
 }
 
 /**
- * Rendering parameter "Dark Image" (checkbox). Matches keys regardless of spacing/casing
- * (e.g. DarkImage, Dark Image, darkImage).
+ * Rendering parameter displayed as "Dark Image". The Sitecore field name is the typo
+ * "Dark Imge" (Title = Dark Image). Also accepts DarkImage and styles class names.
  */
 function isDarkImageHero(params: PageHeaderSTProps['params'] | undefined): boolean {
   if (!params) return false;
   for (const [key, value] of Object.entries(params)) {
     const normalized = key.replace(/[\s_-]/g, '').toLowerCase();
-    if (normalized === 'darkimage' && isCheckboxParamEnabled(value)) {
+    // Field name "Dark Imge" → darkimge; Title/docs "Dark Image" → darkimage
+    if ((normalized === 'darkimage' || normalized === 'darkimge') && isCheckboxParamEnabled(value)) {
       return true;
     }
   }
+  const stylesBlob = [params.styles, params.Styles].filter((s) => typeof s === 'string').join(' ');
+  if (stylesBlob && /dark[\s_-]*im[a]?ge/i.test(stylesBlob)) {
+    return true;
+  }
   return false;
+}
+
+function heroSectionProps(params: PageHeaderSTProps['params'] | undefined, extraClassName: string) {
+  const darkImage = isDarkImageHero(params);
+  return {
+    className: cn(extraClassName, params?.styles, params?.Styles),
+    'data-class-change': true,
+    'data-hero-st-dark-image': darkImage ? 'true' : undefined,
+  };
 }
 
 function heroEyebrowOverPhotoClass(darkImage: boolean): string {
@@ -82,8 +97,10 @@ export const Default = (props: PageHeaderSTProps) => {
   const darkImage = isDarkImageHero(props.params);
   return (
     <section
-      className={`relative flex items-center border-8 lg:border-16 border-background ${props?.params?.styles || ''}`}
-      data-class-change
+      {...heroSectionProps(
+        props.params,
+        'relative flex items-center border-8 lg:border-16 border-background'
+      )}
     >
       <div className={HERO_BG_LAYER_CLASS}>
         <ContentSdkImage
@@ -129,8 +146,10 @@ export const Right = (props: PageHeaderSTProps) => {
   const darkImage = isDarkImageHero(props.params);
   return (
     <section
-      className={`relative flex items-center border-8 lg:border-16 border-background ${props?.params?.styles || ''}`}
-      data-class-change
+      {...heroSectionProps(
+        props.params,
+        'relative flex items-center border-8 lg:border-16 border-background'
+      )}
     >
       <div className={HERO_BG_LAYER_CLASS}>
         <ContentSdkImage
@@ -176,8 +195,10 @@ export const Centered = (props: PageHeaderSTProps) => {
   const darkImage = isDarkImageHero(props.params);
   return (
     <section
-      className={`relative flex items-center border-8 lg:border-16 border-background ${props?.params?.styles || ''}`}
-      data-class-change
+      {...heroSectionProps(
+        props.params,
+        'relative flex items-center border-8 lg:border-16 border-background'
+      )}
     >
       <div className={HERO_BG_LAYER_CLASS}>
         <ContentSdkImage

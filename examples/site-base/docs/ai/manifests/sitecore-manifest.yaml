@@ -1,5 +1,5 @@
 ﻿generatedAt: "2026-03-20T09:00:00Z"
-lastUpdatedAt: "2026-09-01T12:20:00Z"
+lastUpdatedAt: "2026-09-01T13:45:00Z"
 lastUpdatedBy: "cursor-agent"
 
 project:
@@ -7542,6 +7542,108 @@ ia:
         - "Open /amkor/en/Search-Results?q=S-Connect on the shared editing host and confirm AI panel + packaging facets"
         - "Confirm Quanex /Search-Results?q=super+spacer is unchanged"
 
+  - name: "amkor-pulse-site-pack"
+    kind: "content"
+    status: "complete"
+    createdAt: "2026-09-01T13:40:00Z"
+    updatedAt: "2026-09-01T13:45:00Z"
+    siteCollection: "amkor"
+    siteName: "amkor"
+    notes:
+      - "2026-09-01: Added Amkor Pulse pack (src/lib/pulse-packs/amkor.ts) keyed by site name amkor. Shared PulseAssistant + /api/pulse/ask; retrieval scoped to /sitecore/content/amkor/amkor/Home {BB13BF5A-B102-4FE8-B410-63E3DA7AA448}. PulseAssistant resolves site from URL [site] then Sitecore siteName so the shared editing host does not reuse Quanex/Pillsbury packs."
+      - "2026-09-01: Intents cover AI packaging, package families, test/Arizona, applications, careers/talent, and company/contact. Careers citations include Careers hub, United States, Korea, Vietnam, Portugal, talent-pipeline blog, educator bootcamp, and CTE story."
+      - "2026-09-01: Search pack also gained Korea/Vietnam/Portugal careers, talent-pipeline + bootcamp news, careers insight rule, and Arizona careers popular search."
+    pages:
+      - { displayName: "Home", name: "Home", itemId: "{BB13BF5A-B102-4FE8-B410-63E3DA7AA448}", path: "/sitecore/content/amkor/amkor/Home", route: "/" }
+      - { displayName: "Careers", name: "Careers", itemId: "{6F39EC02-DAA7-4FED-9E65-E31A9DAF37F1}", path: "/sitecore/content/amkor/amkor/Home/About Us/Careers", route: "/About-Us/Careers" }
+    codeChanges:
+      - "src/lib/pulse-packs/amkor.ts"
+      - "src/lib/pulse-packs/index.ts"
+      - "src/components/pulse-assistant/PulseAssistant.tsx"
+      - "src/lib/pulse-retrieve.ts"
+      - "src/lib/pulse-answer.ts"
+      - "src/lib/search-packs/amkor.ts"
+      - "src/__tests__/lib/pulse-packs.test.ts"
+      - "src/__tests__/lib/search-packs.test.ts"
+      - "src/__tests__/search-results/SearchResults.test.tsx"
+    verification:
+      checkedAt: "2026-09-01T13:45:00Z"
+      passed:
+        - "Amkor Pulse pack registered; intents match AI packaging and careers"
+        - "Quanex/Pillsbury Pulse packs unchanged"
+      failed: []
+      pendingManual:
+        - "Publish Amkor Home tree to Experience Edge so Pulse citations hydrate"
+        - "On /amkor/en/ ask Pulse about S-Connect and Arizona careers; confirm Amkor pages only"
+        - "On /quanex/en/ confirm Pulse still answers IG spacers"
+
+  - name: "amkor-download-list-related-downloads"
+    kind: "content"
+    status: "partial"
+    createdAt: "2026-09-01T12:30:00Z"
+    updatedAt: "2026-09-01T12:50:00Z"
+    siteCollection: "amkor"
+    siteName: "amkor"
+    notes:
+      - "2026-09-01: Added RelatedDownloads named export on shared DownloadList. Default card + Download CTA is unchanged. Headless Variants live on amkor only."
+      - "2026-09-01: Authored Memory Related Downloads datasource with seven GeneralLinkItem children matching the Amkor Memory screenshot labels. Links point at live marketing pages (datasheets are typically gated)."
+      - "2026-09-01: DownloadList rendering Parameters Template was empty so Pages had no variant dropdown. Set to new Portal RP template {706AEE66-5FA4-4974-93BE-BFB59491592D}. ComponentQuery now loads Title/Subtitle/DownloadContent plus children.link."
+      - "2026-09-01: RelatedDownloads list align defaults to center. Honors existing SXA Content alignment styles (position-left|center|right) rather than a new checkbox."
+    react:
+      filePath: "src/components/download-list/DownloadList.tsx"
+      componentMapKey: "DownloadList"
+      variants:
+        - "Default"
+        - "RelatedDownloads"
+    rendering:
+      name: "DownloadList"
+      path: "/sitecore/layout/Renderings/Project/Portal/download-list/DownloadList"
+      itemId: "{F0BCEBEB-D40D-485F-84B5-B08ECD776074}"
+      componentName: "DownloadList"
+      parametersTemplateId: "{706AEE66-5FA4-4974-93BE-BFB59491592D}"
+    sitecoreEnvironment:
+      siteName: "amkor"
+      siteCollection: "amkor"
+    variants:
+      container:
+        name: "DownloadList"
+        path: "/sitecore/content/amkor/amkor/Presentation/Headless Variants/DownloadList"
+        itemId: "{936B5F26-CF60-43F8-ADE8-BBE33F95949B}"
+      items:
+        - { name: "Default", itemId: "{72CA2DB5-FCD2-4EF8-9FBD-68E560AF901A}" }
+        - { name: "RelatedDownloads", itemId: "{FC10DA1A-3514-4D27-80B5-2E6598388FCB}" }
+    exampleItems:
+      - { name: "Download Lists folder", itemId: "{ABBE10DD-03B8-4E72-B15E-43AE6BB959E9}", path: "/sitecore/content/amkor/amkor/Data/Download Lists" }
+      - { name: "Memory Related Downloads", itemId: "{9033A66F-1FCD-41D5-A100-5A239C059808}", path: "/sitecore/content/amkor/amkor/Data/Download Lists/Memory Related Downloads", note: "Title: View related downloads" }
+      - { name: "01 SiP Data Sheet", itemId: "{E258989C-CFCB-4889-9F38-7AB52C4DFF5A}" }
+      - { name: "02 Stacked CSP Data Sheet", itemId: "{58850CDF-EF30-498F-BA68-8F74847269C9}" }
+      - { name: "03 3D Stacked Die Data Sheet", itemId: "{DF97565F-1314-4794-A605-AEA12EEB793D}" }
+      - { name: "04 Flip Chip Data Sheet", itemId: "{849BFE7D-03C8-414F-90A4-01680B89BDE7}" }
+      - { name: "05 PoP Data Sheet", itemId: "{9C63947C-1651-412E-99DE-AA947D87E3A3}" }
+      - { name: "06 Product Line Card", itemId: "{BE3D5797-AAA6-4238-935F-3051AD85C04E}" }
+      - { name: "07 Test Services Brochure", itemId: "{CB3306E7-D677-4261-A8BC-A67A2A847173}" }
+      - { name: "DownloadList RP template", itemId: "{706AEE66-5FA4-4974-93BE-BFB59491592D}", path: "/sitecore/templates/Project/Portal/Rendering Parameters/DownloadList" }
+      - { name: "DownloadList RP SV", itemId: "{C6757640-AEF3-4068-A51A-9B5105953FA7}" }
+    pages:
+      - { displayName: "Memory", name: "Memory", itemId: "{0EBC33FF-8697-49B8-A276-19BD86E99074}", path: "/sitecore/content/amkor/amkor/Home/Packaging/Memory", route: "/Packaging/Memory", note: "DownloadList instance 00229743-80fa-4d5a-8be9-761f1ffa1de0, datasource {9033A66F-1FCD-41D5-A100-5A239C059808}" }
+    codeChanges:
+      - "src/components/download-list/DownloadList.tsx"
+      - "src/__tests__/download-list/download-list.related.test.tsx"
+    verification:
+      checkedAt: "2026-09-01T12:50:00Z"
+      passed:
+        - "Headless Variants Default + RelatedDownloads exist under amkor Presentation"
+        - "Memory page DownloadList datasource is Memory Related Downloads"
+        - "Seven GeneralLinkItem children with screenshot labels and numbered sort names"
+        - "Rendering Parameters Template and ComponentQuery (Title/Subtitle/DownloadContent/children.link) confirmed on rendering"
+        - "Jest src/__tests__/download-list: 18 passed"
+      failed: []
+      pendingManual:
+        - "In Pages, select DownloadList variant RelatedDownloads (FieldNames {FC10DA1A-3514-4D27-80B5-2E6598388FCB}). MCP cannot set FieldNames."
+        - "Publish Memory page, Download Lists subtree, Headless Variants, DownloadList rendering, and DownloadList RP template"
+        - "Confirm PKM/BCBS DownloadList still loads plan assets via DownloadContent"
+        - "Replace marketing-page URLs with real PDF hrefs when files are available"
+
   - name: "Authentication"
     kind: "simple"
     category: "Portal"
@@ -9439,7 +9541,7 @@ ia:
     category: "Promos"
     status: "complete"
     createdAt: "2026-08-25T13:45:00Z"
-    updatedAt: "2026-08-25T13:56:00Z"
+    updatedAt: "2026-09-01T13:50:00Z"
 
     react:
       filePath: "src/components/site-three/MultiPromo.tsx"
@@ -9468,6 +9570,7 @@ ia:
       parametersFields:
         - { name: "numColumns", type: "Droplist", itemId: "{22DF33A8-4FC8-456D-BA02-05FE614B9F90}", preexisting: true }
         - { name: "ShowBackgroundImage", type: "Checkbox", itemId: "{EE3BE048-388B-4294-A034-546382395972}", title: "Background image", note: "Added 2026-08-25 under Advanced styling; default off" }
+        - { name: "ImagePosition", type: "Droplist", itemId: "{9BB25D0B-59E0-4DFF-B2BA-2325E11478D6}", title: "Image Position", source: "query:$site/Presentation/Enumerations/Promos/Image Positions/*", note: "Added 2026-09-01 under Advanced styling. Empty / Image Top keeps historical image-on-top. Image Left and Image Right are side-by-side. Shared=1 Type=Droplist verified." }
       componentQueryUpdated: true
       componentQueryNote: "Added backgroundImage: field(name: \"BackgroundImage\") { jsonValue } alongside existing MultiPromo/SimplePromo fragments. Verified via get_components_on_page 2026-08-25."
 
@@ -9558,6 +9661,9 @@ ia:
         - "Add three SimplePromo children under Home/Data/MultiPromo; leave BackgroundImage empty until a DAM asset is available (do not invent media IDs)"
         - "Approve Draft workflow on Home/Data/MultiPromo"
         - "set_component_datasource variantId cannot set Headless Variants (404); FieldNames must be set in Pages"
+        - "2026-09-01: In Pages on Amkor Memory MultiPromo (instance {0D18DAC4-DA8A-4759-88A7-BEF26588168B}), Advanced styling → Image Position → Image Right. MCP cannot patch this page's __Final Renderings safely (HeroST + MultiPromo + two DownloadLists)."
+        - "Publish MultiPromo Parameters template, Image Positions enumerations (amkor/quanex/era/amesburytruth/pillsbury), and Amkor Memory page for Edge"
+        - "Confirm Pages preview of /Packaging/Memory after publish: white/teal tabs, image beside copy on the right"
 
     headlessVariantsAmkor:
       containerPath: "/sitecore/content/amkor/amkor/Presentation/Headless Variants/MultiPromo"
@@ -9572,8 +9678,60 @@ ia:
         - { name: "Version1", itemId: "{01A42D1D-362A-4A35-AC18-6A11BBD0CD79}" }
         - { name: "Version2", itemId: "{CB060119-C9A8-4871-A790-68827ECBEFDC}" }
 
+    imagePositionEnumerations:
+      source: "query:$site/Presentation/Enumerations/Promos/Image Positions/*"
+      values: ["Image Top", "Image Right", "Image Left"]
+      sites:
+        - siteName: "amkor"
+          folderId: "{AAB034C0-FBC0-4383-A14E-2FD84F110DCA}"
+          path: "/sitecore/content/amkor/amkor/Presentation/Enumerations/Promos/Image Positions"
+          items:
+            - { name: "Image Top", itemId: "{F026482E-7F8E-4350-8C26-9F6C61DF5521}" }
+            - { name: "Image Right", itemId: "{59B40B72-37BB-4F5E-B602-10CA50C58613}" }
+            - { name: "Image Left", itemId: "{68B8B002-A035-4D17-969F-B6BB053E1DE4}" }
+        - siteName: "quanex"
+          folderId: "{291FA63B-139B-4777-80F8-337CF69F3C32}"
+          path: "/sitecore/content/quanex/quanex/Presentation/Enumerations/Promos/Image Positions"
+          items:
+            - { name: "Image Top", itemId: "{5C673D19-C2A6-4B73-B0FB-CCF151C4C1DA}" }
+            - { name: "Image Right", itemId: "{717B6A93-A04C-4738-8DFE-494E5D466BA4}" }
+            - { name: "Image Left", itemId: "{76ED30D4-EAFB-4877-ADE1-CD81D14A865C}" }
+        - siteName: "era"
+          folderId: "{E3ED8796-AD19-4501-86F6-921D9A8342EB}"
+          path: "/sitecore/content/quanex/era/Presentation/Enumerations/Promos/Image Positions"
+          items:
+            - { name: "Image Top", itemId: "{79CB2E08-79DA-455C-8836-DB4A03AED815}" }
+            - { name: "Image Right", itemId: "{16208A25-0B5A-4AAD-8751-7D3B1C7EDC3B}" }
+            - { name: "Image Left", itemId: "{2F32F741-793D-4965-906D-3609791319D6}" }
+        - siteName: "amesburytruth"
+          folderId: "{5C32F3E7-8387-4DB0-8BD6-64871E58F8D3}"
+          path: "/sitecore/content/quanex/amesburytruth/Presentation/Enumerations/Promos/Image Positions"
+          items:
+            - { name: "Image Top", itemId: "{F8B22D49-3598-4B6A-B592-A2586B04EC14}" }
+            - { name: "Image Right", itemId: "{E4E39250-2B72-409F-93BF-B8705C3E308B}" }
+            - { name: "Image Left", itemId: "{1F5D7B42-D44E-431D-A95D-C6EC9930A7DD}" }
+        - siteName: "pillsburylaw"
+          folderId: "{47B22932-AFA8-49BC-BBAC-0388D89B46DE}"
+          path: "/sitecore/content/pillsbury/pillsburylaw/Presentation/Enumerations/Promos/Image Positions"
+          items:
+            - { name: "Image Top", itemId: "{72E528B2-219D-4ADA-AA18-3CCDE0918308}" }
+            - { name: "Image Right", itemId: "{8263ADE2-DF01-4AF1-BE51-B6404B07DABA}" }
+            - { name: "Image Left", itemId: "{ED9E85B9-AA3E-42A3-9FF4-7A35F6B8B03F}" }
+
+    amkorMemoryTopTabs:
+      pageId: "{0EBC33FF-8697-49B8-A276-19BD86E99074}"
+      pagePath: "/sitecore/content/amkor/amkor/Home/Packaging/Memory"
+      instanceId: "{0D18DAC4-DA8A-4759-88A7-BEF26588168B}"
+      renderingId: "{D806DDF7-39A7-4A6D-8E0A-D138BC53845D}"
+      datasourceId: "{2111C5E5-39F0-4D48-A512-26685A5CDE1E}"
+      datasourcePath: "/sitecore/content/amkor/amkor/Data/MultiPromos/Applications We Serve"
+      fieldNames: "{E33CE5DA-33CB-4F79-B419-AFA2025AA332}"
+      fieldNamesNote: "TopTabs variant already selected"
+      imagePosition: "not set on instance — empty defaults to Image Top in React. Authors must pick Image Right in Pages Advanced styling."
+
     notes:
-      - "2026-08-29: Amkor Headless Variants completed � added SideTabs, TopTabs, TopTabsNoImage, Version1, Version2. HeroST already had all 5 exports."
+      - "2026-09-01: TopTabs ImagePosition Droplist (Image Top / Image Right / Image Left) on shared MultiPromo Parameters Advanced styling. Empty = Image Top so Quanex/ERA/AT/Pillsbury stay on image-on-top. Amkor-only CSS for teal tabs, triangle bullets, square CTA. Memory page instance not updated (MCP cannot safely patch multi-component __Final Renderings)."
+      - "2026-08-29: Amkor Headless Variants completed — added SideTabs, TopTabs, TopTabsNoImage, Version1, Version2. HeroST already had all 5 exports."
       - "2026-08-25: Added MultiPromo Version1 (LCMC teal/white split + optional portrait/arc). Headless Variants on lcmc, site-base, and pkm. ShowBackgroundImage RP checkbox defaults off."
       - "2026-08-25: Implemented Version1 React export. Added BackgroundImage Image field on shared MultiPromo datasource template (empty SV). Updated ComponentQuery. Added MultiPromo to LCMC Home; variant selection still requires Pages."
 

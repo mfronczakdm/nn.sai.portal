@@ -1,5 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
+import fs from 'fs';
+import path from 'path';
 import { render, screen, fireEvent } from '@testing-library/react';
 import {
   Default as MultiPromoDefault,
@@ -9,6 +11,7 @@ import {
   TopTabs as MultiPromoTopTabs,
   TopTabsNoImage as MultiPromoTopTabsNoImage,
   Version1 as MultiPromoVersion1,
+  resolveTopTabsImagePosition,
 } from '@/components/site-three/MultiPromo';
 
 // Mock lucide-react
@@ -534,6 +537,73 @@ describe('MultiPromo', () => {
       expect(container.querySelector('.multi-promo-top-tabs')).toBeInTheDocument();
     });
 
+    it('defaults to image on top when ImagePosition is unset', () => {
+      const { container } = render(<MultiPromoTopTabs {...mockProps} />);
+      const section = container.querySelector('.multi-promo-top-tabs');
+      const activePanel = container.querySelector('[data-promo-panel][data-active="true"] [role="tabpanel"]');
+      expect(section).toHaveAttribute('data-image-position', 'top');
+      expect(activePanel).toHaveAttribute('data-image-position', 'top');
+      expect(activePanel).not.toHaveClass('lg:grid-cols-2');
+      expect(activePanel?.querySelector('[data-promo-image]')).toHaveClass('mb-8');
+    });
+
+    it('places the image beside copy when ImagePosition is Image Right', () => {
+      const props = {
+        ...mockProps,
+        params: { ...mockProps.params, ImagePosition: 'Image Right' },
+      };
+      const { container } = render(<MultiPromoTopTabs {...props} />);
+      const section = container.querySelector('.multi-promo-top-tabs');
+      const activePanel = container.querySelector('[data-promo-panel][data-active="true"] [role="tabpanel"]');
+      expect(section).toHaveAttribute('data-image-position', 'right');
+      expect(activePanel).toHaveClass('lg:grid-cols-2');
+      expect(activePanel?.querySelector('[data-promo-image]')).toHaveClass('lg:order-2');
+      expect(activePanel?.querySelector('[data-promo-image]')).not.toHaveClass('mb-8');
+    });
+
+    it('places the image beside copy when ImagePosition is Image Left', () => {
+      const props = {
+        ...mockProps,
+        params: { ...mockProps.params, ImagePosition: 'Image Left' },
+      };
+      const { container } = render(<MultiPromoTopTabs {...props} />);
+      const activePanel = container.querySelector('[data-promo-panel][data-active="true"] [role="tabpanel"]');
+      expect(container.querySelector('.multi-promo-top-tabs')).toHaveAttribute(
+        'data-image-position',
+        'left'
+      );
+      expect(activePanel).toHaveClass('lg:grid-cols-2');
+      expect(activePanel?.querySelector('[data-promo-image]')).toHaveClass('lg:order-1');
+    });
+
+    it('keeps image on top when ImagePosition is Image Top', () => {
+      const props = {
+        ...mockProps,
+        params: { ...mockProps.params, ImagePosition: 'Image Top' },
+      };
+      const { container } = render(<MultiPromoTopTabs {...props} />);
+      const activePanel = container.querySelector('[data-promo-panel][data-active="true"] [role="tabpanel"]');
+      expect(container.querySelector('.multi-promo-top-tabs')).toHaveAttribute(
+        'data-image-position',
+        'top'
+      );
+      expect(activePanel).not.toHaveClass('lg:grid-cols-2');
+    });
+
+    it('marks the active tab caret for Amkor theme CSS to hide', () => {
+      const { container } = render(<MultiPromoTopTabs {...mockProps} />);
+      expect(container.querySelector('[data-tab-caret]')).toBeInTheDocument();
+    });
+
+    it('uses rectangular top-tab classes rather than pill rounding', () => {
+      render(<MultiPromoTopTabs {...mockProps} />);
+      const tabs = screen.getAllByRole('tab');
+      tabs.forEach((tab) => {
+        expect(tab).not.toHaveClass('rounded-full');
+        expect(tab).not.toHaveClass('rounded-md');
+      });
+    });
+
     it('renders NoDataFallback when fields are missing', () => {
       const emptyProps = { params: {}, fields: undefined } as any;
       render(<MultiPromoTopTabs {...emptyProps} />);
@@ -773,6 +843,51 @@ describe('MultiPromo', () => {
       const emptyProps = { params: {}, fields: undefined } as any;
       render(<MultiPromoVersion1 {...emptyProps} />);
       expect(screen.getByTestId('no-data-fallback')).toBeInTheDocument();
+    });
+  });
+
+  describe('TopTabs ImagePosition param resolution', () => {
+    it('defaults to top when params are missing', () => {
+      expect(resolveTopTabsImagePosition(undefined)).toBe('top');
+      expect(resolveTopTabsImagePosition({})).toBe('top');
+    });
+
+    it('resolves Image Right / Image Left / Image Top labels from Pages', () => {
+      expect(resolveTopTabsImagePosition({ ImagePosition: 'Image Right' })).toBe('right');
+      expect(resolveTopTabsImagePosition({ ImagePosition: 'Image Left' })).toBe('left');
+      expect(resolveTopTabsImagePosition({ ImagePosition: 'Image Top' })).toBe('top');
+    });
+
+    it('normalizes spaced, dashed, and lowercase param keys and values', () => {
+      expect(resolveTopTabsImagePosition({ 'image-position': 'image-right' })).toBe('right');
+      expect(resolveTopTabsImagePosition({ image_position: 'imageright' })).toBe('right');
+      expect(resolveTopTabsImagePosition({ ImagePosition: 'right' })).toBe('right');
+      expect(resolveTopTabsImagePosition({ ImagePosition: 'LEFT' })).toBe('left');
+    });
+
+    it('falls back to top for unknown values so other sites stay on image-on-top', () => {
+      expect(resolveTopTabsImagePosition({ ImagePosition: 'Stacked' })).toBe('top');
+    });
+  });
+
+  describe('Amkor TopTabs theme CSS', () => {
+    const amkorCss = fs.readFileSync(
+      path.join(__dirname, '../../assets/styles/themes/amkor.css'),
+      'utf8'
+    );
+
+    it('scopes tab colors to [data-theme=amkor] so Quanex MultiPromo is unchanged', () => {
+      expect(amkorCss).toContain("[data-theme='amkor'] .multi-promo-top-tabs");
+      expect(amkorCss).toContain('--color-tab-inactive');
+      expect(amkorCss).toContain('--color-tab-active');
+      expect(amkorCss).toContain('--color-tab-active-foreground');
+      expect(amkorCss).toContain('var(--color-news-accent-to)');
+      expect(amkorCss).toContain('var(--color-news-accent-from)');
+    });
+
+    it('uses triangle list markers and hides the default tab caret on Amkor', () => {
+      expect(amkorCss).toContain('[data-tab-caret]');
+      expect(amkorCss).toContain("border-color: transparent transparent transparent var(--color-primary)");
     });
   });
 });

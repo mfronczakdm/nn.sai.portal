@@ -1,6 +1,6 @@
 # Pulse multi-site packs
 
-Pulse is a shared assistant (UI + `/api/pulse/ask` + retrieve + answer templates) with **per-site packs** keyed by the same site names as themes/skins (`quanex`, `era`, `amesburytruth`, `pillsburylaw`, …).
+Pulse is a shared assistant (UI + `/api/pulse/ask` + retrieve + answer templates) with **per-site packs** keyed by the same site names as themes/skins (`quanex`, `era`, `amesburytruth`, `pillsburylaw`, `amkor`, …).
 
 ## How it works
 
@@ -33,7 +33,9 @@ Pulse is a shared assistant (UI + `/api/pulse/ask` + retrieve + answer templates
 | Intent citation ID hydration | When a pack intent matches |
 | Sitecore Search (`NEXT_PUBLIC_SEARCH_*`) | **Optional** only if Search is configured |
 
-Quanex, ERA, and AmesburyTruth share one XM Cloud Edge Context ID from env (`SITECORE_EDGE_CONTEXT_ID` / `SITECORE_EDGE_CONTEXT_ID_LIVE`). Packs only scope Home path/root within that tenant — do not invent per-brand Edge context IDs.
+Quanex, ERA, AmesburyTruth, and Amkor share one XM Cloud Edge Context ID from env (`SITECORE_EDGE_CONTEXT_ID` / `SITECORE_EDGE_CONTEXT_ID_LIVE`). Packs only scope Home path/root within that tenant — do not invent per-brand Edge context IDs.
+
+On the shared editing host, `PulseAssistant` resolves the pack from the URL `[site]` segment first (same helper as SearchResults), then Sitecore `page.siteName`. Amkor citations live under `/sitecore/content/amkor/amkor/Home` (`{BB13BF5A-B102-4FE8-B410-63E3DA7AA448}`) and include packaging, test/Arizona, and careers/talent pages.
 
 ## Follow-ups
 

@@ -195,17 +195,41 @@ html[data-theme='amkor'] {
   --font-weight-heading: 600;
 }
 
+html[data-theme='amkor'] .btn {
+  border-radius: 0;
+}
+
 html[data-theme='amkor'] .btn.btn-primary {
   background-color: var(--color-accent);
   color: var(--color-accent-foreground);
   border-radius: 0;
   text-transform: uppercase;
   letter-spacing: 0.03em;
+  font-weight: 700;
 }
 
 html[data-theme='amkor'] .btn.btn-primary:hover {
   background-color: var(--color-accent-hover);
   color: var(--color-accent-foreground);
+}
+
+/* Live amkor.com default .button: white square, navy/violet label — used as secondary / ghost CTA. */
+html[data-theme='amkor'] .btn.btn-secondary {
+  background-color: #ffffff;
+  color: var(--color-primary);
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-weight: 700;
+}
+
+html[data-theme='amkor'] .btn.btn-secondary:hover {
+  background-color: #e8e8e8;
+  color: var(--color-primary);
+}
+
+html[data-theme='amkor'] .btn.btn-outline {
+  border-radius: 0;
 }
 
 /* americasmart.com: Avenir → Montserrat headings + Open Sans body; uppercase display; square CTAs. */

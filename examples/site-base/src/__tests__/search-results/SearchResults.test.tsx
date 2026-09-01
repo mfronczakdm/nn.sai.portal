@@ -64,6 +64,13 @@ describe('SearchResults site packs', () => {
     expect(screen.queryByRole('heading', { name: 'Super Spacer' })).not.toBeInTheDocument();
   });
 
+  it('shows Amkor career results for talent queries', () => {
+    render(<SearchResults siteName="amkor" disableUrlSync initialQuery="engineering careers Arizona" />);
+
+    expect(screen.getByText('Amkor search')).toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 3, name: 'Careers' })).toBeInTheDocument();
+  });
+
   it('keeps Pillsbury lawyer results on pillsburylaw', () => {
     render(<SearchResults siteName="pillsburylaw" disableUrlSync initialQuery="Mark Abate" />);
 
