@@ -185,7 +185,7 @@ function useDownloadListModel({ fields, page }: DownloadListProps): DownloadList
   };
 }
 
-const DownloadListEmpty = (): JSX.Element => (
+const DownloadListEmpty: FC = () => (
   <div className="component download-list">
     <div className="component-content">
       <span className="is-empty-hint">DownloadList</span>
