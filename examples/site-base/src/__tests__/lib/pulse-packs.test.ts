@@ -119,6 +119,38 @@ describe('pulse pack intent matching', () => {
     expect(intent?.citationItemIds).toContain('{6F39EC02-DAA7-4FED-9E65-E31A9DAF37F1}');
   });
 
+  it('ranks Memory first for Amkor memory packaging Pulse asks', () => {
+    const intent = matchPulseIntentForSite('Tell me about Amkor memory packaging', 'amkor');
+    expect(intent?.id).toBe('memory-packaging');
+    expect(intent?.citationItemIds[0]).toBe('{0EBC33FF-8697-49B8-A276-19BD86E99074}');
+    expect(intent?.answer?.intro).toMatch(/\*\*Memory\*\*/);
+  });
+
+  it('keeps Memory citation fallbacks when Experience Edge misses the item', () => {
+    const pack = getPulsePack('amkor');
+    expect(pack.citationFallbacks?.['{0EBC33FF-8697-49B8-A276-19BD86E99074}']?.url).toBe(
+      '/Packaging/Memory'
+    );
+    expect(pack.citationFallbacks?.['{6F39EC02-DAA7-4FED-9E65-E31A9DAF37F1}']?.url).toBe(
+      '/About-Us/Careers'
+    );
+  });
+
+  it('matches Amkor Pulse careers for “help me find a career”', () => {
+    const intent = matchPulseIntentForSite('help me find a career', 'amkor');
+    expect(intent?.id).toBe('careers-talent');
+    expect(intent?.citationItemIds[0]).toBe('{6F39EC02-DAA7-4FED-9E65-E31A9DAF37F1}');
+    expect(intent?.answer?.intro).toMatch(/\*\*Careers\*\*/);
+  });
+
+  it('does not steal HBM AI asks into the Memory Pulse intent', () => {
+    const intent = matchPulseIntentForSite(
+      'Which packaging should I use for an AI accelerator with HBM?',
+      'amkor'
+    );
+    expect(intent?.id).toBe('ai-advanced-packaging');
+  });
+
   it('does not cross-match amkor prompts against pillsbury pack', () => {
     const pack = getPulsePack('pillsburylaw');
     const intent = matchPulsePackIntent(
@@ -235,6 +267,70 @@ describe('composePulseAnswer (multi-site)', () => {
     const result = composePulseAnswer('engineering careers in Arizona', careers, { pack });
     expect(result.answer).toMatch(/Amkor/);
     expect(result.answer).not.toMatch(/Quanex|Pillsbury|lawyer/i);
-    expect(result.answer).toMatch(/career/i);
+    expect(result.answer).toMatch(/\*\*Careers\*\*/);
+    expect(result.sources[0].url).toBe('/About-Us/Careers');
+    expect(result.stateCallout).toBeNull();
+  });
+
+  it('leads Amkor Pulse with Memory and a Search-style narrative', () => {
+    const pack = getPulsePack('amkor');
+    const memorySources: PulseSource[] = [
+      {
+        id: '{0EBC33FF-8697-49B8-A276-19BD86E99074}',
+        title: 'Memory',
+        url: '/Packaging/Memory',
+        path: '/sitecore/content/amkor/amkor/Home/Packaging/Memory',
+        excerpt: 'Memory packaging platforms for stacked and high-bandwidth memory.',
+        type: 'product',
+        score: 1000,
+      },
+      {
+        id: '{764CB846-8081-439C-BAB5-A0BA97F45BF7}',
+        title: 'FlipStack CSP',
+        url: '/Packaging/Laminate/FlipStack-CSP',
+        path: '/sitecore/content/amkor/amkor/Home/Packaging/Laminate/FlipStack CSP',
+        excerpt: 'Stacked CSP for memory-plus-logic.',
+        type: 'product',
+        score: 950,
+      },
+    ];
+    const result = composePulseAnswer('Tell me about Amkor memory packaging', memorySources, {
+      pack,
+    });
+    expect(result.sources[0].url).toBe('/Packaging/Memory');
+    expect(result.answer).toMatch(/\*\*Memory\*\*/);
+    expect(result.answer).toMatch(/NAND|DRAM/i);
+    expect(result.answer).not.toMatch(/Also in this journey|Citation cards below|keep top and center/i);
+    expect(result.answer).not.toMatch(/Quanex|Pillsbury|lawyer/i);
+  });
+
+  it('uses Amkor career insight copy for “help me find a career”', () => {
+    const pack = getPulsePack('amkor');
+    const careers: PulseSource[] = [
+      {
+        id: '{6F39EC02-DAA7-4FED-9E65-E31A9DAF37F1}',
+        title: 'Careers',
+        url: '/About-Us/Careers',
+        path: '/sitecore/content/amkor/amkor/Home/About Us/Careers',
+        excerpt: 'Global engineering, operations, and corporate openings.',
+        type: 'other',
+        score: 1000,
+      },
+      {
+        id: '{74297BC9-7EA0-496D-A956-882BEFEE3230}',
+        title: 'Careers — United States',
+        url: '/About-Us/Careers/United-States',
+        path: '/sitecore/content/amkor/amkor/Home/About Us/Careers/United-States',
+        excerpt: 'U.S. roles including Arizona.',
+        type: 'other',
+        score: 900,
+      },
+    ];
+    const result = composePulseAnswer('help me find a career', careers, { pack });
+    expect(result.sources[0].url).toBe('/About-Us/Careers');
+    expect(result.answer).toMatch(/\*\*Careers\*\*/);
+    expect(result.answer).toMatch(/United States/);
+    expect(result.answer).not.toMatch(/Also in this journey|Citation cards below/i);
+    expect(result.answer).not.toMatch(/lawyer bios/i);
   });
 });

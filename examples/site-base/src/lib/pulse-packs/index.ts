@@ -6,7 +6,13 @@ import { pillsburylawPulsePack } from './pillsburylaw';
 import { quanexPulsePack } from './quanex';
 import type { MatchedPulseIntent, PulseSitePack } from './types';
 
-export type { MatchedPulseIntent, PulsePackIntent, PulseSitePack, PulseTypeLabels } from './types';
+export type {
+  MatchedPulseIntent,
+  PulsePackIntent,
+  PulsePackIntentAnswer,
+  PulseSitePack,
+  PulseTypeLabels,
+} from './types';
 export { matchPulsePackIntent, normalizePulseQuestion } from './match';
 
 const DEFAULT_PACK_SITE = 'pillsburylaw';

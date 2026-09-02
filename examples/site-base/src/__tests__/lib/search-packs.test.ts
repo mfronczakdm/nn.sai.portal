@@ -139,6 +139,21 @@ describe('Amkor catalog matching', () => {
     expect(insight?.id).toBe('ai-amkor-careers');
   });
 
+  it('selects Memory insight and catalog for memory packaging queries', () => {
+    const insight = selectAiSearchInsight('Tell me about Amkor memory packaging', pack.insightRules);
+    expect(insight?.id).toBe('ai-amkor-memory');
+    expect(insight?.citations[0]?.href).toBe('/Packaging/Memory');
+    const hits = pack.catalog.filter((item) =>
+      itemMatchesQuery(item, 'Tell me about Amkor memory packaging', pack.bucketSynonyms)
+    );
+    expect(hits.some((item) => item.href === '/Packaging/Memory')).toBe(true);
+  });
+
+  it('selects careers insight for “help me find a career”', () => {
+    const insight = selectAiSearchInsight('help me find a career', pack.insightRules);
+    expect(insight?.id).toBe('ai-amkor-careers');
+  });
+
   it('returns Careers pages for talent queries, not Quanex products', () => {
     const hits = pack.catalog.filter((item) =>
       itemMatchesQuery(item, 'engineering careers in Arizona', pack.bucketSynonyms)

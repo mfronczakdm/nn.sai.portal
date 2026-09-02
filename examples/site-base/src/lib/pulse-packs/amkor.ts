@@ -1,4 +1,122 @@
+import type { PulseSource } from '@/lib/pulse-types';
 import type { PulseSitePack } from './types';
+
+function page(
+  id: string,
+  title: string,
+  url: string,
+  path: string,
+  excerpt: string,
+  type: PulseSource['type'] = 'product'
+): Omit<PulseSource, 'score'> {
+  return { id, title, url, path, excerpt, type };
+}
+
+/**
+ * Used when Experience Edge item() misses a published GUID (common on the editing host).
+ * Paths match the amkor/amkor content tree so hydrate can query by path instead of GUID.
+ */
+const FALLBACKS: Record<string, Omit<PulseSource, 'score'>> = {
+  '{0EBC33FF-8697-49B8-A276-19BD86E99074}': page(
+    '{0EBC33FF-8697-49B8-A276-19BD86E99074}',
+    'Memory',
+    '/Packaging/Memory',
+    '/sitecore/content/amkor/amkor/Home/Packaging/Memory',
+    'Amkor memory and storage solutions support NAND, DRAM, eMMC, M.2 modules and custom products for mobile, automotive and data centers.'
+  ),
+  '{764CB846-8081-439C-BAB5-A0BA97F45BF7}': page(
+    '{764CB846-8081-439C-BAB5-A0BA97F45BF7}',
+    'FlipStack CSP',
+    '/Packaging/Laminate/FlipStack-CSP',
+    '/sitecore/content/amkor/amkor/Home/Packaging/Laminate/FlipStack CSP',
+    'Stacked CSP packaging for memory-plus-logic combinations in a compact laminate form factor.'
+  ),
+  '{D36A3F10-8A1C-46E6-BFFC-59F318C87129}': page(
+    '{D36A3F10-8A1C-46E6-BFFC-59F318C87129}',
+    'Package-on-Package',
+    '/Technology/Package-on-Package',
+    '/sitecore/content/amkor/amkor/Home/Technology/Package-on-Package',
+    'Package-on-package stacking for memory and logic in a compact vertical footprint.'
+  ),
+  '{874F21E1-91B9-44BD-BE36-A5AEF1A95055}': page(
+    '{874F21E1-91B9-44BD-BE36-A5AEF1A95055}',
+    'System in Package (SiP)',
+    '/Packaging/System-in-Package-SiP',
+    '/sitecore/content/amkor/amkor/Home/Packaging/System in Package SiP',
+    'System-in-package solutions that combine multiple die in a single module for RF, IoT, and compact systems.'
+  ),
+  '{CFF1B3A2-45C1-44F9-8411-32C55F316627}': page(
+    '{CFF1B3A2-45C1-44F9-8411-32C55F316627}',
+    'Packaging',
+    '/Packaging',
+    '/sitecore/content/amkor/amkor/Home/Packaging',
+    'Amkor packaging families including laminate, wafer-level, SiP, memory, leadframe, and power.'
+  ),
+  '{6F39EC02-DAA7-4FED-9E65-E31A9DAF37F1}': page(
+    '{6F39EC02-DAA7-4FED-9E65-E31A9DAF37F1}',
+    'Careers',
+    '/About-Us/Careers',
+    '/sitecore/content/amkor/amkor/Home/About Us/Careers',
+    'Global engineering, operations, and corporate openings across Amkor sites.',
+    'other'
+  ),
+  '{74297BC9-7EA0-496D-A956-882BEFEE3230}': page(
+    '{74297BC9-7EA0-496D-A956-882BEFEE3230}',
+    'Careers — United States',
+    '/About-Us/Careers/United-States',
+    '/sitecore/content/amkor/amkor/Home/About Us/Careers/United States',
+    'U.S. roles including the Arizona advanced packaging and test campus.',
+    'other'
+  ),
+  '{F4F4B8B7-38C9-4990-9934-9A55A96CC425}': page(
+    '{F4F4B8B7-38C9-4990-9934-9A55A96CC425}',
+    'Careers — Korea',
+    '/About-Us/Careers/Korea',
+    '/sitecore/content/amkor/amkor/Home/About Us/Careers/Korea',
+    'Korea manufacturing and engineering career paths.',
+    'other'
+  ),
+  '{A3CAEC3B-1A9D-4FFE-A8E1-926C1540E0AE}': page(
+    '{A3CAEC3B-1A9D-4FFE-A8E1-926C1540E0AE}',
+    'Careers — Vietnam',
+    '/About-Us/Careers/Vietnam',
+    '/sitecore/content/amkor/amkor/Home/About Us/Careers/Vietnam',
+    'Vietnam site openings for manufacturing and operations.',
+    'other'
+  ),
+  '{E0C7CEB1-0EC3-4B9C-B96C-684C52DCE4AB}': page(
+    '{E0C7CEB1-0EC3-4B9C-B96C-684C52DCE4AB}',
+    'Careers — Portugal',
+    '/About-Us/Careers/Portugal',
+    '/sitecore/content/amkor/amkor/Home/About Us/Careers/Portugal',
+    'Portugal site openings.',
+    'other'
+  ),
+  '{EDDB8EF0-8C38-401C-92F5-F618A696A6ED}': page(
+    '{EDDB8EF0-8C38-401C-92F5-F618A696A6ED}',
+    'Building the Talent Pipeline with West-MEC Students',
+    '/About-Us/News/Blog/Building-Talent-Pipeline-West-MEC-Students',
+    '/sitecore/content/amkor/amkor/Home/About Us/News/Blog/Building Talent Pipeline West-MEC Students',
+    'How Amkor partners with West-MEC advanced manufacturing students to grow the semiconductor workforce.',
+    'knowledge-article'
+  ),
+  '{620CDBA1-8F9D-4B45-BCC2-6F89BFFD78C0}': page(
+    '{620CDBA1-8F9D-4B45-BCC2-6F89BFFD78C0}',
+    'Semiconductor Educator Bootcamp',
+    '/About-Us/News/Blog/Amkor-Semiconductor-Educator-Bootcamp',
+    '/sitecore/content/amkor/amkor/Home/About Us/News/Blog/Amkor Semiconductor Educator Bootcamp',
+    'Educator bootcamp to strengthen the future semiconductor workforce pipeline.',
+    'knowledge-article'
+  ),
+  '{172CA403-7A83-4003-8ABF-F3C174C4D2F8}': page(
+    '{172CA403-7A83-4003-8ABF-F3C174C4D2F8}',
+    "Arizona's Next Chip Leaders",
+    '/About-Us/News/Blog/Arizona-Next-Chip-Leaders-CUSD-SEMI-CTE',
+    '/sitecore/content/amkor/amkor/Home/About Us/News/Blog/Arizona Next Chip Leaders CUSD SEMI CTE',
+    'CUSD SEMI CTE program and Amkor’s role in Arizona’s next chip leaders.',
+    'knowledge-article'
+  ),
+};
 
 /**
  * Amkor Pulse pack — Home-scoped Edge retrieval under amkor/amkor/Home.
@@ -20,12 +138,13 @@ export const amkorPulsePack: PulseSitePack = {
     default: 'Page',
   },
   starterPrompts: [
+    'Tell me about Amkor memory packaging',
+    'Help me find a career',
     'Which packaging should I use for an AI accelerator with HBM?',
     'Tell me about S-Connect and SWIFT fan-out.',
     'Where do you test in the United States, and what is Peoria?',
-    'I am looking for engineering careers at Amkor in Arizona.',
-    'Do you have automotive power packages and qualified test flows?',
   ],
+  citationFallbacks: FALLBACKS,
   intents: [
     {
       id: 'ai-advanced-packaging',
@@ -54,6 +173,27 @@ export const amkorPulsePack: PulseSitePack = {
       ],
     },
     {
+      id: 'memory-packaging',
+      matchAny: [
+        ['memory', 'packag'],
+        ['memory', 'package'],
+        ['dram'],
+        ['nand'],
+        ['memory'],
+      ],
+      citationItemIds: [
+        '{0EBC33FF-8697-49B8-A276-19BD86E99074}', // Packaging / Memory — primary
+        '{764CB846-8081-439C-BAB5-A0BA97F45BF7}', // Laminate / FlipStack CSP
+        '{D36A3F10-8A1C-46E6-BFFC-59F318C87129}', // Technology / Package-on-Package
+        '{874F21E1-91B9-44BD-BE36-A5AEF1A95055}', // SiP
+        '{CFF1B3A2-45C1-44F9-8411-32C55F316627}', // Packaging hub
+      ],
+      answer: {
+        intro:
+          'Amkor memory packaging covers stacked and high-bandwidth platforms used in compute, mobile, automotive, and data centers — including NAND, DRAM, eMMC, M.2 modules, and custom memory products. The **Memory** overview is the dedicated starting point for those platforms, including devices that sit next to logic, rather than a general laminate or FCBGA family page.',
+      },
+    },
+    {
       id: 'packaging-families',
       matchAny: [
         ['packag'],
@@ -63,7 +203,6 @@ export const amkorPulsePack: PulseSitePack = {
         ['wafer', 'level'],
         ['sip'],
         ['system', 'in', 'package'],
-        ['memory'],
         ['leadframe'],
         ['qfn'],
         ['flip', 'chip'],
@@ -128,6 +267,9 @@ export const amkorPulsePack: PulseSitePack = {
     {
       id: 'careers-talent',
       matchAny: [
+        ['help', 'career'],
+        ['find', 'career'],
+        ['looking', 'career'],
         ['career', 'arizona'],
         ['career', 'amkor'],
         ['engineering', 'career'],
@@ -154,6 +296,10 @@ export const amkorPulsePack: PulseSitePack = {
         '{620CDBA1-8F9D-4B45-BCC2-6F89BFFD78C0}', // Semiconductor Educator Bootcamp
         '{172CA403-7A83-4003-8ABF-F3C174C4D2F8}', // Next Chip Leaders CTE
       ],
+      answer: {
+        intro:
+          'Amkor posts engineering, operations, and corporate roles worldwide. **Careers** is where to browse openings; pick the country that matches where you want to work — United States for Arizona and Peoria, or Korea, Vietnam, and Portugal for manufacturing sites. Amkor also publishes how it grows the semiconductor workforce if you are exploring internships or early-career paths.',
+      },
     },
     {
       id: 'company-contact',

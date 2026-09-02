@@ -289,12 +289,15 @@ function buildEdgeSearchQuery(keywordCount: number): string {
   const orClauses = Array.from({ length: keywordCount }, (_, i) => {
     return `
       { name: "_name", value: $kw${i}, operator: CONTAINS }
+      { name: "_name", value: $kwTitle${i}, operator: CONTAINS }
       { name: "Title", value: $kw${i}, operator: CONTAINS }
+      { name: "Title", value: $kwTitle${i}, operator: CONTAINS }
       { name: "pageTitle", value: $kw${i}, operator: CONTAINS }
+      { name: "pageTitle", value: $kwTitle${i}, operator: CONTAINS }
     `;
   }).join('\n');
 
-  const vars = Array.from({ length: keywordCount }, (_, i) => `$kw${i}: String!`).join(', ');
+  const vars = Array.from({ length: keywordCount }, (_, i) => `$kw${i}: String!, $kwTitle${i}: String!`).join(', ');
 
   return `
     query PulseEdgeSearch($rootId: String!, $first: Int!, ${vars}) {
@@ -340,6 +343,16 @@ function mapEdgeNode(node: EdgeNode): Omit<PulseSource, 'score'> | null {
   };
 }
 
+function hydrateItemPath(id: string, pack: PulseSitePack): string {
+  const fallbacks = pack.citationFallbacks || {};
+  const fallback =
+    fallbacks[id] ||
+    fallbacks[id.toUpperCase()] ||
+    fallbacks[`{${normalizeIdKey(id).toUpperCase()}}`];
+  if (fallback?.path?.trim()) return fallback.path.trim();
+  return `{${edgeGuid(id)}}`;
+}
+
 function mergeWithFallback(
   edge: Omit<PulseSource, 'score'> | null,
   id: string,
@@ -381,11 +394,11 @@ export async function hydrateCitationIdsFromEdge(
 
   // Alias batch keeps round-trips low for demo intents (typically ≤8 IDs).
   const aliases = itemIds.map((id, i) => {
-    const guid = edgeGuid(id);
+    const pathArg = hydrateItemPath(id, pack);
     return {
       alias: `item${i}`,
       id,
-      guid,
+      pathArg: pathArg.replace(/"/g, '\\"'),
     };
   });
 
@@ -394,7 +407,7 @@ export async function hydrateCitationIdsFromEdge(
       ${aliases
         .map(
           (a) => `
-        ${a.alias}: item(path: "${a.guid}", language: $language) {
+        ${a.alias}: item(path: "${a.pathArg}", language: $language) {
           ${ITEM_FIELDS_SELECTION}
         }
       `
@@ -443,6 +456,7 @@ async function retrieveFromEdge(
   };
   kws.forEach((kw, i) => {
     variables[`kw${i}`] = kw;
+    variables[`kwTitle${i}`] = kw.charAt(0).toUpperCase() + kw.slice(1);
   });
 
   try {

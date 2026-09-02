@@ -4,7 +4,8 @@ import type {
   PulseSourceType,
   PulseStateCode,
 } from '@/lib/pulse-types';
-import type { PulseSitePack, PulseTypeLabels } from '@/lib/pulse-packs';
+import type { PulsePackIntent, PulseSitePack, PulseTypeLabels } from '@/lib/pulse-packs';
+import { matchPulsePackIntent } from '@/lib/pulse-packs';
 
 const DEFAULT_TYPE_LABELS: Record<PulseSourceType, string> = {
   'knowledge-article': 'Resource',
@@ -115,6 +116,11 @@ export function composePulseAnswer(
       stateCallout: null,
       personaState,
     };
+  }
+
+  const intent = opts.pack ? matchPulsePackIntent(question, opts.pack) : null;
+  if (intent?.answer) {
+    return composeIntentGuidedAnswer(question, sources, intent, brandName, personaState);
   }
 
   const careerHits = sources.filter(isCareerSource);
@@ -228,6 +234,33 @@ export function composePulseAnswer(
     answer: lines.join('\n\n'),
     sources: ordered,
     stateCallout,
+    personaState,
+  };
+}
+
+function applyAnswerPlaceholders(text: string, question: string, brandName: string): string {
+  return text
+    .split('{question}')
+    .join(question.trim())
+    .split('{brand}')
+    .join(brandName);
+}
+
+function composeIntentGuidedAnswer(
+  question: string,
+  sources: PulseSource[],
+  intent: PulsePackIntent,
+  brandName: string,
+  personaState: PulseStateCode | null
+): PulseAskResponse {
+  const intro = intent.answer?.intro
+    ? applyAnswerPlaceholders(intent.answer.intro, question, brandName)
+    : '';
+
+  return {
+    answer: intro,
+    sources,
+    stateCallout: null,
     personaState,
   };
 }

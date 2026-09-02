@@ -230,7 +230,7 @@ const catalog: SearchResultItem[] = [
     topics: ['computing', 'ai', 'communications'],
     searchBuckets: ['packaging', 'memory', 'sip'],
     breadcrumb: ['Packaging', 'Memory'],
-    matchTerms: ['memory package', 'hbm', 'dram', 'nand'],
+    matchTerms: ['memory packaging', 'memory package', 'memory', 'hbm', 'dram', 'nand'],
   }),
   item({
     id: 'amk-mems',
@@ -915,15 +915,58 @@ export const amkorSearchPack: SearchSitePack = {
     nvidia: ['nvidia', 'gpu', 'ai partner'],
   },
   popularSearches: [
+    'Amkor memory packaging',
+    'Help me find a career',
     'S-Connect for AI accelerators',
     'FCBGA advanced packaging',
     'Automotive power packages',
     'Wafer-level WLCSP',
     'Test services in Arizona',
-    'System in Package',
-    'Engineering careers in Arizona',
   ],
   insightRules: [
+    {
+      id: 'memory-packaging',
+      matchAny: [
+        ['memory', 'packag'],
+        ['memory', 'package'],
+        ['dram'],
+        ['nand'],
+        ['memory'],
+      ],
+      insight: {
+        id: 'ai-amkor-memory',
+        headline: 'Start on Memory, then stacking options',
+        answer:
+          'Amkor memory packaging is the stacked and high-bandwidth story — DRAM, NAND, and HBM-class devices next to logic in compute and mobile. Open Memory first (/Packaging/Memory), then FlipStack CSP and Package-on-Package when the customer needs memory-plus-logic stacking. SiP is the broader multi-die follow-on if the ask is not specifically memory.',
+        bullets: [
+          'Memory is the primary packaging page for this query — keep it top and center.',
+          'FlipStack CSP covers compact laminate memory-plus-logic stacks.',
+          'Package-on-Package is the technology page for PoP stacking.',
+        ],
+        citations: [
+          {
+            title: 'Memory',
+            href: '/Packaging/Memory',
+            kbId: 'HUB',
+            excerpt: 'Memory packaging platforms for stacked and high-bandwidth memory.',
+          },
+          {
+            title: 'FlipStack CSP',
+            href: '/Packaging/Laminate/FlipStack-CSP',
+            kbId: 'PKG',
+            excerpt: 'Stacked CSP for memory-plus-logic combinations.',
+          },
+          {
+            title: 'Package-on-Package',
+            href: '/Technology/Package-on-Package',
+            kbId: 'TECH',
+            excerpt: 'PoP stacking for memory and logic.',
+          },
+        ],
+        learnMoreHref: '/Packaging/Memory',
+        learnMoreLabel: 'Open Memory packaging',
+      },
+    },
     {
       id: 'ai-packaging',
       matchAny: [
@@ -1070,6 +1113,8 @@ export const amkorSearchPack: SearchSitePack = {
     {
       id: 'careers-talent',
       matchAny: [
+        ['help', 'career'],
+        ['find', 'career'],
         ['career', 'arizona'],
         ['career', 'amkor'],
         ['engineering', 'career'],

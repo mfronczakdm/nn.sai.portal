@@ -7600,14 +7600,18 @@ ia:
     kind: "content"
     status: "complete"
     createdAt: "2026-09-01T13:40:00Z"
-    updatedAt: "2026-09-01T13:45:00Z"
+    updatedAt: "2026-09-02T12:30:00Z"
     siteCollection: "amkor"
     siteName: "amkor"
     notes:
+      - "2026-09-02: Pulse answers are narrative-only (no demo bullets, no “also in this journey” card dump, no citation-order closer). Memory/Careers still rank first in source cards."
+      - "2026-09-02: Pulse empty-state on memory packaging was Edge hydrate using unbraced GUIDs plus no Amkor citationFallbacks. Hydrate now uses Sitecore path (from fallbacks) or {guid}; Amkor pack has Memory/FlipStack/PoP/SiP/Careers fallbacks so Pulse still answers when Edge item() is null. Keyword search also tries Title-case tokens. Quanex/Pillsbury packs unchanged except shared hydrate GUID/path behavior."
+      - "2026-09-02: Pulse memory-packaging intent cites Memory {0EBC33FF} first, then FlipStack / PoP / SiP. Careers intent matches “help me find a career”. Pack-authored answer copy (Search-style narrative) is composed via optional PulsePackIntent.answer. Search pack gained ai-amkor-memory insight + popular searches. Quanex / ERA / Pillsbury Pulse packs unchanged."
       - "2026-09-01: Added Amkor Pulse pack (src/lib/pulse-packs/amkor.ts) keyed by site name amkor. Shared PulseAssistant + /api/pulse/ask; retrieval scoped to /sitecore/content/amkor/amkor/Home {BB13BF5A-B102-4FE8-B410-63E3DA7AA448}. PulseAssistant resolves site from URL [site] then Sitecore siteName so the shared editing host does not reuse Quanex/Pillsbury packs."
       - "2026-09-01: Intents cover AI packaging, package families, test/Arizona, applications, careers/talent, and company/contact. Careers citations include Careers hub, United States, Korea, Vietnam, Portugal, talent-pipeline blog, educator bootcamp, and CTE story."
       - "2026-09-01: Search pack also gained Korea/Vietnam/Portugal careers, talent-pipeline + bootcamp news, careers insight rule, and Arizona careers popular search."
     pages:
+      - { displayName: "Memory", name: "Memory", itemId: "{0EBC33FF-8697-49B8-A276-19BD86E99074}", path: "/sitecore/content/amkor/amkor/Home/Packaging/Memory", route: "/Packaging/Memory" }
       - { displayName: "Home", name: "Home", itemId: "{BB13BF5A-B102-4FE8-B410-63E3DA7AA448}", path: "/sitecore/content/amkor/amkor/Home", route: "/" }
       - { displayName: "Careers", name: "Careers", itemId: "{6F39EC02-DAA7-4FED-9E65-E31A9DAF37F1}", path: "/sitecore/content/amkor/amkor/Home/About Us/Careers", route: "/About-Us/Careers" }
     codeChanges:
@@ -7621,14 +7625,16 @@ ia:
       - "src/__tests__/lib/search-packs.test.ts"
       - "src/__tests__/search-results/SearchResults.test.tsx"
     verification:
-      checkedAt: "2026-09-01T13:45:00Z"
+      checkedAt: "2026-09-02T12:20:00Z"
       passed:
         - "Amkor Pulse pack registered; intents match AI packaging and careers"
+        - "Memory Pulse intent ranks /Packaging/Memory first; careers matches help me find a career"
         - "Quanex/Pillsbury Pulse packs unchanged"
       failed: []
       pendingManual:
         - "Publish Amkor Home tree to Experience Edge so Pulse citations hydrate"
-        - "On /amkor/en/ ask Pulse about S-Connect and Arizona careers; confirm Amkor pages only"
+        - "On /amkor/en/ ask Pulse “Tell me about Amkor memory packaging” and confirm Memory is the first citation with a full AI-style answer"
+        - "Ask Pulse “help me find a career” and confirm Careers hub + country pages"
         - "On /quanex/en/ confirm Pulse still answers IG spacers"
 
   - name: "MediaCanvas"
