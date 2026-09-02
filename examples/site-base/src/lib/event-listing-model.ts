@@ -22,6 +22,17 @@ export type EventListingChild = {
   eventTimezone?: JsonField;
 };
 
+export type EventListingEventsRoot = {
+  jsonValue?: unknown;
+  value?: unknown;
+  targetItem?: {
+    id?: string;
+    children?: {
+      results?: EventListingChild[];
+    };
+  };
+};
+
 export type EventListingDatasource = {
   listingTitle?: JsonField;
   searchPlaceholder?: JsonField;
@@ -29,14 +40,28 @@ export type EventListingDatasource = {
   moreInfoLabel?: JsonField;
   clearCalendarLabel?: JsonField;
   emptyResultsText?: JsonField;
-  eventsRoot?: {
-    jsonValue?: unknown;
-    targetItem?: {
-      children?: {
-        results?: EventListingChild[];
-      };
-    };
+  eventsRoot?: EventListingEventsRoot;
+};
+
+/** Layout GraphQL shape, or flat JSS fields when ComponentQuery is empty/failed in Pages. */
+export type EventListingFieldBag = {
+  data?: {
+    datasource?: EventListingDatasource | null;
   };
+  ListingTitle?: JsonField;
+  listingTitle?: JsonField;
+  SearchPlaceholder?: JsonField;
+  searchPlaceholder?: JsonField;
+  EventTypeLabel?: JsonField;
+  eventTypeLabel?: JsonField;
+  MoreInfoLabel?: JsonField;
+  moreInfoLabel?: JsonField;
+  ClearCalendarLabel?: JsonField;
+  clearCalendarLabel?: JsonField;
+  EmptyResultsText?: JsonField;
+  emptyResultsText?: JsonField;
+  EventsRoot?: EventListingEventsRoot | JsonField;
+  eventsRoot?: EventListingEventsRoot | JsonField;
 };
 
 export type ResolvedEvent = {
@@ -81,13 +106,101 @@ export function listingFieldString(field?: JsonField | null): string {
   return fieldString(field);
 }
 
-/** Sitecore `<Text field>` value from GraphQL jsonValue (unknown → string). */
+/** Sitecore `<Text field>` value from GraphQL jsonValue (unknown → string). Preserves editable chrome. */
 export function listingFieldJson(field?: JsonField | null): { value?: string } | undefined {
   if (!field) return undefined;
-  const fromJson = field.jsonValue as { value?: unknown } | undefined;
-  if (!fromJson && field.value === undefined) return undefined;
-  const value = jsonRawValue(field);
-  return { value: typeof value === 'string' ? value : undefined };
+  const source =
+    field.jsonValue && typeof field.jsonValue === 'object'
+      ? (field.jsonValue as Record<string, unknown>)
+      : field.value !== undefined
+        ? (field as Record<string, unknown>)
+        : null;
+  if (!source) return undefined;
+  const raw = source.value;
+  return { ...source, value: typeof raw === 'string' ? raw : undefined } as { value?: string };
+}
+
+function asJsonField(raw: unknown): JsonField | undefined {
+  if (!raw || typeof raw !== 'object') return undefined;
+  return raw as JsonField;
+}
+
+function readId(value: unknown): string {
+  if (typeof value === 'string' && value.trim()) return value.trim();
+  if (!value || typeof value !== 'object') return '';
+  const record = value as { id?: string; href?: string; url?: string; path?: string };
+  return (record.id || record.path || record.href || record.url || '').trim();
+}
+
+/** Droptree EventsRoot → GUID or Sitecore path for Edge `item(path:)`. */
+export function extractEventsRootId(eventsRoot?: unknown): string {
+  if (typeof eventsRoot === 'string') return eventsRoot.trim();
+  if (!eventsRoot || typeof eventsRoot !== 'object') return '';
+  const root = eventsRoot as EventListingEventsRoot & {
+    jsonValue?: { value?: unknown; id?: string; href?: string; url?: string; path?: string };
+  };
+  const fromTarget = root.targetItem?.id?.trim();
+  if (fromTarget) return fromTarget;
+  const fromJsonValue = readId(root.jsonValue?.value);
+  if (fromJsonValue) return fromJsonValue;
+  const fromJsonRoot = readId(root.jsonValue);
+  if (fromJsonRoot) return fromJsonRoot;
+  return readId(root.value);
+}
+
+export function resolveListingDatasource(
+  fields?: EventListingFieldBag | null
+): EventListingDatasource | null {
+  const graph = fields?.data?.datasource;
+  if (graph) return graph;
+  if (!fields) return null;
+
+  const listingTitle = asJsonField(fields.listingTitle || fields.ListingTitle);
+  const searchPlaceholder = asJsonField(fields.searchPlaceholder || fields.SearchPlaceholder);
+  const eventTypeLabel = asJsonField(fields.eventTypeLabel || fields.EventTypeLabel);
+  const moreInfoLabel = asJsonField(fields.moreInfoLabel || fields.MoreInfoLabel);
+  const clearCalendarLabel = asJsonField(fields.clearCalendarLabel || fields.ClearCalendarLabel);
+  const emptyResultsText = asJsonField(fields.emptyResultsText || fields.EmptyResultsText);
+  const eventsRoot = (fields.eventsRoot || fields.EventsRoot) as EventListingEventsRoot | undefined;
+
+  if (
+    !listingTitle &&
+    !searchPlaceholder &&
+    !eventTypeLabel &&
+    !moreInfoLabel &&
+    !clearCalendarLabel &&
+    !emptyResultsText &&
+    !eventsRoot
+  ) {
+    return null;
+  }
+
+  return {
+    listingTitle,
+    searchPlaceholder,
+    eventTypeLabel,
+    moreInfoLabel,
+    clearCalendarLabel,
+    emptyResultsText,
+    eventsRoot,
+  };
+}
+
+export function hasAssignedDatasource(
+  fields?: EventListingFieldBag | null,
+  rendering?: { dataSource?: string } | null
+): boolean {
+  if (resolveListingDatasource(fields)) return true;
+  return Boolean(rendering?.dataSource?.trim());
+}
+
+/** GUID or /sitecore/content path — not `local:/Data/...` relative datasource refs. */
+export function isEdgeResolvableItemRef(value?: string | null): boolean {
+  const trimmed = value?.trim() ?? '';
+  if (!trimmed || trimmed.toLowerCase().startsWith('local:')) return false;
+  if (trimmed.startsWith('/sitecore/')) return true;
+  const guid = trimmed.replace(/[{}]/g, '');
+  return /^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/.test(guid);
 }
 
 export function itemHref(item: EventListingChild): string {

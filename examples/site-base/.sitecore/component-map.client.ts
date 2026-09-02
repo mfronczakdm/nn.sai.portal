@@ -17,6 +17,7 @@ import * as HeroQuickLinks from 'src/components/uiim/global-elements/HeroQuickLi
 import * as EventListing from 'src/components/uiim/events/EventListing';
 import * as EventDetail from 'src/components/uiim/events/EventDetail';
 import * as HeroCarousel from 'src/components/uiim/banners/HeroCarousel';
+import * as LcmcAppointmentScheduler from 'src/components/uiim/appointments/LcmcAppointmentScheduler';
 import * as themeproviderdev from 'src/components/theme-provider/theme-provider.dev';
 import * as ApplySiteTheme from 'src/components/theme/ApplySiteTheme';
 import * as TextBannerTextTopdev from 'src/components/text-banner/TextBannerTextTop.dev';
@@ -156,6 +157,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['EventListing', { ...EventListing }],
   ['EventDetail', { ...EventDetail }],
   ['HeroCarousel', { ...HeroCarousel }],
+  ['LcmcAppointmentScheduler', { ...LcmcAppointmentScheduler }],
   ['theme-provider', { ...themeproviderdev }],
   ['ApplySiteTheme', { ...ApplySiteTheme }],
   ['TextBannerTextTop', { ...TextBannerTextTopdev }],

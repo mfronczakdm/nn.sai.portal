@@ -75,3 +75,13 @@
 [data-theme='lcmc'] .bg-dark {
   color: var(--color-primary-foreground);
 }
+
+/* Patient appointment scheduler — LCMC only */
+[data-theme='lcmc'] .lcmc-appt__emergency {
+  border-radius: 0.5rem;
+}
+
+[data-theme='lcmc'] .lcmc-appt__finish {
+  background-image: radial-gradient(circle at 20% 20%, rgb(0 181 226 / 0.35), transparent 42%),
+    radial-gradient(circle at 80% 0%, rgb(0 166 81 / 0.25), transparent 40%);
+}

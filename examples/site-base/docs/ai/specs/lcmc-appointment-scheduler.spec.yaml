@@ -1,0 +1,26 @@
+# LCMC Appointment Scheduler — component spec
+
+component:
+  name: LcmcAppointmentScheduler
+  kind: list
+  category: appointments
+  filePath: src/components/uiim/appointments/LcmcAppointmentScheduler.tsx
+  siteCollection: lcmc
+  siteName: lcmc
+
+source:
+  wordDoc: "Experience for finding an appointment and booking.docx"
+  screens:
+    - visit-types: Patient Appointments card grid (Check up, Sick visit, …)
+    - slots: Filters + relative-date availability + time buttons
+    - finish: Finish Scheduling with MyChart-style login vs guest
+    - post-login: no screenshots — demo login + confirmation invented for LCMC
+
+react:
+  propsShape: graphql-datasource
+  variants: [Default]
+
+rendering:
+  datasourceRequired: true
+  useComponentQuery: true
+  componentName: LcmcAppointmentScheduler

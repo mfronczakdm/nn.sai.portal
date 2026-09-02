@@ -9,11 +9,15 @@ import {
 } from '@/lib/event-datetime';
 import {
   collectEventTypes,
+  extractEventsRootId,
   filterEvents,
   groupEventsByDate,
+  hasAssignedDatasource,
+  isEdgeResolvableItemRef,
   listingFieldJson,
   listingFieldString,
   resolveEvent,
+  resolveListingDatasource,
   type EventListingChild,
 } from '@/lib/event-listing-model';
 
@@ -118,5 +122,60 @@ describe('event-listing-model', () => {
     expect(listingFieldString({ jsonValue: { value: 'Upcoming Events' } })).toBe('Upcoming Events');
     expect(listingFieldJson({ jsonValue: { value: 42 } })).toEqual({ value: undefined });
     expect(listingFieldJson(undefined)).toBeUndefined();
+  });
+
+  it('preserves editable chrome on jsonValue when narrowing Text fields', () => {
+    expect(listingFieldJson({ jsonValue: { value: 'All Events', editable: '<span>All Events</span>' } })).toEqual({
+      value: 'All Events',
+      editable: '<span>All Events</span>',
+    });
+  });
+});
+
+describe('event listing datasource resolution', () => {
+  it('prefers GraphQL datasource over flat fields', () => {
+    expect(
+      resolveListingDatasource({
+        ListingTitle: { value: 'Flat' },
+        data: { datasource: { listingTitle: { jsonValue: { value: 'GraphQL' } } } },
+      })?.listingTitle
+    ).toEqual({ jsonValue: { value: 'GraphQL' } });
+  });
+
+  it('maps flat Pages fields when ComponentQuery is empty', () => {
+    const resolved = resolveListingDatasource({
+      ListingTitle: { value: 'All Events' },
+      EventsRoot: { jsonValue: { value: '{47CEA21C-AEC1-4775-93BC-7F5D5B92DFAF}' } },
+    });
+    expect(listingFieldString(resolved?.listingTitle)).toBe('All Events');
+    expect(extractEventsRootId(resolved?.eventsRoot)).toBe('{47CEA21C-AEC1-4775-93BC-7F5D5B92DFAF}');
+  });
+
+  it('treats rendering.dataSource as assigned even when GraphQL datasource is missing', () => {
+    expect(hasAssignedDatasource(undefined, { dataSource: '{684FA81B-14A4-4383-B115-2A766CA44AFB}' })).toBe(
+      true
+    );
+    expect(hasAssignedDatasource(undefined, { dataSource: '' })).toBe(false);
+    expect(hasAssignedDatasource(undefined, undefined)).toBe(false);
+  });
+
+  it('extracts EventsRoot from jsonValue, targetItem, or a raw GUID string', () => {
+    expect(extractEventsRootId('{47CEA21C-AEC1-4775-93BC-7F5D5B92DFAF}')).toBe(
+      '{47CEA21C-AEC1-4775-93BC-7F5D5B92DFAF}'
+    );
+    expect(extractEventsRootId({ targetItem: { id: '{47CEA21C-AEC1-4775-93BC-7F5D5B92DFAF}' } })).toBe(
+      '{47CEA21C-AEC1-4775-93BC-7F5D5B92DFAF}'
+    );
+    expect(extractEventsRootId({ jsonValue: { value: '{47CEA21C-AEC1-4775-93BC-7F5D5B92DFAF}' } })).toBe(
+      '{47CEA21C-AEC1-4775-93BC-7F5D5B92DFAF}'
+    );
+  });
+
+  it('rejects local: datasource paths for Edge fetches', () => {
+    expect(isEdgeResolvableItemRef('local:/Data/EventListing')).toBe(false);
+    expect(isEdgeResolvableItemRef('{684FA81B-14A4-4383-B115-2A766CA44AFB}')).toBe(true);
+    expect(isEdgeResolvableItemRef('/sitecore/content/andmore/atlanta-apparel/Home/Visit/Events')).toBe(
+      true
+    );
   });
 });

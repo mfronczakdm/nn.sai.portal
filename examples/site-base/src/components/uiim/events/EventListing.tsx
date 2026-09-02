@@ -1,7 +1,7 @@
 'use client';
 
 import type { JSX } from 'react';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Text, useSitecore } from '@sitecore-content-sdk/nextjs';
@@ -18,34 +18,67 @@ import {
   childrenFromDatasource,
   collectEventTypes,
   defaultCalendarMonth,
+  extractEventsRootId,
   filterEvents,
   groupEventsByDate,
+  hasAssignedDatasource,
+  isEdgeResolvableItemRef,
   listingFieldJson,
   listingFieldString,
   resolveEvent,
-  type EventListingDatasource,
+  resolveListingDatasource,
+  type EventListingChild,
+  type EventListingFieldBag,
 } from '@/lib/event-listing-model';
 
 export type EventListingProps = ComponentProps & {
-  fields?: {
-    data?: {
-      datasource?: EventListingDatasource | null;
-    };
-  };
+  fields?: EventListingFieldBag;
 };
 
 const EventListingEmpty = (): JSX.Element => <NoDataFallback componentName="EventListing" />;
 
-export const Default = ({ fields, params }: EventListingProps): JSX.Element => {
+export const Default = ({ fields, params, rendering }: EventListingProps): JSX.Element => {
   const { page } = useSitecore();
   const isEditing = Boolean(page?.mode?.isEditing);
   const { styles, RenderingIdentifier } = params || {};
-  const datasource = fields?.data?.datasource;
+  const datasource = resolveListingDatasource(fields);
+  const datasourceAssigned = hasAssignedDatasource(fields, rendering);
+  const inlineChildren = useMemo(() => childrenFromDatasource(datasource), [datasource]);
+  const eventsRootId = extractEventsRootId(datasource?.eventsRoot);
+  const datasourceId = rendering?.dataSource?.trim() ?? '';
+  const language =
+    (page?.layout?.sitecore?.context as { language?: string } | undefined)?.language || 'en';
+  const [remoteChildren, setRemoteChildren] = useState<EventListingChild[]>([]);
 
-  const events = useMemo(
-    () => childrenFromDatasource(datasource).map(resolveEvent),
-    [datasource]
-  );
+  useEffect(() => {
+    if (inlineChildren.length > 0) return;
+    const rootRef = isEdgeResolvableItemRef(eventsRootId) ? eventsRootId : '';
+    const dsRef = isEdgeResolvableItemRef(datasourceId) ? datasourceId : '';
+    if (!rootRef && !dsRef) return;
+
+    const controller = new AbortController();
+    const query = new URLSearchParams({ language });
+    if (rootRef) query.set('root', rootRef);
+    if (dsRef) query.set('datasource', dsRef);
+
+    fetch(`/api/event-listing?${query.toString()}`, { signal: controller.signal })
+      .then((response) => (response.ok ? response.json() : { events: [] }))
+      .then((payload: { events?: EventListingChild[] }) => {
+        if (payload?.events?.length) setRemoteChildren(payload.events);
+      })
+      .catch((error: unknown) => {
+        if ((error as { name?: string })?.name !== 'AbortError') {
+          console.error('[EventListing] failed to load events', error);
+        }
+      });
+
+    return () => controller.abort();
+  }, [inlineChildren.length, eventsRootId, datasourceId, language]);
+
+  const events = useMemo(() => {
+    const source = inlineChildren.length > 0 ? inlineChildren : remoteChildren;
+    return source.map(resolveEvent);
+  }, [inlineChildren, remoteChildren]);
   const eventTypes = useMemo(() => collectEventTypes(events), [events]);
   const initialMonth = useMemo(() => defaultCalendarMonth(events), [events]);
 
@@ -61,16 +94,17 @@ export const Default = ({ fields, params }: EventListingProps): JSX.Element => {
   const groups = useMemo(() => groupEventsByDate(filtered), [filtered]);
   const cells = useMemo(() => buildMonthGrid(month.year, month.monthIndex), [month]);
 
-  if (!datasource) {
+  if (!datasource && !(isEditing && datasourceAssigned)) {
     return <EventListingEmpty />;
   }
 
-  const searchPlaceholder = listingFieldString(datasource.searchPlaceholder) || 'Search';
-  const typeLabel = listingFieldString(datasource.eventTypeLabel) || 'Event Type';
-  const moreInfoLabel = listingFieldString(datasource.moreInfoLabel) || 'More Info';
-  const clearLabel = listingFieldString(datasource.clearCalendarLabel) || 'CLEAR CALENDAR SELECTION';
-  const emptyText = listingFieldString(datasource.emptyResultsText) || 'No events match your filters.';
-  const listingTitle = listingFieldJson(datasource.listingTitle);
+  const listing = datasource ?? {};
+  const searchPlaceholder = listingFieldString(listing.searchPlaceholder) || 'Search';
+  const typeLabel = listingFieldString(listing.eventTypeLabel) || 'Event Type';
+  const moreInfoLabel = listingFieldString(listing.moreInfoLabel) || 'More Info';
+  const clearLabel = listingFieldString(listing.clearCalendarLabel) || 'CLEAR CALENDAR SELECTION';
+  const emptyText = listingFieldString(listing.emptyResultsText) || 'No events match your filters.';
+  const listingTitle = listingFieldJson(listing.listingTitle);
 
   const toggleType = (type: string) => {
     setSelectedTypes((current) =>
@@ -92,7 +126,7 @@ export const Default = ({ fields, params }: EventListingProps): JSX.Element => {
     >
       <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[minmax(16rem,22%)_1fr]">
         <aside className="aa-events-filters flex flex-col gap-6">
-          {(listingFieldString(datasource.listingTitle) || isEditing) && (
+          {(listingFieldString(listing.listingTitle) || isEditing) && (
             <Text tag="h2" field={listingTitle} className="text-foreground text-xl font-bold" />
           )}
 

@@ -33,6 +33,7 @@ import * as EventListing from 'src/components/uiim/events/EventListing';
 import * as EventDetail from 'src/components/uiim/events/EventDetail';
 import * as MediaCanvas from 'src/components/uiim/banners/MediaCanvas';
 import * as HeroCarousel from 'src/components/uiim/banners/HeroCarousel';
+import * as LcmcAppointmentScheduler from 'src/components/uiim/appointments/LcmcAppointmentScheduler';
 import * as TopicListing from 'src/components/topic-listing/TopicListing';
 import * as TopicItemdev from 'src/components/topic-listing/TopicItem.dev';
 import * as topiclistingprops from 'src/components/topic-listing/topic-listing.props';
@@ -351,6 +352,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['EventDetail', { ...EventDetail, componentType: 'client' }],
   ['MediaCanvas', { ...MediaCanvas }],
   ['HeroCarousel', { ...HeroCarousel, componentType: 'client' }],
+  ['LcmcAppointmentScheduler', { ...LcmcAppointmentScheduler, componentType: 'client' }],
   ['TopicListing', { ...TopicListing }],
   ['TopicItem', { ...TopicItemdev }],
   ['topic-listing', { ...topiclistingprops }],

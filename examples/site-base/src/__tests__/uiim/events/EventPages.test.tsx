@@ -4,6 +4,7 @@ import { fireEvent, render, screen } from '@testing-library/react';
 
 import { Default as EventListing } from '@/components/uiim/events/EventListing';
 import { Default as EventDetail } from '@/components/uiim/events/EventDetail';
+import { useSitecore } from '@sitecore-content-sdk/nextjs';
 
 jest.mock('change-case', () => ({
   kebabCase: (s: string) => String(s).replace(/\s+/g, '-').toLowerCase(),
@@ -64,8 +65,10 @@ jest.mock('@sitecore-content-sdk/nextjs', () => ({
     // eslint-disable-next-line @next/next/no-img-element
     <img src={field?.value?.src || ''} alt={field?.value?.alt || ''} />
   ),
-  useSitecore: () => ({ page: { mode: { isEditing: false } } }),
+  useSitecore: jest.fn(() => ({ page: { mode: { isEditing: false } } })),
 }));
+
+const mockedUseSitecore = useSitecore as jest.Mock;
 
 const params = { styles: '', RenderingIdentifier: 'events' };
 const rendering = { componentName: 'EventListing' } as any;
@@ -115,9 +118,53 @@ const listingFields = {
 };
 
 describe('EventListing', () => {
+  beforeEach(() => {
+    mockedUseSitecore.mockReturnValue({ page: { mode: { isEditing: false } } });
+    global.fetch = jest.fn().mockResolvedValue({
+      ok: true,
+      json: async () => ({ events: [] }),
+    }) as unknown as typeof fetch;
+  });
+
   it('renders NoDataFallback without a datasource', () => {
     render(<EventListing params={params} page={page} rendering={rendering} />);
     expect(screen.getByText(/requires a datasource item assigned/i)).toBeInTheDocument();
+  });
+
+  it('renders listing chrome in Pages editing when a datasource GUID is assigned but GraphQL is empty', () => {
+    mockedUseSitecore.mockReturnValue({ page: { mode: { isEditing: true } } });
+    render(
+      <EventListing
+        params={params}
+        page={{ mode: { isEditing: true } } as any}
+        rendering={{ ...rendering, dataSource: '{684FA81B-14A4-4383-B115-2A766CA44AFB}' }}
+      />
+    );
+    expect(screen.queryByText(/requires a datasource item assigned/i)).not.toBeInTheDocument();
+    expect(screen.getByLabelText('Search')).toBeInTheDocument();
+  });
+
+  it('still shows NoDataFallback in editing when no datasource is assigned', () => {
+    mockedUseSitecore.mockReturnValue({ page: { mode: { isEditing: true } } });
+    render(
+      <EventListing params={params} page={{ mode: { isEditing: true } } as any} rendering={rendering} />
+    );
+    expect(screen.getByText(/requires a datasource item assigned/i)).toBeInTheDocument();
+  });
+
+  it('renders Sitecore field chrome from flat ListingTitle fields in editing', () => {
+    mockedUseSitecore.mockReturnValue({ page: { mode: { isEditing: true } } });
+    render(
+      <EventListing
+        fields={{ ListingTitle: { value: 'All Events' } }}
+        params={params}
+        page={{ mode: { isEditing: true } } as any}
+        rendering={rendering}
+      />
+    );
+    expect(screen.getByText('All Events')).toBeInTheDocument();
+    expect(screen.getByLabelText('Search')).toBeInTheDocument();
+    expect(screen.queryByText(/requires a datasource item assigned/i)).not.toBeInTheDocument();
   });
 
   it('groups cards by date and links More Info to the event page', () => {

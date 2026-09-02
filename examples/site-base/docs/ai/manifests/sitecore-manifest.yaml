@@ -1,5 +1,5 @@
 ﻿generatedAt: "2026-03-20T09:00:00Z"
-lastUpdatedAt: "2026-09-01T21:20:00Z"
+lastUpdatedAt: "2026-09-02T18:45:00Z"
 lastUpdatedBy: "cursor-agent"
 
 project:
@@ -3069,6 +3069,156 @@ pageTemplates:
     notes:
       - "2026-08-25: Copied Cooley Services Page once to andmore tenant Project templates. americasmart and atlanta-apparel share this tenant template root."
 
+  - name: "LcmcAppointmentScheduler"
+    kind: "list"
+    category: "appointments"
+    status: "complete"
+    createdAt: "2026-09-02T18:00:00Z"
+    updatedAt: "2026-09-02T18:50:00Z"
+
+    react:
+      filePath: "src/components/uiim/appointments/LcmcAppointmentScheduler.tsx"
+      componentMapKey: "LcmcAppointmentScheduler"
+      dataStrategy: "GraphQL datasource parent + LcmcVisitType children; slot grid from src/lib/lcmc-appointment-pack.ts (relative dates)"
+      variants:
+        - "Default"
+
+    sitecoreEnvironment:
+      siteName: "lcmc"
+      siteCollection: "lcmc"
+      projectKey: "lcmc"
+      note: "LCMC-only. PortalHub/PortalPageDetail Default layouts were not changed."
+
+    templates:
+      parent:
+        name: "LcmcAppointmentScheduler"
+        path: "/sitecore/templates/Project/lcmc/Components/Appointments/LcmcAppointmentScheduler"
+        itemId: "{6728ADD1-806C-4295-894D-8F1A9D044E07}"
+        sectionName: "Data"
+        sectionId: "{4ED6D65F-F349-4E2D-98E9-25DDC6FF63B4}"
+        fields:
+          - { name: "AppointmentTitle", type: "Single-Line Text", itemId: "{9D0907BC-6BAC-4439-B33C-04327BC07DF1}" }
+          - { name: "EmergencyText", type: "Single-Line Text", itemId: "{547F928E-A38D-4C3B-93FF-605871416A45}" }
+          - { name: "VisitQuestion", type: "Single-Line Text", itemId: "{83B59736-0372-46EF-8728-A608798C7F92}" }
+          - { name: "FiltersLabel", type: "Single-Line Text", itemId: "{8946CD41-34BC-4E69-BFD2-41DE19639EB9}" }
+          - { name: "ShowMoreLabel", type: "Single-Line Text", itemId: "{604A66D4-F6E5-4577-B62F-58A05ED84AA1}" }
+          - { name: "FluNote", type: "Single-Line Text", itemId: "{BCBCB50D-F017-42CB-A73E-292FCBC39B59}" }
+          - { name: "UrgentCareBody", type: "Rich Text", itemId: "{728F4BFC-8094-49B3-B541-8443A0ED3452}" }
+          - { name: "FinishTitle", type: "Single-Line Text", itemId: "{22F1F9D1-B4D1-47C3-B8BC-1A59E0966641}" }
+          - { name: "DetailsHeading", type: "Single-Line Text", itemId: "{3EECE1E5-5EFA-4DAB-A067-2214863CDE9A}" }
+          - { name: "LoginHeading", type: "Single-Line Text", itemId: "{0DAD3C7F-E417-430D-9437-08B5FBEC547B}" }
+          - { name: "LoginBody", type: "Multi-Line Text", itemId: "{0F49C27D-0827-477D-BD19-D9A4A693F4BA}" }
+          - { name: "LoginCta", type: "Single-Line Text", itemId: "{551D42C4-3BDA-4779-88A6-042F4AE57FD1}" }
+          - { name: "GuestHeading", type: "Single-Line Text", itemId: "{DEADB9FD-8A18-4958-A4BD-3FB9FCA9F91F}" }
+          - { name: "GuestCta", type: "Single-Line Text", itemId: "{FC2158E4-98B1-4FA3-B42A-751ABE2603E7}" }
+          - { name: "ConfirmationTitle", type: "Single-Line Text", itemId: "{AB84062C-5E45-43B1-AEBA-F4B97D3A8B0A}" }
+          - { name: "ConfirmationBody", type: "Multi-Line Text", itemId: "{937EFDF5-E2C3-4925-9264-5807F3031847}" }
+        baseTemplatesSet: true
+        horizonDatasourceGrouping: true
+        publishingGroupingTemplate: true
+        baseTemplateIds: "{1930BBEB-7805-471A-A3BE-4858AC7CF696}|{44A022DB-56D3-419A-B43B-E27E4D8E9C41}|{D0F6BE14-2A2D-4C56-ACB5-80CAA573B8E2}|{8BA7DAC6-32ED-4378-BD9E-5DA5B0F9848D}"
+        standardValues:
+          itemId: "{55F5BFFD-2D68-42C7-8B26-5EF789CB1308}"
+          linked: true
+          masters: ["LcmcVisitType"]
+      child:
+        name: "LcmcVisitType"
+        path: "/sitecore/templates/Project/lcmc/Components/Appointments/LcmcVisitType"
+        itemId: "{95A6D332-C755-45D8-921A-6B1F2A3675CD}"
+        sectionName: "Data"
+        sectionId: "{B116A409-83EE-422D-8219-24BDEA24A417}"
+        fields:
+          - { name: "VisitTitle", type: "Single-Line Text", itemId: "{E4F064F2-F59B-4E15-ABF2-11A998810FDF}" }
+          - { name: "VisitDescription", type: "Multi-Line Text", itemId: "{0460E082-9902-4A2E-9C72-C618BC1F77C4}" }
+          - { name: "VisitKey", type: "Single-Line Text", itemId: "{8F9FC998-74E8-450E-9E22-A1883BC3CF28}" }
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{FA1855C7-472F-4E17-A9C8-78D751096753}"
+          linked: true
+      folder:
+        name: "LcmcAppointmentScheduler Folder"
+        path: "/sitecore/templates/Project/lcmc/Folders/LcmcAppointmentScheduler Folder"
+        itemId: "{8415EF30-3C1C-401C-826F-FC8F458244FD}"
+        standardValues:
+          itemId: "{5CD3AA7F-E774-4D11-9885-4A63F17D7AD5}"
+          linked: true
+          masters: ["LcmcAppointmentScheduler"]
+      renderingParams:
+        name: "LcmcAppointmentScheduler"
+        path: "/sitecore/templates/Project/lcmc/Rendering Parameters/Appointments/LcmcAppointmentScheduler"
+        itemId: "{16FFD12E-F505-44DB-9931-610875BF930F}"
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{349FEFA0-888A-49DF-B0E9-1F611F375190}"
+          linked: true
+
+    datasourceFolder:
+      name: "LcmcAppointmentSchedulers"
+      path: "/sitecore/content/lcmc/lcmc/Data/LcmcAppointmentSchedulers"
+      itemId: "{2983C8C6-F536-4D40-AF6F-9E00AAA443F0}"
+      insertOptionsSet: true
+      exampleItem:
+        name: "Patient Appointments"
+        itemId: "{67471114-7CD2-4099-9331-CCCF8E61D20F}"
+        path: "/sitecore/content/lcmc/lcmc/Data/LcmcAppointmentSchedulers/Patient Appointments"
+        children:
+          - { name: "Check up", itemId: "{E2E71747-29E7-4E4B-98E4-B9E588A28D97}" }
+          - { name: "Sick visit", itemId: "{579361F2-1F19-4AA7-9647-AD5A3353E02E}" }
+          - { name: "Medicine check or behavior concern", itemId: "{6DE398D1-01CF-405E-B166-B37164FDE776}" }
+          - { name: "Flu shot seasonal", itemId: "{AA2DC74D-E999-4AC6-B2CB-F14A2AC36D16}" }
+          - { name: "COVID-19 vaccine", itemId: "{DF574856-2F95-4B8B-9B2C-EB3973AA3C40}" }
+          - { name: "Flu and COVID-19", itemId: "{92D527F0-B82A-469B-A6F2-46C356D1D13B}" }
+
+    rendering:
+      name: "LcmcAppointmentScheduler"
+      path: "/sitecore/layout/Renderings/Project/lcmc/Appointments/LcmcAppointmentScheduler"
+      itemId: "{2408797C-36C7-4BD5-A3B9-90B409A06CCD}"
+      componentName: "LcmcAppointmentScheduler"
+      datasourceTemplatePath: "/sitecore/templates/Project/lcmc/Components/Appointments/LcmcAppointmentScheduler"
+      datasourceLocationQuery: "query:$site/*[@@name='Data']/*[@@templatename='LcmcAppointmentScheduler Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='LcmcAppointmentScheduler Folder']"
+      parametersTemplateId: "{16FFD12E-F505-44DB-9931-610875BF930F}"
+      useComponentQuery: true
+      componentQuery: "query LcmcAppointmentScheduler($datasource: String!, $language: String!) { datasource: item(path: $datasource, language: $language) { appointmentTitle: field(name: \"AppointmentTitle\") { jsonValue } emergencyText: field(name: \"EmergencyText\") { jsonValue } visitQuestion: field(name: \"VisitQuestion\") { jsonValue } filtersLabel: field(name: \"FiltersLabel\") { jsonValue } showMoreLabel: field(name: \"ShowMoreLabel\") { jsonValue } fluNote: field(name: \"FluNote\") { jsonValue } urgentCareBody: field(name: \"UrgentCareBody\") { jsonValue } finishTitle: field(name: \"FinishTitle\") { jsonValue } detailsHeading: field(name: \"DetailsHeading\") { jsonValue } loginHeading: field(name: \"LoginHeading\") { jsonValue } loginBody: field(name: \"LoginBody\") { jsonValue } loginCta: field(name: \"LoginCta\") { jsonValue } guestHeading: field(name: \"GuestHeading\") { jsonValue } guestCta: field(name: \"GuestCta\") { jsonValue } confirmationTitle: field(name: \"ConfirmationTitle\") { jsonValue } confirmationBody: field(name: \"ConfirmationBody\") { jsonValue } children { results { id visitTitle: field(name: \"VisitTitle\") { jsonValue } visitDescription: field(name: \"VisitDescription\") { jsonValue } visitKey: field(name: \"VisitKey\") { jsonValue } } } } }"
+      registeredInAvailableRenderings: false
+
+    headlessVariants:
+      containerPath: "/sitecore/content/lcmc/lcmc/Presentation/Headless Variants/LcmcAppointmentScheduler"
+      containerId: "{5C492E22-1C68-45AF-8784-BF79FA473472}"
+      variants:
+        - { name: "Default", itemId: "{C80F0643-85B9-4BA9-8D72-A2517B14E1BF}" }
+
+    pages:
+      - name: "Patient Appointments"
+        itemId: "{96B478C7-15AA-47E2-9457-722E6BCC9D92}"
+        path: "/sitecore/content/lcmc/lcmc/Home/For Patients/Patient Appointments"
+        route: "/For-Patients/Patient-Appointments"
+        componentInstanceId: "{10A0F726-568D-4A22-AD24-F2D237B4A893}"
+        datasourceItemId: "{67471114-7CD2-4099-9331-CCCF8E61D20F}"
+
+    verification:
+      checkedAt: "2026-09-02T18:50:00Z"
+      passed:
+        - "Parent template base templates now include Standard + Grid + _HorizonDatasourceGrouping {D0F6BE14-2A2D-4C56-ACB5-80CAA573B8E2} + _PublishingGroupingTemplate {8BA7DAC6-32ED-4378-BD9E-5DA5B0F9848D}"
+        - "JSON Rendering Datasource Template is parent path; Datasource Location query; ComponentQuery field(name) + children.results"
+        - "Assigned page datasource is parent Patient Appointments {67471114-7CD2-4099-9331-CCCF8E61D20F} (template matches rendering)"
+        - "Insert options: folder → LcmcAppointmentScheduler; parent DS → LcmcVisitType"
+        - "React resolveDatasource accepts GraphQL jsonValue, JSS PascalCase fields, and Pages editing empty GraphQL"
+        - "Jest: LcmcAppointmentScheduler (6 tests)"
+      failed: []
+      pendingManual:
+        - "Publish templates (especially parent template + grouping bases), rendering, Data/LcmcAppointmentSchedulers, Headless Variants, and the Patient Appointments page for Edge"
+        - "Reload Pages on /For-Patients/Patient-Appointments and confirm the native datasource warning is gone and visit-type cards render"
+        - "Verify __Masters on parent SV {55F5BFFD-2D68-42C7-8B26-5EF789CB1308} in Content Editor (silent-write)"
+        - "Append {2408797C-36C7-4BD5-A3B9-90B409A06CCD} to Available Renderings/Page Content if not already registered"
+        - "Redeploy the site-base rendering host so Pages picks up LcmcAppointmentScheduler.tsx"
+
+    notes:
+      - "2026-09-02: Word doc flow (visit types → pick a relative-date slot → Finish Scheduling → My LCMC Health login or guest → demo confirmation). PortalHub can only represent the visit-type card grid; PortalPageDetail cannot represent slot picking or login. New LCMC-scoped list component used instead of changing shared Default portal layouts."
+      - "Find a Provider and Patient Portal Detail fields gained a link to /For-Patients/Patient-Appointments."
+      - "Login after Finish Scheduling is a demo form (any email/password); no Epic MyChart screenshots existed in the Word doc."
+      - "2026-09-02T18:45: Visit-type cards sorted by LCMC_VISIT_KEYS so GraphQL child order matches the Word screenshot (Sick visit second). Emergency banner always renders with authored override."
+      - "2026-09-02T18:50: Pages still showed 'requires a datasource' after the parent DS was assigned. Root cause: parent template was missing _HorizonDatasourceGrouping and _PublishingGroupingTemplate, so Pages did not treat Patient Appointments as a valid grouping datasource and GraphQL/layout returned empty fields.data.datasource (React NoDataFallback). Added grouping bases; re-assigned DS; React now maps jsonValue/JSS fields and renders fallback visit cards in editing when GraphQL is empty. Do not pick a visit-type child or the folder as the datasource."
+
 lookups:
   - path: "/sitecore/content/progressive/pkm/Data"
     itemId: "{D37965BE-ED74-4694-9040-57AD038A3B70}"
@@ -3384,6 +3534,25 @@ lookups:
     itemId: "{72E55B4F-12C7-4D15-9E7C-71F88370D501}"
     lastReadAt: "2026-08-25T03:00:00Z"
     note: "New AR group for homepage kit � Renderings is silent-write; expected value is the five new rendering IDs"
+  - path: "/sitecore/templates/Project/lcmc/Components"
+    itemId: "{74AE1605-0A68-4D7F-85C3-0FAC06E00D19}"
+    lastReadAt: "2026-09-02T18:15:00Z"
+  - path: "/sitecore/templates/Project/lcmc/Folders"
+    itemId: "{1B49D99F-4DF6-4EC2-8954-637E2EA8C4B9}"
+    lastReadAt: "2026-09-02T18:15:00Z"
+  - path: "/sitecore/templates/Project/lcmc/Rendering Parameters"
+    itemId: "{7758CB40-42EC-4845-8442-ACCE924DA188}"
+    lastReadAt: "2026-09-02T18:15:00Z"
+  - path: "/sitecore/layout/Renderings/Project/lcmc"
+    itemId: "{93E85842-C3A3-47DA-BB7B-7A0605D7EF83}"
+    lastReadAt: "2026-09-02T18:15:00Z"
+  - path: "/sitecore/content/lcmc/lcmc/Presentation/Headless Variants"
+    itemId: "{202B7D82-604A-4AF7-8ABD-42D76856CFE3}"
+    lastReadAt: "2026-09-02T18:15:00Z"
+  - path: "/sitecore/content/lcmc/lcmc/Presentation/Available Renderings/Page Content"
+    itemId: "{B4A750D2-E123-436D-BF2E-5D2905E9CA19}"
+    lastReadAt: "2026-09-02T18:15:00Z"
+    note: "MCP Renderings read returned only 4 GUIDs (truncated). NEVER replace. Append LcmcAppointmentScheduler {2408797C-36C7-4BD5-A3B9-90B409A06CCD} in Content Editor."
 
 # Demo datasource items (AI-created content, not new component definitions)
 demoContent:
@@ -7695,11 +7864,12 @@ ia:
     category: "Events"
     status: "complete"
     createdAt: "2026-09-01T20:50:00Z"
-    updatedAt: "2026-09-01T21:15:00Z"
+    updatedAt: "2026-09-02T18:45:00Z"
     siteCollection: "andmore"
     siteName: "atlanta-apparel"
     notes:
       - "2026-09-01: Atlanta Apparel events listing. Datasource Droptree EventsRoot expands Event Page children. Default variant only. Theme extras under [data-theme=atlanta-apparel]. Did not write Available Renderings — MCP Page Content Renderings read looked truncated (4 GUIDs)."
+      - "2026-09-02: Pages canvas showed NoDataFallback despite Atlanta Apparel Events assigned. Root cause: layout ComponentQuery expanded LookupField EventsRoot children (Edge/Pages reject this, same as MainNav), so fields.data.datasource was empty. React also treated missing GraphQL datasource as unassigned even in isEditing. Fix: chrome-only ComponentQuery; events via /api/event-listing Edge getData; isEditing chrome when rendering.dataSource or flat ListingTitle is present. Wired Visit/Events instance to Atlanta Apparel Events {684FA81B-...}; filled ListingTitle on local DS {B6D86425-...}. LCMC/Quanex unchanged."
     react:
       filePath: "src/components/uiim/events/EventListing.tsx"
       componentMapKey: "EventListing"
@@ -7755,12 +7925,14 @@ ia:
       datasourceTemplatePath: "/sitecore/templates/Project/andmore/Components/Events/EventListing"
       parametersTemplateId: "{87763C6E-72C6-409C-8C3B-3346755CC9BC}"
       useComponentQuery: true
+      componentQuery: "chrome-only ListingTitle/SearchPlaceholder/EventTypeLabel/MoreInfoLabel/ClearCalendarLabel/EmptyResultsText/EventsRoot jsonValue — no LookupField children"
       registeredInAvailableRenderings: false
     pagePlacement:
       pagePath: "/sitecore/content/andmore/atlanta-apparel/Home/Visit/Events"
       pageId: "{47CEA21C-AEC1-4775-93BC-7F5D5B92DFAF}"
       placeholder: "headless-main"
       instanceId: "{9DA520BD-3281-4F6F-B249-0818538D8EEF}"
+      datasourceId: "{684FA81B-14A4-4383-B115-2A766CA44AFB}"
       localDatasource: "{B6D86425-4863-4858-B130-EC1C81C8EA15}"
     headlessVariants:
       containerPath: "/sitecore/content/andmore/atlanta-apparel/Presentation/Headless Variants/EventListing"
@@ -7768,20 +7940,20 @@ ia:
       variants:
         - { name: "Default", itemId: "{B159DF6B-4CA9-4C7E-BFA4-495B3848885D}" }
     verification:
-      checkedAt: "2026-09-01T21:15:00Z"
+      checkedAt: "2026-09-02T18:45:00Z"
       passed:
         - "EventListing template + fields + Types verified"
-        - "JSON Rendering ComponentQuery uses field(name) + LookupField EventsRoot children"
-        - "Parameters Template GUID set"
-        - "Default Headless Variant on atlanta-apparel"
-        - "Placed on Visit/Events headless-main with local datasource EventsRoot=Events page"
-        - "React EventListing.tsx + generate-map"
-        - "Jest src/__tests__/uiim/events — 10 passed"
+        - "JSON Rendering ComponentQuery is chrome-only (no LookupField EventsRoot children); Parameters Template GUID still set"
+        - "Datasource Template path and Datasource Location unchanged (site Data EventListing Folder + sharedSites)"
+        - "Visit/Events EventListing instance datasource = Atlanta Apparel Events {684FA81B-14A4-4383-B115-2A766CA44AFB}"
+        - "Local DS ListingTitle set to All Events"
+        - "React EventListing empty-state is isEditing-aware; flat ListingTitle + rendering.dataSource"
+        - "Jest src/__tests__/uiim/events + event-listing-from-edge"
       failed: []
       pendingManual:
-        - "Append EventListing {17C29F6F-B7BD-41F6-864B-1FEDF1052B05} to atlanta-apparel Available Renderings/Page Content (MCP read truncated; do not overwrite)"
-        - "Publish Event Page template, EventListing rendering, Headless Variants, Visit/Events tree"
-        - "__Masters on EventListing Folder SV and Data/Event Listings folder (silent-write)"
+        - "Publish EventListing rendering, Atlanta Apparel Events datasource, Visit/Events page, and Event Page items"
+        - "Reload Pages on atlanta-apparel /Visit/Events and confirm canvas shows filters/cards instead of NoDataFallback"
+        - "Append EventListing {17C29F6F-B7BD-41F6-864B-1FEDF1052B05} to atlanta-apparel Available Renderings/Page Content if missing (MCP read truncated; do not overwrite)"
 
   - name: "EventDetail"
     kind: "context-only"
