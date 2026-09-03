@@ -10,7 +10,8 @@ import {
   AppPlaceholder,
 } from '@sitecore-content-sdk/nextjs';
 import Link from 'next/link';
-import { Search } from 'lucide-react';
+import { useEffect, useId, useRef, useState } from 'react';
+import { Bookmark, ChevronDown, Search } from 'lucide-react';
 import { MiniCart } from './non-sitecore/MiniCart';
 import { HeaderPreviewSearch } from './non-sitecore/HeaderPreviewSearch';
 import { ComponentProps } from 'lib/component-props';
@@ -277,23 +278,146 @@ const Version1HardcodedLink = ({
   text,
   href,
   className,
+  role,
 }: {
   text: string;
   href: string;
   className: string;
+  role?: string;
 }) => {
   if (/^https?:\/\//i.test(href)) {
     return (
-      <a href={href} className={className} target="_blank" rel="noopener noreferrer">
+      <a href={href} className={className} target="_blank" rel="noopener noreferrer" role={role}>
         {text}
       </a>
     );
   }
 
   return (
-    <Link href={href} prefetch={false} className={className}>
+    <Link href={href} prefetch={false} className={className} role={role}>
       {text}
     </Link>
+  );
+};
+
+type Version2LocationLink = {
+  text: string;
+  href: string;
+};
+
+type Version2LocationMenu = {
+  label: string;
+  items: readonly Version2LocationLink[];
+};
+
+/* HeaderST's datasource has no location-menu fields and the template is shared, so ANDMORE
+   city pull-downs stay in code for Version2 only. Destinations match the live sister sites. */
+const version2LocationMenus: readonly Version2LocationMenu[] = [
+  {
+    label: 'ATLANTA',
+    items: [
+      { text: 'AmericasMart', href: 'https://www.americasmart.com/' },
+      { text: 'Atlanta Market', href: 'https://www.atlantamarket.com/' },
+      { text: 'Atlanta Apparel', href: '/' },
+      { text: 'Casual Market Atlanta', href: 'https://www.casualmarketatlanta.com/' },
+      { text: 'ADAC', href: 'https://adacatlanta.com/' },
+    ],
+  },
+  {
+    label: 'LAS VEGAS',
+    items: [
+      { text: 'Las Vegas Market', href: 'https://www.lasvegasmarket.com/' },
+      { text: 'Las Vegas Apparel', href: 'https://www.atlanta-apparel.com/Markets/Las-Vegas-Apparel' },
+    ],
+  },
+  {
+    label: 'HIGH POINT',
+    items: [
+      { text: 'ANDMORE at High Point Market', href: 'https://www.andmorehighpointmarket.com/' },
+      { text: 'Shoppe Object', href: 'https://www.shoppeobject.com/' },
+    ],
+  },
+  {
+    label: 'NEW YORK',
+    items: [{ text: 'Shoppe Object', href: 'https://www.shoppeobject.com/' }],
+  },
+];
+
+const version2MarketPlanLink = { text: 'Market Plan', href: '/visit/plan-your-market' } as const;
+
+const version2LocationTriggerClass =
+  'inline-flex items-center gap-1 whitespace-nowrap px-2 py-1 font-[family-name:var(--font-body)] text-[0.6875rem] font-bold uppercase tracking-[0.14em] text-background hover:opacity-80';
+
+const version2LocationItemClass =
+  'block whitespace-nowrap px-3 py-2 font-[family-name:var(--font-body)] text-xs font-medium text-foreground hover:bg-muted';
+
+const Version2LocationDropdown = ({ menu }: { menu: Version2LocationMenu }) => {
+  const [open, setOpen] = useState(false);
+  const rootRef = useRef<HTMLLIElement>(null);
+  const menuId = useId();
+
+  useEffect(() => {
+    if (!open) {
+      return;
+    }
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setOpen(false);
+      }
+    };
+    const handlePointerDown = (event: PointerEvent) => {
+      if (!rootRef.current?.contains(event.target as Node)) {
+        setOpen(false);
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('pointerdown', handlePointerDown);
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('pointerdown', handlePointerDown);
+    };
+  }, [open]);
+
+  return (
+    <li
+      ref={rootRef}
+      className="relative"
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+    >
+      <button
+        type="button"
+        className={version2LocationTriggerClass}
+        aria-expanded={open}
+        aria-haspopup="menu"
+        aria-controls={menuId}
+        onClick={() => setOpen((current) => !current)}
+      >
+        {menu.label}
+        <ChevronDown className="h-3 w-3" aria-hidden />
+      </button>
+      {open ? (
+        <ul
+          id={menuId}
+          role="menu"
+          aria-label={menu.label}
+          className="absolute left-0 top-full z-50 min-w-[14rem] border border-border bg-background py-1 text-foreground shadow-lg"
+        >
+          {menu.items.map((item) => (
+            <li key={item.text} role="none">
+              <Version1HardcodedLink
+                text={item.text}
+                href={item.href}
+                className={version2LocationItemClass}
+                role="menuitem"
+              />
+            </li>
+          ))}
+        </ul>
+      ) : null}
+    </li>
   );
 };
 
@@ -522,10 +646,29 @@ const HeaderSTVersion2View = (props: HeaderSTViewProps) => {
       data-header-st-layout="version2"
     >
       <div className="flex w-full min-w-0 flex-col" role="navigation" aria-label="Site header">
-        {/* Utility row — always dark */}
+        {/* Utility row — always dark; city menus left, Register / Sign In / cart right */}
         <div className="w-full min-w-0 bg-foreground text-background">
-          <div className="mx-auto flex w-full max-w-[100rem] items-center justify-end gap-3 px-4 py-1.5 sm:px-6 lg:px-8">
+          <div className="mx-auto flex w-full max-w-[100rem] items-center justify-between gap-3 px-4 py-1.5 sm:px-6 lg:px-8">
+            <ul
+              data-header-st-locations
+              className="m-0 flex min-w-0 list-none flex-row flex-wrap items-center gap-0 p-0 sm:gap-1"
+              aria-label="ANDMORE locations"
+            >
+              {version2LocationMenus.map((menu) => (
+                <Version2LocationDropdown key={menu.label} menu={menu} />
+              ))}
+            </ul>
             <ul className="flex list-none flex-row items-center justify-end gap-2 p-0">
+              <li className="hidden sm:block">
+                <Link
+                  href={version2MarketPlanLink.href}
+                  prefetch={false}
+                  className="inline-flex items-center gap-1.5 px-2 py-1 font-[family-name:var(--font-body)] text-xs font-medium text-background hover:opacity-80"
+                >
+                  <Bookmark className="h-3.5 w-3.5" aria-hidden />
+                  {version2MarketPlanLink.text}
+                </Link>
+              </li>
               <li className="hidden lg:block">
                 <ContentSdkLink
                   field={fields?.SupportLink}

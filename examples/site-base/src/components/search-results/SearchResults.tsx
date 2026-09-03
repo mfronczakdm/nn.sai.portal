@@ -15,6 +15,8 @@ import {
   Layers,
   Loader2,
   MessageSquareText,
+  Bookmark,
+  MapPin,
   Search,
   Sparkles,
   X,
@@ -49,12 +51,16 @@ import {
   type SearchSitePack,
 } from '@/lib/search-packs';
 
+export type SearchResultsLayout = 'default' | 'directory';
+
 export type SearchResultsProps = {
   className?: string;
   disableUrlSync?: boolean;
   initialQuery?: string;
   /** Override Sitecore/URL site resolution (tests). */
   siteName?: string | null;
+  /** directory = Atlanta Apparel exhibitor/event results. Default is unchanged. */
+  layout?: SearchResultsLayout;
 };
 
 type SortMode = 'relevance' | 'az';
@@ -82,6 +88,8 @@ function SearchFacetsPanel({
   onToggleTopic,
   activeFilterCount,
   clearFilters,
+  heading = 'Refine results',
+  sharp = false,
 }: {
   pack: SearchSitePack;
   selectedLobs: Set<string>;
@@ -95,14 +103,21 @@ function SearchFacetsPanel({
   onToggleTopic: (key: string) => void;
   activeFilterCount: number;
   clearFilters: () => void;
+  heading?: string;
+  sharp?: boolean;
 }) {
   const lobs = Object.keys(pack.facetLabels.lob);
   const perils = Object.keys(pack.facetLabels.peril);
   const topics = Object.keys(pack.facetLabels.topic);
   return (
-    <div className="rounded-2xl border border-border/70 bg-card/95 shadow-sm ring-1 ring-black/[0.03] backdrop-blur-sm dark:ring-white/[0.06]">
+    <div
+      className={cn(
+        'border border-border/70 bg-card/95 shadow-sm ring-1 ring-black/[0.03] backdrop-blur-sm dark:ring-white/[0.06]',
+        sharp ? 'rounded-none' : 'rounded-2xl'
+      )}
+    >
       <div className="flex items-center justify-between border-b border-border/60 px-4 py-3.5">
-        <span className="text-sm font-semibold tracking-tight text-foreground">Refine results</span>
+        <span className="text-sm font-semibold tracking-tight text-foreground">{heading}</span>
         {activeFilterCount > 0 ? (
           <Button
             type="button"
@@ -384,6 +399,144 @@ function AiQaPanel({ insight, pack }: { insight: AiSearchInsight; pack: SearchSi
   );
 }
 
+type DirectoryTab = 'exhibitor' | 'page' | 'article' | 'event';
+
+const DIRECTORY_TABS: { id: DirectoryTab; label: string }[] = [
+  { id: 'exhibitor', label: 'Exhibitors & Products' },
+  { id: 'page', label: 'Information' },
+  { id: 'article', label: 'Articles' },
+  { id: 'event', label: 'Events & Seminars' },
+];
+
+function inferDirectoryTab(query: string): DirectoryTab {
+  const n = normalizeQuery(query);
+  if (!n) return 'exhibitor';
+  if (/(article|guide)/.test(n)) return 'article';
+  if (
+    /(register|event|seminar|talk|calendar)/.test(n) &&
+    !/(jewelry|exhibitor|directory|ober|stia)/.test(n)
+  ) {
+    return 'event';
+  }
+  if (/(registration|first-time|returning|information)/.test(n) && !/september/.test(n)) {
+    return 'page';
+  }
+  return 'exhibitor';
+}
+
+function DirectoryExhibitorCard({
+  item,
+  registerHref,
+}: {
+  item: SearchResultItem;
+  registerHref: string;
+}) {
+  const pathname = usePathname();
+  const knownSites = listSearchPackSiteNames();
+  const href = toSiteAwareHref(item.href, pathname, knownSites);
+  const planHref = toSiteAwareHref(registerHref, pathname, knownSites);
+  const products = item.matchingProducts ?? [];
+
+  return (
+    <article className="border border-border bg-background">
+      <div className="flex flex-wrap items-center justify-between gap-3 bg-muted px-4 py-3">
+        <div className="min-w-0">
+          <Link
+            href={href}
+            className="text-base font-semibold text-foreground no-underline hover:underline"
+          >
+            {item.title}
+          </Link>
+          <p className="mt-0.5 text-xs text-muted-foreground">
+            {item.linesShown ? `${item.linesShown} Lines Shown` : item.subtitle}
+            {item.booth ? (
+              <span className="ml-3 inline-flex items-center gap-1">
+                <MapPin className="size-3" aria-hidden />
+                {item.booth}
+              </span>
+            ) : null}
+          </p>
+        </div>
+        <Link
+          href={planHref}
+          className="inline-flex items-center gap-1.5 border border-primary px-3 py-1.5 text-xs font-semibold uppercase tracking-wide text-primary no-underline hover:bg-primary hover:text-primary-foreground"
+        >
+          <Bookmark className="size-3.5" aria-hidden />
+          Add To Plan
+        </Link>
+      </div>
+      {products.length > 0 ? (
+        <div className="px-4 py-3">
+          <Link href={href} className="text-sm font-medium text-primary no-underline hover:underline">
+            {products.length} Matching Products for this search →
+          </Link>
+          <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-4">
+            {products.map((product, index) => (
+              <Link key={`${item.id}-p-${index}`} href={planHref} className="group block no-underline">
+                <div className="aspect-square overflow-hidden border border-border bg-card">
+                  {product.imageSrc ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img src={product.imageSrc} alt="" className="h-full w-full object-cover" />
+                  ) : null}
+                </div>
+                <p className="mt-1.5 line-clamp-2 text-xs text-foreground group-hover:text-primary">
+                  {product.title}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      ) : (
+        <p className="px-4 py-3 text-sm text-muted-foreground">{item.description}</p>
+      )}
+    </article>
+  );
+}
+
+function DirectoryEventCard({
+  item,
+  registerHref,
+}: {
+  item: SearchResultItem;
+  registerHref: string;
+}) {
+  const pathname = usePathname();
+  const knownSites = listSearchPackSiteNames();
+  const href = toSiteAwareHref(item.href, pathname, knownSites);
+  const planHref = toSiteAwareHref(registerHref, pathname, knownSites);
+
+  return (
+    <article className="flex flex-col gap-3 border border-border bg-background p-4 sm:flex-row sm:items-start sm:justify-between">
+      <div className="min-w-0">
+        <p className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
+          {item.dateLabel || 'Market event'}
+        </p>
+        <Link
+          href={href}
+          className="mt-1 block text-lg font-semibold text-foreground no-underline hover:underline"
+        >
+          {item.title}
+        </Link>
+        {item.subtitle ? <p className="mt-0.5 text-sm text-muted-foreground">{item.subtitle}</p> : null}
+        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.description}</p>
+        <Link
+          href={href}
+          className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-primary no-underline hover:underline"
+        >
+          More Info
+          <ArrowUpRight className="size-3.5" aria-hidden />
+        </Link>
+      </div>
+      <Link
+        href={planHref}
+        className="inline-flex shrink-0 items-center justify-center bg-primary px-4 py-2 text-xs font-semibold uppercase tracking-wide text-primary-foreground no-underline hover:opacity-90"
+      >
+        Register for market
+      </Link>
+    </article>
+  );
+}
+
 function SearchTips({ pack }: { pack: SearchSitePack }) {
   return (
     <div className="mt-4 grid gap-3 border-t border-border/50 pt-4 sm:grid-cols-3">
@@ -408,6 +561,7 @@ export const SearchResults: FC<SearchResultsProps> = ({
   disableUrlSync = false,
   initialQuery = '',
   siteName: siteNameOverride = null,
+  layout = 'default',
 }) => {
   const router = useRouter();
   const pathname = usePathname();
@@ -445,6 +599,13 @@ export const SearchResults: FC<SearchResultsProps> = ({
   const [selectedTopics, setSelectedTopics] = useState<Set<string>>(new Set());
   const [resultsPage, setResultsPage] = useState(1);
   const [demoTaxonomyRaw, setDemoTaxonomyRaw] = useState('');
+  const [directoryTab, setDirectoryTab] = useState<DirectoryTab>(() =>
+    inferDirectoryTab(disableUrlSync ? initialQuery : qFromUrl)
+  );
+
+  useEffect(() => {
+    setDirectoryTab(inferDirectoryTab(query));
+  }, [query]);
 
   useEffect(() => {
     const readTaxonomy = () => {
@@ -658,6 +819,174 @@ export const SearchResults: FC<SearchResultsProps> = ({
   const displayHeading = draft.trim() || qFromUrl.trim();
   const personaLabel = activeDemoUserTaxonomy ?? 'All visitors';
   const personaCode = activeDemoUserTaxonomy ? getPersonaCode(activeDemoUserTaxonomy) : null;
+  const registerHref = pack.registerHref || '/Visit/Registration';
+  const signInHref = pack.signInHref || '/Visit/Registration/Returning-Buyers';
+  const tabCounts = useMemo(
+    () => ({
+      exhibitor: filtered.filter((item) => item.lob === 'exhibitor').length,
+      page: filtered.filter((item) => item.lob === 'page').length,
+      article: filtered.filter((item) => item.lob === 'article').length,
+      event: filtered.filter((item) => item.lob === 'event').length,
+    }),
+    [filtered]
+  );
+  const directoryResults = filtered.filter((item) => item.lob === directoryTab);
+  const matchingProductCount = directoryResults.reduce(
+    (sum, item) => sum + (item.matchingProducts?.length ?? 0),
+    0
+  );
+
+  if (layout === 'directory') {
+    return (
+      <section
+        className={cn('aa-search-results min-h-[60vh] bg-background pb-16 pt-6', className)}
+        aria-label="Site search results"
+        data-search-layout="directory"
+      >
+        <div className="mx-auto w-full max-w-[100rem] px-4 sm:px-6 lg:px-8">
+          <nav className="border-b border-border text-sm text-muted-foreground" aria-label="Breadcrumb">
+            Home / Search Results
+          </nav>
+
+          <div className="mt-6 flex gap-0 overflow-x-auto border-b border-border">
+            {DIRECTORY_TABS.map((tab) => {
+              const count = tabCounts[tab.id];
+              const active = directoryTab === tab.id;
+              return (
+                <button
+                  key={tab.id}
+                  type="button"
+                  onClick={() => setDirectoryTab(tab.id)}
+                  className={cn(
+                    'whitespace-nowrap px-4 py-3 text-sm font-medium',
+                    active
+                      ? 'border-b-2 border-foreground font-bold text-foreground'
+                      : 'text-muted-foreground hover:text-foreground'
+                  )}
+                >
+                  {tab.label}
+                  {count > 0 ? ` (${count})` : ''}
+                </button>
+              );
+            })}
+          </div>
+
+          <div className="mt-8 flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-10">
+            <aside className="w-full shrink-0 lg:sticky lg:top-28 lg:w-[min(100%,19rem)] xl:w-72">
+              <div className="hidden lg:block">
+                <SearchFacetsPanel {...facetPanelProps} heading="Filters" sharp />
+              </div>
+              <div className="lg:hidden">
+                <Collapsible defaultOpen={false}>
+                  <CollapsibleTrigger className="flex w-full items-center justify-center gap-2 border border-border bg-card px-4 py-3 text-sm font-semibold">
+                    Filters
+                    {activeFilterCount > 0 ? (
+                      <Badge variant="secondary" className="rounded-full">
+                        {activeFilterCount}
+                      </Badge>
+                    ) : null}
+                    <ChevronDown className="size-4 opacity-80" />
+                  </CollapsibleTrigger>
+                  <CollapsibleContent className="pt-3">
+                    <SearchFacetsPanel {...facetPanelProps} heading="Filters" sharp />
+                  </CollapsibleContent>
+                </Collapsible>
+              </div>
+            </aside>
+
+            <main className="min-w-0 flex-1">
+              <div className="relative">
+                <Search
+                  className="pointer-events-none absolute left-3.5 top-1/2 size-4 -translate-y-1/2 text-muted-foreground"
+                  aria-hidden
+                />
+                <input
+                  type="search"
+                  value={draft}
+                  onChange={(e) => setDraft(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter') {
+                      e.preventDefault();
+                      runSearch();
+                    }
+                  }}
+                  placeholder={pack.copy.placeholder}
+                  className="h-12 w-full rounded-none border border-border bg-background pl-11 pr-10 text-sm outline-none focus:border-foreground"
+                  autoComplete="off"
+                />
+                {draft ? (
+                  <button
+                    type="button"
+                    className="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 text-muted-foreground hover:text-foreground"
+                    aria-label="Clear search"
+                    onClick={clearSearchField}
+                  >
+                    <X className="size-4" />
+                  </button>
+                ) : null}
+              </div>
+
+              <p className="mt-3 text-sm text-muted-foreground">
+                {directoryResults.length} Matching Results
+                {matchingProductCount > 0 ? `, ${matchingProductCount} Products` : ''}
+                {normalizeQuery(query) ? (
+                  <>
+                    {' '}
+                    for &ldquo;<span className="text-foreground">{displayHeading}</span>&rdquo;
+                  </>
+                ) : null}
+              </p>
+
+              <p className="mt-3 text-sm text-foreground">
+                Already Registered?{' '}
+                <Link
+                  href={toSiteAwareHref(signInHref, pathname, knownSites)}
+                  className="font-semibold text-primary no-underline hover:underline"
+                >
+                  Sign In
+                </Link>{' '}
+                to Create Your Market Plan!
+              </p>
+              <Link
+                href={toSiteAwareHref(registerHref, pathname, knownSites)}
+                className="mt-3 inline-flex bg-foreground px-5 py-2.5 text-xs font-semibold uppercase tracking-wide text-background no-underline hover:opacity-90"
+              >
+                Register for market
+              </Link>
+
+              {aiInsight ? (
+                <div className="mt-6">
+                  <AiQaPanel insight={aiInsight} pack={pack} />
+                </div>
+              ) : null}
+
+              {directoryResults.length > 0 ? (
+                <div className="mt-6 flex flex-col gap-4">
+                  {directoryResults.map((item) =>
+                    item.lob === 'exhibitor' ? (
+                      <DirectoryExhibitorCard key={item.id} item={item} registerHref={registerHref} />
+                    ) : item.lob === 'event' ? (
+                      <DirectoryEventCard key={item.id} item={item} registerHref={registerHref} />
+                    ) : (
+                      <ResultCard key={item.id} item={item} pack={pack} />
+                    )
+                  )}
+                </div>
+              ) : (
+                <div className="mt-10 border border-dashed border-border bg-muted/25 px-6 py-12 text-center">
+                  <p className="text-sm font-medium">No results in this tab.</p>
+                  <p className="mt-1 text-sm text-muted-foreground">{pack.copy.emptyHint}</p>
+                  <Button type="button" variant="secondary" className="mt-5 rounded-none" onClick={clearFilters}>
+                    Clear filters
+                  </Button>
+                </div>
+              )}
+            </main>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section
@@ -935,5 +1264,12 @@ export const SearchResults: FC<SearchResultsProps> = ({
 export const Default = (props: ComponentProps) => (
   <SearchResults
     className={typeof props.params?.styles === 'string' ? props.params.styles : undefined}
+  />
+);
+
+export const Version1 = (props: ComponentProps) => (
+  <SearchResults
+    className={typeof props.params?.styles === 'string' ? props.params.styles : undefined}
+    layout="directory"
   />
 );

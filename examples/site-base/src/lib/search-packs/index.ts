@@ -1,5 +1,6 @@
 import { amesburytruthSearchPack } from './amesburytruth';
 import { amkorSearchPack } from './amkor';
+import { atlantaApparelSearchPack } from './atlanta-apparel';
 import { eraSearchPack } from './era';
 import { pillsburylawSearchPack } from './pillsburylaw';
 import { quanexSearchPack } from './quanex';
@@ -37,6 +38,7 @@ export const SEARCH_SITE_PACKS: Readonly<Record<string, SearchSitePack>> = {
   amesburytruth: amesburytruthSearchPack,
   pillsburylaw: pillsburylawSearchPack,
   amkor: amkorSearchPack,
+  'atlanta-apparel': atlantaApparelSearchPack,
 };
 
 export function normalizeSearchSiteName(siteName?: string | null): string {

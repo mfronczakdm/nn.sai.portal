@@ -1,5 +1,5 @@
 ﻿generatedAt: "2026-03-20T09:00:00Z"
-lastUpdatedAt: "2026-09-02T18:45:00Z"
+lastUpdatedAt: "2026-09-03T16:55:00Z"
 lastUpdatedBy: "cursor-agent"
 
 project:
@@ -3480,6 +3480,34 @@ lookups:
     itemId: "{F206BF13-F9AE-49B4-AA3E-97E70D7C5BA5}"
     lastReadAt: "2026-09-01T21:10:00Z"
     note: "HeroST Headless Variants including Version1 {E5BC4E36-322C-4315-B747-D9435A27B507}"
+  - path: "/sitecore/content/andmore/atlanta-apparel/Presentation/Headless Variants/SearchResults"
+    itemId: "{ED71BA9D-AF1A-4BEC-ABF0-844BC5D042B7}"
+    lastReadAt: "2026-09-03T16:55:00Z"
+    note: "Atlanta-only SearchResults variants Default + Version1"
+  - path: "/sitecore/templates/Project/Portal/Rendering Parameters"
+    itemId: "{957593B7-084E-4F6D-93C4-96F96D7DA02D}"
+    lastReadAt: "2026-09-03T16:55:00Z"
+    note: "Portal RP folder — SearchResults RP created here"
+  - path: "/sitecore/templates/Project/Portal/Rendering Parameters/SearchResults"
+    itemId: "{59E900CE-4B1C-426D-875E-2DC8FB88DF22}"
+    lastReadAt: "2026-09-03T16:55:00Z"
+    note: "SearchResults RP inherits BaseRenderingParameters + IComponentVariant (FieldNames)"
+  - path: "/sitecore/layout/Renderings/Project/Portal/SearchResults/SearchResults"
+    itemId: "{7691AC50-2BAE-4FBD-9BA9-05480FD844E4}"
+    lastReadAt: "2026-09-03T16:55:00Z"
+    note: "Shared Portal SearchResults Json Rendering; Parameters Template now set"
+  - path: "/sitecore/content/andmore/atlanta-apparel/Presentation/Enumerations"
+    itemId: "{F4B581F9-E36A-455F-AE85-F370C4A3019A}"
+    lastReadAt: "2026-09-03T16:50:00Z"
+    note: "Enumerations Folder template {B04AB8F4-2BDC-42D0-B8E1-87186DC8BF9C}"
+  - path: "/sitecore/content/andmore/atlanta-apparel/Presentation/Enumerations/Hero ST"
+    itemId: "{80BEA1E4-2C59-4127-9C9E-EC6B5D1608BB}"
+    lastReadAt: "2026-09-03T16:50:00Z"
+    note: "Hero ST enumerations folder for Image Layout droplist"
+  - path: "/sitecore/content/andmore/atlanta-apparel/Presentation/Enumerations/Hero ST/Image Layouts"
+    itemId: "{B5D4A1EE-D95F-45E8-84DA-7046E697D9FA}"
+    lastReadAt: "2026-09-03T17:10:00Z"
+    note: "HeroST ImageLayout droplist enumerations; Source is query:$site/... not an absolute query path (absolute query blanked Pages Design tab)"
   - path: "/sitecore/templates/Project/andmore/Components"
     itemId: "{3C22EB28-A298-4C70-826F-AA1FF7BF416C}"
     lastReadAt: "2026-09-01T20:50:00Z"
@@ -7765,6 +7793,74 @@ ia:
         - "Open /amkor/en/Search-Results?q=S-Connect on the shared editing host and confirm AI panel + packaging facets"
         - "Confirm Quanex /Search-Results?q=super+spacer is unchanged"
 
+  - name: "atlanta-apparel-search-results-version1"
+    kind: "content"
+    status: "complete"
+    createdAt: "2026-09-03T16:20:00Z"
+    updatedAt: "2026-09-03T16:55:00Z"
+    siteCollection: "andmore"
+    siteName: "atlanta-apparel"
+    notes:
+      - "2026-09-03: Atlanta Apparel SearchResults pack + Pulse pack. Default SearchResults layout unchanged for other sites. Version1 is the directory/events layout (screenshot) with Register / Add To Plan funnel CTAs."
+      - "2026-09-03: Created Headless Variants/SearchResults + Default + Version1 on atlanta-apparel only."
+      - "2026-09-03: Pages Design tab had Styling/Advanced styling but no Variant dropdown. Same root cause as Portal LocationSearch/DownloadList: Json Rendering Parameters Template was empty, so there was no FieldNames field for Pages to bind. Created Portal RP template {59E900CE-4B1C-426D-875E-2DC8FB88DF22} (4 bases including IComponentVariant) and set rendering Parameters Template. Headless Variants on atlanta-apparel were already correct; Amkor/Quanex do not need SearchResults variant folders for the Atlanta picker. Compatible Renderings on the rendering stayed empty (HeroST also empty). MCP cannot set FieldNames on the page instance."
+    rendering:
+      name: "SearchResults"
+      path: "/sitecore/layout/Renderings/Project/Portal/SearchResults/SearchResults"
+      itemId: "{7691AC50-2BAE-4FBD-9BA9-05480FD844E4}"
+      componentName: "SearchResults"
+      parametersTemplateId: "{59E900CE-4B1C-426D-875E-2DC8FB88DF22}"
+      parametersTemplateSetAt: "2026-09-03T16:55:00Z"
+    templates:
+      renderingParams:
+        name: "SearchResults"
+        path: "/sitecore/templates/Project/Portal/Rendering Parameters/SearchResults"
+        itemId: "{59E900CE-4B1C-426D-875E-2DC8FB88DF22}"
+        baseTemplates: "{4247AAD4-EBDE-4994-998F-E067A51B1FE4}|{5C74E985-E055-43FF-B28C-DB6C6A6450A2}|{44A022DB-56D3-419A-B43B-E27E4D8E9C41}|{3DB3EB10-F8D0-4CC9-BE26-18CE7B139EC8}"
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{9EFEE0D2-20EC-4038-922C-4D6292803D27}"
+          fieldNamesPresent: true
+    react:
+      filePath: "src/components/search-results/SearchResults.tsx"
+      variants: ["Default", "Version1"]
+    headlessVariants:
+      containerPath: "/sitecore/content/andmore/atlanta-apparel/Presentation/Headless Variants/SearchResults"
+      containerId: "{ED71BA9D-AF1A-4BEC-ABF0-844BC5D042B7}"
+      variants:
+        - { name: "Default", itemId: "{72F45F6B-D6DF-46B4-B06F-76DDE471BB49}" }
+        - { name: "Version1", itemId: "{6E6E7F94-6D07-45F7-8E9A-10AFA07A844D}" }
+    pages:
+      - { displayName: "Search Results", name: "Search Results", itemId: "{DF8A6A97-51D5-44EF-AD31-E2C9F1CF7196}", path: "/sitecore/content/andmore/atlanta-apparel/Home/Search Results", route: "/Search-Results", renderingUid: "{75BC9039-1D53-40FA-8B54-712DA181CF05}", note: "Portal SearchResults on headless-main; parameters null until Version1 selected in Pages" }
+    codeChanges:
+      - "src/lib/search-packs/atlanta-apparel.ts"
+      - "src/lib/search-packs/index.ts"
+      - "src/lib/search-packs/types.ts"
+      - "src/lib/pulse-packs/atlanta-apparel.ts"
+      - "src/lib/pulse-packs/index.ts"
+      - "src/components/search-results/SearchResults.tsx"
+      - "src/assets/styles/themes/atlanta-apparel.css"
+      - "src/__tests__/lib/search-packs.test.ts"
+      - "src/__tests__/lib/pulse-packs.test.ts"
+      - "src/__tests__/search-results/SearchResults.test.tsx"
+    verification:
+      checkedAt: "2026-09-03T16:55:00Z"
+      passed:
+        - "SearchResults Headless Variants container + Default + Version1 exist on atlanta-apparel"
+        - "Variant Definition names Default and Version1 match React named exports"
+        - "Atlanta Search Results page uses Portal SearchResults rendering {7691AC50-2BAE-4FBD-9BA9-05480FD844E4}"
+        - "Portal SearchResults Parameters Template now {59E900CE-4B1C-426D-875E-2DC8FB88DF22}"
+        - "RP template bases include IComponentVariant; SV exposes FieldNames"
+        - "Amkor/Quanex have no SearchResults Headless Variants folder (not required for Atlanta picker)"
+      failed: []
+      pendingManual:
+        - "Publish Portal SearchResults rendering + RP template {59E900CE-4B1C-426D-875E-2DC8FB88DF22} + atlanta-apparel Headless Variants/SearchResults"
+        - "Refresh Pages on atlanta-apparel Search Results; Design tab should show Variant Default | Version1"
+        - "Select Version1 (FieldNames {6E6E7F94-6D07-45F7-8E9A-10AFA07A844D}) on instance {75BC9039-1D53-40FA-8B54-712DA181CF05}. MCP cannot set FieldNames."
+        - "Publish the Search Results page after selecting Version1"
+        - "Confirm Quanex/Amkor/Pillsbury SearchResults Default layout is unchanged"
+        - "Atlanta catalog still needs site context: /atlanta-apparel/ in the URL or Sitecore siteName atlanta-apparel; missing site falls back to NEXT_PUBLIC_DEFAULT_SITE_NAME (often Amkor)"
+
   - name: "amkor-pulse-site-pack"
     kind: "content"
     status: "complete"
@@ -8857,7 +8953,7 @@ ia:
     category: "Global Elements"
     status: "complete"
     createdAt: "2026-08-19T18:30:00Z"
-    updatedAt: "2026-08-27T01:50:00Z"
+    updatedAt: "2026-09-03T16:45:00Z"
 
     react:
       filePath: "src/components/site-three/HeaderST.tsx"
@@ -8968,8 +9064,14 @@ ia:
       itemId: "{791CD863-6B4B-4372-80FE-E75A516FA129}"
       note: "LoginLink points to Portal Login page item {EFEAC18B-D47C-41AC-B207-5525CD230634}"
 
+    atlantaApparelHeaderDatasource:
+      name: "Header"
+      path: "/sitecore/content/andmore/atlanta-apparel/Presentation/Partial Designs/Global/Header/Data/Header"
+      itemId: "{7F8DB448-8595-469D-A161-0364133D562C}"
+      note: "2026-09-03: LoginLink set to Sign In → https://www.atlanta-apparel.com/login. SupportLink remains Register → Visit/Registration {EBD89713-040D-4B8F-810D-23E44B93F2A6}. City menus are Version2-hardcoded, not datasource fields."
+
     verification:
-      checkedAt: "2026-08-24T21:15:00Z"
+      checkedAt: "2026-09-03T16:45:00Z"
       passed:
         - "LoginLink field created on HeaderST datasource template"
         - "Headless Variants container + Default + LoginRequired verified via MCP"
@@ -8988,6 +9090,8 @@ ia:
         - "lcmc HeaderST Headless Variants container created with Default/LoginRequired/Version1/Version2/Version3"
         - "HeaderST.test.tsx + MegaMenuCascade.test.tsx cascade column tests passed (88 total with HeaderST)"
         - "2026-08-29: Amkor Header Partial Design mega menus remapped to Home IA L1 (About Us, Packaging, Technology, Test Services, Services, Applications, Quality)"
+        - "2026-09-03: Version2 ANDMORE city pull-downs (ATLANTA / LAS VEGAS / HIGH POINT / NEW YORK) + Market Plan hardcoded in HeaderSTVersion2View only"
+        - "2026-09-03: atlanta-apparel Header LoginLink populated as Sign In"
       failed: []
       pendingManual:
         - "Select Version3 on lcmc Header partial design HeaderST rendering in Pages"
@@ -9001,11 +9105,13 @@ ia:
         - "Select Version2 on americasmart Header partial if that demo uses the same chrome"
         - "On Version2: leave Show Search Box unchecked; check Hide Cart"
         - "Set showSearchBox and HideCart on that HeaderST rendering"
+        - "Publish atlanta-apparel Header partial so LoginLink Sign In and Version2 chrome reach Edge"
         - "Publish Header partial design + HideCart template field for Edge"
         - "Select LoginRequired variant on Header partial design HeaderST rendering in Pages"
         - "Optional: add postLogoutRedirect to HeaderST rendering parameters template"
 
     notes:
+      - "2026-09-03: Version2 now renders live-matching ANDMORE city pull-downs (ATLANTA, LAS VEGAS, HIGH POINT, NEW YORK) plus Market Plan on the dark utility row. Code-only menus in HeaderST.tsx (version2LocationMenus) because HeaderST's shared datasource has no location fields and the skill forbids new cosmetic datasource fields. Accessible button+menu (hover or click, Escape/outside close). Atlanta Apparel (/) is internal; sister markets are live ANDMORE URLs. Market Plan → /visit/plan-your-market {94A9563C-55F2-4348-BFAF-95D95DDD58A6}. atlanta-apparel Header datasource LoginLink set to Sign In → https://www.atlanta-apparel.com/login. Default/LoginRequired/Version1/Version3 layouts unchanged. No new Sitecore variants or RP fields."
       - "2026-08-31: Version1 language selector is now functional. English/Korean/Japanese/Simplified Chinese link to locale-prefixed URLs for the CURRENT page (/en/..., /ko-KR/..., /ja-JP/..., /zh-CN/...) instead of the old external amkor.com/kr|/jp|/cn hrefs, and the active language is highlighted via aria-current + --color-header-lang-active. Locale codes are the Sitecore language names (ja-JP, ko-KR, zh-CN). Shared plumbing: src/lib/locale.ts (new), routing.locales extended from [en] to [en, ja-JP, ko-KR, zh-CN], proxy.ts remembers the chosen language in an app-locale cookie and replays it on Sitecore's unprefixed links, and the catch-all page falls back to the default language when a page has no version in the requested language. amkor Home + children have real ja-JP content; ko-KR and zh-CN have no versions and therefore render the English fallback. No Sitecore items created or changed (amkor Version1 variant {3C5FBC3A-F12E-4EAF-A2B2-17DF9BEECE5A} already existed). Default/LoginRequired/Version2/Version3 unchanged."
       - "2026-08-29: Version1 cascade megamenu (MegaMenuCascade.tsx). MENU opens dark overlay; L1 column ? L2 ? L3 (Careers countries split). MegaMenuItem Default + LinkList HeaderPrimaryLinks/HeaderSecondaryLinks register into cascade when MegaMenuCascadeProvider wraps header-navigation (Version1 only). MobileMenuWrapper exports useMobileMenu + darkPanel. Default/Version2/Version3 unchanged."
       - "2026-08-29: Version1 cascade fix � darkPanel uses sr-only (not opacity-0 fixed overlay) when closed; L1 registration runs in Pages editing mode; utility/main rows z-[60] keep logo + lang row above overlay; partial-editing-mode still expands sr-only slot for Header PD authoring."
@@ -9581,7 +9687,7 @@ ia:
     category: "Banners"
     status: "complete"
     createdAt: "2026-09-01T20:51:00Z"
-    updatedAt: "2026-09-01T21:10:00Z"
+    updatedAt: "2026-09-03T17:10:00Z"
     siteCollection: "andmore"
     siteName: "atlanta-apparel"
     componentName: "HeroST"
@@ -9590,6 +9696,16 @@ ia:
       React named export Version1; Default/Right/Centered/SplitScreen/Stacked unchanged.
       Variant Definition created only on atlanta-apparel Headless Variants (not americasmart/amkor).
       Theme tokens --color-hero-headline and --color-hero-surface; square .btn including secondary ghost.
+      2026-09-03: ImageLayout droplist on HeroST Parameters Styling (next to Dark Image).
+      Unset / Both Images = collage. Primary Image = Image1 only, Version1 only.
+      2026-09-03: Fixed ImageLayout Source — Sitecore Droplist cannot populate from pipe strings.
+      Created Enumeration items under atlanta-apparel Presentation/Enumerations.
+      2026-09-03: Pages Design tab blanked to only "Open in Design Studio" after ImageLayout Source
+      was set to query:/sitecore/content/andmore/atlanta-apparel/... (absolute query). HeroST
+      Parameters Template was still {35DABF63-9C76-487B-B9AB-F2A80E8581D0}; did not replace it
+      (SearchResults needed a NEW RP template because it had none). Changed ImageLayout Source
+      to query:$site/Presentation/Enumerations/Hero ST/Image Layouts/* matching ImagePosition /
+      numColumns. Default HeroST React unchanged; Droplist stores item name (not GUID).
     react:
       filePath: "src/components/site-three/HeroST.tsx"
       variants:
@@ -9618,20 +9734,52 @@ ia:
     themeTokens:
       - { name: "--color-hero-headline", value: "#9A5340" }
       - { name: "--color-hero-surface", value: "#FAF9F6" }
+    renderingParameters:
+      templateId: "{35DABF63-9C76-487B-B9AB-F2A80E8581D0}"
+      templatePath: "/sitecore/templates/Project/click-click-launch/Components/Hero ST/Rendering Parameters/HeroST Parameters"
+      stylingSectionId: "{096E2B2F-8C25-45FD-9036-9E2F8D44582D}"
+      fields:
+        - { name: "Dark Imge", title: "Dark Image", type: "Checkbox", itemId: "{4AD21FB5-4049-4BA7-B36B-B997A446C856}", preexisting: true }
+        - { name: "ImageLayout", title: "Image Layout", type: "Droplist", itemId: "{A5CA6340-E864-480C-A868-51B5CFB7D1D0}", source: "query:$site/Presentation/Enumerations/Hero ST/Image Layouts/*", note: "Version1 only. Empty defaults to Both Images. Site-relative query matches ImagePosition/numColumns. Absolute query:/sitecore/content/... blanked Pages Design tab. Type=Droplist Shared=1 verified 2026-09-03." }
+    imageLayoutEnumerations:
+      source: "query:$site/Presentation/Enumerations/Hero ST/Image Layouts/*"
+      enumerationFolderTemplateId: "{B04AB8F4-2BDC-42D0-B8E1-87186DC8BF9C}"
+      enumerationItemTemplateId: "{83746E54-66FE-4FD4-B79D-FF3FD4ACD903}"
+      values: ["Both Images", "Primary Image"]
+      note: "Must use query:$site/... like working Droplists. Absolute query path caused Pages to hide all Design fields. Options exist on atlanta-apparel; other HeroST sites get an empty droplist and React defaults to Both Images."
+      folderId: "{B5D4A1EE-D95F-45E8-84DA-7046E697D9FA}"
+      path: "/sitecore/content/andmore/atlanta-apparel/Presentation/Enumerations/Hero ST/Image Layouts"
+      parentFolder:
+        name: "Hero ST"
+        itemId: "{80BEA1E4-2C59-4127-9C9E-EC6B5D1608BB}"
+        path: "/sitecore/content/andmore/atlanta-apparel/Presentation/Enumerations/Hero ST"
+      items:
+        - { name: "Both Images", itemId: "{F3A823AE-D0D7-4334-97D3-B590DD3AA651}", path: "/sitecore/content/andmore/atlanta-apparel/Presentation/Enumerations/Hero ST/Image Layouts/Both Images" }
+        - { name: "Primary Image", itemId: "{19318BEF-3456-429F-970A-90D7C2AB4521}", path: "/sitecore/content/andmore/atlanta-apparel/Presentation/Enumerations/Hero ST/Image Layouts/Primary Image" }
     verification:
-      checkedAt: "2026-09-01T21:10:00Z"
+      checkedAt: "2026-09-03T17:10:00Z"
       passed:
         - "HeroST Version1 Variant Definition created and verified at atlanta-apparel Headless Variants"
         - "Export name Version1 matches Variant Definition item name"
         - "Default and existing variants left in TSX and Sitecore"
         - "Home HeroST 1 Title/Eyebrow/Link1/Link2 copy updated"
-        - "Jest 48 passed (HeroST.test.tsx + atlanta-apparel-theme.test.ts)"
+        - "HeroST rendering Parameters Template still {35DABF63-9C76-487B-B9AB-F2A80E8581D0} (not cleared)"
+        - "HeroST Parameters bases still IComponentVariant|IStyling|Grid Parameters|IRenderingId"
+        - "HeroST Parameters SV still has FieldNames, Styles, Dark Imge, ImageLayout"
+        - "ImageLayout Type=Droplist Title=Image Layout Shared=1"
+        - "ImageLayout Source is query:$site/Presentation/Enumerations/Hero ST/Image Layouts/* (matches ImagePosition)"
+        - "Enumeration items Both Images and Primary Image exist under atlanta-apparel Image Layouts"
+        - "Version1 Primary Image skips mosaic and Image2; Default ignores ImageLayout"
+        - "React resolveHeroImageLayout unchanged — Droplist stores item name"
       failed: []
       pendingManual:
+        - "In Pages on atlanta-apparel Home, hard-refresh, select HeroST, confirm Design tab shows Variant, Styling, Dark Image, Image Layout (not only Open in Design Studio)"
         - "In Pages on atlanta-apparel Home, select HeroST variant Version1 (FieldNames {E5BC4E36-322C-4315-B747-D9435A27B507}) on instance {A52FA94F-72E6-4879-9BE8-163FC9F2A2D3}"
         - "Publish Presentation/Headless Variants/HeroST/Version1 for Edge"
         - "Upload collage composite to Image1 (or portrait on Image1 + texture on Image2) on Home/Data/HeroST/HeroST 1"
         - "Publish Home/Data/HeroST/HeroST 1 for Edge"
+        - "Publish HeroST Parameters template (ImageLayout field {A5CA6340-E864-480C-A868-51B5CFB7D1D0}) so Edge and other environments pick up Source change"
+        - "Home HeroST Version1 Design → Image Layout = Primary Image (MCP cannot set rendering params)"
 
   - name: "amkor-header-cascade-megamenu"
     kind: "content-update"

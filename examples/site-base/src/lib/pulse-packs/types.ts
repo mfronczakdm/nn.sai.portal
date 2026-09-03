@@ -2,7 +2,7 @@ import type { PulseSource, PulseSourceType } from '@/lib/pulse-types';
 
 /**
  * Per-site Pulse pack: demo intents + Home scope for Experience Edge retrieval.
- * Keys match theme/skin site names (quanex, era, amesburytruth, pillsburylaw, amkor).
+ * Keys match theme/skin site names (quanex, era, amesburytruth, pillsburylaw, amkor, atlanta-apparel).
  */
 export type PulsePackIntentAnswer = {
   /** Answer narrative. `{question}` and `{brand}` are replaced at compose time. */

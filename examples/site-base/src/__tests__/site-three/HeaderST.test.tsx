@@ -58,6 +58,12 @@ jest.mock('.sitecore/component-map', () => ({
 jest.mock('lucide-react', () => ({
   User: (props: React.SVGProps<SVGSVGElement>) => <svg data-testid="lucide-user" {...props} />,
   Search: (props: React.SVGProps<SVGSVGElement>) => <svg data-testid="lucide-search" {...props} />,
+  ChevronDown: (props: React.SVGProps<SVGSVGElement>) => (
+    <svg data-testid="lucide-chevron-down" {...props} />
+  ),
+  Bookmark: (props: React.SVGProps<SVGSVGElement>) => (
+    <svg data-testid="lucide-bookmark" {...props} />
+  ),
 }));
 
 const mockSignOut = jest.fn();
@@ -199,6 +205,15 @@ describe('HeaderST Component', () => {
   });
 
   describe('Default Rendering', () => {
+    it('does not render Version2 city location menus', () => {
+      render(<HeaderSTDefault {...defaultHeaderSTProps} />);
+
+      expect(document.querySelector('[data-header-st-locations]')).not.toBeInTheDocument();
+      expect(screen.queryByRole('button', { name: 'ATLANTA' })).not.toBeInTheDocument();
+      expect(screen.queryByRole('button', { name: 'LAS VEGAS' })).not.toBeInTheDocument();
+      expect(screen.queryByText('Market Plan')).not.toBeInTheDocument();
+    });
+
     it('renders header structure with all components', () => {
       render(<HeaderSTDefault {...defaultHeaderSTProps} />);
 
@@ -857,6 +872,69 @@ describe('HeaderST Component', () => {
 
       expect(screen.queryByTestId('mini-cart')).not.toBeInTheDocument();
       expect(screen.queryByTestId('fontawesome-icon')).not.toBeInTheDocument();
+    });
+
+    it('renders the four ANDMORE city pull-downs on the utility bar', () => {
+      render(<HeaderSTVersion2 {...headerSTPropsVersion2} />);
+
+      const locations = document.querySelector('[data-header-st-locations]');
+      expect(locations).toBeInTheDocument();
+      expect(locations).toHaveAttribute('aria-label', 'ANDMORE locations');
+
+      expect(screen.getByRole('button', { name: 'ATLANTA' })).toBeInTheDocument();
+      expect(screen.getByRole('button', { name: 'LAS VEGAS' })).toBeInTheDocument();
+      expect(screen.getByRole('button', { name: 'HIGH POINT' })).toBeInTheDocument();
+      expect(screen.getByRole('button', { name: 'NEW YORK' })).toBeInTheDocument();
+      expect(screen.getAllByTestId('lucide-chevron-down').length).toBe(4);
+    });
+
+    it('opens the Atlanta city menu on click and lists sister-market links', () => {
+      render(<HeaderSTVersion2 {...headerSTPropsVersion2} />);
+
+      fireEvent.click(screen.getByRole('button', { name: 'ATLANTA' }));
+
+      expect(screen.getByRole('menu', { name: 'ATLANTA' })).toBeInTheDocument();
+      expect(screen.getByRole('menuitem', { name: 'AmericasMart' })).toHaveAttribute(
+        'href',
+        'https://www.americasmart.com/'
+      );
+      expect(screen.getByRole('menuitem', { name: 'Atlanta Market' })).toHaveAttribute(
+        'href',
+        'https://www.atlantamarket.com/'
+      );
+      expect(screen.getByRole('menuitem', { name: 'Atlanta Apparel' })).toHaveAttribute('href', '/');
+      expect(screen.getByRole('menuitem', { name: 'Casual Market Atlanta' })).toHaveAttribute(
+        'href',
+        'https://www.casualmarketatlanta.com/'
+      );
+      expect(screen.getByRole('menuitem', { name: 'ADAC' })).toHaveAttribute(
+        'href',
+        'https://adacatlanta.com/'
+      );
+    });
+
+    it('opens a city menu on hover', () => {
+      render(<HeaderSTVersion2 {...headerSTPropsVersion2} />);
+
+      fireEvent.mouseEnter(screen.getByRole('button', { name: 'LAS VEGAS' }).closest('li') as HTMLElement);
+
+      expect(screen.getByRole('menu', { name: 'LAS VEGAS' })).toBeInTheDocument();
+      expect(screen.getByRole('menuitem', { name: 'Las Vegas Market' })).toHaveAttribute(
+        'href',
+        'https://www.lasvegasmarket.com/'
+      );
+      expect(screen.getByRole('menuitem', { name: 'Las Vegas Apparel' })).toHaveAttribute(
+        'href',
+        'https://www.atlanta-apparel.com/Markets/Las-Vegas-Apparel'
+      );
+    });
+
+    it('renders Market Plan on the Version2 utility row', () => {
+      render(<HeaderSTVersion2 {...headerSTPropsVersion2} />);
+
+      const marketPlan = screen.getByRole('link', { name: 'Market Plan' });
+      expect(marketPlan).toHaveAttribute('href', '/visit/plan-your-market');
+      expect(screen.getByTestId('lucide-bookmark')).toBeInTheDocument();
     });
   });
 

@@ -48,7 +48,7 @@ versions:
     layout: "dark utility row; white main row; logo left; inline L1 nav; search icon right"
     paramsUsed: ["HideCart", "showSearchBox"]
     usedBy: ["atlanta-apparel", "americasmart"]
-    notes: "Location switcher (Atlanta/Las Vegas/High Point/New York) and Market Plan bookmark are out of scope. SupportLink styled as pill CTA (Register). LoginLink shown as Sign In text. Search is icon-only unless showSearchBox is on."
+    notes: "ANDMORE city pull-downs (Atlanta/Las Vegas/High Point/New York) and Market Plan bookmark are Version2-hardcoded — HeaderST's shared datasource has no location-menu fields. Menus are accessible button+menu (hover or click). Destinations: Atlanta → AmericasMart, Atlanta Market, Atlanta Apparel (/), Casual Market Atlanta, ADAC; Las Vegas → Las Vegas Market + Las Vegas Apparel (live atlanta-apparel.com market page); High Point → ANDMORE at High Point Market + Shoppe Object; New York → Shoppe Object. Market Plan → /visit/plan-your-market (atlanta-apparel Plan Your Market). SupportLink styled as pill CTA (Register). LoginLink shown as Sign In text. Search is icon-only unless showSearchBox is on. Default/LoginRequired/Version1/Version3 unchanged."
   - name: Version3
     layout: "single white bar; logo left; two stacked nav rows (utility teal + primary dark) beside logo; muted rounded search bar far right"
     paramsUsed: ["showSearchBox", "HideCart"]

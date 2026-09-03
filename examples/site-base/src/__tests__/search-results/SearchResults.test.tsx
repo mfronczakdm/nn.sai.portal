@@ -80,4 +80,20 @@ describe('SearchResults site packs', () => {
       screen.queryByRole('heading', { level: 3, name: 'Super Spacer' })
     ).not.toBeInTheDocument();
   });
+
+  it('Atlanta directory variant shows exhibitor cards and a register CTA', () => {
+    render(
+      <SearchResults
+        siteName="atlanta-apparel"
+        layout="directory"
+        disableUrlSync
+        initialQuery="september"
+      />
+    );
+
+    expect(screen.getByText('Anna Ober & Co., LLC')).toBeInTheDocument();
+    expect(screen.getAllByText(/Register for market/i).length).toBeGreaterThan(0);
+    expect(screen.getAllByText(/Events & Seminars/i).length).toBeGreaterThan(0);
+    expect(screen.queryByRole('heading', { name: 'Super Spacer' })).not.toBeInTheDocument();
+  });
 });

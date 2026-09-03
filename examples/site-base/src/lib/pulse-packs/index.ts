@@ -1,5 +1,6 @@
 import { amkorPulsePack } from './amkor';
 import { amesburytruthPulsePack } from './amesburytruth';
+import { atlantaApparelPulsePack } from './atlanta-apparel';
 import { eraPulsePack } from './era';
 import { matchPulsePackIntent } from './match';
 import { pillsburylawPulsePack } from './pillsburylaw';
@@ -24,6 +25,7 @@ export const PULSE_SITE_PACKS: Readonly<Record<string, PulseSitePack>> = {
   amesburytruth: amesburytruthPulsePack,
   pillsburylaw: pillsburylawPulsePack,
   amkor: amkorPulsePack,
+  'atlanta-apparel': atlantaApparelPulsePack,
 };
 
 export function normalizePulseSiteName(siteName?: string | null): string {

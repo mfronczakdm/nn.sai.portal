@@ -141,7 +141,8 @@
   color: var(--color-background);
 }
 
-/* Version2 dark main bar — nav links, search, and SupportLink pill need white text */
+/* Version2 dark utility bar — nav links, search, and SupportLink pill need white text.
+   City pull-down panels are light, so their menu links stay foreground. */
 [data-theme='atlanta-apparel'] [data-header-st-layout='version2'] .bg-foreground a,
 [data-theme='atlanta-apparel'] [data-header-st-layout='version2'] .bg-foreground button {
   color: var(--color-background);
@@ -151,4 +152,15 @@
 [data-theme='atlanta-apparel'] [data-header-st-layout='version2'] .bg-foreground button:hover {
   color: var(--color-background);
   opacity: 0.8;
+}
+
+[data-theme='atlanta-apparel'] [data-header-st-layout='version2'] [data-header-st-locations] [role='menu'] a,
+[data-theme='atlanta-apparel'] [data-header-st-layout='version2'] [data-header-st-locations] [role='menu'] a:hover {
+  color: var(--color-foreground);
+  opacity: 1;
+}
+
+[data-theme='atlanta-apparel'] [data-search-layout='directory'] .btn,
+[data-theme='atlanta-apparel'] [data-search-layout='directory'] button {
+  border-radius: 0;
 }

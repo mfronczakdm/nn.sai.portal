@@ -73,6 +73,28 @@ function isDarkImageHero(params: PageHeaderSTProps['params'] | undefined): boole
   return false;
 }
 
+type HeroImageLayout = 'primary' | 'both';
+
+/**
+ * Rendering parameter "Image Layout" (Styling, next to Dark Image).
+ * Unset / Both Images keeps the Version1 collage. Primary Image uses Image1 only.
+ */
+function resolveHeroImageLayout(
+  params: PageHeaderSTProps['params'] | undefined
+): HeroImageLayout {
+  if (!params) return 'both';
+  for (const [key, value] of Object.entries(params)) {
+    const normalizedKey = key.replace(/[\s_-]/g, '').toLowerCase();
+    if (normalizedKey !== 'imagelayout') continue;
+    const normalizedValue = String(value ?? '')
+      .replace(/[\s_-]/g, '')
+      .toLowerCase();
+    if (normalizedValue === 'primaryimage' || normalizedValue === 'primary') return 'primary';
+    if (normalizedValue === 'bothimages' || normalizedValue === 'both') return 'both';
+  }
+  return 'both';
+}
+
 function heroSectionProps(params: PageHeaderSTProps['params'] | undefined, extraClassName: string) {
   const darkImage = isDarkImageHero(params);
   return {
@@ -356,11 +378,14 @@ function CollageMosaicBackdrop() {
   );
 }
 
-/* Version1 — Atlanta Apparel collage-left / copy-right. Default and other exports are unchanged. */
+/* Version1 — Atlanta Apparel collage-left / copy-right. Default and other exports are unchanged.
+   Image Layout rendering param: Primary Image = Image1 only; Both Images (default) = collage. */
 export const Version1 = (props: PageHeaderSTProps) => {
   const portraitOrComposite = props?.fields?.Image1;
   const mosaicImage = props?.fields?.Image2;
-  const hasMosaicImage = hasImageSrc(mosaicImage);
+  const imageLayout = resolveHeroImageLayout(props.params);
+  const usePrimaryOnly = imageLayout === 'primary';
+  const hasMosaicImage = !usePrimaryOnly && hasImageSrc(mosaicImage);
 
   return (
     <section
@@ -369,11 +394,12 @@ export const Version1 = (props: PageHeaderSTProps) => {
         'hero-st-version1 relative bg-[var(--color-hero-surface,var(--color-light))]'
       )}
       data-hero-st-variant="Version1"
+      data-hero-st-image-layout={imageLayout}
     >
       <div className="mx-auto grid w-full lg:grid-cols-2 lg:items-stretch">
         <div className="relative min-h-[340px] w-full p-2 md:min-h-[480px] lg:min-h-[560px] lg:p-3">
           <div className="relative h-full min-h-[320px] w-full overflow-hidden rounded-none">
-            <CollageMosaicBackdrop />
+            {!usePrimaryOnly && <CollageMosaicBackdrop />}
             {hasMosaicImage && (
               <ContentSdkImage
                 field={mosaicImage}

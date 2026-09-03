@@ -20,9 +20,9 @@ jest.mock('lucide-react', () => {
 const KNOWN = listSearchPackSiteNames();
 
 describe('search pack registry', () => {
-  it('registers quanex, era, amesburytruth, pillsburylaw, and amkor', () => {
+  it('registers quanex, era, amesburytruth, pillsburylaw, amkor, and atlanta-apparel', () => {
     expect(KNOWN.sort()).toEqual(
-      ['amesburytruth', 'amkor', 'era', 'pillsburylaw', 'quanex'].sort()
+      ['amesburytruth', 'amkor', 'atlanta-apparel', 'era', 'pillsburylaw', 'quanex'].sort()
     );
   });
 
@@ -167,6 +167,32 @@ describe('Amkor catalog matching', () => {
   it('does not leak Quanex or Pillsbury popular searches', () => {
     const joined = pack.popularSearches.join(' ').toLowerCase();
     expect(joined).not.toMatch(/super spacer|lawyer|mark abate/);
+  });
+});
+
+describe('Atlanta Apparel catalog matching', () => {
+  const pack = getSearchPack('atlanta-apparel');
+
+  it('returns September exhibitors and events, not Quanex products', () => {
+    const hits = pack.catalog.filter((item) =>
+      itemMatchesQuery(item, 'september', pack.bucketSynonyms)
+    );
+    expect(hits.some((item) => /anna ober/i.test(item.title))).toBe(true);
+    expect(hits.some((item) => /outdoor living trends talk/i.test(item.title))).toBe(true);
+    expect(
+      hits.every((item) => !/super spacer|duralite|quanex/i.test(`${item.title} ${item.href}`))
+    ).toBe(true);
+  });
+
+  it('selects register insight for registration queries', () => {
+    const insight = selectAiSearchInsight('How do I register for September market?', pack.insightRules);
+    expect(insight?.id).toBe('ai-aa-register');
+    expect(insight?.learnMoreHref).toBe('/Visit/Registration');
+  });
+
+  it('selects events insight for Outdoor Living Trends Talk', () => {
+    const insight = selectAiSearchInsight('Outdoor Living Trends Talk', pack.insightRules);
+    expect(insight?.id).toBe('ai-aa-events');
   });
 });
 

@@ -333,6 +333,7 @@ describe('HeroST', () => {
       const { container } = render(<HeroSTVersion1 {...mockProps} />);
       const section = container.querySelector('section');
       expect(section).toHaveAttribute('data-hero-st-variant', 'Version1');
+      expect(section).toHaveAttribute('data-hero-st-image-layout', 'both');
       expect(section).toHaveClass('hero-st-version1');
       expect(section).toHaveClass('test-styles');
       expect(container.querySelector('[data-hero-st-collage-mosaic]')).toBeInTheDocument();
@@ -377,6 +378,37 @@ describe('HeroST', () => {
       expect(images[1]).toHaveClass('object-contain');
     });
 
+    it('uses Image1 only when Image Layout is Primary Image', () => {
+      const { container } = render(
+        <HeroSTVersion1
+          {...mockProps}
+          params={{ ...mockProps.params, ImageLayout: 'Primary Image' }}
+        />
+      );
+      const section = container.querySelector('section');
+      expect(section).toHaveAttribute('data-hero-st-image-layout', 'primary');
+      expect(container.querySelector('[data-hero-st-collage-mosaic]')).not.toBeInTheDocument();
+      const images = screen.getAllByRole('img');
+      expect(images).toHaveLength(1);
+      expect(images[0]).toHaveAttribute('src', '/images/hero-bg.jpg');
+      expect(images[0]).toHaveClass('object-cover');
+    });
+
+    it('keeps the collage when Image Layout is Both Images', () => {
+      const { container } = render(
+        <HeroSTVersion1
+          {...mockProps}
+          params={{ ...mockProps.params, ImageLayout: 'Both Images' }}
+        />
+      );
+      expect(container.querySelector('section')).toHaveAttribute(
+        'data-hero-st-image-layout',
+        'both'
+      );
+      expect(container.querySelector('[data-hero-st-collage-mosaic]')).toBeInTheDocument();
+      expect(screen.getAllByRole('img').length).toBeGreaterThan(1);
+    });
+
     it('does not change Default layout classes', () => {
       const { container } = render(<HeroSTDefault {...mockProps} />);
       expect(container.querySelector('section')).not.toHaveAttribute(
@@ -385,6 +417,17 @@ describe('HeroST', () => {
       );
       expect(container.querySelector('[data-hero-st-collage-mosaic]')).not.toBeInTheDocument();
       expect(container.querySelector('section')).toHaveClass('border-8');
+    });
+
+    it('does not apply Image Layout to the Default variant', () => {
+      const { container } = render(
+        <HeroSTDefault
+          {...mockProps}
+          params={{ ...mockProps.params, ImageLayout: 'Primary Image' }}
+        />
+      );
+      expect(container.querySelector('section')).not.toHaveAttribute('data-hero-st-image-layout');
+      expect(container.querySelector('[data-hero-st-collage-mosaic]')).not.toBeInTheDocument();
     });
   });
 

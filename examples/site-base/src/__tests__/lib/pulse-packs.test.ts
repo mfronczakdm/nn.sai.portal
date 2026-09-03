@@ -12,7 +12,7 @@ import type { PulseSource } from '@/lib/pulse-types';
 describe('pulse pack registry', () => {
   it('registers quanex, era, amesburytruth, pillsburylaw, and amkor', () => {
     expect(listPulsePackSiteNames().sort()).toEqual(
-      ['amesburytruth', 'amkor', 'era', 'pillsburylaw', 'quanex'].sort()
+      ['amesburytruth', 'amkor', 'atlanta-apparel', 'era', 'pillsburylaw', 'quanex'].sort()
     );
   });
 
@@ -54,6 +54,14 @@ describe('pulse pack registry', () => {
     expect(joined).not.toMatch(/lawyer|super spacer|saudi/);
   });
 
+  it('returns Atlanta Apparel register and events starters, not Quanex or law-firm copy', () => {
+    const prompts = getPulseStarterPrompts('atlanta-apparel');
+    const joined = prompts.join(' ').toLowerCase();
+    expect(joined).toMatch(/register/);
+    expect(joined).toMatch(/september|outdoor living/);
+    expect(joined).not.toMatch(/lawyer|super spacer|s-connect/);
+  });
+
   it('keeps Pillsbury Saudi / careers starters', () => {
     const prompts = getPulseStarterPrompts('pillsburylaw');
     expect(prompts.some((p) => /saudi/i.test(p))).toBe(true);
@@ -82,6 +90,12 @@ describe('pulse pack intent matching', () => {
   it('matches amesburytruth weatherseals intent', () => {
     const intent = matchPulseIntentForSite('Show me pile weatherseals and door sweeps', 'amesburytruth');
     expect(intent?.id).toBe('weatherseals');
+  });
+
+  it('matches atlanta-apparel registration intent', () => {
+    const intent = matchPulseIntentForSite('How do I register for September market?', 'atlanta-apparel');
+    expect(intent?.id).toBe('register-market');
+    expect(intent?.citationItemIds[0]).toBe('{EBD89713-040D-4B8F-810D-23E44B93F2A6}');
   });
 
   it('preserves pillsbury saudi expansion intent', () => {

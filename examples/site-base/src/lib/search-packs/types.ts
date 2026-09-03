@@ -19,6 +19,11 @@ export type SearchResultItem = {
   subtitle?: string;
   demoUserTaxonomy?: DemoUserTaxonomy;
   visibleForDemoUsers?: DemoUserTaxonomy[];
+  /** Atlanta Apparel directory extras (ignored by Default cards). */
+  booth?: string;
+  linesShown?: number;
+  matchingProducts?: { title: string; imageSrc?: string }[];
+  imageSrc?: string;
 };
 
 export type AiCitation = {
@@ -86,4 +91,6 @@ export type SearchSitePack = {
   iconByLob: Record<string, LucideIcon>;
   featuredLob?: string;
   enableDemoPersona?: boolean;
+  registerHref?: string;
+  signInHref?: string;
 };
