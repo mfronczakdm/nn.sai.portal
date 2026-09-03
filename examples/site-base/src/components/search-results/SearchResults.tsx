@@ -476,7 +476,11 @@ function DirectoryExhibitorCard({
                 <div className="aspect-square overflow-hidden border border-border bg-card">
                   {product.imageSrc ? (
                     // eslint-disable-next-line @next/next/no-img-element
-                    <img src={product.imageSrc} alt="" className="h-full w-full object-cover" />
+                    <img
+                      src={product.imageSrc}
+                      alt={product.title}
+                      className="h-full w-full object-cover"
+                    />
                   ) : null}
                 </div>
                 <p className="mt-1.5 line-clamp-2 text-xs text-foreground group-hover:text-primary">

@@ -6,12 +6,13 @@ function item(partial: SearchResultItem): SearchResultItem {
   return partial;
 }
 
+/** Public Unsplash product stills — these files are not in /public, so relative Microsoft filenames 404. */
 const IMG = {
-  a: '/Content-Card-AI-for-Good-Farmland.jpg',
-  b: '/Content-Card-Copilot-Commercial.jpg',
-  c: '/Content-Card-Microsoft-Teams-Commercial-Meeting.jpg',
-  d: '/Content-Card-Refurbished-Devices-Surface-Xbox.jpg',
-  e: '/Content-Card-Surface-Pro-AI-11Ed-Platinum-x86-001-COMMR.jpg',
+  a: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=480&q=80',
+  b: 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=480&q=80',
+  c: 'https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=480&q=80',
+  d: 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=480&q=80',
+  e: 'https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=480&q=80',
 } as const;
 
 /**

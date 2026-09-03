@@ -194,6 +194,13 @@ describe('Atlanta Apparel catalog matching', () => {
     const insight = selectAiSearchInsight('Outdoor Living Trends Talk', pack.insightRules);
     expect(insight?.id).toBe('ai-aa-events');
   });
+
+  it('uses absolute Unsplash URLs for exhibitor product thumbs', () => {
+    const ober = pack.catalog.find((item) => item.id === 'aa-exh-anna-ober');
+    const srcs = ober?.matchingProducts?.map((p) => p.imageSrc) ?? [];
+    expect(srcs.length).toBeGreaterThan(0);
+    expect(srcs.every((src) => src?.startsWith('https://images.unsplash.com/'))).toBe(true);
+  });
 });
 
 describe('Pillsbury catalog isolation', () => {

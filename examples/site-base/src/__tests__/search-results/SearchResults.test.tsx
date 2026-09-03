@@ -94,6 +94,9 @@ describe('SearchResults site packs', () => {
     expect(screen.getByText('Anna Ober & Co., LLC')).toBeInTheDocument();
     expect(screen.getAllByText(/Register for market/i).length).toBeGreaterThan(0);
     expect(screen.getAllByText(/Events & Seminars/i).length).toBeGreaterThan(0);
+    const productImages = screen.getAllByRole('img');
+    expect(productImages.length).toBeGreaterThan(0);
+    expect(productImages[0]).toHaveAttribute('src', expect.stringMatching(/^https:\/\/images\.unsplash\.com\//));
     expect(screen.queryByRole('heading', { name: 'Super Spacer' })).not.toBeInTheDocument();
   });
 });
