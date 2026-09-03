@@ -57,6 +57,7 @@ describe('pulse pack registry', () => {
   it('returns Atlanta Apparel register and events starters, not Quanex or law-firm copy', () => {
     const prompts = getPulseStarterPrompts('atlanta-apparel');
     const joined = prompts.join(' ').toLowerCase();
+    expect(prompts.some((p) => /what is happening in september/i.test(p))).toBe(true);
     expect(joined).toMatch(/register/);
     expect(joined).toMatch(/september|outdoor living/);
     expect(joined).not.toMatch(/lawyer|super spacer|s-connect/);
@@ -96,6 +97,51 @@ describe('pulse pack intent matching', () => {
     const intent = matchPulseIntentForSite('How do I register for September market?', 'atlanta-apparel');
     expect(intent?.id).toBe('register-market');
     expect(intent?.citationItemIds[0]).toBe('{EBD89713-040D-4B8F-810D-23E44B93F2A6}');
+  });
+
+  it('matches atlanta-apparel September research to events + exhibitor citations', () => {
+    const intent = matchPulseIntentForSite('What is happening in September?', 'atlanta-apparel');
+    expect(intent?.id).toBe('september-events');
+    expect(intent?.citationItemIds[0]).toBe('{AB056721-5D0E-4E80-8A05-62258E42679A}');
+    expect(intent?.citationItemIds).toContain('{21A89CBC-2730-4989-8289-085CEA0B6BA5}');
+    expect(intent?.citationItemIds).toContain('{EBD89713-040D-4B8F-810D-23E44B93F2A6}');
+    expect(intent?.answer?.intro).toMatch(/Outdoor Living Trends Talk/);
+    expect(intent?.answer?.intro).toMatch(/Anna Ober|Stia|Outdoor Living Collective|New Vibe/);
+  });
+
+  it('matches atlanta-apparel jewelry / exhibitor queries to directory sourcing', () => {
+    const intent = matchPulseIntentForSite('Find jewelry exhibitors for September', 'atlanta-apparel');
+    expect(intent?.id).toBe('directory-sourcing');
+    expect(intent?.citationItemIds[0]).toBe('{2D770D8D-618A-4035-BC74-58C9BA6C6E8D}');
+  });
+
+  it('keeps Atlanta Apparel citation fallbacks on search-pack detail routes', () => {
+    const pack = getPulsePack('atlanta-apparel');
+    const fallbacks = pack.citationFallbacks || {};
+    expect(fallbacks['{AB056721-5D0E-4E80-8A05-62258E42679A}']?.url).toBe(
+      '/Visit/Events/Outdoor-Living-Trends-Talk'
+    );
+    expect(fallbacks['{EBD89713-040D-4B8F-810D-23E44B93F2A6}']?.url).toBe('/Visit/Registration');
+    expect(fallbacks['{21A89CBC-2730-4989-8289-085CEA0B6BA5}']?.url).toBe('/Discover');
+    expect(fallbacks['{2D770D8D-618A-4035-BC74-58C9BA6C6E8D}']?.url).toBe(
+      '/Discover/Categories/Jewelry-and-Fashion-Accessories'
+    );
+    expect(fallbacks['{F68C01D1-1069-4B42-844B-3518189B6D2F}']?.url).toBe(
+      '/Visit/Events/Buyer-Grab-n-Go-Hub'
+    );
+
+    for (const intent of pack.intents) {
+      const hrefs = intent.citationItemIds.map((id) => fallbacks[id]?.url);
+      expect(hrefs.every((href) => Boolean(href))).toBe(true);
+      expect(hrefs.every((href) => href && href !== '/' && href !== '/Home')).toBe(true);
+      expect(
+        hrefs.every(
+          (href) =>
+            Boolean(href) &&
+            (href!.startsWith('/Visit/') || href!.startsWith('/Discover'))
+        )
+      ).toBe(true);
+    }
   });
 
   it('preserves pillsbury saudi expansion intent', () => {
@@ -346,5 +392,49 @@ describe('composePulseAnswer (multi-site)', () => {
     expect(result.answer).toMatch(/United States/);
     expect(result.answer).not.toMatch(/Also in this journey|Citation cards below/i);
     expect(result.answer).not.toMatch(/lawyer bios/i);
+  });
+
+  function atlantaSourcesFromIntent(question: string): PulseSource[] {
+    const pack = getPulsePack('atlanta-apparel');
+    const intent = matchPulseIntentForSite(question, 'atlanta-apparel');
+    const fallbacks = pack.citationFallbacks || {};
+    return (intent?.citationItemIds || [])
+      .map((id, index) => {
+        const fallback = fallbacks[id];
+        if (!fallback) return null;
+        return { ...fallback, score: 1000 - index * 50 } as PulseSource;
+      })
+      .filter((source): source is PulseSource => Boolean(source));
+  }
+
+  it('answers September research with Search-style event and exhibitor detail links', () => {
+    const pack = getPulsePack('atlanta-apparel');
+    const sources = atlantaSourcesFromIntent('What is happening in September?');
+    const result = composePulseAnswer('What is happening in September?', sources, { pack });
+
+    expect(result.answer).toMatch(/Outdoor Living Trends Talk/);
+    expect(result.answer).toMatch(/Anna Ober|Stia|Outdoor Living Collective|New Vibe/);
+    expect(result.answer).not.toMatch(/Quanex|Pillsbury|lawyer/i);
+
+    const hrefs = result.sources.map((source) => source.url);
+    expect(hrefs[0]).toBe('/Visit/Events/Outdoor-Living-Trends-Talk');
+    expect(hrefs).toContain('/Visit/Registration');
+    expect(hrefs).toContain('/Discover');
+    expect(hrefs).toContain('/Visit/Events/Buyer-Grab-n-Go-Hub');
+    expect(hrefs.every((href) => href && href !== '/' && href !== '/Home')).toBe(true);
+    expect(hrefs.some((href) => href === '/' || href === '')).toBe(false);
+  });
+
+  it('answers registration asks with First-Time / Returning detail routes', () => {
+    const pack = getPulsePack('atlanta-apparel');
+    const sources = atlantaSourcesFromIntent('How do I register for September market?');
+    const result = composePulseAnswer('How do I register for September market?', sources, { pack });
+
+    const hrefs = result.sources.map((source) => source.url);
+    expect(hrefs[0]).toBe('/Visit/Registration');
+    expect(hrefs).toContain('/Visit/Registration/First-Time-Buyers');
+    expect(hrefs).toContain('/Visit/Registration/Returning-Buyers');
+    expect(hrefs).toContain('/Visit/Events/Outdoor-Living-Trends-Talk');
+    expect(result.answer).toMatch(/Register for Market/);
   });
 });
