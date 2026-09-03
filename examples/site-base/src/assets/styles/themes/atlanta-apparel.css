@@ -108,6 +108,12 @@
   color: #fff;
 }
 
+[data-theme='atlanta-apparel'] .aa-events-listing .aa-events-pagination .aa-events-page-current {
+  background: #1a5fb4;
+  border-color: #1a5fb4;
+  color: #fff;
+}
+
 /*
  * Square CTAs (90°) — globals.css .btn uses rounded-full inside @layer base.
  * Unlayered [data-theme] rules beat that layer. Includes HeroST .btn.

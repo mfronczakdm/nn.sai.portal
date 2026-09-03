@@ -125,11 +125,20 @@ function asJsonField(raw: unknown): JsonField | undefined {
   return raw as JsonField;
 }
 
+function isGuidOrSitecorePath(value: string): boolean {
+  if (value.startsWith('/sitecore/')) return true;
+  const guid = value.replace(/[{}]/g, '');
+  return /^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/.test(guid);
+}
+
 function readId(value: unknown): string {
   if (typeof value === 'string' && value.trim()) return value.trim();
   if (!value || typeof value !== 'object') return '';
   const record = value as { id?: string; href?: string; url?: string; path?: string };
-  return (record.id || record.path || record.href || record.url || '').trim();
+  const candidates = [record.id, record.path, record.href, record.url]
+    .map((entry) => (typeof entry === 'string' ? entry.trim() : ''))
+    .filter(Boolean);
+  return candidates.find(isGuidOrSitecorePath) || candidates[0] || '';
 }
 
 /** Droptree EventsRoot → GUID or Sitecore path for Edge `item(path:)`. */
@@ -198,9 +207,29 @@ export function hasAssignedDatasource(
 export function isEdgeResolvableItemRef(value?: string | null): boolean {
   const trimmed = value?.trim() ?? '';
   if (!trimmed || trimmed.toLowerCase().startsWith('local:')) return false;
-  if (trimmed.startsWith('/sitecore/')) return true;
-  const guid = trimmed.replace(/[{}]/g, '');
-  return /^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/.test(guid);
+  return isGuidOrSitecorePath(trimmed);
+}
+
+/**
+ * Experience Edge `item(path:)` expects `{GUID}` with braces (same as MainNav / KnowledgeListing),
+ * or a `/sitecore/content/...` path. Location-footprint's unbraced GUID form returns null here.
+ */
+export function toEventListingItemPath(raw?: string | null): string {
+  const value = raw?.trim() ?? '';
+  if (!value || value.toLowerCase().startsWith('local:')) return '';
+  if (value.startsWith('/sitecore/')) return value;
+  const guid = value.replace(/[{}]/g, '');
+  if (/^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/.test(guid)) {
+    return `{${guid.toUpperCase()}}`;
+  }
+  return '';
+}
+
+/** Lowercase dashed GUID for Edge `search` `_path` / `_templates` filters. */
+export function toEventListingSearchGuid(raw?: string | null): string {
+  const path = toEventListingItemPath(raw);
+  if (!path || path.startsWith('/')) return '';
+  return path.replace(/[{}]/g, '').toLowerCase();
 }
 
 export function itemHref(item: EventListingChild): string {
@@ -244,6 +273,8 @@ export function collectEventTypes(events: ResolvedEvent[]): string[] {
 export function filterEvents(events: ResolvedEvent[], filters: EventFilters): ResolvedEvent[] {
   const keyword = filters.keyword.trim().toLowerCase();
   return events.filter((event) => {
+    // Day filter only after the author/visitor clicks a calendar date — viewing
+    // September with no day selected must still show Sep 14–18 events on Sep 2.
     if (filters.selectedDate && event.dateKey !== filters.selectedDate) return false;
     if (filters.selectedTypes.length > 0 && !filters.selectedTypes.includes(event.eventType)) {
       return false;
@@ -252,6 +283,32 @@ export function filterEvents(events: ResolvedEvent[], filters: EventFilters): Re
     const haystack = `${event.title} ${event.location} ${event.eventType}`.toLowerCase();
     return haystack.includes(keyword);
   });
+}
+
+export const DEFAULT_EVENT_PAGE_SIZE = 8;
+
+export function parseEventListingPageSize(raw?: string | number | null): number {
+  const parsed = typeof raw === 'number' ? raw : Number.parseInt(String(raw ?? '').trim(), 10);
+  if (!Number.isFinite(parsed) || parsed < 1) return DEFAULT_EVENT_PAGE_SIZE;
+  return Math.min(Math.floor(parsed), 50);
+}
+
+export function paginateEvents<T>(
+  items: T[],
+  page: number,
+  pageSize: number
+): { page: number; totalPages: number; totalItems: number; items: T[] } {
+  const size = parseEventListingPageSize(pageSize);
+  const totalItems = items.length;
+  const totalPages = Math.max(1, Math.ceil(totalItems / size) || 1);
+  const safePage = Math.min(Math.max(1, Math.floor(page) || 1), totalPages);
+  const start = (safePage - 1) * size;
+  return {
+    page: safePage,
+    totalPages,
+    totalItems,
+    items: items.slice(start, start + size),
+  };
 }
 
 export function groupEventsByDate(events: ResolvedEvent[]): EventDateGroup[] {

@@ -7864,12 +7864,14 @@ ia:
     category: "Events"
     status: "complete"
     createdAt: "2026-09-01T20:50:00Z"
-    updatedAt: "2026-09-02T18:45:00Z"
+    updatedAt: "2026-09-02T21:45:00Z"
     siteCollection: "andmore"
     siteName: "atlanta-apparel"
     notes:
       - "2026-09-01: Atlanta Apparel events listing. Datasource Droptree EventsRoot expands Event Page children. Default variant only. Theme extras under [data-theme=atlanta-apparel]. Did not write Available Renderings — MCP Page Content Renderings read looked truncated (4 GUIDs)."
       - "2026-09-02: Pages canvas showed NoDataFallback despite Atlanta Apparel Events assigned. Root cause: layout ComponentQuery expanded LookupField EventsRoot children (Edge/Pages reject this, same as MainNav), so fields.data.datasource was empty. React also treated missing GraphQL datasource as unassigned even in isEditing. Fix: chrome-only ComponentQuery; events via /api/event-listing Edge getData; isEditing chrome when rendering.dataSource or flat ListingTitle is present. Wired Visit/Events instance to Atlanta Apparel Events {684FA81B-...}; filled ListingTitle on local DS {B6D86425-...}. LCMC/Quanex unchanged."
+      - "2026-09-02: Chrome rendered (All Events / search / Sep 2026 calendar) but cards stayed on EmptyResultsText after publish. MCP: Atlanta Apparel Events EventsRoot already {47CEA21C-AEC1-4775-93BC-7F5D5B92DFAF} = /sitecore/content/andmore/atlanta-apparel/Home/Visit/Events (8 Event Pages + Data folder; workflow null). Root cause: /api/event-listing used location-footprint toEdgeItemPath which strips GUID braces; Experience Edge item(path:) requires {GUID} (same as MainNav/KnowledgeListing), so children were null. Date filter was not the bug (selectedDate starts null). Live Edge returns all 8 events; Pages preview=1 context was empty so API now falls back to live. EventListing also sits on Exhibit {1DAB23FB-...} with the same DS. LCMC unchanged."
+      - "2026-09-02: Client-side pagination of filtered event cards (default 8 per page; optional rendering param pageSize). Pager hidden until results exceed page size. Filter/search/calendar changes reset to page 1."
     react:
       filePath: "src/components/uiim/events/EventListing.tsx"
       componentMapKey: "EventListing"
@@ -7934,25 +7936,37 @@ ia:
       instanceId: "{9DA520BD-3281-4F6F-B249-0818538D8EEF}"
       datasourceId: "{684FA81B-14A4-4383-B115-2A766CA44AFB}"
       localDatasource: "{B6D86425-4863-4858-B130-EC1C81C8EA15}"
+      eventsRoot: "{47CEA21C-AEC1-4775-93BC-7F5D5B92DFAF}"
+      eventsRootPath: "/sitecore/content/andmore/atlanta-apparel/Home/Visit/Events"
+      alsoOnPage:
+        pagePath: "/sitecore/content/andmore/atlanta-apparel/Home/Exhibit"
+        pageId: "{1DAB23FB-1431-430C-95B9-18D374F86720}"
+        instanceId: "{0C541C14-DE7B-43FC-A459-EB0F6CACE9DB}"
+        datasourceId: "{684FA81B-14A4-4383-B115-2A766CA44AFB}"
     headlessVariants:
       containerPath: "/sitecore/content/andmore/atlanta-apparel/Presentation/Headless Variants/EventListing"
       containerId: "{FE55B4A5-85F6-4C05-9BB3-CFC17F674635}"
       variants:
         - { name: "Default", itemId: "{B159DF6B-4CA9-4C7E-BFA4-495B3848885D}" }
     verification:
-      checkedAt: "2026-09-02T18:45:00Z"
+      checkedAt: "2026-09-02T21:30:00Z"
       passed:
         - "EventListing template + fields + Types verified"
         - "JSON Rendering ComponentQuery is chrome-only (no LookupField EventsRoot children); Parameters Template GUID still set"
         - "Datasource Template path and Datasource Location unchanged (site Data EventListing Folder + sharedSites)"
         - "Visit/Events EventListing instance datasource = Atlanta Apparel Events {684FA81B-14A4-4383-B115-2A766CA44AFB}"
+        - "Atlanta Apparel Events EventsRoot = Visit/Events {47CEA21C-AEC1-4775-93BC-7F5D5B92DFAF}"
+        - "Eight Event Page children under Visit/Events plus Data folder (MCP 2026-09-02)"
+        - "Exhibit also has EventListing with the same Atlanta Apparel Events datasource"
         - "Local DS ListingTitle set to All Events"
         - "React EventListing empty-state is isEditing-aware; flat ListingTitle + rendering.dataSource"
-        - "Jest src/__tests__/uiim/events + event-listing-from-edge"
+        - "Edge item(path:) uses braced GUID; search fallback on Event Page template {6CCF3409-0A26-4069-92EC-2099DAE63088}"
+        - "Jest src/__tests__/uiim/events + event-listing-from-edge (GUID/path, month with later events, empty vs hits)"
+        - "Client-side pagination of filtered cards (default 8; pageSize rendering param); pager hidden for <= pageSize"
       failed: []
       pendingManual:
-        - "Publish EventListing rendering, Atlanta Apparel Events datasource, Visit/Events page, and Event Page items"
-        - "Reload Pages on atlanta-apparel /Visit/Events and confirm canvas shows filters/cards instead of NoDataFallback"
+        - "Publish Atlanta Apparel Events, Visit/Events, Exhibit, and the eight Event Page items to Experience Edge (live + preview)"
+        - "Reload Pages on Exhibit or /Visit/Events — Event Type checkboxes and Sep 14–18 cards should appear without picking a day"
         - "Append EventListing {17C29F6F-B7BD-41F6-864B-1FEDF1052B05} to atlanta-apparel Available Renderings/Page Content if missing (MCP read truncated; do not overwrite)"
 
   - name: "EventDetail"

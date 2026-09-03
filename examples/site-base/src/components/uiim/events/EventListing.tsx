@@ -25,8 +25,11 @@ import {
   isEdgeResolvableItemRef,
   listingFieldJson,
   listingFieldString,
+  paginateEvents,
+  parseEventListingPageSize,
   resolveEvent,
   resolveListingDatasource,
+  toEventListingItemPath,
   type EventListingChild,
   type EventListingFieldBag,
 } from '@/lib/event-listing-model';
@@ -40,7 +43,11 @@ const EventListingEmpty = (): JSX.Element => <NoDataFallback componentName="Even
 export const Default = ({ fields, params, rendering }: EventListingProps): JSX.Element => {
   const { page } = useSitecore();
   const isEditing = Boolean(page?.mode?.isEditing);
-  const { styles, RenderingIdentifier } = params || {};
+  const { styles, RenderingIdentifier, pageSize: pageSizeParam } = (params || {}) as {
+    styles?: string;
+    RenderingIdentifier?: string;
+    pageSize?: string;
+  };
   const datasource = resolveListingDatasource(fields);
   const datasourceAssigned = hasAssignedDatasource(fields, rendering);
   const inlineChildren = useMemo(() => childrenFromDatasource(datasource), [datasource]);
@@ -52,17 +59,24 @@ export const Default = ({ fields, params, rendering }: EventListingProps): JSX.E
 
   useEffect(() => {
     if (inlineChildren.length > 0) return;
-    const rootRef = isEdgeResolvableItemRef(eventsRootId) ? eventsRootId : '';
-    const dsRef = isEdgeResolvableItemRef(datasourceId) ? datasourceId : '';
+    const rootRef = toEventListingItemPath(isEdgeResolvableItemRef(eventsRootId) ? eventsRootId : '');
+    const dsRef = toEventListingItemPath(isEdgeResolvableItemRef(datasourceId) ? datasourceId : '');
     if (!rootRef && !dsRef) return;
 
     const controller = new AbortController();
     const query = new URLSearchParams({ language });
     if (rootRef) query.set('root', rootRef);
     if (dsRef) query.set('datasource', dsRef);
+    if (isEditing) query.set('preview', '1');
 
     fetch(`/api/event-listing?${query.toString()}`, { signal: controller.signal })
-      .then((response) => (response.ok ? response.json() : { events: [] }))
+      .then((response) => {
+        if (!response.ok) {
+          console.error('[EventListing] /api/event-listing failed', response.status);
+          return { events: [] as EventListingChild[] };
+        }
+        return response.json() as Promise<{ events?: EventListingChild[] }>;
+      })
       .then((payload: { events?: EventListingChild[] }) => {
         if (payload?.events?.length) setRemoteChildren(payload.events);
       })
@@ -73,7 +87,7 @@ export const Default = ({ fields, params, rendering }: EventListingProps): JSX.E
       });
 
     return () => controller.abort();
-  }, [inlineChildren.length, eventsRootId, datasourceId, language]);
+  }, [inlineChildren.length, eventsRootId, datasourceId, language, isEditing]);
 
   const events = useMemo(() => {
     const source = inlineChildren.length > 0 ? inlineChildren : remoteChildren;
@@ -86,13 +100,23 @@ export const Default = ({ fields, params, rendering }: EventListingProps): JSX.E
   const [selectedDate, setSelectedDate] = useState<string | null>(null);
   const [selectedTypes, setSelectedTypes] = useState<string[]>([]);
   const [month, setMonth] = useState(initialMonth);
+  const filtersKey = `${keyword}\0${selectedDate ?? ''}\0${selectedTypes.join('\0')}`;
+  const [paging, setPaging] = useState({ filtersKey, page: 1 });
+  const currentPage = paging.filtersKey === filtersKey ? paging.page : 1;
+  const pageSize = parseEventListingPageSize(pageSizeParam);
 
   const filtered = useMemo(
     () => filterEvents(events, { keyword, selectedDate, selectedTypes }),
     [events, keyword, selectedDate, selectedTypes]
   );
-  const groups = useMemo(() => groupEventsByDate(filtered), [filtered]);
+  const paged = useMemo(
+    () => paginateEvents(filtered, currentPage, pageSize),
+    [filtered, currentPage, pageSize]
+  );
+  const groups = useMemo(() => groupEventsByDate(paged.items), [paged.items]);
   const cells = useMemo(() => buildMonthGrid(month.year, month.monthIndex), [month]);
+
+  const goToPage = (page: number) => setPaging({ filtersKey, page });
 
   if (!datasource && !(isEditing && datasourceAssigned)) {
     return <EventListingEmpty />;
@@ -297,6 +321,48 @@ export const Default = ({ fields, params, rendering }: EventListingProps): JSX.E
               </ul>
             </section>
           ))}
+          {paged.totalPages > 1 && (
+            <nav
+              className="aa-events-pagination mt-8 flex flex-wrap items-center justify-center gap-2"
+              aria-label="Event listing pagination"
+            >
+              <button
+                type="button"
+                className="border-border hover:bg-muted inline-flex h-9 items-center gap-1 border px-3 text-sm font-semibold disabled:opacity-40"
+                disabled={paged.page <= 1}
+                onClick={() => goToPage(Math.max(1, paged.page - 1))}
+              >
+                <ChevronLeft className="size-4" aria-hidden />
+                Previous
+              </button>
+              {Array.from({ length: paged.totalPages }, (_, index) => index + 1).map((page) => (
+                <button
+                  key={page}
+                  type="button"
+                  aria-label={`Page ${page}`}
+                  aria-current={page === paged.page ? 'page' : undefined}
+                  className={cn(
+                    'inline-flex size-9 items-center justify-center border text-sm font-semibold',
+                    page === paged.page
+                      ? 'aa-events-page-current border-foreground bg-foreground text-background'
+                      : 'border-border hover:bg-muted'
+                  )}
+                  onClick={() => goToPage(page)}
+                >
+                  {page}
+                </button>
+              ))}
+              <button
+                type="button"
+                className="border-border hover:bg-muted inline-flex h-9 items-center gap-1 border px-3 text-sm font-semibold disabled:opacity-40"
+                disabled={paged.page >= paged.totalPages}
+                onClick={() => goToPage(Math.min(paged.totalPages, paged.page + 1))}
+              >
+                Next
+                <ChevronRight className="size-4" aria-hidden />
+              </button>
+            </nav>
+          )}
         </div>
       </div>
     </section>

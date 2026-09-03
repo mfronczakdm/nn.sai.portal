@@ -437,3 +437,67 @@ export const Version1 = (props: PageHeaderSTProps) => {
     </section>
   );
 };
+
+/* Version2 — Full-bleed Image1 background with overlaid copy. */
+export const Version2 = (props: PageHeaderSTProps) => {
+  const darkImage = isDarkImageHero(props.params);
+
+  return (
+    <section
+      {...heroSectionProps(
+        props.params,
+        'hero-st-version2 relative flex items-center'
+      )}
+      data-hero-st-variant="Version2"
+    >
+      <div className={HERO_BG_LAYER_CLASS}>
+        <ContentSdkImage
+          field={props?.fields?.Image1}
+          width={1920}
+          height={1080}
+          priority={true}
+          fetchPriority="high"
+          className={HERO_BG_IMAGE_CLASS}
+        />
+      </div>
+      <div className="relative z-20 mx-auto w-full lg:container lg:flex">
+        <div
+          className={`flex flex-col justify-center px-6 py-10 md:px-10 lg:w-2/3 lg:px-14 lg:py-16 ${HERO_CONTENT_BAND_CLASS}`}
+        >
+          <div className="max-w-xl">
+            <h1
+              className={cn(
+                'max-w-[11ch] text-[clamp(2.35rem,4.6vw,4.35rem)] font-black uppercase leading-[0.92] tracking-tight',
+                darkImage ? HERO_TEXT_ON_DARK_IMAGE_CLASS : 'text-[var(--color-hero-headline)]'
+              )}
+              style={{ fontFamily: 'var(--font-heading)' }}
+            >
+              <ContentSdkText field={props?.fields?.Title} />
+            </h1>
+            <p
+              className={cn(
+                'mt-5 text-base font-medium normal-case tracking-normal md:text-lg',
+                darkImage ? HERO_TEXT_ON_DARK_IMAGE_CLASS : 'text-[var(--color-foreground)]'
+              )}
+              style={{ fontFamily: 'var(--font-body)' }}
+            >
+              <ContentSdkText field={props?.fields?.Eyebrow} />
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <TrackedCtaLink
+                field={props?.fields?.Link1}
+                prefetch={false}
+                className="btn btn-primary rounded-none px-6 py-3 text-sm font-bold uppercase tracking-wide"
+              />
+              <TrackedCtaLink
+                field={props?.fields?.Link2}
+                prefetch={false}
+                className="btn btn-secondary rounded-none px-6 py-3 text-sm font-bold uppercase tracking-wide"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};

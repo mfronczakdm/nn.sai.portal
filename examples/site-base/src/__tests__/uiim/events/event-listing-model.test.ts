@@ -16,8 +16,12 @@ import {
   isEdgeResolvableItemRef,
   listingFieldJson,
   listingFieldString,
+  paginateEvents,
+  parseEventListingPageSize,
   resolveEvent,
   resolveListingDatasource,
+  toEventListingItemPath,
+  toEventListingSearchGuid,
   type EventListingChild,
 } from '@/lib/event-listing-model';
 
@@ -111,6 +115,14 @@ describe('event-listing-model', () => {
     ).toEqual([expect.objectContaining({ title: 'Closing Toast' })]);
   });
 
+  it('keeps later-in-month events when no calendar day is selected', () => {
+    const today = new Date(2026, 8, 2);
+    expect(today.getDate()).toBe(2);
+    const visible = filterEvents(events, { keyword: '', selectedDate: null, selectedTypes: [] });
+    expect(visible).toHaveLength(2);
+    expect(visible.map((event) => event.dateKey)).toEqual(['2026-09-15', '2026-09-18']);
+  });
+
   it('collects taxonomy types from authored event pages', () => {
     expect(collectEventTypes(events)).toEqual(['Networking', 'Trend Talk']);
   });
@@ -171,11 +183,69 @@ describe('event listing datasource resolution', () => {
     );
   });
 
+  it('prefers Droptree GUID/path over a site-relative url on jsonValue.value', () => {
+    expect(
+      extractEventsRootId({
+        jsonValue: {
+          value: {
+            id: '{47CEA21C-AEC1-4775-93BC-7F5D5B92DFAF}',
+            path: '/sitecore/content/andmore/atlanta-apparel/Home/Visit/Events',
+            url: '/Visit/Events',
+          },
+        },
+      })
+    ).toBe('{47CEA21C-AEC1-4775-93BC-7F5D5B92DFAF}');
+    expect(
+      extractEventsRootId({
+        jsonValue: {
+          value: {
+            path: '/sitecore/content/andmore/atlanta-apparel/Home/Visit/Events',
+            url: '/Exhibit',
+          },
+        },
+      })
+    ).toBe('/sitecore/content/andmore/atlanta-apparel/Home/Visit/Events');
+  });
+
+  it('normalizes EventsRoot GUID/path for Edge item(path:) and search', () => {
+    expect(toEventListingItemPath('{47cea21c-aec1-4775-93bc-7f5d5b92dfaf}')).toBe(
+      '{47CEA21C-AEC1-4775-93BC-7F5D5B92DFAF}'
+    );
+    expect(toEventListingItemPath('47CEA21C-AEC1-4775-93BC-7F5D5B92DFAF')).toBe(
+      '{47CEA21C-AEC1-4775-93BC-7F5D5B92DFAF}'
+    );
+    expect(
+      toEventListingItemPath('/sitecore/content/andmore/atlanta-apparel/Home/Visit/Events')
+    ).toBe('/sitecore/content/andmore/atlanta-apparel/Home/Visit/Events');
+    expect(toEventListingItemPath('local:/Data/EventListing')).toBe('');
+    expect(toEventListingSearchGuid('{47CEA21C-AEC1-4775-93BC-7F5D5B92DFAF}')).toBe(
+      '47cea21c-aec1-4775-93bc-7f5d5b92dfaf'
+    );
+    expect(
+      toEventListingSearchGuid('/sitecore/content/andmore/atlanta-apparel/Home/Visit/Events')
+    ).toBe('');
+  });
+
   it('rejects local: datasource paths for Edge fetches', () => {
     expect(isEdgeResolvableItemRef('local:/Data/EventListing')).toBe(false);
     expect(isEdgeResolvableItemRef('{684FA81B-14A4-4383-B115-2A766CA44AFB}')).toBe(true);
     expect(isEdgeResolvableItemRef('/sitecore/content/andmore/atlanta-apparel/Home/Visit/Events')).toBe(
       true
     );
+  });
+
+  it('paginates event cards and defaults page size to 8', () => {
+    expect(parseEventListingPageSize(undefined)).toBe(8);
+    expect(parseEventListingPageSize('4')).toBe(4);
+    expect(parseEventListingPageSize(0)).toBe(8);
+    const items = Array.from({ length: 10 }, (_, index) => index + 1);
+    expect(paginateEvents(items, 1, 4).items).toEqual([1, 2, 3, 4]);
+    expect(paginateEvents(items, 3, 4)).toEqual({
+      page: 3,
+      totalPages: 3,
+      totalItems: 10,
+      items: [9, 10],
+    });
+    expect(paginateEvents(items, 99, 4).page).toBe(3);
   });
 });

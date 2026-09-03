@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
-import { fireEvent, render, screen } from '@testing-library/react';
+import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 
 import { Default as EventListing } from '@/components/uiim/events/EventListing';
 import { Default as EventDetail } from '@/components/uiim/events/EventDetail';
@@ -131,7 +131,7 @@ describe('EventListing', () => {
     expect(screen.getByText(/requires a datasource item assigned/i)).toBeInTheDocument();
   });
 
-  it('renders listing chrome in Pages editing when a datasource GUID is assigned but GraphQL is empty', () => {
+  it('renders listing chrome in Pages editing when a datasource GUID is assigned but GraphQL is empty', async () => {
     mockedUseSitecore.mockReturnValue({ page: { mode: { isEditing: true } } });
     render(
       <EventListing
@@ -142,6 +142,46 @@ describe('EventListing', () => {
     );
     expect(screen.queryByText(/requires a datasource item assigned/i)).not.toBeInTheDocument();
     expect(screen.getByLabelText('Search')).toBeInTheDocument();
+    await waitFor(() => expect(global.fetch).toHaveBeenCalled());
+    const url = String((global.fetch as jest.Mock).mock.calls[0][0]);
+    expect(url).toContain('/api/event-listing?');
+    expect(url).toContain('preview=1');
+    expect(url).toContain(encodeURIComponent('{684FA81B-14A4-4383-B115-2A766CA44AFB}'));
+  });
+
+  it('loads remote Event Page cards when chrome has EventsRoot but no inline children', async () => {
+    (global.fetch as jest.Mock).mockResolvedValue({
+      ok: true,
+      json: async () => ({
+        events: [
+          {
+            id: 'talk',
+            name: 'Outdoor Living Trends Talk',
+            url: { path: '/Visit/Events/Outdoor Living Trends Talk' },
+            pageTitle: { jsonValue: { value: 'Outdoor Living Trends Talk' } },
+            eventStart: { jsonValue: { value: '20260915T083000' } },
+            eventType: { jsonValue: { value: 'Trend Talk' } },
+          },
+        ],
+      }),
+    });
+    render(
+      <EventListing
+        fields={{
+          ListingTitle: { value: 'All Events' },
+          EmptyResultsText: { value: 'No events match your filters.' },
+          EventsRoot: { jsonValue: { value: '{47CEA21C-AEC1-4775-93BC-7F5D5B92DFAF}' } },
+        }}
+        params={params}
+        page={page}
+        rendering={{ ...rendering, dataSource: '{684FA81B-14A4-4383-B115-2A766CA44AFB}' }}
+      />
+    );
+    expect(await screen.findByText('Outdoor Living Trends Talk')).toBeInTheDocument();
+    expect(screen.queryByText('No events match your filters.')).not.toBeInTheDocument();
+    const url = String((global.fetch as jest.Mock).mock.calls[0][0]);
+    expect(url).toContain(encodeURIComponent('{47CEA21C-AEC1-4775-93BC-7F5D5B92DFAF}'));
+    expect(url).not.toContain('preview=1');
   });
 
   it('still shows NoDataFallback in editing when no datasource is assigned', () => {
@@ -176,6 +216,13 @@ describe('EventListing', () => {
     expect(moreInfo).toHaveAttribute('href', '/Visit/Events/Outdoor Living Trends Talk');
   });
 
+  it('shows September events with no day selected (does not default-filter to today)', () => {
+    render(<EventListing fields={listingFields} params={params} page={page} rendering={rendering} />);
+    expect(screen.getByText('Outdoor Living Trends Talk')).toBeInTheDocument();
+    expect(screen.getByText('Celebrate Success: Closing Toast')).toBeInTheDocument();
+    expect(screen.queryByText('No events match your filters.')).not.toBeInTheDocument();
+  });
+
   it('filters by keyword and event type', () => {
     render(<EventListing fields={listingFields} params={params} page={page} rendering={rendering} />);
     fireEvent.change(screen.getByLabelText('Search'), { target: { value: 'closing' } });
@@ -186,6 +233,47 @@ describe('EventListing', () => {
     fireEvent.click(screen.getByLabelText('Trend Talk'));
     expect(screen.getByText('Outdoor Living Trends Talk')).toBeInTheDocument();
     expect(screen.queryByText('Celebrate Success: Closing Toast')).not.toBeInTheDocument();
+  });
+
+  it('pages extra events instead of listing them all at once', () => {
+    const results = Array.from({ length: 10 }, (_, index) => ({
+      id: String(index + 1),
+      name: `Event ${index + 1}`,
+      url: { path: `/Visit/Events/Event-${index + 1}` },
+      pageTitle: { jsonValue: { value: `Event ${index + 1}` } },
+      eventStart: { jsonValue: { value: `202609${String(14 + (index % 5)).padStart(2, '0')}T090000` } },
+      eventType: { jsonValue: { value: 'Seminar' } },
+    }));
+    render(
+      <EventListing
+        fields={{
+          data: {
+            datasource: {
+              emptyResultsText: { jsonValue: { value: 'No events match your filters.' } },
+              eventsRoot: { targetItem: { children: { results } } },
+            },
+          },
+        }}
+        params={{ ...params, pageSize: '4' }}
+        page={page}
+        rendering={rendering}
+      />
+    );
+
+    expect(screen.getByText('Event 1')).toBeInTheDocument();
+    expect(screen.getByText('Event 4')).toBeInTheDocument();
+    expect(screen.queryByText('Event 5')).not.toBeInTheDocument();
+    expect(screen.getByLabelText('Event listing pagination')).toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole('button', { name: 'Next' }));
+    expect(screen.queryByText('Event 1')).not.toBeInTheDocument();
+    expect(screen.getByText('Event 5')).toBeInTheDocument();
+    expect(screen.getByText('Event 8')).toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole('button', { name: 'Page 3' }));
+    expect(screen.getByText('Event 9')).toBeInTheDocument();
+    expect(screen.getByText('Event 10')).toBeInTheDocument();
+    expect(screen.queryByText('Event 8')).not.toBeInTheDocument();
   });
 });
 
