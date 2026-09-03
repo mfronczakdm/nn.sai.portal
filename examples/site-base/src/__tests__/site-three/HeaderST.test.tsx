@@ -846,6 +846,24 @@ describe('HeaderST Component', () => {
       expect(screen.getByLabelText('Toggle mobile menu')).toBeInTheDocument();
     });
 
+    it('compacts the logo and keeps primary nav on one nowrap row at lg', () => {
+      render(<HeaderSTVersion2 {...headerSTPropsVersion2} />);
+
+      const logo = screen.getByTestId('sitecore-image');
+      expect(logo).toHaveClass('lg:h-9');
+      expect(logo).toHaveClass('lg:max-w-[min(100%,168px)]');
+      expect(logo).toHaveClass('xl:h-12');
+
+      const primaryNav = document.querySelector('[data-header-st-nav="primary"]');
+      expect(primaryNav).toBeInTheDocument();
+      expect(primaryNav).toHaveClass('flex-nowrap');
+      expect(primaryNav).toHaveClass('justify-end');
+      expect(primaryNav).toHaveClass('min-w-0');
+      expect(primaryNav).toHaveClass('overflow-visible');
+      expect(primaryNav).not.toHaveClass('flex-wrap');
+      expect(primaryNav).not.toHaveClass('overflow-hidden');
+    });
+
     it('shows a search icon when showSearchBox is false', () => {
       render(<HeaderSTVersion2 {...headerSTPropsVersion2} />);
 

@@ -8953,7 +8953,7 @@ ia:
     category: "Global Elements"
     status: "complete"
     createdAt: "2026-08-19T18:30:00Z"
-    updatedAt: "2026-09-03T16:45:00Z"
+    updatedAt: "2026-09-03T19:15:00Z"
 
     react:
       filePath: "src/components/site-three/HeaderST.tsx"
@@ -9071,7 +9071,7 @@ ia:
       note: "2026-09-03: LoginLink set to Sign In → https://www.atlanta-apparel.com/login. SupportLink remains Register → Visit/Registration {EBD89713-040D-4B8F-810D-23E44B93F2A6}. City menus are Version2-hardcoded, not datasource fields."
 
     verification:
-      checkedAt: "2026-09-03T16:45:00Z"
+      checkedAt: "2026-09-03T19:15:00Z"
       passed:
         - "LoginLink field created on HeaderST datasource template"
         - "Headless Variants container + Default + LoginRequired verified via MCP"
@@ -9092,6 +9092,7 @@ ia:
         - "2026-08-29: Amkor Header Partial Design mega menus remapped to Home IA L1 (About Us, Packaging, Technology, Test Services, Services, Applications, Quality)"
         - "2026-09-03: Version2 ANDMORE city pull-downs (ATLANTA / LAS VEGAS / HIGH POINT / NEW YORK) + Market Plan hardcoded in HeaderSTVersion2View only"
         - "2026-09-03: atlanta-apparel Header LoginLink populated as Sign In"
+        - "2026-09-03: Version2 lg (1024px) header compact — logo cap + nowrap justify-end nav (Default/Version1/Version3 unchanged)"
       failed: []
       pendingManual:
         - "Select Version3 on lcmc Header partial design HeaderST rendering in Pages"
@@ -9111,6 +9112,7 @@ ia:
         - "Optional: add postLogoutRedirect to HeaderST rendering parameters template"
 
     notes:
+      - "2026-09-03: Version2 lg-band (1024-1279px) crowding fix for atlanta-apparel Pages laptop breakpoint. Logo was lg:h-12/320px and centered nav collided with Exhibitor Directory. Cap logo at lg:h-9/168px (xl restores h-12/280px), main-row lg:gap-3, primary nav flex-nowrap justify-end overflow-visible, compact a/span/button padding, force li w-auto so Sitecore col-12 cannot stretch under the logo. City triggers slightly tighter until xl. Code-only; no new Sitecore variants or RP fields. Default/LoginRequired/Version1/Version3 unchanged."
       - "2026-09-03: Version2 now renders live-matching ANDMORE city pull-downs (ATLANTA, LAS VEGAS, HIGH POINT, NEW YORK) plus Market Plan on the dark utility row. Code-only menus in HeaderST.tsx (version2LocationMenus) because HeaderST's shared datasource has no location fields and the skill forbids new cosmetic datasource fields. Accessible button+menu (hover or click, Escape/outside close). Atlanta Apparel (/) is internal; sister markets are live ANDMORE URLs. Market Plan → /visit/plan-your-market {94A9563C-55F2-4348-BFAF-95D95DDD58A6}. atlanta-apparel Header datasource LoginLink set to Sign In → https://www.atlanta-apparel.com/login. Default/LoginRequired/Version1/Version3 layouts unchanged. No new Sitecore variants or RP fields."
       - "2026-08-31: Version1 language selector is now functional. English/Korean/Japanese/Simplified Chinese link to locale-prefixed URLs for the CURRENT page (/en/..., /ko-KR/..., /ja-JP/..., /zh-CN/...) instead of the old external amkor.com/kr|/jp|/cn hrefs, and the active language is highlighted via aria-current + --color-header-lang-active. Locale codes are the Sitecore language names (ja-JP, ko-KR, zh-CN). Shared plumbing: src/lib/locale.ts (new), routing.locales extended from [en] to [en, ja-JP, ko-KR, zh-CN], proxy.ts remembers the chosen language in an app-locale cookie and replays it on Sitecore's unprefixed links, and the catch-all page falls back to the default language when a page has no version in the requested language. amkor Home + children have real ja-JP content; ko-KR and zh-CN have no versions and therefore render the English fallback. No Sitecore items created or changed (amkor Version1 variant {3C5FBC3A-F12E-4EAF-A2B2-17DF9BEECE5A} already existed). Default/LoginRequired/Version2/Version3 unchanged."
       - "2026-08-29: Version1 cascade megamenu (MegaMenuCascade.tsx). MENU opens dark overlay; L1 column ? L2 ? L3 (Careers countries split). MegaMenuItem Default + LinkList HeaderPrimaryLinks/HeaderSecondaryLinks register into cascade when MegaMenuCascadeProvider wraps header-navigation (Version1 only). MobileMenuWrapper exports useMobileMenu + darkPanel. Default/Version2/Version3 unchanged."

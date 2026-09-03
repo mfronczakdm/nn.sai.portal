@@ -346,7 +346,7 @@ const version2LocationMenus: readonly Version2LocationMenu[] = [
 const version2MarketPlanLink = { text: 'Market Plan', href: '/visit/plan-your-market' } as const;
 
 const version2LocationTriggerClass =
-  'inline-flex items-center gap-1 whitespace-nowrap px-2 py-1 font-[family-name:var(--font-body)] text-[0.6875rem] font-bold uppercase tracking-[0.14em] text-background hover:opacity-80';
+  'inline-flex items-center gap-0.5 whitespace-nowrap px-1.5 py-1 font-[family-name:var(--font-body)] text-[0.625rem] font-bold uppercase tracking-[0.12em] text-background hover:opacity-80 xl:gap-1 xl:px-2 xl:text-[0.6875rem] xl:tracking-[0.14em]';
 
 const version2LocationItemClass =
   'block whitespace-nowrap px-3 py-2 font-[family-name:var(--font-body)] text-xs font-medium text-foreground hover:bg-muted';
@@ -648,7 +648,7 @@ const HeaderSTVersion2View = (props: HeaderSTViewProps) => {
       <div className="flex w-full min-w-0 flex-col" role="navigation" aria-label="Site header">
         {/* Utility row — always dark; city menus left, Register / Sign In / cart right */}
         <div className="w-full min-w-0 bg-foreground text-background">
-          <div className="mx-auto flex w-full max-w-[100rem] items-center justify-between gap-3 px-4 py-1.5 sm:px-6 lg:px-8">
+          <div className="mx-auto flex w-full max-w-[100rem] items-center justify-between gap-2 px-4 py-1.5 sm:px-6 lg:gap-3 lg:px-5 xl:px-8">
             <ul
               data-header-st-locations
               className="m-0 flex min-w-0 list-none flex-row flex-wrap items-center gap-0 p-0 sm:gap-1"
@@ -703,7 +703,7 @@ const HeaderSTVersion2View = (props: HeaderSTViewProps) => {
 
         {/* Main row — dark when ReverseTheme is on */}
         <div className={cn('w-full min-w-0', isReverse ? 'bg-foreground' : 'bg-background')}>
-          <div className="mx-auto flex w-full max-w-[100rem] items-center gap-4 px-4 py-2.5 sm:px-6 lg:gap-8 lg:px-8">
+          <div className="mx-auto flex w-full max-w-[100rem] items-center gap-3 px-4 py-2.5 sm:px-6 lg:gap-3 lg:px-5 xl:gap-8 xl:px-8">
             <Link
               href="/"
               className="relative z-10 flex shrink-0 items-center self-stretch"
@@ -711,14 +711,20 @@ const HeaderSTVersion2View = (props: HeaderSTViewProps) => {
             >
               <ContentSdkImage
                 field={props.fields?.Logo}
-                className="h-10 w-auto max-w-[min(100%,220px)] object-contain object-left sm:h-11 sm:max-w-[min(100%,280px)] lg:h-12 lg:max-w-[min(100%,320px)]"
+                className="h-10 w-auto max-w-[min(100%,220px)] object-contain object-left sm:h-11 sm:max-w-[min(100%,280px)] lg:h-9 lg:max-w-[min(100%,168px)] xl:h-12 xl:max-w-[min(100%,280px)]"
               />
             </Link>
 
             {showNavigation ? (
               <ul
+                data-header-st-nav="primary"
                 className={cn(
-                  'm-0 hidden min-w-0 flex-1 list-none flex-row items-center justify-center gap-1 p-0 text-left lg:flex',
+                  'm-0 hidden min-w-0 flex-1 list-none flex-row flex-nowrap items-center justify-end gap-0 overflow-visible p-0 text-left lg:flex',
+                  '[&>li]:w-auto [&>li]:max-w-none [&>li]:shrink-0 [&>li]:grow-0 [&>li]:basis-auto',
+                  '[&>li>a]:whitespace-nowrap [&>li>span]:whitespace-nowrap [&>li>button]:whitespace-nowrap',
+                  '[&>li>a]:px-2 [&>li>a]:py-2 [&>li>a]:text-[0.8125rem] xl:[&>li>a]:px-3 xl:[&>li>a]:text-sm',
+                  '[&>li>span]:px-2 [&>li>span]:py-2 [&>li>span]:text-[0.8125rem] xl:[&>li>span]:px-3 xl:[&>li>span]:text-sm',
+                  '[&>li>button]:px-2 [&>li>button]:py-2 [&>li>button]:text-[0.8125rem] xl:[&>li>button]:px-3 xl:[&>li>button]:text-sm',
                   '[.partial-editing-mode_&]:!flex [.partial-editing-mode_&]:!flex-col'
                 )}
               >
