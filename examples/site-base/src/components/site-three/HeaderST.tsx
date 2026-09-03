@@ -484,12 +484,14 @@ export const Version1 = (props: HeaderSTProps) => (
 const version2NavLinkClass =
   'block px-3 py-2 font-[family-name:var(--font-body)] text-sm font-semibold text-foreground hover:text-primary';
 
-/* Version2 — dark utility row; white main row with logo left, inline nav, search icon. */
+/* Version2 — dark utility row; white main row with logo left, inline nav, search icon.
+   When ReverseTheme is on the main row also goes dark to match sites like Atlanta Apparel. */
 const HeaderSTVersion2View = (props: HeaderSTViewProps) => {
   const { fields, params, requireAuthForNav } = props;
   const showNavigation = useHeaderSTNavigationVisibility(requireAuthForNav);
   const componentMap = getComponentMap();
   const hideCart = isTruthyParam(params?.HideCart);
+  const isReverse = isReverseThemeParam(params?.ReverseTheme);
 
   const searchControl = params.showSearchBox ? (
     <HeaderPreviewSearch searchLink={fields?.SearchLink} className="min-w-0" />
@@ -497,7 +499,12 @@ const HeaderSTVersion2View = (props: HeaderSTViewProps) => {
     <ContentSdkLink
       field={fields?.SearchLink}
       prefetch={false}
-      className="flex h-10 w-10 items-center justify-center bg-muted text-foreground hover:bg-muted/80"
+      className={cn(
+        'flex h-9 w-9 items-center justify-center rounded-sm',
+        isReverse
+          ? 'text-background hover:text-background/70'
+          : 'bg-muted text-foreground hover:bg-muted/80'
+      )}
     >
       <Search className="h-5 w-5" strokeWidth={2} aria-hidden />
       <span className="sr-only">{fields?.SearchLink?.value?.text || 'Search'}</span>
@@ -507,21 +514,23 @@ const HeaderSTVersion2View = (props: HeaderSTViewProps) => {
   return (
     <section
       className={cn(
-        'relative sticky top-0 z-30 w-full min-w-0 border-b border-border/30 bg-background shadow-sm',
+        'relative sticky top-0 z-30 w-full min-w-0 border-b border-border/30 shadow-sm',
+        isReverse ? 'bg-foreground' : 'bg-background',
         params?.styles
       )}
       data-class-change
       data-header-st-layout="version2"
     >
       <div className="flex w-full min-w-0 flex-col" role="navigation" aria-label="Site header">
+        {/* Utility row — always dark */}
         <div className="w-full min-w-0 bg-foreground text-background">
-          <div className="mx-auto flex w-full max-w-[100rem] items-center justify-end gap-3 px-4 py-2 sm:px-6 lg:px-8">
+          <div className="mx-auto flex w-full max-w-[100rem] items-center justify-end gap-3 px-4 py-1.5 sm:px-6 lg:px-8">
             <ul className="flex list-none flex-row items-center justify-end gap-2 p-0">
               <li className="hidden lg:block">
                 <ContentSdkLink
                   field={fields?.SupportLink}
                   prefetch={false}
-                  className="inline-flex items-center rounded-full bg-background px-4 py-1.5 text-xs font-semibold text-foreground hover:opacity-90"
+                  className="inline-flex items-center rounded-full border border-background/80 bg-transparent px-4 py-1 text-xs font-semibold text-background hover:bg-background hover:text-foreground"
                 />
               </li>
               <HeaderSTAuthControls
@@ -549,8 +558,9 @@ const HeaderSTVersion2View = (props: HeaderSTViewProps) => {
           </div>
         </div>
 
-        <div className="w-full min-w-0 bg-background">
-          <div className="mx-auto flex w-full max-w-[100rem] items-center gap-4 px-4 py-3 sm:px-6 lg:gap-8 lg:px-8">
+        {/* Main row — dark when ReverseTheme is on */}
+        <div className={cn('w-full min-w-0', isReverse ? 'bg-foreground' : 'bg-background')}>
+          <div className="mx-auto flex w-full max-w-[100rem] items-center gap-4 px-4 py-2.5 sm:px-6 lg:gap-8 lg:px-8">
             <Link
               href="/"
               className="relative z-10 flex shrink-0 items-center self-stretch"
@@ -558,14 +568,14 @@ const HeaderSTVersion2View = (props: HeaderSTViewProps) => {
             >
               <ContentSdkImage
                 field={props.fields?.Logo}
-                className="h-10 w-auto max-w-[min(100%,220px)] object-contain object-left sm:h-12 sm:max-w-[min(100%,280px)] lg:h-[3.25rem] lg:max-w-[min(100%,320px)]"
+                className="h-10 w-auto max-w-[min(100%,220px)] object-contain object-left sm:h-11 sm:max-w-[min(100%,280px)] lg:h-12 lg:max-w-[min(100%,320px)]"
               />
             </Link>
 
             {showNavigation ? (
               <ul
                 className={cn(
-                  'm-0 hidden min-w-0 flex-1 list-none flex-row items-center justify-end gap-1 p-0 text-left lg:flex',
+                  'm-0 hidden min-w-0 flex-1 list-none flex-row items-center justify-center gap-1 p-0 text-left lg:flex',
                   '[.partial-editing-mode_&]:!flex [.partial-editing-mode_&]:!flex-col'
                 )}
               >
