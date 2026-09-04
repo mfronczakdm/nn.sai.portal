@@ -7797,13 +7797,14 @@ ia:
     kind: "content"
     status: "complete"
     createdAt: "2026-09-03T16:20:00Z"
-    updatedAt: "2026-09-03T16:55:00Z"
+    updatedAt: "2026-09-04T10:45:00Z"
     siteCollection: "andmore"
     siteName: "atlanta-apparel"
     notes:
       - "2026-09-03: Atlanta Apparel SearchResults pack + Pulse pack. Default SearchResults layout unchanged for other sites. Version1 is the directory/events layout (screenshot) with Register / Add To Plan funnel CTAs."
       - "2026-09-03: Created Headless Variants/SearchResults + Default + Version1 on atlanta-apparel only."
       - "2026-09-03: Pages Design tab had Styling/Advanced styling but no Variant dropdown. Same root cause as Portal LocationSearch/DownloadList: Json Rendering Parameters Template was empty, so there was no FieldNames field for Pages to bind. Created Portal RP template {59E900CE-4B1C-426D-875E-2DC8FB88DF22} (4 bases including IComponentVariant) and set rendering Parameters Template. Headless Variants on atlanta-apparel were already correct; Amkor/Quanex do not need SearchResults variant folders for the Atlanta picker. Compatible Renderings on the rendering stayed empty (HeroST also empty). MCP cannot set FieldNames on the page instance."
+      - "2026-09-04: Event dateLabels and market-window copy in search-packs/atlanta-apparel.ts and pulse-packs/atlanta-apparel.ts shifted to Oct 6–9 2026 to match Sitecore EventStart/EventEnd. Jewelry September birthstone copy left unchanged."
     rendering:
       name: "SearchResults"
       path: "/sitecore/layout/Renderings/Project/Portal/SearchResults/SearchResults"
@@ -7960,7 +7961,7 @@ ia:
     category: "Events"
     status: "complete"
     createdAt: "2026-09-01T20:50:00Z"
-    updatedAt: "2026-09-02T21:45:00Z"
+    updatedAt: "2026-09-04T10:45:00Z"
     siteCollection: "andmore"
     siteName: "atlanta-apparel"
     notes:
@@ -7968,6 +7969,7 @@ ia:
       - "2026-09-02: Pages canvas showed NoDataFallback despite Atlanta Apparel Events assigned. Root cause: layout ComponentQuery expanded LookupField EventsRoot children (Edge/Pages reject this, same as MainNav), so fields.data.datasource was empty. React also treated missing GraphQL datasource as unassigned even in isEditing. Fix: chrome-only ComponentQuery; events via /api/event-listing Edge getData; isEditing chrome when rendering.dataSource or flat ListingTitle is present. Wired Visit/Events instance to Atlanta Apparel Events {684FA81B-...}; filled ListingTitle on local DS {B6D86425-...}. LCMC/Quanex unchanged."
       - "2026-09-02: Chrome rendered (All Events / search / Sep 2026 calendar) but cards stayed on EmptyResultsText after publish. MCP: Atlanta Apparel Events EventsRoot already {47CEA21C-AEC1-4775-93BC-7F5D5B92DFAF} = /sitecore/content/andmore/atlanta-apparel/Home/Visit/Events (8 Event Pages + Data folder; workflow null). Root cause: /api/event-listing used location-footprint toEdgeItemPath which strips GUID braces; Experience Edge item(path:) requires {GUID} (same as MainNav/KnowledgeListing), so children were null. Date filter was not the bug (selectedDate starts null). Live Edge returns all 8 events; Pages preview=1 context was empty so API now falls back to live. EventListing also sits on Exhibit {1DAB23FB-...} with the same DS. LCMC unchanged."
       - "2026-09-02: Client-side pagination of filtered event cards (default 8 per page; optional rendering param pageSize). Pager hidden until results exceed page size. Filter/search/calendar changes reset to page 1."
+      - "2026-09-04: Event Page children EventStart/EventEnd shifted to Oct 6–9 2026. Listing chrome unchanged. Cards will show October after those items are published to Edge."
     react:
       filePath: "src/components/uiim/events/EventListing.tsx"
       componentMapKey: "EventListing"
@@ -8062,7 +8064,7 @@ ia:
       failed: []
       pendingManual:
         - "Publish Atlanta Apparel Events, Visit/Events, Exhibit, and the eight Event Page items to Experience Edge (live + preview)"
-        - "Reload Pages on Exhibit or /Visit/Events — Event Type checkboxes and Sep 14–18 cards should appear without picking a day"
+        - "Reload Pages on Exhibit or /Visit/Events — Event Type checkboxes and Oct 6–9 cards should appear without picking a day"
         - "Append EventListing {17C29F6F-B7BD-41F6-864B-1FEDF1052B05} to atlanta-apparel Available Renderings/Page Content if missing (MCP read truncated; do not overwrite)"
 
   - name: "EventDetail"
@@ -8122,11 +8124,12 @@ ia:
     category: "Events"
     status: "complete"
     createdAt: "2026-09-01T20:50:00Z"
-    updatedAt: "2026-09-01T21:15:00Z"
+    updatedAt: "2026-09-04T10:45:00Z"
     siteCollection: "andmore"
     siteName: "atlanta-apparel"
     notes:
       - "2026-09-01: Event Page inherits andmore Services Page. Eight sample events under Visit/Events matching Atlanta Apparel Sep 2026 listing screenshot."
+      - "2026-09-04: Shifted all eight Event Page EventStart/EventEnd values from Sep 14–18 to Oct 6–9 2026 (market window). Sitecore ISO compact UTC yyyyMMddTHHmmssZ; EST wall-clock stored as Z (same convention as prior dates). Skipped Events folder (Services Page) and Data/EventListing (no datetime fields). Version 2 items returned to Draft workflow after MCP write — publish required."
     templates:
       page:
         name: "Event Page"
@@ -8153,25 +8156,26 @@ ia:
         itemId: "{47CEA21C-AEC1-4775-93BC-7F5D5B92DFAF}"
         route: "/Visit/Events"
       events:
-        - { name: "Shoe and All Accessories Market Grand Opening", itemId: "{3A0AF5AB-111F-4DFE-B3EB-FA345F69C6FF}", date: "2026-09-14", type: "Networking" }
-        - { name: "Outdoor Living Trends Talk", itemId: "{AB056721-5D0E-4E80-8A05-62258E42679A}", date: "2026-09-15", type: "Trend Talk", route: "/Visit/Events/Outdoor-Living-Trends-Talk" }
-        - { name: "Buyer Grab-n-Go Hub", itemId: "{F68C01D1-1069-4B42-844B-3518189B6D2F}", date: "2026-09-15", type: "Amenity" }
-        - { name: "Best Brands A Mid-day Mix", itemId: "{21480263-A6C0-4BAE-AC58-48CE1CD53F1B}", date: "2026-09-15", type: "Networking" }
-        - { name: "Buyer Grab-n-Go Hub Wednesday", itemId: "{7B3BC71F-4219-4AD8-AE08-5F120B7EB275}", date: "2026-09-16", type: "Amenity" }
-        - { name: "New Vibe Junior Fashion", itemId: "{46ED2003-BAA1-4BFC-82BA-A7DC03912109}", date: "2026-09-16", type: "Seminar" }
-        - { name: "Keynote Supportive Styling", itemId: "{6AD21027-43B5-42C6-A618-1C3A4E649E4F}", date: "2026-09-17", type: "Seminar" }
-        - { name: "Celebrate Success Closing Toast", itemId: "{729375CB-4BBF-4F73-B78F-A90F1818B75C}", date: "2026-09-18", type: "Networking" }
+        - { name: "Shoe and All Accessories Market Grand Opening", itemId: "{3A0AF5AB-111F-4DFE-B3EB-FA345F69C6FF}", date: "2026-10-06", start: "20261006T090000Z", end: "20261006T180000Z", type: "Networking" }
+        - { name: "Outdoor Living Trends Talk", itemId: "{AB056721-5D0E-4E80-8A05-62258E42679A}", date: "2026-10-07", start: "20261007T083000Z", end: "20261007T093000Z", type: "Trend Talk", route: "/Visit/Events/Outdoor-Living-Trends-Talk" }
+        - { name: "Buyer Grab-n-Go Hub", itemId: "{F68C01D1-1069-4B42-844B-3518189B6D2F}", date: "2026-10-07", start: "20261007T090000Z", end: "20261007T110000Z", type: "Amenity" }
+        - { name: "Best Brands A Mid-day Mix", itemId: "{21480263-A6C0-4BAE-AC58-48CE1CD53F1B}", date: "2026-10-07", start: "20261007T110000Z", end: "20261007T123000Z", type: "Networking" }
+        - { name: "Buyer Grab-n-Go Hub Wednesday", itemId: "{7B3BC71F-4219-4AD8-AE08-5F120B7EB275}", date: "2026-10-08", start: "20261008T090000Z", end: "20261008T110000Z", type: "Amenity" }
+        - { name: "New Vibe Junior Fashion", itemId: "{46ED2003-BAA1-4BFC-82BA-A7DC03912109}", date: "2026-10-08", start: "20261008T140000Z", end: "20261008T150000Z", type: "Seminar" }
+        - { name: "Keynote Supportive Styling", itemId: "{6AD21027-43B5-42C6-A618-1C3A4E649E4F}", date: "2026-10-09", start: "20261009T100000Z", end: "20261009T110000Z", type: "Seminar" }
+        - { name: "Celebrate Success Closing Toast", itemId: "{729375CB-4BBF-4F73-B78F-A90F1818B75C}", date: "2026-10-09", start: "20261009T160000Z", end: "20261009T180000Z", type: "Networking" }
     verification:
-      checkedAt: "2026-09-01T21:15:00Z"
+      checkedAt: "2026-09-04T10:45:00Z"
       passed:
         - "Event Page inherits Services Page {69728677-...}"
         - "Event Data fields Type verified (Datetime + Droplist source)"
         - "Eight Event Page items created under Visit/Events"
-        - "Outdoor Living Trends Talk fields match screenshot (Tue Sep 15 2026 08:30–09:30 EST, Oasis Meeting Space)"
+        - "MCP re-read 2026-09-04: Grand Opening 20261006T090000Z–20261006T180000Z; Outdoor Living 20261007T083000Z–20261007T093000Z; Keynote 20261009T100000Z–20261009T110000Z; Closing Toast 20261009T160000Z–20261009T180000Z"
       failed: []
       pendingManual:
         - "Set insert options on Visit/Events to Event Page so authors can insert from Content Editor (__Masters silent-write)"
         - "Publish Event Page template + event items (currently Draft workflow)"
+        - "2026-09-04: Re-publish all eight Event Page items — MCP date writes created version 2 in Draft"
 
   - name: "atlanta-apparel-header-footer-nav-remap"
     kind: "content-update"

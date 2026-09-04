@@ -24,42 +24,42 @@ const FALLBACKS: Record<string, Omit<PulseSource, 'score'>> = {
     'Outdoor Living Trends Talk',
     '/Visit/Events/Outdoor-Living-Trends-Talk',
     `${HOME}/Visit/Events/Outdoor Living Trends Talk`,
-    'Trend Talk · Tue Sep 15, 2026 · 8:30–9:30 EST · Oasis Meeting Space. Register for market first, then add this seminar to your plan.'
+    'Trend Talk · Wed Oct 7, 2026 · 8:30–9:30 EST · Oasis Meeting Space. Register for market first, then add this seminar to your plan.'
   ),
   '{3A0AF5AB-111F-4DFE-B3EB-FA345F69C6FF}': page(
     '{3A0AF5AB-111F-4DFE-B3EB-FA345F69C6FF}',
     'Shoe and All Accessories Market Grand Opening',
     '/Visit/Events/Shoe-and-All-Accessories-Market-Grand-Opening',
     `${HOME}/Visit/Events/Shoe and All Accessories Market Grand Opening`,
-    'Opening-night networking for shoe and accessories buyers. Physical attendance starts with market registration. Mon Sep 14, 2026.'
+    'Opening-night networking for shoe and accessories buyers. Physical attendance starts with market registration. Tue Oct 6, 2026.'
   ),
   '{F68C01D1-1069-4B42-844B-3518189B6D2F}': page(
     '{F68C01D1-1069-4B42-844B-3518189B6D2F}',
     'Buyer Grab-n-Go Hub',
     '/Visit/Events/Buyer-Grab-n-Go-Hub',
     `${HOME}/Visit/Events/Buyer Grab-n-Go Hub`,
-    'Buyer amenity hub between appointments. Use it after you register and build your Market Plan. Tue Sep 15, 2026.'
+    'Buyer amenity hub between appointments. Use it after you register and build your Market Plan. Wed Oct 7, 2026.'
   ),
   '{21480263-A6C0-4BAE-AC58-48CE1CD53F1B}': page(
     '{21480263-A6C0-4BAE-AC58-48CE1CD53F1B}',
     'Best Brands A Mid-day Mix',
     '/Visit/Events/Best-Brands-A-Mid-day-Mix',
     `${HOME}/Visit/Events/Best Brands A Mid-day Mix`,
-    'Mid-day mix for brand discovery. Registration required for floor and event access. Tue Sep 15, 2026.'
+    'Mid-day mix for brand discovery. Registration required for floor and event access. Wed Oct 7, 2026.'
   ),
   '{46ED2003-BAA1-4BFC-82BA-A7DC03912109}': page(
     '{46ED2003-BAA1-4BFC-82BA-A7DC03912109}',
     'New Vibe Junior Fashion',
     '/Visit/Events/New-Vibe-Junior-Fashion',
     `${HOME}/Visit/Events/New Vibe Junior Fashion`,
-    'Junior fashion seminar on the show calendar. Register, then add the session and nearby exhibitors to your plan. Wed Sep 16, 2026.'
+    'Junior fashion seminar on the show calendar. Register, then add the session and nearby exhibitors to your plan. Thu Oct 8, 2026.'
   ),
   '{47CEA21C-AEC1-4775-93BC-7F5D5B92DFAF}': page(
     '{47CEA21C-AEC1-4775-93BC-7F5D5B92DFAF}',
     'Events & Seminars',
     '/Visit/Events',
     `${HOME}/Visit/Events`,
-    'Full September market calendar — seminars, trend talks, amenities, and networking.'
+    'Full October 6–9 market calendar — seminars, trend talks, amenities, and networking.'
   ),
   '{EBD89713-040D-4B8F-810D-23E44B93F2A6}': page(
     '{EBD89713-040D-4B8F-810D-23E44B93F2A6}',
@@ -113,7 +113,7 @@ const FALLBACKS: Record<string, Omit<PulseSource, 'score'>> = {
 
 /**
  * Atlanta Apparel Pulse pack — Home-scoped Edge retrieval.
- * Intents mirror the search pack: September research → events + exhibitors + registration
+ * Intents mirror the search pack: October 6–9 research → events + exhibitors + registration
  * with citation hrefs that open Sitecore detail routes (not homepage dead ends).
  */
 export const atlantaApparelPulsePack: PulseSitePack = {
@@ -131,11 +131,11 @@ export const atlantaApparelPulsePack: PulseSitePack = {
     default: 'Page',
   },
   starterPrompts: [
-    'What is happening in September?',
-    'How do I register for September market?',
+    'What is happening in October?',
+    'How do I register for October market?',
     'Tell me about the Outdoor Living Trends Talk',
     'I am a first-time buyer — where do I start?',
-    'Find jewelry exhibitors for September',
+    'Find jewelry exhibitors for October',
   ],
   citationFallbacks: FALLBACKS,
   intents: [
@@ -167,8 +167,12 @@ export const atlantaApparelPulsePack: PulseSitePack = {
       id: 'september-events',
       matchAny: [
         ['what', 'happening'],
+        ['happening', 'october'],
+        ['happening', 'oct'],
         ['happening', 'september'],
         ['happening', 'sept'],
+        ['october'],
+        ['oct'],
         ['september'],
         ['sept'],
         ['fall', 'market'],
@@ -195,7 +199,7 @@ export const atlantaApparelPulsePack: PulseSitePack = {
       ],
       answer: {
         intro:
-          'September market is the in-person moment — the same catalog Search returns. Lock **Outdoor Living Trends Talk** (Tue Sep 15, Oasis), the shoe-and-accessories **Grand Opening**, and the **Buyer Grab-n-Go Hub**, then walk matching booths: Anna Ober & Co., Stia, Outdoor Living Collective, and New Vibe. Register if you do not already have credentials.',
+          'October market (Oct 6–9) is the in-person moment — the same catalog Search returns. Lock **Outdoor Living Trends Talk** (Wed Oct 7, Oasis), the shoe-and-accessories **Grand Opening**, and the **Buyer Grab-n-Go Hub**, then walk matching booths: Anna Ober & Co., Stia, Outdoor Living Collective, and New Vibe. Register if you do not already have credentials.',
       },
     },
     {

@@ -57,9 +57,9 @@ describe('pulse pack registry', () => {
   it('returns Atlanta Apparel register and events starters, not Quanex or law-firm copy', () => {
     const prompts = getPulseStarterPrompts('atlanta-apparel');
     const joined = prompts.join(' ').toLowerCase();
-    expect(prompts.some((p) => /what is happening in september/i.test(p))).toBe(true);
+    expect(prompts.some((p) => /what is happening in october/i.test(p))).toBe(true);
     expect(joined).toMatch(/register/);
-    expect(joined).toMatch(/september|outdoor living/);
+    expect(joined).toMatch(/october|outdoor living/);
     expect(joined).not.toMatch(/lawyer|super spacer|s-connect/);
   });
 
@@ -94,13 +94,13 @@ describe('pulse pack intent matching', () => {
   });
 
   it('matches atlanta-apparel registration intent', () => {
-    const intent = matchPulseIntentForSite('How do I register for September market?', 'atlanta-apparel');
+    const intent = matchPulseIntentForSite('How do I register for October market?', 'atlanta-apparel');
     expect(intent?.id).toBe('register-market');
     expect(intent?.citationItemIds[0]).toBe('{EBD89713-040D-4B8F-810D-23E44B93F2A6}');
   });
 
-  it('matches atlanta-apparel September research to events + exhibitor citations', () => {
-    const intent = matchPulseIntentForSite('What is happening in September?', 'atlanta-apparel');
+  it('matches atlanta-apparel October research to events + exhibitor citations', () => {
+    const intent = matchPulseIntentForSite('What is happening in October?', 'atlanta-apparel');
     expect(intent?.id).toBe('september-events');
     expect(intent?.citationItemIds[0]).toBe('{AB056721-5D0E-4E80-8A05-62258E42679A}');
     expect(intent?.citationItemIds).toContain('{21A89CBC-2730-4989-8289-085CEA0B6BA5}');
@@ -110,7 +110,7 @@ describe('pulse pack intent matching', () => {
   });
 
   it('matches atlanta-apparel jewelry / exhibitor queries to directory sourcing', () => {
-    const intent = matchPulseIntentForSite('Find jewelry exhibitors for September', 'atlanta-apparel');
+    const intent = matchPulseIntentForSite('Find jewelry exhibitors for October', 'atlanta-apparel');
     expect(intent?.id).toBe('directory-sourcing');
     expect(intent?.citationItemIds[0]).toBe('{2D770D8D-618A-4035-BC74-58C9BA6C6E8D}');
   });
@@ -407,10 +407,10 @@ describe('composePulseAnswer (multi-site)', () => {
       .filter((source): source is PulseSource => Boolean(source));
   }
 
-  it('answers September research with Search-style event and exhibitor detail links', () => {
+  it('answers October research with Search-style event and exhibitor detail links', () => {
     const pack = getPulsePack('atlanta-apparel');
-    const sources = atlantaSourcesFromIntent('What is happening in September?');
-    const result = composePulseAnswer('What is happening in September?', sources, { pack });
+    const sources = atlantaSourcesFromIntent('What is happening in October?');
+    const result = composePulseAnswer('What is happening in October?', sources, { pack });
 
     expect(result.answer).toMatch(/Outdoor Living Trends Talk/);
     expect(result.answer).toMatch(/Anna Ober|Stia|Outdoor Living Collective|New Vibe/);
@@ -427,8 +427,8 @@ describe('composePulseAnswer (multi-site)', () => {
 
   it('answers registration asks with First-Time / Returning detail routes', () => {
     const pack = getPulsePack('atlanta-apparel');
-    const sources = atlantaSourcesFromIntent('How do I register for September market?');
-    const result = composePulseAnswer('How do I register for September market?', sources, { pack });
+    const sources = atlantaSourcesFromIntent('How do I register for October market?');
+    const result = composePulseAnswer('How do I register for October market?', sources, { pack });
 
     const hrefs = result.sources.map((source) => source.url);
     expect(hrefs[0]).toBe('/Visit/Registration');

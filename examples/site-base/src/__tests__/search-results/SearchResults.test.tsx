@@ -87,7 +87,7 @@ describe('SearchResults site packs', () => {
         siteName="atlanta-apparel"
         layout="directory"
         disableUrlSync
-        initialQuery="september"
+        initialQuery="jewelry"
       />
     );
 
@@ -97,6 +97,24 @@ describe('SearchResults site packs', () => {
     const productImages = screen.getAllByRole('img');
     expect(productImages.length).toBeGreaterThan(0);
     expect(productImages[0]).toHaveAttribute('src', expect.stringMatching(/^https:\/\/images\.unsplash\.com\//));
+    expect(screen.queryByRole('heading', { name: 'Super Spacer' })).not.toBeInTheDocument();
+  });
+
+  it('Atlanta October queries land on Events & Seminars, not exhibitor products', () => {
+    render(
+      <SearchResults
+        siteName="atlanta-apparel"
+        layout="directory"
+        disableUrlSync
+        initialQuery="What is happening in October?"
+      />
+    );
+
+    expect(screen.getAllByText('Outdoor Living Trends Talk').length).toBeGreaterThan(0);
+    expect(screen.getAllByText(/Register for market/i).length).toBeGreaterThan(0);
+    const eventsTab = screen.getByRole('button', { name: /Events & Seminars/i });
+    expect(eventsTab.className).toMatch(/font-bold/);
+    expect(screen.queryByText('Anna Ober & Co., LLC')).not.toBeInTheDocument();
     expect(screen.queryByRole('heading', { name: 'Super Spacer' })).not.toBeInTheDocument();
   });
 });

@@ -413,12 +413,12 @@ function inferDirectoryTab(query: string): DirectoryTab {
   if (!n) return 'exhibitor';
   if (/(article|guide)/.test(n)) return 'article';
   if (
-    /(register|event|seminar|talk|calendar)/.test(n) &&
-    !/(jewelry|exhibitor|directory|ober|stia)/.test(n)
+    /(register|event|seminar|talk|calendar|october|september)/.test(n) &&
+    !/(jewelry|exhibitor|directory|\bober\b|stia)/.test(n)
   ) {
     return 'event';
   }
-  if (/(registration|first-time|returning|information)/.test(n) && !/september/.test(n)) {
+  if (/(registration|first-time|returning|information)/.test(n) && !/(october|september)/.test(n)) {
     return 'page';
   }
   return 'exhibitor';
