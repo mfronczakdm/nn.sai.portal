@@ -1,5 +1,5 @@
 ﻿generatedAt: "2026-03-20T09:00:00Z"
-lastUpdatedAt: "2026-09-08T19:15:00Z"
+lastUpdatedAt: "2026-09-08T20:15:00Z"
 lastUpdatedBy: "cursor-agent"
 
 project:
@@ -10569,7 +10569,7 @@ ia:
     category: "Locations"
     status: "complete"
     createdAt: "2026-09-08T18:30:00Z"
-    updatedAt: "2026-09-08T19:15:00Z"
+    updatedAt: "2026-09-08T20:15:00Z"
     siteName: "lcmc"
     siteCollection: "lcmc"
     contentRootPath: "/sitecore/content/lcmc/lcmc"
@@ -10578,10 +10578,12 @@ ia:
       - "Placed on existing L1 Find a Provider {BAE717F7-D99D-4722-8FAF-CED2581DF809} rather than creating Find a Doctor / Our Physicians. Page already in header mega menu and footer."
       - "Card links use PhysicianDetailPage Droptree targetItem.url.path, jsonValue href, or fallback /Find-a-Provider/{item-name}."
       - "add_component_on_page auto-created a local listing datasource; deleted after set_component_datasource pointed at Data/Physicians. Do not pass headless variant IDs as set_component_datasource variantId (404)."
+      - "2026-09-08: Pages showed only 10 of 24 physicians because Edge children defaults to first: 10. ComponentQuery now uses children(first: 50) with total + pageInfo.hasNext/endCursor. Dropped LookupField.targetItem expansion (jsonValue href + url.path remain) to reduce layout-query complexity with first: 50. React is a client listing with name/specialty/location filters and page size 9."
+      - "2026-09-08: children(first: 50) + ServingLocations MultilistField exceeded Edge layout complexity. Pages still had Data/Physicians on instance {65D0631D-E2FE-449D-984F-26694B6A5EB7} (dataSource 13c422fb-..., dataSourceItem null). Slimmed ComponentQuery to datasource id/name only. Children now load via /api/physician-listing (Content API, page 10, value fields). React treats rendering.dataSource as assigned so NoDataFallback is not shown when GraphQL fields.data is empty. Tradeoff: layout query no longer inlines cards; location filter uses targetItems name/displayName from the API (retries without Multilist expansion if needed)."
     react:
       filePath: "src/components/uiim/locations/PhysicianListing.tsx"
       componentMapKey: "PhysicianListing"
-      dataStrategy: "GraphQL fields.data.datasource.children.results via ComponentQuery"
+      dataStrategy: "Slim ComponentQuery (datasource id/name). Children via /api/physician-listing Content API (paged first: 10, value fields). Client filters and paging (page size 9)."
       variants:
         - "Default"
     templates:
@@ -10618,7 +10620,7 @@ ia:
       parametersTemplateId: "{CC41815F-B618-4635-AE07-43C4D9194C36}"
       addFieldEditorButton: "1"
       registeredInAvailableRenderings: true
-      componentQuery: "query PhysicianListing($datasource: String!, $language: String!) { datasource: item(path: $datasource, language: $language) { children { results { id name physicianFullName: field(name: \"PhysicianFullName\") { jsonValue } credentials: field(name: \"Credentials\") { jsonValue } specialty: field(name: \"Specialty\") { jsonValue } physicianPhone: field(name: \"PhysicianPhone\") { jsonValue } physicianDetailPage: field(name: \"PhysicianDetailPage\") { jsonValue ... on LookupField { targetItem { id name url { path } } } } servingLocations: field(name: \"ServingLocations\") { jsonValue ... on MultilistField { targetItems { id name displayName locationTitle: field(name: \"LocationTitle\") { jsonValue } } } } } } } }"
+      componentQuery: "query PhysicianListing($datasource: String!, $language: String!) { datasource: item(path: $datasource, language: $language) { id name } }"
     headlessVariants:
       containerPath: "/sitecore/content/lcmc/lcmc/Presentation/Headless Variants/PhysicianListing"
       containerId: "{57FFA122-3A05-4334-A296-E9D89433C064}"
@@ -10627,16 +10629,20 @@ ia:
     pages:
       - { name: "Find a Provider", pageId: "{BAE717F7-D99D-4722-8FAF-CED2581DF809}", instanceId: "{65D0631D-E2FE-449D-984F-26694B6A5EB7}", datasourceId: "{13C422FB-8991-4468-B996-BE73A904C23E}", placeholder: "headless-main", route: "/Find-a-Provider" }
     verification:
-      checkedAt: "2026-09-08T19:15:00Z"
+      checkedAt: "2026-09-08T20:15:00Z"
       passed:
         - "JSON Rendering created; componentName PhysicianListing; Datasource Template LCMC Physician Folder; ComponentQuery present"
-        - "Find a Provider listing instance datasource is Data/Physicians {13C422FB-8991-4468-B996-BE73A904C23E}"
+        - "Find a Provider listing instance datasource is Data/Physicians {13C422FB-8991-4468-B996-BE73A904C23E} — proven still assigned after NoDataFallback (do not re-pick)"
         - "PhysicianListing allowed on headless-main via get_allowed_comps_by_ph"
         - "React file created; generate-map registered PhysicianListing; Jest tests passed"
+        - "ComponentQuery slimmed to datasource id/name; MCP get_content_item_by_id confirmed"
+        - "Parameters Template still {CC41815F-B618-4635-AE07-43C4D9194C36}; Datasource Template/Location unchanged"
+        - "PhysicianListing.test.tsx + physician-listing-from-edge.test.ts passed (13 tests)"
       failed: []
       pendingManual:
-        - "Publish rendering, Headless Variants, Available Renderings, Data/Physicians, Find a Provider, and 24 detail pages for Edge"
-        - "Redeploy site-base rendering host so Pages picks up PhysicianListing.tsx"
+        - "Publish the PhysicianListing rendering so Edge/Pages pick up the slim ComponentQuery (layout GraphQL will succeed and fields.data.datasource returns id/name)"
+        - "Redeploy site-base rendering host so Pages picks up /api/physician-listing and the React fallback that treats rendering.dataSource as assigned"
+        - "In Pages, stay on Find a Provider, select PhysicianListing, open the Content tab to confirm Data/Physicians, then confirm the canvas shows filters + cards instead of NoDataFallback (Design tab being open does not mean the datasource is missing)"
         - "__Standard values link on rendering params template is silent-write"
 
   - name: "PhysicianDetail"
