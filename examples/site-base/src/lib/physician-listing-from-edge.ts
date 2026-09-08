@@ -168,11 +168,11 @@ async function edgeGetData<T>(
   return client.getData<T>(query, variables);
 }
 
-const toJsonField = (field?: EdgeFieldValue) => {
-  const value = field?.value;
-  if (value === undefined || value === null) return undefined;
-  return { jsonValue: { value } };
-};
+function toJsonField(field?: EdgeFieldValue): PhysicianListingJsonField<string> | undefined {
+  const raw = field?.value;
+  if (raw === undefined || raw === null) return undefined;
+  return { jsonValue: { value: typeof raw === 'string' ? raw : '' } };
+}
 
 /** Experience Edge `item(path:)` expects `{GUID}` with braces, or a Sitecore path. */
 export function toPhysicianListingItemPath(raw?: string | null): string {
