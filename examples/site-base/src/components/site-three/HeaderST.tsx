@@ -27,6 +27,8 @@ import {
   SIMPLIFIED_CHINESE_LOCALE,
   buildLanguageSwitchPathname,
   getLocaleFromPathname,
+  isAtlantaApparelSiteName,
+  resolveAtlantaApparelLanguageOptions,
 } from '@/lib/locale';
 
 type ComponentMap = typeof import('.sitecore/component-map').default;
@@ -345,6 +347,42 @@ const version2LocationMenus: readonly Version2LocationMenu[] = [
 
 const version2MarketPlanLink = { text: 'Market Plan', href: '/visit/plan-your-market' } as const;
 
+const version2LanguageTriggerClass =
+  'inline-flex items-center gap-1 whitespace-nowrap px-2 py-1 font-[family-name:var(--font-body)] text-xs font-medium text-background hover:opacity-80';
+
+const version2LanguageItemClass =
+  'block whitespace-nowrap px-3 py-2 font-[family-name:var(--font-body)] text-xs font-medium text-foreground hover:bg-muted';
+
+function getPageSiteName(page: HeaderSTViewProps['page']): string | undefined {
+  return (
+    (page as { siteName?: string } | undefined)?.siteName ||
+    (page?.layout?.sitecore?.context as { site?: { name?: string } } | undefined)?.site?.name
+  );
+}
+
+function getPageLanguageCodes(page: HeaderSTViewProps['page']): string[] {
+  const context = page?.layout?.sitecore?.context as
+    | { languages?: unknown; site?: { languages?: unknown } }
+    | undefined;
+  const raw = context?.languages ?? context?.site?.languages;
+  if (!Array.isArray(raw)) {
+    return [];
+  }
+
+  return raw
+    .map((item) => {
+      if (typeof item === 'string') {
+        return item;
+      }
+      if (item && typeof item === 'object') {
+        const record = item as { name?: string; iso?: string };
+        return record.name || record.iso || '';
+      }
+      return '';
+    })
+    .filter(Boolean);
+}
+
 const version2LocationTriggerClass =
   'inline-flex items-center gap-0.5 whitespace-nowrap px-1.5 py-1 font-[family-name:var(--font-body)] text-[0.625rem] font-bold uppercase tracking-[0.12em] text-background hover:opacity-80 xl:gap-1 xl:px-2 xl:text-[0.6875rem] xl:tracking-[0.14em]';
 
@@ -439,6 +477,97 @@ function useLanguageSwitcher() {
     },
   };
 }
+
+const Version2LanguageDropdown = ({
+  languages,
+}: {
+  languages: readonly { text: string; locale: string }[];
+}) => {
+  const [open, setOpen] = useState(false);
+  const rootRef = useRef<HTMLLIElement>(null);
+  const menuId = useId();
+  const { activeLocale, buildLanguageSwitchHref } = useLanguageSwitcher();
+  const current =
+    languages.find((language) => language.locale === activeLocale) ?? languages[0];
+
+  useEffect(() => {
+    if (!open) {
+      return;
+    }
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setOpen(false);
+      }
+    };
+    const handlePointerDown = (event: PointerEvent) => {
+      if (!rootRef.current?.contains(event.target as Node)) {
+        setOpen(false);
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('pointerdown', handlePointerDown);
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('pointerdown', handlePointerDown);
+    };
+  }, [open]);
+
+  if (!current) {
+    return null;
+  }
+
+  return (
+    <li
+      ref={rootRef}
+      className="relative"
+      data-header-st-language-switcher
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+    >
+      <button
+        type="button"
+        className={version2LanguageTriggerClass}
+        aria-expanded={open}
+        aria-haspopup="menu"
+        aria-controls={menuId}
+        aria-label="Language"
+        onClick={() => setOpen((currentOpen) => !currentOpen)}
+      >
+        {current.text}
+        <ChevronDown className="h-3 w-3" aria-hidden />
+      </button>
+      {open ? (
+        <ul
+          id={menuId}
+          role="menu"
+          aria-label="Language"
+          className="absolute right-0 top-full z-50 min-w-[10rem] border border-border bg-background py-1 text-foreground shadow-lg"
+        >
+          {languages.map((language) => {
+            const isActive = language.locale === activeLocale;
+            return (
+              <li key={language.locale} role="none">
+                <Link
+                  href={buildLanguageSwitchHref(language.locale)}
+                  prefetch={false}
+                  role="menuitem"
+                  lang={language.locale}
+                  hrefLang={language.locale}
+                  aria-current={isActive ? 'true' : undefined}
+                  className={cn(version2LanguageItemClass, isActive && 'bg-muted')}
+                >
+                  {language.text}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      ) : null}
+    </li>
+  );
+};
 
 /* Version1 — inverted two-row header: langs + utilities on top, MENU + search + logo-right below. */
 const HeaderSTVersion1View = (props: HeaderSTViewProps) => {
@@ -616,6 +745,14 @@ const HeaderSTVersion2View = (props: HeaderSTViewProps) => {
   const componentMap = getComponentMap();
   const hideCart = isTruthyParam(params?.HideCart);
   const isReverse = isReverseThemeParam(params?.ReverseTheme);
+  const searchParams = useSearchParams();
+  const showLanguageSelector =
+    isAtlantaApparelSiteName(getPageSiteName(props.page)) ||
+    isAtlantaApparelSiteName(searchParams?.get('site')) ||
+    isAtlantaApparelSiteName(searchParams?.get('sc_site'));
+  const languageOptions = showLanguageSelector
+    ? resolveAtlantaApparelLanguageOptions(getPageLanguageCodes(props.page))
+    : [];
 
   const searchControl = params.showSearchBox ? (
     <HeaderPreviewSearch searchLink={fields?.SearchLink} className="min-w-0" />
@@ -646,7 +783,7 @@ const HeaderSTVersion2View = (props: HeaderSTViewProps) => {
       data-header-st-layout="version2"
     >
       <div className="flex w-full min-w-0 flex-col" role="navigation" aria-label="Site header">
-        {/* Utility row — always dark; city menus left, Register / Sign In / cart right */}
+        {/* Utility row — always dark; city menus left, Register / Sign In / cart / language right */}
         <div className="w-full min-w-0 bg-foreground text-background">
           <div className="mx-auto flex w-full max-w-[100rem] items-center justify-between gap-2 px-4 py-1.5 sm:px-6 lg:gap-3 lg:px-5 xl:px-8">
             <ul
@@ -697,6 +834,7 @@ const HeaderSTVersion2View = (props: HeaderSTViewProps) => {
                   )}
                 </li>
               ) : null}
+              {showLanguageSelector ? <Version2LanguageDropdown languages={languageOptions} /> : null}
             </ul>
           </div>
         </div>
