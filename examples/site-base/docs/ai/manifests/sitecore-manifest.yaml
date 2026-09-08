@@ -1,5 +1,5 @@
 ﻿generatedAt: "2026-03-20T09:00:00Z"
-lastUpdatedAt: "2026-09-08T16:30:00Z"
+lastUpdatedAt: "2026-09-08T19:15:00Z"
 lastUpdatedBy: "cursor-agent"
 
 project:
@@ -3592,17 +3592,27 @@ lookups:
     lastReadAt: "2026-09-02T18:15:00Z"
   - path: "/sitecore/content/lcmc/lcmc/Presentation/Available Renderings/Page Content"
     itemId: "{B4A750D2-E123-436D-BF2E-5D2905E9CA19}"
-    lastReadAt: "2026-09-08T16:30:00Z"
-    note: "2026-09-08 reconstructed from get_allowed_comps_by_ph then appended LcmcAppointmentScheduler {2408797C-36C7-4BD5-A3B9-90B409A06CCD} and HospitalDetail {E9E80BA0-F80C-4351-96AA-1D8C590F9B15}. Direct Renderings read still truncates."
+    lastReadAt: "2026-09-08T19:15:00Z"
+    note: "2026-09-08 reconstructed from get_allowed_comps_by_ph then appended LcmcAppointmentScheduler {2408797C-36C7-4BD5-A3B9-90B409A06CCD}, HospitalDetail {E9E80BA0-F80C-4351-96AA-1D8C590F9B15}, PhysicianDetail {DD6635F5-828D-46E1-97B6-8657A16564FA}, PhysicianListing {7D799AC3-A9A5-4A6B-B2D8-E3F9ED580179}. Direct Renderings read still truncates. get_allowed_comps_by_ph includes both physician renderings."
   - path: "/sitecore/layout/Renderings/Project/lcmc/Locations"
     itemId: "{6F1F9D14-BCBF-462F-95EE-3517CF187AEF}"
-    lastReadAt: "2026-09-08T16:30:00Z"
+    lastReadAt: "2026-09-08T19:15:00Z"
   - path: "/sitecore/templates/Project/lcmc/Rendering Parameters/Locations"
     itemId: "{153A2F56-EDEC-4E89-A721-5DA62A63E8ED}"
-    lastReadAt: "2026-09-08T16:30:00Z"
+    lastReadAt: "2026-09-08T19:15:00Z"
   - path: "/sitecore/content/lcmc/lcmc/Presentation/Headless Variants/HospitalDetail"
     itemId: "{515C6FC9-9A5A-4E9F-8D17-CBADD14334D9}"
     lastReadAt: "2026-09-08T16:30:00Z"
+  - path: "/sitecore/content/lcmc/lcmc/Presentation/Headless Variants/PhysicianDetail"
+    itemId: "{E0F110D0-9D60-435A-995B-EF0C60C8936D}"
+    lastReadAt: "2026-09-08T19:15:00Z"
+  - path: "/sitecore/content/lcmc/lcmc/Presentation/Headless Variants/PhysicianListing"
+    itemId: "{57FFA122-3A05-4334-A296-E9D89433C064}"
+    lastReadAt: "2026-09-08T19:15:00Z"
+  - path: "/sitecore/content/lcmc/lcmc/Home/Find a Provider"
+    itemId: "{BAE717F7-D99D-4722-8FAF-CED2581DF809}"
+    lastReadAt: "2026-09-08T19:15:00Z"
+    note: "Existing L1 reused for physician listing. 24 physician detail child pages plus page Data folder."
 
 # Demo datasource items (AI-created content, not new component definitions)
 demoContent:
@@ -10291,7 +10301,7 @@ ia:
     category: "Locations"
     status: "complete"
     createdAt: "2026-09-08T00:40:00Z"
-    updatedAt: "2026-09-08T01:10:00Z"
+    updatedAt: "2026-09-08T19:15:00Z"
     siteName: "lcmc"
     siteCollection: "lcmc"
     contentRootPath: "/sitecore/content/lcmc/lcmc"
@@ -10301,6 +10311,7 @@ ia:
       - "Primary model: locations Treelist OfferedServices + LocationPhysicians. Reverse Treelists on physicians (ServingLocations) and services (OfferedAtLocations)."
       - "16 location items match Our Locations landing pages (8 hospitals + 8 urgent cares). Urgent Care Locations hub page was not given a data item. Luling address/phone is representative because the live directory had no dedicated card."
       - "2026-09-08: HospitalDetail rendering now consumes these Data/Locations items on the 16 physical location pages."
+      - "2026-09-08: Added PhysicianDetailPage Droptree on LCMC Physician (source Find a Provider). Did not duplicate the physician template or Data/Physicians items. PhysicianListing + PhysicianDetail consume the existing 24 physician data items."
     templates:
       location:
         name: "LCMC Hospital Location"
@@ -10347,6 +10358,7 @@ ia:
           - { name: "PhysicianBio", type: "Rich Text", itemId: "{3C71E7A2-30B6-4199-847B-808DE57253FF}" }
           - { name: "PhysicianPhone", type: "Single-Line Text", itemId: "{53091AFB-0D3F-4B5B-A945-9555D8CF59D7}" }
           - { name: "ServingLocations", type: "Treelist", itemId: "{66EA9126-0717-40DC-9BBF-0E726397EF3D}", source: "/sitecore/content/lcmc/lcmc/Data/Locations" }
+          - { name: "PhysicianDetailPage", type: "Droptree", itemId: "{1499B7E7-BFD9-4192-BF06-67BF1A9FD65F}", source: "/sitecore/content/lcmc/lcmc/Home/Find a Provider" }
       service:
         name: "LCMC Service"
         path: "/sitecore/templates/Project/lcmc/Components/Locations/LCMC Service"
@@ -10550,6 +10562,193 @@ ia:
         - "Publish rendering, Headless Variants, Available Renderings, Data/Locations, and the 16 location pages for Edge"
         - "Redeploy site-base rendering host so Pages picks up HospitalDetail.tsx"
         - "Confirm Treelist services/physicians expand in Layout Service (no ComponentQuery); Field Editor covers authoring either way"
+        - "__Standard values link on rendering params template is silent-write"
+
+  - name: "PhysicianListing"
+    kind: "list"
+    category: "Locations"
+    status: "complete"
+    createdAt: "2026-09-08T18:30:00Z"
+    updatedAt: "2026-09-08T19:15:00Z"
+    siteName: "lcmc"
+    siteCollection: "lcmc"
+    contentRootPath: "/sitecore/content/lcmc/lcmc"
+    notes:
+      - "2026-09-08: List component over existing Data/Physicians folder {13C422FB-8991-4468-B996-BE73A904C23E}. Did not duplicate physician records. Datasource Template is LCMC Physician Folder; ComponentQuery reads children.results of that folder."
+      - "Placed on existing L1 Find a Provider {BAE717F7-D99D-4722-8FAF-CED2581DF809} rather than creating Find a Doctor / Our Physicians. Page already in header mega menu and footer."
+      - "Card links use PhysicianDetailPage Droptree targetItem.url.path, jsonValue href, or fallback /Find-a-Provider/{item-name}."
+      - "add_component_on_page auto-created a local listing datasource; deleted after set_component_datasource pointed at Data/Physicians. Do not pass headless variant IDs as set_component_datasource variantId (404)."
+    react:
+      filePath: "src/components/uiim/locations/PhysicianListing.tsx"
+      componentMapKey: "PhysicianListing"
+      dataStrategy: "GraphQL fields.data.datasource.children.results via ComponentQuery"
+      variants:
+        - "Default"
+    templates:
+      datasource:
+        name: "LCMC Physician Folder"
+        path: "/sitecore/templates/Project/lcmc/Folders/LCMC Physician Folder"
+        itemId: "{5793E2A8-0938-4E48-A1EF-404FF99D97B7}"
+        reusedExisting: true
+      child:
+        name: "LCMC Physician"
+        path: "/sitecore/templates/Project/lcmc/Components/Locations/LCMC Physician"
+        itemId: "{DD974469-0EF7-479D-8E2B-F61C09E0C4DB}"
+        reusedExisting: true
+      renderingParams:
+        name: "PhysicianListing"
+        path: "/sitecore/templates/Project/lcmc/Rendering Parameters/Locations/PhysicianListing"
+        itemId: "{CC41815F-B618-4635-AE07-43C4D9194C36}"
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{E39F2655-ED0A-4C8C-AF64-B06A9A748C54}"
+          linked: true
+    datasourceFolder:
+      name: "Physicians"
+      path: "/sitecore/content/lcmc/lcmc/Data/Physicians"
+      itemId: "{13C422FB-8991-4468-B996-BE73A904C23E}"
+      reusedExisting: true
+    rendering:
+      name: "PhysicianListing"
+      path: "/sitecore/layout/Renderings/Project/lcmc/Locations/PhysicianListing"
+      itemId: "{7D799AC3-A9A5-4A6B-B2D8-E3F9ED580179}"
+      componentName: "PhysicianListing"
+      datasourceTemplatePath: "/sitecore/templates/Project/lcmc/Folders/LCMC Physician Folder"
+      datasourceLocationQuery: "query:$site/*[@@name='Data']/*[@@templatename='LCMC Physician Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='LCMC Physician Folder']|/sitecore/content/lcmc/lcmc/Data/Physicians"
+      parametersTemplateId: "{CC41815F-B618-4635-AE07-43C4D9194C36}"
+      addFieldEditorButton: "1"
+      registeredInAvailableRenderings: true
+      componentQuery: "query PhysicianListing($datasource: String!, $language: String!) { datasource: item(path: $datasource, language: $language) { children { results { id name physicianFullName: field(name: \"PhysicianFullName\") { jsonValue } credentials: field(name: \"Credentials\") { jsonValue } specialty: field(name: \"Specialty\") { jsonValue } physicianPhone: field(name: \"PhysicianPhone\") { jsonValue } physicianDetailPage: field(name: \"PhysicianDetailPage\") { jsonValue ... on LookupField { targetItem { id name url { path } } } } servingLocations: field(name: \"ServingLocations\") { jsonValue ... on MultilistField { targetItems { id name displayName locationTitle: field(name: \"LocationTitle\") { jsonValue } } } } } } } }"
+    headlessVariants:
+      containerPath: "/sitecore/content/lcmc/lcmc/Presentation/Headless Variants/PhysicianListing"
+      containerId: "{57FFA122-3A05-4334-A296-E9D89433C064}"
+      variants:
+        - { name: "Default", itemId: "{ED5F081D-B23A-442B-B8F4-A9A5F4FF7D7D}" }
+    pages:
+      - { name: "Find a Provider", pageId: "{BAE717F7-D99D-4722-8FAF-CED2581DF809}", instanceId: "{65D0631D-E2FE-449D-984F-26694B6A5EB7}", datasourceId: "{13C422FB-8991-4468-B996-BE73A904C23E}", placeholder: "headless-main", route: "/Find-a-Provider" }
+    verification:
+      checkedAt: "2026-09-08T19:15:00Z"
+      passed:
+        - "JSON Rendering created; componentName PhysicianListing; Datasource Template LCMC Physician Folder; ComponentQuery present"
+        - "Find a Provider listing instance datasource is Data/Physicians {13C422FB-8991-4468-B996-BE73A904C23E}"
+        - "PhysicianListing allowed on headless-main via get_allowed_comps_by_ph"
+        - "React file created; generate-map registered PhysicianListing; Jest tests passed"
+      failed: []
+      pendingManual:
+        - "Publish rendering, Headless Variants, Available Renderings, Data/Physicians, Find a Provider, and 24 detail pages for Edge"
+        - "Redeploy site-base rendering host so Pages picks up PhysicianListing.tsx"
+        - "__Standard values link on rendering params template is silent-write"
+
+  - name: "PhysicianDetail"
+    kind: "simple"
+    category: "Locations"
+    status: "complete"
+    createdAt: "2026-09-08T18:30:00Z"
+    updatedAt: "2026-09-08T19:15:00Z"
+    siteName: "lcmc"
+    siteCollection: "lcmc"
+    contentRootPath: "/sitecore/content/lcmc/lcmc"
+    notes:
+      - "2026-09-08: Simple datasource component reusing existing LCMC Physician template {DD974469-0EF7-479D-8E2B-F61C09E0C4DB}. Did not duplicate physician data items."
+      - "Added PhysicianDetailPage Droptree on the existing template (source Find a Provider) so listing cards can resolve detail URLs. All 24 Data/Physicians items now point at matching child pages."
+      - "24 Services Page children created under Find a Provider; names match Data/Physicians items. Each has PhysicianDetail on headless-main with matching Data/Physicians datasource. Auto-created local /Data/PhysicianDetail items deleted."
+      - "Find a Provider hub has PhysicianListing only — no PhysicianDetail on the hub."
+    react:
+      filePath: "src/components/uiim/locations/PhysicianDetail.tsx"
+      componentMapKey: "PhysicianDetail"
+      dataStrategy: "default-jss top-level fields on LCMC Physician datasource"
+      variants:
+        - "Default"
+    templates:
+      datasource:
+        name: "LCMC Physician"
+        path: "/sitecore/templates/Project/lcmc/Components/Locations/LCMC Physician"
+        itemId: "{DD974469-0EF7-479D-8E2B-F61C09E0C4DB}"
+        reusedExisting: true
+        sectionName: "Data"
+        fields:
+          - { name: "PhysicianFullName", type: "Single-Line Text" }
+          - { name: "Credentials", type: "Single-Line Text" }
+          - { name: "Specialty", type: "Single-Line Text" }
+          - { name: "PhysicianPhone", type: "Single-Line Text" }
+          - { name: "PhysicianBio", type: "Rich Text" }
+          - { name: "ServingLocations", type: "Treelist" }
+          - { name: "PhysicianDetailPage", type: "Droptree", itemId: "{1499B7E7-BFD9-4192-BF06-67BF1A9FD65F}" }
+      folder:
+        name: "LCMC Physician Folder"
+        path: "/sitecore/templates/Project/lcmc/Folders/LCMC Physician Folder"
+        itemId: "{5793E2A8-0938-4E48-A1EF-404FF99D97B7}"
+        reusedExisting: true
+      renderingParams:
+        name: "PhysicianDetail"
+        path: "/sitecore/templates/Project/lcmc/Rendering Parameters/Locations/PhysicianDetail"
+        itemId: "{86B61C96-97CA-44AE-8121-682E44135BAA}"
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{2A8948D6-C834-4EDD-AECF-1868C3C7218D}"
+          linked: true
+    datasourceFolder:
+      name: "Physicians"
+      path: "/sitecore/content/lcmc/lcmc/Data/Physicians"
+      itemId: "{13C422FB-8991-4468-B996-BE73A904C23E}"
+      reusedExisting: true
+    rendering:
+      name: "PhysicianDetail"
+      path: "/sitecore/layout/Renderings/Project/lcmc/Locations/PhysicianDetail"
+      itemId: "{DD6635F5-828D-46E1-97B6-8657A16564FA}"
+      componentName: "PhysicianDetail"
+      datasourceTemplatePath: "/sitecore/templates/Project/lcmc/Components/Locations/LCMC Physician"
+      datasourceLocationQuery: "query:$site/*[@@name='Data']/*[@@templatename='LCMC Physician Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='LCMC Physician Folder']|/sitecore/content/lcmc/lcmc/Data/Physicians"
+      parametersTemplateId: "{86B61C96-97CA-44AE-8121-682E44135BAA}"
+      componentQuery: ""
+      addFieldEditorButton: "1"
+      registeredInAvailableRenderings: true
+    headlessVariants:
+      containerPath: "/sitecore/content/lcmc/lcmc/Presentation/Headless Variants/PhysicianDetail"
+      containerId: "{E0F110D0-9D60-435A-995B-EF0C60C8936D}"
+      variants:
+        - { name: "Default", itemId: "{0F428F61-54C2-4B69-A36C-2C7ABA42232A}" }
+    pages:
+      - { name: "Alicia Broussard MD", pageId: "{AAE8FB28-DAD3-40EF-9E26-D545C46E5C2C}", instanceId: "{0EBC8BD4-3F7C-4923-B976-8AEBA283E564}", datasourceId: "{3248558F-44BA-478E-97FE-80E84A000603}", placeholder: "headless-main", route: "/Find-a-Provider/Alicia-Broussard-MD" }
+      - { name: "Andre Baptiste MD", pageId: "{17056557-572C-4684-83B0-7203A17F190A}", instanceId: "{C743229A-100A-483C-8BFC-4CC880262CC5}", datasourceId: "{9BC27AE8-3D1C-468A-8A1D-336EDB3F11D9}", placeholder: "headless-main", route: "/Find-a-Provider/Andre-Baptiste-MD" }
+      - { name: "Anita Chauvin MD", pageId: "{7FE1960D-5226-4979-A736-B9DB34342136}", instanceId: "{D49D8F27-5EF4-4A8F-9E76-3D4F38F71C47}", datasourceId: "{C176B05D-10A5-49C8-A980-9380046CE24F}", placeholder: "headless-main", route: "/Find-a-Provider/Anita-Chauvin-MD" }
+      - { name: "Brian LeBlanc MD", pageId: "{5D495AF6-DED3-47C3-AA72-ABC901C9D616}", instanceId: "{21EA3ABF-AC0F-4B65-A68F-5CFFA7E1D4AD}", datasourceId: "{31A4B5A2-10FB-4CF1-B1E5-8FC21C802D06}", placeholder: "headless-main", route: "/Find-a-Provider/Brian-LeBlanc-MD" }
+      - { name: "Camille Landry MD", pageId: "{8118B0CB-720B-4707-9C67-DCE15ECF16FB}", instanceId: "{145FC6F9-DB90-4D9B-B844-A74DE556F2CE}", datasourceId: "{12B533A6-8DF8-4D80-B466-111A5B26B8E4}", placeholder: "headless-main", route: "/Find-a-Provider/Camille-Landry-MD" }
+      - { name: "Claire Fontenot MD", pageId: "{6AD41D51-E8AD-45FB-AB64-E508D4B0EDAD}", instanceId: "{68D80B94-9D36-409C-A4ED-E8025C734DC5}", datasourceId: "{3188F21C-974C-43D5-8722-C676D09A8293}", placeholder: "headless-main", route: "/Find-a-Provider/Claire-Fontenot-MD" }
+      - { name: "Daniel Hebert MD", pageId: "{A9E27C9F-F974-41A3-A416-D5872B51C13C}", instanceId: "{30631687-9703-45DE-A1DD-93231433E69E}", datasourceId: "{49B7EB4F-7C96-4D02-BA27-99FF3F2C75E2}", placeholder: "headless-main", route: "/Find-a-Provider/Daniel-Hebert-MD" }
+      - { name: "Elise Boudreaux MD", pageId: "{F0212F29-E6D5-4E39-BC05-6E568E9B99D7}", instanceId: "{7FDDED77-3605-43D9-A6E1-D5DEF9C2D135}", datasourceId: "{EED3B2C7-4DEF-4F96-B129-46E86DF0559D}", placeholder: "headless-main", route: "/Find-a-Provider/Elise-Boudreaux-MD" }
+      - { name: "Hannah Scott MD", pageId: "{18CC0ED3-187D-4F2B-973F-E9CD0DA24F64}", instanceId: "{4055752D-9BD8-4DDD-9234-0179E4967D51}", datasourceId: "{1B865C3A-A093-4A6D-8DB8-554028EB662F}", placeholder: "headless-main", route: "/Find-a-Provider/Hannah-Scott-MD" }
+      - { name: "James Thibodeaux MD", pageId: "{166BF434-5AA4-449F-89CB-8CB37B8343A0}", instanceId: "{C437C148-50A1-470F-95F7-1EBB882FBE89}", datasourceId: "{3649DA30-9C2F-445B-9B40-AD91F25276DC}", placeholder: "headless-main", route: "/Find-a-Provider/James-Thibodeaux-MD" }
+      - { name: "Joseph Allemand MD", pageId: "{63D03FF3-5454-43C7-A608-92F55D0A9F0E}", instanceId: "{B8804072-01ED-463E-98EC-B658BE3CED39}", datasourceId: "{65C2FDCF-7791-43DA-8354-7030BB6CD025}", placeholder: "headless-main", route: "/Find-a-Provider/Joseph-Allemand-MD" }
+      - { name: "Keisha Williams MD", pageId: "{2C44733E-30DE-47FD-A86C-4E78BF6B0587}", instanceId: "{5EAC002A-F106-4F6F-B52D-F2F03555A915}", datasourceId: "{B58527CE-BA45-4C9E-B506-D0A3D75AC996}", placeholder: "headless-main", route: "/Find-a-Provider/Keisha-Williams-MD" }
+      - { name: "Kevin Romero MD", pageId: "{817B972A-FEB5-4F61-8674-52F2DB2F768E}", instanceId: "{E7DB5754-8E9C-43D5-9D78-321F44B43923}", datasourceId: "{47043241-18E6-4A37-8F69-4108CDBD78A2}", placeholder: "headless-main", route: "/Find-a-Provider/Kevin-Romero-MD" }
+      - { name: "Leah Castillo MD", pageId: "{19405B92-A8DE-4C10-BA51-16DEDFE5BAC6}", instanceId: "{865B4CF1-4EF0-457A-A450-50C698424359}", datasourceId: "{B7224F06-A404-40C9-8F72-8A1FDD04C472}", placeholder: "headless-main", route: "/Find-a-Provider/Leah-Castillo-MD" }
+      - { name: "Marcus Fontenot MD", pageId: "{149350FF-AD01-43AD-B158-29B4A7F9D25B}", instanceId: "{4C097243-9EB9-47D7-8ECB-B72C61E9F72E}", datasourceId: "{B257CB21-E4C2-44BA-8C70-28D893D45C97}", placeholder: "headless-main", route: "/Find-a-Provider/Marcus-Fontenot-MD" }
+      - { name: "Michael Tran MD", pageId: "{10A0B74D-57F9-4EB5-AF88-3461EA0DE4B3}", instanceId: "{4E4704AC-64FC-4754-B25D-85B25CCF1520}", datasourceId: "{6877B226-0CC6-408C-9E51-E2C5D2351A61}", placeholder: "headless-main", route: "/Find-a-Provider/Michael-Tran-MD" }
+      - { name: "Nicole Doucet MD", pageId: "{99912ABE-285F-4D07-803C-91CE56D60A9A}", instanceId: "{DA133B05-0FB4-46DA-B69A-857CFA81AB58}", datasourceId: "{048E9D17-4B8B-4FBF-90EA-8E66D97E4F89}", placeholder: "headless-main", route: "/Find-a-Provider/Nicole-Doucet-MD" }
+      - { name: "Omar Hassan MD", pageId: "{9A577B49-1851-4CA2-80DE-2B9B97A21223}", instanceId: "{9C5DF40C-21DA-49D2-9CC0-0482CA871FBC}", datasourceId: "{79C12EE1-19F2-48EB-89CF-3473364D2488}", placeholder: "headless-main", route: "/Find-a-Provider/Omar-Hassan-MD" }
+      - { name: "Patrice Morales MD", pageId: "{74754925-AD4E-4C64-A425-5DE56808A67E}", instanceId: "{4273B342-878E-4B3E-B9E6-4ADDCAEE9D24}", datasourceId: "{24F0A42F-B1A5-43C2-9E26-E63E63E07162}", placeholder: "headless-main", route: "/Find-a-Provider/Patrice-Morales-MD" }
+      - { name: "Priya Raman MD", pageId: "{1A86AEF2-C81D-4040-9EDD-2BC222FD745F}", instanceId: "{2C41828B-4D42-41B2-8305-947C877317B2}", datasourceId: "{BC61F2D9-4655-42D8-867B-41407505B6DC}", placeholder: "headless-main", route: "/Find-a-Provider/Priya-Raman-MD" }
+      - { name: "Renee Guidry MD", pageId: "{C4BA27FF-A948-4865-9AB5-D45A23D2CF31}", instanceId: "{B288739D-3421-45D2-9E1A-971E51F6022A}", datasourceId: "{4A1FED30-0480-4CF5-9DCC-4149B3164046}", placeholder: "headless-main", route: "/Find-a-Provider/Renee-Guidry-MD" }
+      - { name: "Sarah Melancon MD", pageId: "{E394BD63-2F74-496D-8E4D-5081E656FCD4}", instanceId: "{F827DC2E-62E7-4884-AF3D-9AA46AC3D3C9}", datasourceId: "{F42ECEC4-C3D2-43BA-8FF1-2BA640F66251}", placeholder: "headless-main", route: "/Find-a-Provider/Sarah-Melancon-MD" }
+      - { name: "Tanya Ricard MD", pageId: "{32E5DA95-CEF8-4FD8-B31C-58C21E5077B1}", instanceId: "{877C9F7E-84BB-4979-BD0C-4FE51973320A}", datasourceId: "{74789E69-47D3-463D-AEAC-CEA3F20A5647}", placeholder: "headless-main", route: "/Find-a-Provider/Tanya-Ricard-MD" }
+      - { name: "Thomas Nguyen MD", pageId: "{9B2409F9-61D1-40F6-962F-137A96F8F0ED}", instanceId: "{FD44F5A8-8A58-4D4F-8B50-7CCDA5D05B1F}", datasourceId: "{F74FE325-06CA-4905-88E7-462F02FD74EA}", placeholder: "headless-main", route: "/Find-a-Provider/Thomas-Nguyen-MD" }
+    skippedPages:
+      - { name: "Find a Provider", pageId: "{BAE717F7-D99D-4722-8FAF-CED2581DF809}", reason: "listing hub — PhysicianListing only, not a person" }
+    verification:
+      checkedAt: "2026-09-08T19:15:00Z"
+      passed:
+        - "Reused LCMC Physician template; get_component datasourceTemplateId {DD974469-0EF7-479D-8E2B-F61C09E0C4DB}"
+        - "JSON Rendering created; componentName PhysicianDetail; ComponentQuery empty; AddFieldEditorButton 1"
+        - "PhysicianDetail allowed on headless-main via get_allowed_comps_by_ph"
+        - "Camille Landry and Thomas Nguyen pages use matching Data/Physicians datasource IDs (not local Data items)"
+        - "Find a Provider has 24 physician child pages; listing datasource is the Physicians folder"
+        - "React file created; generate-map registered PhysicianDetail; Jest tests passed"
+      failed: []
+      pendingManual:
+        - "Publish rendering, Headless Variants, Available Renderings, Data/Physicians, Find a Provider, and 24 detail pages for Edge"
+        - "Redeploy site-base rendering host so Pages picks up PhysicianDetail.tsx"
+        - "Confirm Treelist ServingLocations expand in Layout Service (no ComponentQuery); Field Editor covers authoring either way"
         - "__Standard values link on rendering params template is silent-write"
 
   - name: "lcmc-footer-nav-remap"
