@@ -1,5 +1,5 @@
 ﻿generatedAt: "2026-03-20T09:00:00Z"
-lastUpdatedAt: "2026-09-08T20:15:00Z"
+lastUpdatedAt: "2026-09-08T21:00:00Z"
 lastUpdatedBy: "cursor-agent"
 
 project:
@@ -3592,8 +3592,8 @@ lookups:
     lastReadAt: "2026-09-02T18:15:00Z"
   - path: "/sitecore/content/lcmc/lcmc/Presentation/Available Renderings/Page Content"
     itemId: "{B4A750D2-E123-436D-BF2E-5D2905E9CA19}"
-    lastReadAt: "2026-09-08T19:15:00Z"
-    note: "2026-09-08 reconstructed from get_allowed_comps_by_ph then appended LcmcAppointmentScheduler {2408797C-36C7-4BD5-A3B9-90B409A06CCD}, HospitalDetail {E9E80BA0-F80C-4351-96AA-1D8C590F9B15}, PhysicianDetail {DD6635F5-828D-46E1-97B6-8657A16564FA}, PhysicianListing {7D799AC3-A9A5-4A6B-B2D8-E3F9ED580179}. Direct Renderings read still truncates. get_allowed_comps_by_ph includes both physician renderings."
+    lastReadAt: "2026-09-08T21:00:00Z"
+    note: "2026-09-08 reconstructed from get_allowed_comps_by_ph then appended LcmcAppointmentScheduler {2408797C-36C7-4BD5-A3B9-90B409A06CCD}, HospitalDetail {E9E80BA0-F80C-4351-96AA-1D8C590F9B15}, PhysicianDetail {DD6635F5-828D-46E1-97B6-8657A16564FA}, PhysicianListing {7D799AC3-A9A5-4A6B-B2D8-E3F9ED580179}, LocationListing {3CD4CF10-AD03-43E0-BB82-4F3FAE827AF8}. Direct Renderings read still truncates. get_allowed_comps_by_ph includes LocationListing."
   - path: "/sitecore/layout/Renderings/Project/lcmc/Locations"
     itemId: "{6F1F9D14-BCBF-462F-95EE-3517CF187AEF}"
     lastReadAt: "2026-09-08T19:15:00Z"
@@ -3609,6 +3609,16 @@ lookups:
   - path: "/sitecore/content/lcmc/lcmc/Presentation/Headless Variants/PhysicianListing"
     itemId: "{57FFA122-3A05-4334-A296-E9D89433C064}"
     lastReadAt: "2026-09-08T19:15:00Z"
+  - path: "/sitecore/content/lcmc/lcmc/Presentation/Headless Variants/LocationListing"
+    itemId: "{71C8C840-11B1-4D86-84C9-41978B4842BB}"
+    lastReadAt: "2026-09-08T21:00:00Z"
+  - path: "/sitecore/layout/Renderings/Project/lcmc/Locations/LocationListing"
+    itemId: "{3CD4CF10-AD03-43E0-BB82-4F3FAE827AF8}"
+    lastReadAt: "2026-09-08T21:00:00Z"
+  - path: "/sitecore/content/lcmc/lcmc/Home/Our Locations"
+    itemId: "{0A471272-462E-4497-BEA2-D03C904BCBE5}"
+    lastReadAt: "2026-09-08T21:00:00Z"
+    note: "Hub directory. LocationListing on headless-main with Data/Locations. No HospitalDetail."
   - path: "/sitecore/content/lcmc/lcmc/Home/Find a Provider"
     itemId: "{BAE717F7-D99D-4722-8FAF-CED2581DF809}"
     lastReadAt: "2026-09-08T19:15:00Z"
@@ -10562,6 +10572,88 @@ ia:
         - "Publish rendering, Headless Variants, Available Renderings, Data/Locations, and the 16 location pages for Edge"
         - "Redeploy site-base rendering host so Pages picks up HospitalDetail.tsx"
         - "Confirm Treelist services/physicians expand in Layout Service (no ComponentQuery); Field Editor covers authoring either way"
+        - "__Standard values link on rendering params template is silent-write"
+
+  - name: "LocationListing"
+    kind: "list"
+    category: "Locations"
+    status: "complete"
+    createdAt: "2026-09-08T21:00:00Z"
+    updatedAt: "2026-09-08T21:00:00Z"
+    siteName: "lcmc"
+    siteCollection: "lcmc"
+    contentRootPath: "/sitecore/content/lcmc/lcmc"
+    notes:
+      - "2026-09-08: No existing LocationListing rendering. Shared Portal LocationSearch Default uses Google Maps and is used by other sites — not reused. Created a new LCMC-only LocationListing under Project/lcmc/Locations."
+      - "Reused existing Data/Locations folder {76041887-6E16-4844-AD13-366BC2E32265} and LCMC Hospital Location children. Did not duplicate location templates or items."
+      - "Map is OpenStreetMap raster tiles + Mercator pin overlay (same no-Google approach as LocationSearch Version2 / FootprintGlobalMap). No Leaflet package, no Google Maps API key."
+      - "Slim ComponentQuery (datasource id/name only) + /api/location-listing Content API, mirroring PhysicianListing to avoid Pages layout-query complexity."
+      - "Placed only on Our Locations hub {0A471272-462E-4497-BEA2-D03C904BCBE5}. Hospital detail pages still have HospitalDetail only."
+      - "add_component_on_page auto-created empty local:/Data/LocationListing {734FD62B-7FA4-4799-9BAE-A9B03CB98564}; deleted after set_component_datasource pointed at Data/Locations."
+    react:
+      filePath: "src/components/uiim/locations/LocationListing.tsx"
+      componentMapKey: "LocationListing"
+      dataStrategy: "Slim ComponentQuery (datasource id/name). Children via /api/location-listing Content API (paged first: 10, value fields). OSM tile map from Latitude/Longitude. Client Hospital vs Urgent Care filter. All 16 cards on one page."
+      variants:
+        - "Default"
+    templates:
+      datasource:
+        name: "LCMC Hospital Location Folder"
+        path: "/sitecore/templates/Project/lcmc/Folders/LCMC Hospital Location Folder"
+        itemId: "{E1B1169B-8AAA-4A87-9B55-22D14AF553E7}"
+        reusedExisting: true
+      child:
+        name: "LCMC Hospital Location"
+        path: "/sitecore/templates/Project/lcmc/Components/Locations/LCMC Hospital Location"
+        itemId: "{1BE17BB8-084F-4FBA-A33F-8568E92F5B45}"
+        reusedExisting: true
+      renderingParams:
+        name: "LocationListing"
+        path: "/sitecore/templates/Project/lcmc/Rendering Parameters/Locations/LocationListing"
+        itemId: "{6277500C-BADB-472B-8B3C-EB6DA631CBDB}"
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{FEC47D6F-7FAF-4E9F-846B-DE067388CF0C}"
+          linked: true
+    datasourceFolder:
+      name: "Locations"
+      path: "/sitecore/content/lcmc/lcmc/Data/Locations"
+      itemId: "{76041887-6E16-4844-AD13-366BC2E32265}"
+      reusedExisting: true
+    rendering:
+      name: "LocationListing"
+      path: "/sitecore/layout/Renderings/Project/lcmc/Locations/LocationListing"
+      itemId: "{3CD4CF10-AD03-43E0-BB82-4F3FAE827AF8}"
+      componentName: "LocationListing"
+      datasourceTemplatePath: "/sitecore/templates/Project/lcmc/Folders/LCMC Hospital Location Folder"
+      datasourceLocationQuery: "query:$site/*[@@name='Data']/*[@@templatename='LCMC Hospital Location Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='LCMC Hospital Location Folder']|/sitecore/content/lcmc/lcmc/Data/Locations"
+      parametersTemplateId: "{6277500C-BADB-472B-8B3C-EB6DA631CBDB}"
+      addFieldEditorButton: "1"
+      registeredInAvailableRenderings: true
+      componentQuery: "query LocationListing($datasource: String!, $language: String!) { datasource: item(path: $datasource, language: $language) { id name } }"
+    headlessVariants:
+      containerPath: "/sitecore/content/lcmc/lcmc/Presentation/Headless Variants/LocationListing"
+      containerId: "{71C8C840-11B1-4D86-84C9-41978B4842BB}"
+      variants:
+        - { name: "Default", itemId: "{348CF6D9-943E-46E5-8824-65A981E732B9}" }
+    pages:
+      - { name: "Our Locations", pageId: "{0A471272-462E-4497-BEA2-D03C904BCBE5}", instanceId: "{08FBC2F7-6491-4BC7-91A9-23362CD40266}", datasourceId: "{76041887-6E16-4844-AD13-366BC2E32265}", placeholder: "headless-main", route: "/Our-Locations" }
+    verification:
+      checkedAt: "2026-09-08T21:00:00Z"
+      passed:
+        - "JSON Rendering created; componentName LocationListing; Datasource Template LCMC Hospital Location Folder; slim ComponentQuery present"
+        - "get_component confirms datasourceTemplateId {E1B1169B-8AAA-4A87-9B55-22D14AF553E7} and Data/Locations picker path"
+        - "Parameters Template GUID {6277500C-BADB-472B-8B3C-EB6DA631CBDB}; AddFieldEditorButton 1"
+        - "Default Headless Variant {348CF6D9-943E-46E5-8824-65A981E732B9}; page FieldNames already bound"
+        - "LocationListing allowed on headless-main via get_allowed_comps_by_ph"
+        - "Our Locations instance {08FBC2F7-6491-4BC7-91A9-23362CD40266} datasource is Data/Locations {76041887-6E16-4844-AD13-366BC2E32265}"
+        - "East Jefferson hospital page still has HospitalDetail only — listing not copied onto detail pages"
+        - "React file created; generate-map registered LocationListing; Jest 19 tests passed"
+      failed: []
+      pendingManual:
+        - "Publish LocationListing rendering, Headless Variants, Available Renderings, Data/Locations, and Our Locations for Edge"
+        - "Redeploy site-base rendering host so Pages picks up LocationListing.tsx, LocationListingMap.dev.tsx, and /api/location-listing"
+        - "In Pages, open Our Locations, confirm Data/Locations on the Content tab, then confirm OSM map + 16 cards (filters: All / Hospitals / Urgent care)"
         - "__Standard values link on rendering params template is silent-write"
 
   - name: "PhysicianListing"
