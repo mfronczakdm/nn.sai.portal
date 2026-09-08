@@ -1,5 +1,5 @@
 ﻿generatedAt: "2026-03-20T09:00:00Z"
-lastUpdatedAt: "2026-09-08T21:00:00Z"
+lastUpdatedAt: "2026-09-08T21:30:00Z"
 lastUpdatedBy: "cursor-agent"
 
 project:
@@ -10579,7 +10579,7 @@ ia:
     category: "Locations"
     status: "complete"
     createdAt: "2026-09-08T21:00:00Z"
-    updatedAt: "2026-09-08T21:00:00Z"
+    updatedAt: "2026-09-08T21:20:00Z"
     siteName: "lcmc"
     siteCollection: "lcmc"
     contentRootPath: "/sitecore/content/lcmc/lcmc"
@@ -10587,13 +10587,13 @@ ia:
       - "2026-09-08: No existing LocationListing rendering. Shared Portal LocationSearch Default uses Google Maps and is used by other sites — not reused. Created a new LCMC-only LocationListing under Project/lcmc/Locations."
       - "Reused existing Data/Locations folder {76041887-6E16-4844-AD13-366BC2E32265} and LCMC Hospital Location children. Did not duplicate location templates or items."
       - "Map is OpenStreetMap raster tiles + Mercator pin overlay (same no-Google approach as LocationSearch Version2 / FootprintGlobalMap). No Leaflet package, no Google Maps API key."
-      - "Slim ComponentQuery (datasource id/name only) + /api/location-listing Content API, mirroring PhysicianListing to avoid Pages layout-query complexity."
       - "Placed only on Our Locations hub {0A471272-462E-4497-BEA2-D03C904BCBE5}. Hospital detail pages still have HospitalDetail only."
       - "add_component_on_page auto-created empty local:/Data/LocationListing {734FD62B-7FA4-4799-9BAE-A9B03CB98564}; deleted after set_component_datasource pointed at Data/Locations."
+      - "2026-09-08: Pages empty list/map with Content item Locations. Live instance datasource was already Data/Locations {76041887-6E16-4844-AD13-366BC2E32265} (folder display name Locations), not the Our Locations page. Lat/long already populated on all 16 Data items — not rewritten. Root causes: slim ComponentQuery returned id/name only so Pages depended on /api/location-listing; API loaded direct children only so Our Locations page children (sitemap pages) had no Hospital Location fields; fetch used rendering.dataSource only, not ComponentQuery datasource.id. Fix: lite children on ComponentQuery; resolve Our Locations page (and unmatched page children) to Data/Locations; filter looksLikeHospitalLocation; datasource.id fallback. Picker: Can select Page as a data source=1, Additional compatible templates=Services Page {D77937AC-BAE4-4EB0-8D7E-69EC09D5BBFC}, Datasource Location includes Home/Our Locations. Official datasource remains LCMC Hospital Location Folder."
     react:
       filePath: "src/components/uiim/locations/LocationListing.tsx"
       componentMapKey: "LocationListing"
-      dataStrategy: "Slim ComponentQuery (datasource id/name). Children via /api/location-listing Content API (paged first: 10, value fields). OSM tile map from Latitude/Longitude. Client Hospital vs Urgent Care filter. All 16 cards on one page."
+      dataStrategy: "ComponentQuery lite children (LocationTitle/Type/address/lat/long/LandingPage jsonValue, no Treelist). Client filters hospital-location fields then /api/location-listing Content API. API resolves Our Locations page ID/path to Data/Locations. OSM map from Latitude/Longitude. Client Hospital vs Urgent Care filter."
       variants:
         - "Default"
     templates:
@@ -10626,11 +10626,14 @@ ia:
       itemId: "{3CD4CF10-AD03-43E0-BB82-4F3FAE827AF8}"
       componentName: "LocationListing"
       datasourceTemplatePath: "/sitecore/templates/Project/lcmc/Folders/LCMC Hospital Location Folder"
-      datasourceLocationQuery: "query:$site/*[@@name='Data']/*[@@templatename='LCMC Hospital Location Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='LCMC Hospital Location Folder']|/sitecore/content/lcmc/lcmc/Data/Locations"
+      datasourceLocationQuery: "query:$site/*[@@name='Data']/*[@@templatename='LCMC Hospital Location Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='LCMC Hospital Location Folder']|/sitecore/content/lcmc/lcmc/Data/Locations|/sitecore/content/lcmc/lcmc/Home/Our Locations"
       parametersTemplateId: "{6277500C-BADB-472B-8B3C-EB6DA631CBDB}"
       addFieldEditorButton: "1"
       registeredInAvailableRenderings: true
-      componentQuery: "query LocationListing($datasource: String!, $language: String!) { datasource: item(path: $datasource, language: $language) { id name } }"
+      componentQuery: "query LocationListing($datasource: String!, $language: String!) { datasource: item(path: $datasource, language: $language) { id name children(first: 20) { results { id name url { path } locationTitle: field(name: \"LocationTitle\") { jsonValue } locationShortName: field(name: \"LocationShortName\") { jsonValue } locationType: field(name: \"LocationType\") { jsonValue } streetAddress: field(name: \"StreetAddress\") { jsonValue } city: field(name: \"City\") { jsonValue } state: field(name: \"State\") { jsonValue } postalCode: field(name: \"PostalCode\") { jsonValue } phoneNumber: field(name: \"PhoneNumber\") { jsonValue } latitude: field(name: \"Latitude\") { jsonValue } longitude: field(name: \"Longitude\") { jsonValue } landingPage: field(name: \"LandingPage\") { jsonValue } } } } }"
+      canSelectPageAsDatasource: true
+      additionalCompatibleTemplates:
+        - { name: "Services Page", itemId: "{D77937AC-BAE4-4EB0-8D7E-69EC09D5BBFC}" }
     headlessVariants:
       containerPath: "/sitecore/content/lcmc/lcmc/Presentation/Headless Variants/LocationListing"
       containerId: "{71C8C840-11B1-4D86-84C9-41978B4842BB}"
@@ -10639,21 +10642,22 @@ ia:
     pages:
       - { name: "Our Locations", pageId: "{0A471272-462E-4497-BEA2-D03C904BCBE5}", instanceId: "{08FBC2F7-6491-4BC7-91A9-23362CD40266}", datasourceId: "{76041887-6E16-4844-AD13-366BC2E32265}", placeholder: "headless-main", route: "/Our-Locations" }
     verification:
-      checkedAt: "2026-09-08T21:00:00Z"
+      checkedAt: "2026-09-08T21:20:00Z"
       passed:
-        - "JSON Rendering created; componentName LocationListing; Datasource Template LCMC Hospital Location Folder; slim ComponentQuery present"
-        - "get_component confirms datasourceTemplateId {E1B1169B-8AAA-4A87-9B55-22D14AF553E7} and Data/Locations picker path"
+        - "JSON Rendering componentName LocationListing; Datasource Template still LCMC Hospital Location Folder"
+        - "get_component confirms datasourceTemplateId {E1B1169B-8AAA-4A87-9B55-22D14AF553E7} and picker roots Data/Locations + Home/Our Locations"
+        - "ComponentQuery verified with lite children(first: 20) jsonValue location fields (no Treelist/LookupField)"
+        - "Can select Page as a data source=1; Additional compatible templates Services Page {D77937AC-BAE4-4EB0-8D7E-69EC09D5BBFC}"
         - "Parameters Template GUID {6277500C-BADB-472B-8B3C-EB6DA631CBDB}; AddFieldEditorButton 1"
-        - "Default Headless Variant {348CF6D9-943E-46E5-8824-65A981E732B9}; page FieldNames already bound"
-        - "LocationListing allowed on headless-main via get_allowed_comps_by_ph"
-        - "Our Locations instance {08FBC2F7-6491-4BC7-91A9-23362CD40266} datasource is Data/Locations {76041887-6E16-4844-AD13-366BC2E32265}"
-        - "East Jefferson hospital page still has HospitalDetail only — listing not copied onto detail pages"
-        - "React file created; generate-map registered LocationListing; Jest 19 tests passed"
+        - "Our Locations instance {08FBC2F7-6491-4BC7-91A9-23362CD40266} datasource is still Data/Locations {76041887-6E16-4844-AD13-366BC2E32265}"
+        - "All 16 Data/Locations items already have Latitude/Longitude — not rewritten"
+        - "React + API resolve Our Locations page ID to Data/Locations; Jest LocationListing tests passed"
       failed: []
       pendingManual:
-        - "Publish LocationListing rendering, Headless Variants, Available Renderings, Data/Locations, and Our Locations for Edge"
-        - "Redeploy site-base rendering host so Pages picks up LocationListing.tsx, LocationListingMap.dev.tsx, and /api/location-listing"
-        - "In Pages, open Our Locations, confirm Data/Locations on the Content tab, then confirm OSM map + 16 cards (filters: All / Hospitals / Urgent care)"
+        - "Publish LocationListing rendering so Pages layout picks up the new ComponentQuery"
+        - "Publish Data/Locations (16 items) if Edge still has empty children"
+        - "Redeploy site-base rendering host so Pages picks up LocationListing.tsx, location-listing.utils.ts, and /api/location-listing page-to-folder resolve"
+        - "In Pages, Our Locations works with Content item Locations (Data folder) OR Our Locations page — 16 cards + OSM map"
         - "__Standard values link on rendering params template is silent-write"
 
   - name: "PhysicianListing"
@@ -10902,8 +10906,88 @@ ia:
       pendingManual:
         - "Publish Footer Partial Design + Footer/Data for Edge"
         - "FooterST cannot show ADA.gov service-animal block, X/YouTube, or GFE/balance-billing PDFs as dedicated columns"
-        - "Notice of Privacy Practices has no IA page � linked to live UMC notice URL"
+        - "Notice of Privacy Practices has no IA page — linked to live UMC notice URL"
 
+  - name: "lcmc-wjmc-microsite"
+    kind: "ia-create"
+    category: "IA"
+    status: "complete"
+    createdAt: "2026-09-08T21:10:00Z"
+    updatedAt: "2026-09-08T21:30:00Z"
+    siteName: "lcmc"
+    siteCollection: "lcmc"
+    contentRootPath: "/sitecore/content/lcmc/lcmc/Home"
+    contentRootItemId: "{194F8944-6400-40DD-BDCB-931686A42643}"
+    pageTemplateId: "{D77937AC-BAE4-4EB0-8D7E-69EC09D5BBFC}"
+    pageTemplateName: "Services Page"
+    pageDesignId: "{917B09BA-1495-4EE0-9E1C-36AA268CB54B}"
+    iaSource: "docs/ai/ia/lcmc-wjmc-ia.md"
+    sourceSite: "https://www.lcmchealth.org/west-jefferson-medical-center/"
+    createdCount: 26
+    skippedCount: 0
+    failedCount: 0
+    notes: >
+      Created West Jefferson Medical Center hospital microsite under Home without moving
+      system Our Services, Our Locations, or Find a Provider. Did not edit Data/Locations
+      or Data/Physicians. Existing /Home/Our Locations/West Jefferson Medical Center left
+      as the hospital location page. All 20 live WJMC our-services directory pages created.
+      ArticleContent placed on each new page headless-main. Header gained a 6th MegaMenuItem
+      (visual QA recommended). Unused duplicate MegaMenuItem {0707C558-1F8F-42F0-A540-758066F914BE}
+      remains under Header/Data; rendering uses auto-created West_Jefferson_Medical_Center.
+    items:
+      - { name: "West Jefferson Medical Center", itemId: "{244D564F-91DC-4CCE-8AE7-B074BFB26EA3}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center" }
+      - { name: "Our Services", itemId: "{2C56B473-70EE-4A89-BDD5-CFED2A5FCDD8}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services" }
+      - { name: "Patients and Visitors", itemId: "{D922D27F-C05C-4431-98BB-27A36A5DEE2F}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Patients and Visitors" }
+      - { name: "About Us", itemId: "{3C6D2FF3-5E8F-483D-9FFD-A24AFCF83A58}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/About Us" }
+      - { name: "Our Locations", itemId: "{2C5BA133-5EC7-49FC-8EFF-03B25011B504}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Locations" }
+      - { name: "Contact Us", itemId: "{2B129408-A7FC-4E51-A079-5F3627F47485}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Contact Us" }
+      - { name: "Cancer Center", itemId: "{6AB96D17-DEBF-4F9C-8411-EC8691832E56}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/Cancer Center" }
+      - { name: "Centro Hispano de Salud", itemId: "{F9251FFF-D3B2-4D4B-9453-3057E67E650C}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/Centro Hispano de Salud" }
+      - { name: "Digestive Care", itemId: "{C72E1FEE-24E9-48A8-BD69-C1A40A3947D3}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/Digestive Care" }
+      - { name: "Ears Nose and Throat Care", itemId: "{66B44E6A-6D2F-4B01-BB8A-A26E4E3EC29C}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/Ears Nose and Throat Care", route: "/West-Jefferson-Medical-Center/Our-Services/Ears-Nose-and-Throat-Care" }
+      - { name: "Emergency Care", itemId: "{3F790DB9-D631-452D-B0FC-81038A84120C}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/Emergency Care" }
+      - { name: "Heart and Vascular Care", itemId: "{2AAE391D-27A1-404C-807F-0BAF075D387A}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/Heart and Vascular Care" }
+      - { name: "Hyperbaric", itemId: "{289F3863-A653-433E-9225-23DDF433BD55}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/Hyperbaric" }
+      - { name: "Imaging Services", itemId: "{9DD1F2F2-A240-4B75-8E3F-D7FF7348DFEE}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/Imaging Services" }
+      - { name: "Orthopedic Care", itemId: "{1B75ABBA-D25D-4A8B-A08D-95F8B2829A67}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/Orthopedic Care" }
+      - { name: "Physical Rehabilitation", itemId: "{51045ED1-5C87-4F78-A434-448D19F9CB83}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/Physical Rehabilitation" }
+      - { name: "Primary Care", itemId: "{79A49E07-D709-4630-B997-219904592653}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/Primary Care" }
+      - { name: "Respiratory Care", itemId: "{EC11CB8A-34A9-4F6D-9DAB-AC381A08343B}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/Respiratory Care" }
+      - { name: "Sleep Care", itemId: "{0BA81109-865D-4693-A971-E1FA04A1D16D}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/Sleep Care" }
+      - { name: "Surgery", itemId: "{808311AD-E478-4635-B0BC-79B40D9257FE}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/Surgery" }
+      - { name: "Stroke Care", itemId: "{CD872D5F-9CE6-44C5-98AA-9FCB620C1960}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/Stroke Care" }
+      - { name: "The Family Birth Place", itemId: "{7BC21FBE-E56F-46BC-95D7-218CA42CC826}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/The Family Birth Place" }
+      - { name: "The Hispanic Health Center", itemId: "{AACF6EB0-24E3-45B3-B6EC-1E430E50CDB7}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/The Hispanic Health Center" }
+      - { name: "Urology", itemId: "{B03D49E6-EE3A-4CC5-9CBE-E9AA2270B7D9}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/Urology" }
+      - { name: "Womens Health", itemId: "{CE2546D3-D952-42D8-AB96-669645B8DEDB}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/Womens Health" }
+      - { name: "Wound Care", itemId: "{30494497-6F54-48BA-B713-A9C0D70CBEBA}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/Wound Care" }
+    navigation:
+      headerMegaMenuItem:
+        itemId: "{DBADE7CB-B4E7-4D97-97DE-90E06D5333D7}"
+        renderingInstanceId: "{C2F26BCF-F4E1-443F-A057-651030A119BD}"
+        path: "/sitecore/content/lcmc/lcmc/Presentation/Partial Designs/Global/Header/Data/West_Jefferson_Medical_Center"
+      unusedNamedMegaMenuItem: "{0707C558-1F8F-42F0-A540-758066F914BE}"
+      headerLinkList:
+        itemId: "{ABBC8AEF-CB59-46B4-9F60-09622BF04E0A}"
+        renderingInstanceId: "{B465B549-9F53-4D94-A8C5-89EA8400876E}"
+        placeholder: "/headless-header/header-navigation-1/mega-menu-item-primary-links-7"
+      footerPrimaryLink: "{C56F5A62-E6E8-4DA4-87E8-0B0530074DBF}"
+    verification:
+      checkedAt: "2026-09-08T21:30:00Z"
+      passed:
+        - "Site lcmc verified via list_sites"
+        - "26 Services Pages created under Home/West Jefferson Medical Center"
+        - "ENT Detail + page fields + ArticleContent verified; route /West-Jefferson-Medical-Center/Our-Services/Ears-Nose-and-Throat-Care"
+        - "System Our Services unchanged"
+        - "Data/Locations/West Jefferson Medical Center read only"
+        - "Header MegaMenuItem Title+Link verified; Link List datasource bound"
+        - "Footer primary link verified"
+      failed: []
+      pendingManual:
+        - "Publish Home/West Jefferson Medical Center subtree + Header/Footer Partial Design Data for Edge"
+        - "Visual QA of 6th header L1 at desktop and mobile"
+        - "Unused Header/Data MegaMenuItem {0707C558-...} can be deleted in CE"
+        - "Remaining pages besides ENT/home may still be Draft until published"
 
   - name: "MultiPromo"
     kind: "update"

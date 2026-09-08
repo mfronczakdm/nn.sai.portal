@@ -2,6 +2,10 @@ import {
   fetchLocationListingChildren,
   toLocationListingItemPath,
 } from '@/lib/location-listing-from-edge';
+import {
+  LCMC_DATA_LOCATIONS_ID,
+  LCMC_OUR_LOCATIONS_PAGE_ID,
+} from '@/lib/location-listing.utils';
 
 const getData = jest.fn();
 const previewGetData = jest.fn();
@@ -107,5 +111,95 @@ describe('fetchLocationListingChildren', () => {
 
     expect(locations).toHaveLength(1);
     expect(getData).toHaveBeenCalledTimes(2);
+  });
+
+  it('returns mapped locations when datasource is the Data/Locations folder', async () => {
+    getData.mockResolvedValueOnce({
+      item: {
+        children: {
+          results: [EAST_JEFFERSON],
+          pageInfo: { hasNext: false, endCursor: null },
+        },
+      },
+    });
+
+    const locations = await fetchLocationListingChildren({
+      path: LCMC_DATA_LOCATIONS_ID,
+      language: 'en',
+    });
+
+    expect(locations).toHaveLength(1);
+    expect(locations[0].locationTitle?.jsonValue).toEqual({
+      value: 'East Jefferson General Hospital',
+    });
+    expect(locations[0].latitude?.jsonValue).toEqual({ value: '29.9967' });
+    expect(getData).toHaveBeenCalledWith(
+      expect.any(String),
+      expect.objectContaining({ path: LCMC_DATA_LOCATIONS_ID, language: 'en' })
+    );
+  });
+
+  it('returns the same mapped locations when datasource is the Our Locations page', async () => {
+    getData.mockResolvedValueOnce({
+      item: {
+        children: {
+          results: [EAST_JEFFERSON],
+          pageInfo: { hasNext: false, endCursor: null },
+        },
+      },
+    });
+
+    const locations = await fetchLocationListingChildren({
+      path: LCMC_OUR_LOCATIONS_PAGE_ID,
+      language: 'en',
+    });
+
+    expect(locations).toHaveLength(1);
+    expect(locations[0].locationTitle?.jsonValue).toEqual({
+      value: 'East Jefferson General Hospital',
+    });
+    expect(locations[0].latitude?.jsonValue).toEqual({ value: '29.9967' });
+    expect(locations[0].landingPage?.targetItem?.url?.path).toBe(
+      '/Our-Locations/East-Jefferson-General-Hospital'
+    );
+    expect(getData).toHaveBeenCalledWith(
+      expect.any(String),
+      expect.objectContaining({ path: LCMC_DATA_LOCATIONS_ID, language: 'en' })
+    );
+  });
+
+  it('ignores sitemap page children and falls back to Data/Locations', async () => {
+    getData.mockResolvedValueOnce({
+      item: {
+        children: {
+          results: [
+            { id: 'page-ejgh', name: 'East Jefferson General Hospital' },
+            { id: 'page-lakeside', name: 'Lakeside Hospital' },
+          ],
+          pageInfo: { hasNext: false, endCursor: null },
+        },
+      },
+    });
+    getData.mockResolvedValueOnce({
+      item: {
+        children: {
+          results: [EAST_JEFFERSON],
+          pageInfo: { hasNext: false, endCursor: null },
+        },
+      },
+    });
+
+    const locations = await fetchLocationListingChildren({
+      path: '{8EED2D44-9041-483E-9DE2-6DEE4E92B0B0}',
+      language: 'en',
+    });
+
+    expect(locations).toHaveLength(1);
+    expect(locations[0].latitude?.jsonValue).toEqual({ value: '29.9967' });
+    expect(getData).toHaveBeenCalledTimes(2);
+    expect(getData).toHaveBeenLastCalledWith(
+      expect.any(String),
+      expect.objectContaining({ path: LCMC_DATA_LOCATIONS_ID })
+    );
   });
 });

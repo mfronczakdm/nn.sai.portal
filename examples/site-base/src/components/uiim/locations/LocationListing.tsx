@@ -12,6 +12,7 @@ import { cn } from '@/lib/utils';
 import { ComponentProps } from '@/lib/component-props';
 import { NoDataFallback } from '@/utils/NoDataFallback';
 import { parseCoordinate } from '@/lib/location-listing-map.utils';
+import { looksLikeHospitalLocation } from '@/lib/location-listing.utils';
 import { LocationListingMap, type LocationListingMapItem } from './LocationListingMap.dev';
 
 export type LocationListingJsonField<T = string> = {
@@ -144,8 +145,8 @@ export const Default = (props: LocationListingProps): JSX.Element => {
   const { styles, RenderingIdentifier } = params || {};
   const datasource = fields?.data?.datasource;
   const datasourceAssigned = hasAssignedLocationListingDatasource(fields, rendering);
-  const inlineLocations = datasource?.children?.results ?? [];
-  const datasourceId = rendering?.dataSource?.trim() ?? '';
+  const inlineLocations = (datasource?.children?.results ?? []).filter(looksLikeHospitalLocation);
+  const datasourceId = rendering?.dataSource?.trim() || datasource?.id?.trim() || '';
   const language =
     (page?.layout?.sitecore?.context as { language?: string } | undefined)?.language || 'en';
   const [remoteLocations, setRemoteLocations] = useState<LocationListingChild[]>([]);
@@ -366,8 +367,8 @@ export const Default = (props: LocationListingProps): JSX.Element => {
             {isLoadingRemote
               ? 'Loading locations…'
               : datasourceAssigned
-                ? 'No locations found under this datasource. Add location items under Data/Locations.'
-                : 'Assign the Locations folder as the datasource, then add or edit location items under Data/Locations.'}
+                ? 'No locations found under this datasource. Point it at Data/Locations, or the Our Locations page — both resolve to hospital location items.'
+                : 'Assign Data/Locations or the Our Locations page as the datasource, then add location items under Data/Locations.'}
           </p>
         )}
       </div>

@@ -220,4 +220,66 @@ describe('LocationListing', () => {
     );
     expect(await screen.findByRole('link', { name: 'East Jefferson General Hospital' })).toBeInTheDocument();
   });
+
+  it('fetches using datasource.id when rendering.dataSource is missing', async () => {
+    (global.fetch as jest.Mock).mockResolvedValueOnce({
+      ok: true,
+      json: async () => ({ locations: [eastJefferson] }),
+    });
+
+    render(
+      <Default
+        fields={{ data: { datasource: { id: '{76041887-6E16-4844-AD13-366BC2E32265}' } } }}
+        params={params}
+        page={page}
+        rendering={rendering}
+      />
+    );
+
+    expect(global.fetch).toHaveBeenCalledWith(
+      expect.stringContaining('datasource=%7B76041887-6E16-4844-AD13-366BC2E32265%7D'),
+      expect.any(Object)
+    );
+    expect(await screen.findByRole('link', { name: 'East Jefferson General Hospital' })).toBeInTheDocument();
+  });
+
+  it('ignores Our Locations page children and loads mapped locations from the API', async () => {
+    (global.fetch as jest.Mock).mockResolvedValueOnce({
+      ok: true,
+      json: async () => ({ locations: [eastJefferson, gretna] }),
+    });
+
+    render(
+      <Default
+        fields={{
+          data: {
+            datasource: {
+              id: '{0A471272-462E-4497-BEA2-D03C904BCBE5}',
+              name: 'Our Locations',
+              children: {
+                results: [
+                  { id: 'page-1', name: 'East Jefferson General Hospital' },
+                  { id: 'page-2', name: 'Lakeside Hospital' },
+                ],
+              },
+            },
+          },
+        }}
+        params={params}
+        page={page}
+        rendering={{
+          componentName: 'LocationListing',
+          dataSource: '{0A471272-462E-4497-BEA2-D03C904BCBE5}',
+        }}
+      />
+    );
+
+    expect(global.fetch).toHaveBeenCalledWith(
+      expect.stringContaining('datasource=%7B0A471272-462E-4497-BEA2-D03C904BCBE5%7D'),
+      expect.any(Object)
+    );
+    expect(await screen.findByRole('link', { name: 'East Jefferson General Hospital' })).toBeInTheDocument();
+    expect(screen.getByTestId('location-listing-count')).toHaveTextContent('2 locations');
+    expect(screen.getByTestId('location-listing-map')).toBeInTheDocument();
+  });
 });

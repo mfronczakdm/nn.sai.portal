@@ -2,6 +2,12 @@ import { SitecoreClient } from '@sitecore-content-sdk/nextjs/client';
 import scConfig from 'sitecore.config';
 
 import client from '@/lib/sitecore-client';
+import {
+  isLcmcDataLocationsRef,
+  looksLikeHospitalLocation,
+  resolveLocationListingFolderRef,
+  LCMC_DATA_LOCATIONS_ID,
+} from '@/lib/location-listing.utils';
 
 export type LocationListingJsonField<T = unknown> = {
   jsonValue?: { value?: T };
@@ -288,6 +294,20 @@ async function loadLocationsForMode(
   }
 }
 
+async function loadHospitalLocationsForMode(
+  path: string,
+  language: string,
+  mode: LocationListingEdgeMode
+): Promise<LocationListingChild[]> {
+  const results = await loadLocationsForMode(path, language, mode);
+  return results.filter(looksLikeHospitalLocation);
+}
+
+/**
+ * Load LCMC Hospital Location items for LocationListing.
+ * Datasource may be Data/Locations or the Our Locations page (or a child page).
+ * Page children are sitemap items without lat/long — those resolve to Data/Locations.
+ */
 export async function fetchLocationListingChildren(args: {
   path?: string;
   language: string;
@@ -298,10 +318,20 @@ export async function fetchLocationListingChildren(args: {
   const path = toLocationListingItemPath(args.path);
   if (!path) return [];
 
-  const primary = await loadLocationsForMode(path, language, mode);
-  if (primary.length > 0) return primary;
+  const primaryPath =
+    toLocationListingItemPath(resolveLocationListingFolderRef(path)) || path;
+
+  const load = async (edgeMode: LocationListingEdgeMode): Promise<LocationListingChild[]> => {
+    const primary = await loadHospitalLocationsForMode(primaryPath, language, edgeMode);
+    if (primary.length > 0) return primary;
+    if (isLcmcDataLocationsRef(primaryPath)) return [];
+    return loadHospitalLocationsForMode(LCMC_DATA_LOCATIONS_ID, language, edgeMode);
+  };
+
+  const resolved = await load(mode);
+  if (resolved.length > 0) return resolved;
   if (mode === 'preview') {
-    return loadLocationsForMode(path, language, 'live');
+    return load('live');
   }
   return [];
 }
