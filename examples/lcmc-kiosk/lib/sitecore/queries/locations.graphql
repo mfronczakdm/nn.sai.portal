@@ -1,0 +1,67 @@
+# Query all locations under LOCATIONS_ROOT_PATH.
+
+query GetLocations($path: String!, $language: String!, $first: Int!) {
+  item(path: $path, language: $language) {
+    ...ItemIdentity
+    children(first: $first) {
+      results {
+        ...ItemIdentity
+        locationTitle: field(name: "LocationTitle") {
+          ...FieldValue
+        }
+        locationShortName: field(name: "LocationShortName") {
+          ...FieldValue
+        }
+        locationDescription: field(name: "LocationDescription") {
+          ...FieldValue
+        }
+        streetAddress: field(name: "StreetAddress") {
+          ...FieldValue
+        }
+        city: field(name: "City") {
+          ...FieldValue
+        }
+        state: field(name: "State") {
+          ...FieldValue
+        }
+        postalCode: field(name: "PostalCode") {
+          ...FieldValue
+        }
+        phoneNumber: field(name: "PhoneNumber") {
+          ...FieldValue
+        }
+        hoursText: field(name: "HoursText") {
+          ...FieldValue
+        }
+        parkingInfo: field(name: "ParkingInfo") {
+          ...FieldValue
+        }
+        visitorInfo: field(name: "VisitorInfo") {
+          ...FieldValue
+        }
+        locationType: field(name: "LocationType") {
+          ...FieldValue
+        }
+        hasEmergencyDepartment: field(name: "HasEmergencyDepartment") {
+          ...FieldValue
+        }
+        offeredServices: field(name: "OfferedServices") {
+          value
+          ... on MultilistField {
+            targetItems {
+              ...LocationTarget
+            }
+          }
+        }
+        locationPhysicians: field(name: "LocationPhysicians") {
+          value
+          ... on MultilistField {
+            targetItems {
+              ...LocationTarget
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f4f7f8;
+  --foreground: #1a2b33;
+}
+
+html,
+body {
+  min-height: 100%;
+  height: 100%;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@layer components {
+  .kiosk-tap {
+    @apply inline-flex min-h-tap min-w-tap items-center justify-center rounded-2xl px-6 text-xl font-semibold focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-lcmc-teal;
+  }
+}

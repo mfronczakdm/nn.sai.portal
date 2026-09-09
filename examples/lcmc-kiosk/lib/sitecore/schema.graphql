@@ -1,0 +1,67 @@
+# Experience Edge Content GraphQL — local subset for graphql-codegen.
+# Keep in sync with the path-based item() / children() queries we actually send.
+# Do not treat this as the full Sitecore schema.
+
+schema {
+  query: Query
+}
+
+type Query {
+  item(path: String, language: String): Item
+}
+
+type Item {
+  id: String
+  name: String
+  displayName: String
+  path: String
+  url: ItemUrl
+  children(first: Int, after: String): ItemConnection
+  field(name: String!): Field
+}
+
+type ItemUrl {
+  path: String
+}
+
+type ItemConnection {
+  results: [Item]
+  pageInfo: PageInfo
+}
+
+type PageInfo {
+  endCursor: String
+  hasNext: Boolean
+}
+
+interface Field {
+  value: String
+}
+
+type TextField implements Field {
+  value: String
+}
+
+type RichTextField implements Field {
+  value: String
+}
+
+type CheckboxField implements Field {
+  value: String
+  boolValue: Boolean
+}
+
+type ImageField implements Field {
+  value: String
+  jsonValue: ImageFieldJson
+}
+
+type ImageFieldJson {
+  src: String
+  alt: String
+}
+
+type MultilistField implements Field {
+  value: String
+  targetItems: [Item]
+}
