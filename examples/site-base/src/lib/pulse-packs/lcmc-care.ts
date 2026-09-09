@@ -307,7 +307,7 @@ function isEntAtWjmc(provider: LcmcProvider): boolean {
 export function isLcmcLirettePhysician(
   physician: Pick<LcmcPhysicianSource, 'id' | 'name' | 'physicianFullName'> | LcmcProvider
 ): boolean {
-  const id = ('id' in physician ? physician.id : '').replace(/[{}]/g, '').toUpperCase();
+  const id = (('id' in physician ? physician.id : '') ?? '').replace(/[{}]/g, '').toUpperCase();
   if (id === LCMC_LIRETTE_PHYSICIAN_ID) return true;
   const name =
     'physicianFullName' in physician
