@@ -312,7 +312,7 @@ export function isLcmcLirettePhysician(
   const name =
     'physicianFullName' in physician
       ? physician.physicianFullName?.jsonValue?.value || physician.name || ''
-      : physician.name;
+      : physician.name || '';
   return /dominic\s+lirette/i.test(name);
 }
 
