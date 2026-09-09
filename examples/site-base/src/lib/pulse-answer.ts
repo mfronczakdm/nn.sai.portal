@@ -106,6 +106,9 @@ export function composePulseAnswer(
   const enableStatePersona = opts.enableStatePersona ?? opts.pack?.enableStatePersona ?? false;
   const personaState = enableStatePersona ? (opts.stateCode ?? null) : null;
 
+  const packAnswer = opts.pack?.composeAnswer?.(question, sources);
+  if (packAnswer) return packAnswer;
+
   if (!sources.length) {
     return {
       answer:

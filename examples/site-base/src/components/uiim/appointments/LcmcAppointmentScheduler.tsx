@@ -22,6 +22,7 @@ import { cn } from '@/lib/utils';
 import { ComponentProps } from '@/lib/component-props';
 import { NoDataFallback } from '@/utils/NoDataFallback';
 import {
+  applyLcmcAppointmentQuery,
   buildLcmcAvailability,
   confirmationNumber,
   filterLcmcAvailability,
@@ -36,6 +37,7 @@ import {
   lcmcVisitDetailLine,
   lcmcVisitLabel,
   listLcmcFilterOptions,
+  parseLcmcAppointmentSearch,
   providersFromPhysicianListing,
   type LcmcDayGroup,
   type LcmcProvider,
@@ -314,6 +316,16 @@ const LcmcAppointmentSchedulerInner = ({
 
     return () => controller.abort();
   }, [isEditing, language]);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const query = parseLcmcAppointmentSearch(window.location.search);
+    if (!query.specialty && !query.location && !query.provider) return;
+    const applied = applyLcmcAppointmentQuery(query, listLcmcFilterOptions(catalogProviders));
+    if (applied.specialties.length) setSpecialtyFilters(applied.specialties);
+    if (applied.clinics.length) setClinicFilters(applied.clinics);
+    if (applied.providers.length) setProviderFilters(applied.providers);
+  }, [catalogProviders]);
 
   const now = useMemo(() => new Date(), []);
   const availability = useMemo(

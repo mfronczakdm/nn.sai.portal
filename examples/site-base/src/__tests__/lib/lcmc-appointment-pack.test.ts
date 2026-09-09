@@ -1,5 +1,7 @@
 import {
   addCalendarDays,
+  applyLcmcAppointmentQuery,
+  buildLcmcAppointmentSearch,
   buildLcmcAvailability,
   confirmationNumber,
   filterLcmcAvailability,
@@ -11,6 +13,7 @@ import {
   LCMC_WJMC_LOCATION_ID,
   LCMC_WJMC_LOCATION_NAME,
   listLcmcFilterOptions,
+  parseLcmcAppointmentSearch,
   providersFromPhysicianListing,
 } from '@/lib/lcmc-appointment-pack';
 
@@ -167,5 +170,31 @@ describe('lcmc-appointment-pack', () => {
 
   it('returns an LCMC confirmation number', () => {
     expect(confirmationNumber(now)).toMatch(/^LCMC-/);
+  });
+
+  it('parses Pulse deep-link query params and maps clinic nicknames to WJMC', () => {
+    const query = parseLcmcAppointmentSearch(
+      '?specialty=ENT&location=West%20Jefferson%20Medical%20Clinic&provider=Gabrielle%20Moreau'
+    );
+    expect(query.specialty).toBe('ENT');
+    expect(query.location).toBe('West Jefferson Medical Clinic');
+    expect(query.provider).toBe('Gabrielle Moreau');
+
+    const applied = applyLcmcAppointmentQuery(query, {
+      specialties: [LCMC_ENT_SPECIALTY, 'Cardiology'],
+      clinics: [LCMC_WJMC_LOCATION_NAME, 'East Jefferson General Hospital'],
+      names: ['Gabrielle Moreau, MD', 'Dominic Lirette, MD'],
+    });
+    expect(applied.specialties).toEqual([LCMC_ENT_SPECIALTY]);
+    expect(applied.clinics).toEqual([LCMC_WJMC_LOCATION_NAME]);
+    expect(applied.providers).toEqual(['Gabrielle Moreau, MD']);
+    const href = buildLcmcAppointmentSearch({
+      specialty: LCMC_ENT_SPECIALTY,
+      location: LCMC_WJMC_LOCATION_NAME,
+    });
+    const params = new URLSearchParams(href.split('?')[1]);
+    expect(href.startsWith('/For-Patients/Patient-Appointments?')).toBe(true);
+    expect(params.get('specialty')).toBe(LCMC_ENT_SPECIALTY);
+    expect(params.get('location')).toBe(LCMC_WJMC_LOCATION_NAME);
   });
 });

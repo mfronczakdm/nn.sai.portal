@@ -1,6 +1,8 @@
 # Pulse multi-site packs
 
-Pulse is a shared assistant (UI + `/api/pulse/ask` + retrieve + answer templates) with **per-site packs** keyed by the same site names as themes/skins (`quanex`, `era`, `amesburytruth`, `pillsburylaw`, `amkor`, …).
+Pulse is a shared assistant (UI + `/api/pulse/ask` + retrieve + answer templates) with **per-site packs** keyed by the same site names as themes/skins (`quanex`, `era`, `amesburytruth`, `pillsburylaw`, `amkor`, `lcmc`, …).
+
+**LCMC isolation:** `src/lib/pulse-packs/lcmc.ts` owns healthcare starter prompts, widget copy, physician retrieval (`Data/Physicians` via `fetchPhysicianListingPayload` — same catalog as Find a Provider / LcmcAppointmentScheduler), and bilingual answers. Do **not** edit Quanex/Pillsbury/Amkor Default prompts or shared compose templates for LCMC copy. Optional pack hooks (`retrieveExtraSources`, `composeAnswer`, `widgetCopy`) are no-ops for other sites.
 
 ## How it works
 
@@ -23,7 +25,7 @@ Pulse is a shared assistant (UI + `/api/pulse/ask` + retrieve + answer templates
 2. **Register** the pack in `src/lib/pulse-packs/index.ts` (`PULSE_SITE_PACKS`).
 3. **Publish** the site Home tree to Experience Edge. Unpublished items will not appear in Pulse (same as the live front end).
 4. Confirm the site is listed in `src/lib/theme/site-skins.ts` if it has a brand skin.
-5. Do **not** edit core `pulse-retrieve.ts` / `pulse-answer.ts` for site-specific copy — keep that in the pack.
+5. Do **not** edit core `pulse-retrieve.ts` / `pulse-answer.ts` for site-specific copy — keep that in the pack. Optional pack hooks (`widgetCopy`, `retrieveExtraSources`, `composeAnswer`) are for overlays like LCMC; leave them unset so other sites keep Default Pulse behavior.
 
 ## Content source rules
 

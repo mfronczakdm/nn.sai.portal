@@ -3222,6 +3222,7 @@ pageTemplates:
       - "2026-09-02T18:45: Visit-type cards sorted by LCMC_VISIT_KEYS so GraphQL child order matches the Word screenshot (Sick visit second). Emergency banner always renders with authored override."
       - "2026-09-02T18:50: Pages still showed 'requires a datasource' after the parent DS was assigned. Root cause: parent template was missing _HorizonDatasourceGrouping and _PublishingGroupingTemplate, so Pages did not treat Patient Appointments as a valid grouping datasource and GraphQL/layout returned empty fields.data.datasource (React NoDataFallback). Added grouping bases; re-assigned DS; React now maps jsonValue/JSS fields and renders fallback visit cards in editing when GraphQL is empty. Do not pick a visit-type child or the folder as the datasource."
       - "2026-09-09: Replaced the 3 hardcoded pack names with Data/Physicians via /api/physician-listing (same Edge complexity workaround as PhysicianListing). Did not add physician children under Patient Appointments. Did not change shared portal Default appointment UI. Gabrielle Moreau is the demo ENT + West Jefferson Medical Center doctor; Dominic Lirette is the second ENT at WJMC. Scheduler filters now include Specialty, Location, and all 26 provider names."
+      - "2026-09-09: Scheduler reads Pulse deep-link query params specialty, location/clinic, and provider (West Jefferson Medical Clinic maps to West Jefferson Medical Center). Code-only; no Sitecore item changes."
 
 lookups:
   - path: "/sitecore/content/progressive/pkm/Data"
@@ -4161,18 +4162,45 @@ ia:
     category: "Pulse"
     status: "complete"
     createdAt: "2026-08-12T13:20:00Z"
-    updatedAt: "2026-08-12T13:20:00Z"
+    updatedAt: "2026-09-09T00:40:00Z"
     notes: >
       Refactored Pulse into a multi-site pack platform (code-only; no new Sitecore items).
-      Packs: quanex, era, amesburytruth, pillsburylaw under src/lib/pulse-packs/.
+      Packs: quanex, era, amesburytruth, pillsburylaw, amkor, atlanta-apparel, lcmc under src/lib/pulse-packs/.
       Experience Edge GraphQL is the primary content source (Home-scoped per pack).
       Sitecore Search remains optional via isSitecoreSearchConfigured() � not required for
       Quanex family. Intent citationItemIds hydrate title/url/excerpt from Edge at ask-time.
       Docs: docs/ai/demo/pulse-multi-site.md. Publish each site Home tree to Edge for Pulse.
+      2026-09-09: Added LCMC-only pack. Shared Default Pulse prompts/templates unchanged.
     relatedHomeRoots:
       - { siteName: "quanex", homeRootId: "{E6276198-3FC7-4D8B-BD14-8669B1701536}", path: "/sitecore/content/quanex/quanex/Home" }
       - { siteName: "era", homeRootId: "{69A414F6-9E12-48D6-92C1-215609517A83}", path: "/sitecore/content/quanex/era/Home" }
       - { siteName: "amesburytruth", homeRootId: "{A57ED898-AA1D-46E6-B7CF-7C7804688EC8}", path: "/sitecore/content/quanex/amesburytruth/Home" }
+      - { siteName: "lcmc", homeRootId: "{194F8944-6400-40DD-BDCB-931686A42643}", path: "/sitecore/content/lcmc/lcmc/Home" }
+
+  - name: "lcmc-pulse-pack"
+    kind: "platform-note"
+    category: "Pulse"
+    status: "complete"
+    createdAt: "2026-09-09T00:40:00Z"
+    updatedAt: "2026-09-09T00:40:00Z"
+    siteName: "lcmc"
+    siteCollection: "lcmc"
+    notes:
+      - "2026-09-09: LCMC-only Pulse overlay. Code-only; no new Sitecore items. Pack at src/lib/pulse-packs/lcmc.ts keyed by site name lcmc."
+      - "Providers from Data/Physicians via fetchPhysicianListingPayload (same Edge catalog as Find a Provider / LcmcAppointmentScheduler). ENT + WJMC demo: Gabrielle Moreau MD {24EB9BF3-BFD6-4D01-87A7-BAF6D3DA421C}, Dominic Lirette MD {010E3311-06A7-4904-AFD0-202FD565A796}."
+      - "Language: detect Spanish vs English from the user question; reply in that language. Do not translate physician or hospital proper names."
+      - "Book deep-link: /For-Patients/Patient-Appointments?specialty=&location=. LcmcAppointmentScheduler reads those query params. Did not change Default Pulse copy used by Quanex/Pillsbury/Amkor."
+    verification:
+      checkedAt: "2026-09-09T00:40:00Z"
+      passed:
+        - "lcmc registered in PULSE_SITE_PACKS; other packs keep composeAnswer/widgetCopy undefined"
+        - "Jest: LCMC language detection, ENT/WJMC matching, appointment query mapping"
+      failed: []
+      pendingManual:
+        - "Publish Data/Physicians (26 items including Gabrielle Moreau and Dominic Lirette) and Patient Appointments so Edge/live Pulse can hydrate the catalog"
+        - "Redeploy the site-base rendering host so /lcmc/en/ Pulse uses the LCMC pack"
+        - "On /lcmc/en/ ask Pulse the EN and ES ENT + West Jefferson questions and confirm Moreau + Lirette plus the appointment deep-link"
+        - "On /quanex/en/ confirm Pulse still answers IG spacers with Quanex starters"
 
   - name: "quanex-header-nav-remap"
     kind: "content-update"

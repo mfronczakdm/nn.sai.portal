@@ -115,6 +115,7 @@ function renderScheduler() {
 
 describe('LcmcAppointmentScheduler', () => {
   beforeEach(() => {
+    window.history.pushState({}, '', '/For-Patients/Patient-Appointments');
     global.fetch = jest.fn().mockImplementation(() => new Promise(() => undefined));
   });
 
@@ -265,6 +266,57 @@ describe('LcmcAppointmentScheduler', () => {
     fireEvent.click(screen.getByTestId('lcmc-filter-specialty-ENT'));
     expect(await screen.findByTestId('lcmc-demo-ent-wjmc')).toHaveTextContent('Gabrielle Moreau, MD');
     expect(screen.getAllByText('Dominic Lirette, MD').length).toBeGreaterThanOrEqual(2);
+    expect(screen.getAllByText('Camille Landry, MD, FACC')).toHaveLength(1);
+  });
+
+  it('applies Pulse query params to specialty and West Jefferson location filters', async () => {
+    window.history.pushState(
+      {},
+      '',
+      '/For-Patients/Patient-Appointments?specialty=ENT&location=West%20Jefferson%20Medical%20Clinic'
+    );
+    const physicians = [
+      {
+        id: `{${LCMC_DEMO_ENT_PHYSICIAN_ID}}`,
+        name: 'Gabrielle Moreau MD',
+        physicianFullName: json('Gabrielle Moreau'),
+        credentials: json('MD'),
+        specialty: json(LCMC_ENT_SPECIALTY),
+        servingLocations: {
+          targetItems: [
+            {
+              id: '{35C77454-5FB8-460D-BC12-299F7B31DE5A}',
+              name: LCMC_WJMC_LOCATION_NAME,
+              locationTitle: json(LCMC_WJMC_LOCATION_NAME),
+            },
+          ],
+        },
+      },
+      {
+        id: '{12B533A6-8DF8-4D80-B466-111A5B26B8E4}',
+        name: 'Camille Landry MD',
+        physicianFullName: json('Camille Landry'),
+        credentials: json('MD, FACC'),
+        specialty: json('Cardiology'),
+        servingLocations: {
+          targetItems: [{ id: 'loc-ej', name: 'East Jefferson General Hospital' }],
+        },
+      },
+    ];
+    (global.fetch as jest.Mock).mockResolvedValue({
+      ok: true,
+      json: async () => ({ physicians, locations: [] }),
+    });
+
+    renderScheduler();
+    await waitFor(() => expect(global.fetch).toHaveBeenCalled());
+    fireEvent.click(screen.getByTestId('lcmc-visit-sick-visit'));
+    fireEvent.click(screen.getByTestId('lcmc-appt-filters'));
+
+    await waitFor(() => {
+      expect(screen.getByTestId('lcmc-filter-specialty-ENT')).toBeChecked();
+    });
+    expect(await screen.findByTestId('lcmc-demo-ent-wjmc')).toHaveTextContent('Gabrielle Moreau, MD');
     expect(screen.getAllByText('Camille Landry, MD, FACC')).toHaveLength(1);
   });
 

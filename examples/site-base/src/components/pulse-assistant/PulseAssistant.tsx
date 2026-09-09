@@ -263,7 +263,8 @@ export function PulseAssistant({ hidden = false, siteName = null }: PulseAssista
                 <h2 className="text-base font-semibold tracking-tight">Pulse</h2>
               </div>
               <p className="mt-0.5 text-xs text-primary-foreground/80">
-                Find the right {pack.brandName} pages from published site content
+                {pack.widgetCopy?.subtitle ||
+                  `Find the right ${pack.brandName} pages from published site content`}
               </p>
               {stateCode ? (
                 <span className="mt-2 inline-flex rounded-md bg-primary-foreground/15 px-2 py-0.5 text-[11px] font-medium">
@@ -289,8 +290,8 @@ export function PulseAssistant({ hidden = false, siteName = null }: PulseAssista
             {messages.length === 0 ? (
               <div className="space-y-3">
                 <p className="text-sm text-muted-foreground">
-                  Ask in plain language about products, categories, or support. Pulse uses the same
-                  published Experience Edge content as the live {pack.brandName} site.
+                  {pack.widgetCopy?.emptyState ||
+                    `Ask in plain language about products, categories, or support. Pulse uses the same published Experience Edge content as the live ${pack.brandName} site.`}
                 </p>
                 <div className="flex flex-col gap-2">
                   {starterPrompts.map((prompt) => (
@@ -358,7 +359,7 @@ export function PulseAssistant({ hidden = false, siteName = null }: PulseAssista
             {busy ? (
               <div className="flex items-center gap-2 text-xs text-muted-foreground">
                 <Loader2 className="h-3.5 w-3.5 animate-spin" aria-hidden />
-                Searching published content…
+                {pack.widgetCopy?.searching || 'Searching published content…'}
               </div>
             ) : null}
           </div>
@@ -370,7 +371,7 @@ export function PulseAssistant({ hidden = false, siteName = null }: PulseAssista
                 type="text"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                placeholder="Ask Pulse…"
+                placeholder={pack.widgetCopy?.placeholder || 'Ask Pulse…'}
                 disabled={busy}
                 className="min-w-0 flex-1 bg-transparent px-2 py-1.5 text-sm outline-none placeholder:text-muted-foreground"
                 aria-label="Ask Pulse a question"

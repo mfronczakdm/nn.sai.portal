@@ -195,7 +195,7 @@ export function isLcmcDemoEntPhysician(
   const name =
     'physicianFullName' in physician
       ? fieldText(physician.physicianFullName) || physician.name || ''
-      : physician.name;
+      : physician.name || '';
   return /gabrielle\s+moreau/i.test(name);
 }
 
@@ -499,4 +499,78 @@ export function findLcmcSlot(
 export function confirmationNumber(now: Date): string {
   const stamp = now.getTime().toString(36).toUpperCase().slice(-6);
   return `LCMC-${stamp}`;
+}
+
+export type LcmcAppointmentQuery = {
+  specialty?: string;
+  location?: string;
+  provider?: string;
+};
+
+function foldQueryValue(value: string): string {
+  return value
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9\s]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function pickClosestLabel(needle: string | undefined, labels: string[]): string | undefined {
+  if (!needle) return undefined;
+  const folded = foldQueryValue(needle);
+  if (!folded) return undefined;
+  const exact = labels.find((label) => foldQueryValue(label) === folded);
+  if (exact) return exact;
+
+  const needleTokens = folded.split(' ').filter((token) => token.length >= 3);
+  let best: { label: string; overlap: number } | null = null;
+  for (const label of labels) {
+    const labelFolded = foldQueryValue(label);
+    if (labelFolded.includes(folded) || folded.includes(labelFolded)) return label;
+    const labelTokens = labelFolded.split(' ').filter((token) => token.length >= 3);
+    const overlap = needleTokens.filter((token) => labelTokens.includes(token)).length;
+    if (overlap >= 2 && (!best || overlap > best.overlap)) {
+      best = { label, overlap };
+    }
+  }
+  return best?.label;
+}
+
+/** Read specialty / location / provider from Patient Appointments query string. */
+export function parseLcmcAppointmentSearch(search: string): LcmcAppointmentQuery {
+  const raw = search.startsWith('?') ? search.slice(1) : search;
+  const params = new URLSearchParams(raw);
+  const specialty = params.get('specialty')?.trim() || undefined;
+  const location = params.get('location')?.trim() || params.get('clinic')?.trim() || undefined;
+  const provider = params.get('provider')?.trim() || undefined;
+  return { specialty, location, provider };
+}
+
+export function buildLcmcAppointmentSearch(query: LcmcAppointmentQuery): string {
+  const params = new URLSearchParams();
+  if (query.specialty) params.set('specialty', query.specialty);
+  if (query.location) params.set('location', query.location);
+  if (query.provider) params.set('provider', query.provider);
+  const qs = params.toString();
+  return qs ? `/For-Patients/Patient-Appointments?${qs}` : '/For-Patients/Patient-Appointments';
+}
+
+/**
+ * Map query-string values onto catalog filter labels (WJMC clinic nickname,
+ * provider name without credentials, etc.).
+ */
+export function applyLcmcAppointmentQuery(
+  query: LcmcAppointmentQuery,
+  options: { specialties: string[]; clinics: string[]; names: string[] }
+): { specialties: string[]; clinics: string[]; providers: string[] } {
+  const specialty = pickClosestLabel(query.specialty, options.specialties);
+  const clinic = pickClosestLabel(query.location, options.clinics);
+  const provider = pickClosestLabel(query.provider, options.names);
+  return {
+    specialties: specialty ? [specialty] : [],
+    clinics: clinic ? [clinic] : [],
+    providers: provider ? [provider] : [],
+  };
 }
