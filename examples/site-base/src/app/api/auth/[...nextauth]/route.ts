@@ -1,4 +1,4 @@
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 
 import { handlers } from '@/auth';
 import { isAuthSecretConfigured } from '@/lib/auth/secret';
@@ -30,14 +30,14 @@ function missingSecretResponse(request: Request): Response {
   return NextResponse.json({ error: 'Auth is not configured' }, { status: 503 });
 }
 
-export async function GET(request: Request): Promise<Response> {
+export async function GET(request: NextRequest): Promise<Response> {
   if (!isAuthSecretConfigured()) {
     return missingSecretResponse(request);
   }
   return handlers.GET(request);
 }
 
-export async function POST(request: Request): Promise<Response> {
+export async function POST(request: NextRequest): Promise<Response> {
   if (!isAuthSecretConfigured()) {
     return missingSecretResponse(request);
   }

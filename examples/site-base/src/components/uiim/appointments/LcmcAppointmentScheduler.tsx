@@ -174,7 +174,7 @@ function hasAssignedAppointmentDatasource(
 }
 
 function resolveDatasource(
-  fields?: LcmcAppointmentSchedulerProps['fields']
+  fields?: LcmcAppointmentSchedulerProps['fields'] | null
 ): LcmcAppointmentDatasource | null {
   const graphql = fields?.data?.datasource;
   if (graphql && typeof graphql === 'object') {
