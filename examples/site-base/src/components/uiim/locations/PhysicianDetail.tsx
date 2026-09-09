@@ -190,7 +190,7 @@ export const Default = (props: PhysicianDetailProps): JSX.Element => {
             <Link
               href={bookHref}
               data-testid="physician-detail-book-cta"
-              className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 focus-visible:ring-primary-foreground inline-flex items-center justify-center gap-2 rounded-default px-6 py-3 text-sm font-semibold shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-primary"
+              className="physician-detail__book-cta inline-flex items-center justify-center gap-2 rounded-default border border-white bg-white px-6 py-3 text-sm font-semibold text-primary no-underline shadow-sm transition-colors hover:border-white hover:bg-muted hover:text-primary focus:bg-muted focus:text-primary focus-visible:bg-muted focus-visible:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-primary"
             >
               <Calendar aria-hidden className="size-4 shrink-0" />
               Book an appointment now

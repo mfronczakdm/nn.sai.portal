@@ -10785,7 +10785,7 @@ ia:
     category: "Locations"
     status: "complete"
     createdAt: "2026-09-08T18:30:00Z"
-    updatedAt: "2026-09-09T13:45:00Z"
+    updatedAt: "2026-09-09T14:30:00Z"
     siteName: "lcmc"
     siteCollection: "lcmc"
     contentRootPath: "/sitecore/content/lcmc/lcmc"
@@ -10796,6 +10796,7 @@ ia:
       - "Find a Provider hub has PhysicianListing only — no PhysicianDetail on the hub."
       - "2026-09-08: Added ENT detail pages Gabrielle Moreau MD and Dominic Lirette MD under Find a Provider (Services Page). PhysicianDetail on headless-main points at Data/Physicians items. Auto-created local /Data/PhysicianDetail items deleted. Existing 24 pages unchanged."
       - "2026-09-09: Code-only LCMC PhysicianDetail header — teal profile band, professional photo, Book an appointment now CTA via buildLcmcPhysicianAppointmentHref (visit=sick-visit + provider/specialty/location). No Sitecore field or Default-layout changes. Named photos for Craig Conard / Jose Wiley / Aimee Aysenne from lcmchealth.org public assets under public/lcmc/physicians/; demo catalog names use Unsplash clinical placeholders. Craig Conard is not in Data/Physicians."
+      - "2026-09-09: Book CTA hover/focus no longer uses bg-primary (same teal as the header). Rest is white + teal text; hover/focus is muted off-white + teal text. Theme lock in lcmc.css on .physician-detail__book-cta."
     react:
       filePath: "src/components/uiim/locations/PhysicianDetail.tsx"
       componentMapKey: "PhysicianDetail"
@@ -10881,7 +10882,7 @@ ia:
     skippedPages:
       - { name: "Find a Provider", pageId: "{BAE717F7-D99D-4722-8FAF-CED2581DF809}", reason: "listing hub — PhysicianListing only, not a person" }
     verification:
-      checkedAt: "2026-09-09T13:45:00Z"
+      checkedAt: "2026-09-09T14:30:00Z"
       passed:
         - "Reused LCMC Physician template; get_component datasourceTemplateId {DD974469-0EF7-479D-8E2B-F61C09E0C4DB}"
         - "JSON Rendering created; componentName PhysicianDetail; ComponentQuery empty; AddFieldEditorButton 1"
@@ -10890,6 +10891,7 @@ ia:
         - "Find a Provider has 26 physician child pages; listing datasource is the Physicians folder"
         - "React file created; generate-map registered PhysicianDetail; Jest tests passed"
         - "2026-09-09: Jest PhysicianDetail + lcmc-appointment-pack + lcmc-physician-photos — Book CTA href visit=sick-visit for mocked physician"
+        - "2026-09-09: Jest PhysicianDetail — Book CTA rest/hover/focus classes stay high-contrast (bg-white/hover:bg-muted, not hover:bg-primary)"
       failed: []
       pendingManual:
         - "Publish rendering, Headless Variants, Available Renderings, Data/Physicians (including Gabrielle Moreau and Dominic Lirette), Find a Provider, and 26 detail pages for Edge"

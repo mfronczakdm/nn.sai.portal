@@ -21,6 +21,7 @@ import {
 } from './lib/locale';
 import client from './lib/sitecore-client';
 import { tryScrunchAxp } from './lib/scrunch-axp';
+import { isStaticAssetPath } from './lib/static-asset-path';
 
 /** Sites JSON may be empty at build time; cast so site.name is typed correctly. */
 const sitesAll = sitesJson as SiteInfo[];
@@ -153,6 +154,10 @@ function resolveLocaleRequest(req: NextRequest): { request: NextRequest; locale?
 }
 
 export default async function proxy(req: NextRequest) {
+  if (isStaticAssetPath(req.nextUrl.pathname)) {
+    return NextResponse.next();
+  }
+
   const axp = await tryScrunchAxp(req);
   if (axp) return axp;
 
@@ -173,13 +178,14 @@ export const config = {
    * 3. /sitecore/api (Sitecore API routes)
    * 4. /- (Sitecore media)
    * 5. /healthz (Health check)
-   * 7. all root files inside /public
+   * 7. /public files — root (favicon) and nested (*.jpg). `.*\\..*` is required
+   *    because Pages preview rewrites dotted paths if they enter this proxy.
    *
    * Kept Sitecore exclusions (do not replace with Scrunch’s broader matcher)
    * so editing, APIs, and media stay on the Sitecore/origin path.
    */
   matcher: [
     '/',
-    '/((?!api/|\\.well-known/|sitemap|robots|llms|_next/|healthz|sitecore/api/|-/|favicon.ico|sc_logo.svg|ai/).*)',
+    '/((?!api/|\\.well-known/|sitemap|robots|llms|_next/|healthz|sitecore/api/|-/|favicon.ico|sc_logo.svg|ai/|.*\\..*).*)',
   ],
 };

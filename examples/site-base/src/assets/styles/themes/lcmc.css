@@ -70,6 +70,19 @@
   color: var(--color-primary-foreground);
 }
 
+/* PhysicianDetail book CTA sits on the teal header — never fill hover/focus with primary. */
+[data-theme='lcmc'] .physician-detail__book-cta {
+  background-color: #ffffff;
+  color: #007a87;
+}
+
+[data-theme='lcmc'] .physician-detail__book-cta:hover,
+[data-theme='lcmc'] .physician-detail__book-cta:focus,
+[data-theme='lcmc'] .physician-detail__book-cta:focus-visible {
+  background-color: #f4f4f4;
+  color: #007a87;
+}
+
 [data-theme='lcmc'] .bg-secondary,
 [data-theme='lcmc'] .bg-accent,
 [data-theme='lcmc'] .bg-dark {

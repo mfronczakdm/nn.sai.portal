@@ -121,6 +121,11 @@ describe('PhysicianDetail', () => {
     expect(expected).toBe(
       '/For-Patients/Patient-Appointments?visit=sick-visit&specialty=Cardiology&location=East+Jefferson+General+Hospital&provider=Camille+Landry'
     );
+    expect(cta).toHaveClass('physician-detail__book-cta', 'bg-white', 'text-primary');
+    expect(cta).toHaveClass('hover:bg-muted', 'hover:text-primary');
+    expect(cta).toHaveClass('focus:bg-muted', 'focus:text-primary');
+    expect(cta).toHaveClass('focus-visible:bg-muted', 'focus-visible:text-primary');
+    expect(cta).not.toHaveClass('hover:bg-primary', 'hover:bg-primary-hover', 'focus:bg-primary');
   });
 
   it('deep-links Gabrielle Moreau ENT at West Jefferson onto slot selection', () => {
