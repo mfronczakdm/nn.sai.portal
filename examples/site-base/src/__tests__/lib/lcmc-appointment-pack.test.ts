@@ -2,6 +2,7 @@ import {
   addCalendarDays,
   applyLcmcAppointmentQuery,
   buildLcmcAppointmentSearch,
+  buildLcmcPhysicianAppointmentHref,
   buildLcmcAvailability,
   confirmationNumber,
   filterLcmcAvailability,
@@ -15,6 +16,8 @@ import {
   listLcmcFilterOptions,
   parseLcmcAppointmentSearch,
   providersFromPhysicianListing,
+  resolveLcmcDeepLinkVisit,
+  shouldSkipLcmcVisitTypes,
 } from '@/lib/lcmc-appointment-pack';
 
 function json(value: string) {
@@ -174,11 +177,12 @@ describe('lcmc-appointment-pack', () => {
 
   it('parses Pulse deep-link query params and maps clinic nicknames to WJMC', () => {
     const query = parseLcmcAppointmentSearch(
-      '?specialty=ENT&location=West%20Jefferson%20Medical%20Clinic&provider=Gabrielle%20Moreau'
+      '?visit=sick-visit&specialty=ENT&location=West%20Jefferson%20Medical%20Clinic&provider=Gabrielle%20Moreau'
     );
     expect(query.specialty).toBe('ENT');
     expect(query.location).toBe('West Jefferson Medical Clinic');
     expect(query.provider).toBe('Gabrielle Moreau');
+    expect(query.visit).toBe('sick-visit');
 
     const applied = applyLcmcAppointmentQuery(query, {
       specialties: [LCMC_ENT_SPECIALTY, 'Cardiology'],
@@ -189,12 +193,38 @@ describe('lcmc-appointment-pack', () => {
     expect(applied.clinics).toEqual([LCMC_WJMC_LOCATION_NAME]);
     expect(applied.providers).toEqual(['Gabrielle Moreau, MD']);
     const href = buildLcmcAppointmentSearch({
+      visit: 'sick-visit',
+      specialty: LCMC_ENT_SPECIALTY,
+      location: LCMC_WJMC_LOCATION_NAME,
+      provider: 'Gabrielle Moreau',
+    });
+    const params = new URLSearchParams(href.split('?')[1]);
+    expect(href.startsWith('/For-Patients/Patient-Appointments?')).toBe(true);
+    expect(params.get('visit')).toBe('sick-visit');
+    expect(params.get('specialty')).toBe(LCMC_ENT_SPECIALTY);
+    expect(params.get('location')).toBe(LCMC_WJMC_LOCATION_NAME);
+    expect(params.get('provider')).toBe('Gabrielle Moreau');
+  });
+
+  it('builds a physician profile CTA that skips visit types for that provider', () => {
+    const href = buildLcmcPhysicianAppointmentHref({
+      fullName: 'Gabrielle Moreau, MD',
+      credentials: 'MD',
       specialty: LCMC_ENT_SPECIALTY,
       location: LCMC_WJMC_LOCATION_NAME,
     });
     const params = new URLSearchParams(href.split('?')[1]);
     expect(href.startsWith('/For-Patients/Patient-Appointments?')).toBe(true);
+    expect(params.get('visit')).toBe('sick-visit');
     expect(params.get('specialty')).toBe(LCMC_ENT_SPECIALTY);
     expect(params.get('location')).toBe(LCMC_WJMC_LOCATION_NAME);
+    expect(params.get('provider')).toBe('Gabrielle Moreau');
+  });
+
+  it('skips visit types when visit or step=slots is on the query string', () => {
+    expect(shouldSkipLcmcVisitTypes(parseLcmcAppointmentSearch('?step=slots'))).toBe(true);
+    expect(resolveLcmcDeepLinkVisit(parseLcmcAppointmentSearch('?step=slots'))).toBe('sick-visit');
+    expect(shouldSkipLcmcVisitTypes(parseLcmcAppointmentSearch('?visit=sick-visit'))).toBe(true);
+    expect(shouldSkipLcmcVisitTypes(parseLcmcAppointmentSearch('?specialty=ENT'))).toBe(false);
   });
 });

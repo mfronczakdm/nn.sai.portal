@@ -128,7 +128,11 @@ describe('LCMC Pulse need + provider matching', () => {
       specialty: LCMC_ENT_SPECIALTY,
       location: LCMC_WJMC_LOCATION_NAME,
     });
-    expect(new URLSearchParams(href.split('?')[1]).get('location')).toBe(LCMC_WJMC_LOCATION_NAME);
+    const params = new URLSearchParams(href.split('?')[1]);
+    expect(params.get('visit')).toBe('sick-visit');
+    expect(params.get('specialty')).toBe('ENT');
+    expect(params.get('location')).toBe(LCMC_WJMC_LOCATION_NAME);
+    expect(params.get('provider')).toBe('Gabrielle Moreau');
   });
 });
 

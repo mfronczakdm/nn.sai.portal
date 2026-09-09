@@ -261,7 +261,7 @@ export function listLcmcFilterOptions(providers: LcmcProvider[]): {
 }
 
 const VISIT_LABELS: Record<LcmcVisitKey, string> = {
-  'check-up': 'Well-child / physical',
+  'check-up': 'Annual physical',
   'sick-visit': 'Sick visit',
   'medicine-behavior': 'Medicine check or behavior concern',
   'flu-shot': 'Flu shot (seasonal)',
@@ -270,7 +270,7 @@ const VISIT_LABELS: Record<LcmcVisitKey, string> = {
 };
 
 const VISIT_DETAIL_PREFIX: Record<LcmcVisitKey, string> = {
-  'check-up': 'Well-child visit with',
+  'check-up': 'Annual physical with',
   'sick-visit': 'Primary Care Office Visit with',
   'medicine-behavior': 'Follow-up visit with',
   'flu-shot': 'Flu vaccine visit with',
@@ -505,6 +505,8 @@ export type LcmcAppointmentQuery = {
   specialty?: string;
   location?: string;
   provider?: string;
+  visit?: LcmcVisitKey;
+  step?: string;
 };
 
 function foldQueryValue(value: string): string {
@@ -538,24 +540,89 @@ function pickClosestLabel(needle: string | undefined, labels: string[]): string 
   return best?.label;
 }
 
-/** Read specialty / location / provider from Patient Appointments query string. */
+function parseVisitKey(raw: string | null): LcmcVisitKey | undefined {
+  if (!raw) return undefined;
+  const folded = foldQueryValue(raw).replace(/\s+/g, '-');
+  return isLcmcVisitKey(folded) ? folded : undefined;
+}
+
+/** Read specialty / location / provider / visit from Patient Appointments query string. */
 export function parseLcmcAppointmentSearch(search: string): LcmcAppointmentQuery {
   const raw = search.startsWith('?') ? search.slice(1) : search;
   const params = new URLSearchParams(raw);
   const specialty = params.get('specialty')?.trim() || undefined;
   const location = params.get('location')?.trim() || params.get('clinic')?.trim() || undefined;
   const provider = params.get('provider')?.trim() || undefined;
-  return { specialty, location, provider };
+  const visit =
+    parseVisitKey(params.get('visit')) ||
+    parseVisitKey(params.get('visitType')) ||
+    parseVisitKey(params.get('visitKey'));
+  const step = params.get('step')?.trim().toLowerCase() || undefined;
+  return { specialty, location, provider, visit, step };
+}
+
+/** Skip the visit-type grid when the URL already names a visit or step=slots. */
+export function shouldSkipLcmcVisitTypes(query: LcmcAppointmentQuery): boolean {
+  return Boolean(query.visit) || query.step === 'slots';
+}
+
+export function resolveLcmcDeepLinkVisit(query: LcmcAppointmentQuery): LcmcVisitKey | undefined {
+  if (query.visit) return query.visit;
+  if (query.step === 'slots') return 'sick-visit';
+  return undefined;
 }
 
 export function buildLcmcAppointmentSearch(query: LcmcAppointmentQuery): string {
   const params = new URLSearchParams();
+  if (query.visit) params.set('visit', query.visit);
+  if (query.step === 'slots' && !query.visit) params.set('step', 'slots');
   if (query.specialty) params.set('specialty', query.specialty);
   if (query.location) params.set('location', query.location);
   if (query.provider) params.set('provider', query.provider);
   const qs = params.toString();
   return qs ? `/For-Patients/Patient-Appointments?${qs}` : '/For-Patients/Patient-Appointments';
 }
+
+const TRAILING_CREDENTIALS =
+  /,?\s*(MD|DO|NP|PA|RN|PhD|MPH|FACC|FAAP|FACS|FACOG)(\s*,\s*(MD|DO|NP|PA|RN|PhD|MPH|FACC|FAAP|FACS|FACOG))*\s*$/i;
+
+/** Scheduler `provider` query uses the given name without credential suffixes. */
+export function lcmcProviderQueryName(fullName: string, credentials?: string): string {
+  let name = fullName.trim();
+  if (!name) return '';
+  if (credentials) {
+    const escaped = credentials.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    name = name.replace(new RegExp(`,?\\s*${escaped}\\s*$`, 'i'), '').trim();
+  }
+  return name.replace(TRAILING_CREDENTIALS, '').trim() || fullName.trim();
+}
+
+/**
+ * PhysicianDetail / profile CTA: skip visit types and land on this provider's slots.
+ * `visit=sick-visit` plus specialty, location, and the provider's given name.
+ */
+export function buildLcmcPhysicianAppointmentHref(options: {
+  fullName: string;
+  credentials?: string;
+  specialty?: string;
+  location?: string;
+}): string {
+  const provider = lcmcProviderQueryName(options.fullName, options.credentials);
+  return buildLcmcAppointmentSearch({
+    visit: 'sick-visit',
+    specialty: options.specialty || undefined,
+    location: options.location || undefined,
+    provider: provider || undefined,
+  });
+}
+
+/** Demo URL: sick visit → Gabrielle Moreau slots (adult ENT story). */
+export const LCMC_DEMO_MOREAU_SICK_HREF = buildLcmcAppointmentSearch({
+  visit: 'sick-visit',
+  specialty: LCMC_ENT_SPECIALTY,
+  location: LCMC_WJMC_LOCATION_NAME,
+  provider: 'Gabrielle Moreau',
+});
 
 /**
  * Map query-string values onto catalog filter labels (WJMC clinic nickname,

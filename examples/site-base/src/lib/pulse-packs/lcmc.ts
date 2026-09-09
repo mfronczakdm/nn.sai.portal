@@ -62,7 +62,7 @@ export const lcmcPulsePack: PulseSitePack = {
       'Patient Appointments',
       '/For-Patients/Patient-Appointments',
       `${HOME}/For Patients/Patient Appointments`,
-      'Book a visit. Filters can pre-select specialty, location, and provider.'
+      'Book a visit. Deep links can skip visit type (visit=sick-visit) and pre-select specialty, location, and provider.',
     ),
     '{87C759FA-EFED-4FAE-80EA-5CD10A4C0046}': page(
       '{87C759FA-EFED-4FAE-80EA-5CD10A4C0046}',

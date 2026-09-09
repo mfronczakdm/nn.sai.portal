@@ -74,7 +74,7 @@ function json(value: string) {
 const datasource = {
   appointmentTitle: json('Patient Appointments'),
   emergencyText: json('For emergencies, please call 911 or go directly to the nearest emergency room.'),
-  visitQuestion: json('What type of visit would you like to schedule for your child?'),
+  visitQuestion: json('What type of visit would you like to schedule?'),
   filtersLabel: json('Filters'),
   showMoreLabel: json('Show more appointment times'),
   fluNote: json('Note: Flu vaccine scheduling is now open.'),
@@ -156,7 +156,7 @@ describe('LcmcAppointmentScheduler', () => {
       <LcmcAppointmentScheduler
         fields={{
           AppointmentTitle: { value: 'Patient Appointments' },
-          VisitQuestion: { value: 'What type of visit would you like to schedule for your child?' },
+          VisitQuestion: { value: 'What type of visit would you like to schedule?' },
         }}
         params={baseParams}
         page={mockPage}
@@ -334,6 +334,54 @@ describe('LcmcAppointmentScheduler', () => {
     expect(screen.getAllByText('Camille Landry, MD, FACC')).toHaveLength(1);
   });
 
+  it('skips visit types and opens Gabrielle Moreau slots from a sick-visit deep link', async () => {
+    window.history.pushState(
+      {},
+      '',
+      '/For-Patients/Patient-Appointments?visit=sick-visit&specialty=ENT&location=West%20Jefferson%20Medical%20Center&provider=Gabrielle%20Moreau'
+    );
+    const physicians = [
+      {
+        id: `{${LCMC_DEMO_ENT_PHYSICIAN_ID}}`,
+        name: 'Gabrielle Moreau MD',
+        physicianFullName: json('Gabrielle Moreau'),
+        credentials: json('MD'),
+        specialty: json(LCMC_ENT_SPECIALTY),
+        servingLocations: {
+          targetItems: [
+            {
+              id: '{35C77454-5FB8-460D-BC12-299F7B31DE5A}',
+              name: LCMC_WJMC_LOCATION_NAME,
+              locationTitle: json(LCMC_WJMC_LOCATION_NAME),
+            },
+          ],
+        },
+      },
+      {
+        id: '{12B533A6-8DF8-4D80-B466-111A5B26B8E4}',
+        name: 'Camille Landry MD',
+        physicianFullName: json('Camille Landry'),
+        credentials: json('MD, FACC'),
+        specialty: json('Cardiology'),
+        servingLocations: {
+          targetItems: [{ id: 'loc-ej', name: 'East Jefferson General Hospital' }],
+        },
+      },
+    ];
+    (global.fetch as jest.Mock).mockResolvedValue({
+      ok: true,
+      json: async () => ({ physicians, locations: [] }),
+    });
+
+    renderScheduler();
+    expect(await screen.findByTestId('lcmc-appt-slots')).toBeInTheDocument();
+    expect(screen.queryByTestId('lcmc-appt-visit-grid')).not.toBeInTheDocument();
+    expect(await screen.findByTestId('lcmc-demo-ent-wjmc')).toHaveTextContent('Gabrielle Moreau, MD');
+    await waitFor(() => {
+      expect(screen.queryByText('Camille Landry, MD, FACC')).not.toBeInTheDocument();
+    });
+  });
+
   it('completes the guest path after a slot is selected', () => {
     renderScheduler();
     fireEvent.click(screen.getByTestId('lcmc-visit-sick-visit'));
@@ -342,7 +390,7 @@ describe('LcmcAppointmentScheduler', () => {
     fireEvent.click(screen.getByTestId('lcmc-appt-guest-cta'));
     fireEvent.change(screen.getByLabelText('First name'), { target: { value: 'Avery' } });
     fireEvent.change(screen.getByLabelText('Last name'), { target: { value: 'Nguyen' } });
-    fireEvent.change(screen.getByLabelText("Child's date of birth"), { target: { value: '2019-04-12' } });
+    fireEvent.change(screen.getByLabelText('Date of birth'), { target: { value: '2019-04-12' } });
     fireEvent.change(screen.getByLabelText('Phone'), { target: { value: '504-555-0100' } });
     fireEvent.click(screen.getByTestId('lcmc-appt-guest-submit'));
     expect(screen.getByText(/Booked as guest for Avery Nguyen/)).toBeInTheDocument();

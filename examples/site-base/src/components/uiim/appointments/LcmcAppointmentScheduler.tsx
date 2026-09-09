@@ -39,6 +39,8 @@ import {
   listLcmcFilterOptions,
   parseLcmcAppointmentSearch,
   providersFromPhysicianListing,
+  resolveLcmcDeepLinkVisit,
+  shouldSkipLcmcVisitTypes,
   type LcmcDayGroup,
   type LcmcProvider,
   type LcmcSelectedSlot,
@@ -94,13 +96,13 @@ const FALLBACK_VISITS: { key: string; title: string; description: string }[] = [
   {
     key: 'check-up',
     title: 'Check up',
-    description: 'Your child needs a well-baby visit or an annual, sports, or camp physical.',
+    description: 'You need an annual physical, sports physical, or a routine wellness visit.',
   },
   {
     key: 'sick-visit',
     title: 'Sick visit',
     description:
-      'Your child is sick. For example, your child has a cold, fever, sore throat, ear pain or other illness.',
+      'You are sick. For example, you have a cold, fever, sore throat, ear pain or other illness.',
   },
   {
     key: 'medicine-behavior',
@@ -111,19 +113,17 @@ const FALLBACK_VISITS: { key: string; title: string; description: string }[] = [
   {
     key: 'flu-shot',
     title: 'Flu shot (seasonal)',
-    description:
-      'Your child is healthy and needs a flu shot. You can schedule flu shots at any primary care location.',
+    description: 'You are healthy and need a flu shot. You can schedule flu shots at any primary care location.',
   },
   {
     key: 'covid-vaccine',
     title: 'COVID-19 vaccine',
-    description: 'Kids ages 6 months+ are eligible for the COVID-19 vaccine.',
+    description: 'Adults and teens are eligible for the COVID-19 vaccine.',
   },
   {
     key: 'flu-and-covid',
     title: 'Flu and COVID-19',
-    description:
-      'Your child can receive the flu vaccine and this season’s COVID-19 vaccine at the same time.',
+    description: 'You can receive the flu vaccine and this season’s COVID-19 vaccine at the same time.',
   },
 ];
 
@@ -142,6 +142,12 @@ function toJsonText(field: unknown): JsonText | undefined {
 function fieldString(field?: JsonText | null): string {
   const value = field?.jsonValue?.value;
   return typeof value === 'string' ? value.trim() : '';
+}
+
+function adultVisitQuestion(field?: JsonText | null): string {
+  const authored = fieldString(field);
+  if (!authored) return 'What type of visit would you like to schedule?';
+  return authored.replace(/\s+for your child\??/i, '?').replace(/\?\?+/g, '?');
 }
 
 function toEditableField(field?: JsonText | null): JsonFieldValue | undefined {
@@ -333,6 +339,12 @@ const LcmcAppointmentSchedulerInner = ({
   useEffect(() => {
     if (typeof window === 'undefined') return;
     const query = parseLcmcAppointmentSearch(window.location.search);
+    const deepLinkVisit = resolveLcmcDeepLinkVisit(query);
+    if (deepLinkVisit && shouldSkipLcmcVisitTypes(query)) {
+      setVisitKey(deepLinkVisit);
+      setVisitTitle(lcmcVisitLabel(deepLinkVisit));
+      setStep('slots');
+    }
     if (!query.specialty && !query.location && !query.provider) return;
     const applied = applyLcmcAppointmentQuery(query, listLcmcFilterOptions(catalogProviders));
     if (applied.specialties.length) setSpecialtyFilters(applied.specialties);
@@ -471,18 +483,17 @@ const LcmcAppointmentSchedulerInner = ({
 
           {step === 'visit-types' ? (
             <>
-              {(fieldString(datasource.visitQuestion) || isEditing) && (
+              {isEditing && toEditableField(datasource.visitQuestion) ? (
                 <Text
                   tag="h2"
                   field={toEditableField(datasource.visitQuestion)}
                   className="text-foreground text-lg font-semibold md:text-xl"
                 />
-              )}
-              {!fieldString(datasource.visitQuestion) && !isEditing ? (
+              ) : (
                 <h2 className="text-foreground text-lg font-semibold md:text-xl">
-                  What type of visit would you like to schedule for your child?
+                  {adultVisitQuestion(datasource.visitQuestion)}
                 </h2>
-              ) : null}
+              )}
 
               <div className="grid gap-4 sm:grid-cols-2" data-testid="lcmc-appt-visit-grid">
                 {visits.map((visit) => (
@@ -716,7 +727,7 @@ const LcmcAppointmentSchedulerInner = ({
                 ) : (
                   <p>
                     For urgent needs, consider urgent care or the emergency department. Use our
-                    symptom checker for help on where to take your child.
+                    symptom checker for help on where to go.
                   </p>
                 )}
               </div>
@@ -732,7 +743,7 @@ const LcmcAppointmentSchedulerInner = ({
         >
           <Card className="mx-auto max-w-4xl overflow-hidden rounded-2xl shadow-lg">
             <CardHeader className="space-y-2">
-              <p className="text-muted-foreground text-sm">LCMC Health · Manning Family Children&apos;s</p>
+              <p className="text-muted-foreground text-sm">LCMC Health</p>
               <CardTitle className="font-heading text-3xl">
                 {fieldString(datasource.finishTitle) || 'Finish Scheduling'}
               </CardTitle>
@@ -896,7 +907,7 @@ const LcmcAppointmentSchedulerInner = ({
               </div>
             </div>
             <div className="space-y-2">
-              <Label htmlFor="lcmc-guest-dob">Child&apos;s date of birth</Label>
+              <Label htmlFor="lcmc-guest-dob">Date of birth</Label>
               <Input
                 id="lcmc-guest-dob"
                 type="date"

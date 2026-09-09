@@ -2,6 +2,7 @@ import {
   LCMC_ENT_SPECIALTY,
   LCMC_PHYSICIANS_FOLDER_PATH,
   LCMC_WJMC_LOCATION_NAME,
+  buildLcmcAppointmentSearch,
   isLcmcDemoEntPhysician,
   providersFromPhysicianListing,
   type LcmcPhysicianSource,
@@ -330,12 +331,15 @@ export function lcmcPhysicianDetailHref(
   return segment ? `${LCMC_FIND_PROVIDER_PATH}/${segment}` : LCMC_FIND_PROVIDER_PATH;
 }
 
-export function buildLcmcAppointmentHref(need: Pick<LcmcPulseNeed, 'specialty' | 'location'>): string {
-  const params = new URLSearchParams();
-  if (need.specialty) params.set('specialty', need.specialty);
-  if (need.location) params.set('location', need.location);
-  const query = params.toString();
-  return query ? `${LCMC_APPOINTMENTS_PATH}?${query}` : LCMC_APPOINTMENTS_PATH;
+export function buildLcmcAppointmentHref(
+  need: Pick<LcmcPulseNeed, 'specialty' | 'location'>
+): string {
+  return buildLcmcAppointmentSearch({
+    visit: 'sick-visit',
+    specialty: need.specialty,
+    location: need.location,
+    provider: need.specialty === LCMC_ENT_SPECIALTY ? 'Gabrielle Moreau' : undefined,
+  });
 }
 
 function pageSource(
@@ -492,8 +496,8 @@ export async function retrieveLcmcPulseSources(
         resolvedNeed.language === 'es' ? 'Reservar una cita' : 'Book an appointment',
         buildLcmcAppointmentHref(resolvedNeed),
         resolvedNeed.language === 'es'
-          ? 'Patient Appointments — elija un tipo de visita y un horario.'
-          : 'Patient Appointments — pick a visit type and time.',
+          ? 'Patient Appointments — elija un horario para esta visita.'
+          : 'Patient Appointments — pick a time for this visit.',
         'other',
         850
       )

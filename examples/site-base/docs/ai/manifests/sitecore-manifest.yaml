@@ -3223,6 +3223,7 @@ pageTemplates:
       - "2026-09-02T18:50: Pages still showed 'requires a datasource' after the parent DS was assigned. Root cause: parent template was missing _HorizonDatasourceGrouping and _PublishingGroupingTemplate, so Pages did not treat Patient Appointments as a valid grouping datasource and GraphQL/layout returned empty fields.data.datasource (React NoDataFallback). Added grouping bases; re-assigned DS; React now maps jsonValue/JSS fields and renders fallback visit cards in editing when GraphQL is empty. Do not pick a visit-type child or the folder as the datasource."
       - "2026-09-09: Replaced the 3 hardcoded pack names with Data/Physicians via /api/physician-listing (same Edge complexity workaround as PhysicianListing). Did not add physician children under Patient Appointments. Did not change shared portal Default appointment UI. Gabrielle Moreau is the demo ENT + West Jefferson Medical Center doctor; Dominic Lirette is the second ENT at WJMC. Scheduler filters now include Specialty, Location, and all 26 provider names."
       - "2026-09-09: Scheduler reads Pulse deep-link query params specialty, location/clinic, and provider (West Jefferson Medical Clinic maps to West Jefferson Medical Center). Code-only; no Sitecore item changes."
+      - "2026-09-09: visit=sick-visit or step=slots skips the visit-type grid and opens slots. ENT Pulse book links include visit=sick-visit and provider=Gabrielle Moreau. Delivery copy is adult (no child/well-baby). Demo URL: /For-Patients/Patient-Appointments?visit=sick-visit&specialty=ENT&location=West Jefferson Medical Center&provider=Gabrielle Moreau"
 
 lookups:
   - path: "/sitecore/content/progressive/pkm/Data"
@@ -10784,7 +10785,7 @@ ia:
     category: "Locations"
     status: "complete"
     createdAt: "2026-09-08T18:30:00Z"
-    updatedAt: "2026-09-09T00:15:00Z"
+    updatedAt: "2026-09-09T13:45:00Z"
     siteName: "lcmc"
     siteCollection: "lcmc"
     contentRootPath: "/sitecore/content/lcmc/lcmc"
@@ -10794,6 +10795,7 @@ ia:
       - "24 Services Page children created under Find a Provider; names match Data/Physicians items. Each has PhysicianDetail on headless-main with matching Data/Physicians datasource. Auto-created local /Data/PhysicianDetail items deleted."
       - "Find a Provider hub has PhysicianListing only — no PhysicianDetail on the hub."
       - "2026-09-08: Added ENT detail pages Gabrielle Moreau MD and Dominic Lirette MD under Find a Provider (Services Page). PhysicianDetail on headless-main points at Data/Physicians items. Auto-created local /Data/PhysicianDetail items deleted. Existing 24 pages unchanged."
+      - "2026-09-09: Code-only LCMC PhysicianDetail header — teal profile band, professional photo, Book an appointment now CTA via buildLcmcPhysicianAppointmentHref (visit=sick-visit + provider/specialty/location). No Sitecore field or Default-layout changes. Named photos for Craig Conard / Jose Wiley / Aimee Aysenne from lcmchealth.org public assets under public/lcmc/physicians/; demo catalog names use Unsplash clinical placeholders. Craig Conard is not in Data/Physicians."
     react:
       filePath: "src/components/uiim/locations/PhysicianDetail.tsx"
       componentMapKey: "PhysicianDetail"
@@ -10879,7 +10881,7 @@ ia:
     skippedPages:
       - { name: "Find a Provider", pageId: "{BAE717F7-D99D-4722-8FAF-CED2581DF809}", reason: "listing hub — PhysicianListing only, not a person" }
     verification:
-      checkedAt: "2026-09-08T19:15:00Z"
+      checkedAt: "2026-09-09T13:45:00Z"
       passed:
         - "Reused LCMC Physician template; get_component datasourceTemplateId {DD974469-0EF7-479D-8E2B-F61C09E0C4DB}"
         - "JSON Rendering created; componentName PhysicianDetail; ComponentQuery empty; AddFieldEditorButton 1"
@@ -10887,6 +10889,7 @@ ia:
         - "Camille Landry and Thomas Nguyen pages use matching Data/Physicians datasource IDs (not local Data items)"
         - "Find a Provider has 26 physician child pages; listing datasource is the Physicians folder"
         - "React file created; generate-map registered PhysicianDetail; Jest tests passed"
+        - "2026-09-09: Jest PhysicianDetail + lcmc-appointment-pack + lcmc-physician-photos — Book CTA href visit=sick-visit for mocked physician"
       failed: []
       pendingManual:
         - "Publish rendering, Headless Variants, Available Renderings, Data/Physicians (including Gabrielle Moreau and Dominic Lirette), Find a Provider, and 26 detail pages for Edge"
