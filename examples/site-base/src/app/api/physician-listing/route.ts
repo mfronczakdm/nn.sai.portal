@@ -27,10 +27,19 @@ export async function GET(request: Request): Promise<NextResponse> {
     return NextResponse.json({ physicians: [], locations: [] }, { status: 400 });
   }
 
-  const { physicians, locations } = await fetchPhysicianListingPayload({
-    path,
-    language,
-    edgeMode,
-  });
-  return NextResponse.json({ physicians, locations }, { headers: { 'Cache-Control': 'no-store' } });
+  try {
+    const { physicians, locations } = await fetchPhysicianListingPayload({
+      path,
+      language,
+      edgeMode,
+    });
+    return NextResponse.json({ physicians, locations }, { headers: { 'Cache-Control': 'no-store' } });
+  } catch (error) {
+    const message = error instanceof Error ? error.message : 'Physician listing Edge request failed';
+    console.error('[api/physician-listing]', message);
+    return NextResponse.json(
+      { physicians: [], locations: [] },
+      { headers: { 'Cache-Control': 'no-store' } }
+    );
+  }
 }

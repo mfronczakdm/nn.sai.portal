@@ -137,6 +137,20 @@ describe('LcmcAppointmentScheduler', () => {
     expect(screen.getByText(/LcmcAppointmentScheduler requires a datasource/i)).toBeInTheDocument();
   });
 
+  it('renders fallback visit cards when GraphQL is empty but a datasource GUID is assigned', () => {
+    render(
+      <LcmcAppointmentScheduler
+        fields={{ data: { datasource: null } }}
+        params={baseParams}
+        page={mockPage}
+        rendering={{ ...mockRendering, dataSource: '{67471114-7CD2-4099-9331-CCCF8E61D20F}' }}
+      />
+    );
+    expect(screen.getByTestId('lcmc-appointment-scheduler')).toBeInTheDocument();
+    expect(screen.getByTestId('lcmc-visit-sick-visit')).toBeInTheDocument();
+    expect(screen.queryByText(/requires a datasource/i)).not.toBeInTheDocument();
+  });
+
   it('renders visit cards from JSS field names when GraphQL datasource is absent', () => {
     render(
       <LcmcAppointmentScheduler

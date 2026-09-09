@@ -165,6 +165,14 @@ function mapVisitChild(child: Record<string, unknown>, index: number): LcmcVisit
   };
 }
 
+function hasAssignedAppointmentDatasource(
+  fields?: LcmcAppointmentSchedulerProps['fields'] | null,
+  rendering?: { dataSource?: string } | null
+): boolean {
+  if (resolveDatasource(fields)) return true;
+  return Boolean(rendering?.dataSource?.trim());
+}
+
 function resolveDatasource(
   fields?: LcmcAppointmentSchedulerProps['fields']
 ): LcmcAppointmentDatasource | null {
@@ -257,11 +265,16 @@ type InnerProps = LcmcAppointmentSchedulerProps & { isEditing: boolean; language
 const LcmcAppointmentSchedulerInner = ({
   fields,
   params,
+  rendering,
   isEditing,
   language,
 }: InnerProps): JSX.Element => {
   const { styles, RenderingIdentifier } = params || {};
-  const datasource = resolveDatasource(fields) ?? (isEditing ? {} : null);
+  const resolved = resolveDatasource(fields);
+  const datasourceAssigned = hasAssignedAppointmentDatasource(fields, rendering);
+  // Edge can drop fields.data when ComponentQuery fails, same as PhysicianListing.
+  // If Pages assigned a datasource GUID, still render fallback visit copy.
+  const datasource = resolved ?? (isEditing || datasourceAssigned ? {} : null);
 
   const [step, setStep] = useState<WizardStep>('visit-types');
   const [visitKey, setVisitKey] = useState('');
