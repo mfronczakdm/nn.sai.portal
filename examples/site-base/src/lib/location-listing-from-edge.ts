@@ -282,7 +282,7 @@ async function fetchPage(
   const item = result?.item;
   const children = item?.children;
   return {
-    itemFound: Boolean(item?.id || item?.children),
+    itemFound: Boolean(item),
     results: mapResults(children?.results),
     endCursor: children?.pageInfo?.endCursor ?? undefined,
     hasNext: Boolean(children?.pageInfo?.hasNext && children?.pageInfo?.endCursor),
