@@ -63,6 +63,11 @@ jest.mock('@/lib/physician-listing-from-edge', () => ({
   hydratePhysicianLocations: (physicians: unknown[]) => physicians,
 }));
 
+const mockTrackBookingStarted = jest.fn();
+jest.mock('@/lib/lcmc-booking-started-event', () => ({
+  trackLcmcBookingStartedEvent: (...args: unknown[]) => mockTrackBookingStarted(...args),
+}));
+
 const baseParams = { styles: '', RenderingIdentifier: 'lcmc-appt-test' };
 const mockPage = {} as LcmcAppointmentSchedulerProps['page'];
 const mockRendering = { componentName: 'LcmcAppointmentScheduler' } as LcmcAppointmentSchedulerProps['rendering'];
@@ -117,6 +122,7 @@ describe('LcmcAppointmentScheduler', () => {
   beforeEach(() => {
     window.history.pushState({}, '', '/For-Patients/Patient-Appointments');
     global.fetch = jest.fn().mockImplementation(() => new Promise(() => undefined));
+    mockTrackBookingStarted.mockClear();
   });
 
   afterEach(() => {
@@ -199,6 +205,11 @@ describe('LcmcAppointmentScheduler', () => {
     fireEvent.click(slotButton as HTMLElement);
 
     expect(screen.getByTestId('lcmc-appt-finish')).toBeInTheDocument();
+    expect(mockTrackBookingStarted).toHaveBeenCalledTimes(1);
+    expect(mockTrackBookingStarted).toHaveBeenCalledWith({
+      visitKey: 'sick-visit',
+      visitTitle: 'Sick visit',
+    });
     expect(screen.getByText('Finish Scheduling')).toBeInTheDocument();
     fireEvent.click(screen.getByTestId('lcmc-appt-login-cta'));
 
@@ -209,6 +220,20 @@ describe('LcmcAppointmentScheduler', () => {
     expect(screen.getByTestId('lcmc-appt-confirmed')).toBeInTheDocument();
     expect(screen.getByText('Your visit is scheduled')).toBeInTheDocument();
     expect(screen.getByText(/Booked as My LCMC Health/)).toBeInTheDocument();
+  });
+
+  it('does not send Booking Started until the visitor picks a visit type', () => {
+    renderScheduler();
+    expect(mockTrackBookingStarted).not.toHaveBeenCalled();
+  });
+
+  it('does not send Booking Started in Pages editing', () => {
+    const sdk = jest.requireMock('@sitecore-content-sdk/nextjs') as { sitecoreMode: { isEditing: boolean } };
+    sdk.sitecoreMode.isEditing = true;
+    renderScheduler();
+    fireEvent.click(screen.getByTestId('lcmc-visit-sick-visit'));
+    expect(mockTrackBookingStarted).not.toHaveBeenCalled();
+    sdk.sitecoreMode.isEditing = false;
   });
 
   it('loads Data/Physicians into filters and flags Gabrielle Moreau as the ENT WJMC demo', async () => {

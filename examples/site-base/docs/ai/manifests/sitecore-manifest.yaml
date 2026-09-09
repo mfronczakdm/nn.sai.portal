@@ -3224,6 +3224,7 @@ pageTemplates:
       - "2026-09-09: Replaced the 3 hardcoded pack names with Data/Physicians via /api/physician-listing (same Edge complexity workaround as PhysicianListing). Did not add physician children under Patient Appointments. Did not change shared portal Default appointment UI. Gabrielle Moreau is the demo ENT + West Jefferson Medical Center doctor; Dominic Lirette is the second ENT at WJMC. Scheduler filters now include Specialty, Location, and all 26 provider names."
       - "2026-09-09: Scheduler reads Pulse deep-link query params specialty, location/clinic, and provider (West Jefferson Medical Clinic maps to West Jefferson Medical Center). Code-only; no Sitecore item changes."
       - "2026-09-09: visit=sick-visit or step=slots skips the visit-type grid and opens slots. ENT Pulse book links include visit=sick-visit and provider=Gabrielle Moreau. Delivery copy is adult (no child/well-baby). Demo URL: /For-Patients/Patient-Appointments?visit=sick-visit&specialty=ENT&location=West Jefferson Medical Center&provider=Gabrielle Moreau"
+      - "2026-09-09: First scheduler interaction (visit type, or slot if visit types were skipped) sends SitecoreAI/CDP custom event type Booking-Started with label Booking Started. Once per page visit. Skipped in Pages editing. Same event() pipeline as TrackedCtaLink."
 
 lookups:
   - path: "/sitecore/content/progressive/pkm/Data"

@@ -1,7 +1,7 @@
 'use client';
 
 import type { JSX } from 'react';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { RichText, Text, useSitecore } from '@sitecore-content-sdk/nextjs';
 import {
   ArrowRight,
@@ -19,6 +19,7 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/componen
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { cn } from '@/lib/utils';
+import { trackLcmcBookingStartedEvent } from '@/lib/lcmc-booking-started-event';
 import { ComponentProps } from '@/lib/component-props';
 import { NoDataFallback } from '@/utils/NoDataFallback';
 import {
@@ -300,6 +301,16 @@ const LcmcAppointmentSchedulerInner = ({
   const [guestPhone, setGuestPhone] = useState('');
   const [confirmCode, setConfirmCode] = useState('');
   const [bookedAs, setBookedAs] = useState<'my-lcmc' | 'guest' | null>(null);
+  const bookingStartedSent = useRef(false);
+
+  const sendBookingStartedOnce = (visitKeyValue?: string, visitTitleValue?: string) => {
+    if (isEditing || bookingStartedSent.current) return;
+    bookingStartedSent.current = true;
+    void trackLcmcBookingStartedEvent({
+      visitKey: visitKeyValue,
+      visitTitle: visitTitleValue,
+    });
+  };
 
   useEffect(() => {
     if (typeof fetch === 'undefined') return;
@@ -405,6 +416,7 @@ const LcmcAppointmentSchedulerInner = ({
         }));
 
   const handlePickVisit = (key: string, title: string) => {
+    sendBookingStartedOnce(key, title);
     setVisitKey(key);
     setVisitTitle(title);
     setShowAllDays(false);
@@ -413,6 +425,7 @@ const LcmcAppointmentSchedulerInner = ({
   };
 
   const handlePickSlot = (slotId: string) => {
+    sendBookingStartedOnce(visitKey || 'sick-visit', visitTitle || lcmcVisitLabel(visitKey || 'sick-visit'));
     const found = findLcmcSlot(availability, slotId);
     if (!found) return;
     setSelected({
