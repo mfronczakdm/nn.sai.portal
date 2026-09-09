@@ -1,10 +1,11 @@
 import { NextResponse } from 'next/server';
 
 import {
-  fetchLocationListingChildren,
+  fetchLocationListingPayload,
   toLocationListingItemPath,
   type LocationListingEdgeMode,
 } from '@/lib/location-listing-from-edge';
+import { locationListingPublishHint } from '@/lib/location-listing.utils';
 
 export const dynamic = 'force-dynamic';
 
@@ -24,13 +25,58 @@ export async function GET(request: Request): Promise<NextResponse> {
   const path = toLocationListingItemPath(rawDatasource);
 
   if (!path || !isAllowedPath(path)) {
-    return NextResponse.json({ locations: [] }, { status: 400 });
+    return NextResponse.json(
+      { locations: [], status: 'invalid-datasource', message: 'Invalid datasource path' },
+      { status: 400 }
+    );
   }
 
-  const locations = await fetchLocationListingChildren({
-    path,
-    language,
-    edgeMode,
-  });
-  return NextResponse.json({ locations }, { headers: { 'Cache-Control': 'no-store' } });
+  try {
+    const payload = await fetchLocationListingPayload({
+      path,
+      language,
+      edgeMode,
+    });
+
+    if (payload.error && payload.error !== 'edge-empty' && !payload.locations.length) {
+      const isQueryFailure = payload.error !== 'Edge children had no hospital-location fields';
+      if (isQueryFailure && !payload.itemFound) {
+        return NextResponse.json(
+          {
+            locations: [],
+            status: 'error',
+            message: payload.error,
+            itemFound: payload.itemFound,
+            contextsTried: payload.contextsTried,
+          },
+          { status: 502, headers: { 'Cache-Control': 'no-store' } }
+        );
+      }
+    }
+
+    return NextResponse.json(
+      {
+        locations: payload.locations,
+        status: payload.locations.length ? 'ok' : 'empty',
+        itemFound: payload.itemFound,
+        childCount: payload.childCount,
+        hospitalCount: payload.hospitalCount,
+        contextUsed: payload.contextUsed,
+        contextsTried: payload.contextsTried,
+        message: payload.locations.length
+          ? undefined
+          : payload.error === 'edge-empty'
+            ? locationListingPublishHint()
+            : payload.error,
+      },
+      { headers: { 'Cache-Control': 'no-store' } }
+    );
+  } catch (error) {
+    const message = error instanceof Error ? error.message : 'Location listing Edge request failed';
+    console.error('[api/location-listing]', message);
+    return NextResponse.json(
+      { locations: [], status: 'error', message },
+      { status: 502, headers: { 'Cache-Control': 'no-store' } }
+    );
+  }
 }

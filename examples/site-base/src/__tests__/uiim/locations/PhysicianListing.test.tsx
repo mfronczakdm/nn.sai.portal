@@ -248,6 +248,62 @@ describe('PhysicianListing', () => {
     expect(screen.getByTestId('physician-listing-count')).toHaveTextContent('No matching physicians');
   });
 
+  it('includes ENT in the specialty dropdown when a physician has that specialty', () => {
+    const entDoc: PhysicianListingChild = {
+      ...camille,
+      id: 'phys-ent',
+      name: 'Gabrielle Moreau MD',
+      physicianFullName: { jsonValue: { value: 'Gabrielle Moreau' } },
+      specialty: { jsonValue: { value: 'ENT' } },
+      servingLocations: {
+        targetItems: [
+          {
+            id: 'loc-wjmc',
+            name: 'West Jefferson Medical Center',
+            locationTitle: { jsonValue: { value: 'West Jefferson Medical Center' } },
+          },
+        ],
+      },
+    };
+    render(
+      <Default fields={listingFields([camille, entDoc])} params={params} page={page} rendering={rendering} />
+    );
+
+    const specialtySelect = screen.getByLabelText('Specialty');
+    expect(specialtySelect).toHaveTextContent('ENT');
+    expect(specialtySelect).toHaveTextContent('Cardiology');
+  });
+
+  it('populates the location dropdown from the Data/Locations catalog', async () => {
+    (global.fetch as jest.Mock).mockResolvedValue({
+      ok: true,
+      json: async () => ({
+        physicians: [camille],
+        locations: [
+          {
+            id: 'loc-1',
+            name: 'East Jefferson General Hospital',
+            displayName: 'East Jefferson General Hospital',
+          },
+          {
+            id: 'loc-wjmc',
+            name: 'West Jefferson Medical Center',
+            displayName: 'West Jefferson Medical Center',
+          },
+          { id: 'loc-touro', name: 'Touro', displayName: 'Touro' },
+        ],
+      }),
+    });
+
+    render(<Default params={params} page={page} rendering={assignedRendering} />);
+
+    expect(await screen.findByText('Camille Landry')).toBeInTheDocument();
+    const locationSelect = screen.getByLabelText('Location');
+    expect(locationSelect).toHaveTextContent('West Jefferson Medical Center');
+    expect(locationSelect).toHaveTextContent('Touro');
+    expect(locationSelect).toHaveTextContent('East Jefferson General Hospital');
+  });
+
   it('paginates with previous, next, and page numbers', async () => {
     const user = userEvent.setup();
     const results = Array.from({ length: 24 }, (_, index) => makePhysician(index));

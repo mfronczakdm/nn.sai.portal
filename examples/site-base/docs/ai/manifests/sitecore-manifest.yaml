@@ -3074,12 +3074,12 @@ pageTemplates:
     category: "appointments"
     status: "complete"
     createdAt: "2026-09-02T18:00:00Z"
-    updatedAt: "2026-09-02T18:50:00Z"
+    updatedAt: "2026-09-09T00:20:00Z"
 
     react:
       filePath: "src/components/uiim/appointments/LcmcAppointmentScheduler.tsx"
       componentMapKey: "LcmcAppointmentScheduler"
-      dataStrategy: "GraphQL datasource parent + LcmcVisitType children; slot grid from src/lib/lcmc-appointment-pack.ts (relative dates)"
+      dataStrategy: "GraphQL datasource parent + LcmcVisitType children for visit-type copy; physician names/specialty/locations from Data/Physicians via /api/physician-listing (same Edge path as PhysicianListing). Slots generated in src/lib/lcmc-appointment-pack.ts from that catalog."
       variants:
         - "Default"
 
@@ -3196,21 +3196,24 @@ pageTemplates:
         datasourceItemId: "{67471114-7CD2-4099-9331-CCCF8E61D20F}"
 
     verification:
-      checkedAt: "2026-09-02T18:50:00Z"
+      checkedAt: "2026-09-09T00:20:00Z"
       passed:
         - "Parent template base templates now include Standard + Grid + _HorizonDatasourceGrouping {D0F6BE14-2A2D-4C56-ACB5-80CAA573B8E2} + _PublishingGroupingTemplate {8BA7DAC6-32ED-4378-BD9E-5DA5B0F9848D}"
         - "JSON Rendering Datasource Template is parent path; Datasource Location query; ComponentQuery field(name) + children.results"
         - "Assigned page datasource is parent Patient Appointments {67471114-7CD2-4099-9331-CCCF8E61D20F} (template matches rendering)"
         - "Insert options: folder → LcmcAppointmentScheduler; parent DS → LcmcVisitType"
         - "React resolveDatasource accepts GraphQL jsonValue, JSS PascalCase fields, and Pages editing empty GraphQL"
-        - "Jest: LcmcAppointmentScheduler (6 tests)"
+        - "Jest: LcmcAppointmentScheduler + lcmc-appointment-pack (14 tests)"
+        - "Data/Physicians folder has 26 LCMC Physician children including Gabrielle Moreau MD {24EB9BF3-BFD6-4D01-87A7-BAF6D3DA421C} and Dominic Lirette MD {010E3311-06A7-4904-AFD0-202FD565A796}"
+        - "Gabrielle Moreau Specialty=ENT, ServingLocations=WJMC {35C77454-5FB8-460D-BC12-299F7B31DE5A}; flagged isDemoEntWjmc in scheduler"
       failed: []
       pendingManual:
         - "Publish templates (especially parent template + grouping bases), rendering, Data/LcmcAppointmentSchedulers, Headless Variants, and the Patient Appointments page for Edge"
+        - "Publish Data/Physicians (all 26, especially Gabrielle Moreau and Dominic Lirette) so Edge /api/physician-listing returns ENT + WJMC"
         - "Reload Pages on /For-Patients/Patient-Appointments and confirm the native datasource warning is gone and visit-type cards render"
         - "Verify __Masters on parent SV {55F5BFFD-2D68-42C7-8B26-5EF789CB1308} in Content Editor (silent-write)"
         - "Append {2408797C-36C7-4BD5-A3B9-90B409A06CCD} to Available Renderings/Page Content if not already registered"
-        - "Redeploy the site-base rendering host so Pages picks up LcmcAppointmentScheduler.tsx"
+        - "Redeploy the site-base rendering host so Pages picks up LcmcAppointmentScheduler.tsx physician catalog fetch"
 
     notes:
       - "2026-09-02: Word doc flow (visit types → pick a relative-date slot → Finish Scheduling → My LCMC Health login or guest → demo confirmation). PortalHub can only represent the visit-type card grid; PortalPageDetail cannot represent slot picking or login. New LCMC-scoped list component used instead of changing shared Default portal layouts."
@@ -3218,6 +3221,7 @@ pageTemplates:
       - "Login after Finish Scheduling is a demo form (any email/password); no Epic MyChart screenshots existed in the Word doc."
       - "2026-09-02T18:45: Visit-type cards sorted by LCMC_VISIT_KEYS so GraphQL child order matches the Word screenshot (Sick visit second). Emergency banner always renders with authored override."
       - "2026-09-02T18:50: Pages still showed 'requires a datasource' after the parent DS was assigned. Root cause: parent template was missing _HorizonDatasourceGrouping and _PublishingGroupingTemplate, so Pages did not treat Patient Appointments as a valid grouping datasource and GraphQL/layout returned empty fields.data.datasource (React NoDataFallback). Added grouping bases; re-assigned DS; React now maps jsonValue/JSS fields and renders fallback visit cards in editing when GraphQL is empty. Do not pick a visit-type child or the folder as the datasource."
+      - "2026-09-09: Replaced the 3 hardcoded pack names with Data/Physicians via /api/physician-listing (same Edge complexity workaround as PhysicianListing). Did not add physician children under Patient Appointments. Did not change shared portal Default appointment UI. Gabrielle Moreau is the demo ENT + West Jefferson Medical Center doctor; Dominic Lirette is the second ENT at WJMC. Scheduler filters now include Specialty, Location, and all 26 provider names."
 
 lookups:
   - path: "/sitecore/content/progressive/pkm/Data"
@@ -10311,7 +10315,7 @@ ia:
     category: "Locations"
     status: "complete"
     createdAt: "2026-09-08T00:40:00Z"
-    updatedAt: "2026-09-08T19:15:00Z"
+    updatedAt: "2026-09-09T00:15:00Z"
     siteName: "lcmc"
     siteCollection: "lcmc"
     contentRootPath: "/sitecore/content/lcmc/lcmc"
@@ -10322,6 +10326,7 @@ ia:
       - "16 location items match Our Locations landing pages (8 hospitals + 8 urgent cares). Urgent Care Locations hub page was not given a data item. Luling address/phone is representative because the live directory had no dedicated card."
       - "2026-09-08: HospitalDetail rendering now consumes these Data/Locations items on the 16 physical location pages."
       - "2026-09-08: Added PhysicianDetailPage Droptree on LCMC Physician (source Find a Provider). Did not duplicate the physician template or Data/Physicians items. PhysicianListing + PhysicianDetail consume the existing 24 physician data items."
+      - "2026-09-08: Added 2 ENT physicians serving West Jefferson Medical Center — Gabrielle Moreau MD {24EB9BF3-BFD6-4D01-87A7-BAF6D3DA421C} and Dominic Lirette MD {010E3311-06A7-4904-AFD0-202FD565A796}. Specialty string is ENT. Appended both to WJMC LocationPhysicians. Did not delete existing physicians or rewrite other location items."
     templates:
       location:
         name: "LCMC Hospital Location"
@@ -10439,7 +10444,7 @@ ia:
       - { name: "Pediatric Care", itemId: "{BEEA85BD-08B1-40E3-AAD6-7600A802F71F}" }
       - { name: "Urgent Care", itemId: "{B69F3F30-2DFD-4668-ACED-3CEE2B15273D}" }
       - { name: "Digestive Care", itemId: "{B491C6F0-3A49-4E3A-B94E-815639B35B92}" }
-    physicianCount: 24
+    physicianCount: 26
     verification:
       checkedAt: "2026-09-08T01:10:00Z"
       passed:
@@ -10579,7 +10584,7 @@ ia:
     category: "Locations"
     status: "complete"
     createdAt: "2026-09-08T21:00:00Z"
-    updatedAt: "2026-09-08T21:20:00Z"
+    updatedAt: "2026-09-08T22:15:00Z"
     siteName: "lcmc"
     siteCollection: "lcmc"
     contentRootPath: "/sitecore/content/lcmc/lcmc"
@@ -10590,10 +10595,11 @@ ia:
       - "Placed only on Our Locations hub {0A471272-462E-4497-BEA2-D03C904BCBE5}. Hospital detail pages still have HospitalDetail only."
       - "add_component_on_page auto-created empty local:/Data/LocationListing {734FD62B-7FA4-4799-9BAE-A9B03CB98564}; deleted after set_component_datasource pointed at Data/Locations."
       - "2026-09-08: Pages empty list/map with Content item Locations. Live instance datasource was already Data/Locations {76041887-6E16-4844-AD13-366BC2E32265} (folder display name Locations), not the Our Locations page. Lat/long already populated on all 16 Data items — not rewritten. Root causes: slim ComponentQuery returned id/name only so Pages depended on /api/location-listing; API loaded direct children only so Our Locations page children (sitemap pages) had no Hospital Location fields; fetch used rendering.dataSource only, not ComponentQuery datasource.id. Fix: lite children on ComponentQuery; resolve Our Locations page (and unmatched page children) to Data/Locations; filter looksLikeHospitalLocation; datasource.id fallback. Picker: Can select Page as a data source=1, Additional compatible templates=Services Page {D77937AC-BAE4-4EB0-8D7E-69EC09D5BBFC}, Datasource Location includes Home/Our Locations. Official datasource remains LCMC Hospital Location Folder."
+      - "2026-09-08: Pages still empty after datasource fix. CM has all 16 children with Latitude/Longitude; MCP workflow is null; Pages Version 1 has slashed-circle; get_components_on_page dataSourceItem is null. Edge probe: default SITECORE_EDGE_CONTEXT_ID has 16 items with lat/title; SITECORE_EDGE_CONTEXT_ID_LIVE and _PREVIEW both return item=null / 0 children / search total 0. Field names Latitude/Longitude match the template. No MCP publish tool. Root cause: Pages preview=1 queried Preview (empty) and live fallback used default client only when IDs differ; dedicated Live/Preview Edge for this XM Cloud env do not have Data/Locations. Fix: try preview + default + live contexts; API returns status/message; editing mode shows API error vs publish hint. User must publish the folder + 16 children to current Preview and Live."
     react:
       filePath: "src/components/uiim/locations/LocationListing.tsx"
       componentMapKey: "LocationListing"
-      dataStrategy: "ComponentQuery lite children (LocationTitle/Type/address/lat/long/LandingPage jsonValue, no Treelist). Client filters hospital-location fields then /api/location-listing Content API. API resolves Our Locations page ID/path to Data/Locations. OSM map from Latitude/Longitude. Client Hospital vs Urgent Care filter."
+      dataStrategy: "ComponentQuery lite children (LocationTitle/Type/address/lat/long/LandingPage jsonValue, no Treelist). Client filters hospital-location fields then /api/location-listing. API tries preview/default/live Edge contexts and returns status/message. OSM map from Latitude/Longitude. Client Hospital vs Urgent Care filter."
       variants:
         - "Default"
     templates:
@@ -10642,7 +10648,7 @@ ia:
     pages:
       - { name: "Our Locations", pageId: "{0A471272-462E-4497-BEA2-D03C904BCBE5}", instanceId: "{08FBC2F7-6491-4BC7-91A9-23362CD40266}", datasourceId: "{76041887-6E16-4844-AD13-366BC2E32265}", placeholder: "headless-main", route: "/Our-Locations" }
     verification:
-      checkedAt: "2026-09-08T21:20:00Z"
+      checkedAt: "2026-09-08T22:15:00Z"
       passed:
         - "JSON Rendering componentName LocationListing; Datasource Template still LCMC Hospital Location Folder"
         - "get_component confirms datasourceTemplateId {E1B1169B-8AAA-4A87-9B55-22D14AF553E7} and picker roots Data/Locations + Home/Our Locations"
@@ -10651,13 +10657,14 @@ ia:
         - "Parameters Template GUID {6277500C-BADB-472B-8B3C-EB6DA631CBDB}; AddFieldEditorButton 1"
         - "Our Locations instance {08FBC2F7-6491-4BC7-91A9-23362CD40266} datasource is still Data/Locations {76041887-6E16-4844-AD13-366BC2E32265}"
         - "All 16 Data/Locations items already have Latitude/Longitude — not rewritten"
-        - "React + API resolve Our Locations page ID to Data/Locations; Jest LocationListing tests passed"
+        - "MCP CM read: folder + 16 children exist; workflow null; Latitude/Longitude field names match GraphQL"
+        - "Edge probe: default context 16 children with lat/title; LIVE and PREVIEW contexts item=null / 0 children"
+        - "No marketer MCP publish tool — publish is a manual Pages/Content Editor step"
       failed: []
       pendingManual:
-        - "Publish LocationListing rendering so Pages layout picks up the new ComponentQuery"
-        - "Publish Data/Locations (16 items) if Edge still has empty children"
-        - "Redeploy site-base rendering host so Pages picks up LocationListing.tsx, location-listing.utils.ts, and /api/location-listing page-to-folder resolve"
-        - "In Pages, Our Locations works with Content item Locations (Data folder) OR Our Locations page — 16 cards + OSM map"
+        - "Publish /sitecore/content/lcmc/lcmc/Data/Locations {76041887-6E16-4844-AD13-366BC2E32265} and all 16 LCMC Hospital Location children to the current XM Cloud Preview and Live Edge (Pages Publish on the folder, include subitems)"
+        - "Redeploy site-base editing host so Pages picks up multi-context /api/location-listing and the editing-mode publish/API error copy"
+        - "In Pages, Our Locations should show 16 cards + OSM pins after that publish + deploy; until then editing shows the publish hint or API error instead of a silent empty list"
         - "__Standard values link on rendering params template is silent-write"
 
   - name: "PhysicianListing"
@@ -10665,7 +10672,7 @@ ia:
     category: "Locations"
     status: "complete"
     createdAt: "2026-09-08T18:30:00Z"
-    updatedAt: "2026-09-08T20:15:00Z"
+    updatedAt: "2026-09-09T00:15:00Z"
     siteName: "lcmc"
     siteCollection: "lcmc"
     contentRootPath: "/sitecore/content/lcmc/lcmc"
@@ -10676,10 +10683,11 @@ ia:
       - "add_component_on_page auto-created a local listing datasource; deleted after set_component_datasource pointed at Data/Physicians. Do not pass headless variant IDs as set_component_datasource variantId (404)."
       - "2026-09-08: Pages showed only 10 of 24 physicians because Edge children defaults to first: 10. ComponentQuery now uses children(first: 50) with total + pageInfo.hasNext/endCursor. Dropped LookupField.targetItem expansion (jsonValue href + url.path remain) to reduce layout-query complexity with first: 50. React is a client listing with name/specialty/location filters and page size 9."
       - "2026-09-08: children(first: 50) + ServingLocations MultilistField exceeded Edge layout complexity. Pages still had Data/Physicians on instance {65D0631D-E2FE-449D-984F-26694B6A5EB7} (dataSource 13c422fb-..., dataSourceItem null). Slimmed ComponentQuery to datasource id/name only. Children now load via /api/physician-listing (Content API, page 10, value fields). React treats rendering.dataSource as assigned so NoDataFallback is not shown when GraphQL fields.data is empty. Tradeoff: layout query no longer inlines cards; location filter uses targetItems name/displayName from the API (retries without Multilist expansion if needed)."
+      - "2026-09-08: Location dropdown now uses the full Data/Locations catalog (8 hospitals + 8 urgent cares), not only unique ServingLocations on currently loaded physicians. /api/physician-listing returns { physicians, locations }. GUID-only Treelist values are hydrated to LocationTitle/displayName so West Jefferson Medical Center is filterable. Specialty ENT comes from Data/Physicians Specialty = ENT on Gabrielle Moreau and Dominic Lirette."
     react:
       filePath: "src/components/uiim/locations/PhysicianListing.tsx"
       componentMapKey: "PhysicianListing"
-      dataStrategy: "Slim ComponentQuery (datasource id/name). Children via /api/physician-listing Content API (paged first: 10, value fields). Client filters and paging (page size 9)."
+      dataStrategy: "Slim ComponentQuery (datasource id/name). Children + Data/Locations catalog via /api/physician-listing. Client filters and paging (page size 9)."
       variants:
         - "Default"
     templates:
@@ -10725,7 +10733,7 @@ ia:
     pages:
       - { name: "Find a Provider", pageId: "{BAE717F7-D99D-4722-8FAF-CED2581DF809}", instanceId: "{65D0631D-E2FE-449D-984F-26694B6A5EB7}", datasourceId: "{13C422FB-8991-4468-B996-BE73A904C23E}", placeholder: "headless-main", route: "/Find-a-Provider" }
     verification:
-      checkedAt: "2026-09-08T20:15:00Z"
+      checkedAt: "2026-09-09T00:15:00Z"
       passed:
         - "JSON Rendering created; componentName PhysicianListing; Datasource Template LCMC Physician Folder; ComponentQuery present"
         - "Find a Provider listing instance datasource is Data/Physicians {13C422FB-8991-4468-B996-BE73A904C23E} — proven still assigned after NoDataFallback (do not re-pick)"
@@ -10733,11 +10741,13 @@ ia:
         - "React file created; generate-map registered PhysicianListing; Jest tests passed"
         - "ComponentQuery slimmed to datasource id/name; MCP get_content_item_by_id confirmed"
         - "Parameters Template still {CC41815F-B618-4635-AE07-43C4D9194C36}; Datasource Template/Location unchanged"
-        - "PhysicianListing.test.tsx + physician-listing-from-edge.test.ts passed (13 tests)"
+        - "PhysicianListing.test.tsx + physician-listing-from-edge.test.ts passed (19 tests) including ENT specialty and Data/Locations catalog dropdown"
+        - "Gabrielle Moreau and Dominic Lirette created with Specialty ENT and ServingLocations WJMC {35C77454-5FB8-460D-BC12-299F7B31DE5A}"
       failed: []
       pendingManual:
         - "Publish the PhysicianListing rendering so Edge/Pages pick up the slim ComponentQuery (layout GraphQL will succeed and fields.data.datasource returns id/name)"
-        - "Redeploy site-base rendering host so Pages picks up /api/physician-listing and the React fallback that treats rendering.dataSource as assigned"
+        - "Redeploy site-base rendering host so Pages picks up /api/physician-listing locations catalog + React dropdown"
+        - "Publish Data/Physicians (Gabrielle Moreau, Dominic Lirette), their Find a Provider pages, and WJMC LocationPhysicians for Edge"
         - "In Pages, stay on Find a Provider, select PhysicianListing, open the Content tab to confirm Data/Physicians, then confirm the canvas shows filters + cards instead of NoDataFallback (Design tab being open does not mean the datasource is missing)"
         - "__Standard values link on rendering params template is silent-write"
 
@@ -10746,7 +10756,7 @@ ia:
     category: "Locations"
     status: "complete"
     createdAt: "2026-09-08T18:30:00Z"
-    updatedAt: "2026-09-08T19:15:00Z"
+    updatedAt: "2026-09-09T00:15:00Z"
     siteName: "lcmc"
     siteCollection: "lcmc"
     contentRootPath: "/sitecore/content/lcmc/lcmc"
@@ -10755,6 +10765,7 @@ ia:
       - "Added PhysicianDetailPage Droptree on the existing template (source Find a Provider) so listing cards can resolve detail URLs. All 24 Data/Physicians items now point at matching child pages."
       - "24 Services Page children created under Find a Provider; names match Data/Physicians items. Each has PhysicianDetail on headless-main with matching Data/Physicians datasource. Auto-created local /Data/PhysicianDetail items deleted."
       - "Find a Provider hub has PhysicianListing only — no PhysicianDetail on the hub."
+      - "2026-09-08: Added ENT detail pages Gabrielle Moreau MD and Dominic Lirette MD under Find a Provider (Services Page). PhysicianDetail on headless-main points at Data/Physicians items. Auto-created local /Data/PhysicianDetail items deleted. Existing 24 pages unchanged."
     react:
       filePath: "src/components/uiim/locations/PhysicianDetail.tsx"
       componentMapKey: "PhysicianDetail"
@@ -10835,6 +10846,8 @@ ia:
       - { name: "Sarah Melancon MD", pageId: "{E394BD63-2F74-496D-8E4D-5081E656FCD4}", instanceId: "{F827DC2E-62E7-4884-AF3D-9AA46AC3D3C9}", datasourceId: "{F42ECEC4-C3D2-43BA-8FF1-2BA640F66251}", placeholder: "headless-main", route: "/Find-a-Provider/Sarah-Melancon-MD" }
       - { name: "Tanya Ricard MD", pageId: "{32E5DA95-CEF8-4FD8-B31C-58C21E5077B1}", instanceId: "{877C9F7E-84BB-4979-BD0C-4FE51973320A}", datasourceId: "{74789E69-47D3-463D-AEAC-CEA3F20A5647}", placeholder: "headless-main", route: "/Find-a-Provider/Tanya-Ricard-MD" }
       - { name: "Thomas Nguyen MD", pageId: "{9B2409F9-61D1-40F6-962F-137A96F8F0ED}", instanceId: "{FD44F5A8-8A58-4D4F-8B50-7CCDA5D05B1F}", datasourceId: "{F74FE325-06CA-4905-88E7-462F02FD74EA}", placeholder: "headless-main", route: "/Find-a-Provider/Thomas-Nguyen-MD" }
+      - { name: "Gabrielle Moreau MD", pageId: "{5F05A3ED-0BC5-4274-AF3C-80D66CF30503}", instanceId: "{C817A57B-2F67-41B2-9B89-D53E143CD39C}", datasourceId: "{24EB9BF3-BFD6-4D01-87A7-BAF6D3DA421C}", placeholder: "headless-main", route: "/Find-a-Provider/Gabrielle-Moreau-MD" }
+      - { name: "Dominic Lirette MD", pageId: "{B31263CB-7374-46AF-A728-B474AA98388D}", instanceId: "{4B2B4FB7-1FED-4B05-8C21-4B84373D9AC7}", datasourceId: "{010E3311-06A7-4904-AFD0-202FD565A796}", placeholder: "headless-main", route: "/Find-a-Provider/Dominic-Lirette-MD" }
     skippedPages:
       - { name: "Find a Provider", pageId: "{BAE717F7-D99D-4722-8FAF-CED2581DF809}", reason: "listing hub — PhysicianListing only, not a person" }
     verification:
@@ -10844,11 +10857,12 @@ ia:
         - "JSON Rendering created; componentName PhysicianDetail; ComponentQuery empty; AddFieldEditorButton 1"
         - "PhysicianDetail allowed on headless-main via get_allowed_comps_by_ph"
         - "Camille Landry and Thomas Nguyen pages use matching Data/Physicians datasource IDs (not local Data items)"
-        - "Find a Provider has 24 physician child pages; listing datasource is the Physicians folder"
+        - "Find a Provider has 26 physician child pages; listing datasource is the Physicians folder"
         - "React file created; generate-map registered PhysicianDetail; Jest tests passed"
       failed: []
       pendingManual:
-        - "Publish rendering, Headless Variants, Available Renderings, Data/Physicians, Find a Provider, and 24 detail pages for Edge"
+        - "Publish rendering, Headless Variants, Available Renderings, Data/Physicians (including Gabrielle Moreau and Dominic Lirette), Find a Provider, and 26 detail pages for Edge"
+        - "Publish Data/Locations/West Jefferson Medical Center so LocationPhysicians includes the two ENT physicians"
         - "Redeploy site-base rendering host so Pages picks up PhysicianDetail.tsx"
         - "Confirm Treelist ServingLocations expand in Layout Service (no ComponentQuery); Field Editor covers authoring either way"
         - "__Standard values link on rendering params template is silent-write"

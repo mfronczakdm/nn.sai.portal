@@ -1,6 +1,7 @@
 import {
   isLcmcDataLocationsRef,
   isLcmcOurLocationsPageRef,
+  locationListingPublishHint,
   looksLikeHospitalLocation,
   resolveLocationListingFolderRef,
   LCMC_DATA_LOCATIONS_ID,
@@ -26,6 +27,13 @@ describe('location-listing.utils', () => {
   it('resolves the Our Locations page to the Data/Locations folder', () => {
     expect(resolveLocationListingFolderRef(LCMC_OUR_LOCATIONS_PAGE_ID)).toBe(LCMC_DATA_LOCATIONS_ID);
     expect(resolveLocationListingFolderRef(LCMC_DATA_LOCATIONS_ID)).toBe(LCMC_DATA_LOCATIONS_ID);
+  });
+
+  it('tells authors to publish Data/Locations and the 16 children', () => {
+    expect(locationListingPublishHint()).toContain(
+      '/sitecore/content/lcmc/lcmc/Data/Locations'
+    );
+    expect(locationListingPublishHint()).toContain('16 LCMC Hospital Location children');
   });
 
   it('treats sitemap pages without location fields as not hospital locations', () => {

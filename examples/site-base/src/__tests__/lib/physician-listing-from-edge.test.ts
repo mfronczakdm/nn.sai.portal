@@ -1,4 +1,10 @@
-import { fetchPhysicianListingChildren, toPhysicianListingItemPath } from '@/lib/physician-listing-from-edge';
+import {
+  fetchPhysicianListingChildren,
+  fetchPhysicianListingPayload,
+  hydratePhysicianLocations,
+  toLocationsFolderPath,
+  toPhysicianListingItemPath,
+} from '@/lib/physician-listing-from-edge';
 
 const getData = jest.fn();
 const previewGetData = jest.fn();
@@ -137,5 +143,109 @@ describe('fetchPhysicianListingChildren', () => {
     expect(physicians).toHaveLength(1);
     expect(previewGetData).toHaveBeenCalled();
     expect(getData).toHaveBeenCalled();
+  });
+});
+
+describe('toLocationsFolderPath', () => {
+  it('derives Data/Locations from a Physicians content path', () => {
+    expect(toLocationsFolderPath('/sitecore/content/lcmc/lcmc/Data/Physicians')).toBe(
+      '/sitecore/content/lcmc/lcmc/Data/Locations'
+    );
+  });
+
+  it('maps the Physicians folder GUID to the LCMC Locations folder', () => {
+    expect(toLocationsFolderPath('{13C422FB-8991-4468-B996-BE73A904C23E}')).toBe(
+      '/sitecore/content/lcmc/lcmc/Data/Locations'
+    );
+  });
+});
+
+describe('hydratePhysicianLocations', () => {
+  it('resolves ServingLocations GUIDs to catalog display names', () => {
+    const physicians = hydratePhysicianLocations(
+      [
+        {
+          id: 'phys-ent',
+          name: 'Gabrielle Moreau MD',
+          servingLocations: {
+            jsonValue: '{35C77454-5FB8-460D-BC12-299F7B31DE5A}',
+            targetItems: [{ id: '{35C77454-5FB8-460D-BC12-299F7B31DE5A}', name: '', displayName: '' }],
+          },
+        },
+      ],
+      [
+        {
+          id: '{35C77454-5FB8-460D-BC12-299F7B31DE5A}',
+          name: 'West Jefferson Medical Center',
+          displayName: 'West Jefferson Medical Center',
+          locationTitle: { jsonValue: { value: 'West Jefferson Medical Center' } },
+        },
+      ]
+    );
+
+    expect(physicians[0].servingLocations?.targetItems?.[0].name).toBe(
+      'West Jefferson Medical Center'
+    );
+    expect(physicians[0].servingLocations?.targetItems?.[0].locationTitle?.jsonValue).toEqual({
+      value: 'West Jefferson Medical Center',
+    });
+  });
+});
+
+describe('fetchPhysicianListingPayload', () => {
+  beforeEach(() => {
+    getData.mockReset();
+    previewGetData.mockReset();
+  });
+
+  it('returns the Data/Locations catalog and hydrates GUID-only ServingLocations', async () => {
+    getData.mockImplementation((query: string) => {
+      if (String(query).includes('PhysicianListingLocations')) {
+        return Promise.resolve({
+          item: {
+            children: {
+              results: [
+                {
+                  id: '{35C77454-5FB8-460D-BC12-299F7B31DE5A}',
+                  name: 'West Jefferson Medical Center',
+                  displayName: 'West Jefferson Medical Center',
+                  locationTitle: { value: 'West Jefferson Medical Center' },
+                },
+                {
+                  id: '{063FFD1D-6681-4DFC-8A7A-504EA903090F}',
+                  name: 'Touro',
+                  displayName: 'Touro',
+                  locationTitle: { value: 'Touro' },
+                },
+              ],
+            },
+          },
+        });
+      }
+      return Promise.resolve({
+        item: {
+          children: {
+            results: [
+              {
+                ...CAMILLE,
+                servingLocations: { value: '{EFEAC293-2BF4-4516-873D-4EAC1F998474}' },
+              },
+            ],
+            pageInfo: { hasNext: false, endCursor: null },
+          },
+        },
+      });
+    });
+
+    const payload = await fetchPhysicianListingPayload({
+      path: '{13C422FB-8991-4468-B996-BE73A904C23E}',
+      language: 'en',
+    });
+
+    expect(payload.locations.map((location) => location.name)).toEqual([
+      'West Jefferson Medical Center',
+      'Touro',
+    ]);
+    expect(payload.physicians).toHaveLength(1);
   });
 });

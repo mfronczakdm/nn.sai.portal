@@ -11,6 +11,7 @@ export type PhysicianListingLocation = {
   id?: string;
   name?: string;
   displayName?: string;
+  locationTitle?: PhysicianListingJsonField<string>;
 };
 
 export type PhysicianListingChild = {
@@ -40,6 +41,11 @@ export type PhysicianListingEdgeMode = 'live' | 'preview';
  */
 const PAGE_SIZE = 10;
 const MAX_PAGES = 5;
+const LOCATIONS_PAGE_SIZE = 50;
+
+/** LCMC Data/Locations folder — complete hospital/urgent-care catalog for the filter. */
+export const LCMC_LOCATIONS_FOLDER_PATH = '/sitecore/content/lcmc/lcmc/Data/Locations';
+export const LCMC_PHYSICIANS_FOLDER_ID = '13C422FB-8991-4468-B996-BE73A904C23E';
 
 const PHYSICIAN_FIELDS = `
   id
@@ -102,12 +108,36 @@ const CHILDREN_QUERY_NO_LOCATIONS = `
   }
 `;
 
+const LOCATIONS_QUERY = `
+  query PhysicianListingLocations($path: String!, $language: String!) {
+    item(path: $path, language: $language) {
+      children(first: ${LOCATIONS_PAGE_SIZE}) {
+        results {
+          id
+          name
+          displayName
+          locationTitle: field(name: "LocationTitle") { value }
+        }
+      }
+    }
+  }
+`;
+
 type EdgeFieldValue = { value?: unknown } | null;
 
 type EdgeLocationItem = {
   id?: string;
   name?: string;
   displayName?: string;
+  locationTitle?: EdgeFieldValue;
+};
+
+type LocationsQueryResult = {
+  item?: {
+    children?: {
+      results?: EdgeLocationItem[];
+    };
+  } | null;
 };
 
 type EdgePhysicianResult = {
@@ -186,12 +216,66 @@ export function toPhysicianListingItemPath(raw?: string | null): string {
   return '';
 }
 
+export function normalizePhysicianListingItemId(id?: string | null): string {
+  return (id ?? '').replace(/[{}]/g, '').toUpperCase();
+}
+
+export function physicianListingLocationName(item: PhysicianListingLocation): string {
+  const title = item.locationTitle?.jsonValue?.value;
+  if (typeof title === 'string' && title.trim()) return title.trim();
+  return item.displayName?.trim() || item.name?.trim() || '';
+}
+
 function locationFromTarget(item: EdgeLocationItem): PhysicianListingLocation {
+  const title = typeof item.locationTitle?.value === 'string' ? item.locationTitle.value : '';
   return {
     id: item.id,
     name: item.name,
     displayName: item.displayName,
+    locationTitle: title ? { jsonValue: { value: title } } : undefined,
   };
+}
+
+export function toLocationsFolderPath(physiciansPath: string): string {
+  if (physiciansPath.includes('/Data/Physicians')) {
+    return physiciansPath.replace(/\/Data\/Physicians\/?$/, '/Data/Locations');
+  }
+  if (normalizePhysicianListingItemId(physiciansPath) === LCMC_PHYSICIANS_FOLDER_ID) {
+    return LCMC_LOCATIONS_FOLDER_PATH;
+  }
+  return LCMC_LOCATIONS_FOLDER_PATH;
+}
+
+export function hydratePhysicianLocations(
+  physicians: PhysicianListingChild[],
+  catalog: PhysicianListingLocation[]
+): PhysicianListingChild[] {
+  if (!catalog.length) return physicians;
+
+  const byId = new Map<string, PhysicianListingLocation>();
+  for (const location of catalog) {
+    const id = normalizePhysicianListingItemId(location.id);
+    if (id) byId.set(id, location);
+  }
+
+  return physicians.map((physician) => {
+    const targets = physician.servingLocations?.targetItems ?? [];
+    if (!targets.length) return physician;
+
+    const hydrated = targets.map((target) => {
+      if (physicianListingLocationName(target)) return target;
+      const match = byId.get(normalizePhysicianListingItemId(target.id));
+      return match ? { ...target, ...match, id: target.id || match.id } : target;
+    });
+
+    return {
+      ...physician,
+      servingLocations: {
+        ...physician.servingLocations,
+        targetItems: hydrated,
+      },
+    };
+  });
 }
 
 function locationsFromValue(value: unknown): PhysicianListingLocation[] {
@@ -312,4 +396,66 @@ export async function fetchPhysicianListingChildren(args: {
     return loadPhysiciansForMode(path, language, 'live');
   }
   return [];
+}
+
+async function loadLocationsForMode(
+  path: string,
+  language: string,
+  mode: PhysicianListingEdgeMode
+): Promise<PhysicianListingLocation[]> {
+  try {
+    const result = await edgeGetData<LocationsQueryResult>(mode, LOCATIONS_QUERY, {
+      path,
+      language,
+    });
+    return (result?.item?.children?.results ?? [])
+      .map(locationFromTarget)
+      .filter((location) => physicianListingLocationName(location));
+  } catch (error) {
+    const details = (error as { response?: { errors?: unknown } })?.response?.errors;
+    console.error(
+      '[fetchPhysicianListingLocations] locations query failed:',
+      path,
+      details ? JSON.stringify(details) : error
+    );
+    return [];
+  }
+}
+
+export async function fetchPhysicianListingLocations(args: {
+  physiciansPath?: string;
+  language: string;
+  edgeMode?: PhysicianListingEdgeMode;
+}): Promise<PhysicianListingLocation[]> {
+  const language = args.language || 'en';
+  const mode = args.edgeMode || 'live';
+  const physiciansPath = toPhysicianListingItemPath(args.physiciansPath) || LCMC_LOCATIONS_FOLDER_PATH;
+  const path = toLocationsFolderPath(physiciansPath);
+
+  const primary = await loadLocationsForMode(path, language, mode);
+  if (primary.length > 0) return primary;
+  if (mode === 'preview') {
+    return loadLocationsForMode(path, language, 'live');
+  }
+  return [];
+}
+
+export async function fetchPhysicianListingPayload(args: {
+  path?: string;
+  language: string;
+  edgeMode?: PhysicianListingEdgeMode;
+}): Promise<{ physicians: PhysicianListingChild[]; locations: PhysicianListingLocation[] }> {
+  const [physicians, locations] = await Promise.all([
+    fetchPhysicianListingChildren(args),
+    fetchPhysicianListingLocations({
+      physiciansPath: args.path,
+      language: args.language,
+      edgeMode: args.edgeMode,
+    }),
+  ]);
+
+  return {
+    physicians: hydratePhysicianLocations(physicians, locations),
+    locations,
+  };
 }

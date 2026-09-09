@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 
 import {
-  fetchPhysicianListingChildren,
+  fetchPhysicianListingPayload,
   toPhysicianListingItemPath,
   type PhysicianListingEdgeMode,
 } from '@/lib/physician-listing-from-edge';
@@ -24,13 +24,13 @@ export async function GET(request: Request): Promise<NextResponse> {
   const path = toPhysicianListingItemPath(rawDatasource);
 
   if (!path || !isAllowedPath(path)) {
-    return NextResponse.json({ physicians: [] }, { status: 400 });
+    return NextResponse.json({ physicians: [], locations: [] }, { status: 400 });
   }
 
-  const physicians = await fetchPhysicianListingChildren({
+  const { physicians, locations } = await fetchPhysicianListingPayload({
     path,
     language,
     edgeMode,
   });
-  return NextResponse.json({ physicians }, { headers: { 'Cache-Control': 'no-store' } });
+  return NextResponse.json({ physicians, locations }, { headers: { 'Cache-Control': 'no-store' } });
 }

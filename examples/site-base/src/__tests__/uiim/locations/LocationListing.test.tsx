@@ -8,6 +8,7 @@ import {
   matchesTypeFilter,
   type LocationListingChild,
 } from '@/components/uiim/locations/LocationListing';
+import { locationListingPublishHint } from '@/lib/location-listing.utils';
 
 jest.mock('change-case', () => ({
   kebabCase: (s: string) => String(s).replace(/\s+/g, '-').toLowerCase(),
@@ -39,11 +40,17 @@ const assignedRendering = {
   dataSource: '{76041887-6E16-4844-AD13-366BC2E32265}',
 } as any;
 
+function jsonResponse(body: unknown, status = 200) {
+  return {
+    ok: status >= 200 && status < 300,
+    status,
+    headers: { get: (name: string) => (name.toLowerCase() === 'content-type' ? 'application/json' : null) },
+    json: async () => body,
+  };
+}
+
 beforeEach(() => {
-  global.fetch = jest.fn().mockResolvedValue({
-    ok: true,
-    json: async () => ({ locations: [] }),
-  }) as unknown as typeof fetch;
+  global.fetch = jest.fn().mockResolvedValue(jsonResponse({ locations: [] })) as unknown as typeof fetch;
 });
 
 function makeLocation(
@@ -200,10 +207,7 @@ describe('LocationListing', () => {
   });
 
   it('fetches from /api/location-listing when only rendering.dataSource is present', async () => {
-    (global.fetch as jest.Mock).mockResolvedValueOnce({
-      ok: true,
-      json: async () => ({ locations: [eastJefferson] }),
-    });
+    (global.fetch as jest.Mock).mockResolvedValueOnce(jsonResponse({ locations: [eastJefferson] }));
 
     render(
       <Default
@@ -222,10 +226,7 @@ describe('LocationListing', () => {
   });
 
   it('fetches using datasource.id when rendering.dataSource is missing', async () => {
-    (global.fetch as jest.Mock).mockResolvedValueOnce({
-      ok: true,
-      json: async () => ({ locations: [eastJefferson] }),
-    });
+    (global.fetch as jest.Mock).mockResolvedValueOnce(jsonResponse({ locations: [eastJefferson] }));
 
     render(
       <Default
@@ -244,10 +245,9 @@ describe('LocationListing', () => {
   });
 
   it('ignores Our Locations page children and loads mapped locations from the API', async () => {
-    (global.fetch as jest.Mock).mockResolvedValueOnce({
-      ok: true,
-      json: async () => ({ locations: [eastJefferson, gretna] }),
-    });
+    (global.fetch as jest.Mock).mockResolvedValueOnce(
+      jsonResponse({ locations: [eastJefferson, gretna] })
+    );
 
     render(
       <Default
@@ -281,5 +281,45 @@ describe('LocationListing', () => {
     expect(await screen.findByRole('link', { name: 'East Jefferson General Hospital' })).toBeInTheDocument();
     expect(screen.getByTestId('location-listing-count')).toHaveTextContent('2 locations');
     expect(screen.getByTestId('location-listing-map')).toBeInTheDocument();
+  });
+
+  it('shows an API error in editing mode when /api/location-listing fails', async () => {
+    (global.fetch as jest.Mock).mockResolvedValueOnce(
+      jsonResponse({ message: 'Location listing API failed (502)' }, 502)
+    );
+
+    render(
+      <Default
+        fields={{ data: { datasource: { id: '{76041887-6E16-4844-AD13-366BC2E32265}' } } }}
+        params={params}
+        page={{ mode: { isEditing: true } } as any}
+        rendering={assignedRendering}
+      />
+    );
+
+    expect(await screen.findByText('Location listing API failed (502)')).toBeInTheDocument();
+  });
+
+  it('shows the publish hint in editing mode when Edge returns zero locations', async () => {
+    (global.fetch as jest.Mock).mockResolvedValueOnce(
+      jsonResponse({
+        locations: [],
+        status: 'empty',
+        message: locationListingPublishHint(),
+      })
+    );
+
+    render(
+      <Default
+        fields={{ data: { datasource: { id: '{76041887-6E16-4844-AD13-366BC2E32265}' } } }}
+        params={params}
+        page={{ mode: { isEditing: true } } as any}
+        rendering={assignedRendering}
+      />
+    );
+
+    expect(
+      await screen.findByText(/Publish \/sitecore\/content\/lcmc\/lcmc\/Data\/Locations/)
+    ).toBeInTheDocument();
   });
 });

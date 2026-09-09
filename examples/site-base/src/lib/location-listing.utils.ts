@@ -43,6 +43,15 @@ export function resolveLocationListingFolderRef(value?: string | null): string {
   return trimmed;
 }
 
+export function locationListingPublishHint(): string {
+  return [
+    'Experience Edge returned 0 hospital locations for this datasource.',
+    'Publish /sitecore/content/lcmc/lcmc/Data/Locations and its 16 LCMC Hospital Location children',
+    '(not just the Our Locations page or the rendering) to the current Preview and Live Edge.',
+    'In Pages, the Locations folder Version 1 shows a slashed-circle until that publish finishes.',
+  ].join(' ');
+}
+
 /** True when the item has LCMC Hospital Location fields, not a sitemap page. */
 export function looksLikeHospitalLocation(location: {
   locationTitle?: JsonTextField | null;

@@ -184,6 +184,7 @@ export const Default = (props: PhysicianListingProps): JSX.Element => {
   const language =
     (page?.layout?.sitecore?.context as { language?: string } | undefined)?.language || 'en';
   const [remotePhysicians, setRemotePhysicians] = useState<PhysicianListingChild[]>([]);
+  const [catalogLocations, setCatalogLocations] = useState<PhysicianListingLocation[]>([]);
   const [isLoadingRemote, setIsLoadingRemote] = useState(false);
 
   useEffect(() => {
@@ -203,10 +204,14 @@ export const Default = (props: PhysicianListingProps): JSX.Element => {
           console.error('[PhysicianListing] /api/physician-listing failed', response.status);
           return { physicians: [] as PhysicianListingChild[] };
         }
-        return response.json() as Promise<{ physicians?: PhysicianListingChild[] }>;
+        return response.json() as Promise<{
+          physicians?: PhysicianListingChild[];
+          locations?: PhysicianListingLocation[];
+        }>;
       })
       .then((payload) => {
         if (payload?.physicians?.length) setRemotePhysicians(payload.physicians);
+        if (payload?.locations?.length) setCatalogLocations(payload.locations);
       })
       .catch((error: unknown) => {
         if ((error as { name?: string })?.name !== 'AbortError') {
@@ -236,10 +241,11 @@ export const Default = (props: PhysicianListingProps): JSX.Element => {
     () => uniqueSorted(physicians.map((physician) => textValue(physician.specialty))),
     [physicians]
   );
-  const locations = useMemo(
-    () => uniqueSorted(physicians.flatMap(servingLocationNames)),
-    [physicians]
-  );
+  const locations = useMemo(() => {
+    const fromCatalog = catalogLocations.map(locationName).filter(Boolean);
+    if (fromCatalog.length) return uniqueSorted(fromCatalog);
+    return uniqueSorted(physicians.flatMap(servingLocationNames));
+  }, [catalogLocations, physicians]);
 
   const filtered = useMemo(
     () =>

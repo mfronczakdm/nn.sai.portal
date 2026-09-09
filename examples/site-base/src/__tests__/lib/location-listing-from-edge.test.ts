@@ -1,5 +1,6 @@
 import {
   fetchLocationListingChildren,
+  fetchLocationListingPayload,
   toLocationListingItemPath,
 } from '@/lib/location-listing-from-edge';
 import {
@@ -62,9 +63,24 @@ describe('toLocationListingItemPath', () => {
 });
 
 describe('fetchLocationListingChildren', () => {
+  const originalEnv = {
+    defaultId: process.env.SITECORE_EDGE_CONTEXT_ID,
+    previewId: process.env.SITECORE_EDGE_CONTEXT_ID_PREVIEW,
+    liveId: process.env.SITECORE_EDGE_CONTEXT_ID_LIVE,
+  };
+
   beforeEach(() => {
     getData.mockReset();
     previewGetData.mockReset();
+    process.env.SITECORE_EDGE_CONTEXT_ID = 'default-context-id';
+    process.env.SITECORE_EDGE_CONTEXT_ID_PREVIEW = 'preview-context-id';
+    process.env.SITECORE_EDGE_CONTEXT_ID_LIVE = 'live-context-id';
+  });
+
+  afterEach(() => {
+    process.env.SITECORE_EDGE_CONTEXT_ID = originalEnv.defaultId;
+    process.env.SITECORE_EDGE_CONTEXT_ID_PREVIEW = originalEnv.previewId;
+    process.env.SITECORE_EDGE_CONTEXT_ID_LIVE = originalEnv.liveId;
   });
 
   it('maps paged location children and LandingPage targetItems', async () => {
@@ -201,5 +217,50 @@ describe('fetchLocationListingChildren', () => {
       expect.any(String),
       expect.objectContaining({ path: LCMC_DATA_LOCATIONS_ID })
     );
+  });
+
+  it('falls back to the default Edge context when preview children are empty', async () => {
+    previewGetData.mockResolvedValueOnce({
+      item: { children: { results: [], pageInfo: { hasNext: false, endCursor: null } } },
+    });
+    getData.mockResolvedValueOnce({
+      item: {
+        children: {
+          results: [EAST_JEFFERSON],
+          pageInfo: { hasNext: false, endCursor: null },
+        },
+      },
+    });
+
+    const payload = await fetchLocationListingPayload({
+      path: LCMC_DATA_LOCATIONS_ID,
+      language: 'en',
+      edgeMode: 'preview',
+    });
+
+    expect(payload.locations).toHaveLength(1);
+    expect(payload.contextUsed).toBe('default');
+    expect(payload.contextsTried).toEqual(expect.arrayContaining(['preview', 'default']));
+    expect(previewGetData).toHaveBeenCalled();
+    expect(getData).toHaveBeenCalled();
+  });
+
+  it('reports edge-empty when every Edge context returns no hospital locations', async () => {
+    previewGetData.mockResolvedValue({
+      item: null,
+    });
+    getData.mockResolvedValue({
+      item: null,
+    });
+
+    const payload = await fetchLocationListingPayload({
+      path: LCMC_DATA_LOCATIONS_ID,
+      language: 'en',
+      edgeMode: 'preview',
+    });
+
+    expect(payload.locations).toEqual([]);
+    expect(payload.itemFound).toBe(false);
+    expect(payload.error).toBe('edge-empty');
   });
 });

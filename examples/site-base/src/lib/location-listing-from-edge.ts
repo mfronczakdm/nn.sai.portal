@@ -9,6 +9,8 @@ import {
   LCMC_DATA_LOCATIONS_ID,
 } from '@/lib/location-listing.utils';
 
+export { locationListingPublishHint } from '@/lib/location-listing.utils';
+
 export type LocationListingJsonField<T = unknown> = {
   jsonValue?: { value?: T };
 };
@@ -33,6 +35,17 @@ export type LocationListingChild = {
 };
 
 export type LocationListingEdgeMode = 'live' | 'preview';
+export type LocationListingContextKey = 'preview' | 'live' | 'default';
+
+export type LocationListingPayload = {
+  locations: LocationListingChild[];
+  itemFound: boolean;
+  childCount: number;
+  hospitalCount: number;
+  contextsTried: LocationListingContextKey[];
+  contextUsed?: LocationListingContextKey;
+  error?: string;
+};
 
 /**
  * Layout ComponentQuery with children(first: 50) + Treelist expansion exceeds the
@@ -143,18 +156,26 @@ type ChildrenQueryResult = {
   } | null;
 };
 
-function resolveLocationListingContextId(mode: LocationListingEdgeMode): string {
-  const fallback =
+function defaultContextId(): string {
+  return (
     process.env.SITECORE_EDGE_CONTEXT_ID?.trim() ||
     process.env.NEXT_PUBLIC_SITECORE_EDGE_CONTEXT_ID?.trim() ||
-    '';
+    ''
+  );
+}
+
+function resolveLocationListingContextId(mode: LocationListingContextKey): string {
+  const fallback = defaultContextId();
   if (mode === 'preview') {
     return process.env.SITECORE_EDGE_CONTEXT_ID_PREVIEW?.trim() || fallback;
   }
-  return process.env.SITECORE_EDGE_CONTEXT_ID_LIVE?.trim() || fallback;
+  if (mode === 'live') {
+    return process.env.SITECORE_EDGE_CONTEXT_ID_LIVE?.trim() || fallback;
+  }
+  return fallback;
 }
 
-function createEdgeClient(mode: LocationListingEdgeMode): SitecoreClient {
+function createEdgeClient(mode: LocationListingContextKey): SitecoreClient {
   const contextId = resolveLocationListingContextId(mode);
   return new SitecoreClient({
     ...scConfig,
@@ -170,14 +191,28 @@ function createEdgeClient(mode: LocationListingEdgeMode): SitecoreClient {
 }
 
 async function edgeGetData<T>(
-  mode: LocationListingEdgeMode,
+  mode: LocationListingContextKey,
   query: string,
   variables: Record<string, unknown>
 ): Promise<T | undefined> {
-  if (mode === 'preview') {
-    return createEdgeClient('preview').getData<T>(query, variables);
+  if (mode === 'default') {
+    return client.getData<T>(query, variables);
   }
-  return client.getData<T>(query, variables);
+  return createEdgeClient(mode).getData<T>(query, variables);
+}
+
+function uniqueContextKeys(preferred: LocationListingEdgeMode): LocationListingContextKey[] {
+  const ordered: LocationListingContextKey[] =
+    preferred === 'preview' ? ['preview', 'default', 'live'] : ['default', 'live', 'preview'];
+  const seen = new Set<string>();
+  const keys: LocationListingContextKey[] = [];
+  for (const key of ordered) {
+    const id = resolveLocationListingContextId(key);
+    if (!id || seen.has(id)) continue;
+    seen.add(id);
+    keys.push(key);
+  }
+  return keys;
 }
 
 function toJsonField(field?: EdgeFieldValue): LocationListingJsonField<string> | undefined {
@@ -230,17 +265,24 @@ function mapResults(results: EdgeLocationResult[] | undefined): LocationListingC
 async function fetchPage(
   path: string,
   language: string,
-  mode: LocationListingEdgeMode,
+  mode: LocationListingContextKey,
   query: string,
   after?: string
-): Promise<{ results: LocationListingChild[]; endCursor?: string; hasNext: boolean }> {
+): Promise<{
+  itemFound: boolean;
+  results: LocationListingChild[];
+  endCursor?: string;
+  hasNext: boolean;
+}> {
   const result = await edgeGetData<ChildrenQueryResult>(mode, query, {
     path,
     language,
     after,
   });
-  const children = result?.item?.children;
+  const item = result?.item;
+  const children = item?.children;
   return {
+    itemFound: Boolean(item?.id || item?.children),
     results: mapResults(children?.results),
     endCursor: children?.pageInfo?.endCursor ?? undefined,
     hasNext: Boolean(children?.pageInfo?.hasNext && children?.pageInfo?.endCursor),
@@ -250,27 +292,29 @@ async function fetchPage(
 async function fetchAllPages(
   path: string,
   language: string,
-  mode: LocationListingEdgeMode,
+  mode: LocationListingContextKey,
   query: string
-): Promise<LocationListingChild[]> {
+): Promise<{ itemFound: boolean; results: LocationListingChild[] }> {
   const collected: LocationListingChild[] = [];
   let after: string | undefined;
+  let itemFound = false;
 
   for (let page = 0; page < MAX_PAGES; page += 1) {
     const batch = await fetchPage(path, language, mode, query, after);
+    itemFound = itemFound || batch.itemFound;
     collected.push(...batch.results);
     if (!batch.hasNext || !batch.endCursor) break;
     after = batch.endCursor;
   }
 
-  return collected;
+  return { itemFound, results: collected };
 }
 
 async function loadLocationsForMode(
   path: string,
   language: string,
-  mode: LocationListingEdgeMode
-): Promise<LocationListingChild[]> {
+  mode: LocationListingContextKey
+): Promise<{ itemFound: boolean; results: LocationListingChild[]; error?: string }> {
   try {
     return await fetchAllPages(path, language, mode, CHILDREN_QUERY);
   } catch (error) {
@@ -278,18 +322,20 @@ async function loadLocationsForMode(
     console.error(
       '[fetchLocationListingChildren] LookupField query failed, retrying without targetItem:',
       path,
+      mode,
       details ? JSON.stringify(details) : error
     );
     try {
       return await fetchAllPages(path, language, mode, CHILDREN_QUERY_NO_LOOKUP);
     } catch (liteError) {
       const liteDetails = (liteError as { response?: { errors?: unknown } })?.response?.errors;
-      console.error(
-        '[fetchLocationListingChildren] lite children query failed:',
-        path,
-        liteDetails ? JSON.stringify(liteDetails) : liteError
-      );
-      return [];
+      const message = liteDetails
+        ? JSON.stringify(liteDetails)
+        : liteError instanceof Error
+          ? liteError.message
+          : 'Edge children query failed';
+      console.error('[fetchLocationListingChildren] lite children query failed:', path, mode, message);
+      return { itemFound: false, results: [], error: message };
     }
   }
 }
@@ -297,10 +343,93 @@ async function loadLocationsForMode(
 async function loadHospitalLocationsForMode(
   path: string,
   language: string,
-  mode: LocationListingEdgeMode
-): Promise<LocationListingChild[]> {
-  const results = await loadLocationsForMode(path, language, mode);
-  return results.filter(looksLikeHospitalLocation);
+  mode: LocationListingContextKey
+): Promise<{ itemFound: boolean; results: LocationListingChild[]; error?: string }> {
+  const loaded = await loadLocationsForMode(path, language, mode);
+  return {
+    ...loaded,
+    results: loaded.results.filter(looksLikeHospitalLocation),
+  };
+}
+
+async function loadResolvedPath(
+  primaryPath: string,
+  language: string,
+  mode: LocationListingContextKey
+): Promise<{ itemFound: boolean; results: LocationListingChild[]; error?: string }> {
+  const primary = await loadHospitalLocationsForMode(primaryPath, language, mode);
+  if (primary.results.length > 0 || isLcmcDataLocationsRef(primaryPath)) {
+    return primary;
+  }
+  const fallback = await loadHospitalLocationsForMode(LCMC_DATA_LOCATIONS_ID, language, mode);
+  return {
+    itemFound: primary.itemFound || fallback.itemFound,
+    results: fallback.results,
+    error: fallback.error || primary.error,
+  };
+}
+
+/**
+ * Load LCMC Hospital Location items for LocationListing.
+ * Tries preview, default, and live Edge contexts because Pages editing uses preview=1
+ * and SITECORE_EDGE_CONTEXT_ID_LIVE / _PREVIEW can be empty while the default context has items.
+ */
+export async function fetchLocationListingPayload(args: {
+  path?: string;
+  language: string;
+  edgeMode?: LocationListingEdgeMode;
+}): Promise<LocationListingPayload> {
+  const language = args.language || 'en';
+  const path = toLocationListingItemPath(args.path);
+  if (!path) {
+    return {
+      locations: [],
+      itemFound: false,
+      childCount: 0,
+      hospitalCount: 0,
+      contextsTried: [],
+      error: 'Invalid datasource path',
+    };
+  }
+
+  const primaryPath = toLocationListingItemPath(resolveLocationListingFolderRef(path)) || path;
+  const contextsTried = uniqueContextKeys(args.edgeMode || 'live');
+  let itemFound = false;
+  let childCount = 0;
+  let lastError: string | undefined;
+  let querySucceeded = false;
+
+  for (const contextKey of contextsTried) {
+    const loaded = await loadResolvedPath(primaryPath, language, contextKey);
+    itemFound = itemFound || loaded.itemFound;
+    childCount = Math.max(childCount, loaded.results.length);
+    if (loaded.error) lastError = loaded.error;
+    else querySucceeded = true;
+    if (loaded.results.length > 0) {
+      return {
+        locations: loaded.results,
+        itemFound: true,
+        childCount: loaded.results.length,
+        hospitalCount: loaded.results.length,
+        contextsTried,
+        contextUsed: contextKey,
+      };
+    }
+  }
+
+  return {
+    locations: [],
+    itemFound,
+    childCount,
+    hospitalCount: 0,
+    contextsTried,
+    error:
+      lastError && !querySucceeded
+        ? lastError
+        : itemFound
+          ? 'Edge children had no hospital-location fields'
+          : 'edge-empty',
+  };
 }
 
 /**
@@ -313,25 +442,6 @@ export async function fetchLocationListingChildren(args: {
   language: string;
   edgeMode?: LocationListingEdgeMode;
 }): Promise<LocationListingChild[]> {
-  const language = args.language || 'en';
-  const mode = args.edgeMode || 'live';
-  const path = toLocationListingItemPath(args.path);
-  if (!path) return [];
-
-  const primaryPath =
-    toLocationListingItemPath(resolveLocationListingFolderRef(path)) || path;
-
-  const load = async (edgeMode: LocationListingEdgeMode): Promise<LocationListingChild[]> => {
-    const primary = await loadHospitalLocationsForMode(primaryPath, language, edgeMode);
-    if (primary.length > 0) return primary;
-    if (isLcmcDataLocationsRef(primaryPath)) return [];
-    return loadHospitalLocationsForMode(LCMC_DATA_LOCATIONS_ID, language, edgeMode);
-  };
-
-  const resolved = await load(mode);
-  if (resolved.length > 0) return resolved;
-  if (mode === 'preview') {
-    return load('live');
-  }
-  return [];
+  const payload = await fetchLocationListingPayload(args);
+  return payload.locations;
 }

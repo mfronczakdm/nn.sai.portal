@@ -12,7 +12,10 @@ import { cn } from '@/lib/utils';
 import { ComponentProps } from '@/lib/component-props';
 import { NoDataFallback } from '@/utils/NoDataFallback';
 import { parseCoordinate } from '@/lib/location-listing-map.utils';
-import { looksLikeHospitalLocation } from '@/lib/location-listing.utils';
+import {
+  locationListingPublishHint,
+  looksLikeHospitalLocation,
+} from '@/lib/location-listing.utils';
 import { LocationListingMap, type LocationListingMapItem } from './LocationListingMap.dev';
 
 export type LocationListingJsonField<T = string> = {
@@ -151,6 +154,7 @@ export const Default = (props: LocationListingProps): JSX.Element => {
     (page?.layout?.sitecore?.context as { language?: string } | undefined)?.language || 'en';
   const [remoteLocations, setRemoteLocations] = useState<LocationListingChild[]>([]);
   const [isLoadingRemote, setIsLoadingRemote] = useState(false);
+  const [remoteError, setRemoteError] = useState('');
   const [typeFilter, setTypeFilter] = useState<LocationTypeFilter>('');
   const [selectedId, setSelectedId] = useState('');
 
@@ -165,20 +169,42 @@ export const Default = (props: LocationListingProps): JSX.Element => {
     if (isEditing) query.set('preview', '1');
 
     setIsLoadingRemote(true);
-    fetch(`/api/location-listing?${query.toString()}`, { signal: controller.signal })
-      .then((response) => {
-        if (!response.ok) {
-          console.error('[LocationListing] /api/location-listing failed', response.status);
-          return { locations: [] as LocationListingChild[] };
+    setRemoteError('');
+    const requestUrl = `/api/location-listing?${query.toString()}`;
+    fetch(requestUrl, { signal: controller.signal, credentials: 'same-origin' })
+      .then(async (response) => {
+        const contentType = response.headers.get('content-type') || '';
+        if (!contentType.includes('application/json')) {
+          throw new Error(
+            `Location listing API returned ${response.status} ${contentType || 'non-JSON'} from ${requestUrl}`
+          );
         }
-        return response.json() as Promise<{ locations?: LocationListingChild[] }>;
+        const payload = (await response.json()) as {
+          locations?: LocationListingChild[];
+          status?: string;
+          message?: string;
+        };
+        if (!response.ok) {
+          throw new Error(payload.message || `Location listing API failed (${response.status})`);
+        }
+        return payload;
       })
       .then((payload) => {
-        if (payload?.locations?.length) setRemoteLocations(payload.locations);
+        if (payload?.locations?.length) {
+          setRemoteLocations(payload.locations);
+          return;
+        }
+        if (isEditing) {
+          setRemoteError(payload?.message || locationListingPublishHint());
+        }
       })
       .catch((error: unknown) => {
-        if ((error as { name?: string })?.name !== 'AbortError') {
-          console.error('[LocationListing] failed to load locations', error);
+        if ((error as { name?: string })?.name === 'AbortError') return;
+        const message =
+          error instanceof Error ? error.message : 'Location listing API request failed';
+        console.error('[LocationListing] failed to load locations', error);
+        if (isEditing) {
+          setRemoteError(message);
         }
       })
       .finally(() => {
@@ -363,12 +389,22 @@ export const Default = (props: LocationListingProps): JSX.Element => {
             No locations match this filter.
           </p>
         ) : (
-          <p className="text-muted-foreground text-sm" data-testid="location-listing-empty">
+          <p
+            className={cn(
+              'text-sm',
+              remoteError && isEditing ? 'text-destructive' : 'text-muted-foreground'
+            )}
+            data-testid="location-listing-empty"
+          >
             {isLoadingRemote
               ? 'Loading locations…'
-              : datasourceAssigned
-                ? 'No locations found under this datasource. Point it at Data/Locations, or the Our Locations page — both resolve to hospital location items.'
-                : 'Assign Data/Locations or the Our Locations page as the datasource, then add location items under Data/Locations.'}
+              : remoteError
+                ? remoteError
+                : isEditing && datasourceAssigned
+                  ? locationListingPublishHint()
+                  : datasourceAssigned
+                    ? 'No locations found under this datasource. Point it at Data/Locations, or the Our Locations page — both resolve to hospital location items.'
+                    : 'Assign Data/Locations or the Our Locations page as the datasource, then add location items under Data/Locations.'}
           </p>
         )}
       </div>
