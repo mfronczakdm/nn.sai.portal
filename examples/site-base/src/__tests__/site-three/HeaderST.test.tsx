@@ -1243,8 +1243,9 @@ describe('HeaderST Component', () => {
       expect(english).toHaveAttribute('href', '/en');
       expect(english).toHaveAttribute('aria-current', 'true');
       expect(english).toHaveAttribute('hrefLang', 'en');
-      expect(spanish).toHaveAttribute('href', '/es-ES');
-      expect(spanish).toHaveAttribute('hrefLang', 'es-ES');
+      expect(spanish).toHaveAttribute('href', '/es-CO');
+      expect(spanish).toHaveAttribute('hrefLang', 'es-CO');
+      expect(spanish).toHaveAttribute('lang', 'es-CO');
       expect(spanish).not.toHaveAttribute('aria-current');
     });
 
@@ -1258,12 +1259,12 @@ describe('HeaderST Component', () => {
       );
       expect(screen.getByRole('link', { name: 'Español' })).toHaveAttribute(
         'href',
-        '/es-ES/for-providers'
+        '/es-CO/for-providers'
       );
     });
 
     it('marks Spanish current and swaps the locale segment on Version3', () => {
-      mockPathname = '/es-ES/contact-us';
+      mockPathname = '/es-CO/contact-us';
       render(<HeaderSTVersion3 {...headerSTPropsVersion3} />);
 
       const spanish = screen.getByRole('link', { name: 'Español' });
@@ -1282,7 +1283,7 @@ describe('HeaderST Component', () => {
 
       expect(screen.getByRole('link', { name: 'Español' })).toHaveAttribute(
         'href',
-        '/es-ES/our-locations?site=lcmc'
+        '/es-CO/our-locations?site=lcmc'
       );
       expect(screen.getByRole('link', { name: 'English' })).toHaveAttribute(
         'href',

@@ -7,7 +7,10 @@ export const DEFAULT_LOCALE = process.env.NEXT_PUBLIC_DEFAULT_LANGUAGE || 'en';
 export const JAPANESE_LOCALE = 'ja-JP';
 export const KOREAN_LOCALE = 'ko-KR';
 export const SIMPLIFIED_CHINESE_LOCALE = 'zh-CN';
+/** Atlanta Apparel Sitecore Spanish (Spain). */
 export const SPANISH_LOCALE = 'es-ES';
+/** LCMC / demo Sitecore Spanish (Colombia). Keep distinct from SPANISH_LOCALE. */
+export const COLOMBIAN_SPANISH_LOCALE = 'es-CO';
 
 export const ATLANTA_APPAREL_SITE_NAME = 'atlanta-apparel';
 
@@ -19,6 +22,7 @@ export const ADDITIONAL_LOCALES = [
   KOREAN_LOCALE,
   SIMPLIFIED_CHINESE_LOCALE,
   SPANISH_LOCALE,
+  COLOMBIAN_SPANISH_LOCALE,
 ];
 
 export const SUPPORTED_LOCALES = [
@@ -110,6 +114,7 @@ function normalizeLocaleCode(code: string): string | undefined {
  * Atlanta Apparel language dropdown options.
  * Prefer Sitecore-provided site languages when they include English, Japanese, and Spanish;
  * otherwise fall back to the installed Sitecore names en / ja-JP / es-ES.
+ * Short code `es` maps to es-ES (listed before es-CO in SUPPORTED_LOCALES).
  */
 export function resolveAtlantaApparelLanguageOptions(
   availableLocales?: readonly string[] | null

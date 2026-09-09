@@ -4,6 +4,7 @@ import {
   JAPANESE_LOCALE,
   KOREAN_LOCALE,
   SIMPLIFIED_CHINESE_LOCALE,
+  COLOMBIAN_SPANISH_LOCALE,
   SPANISH_LOCALE,
   SUPPORTED_LOCALES,
   buildLanguageSwitchPathname,
@@ -17,29 +18,34 @@ import {
 } from '@/lib/locale';
 
 describe('locale helpers', () => {
-  it('supports the default language plus Amkor and Atlanta Apparel languages', () => {
+  it('supports the default language plus Amkor, Atlanta Apparel, and LCMC languages', () => {
     expect(SUPPORTED_LOCALES).toEqual([
       DEFAULT_LOCALE,
       JAPANESE_LOCALE,
       KOREAN_LOCALE,
       SIMPLIFIED_CHINESE_LOCALE,
       SPANISH_LOCALE,
+      COLOMBIAN_SPANISH_LOCALE,
     ]);
   });
 
   it('uses the Sitecore language names as locale codes', () => {
-    expect([JAPANESE_LOCALE, KOREAN_LOCALE, SIMPLIFIED_CHINESE_LOCALE, SPANISH_LOCALE]).toEqual([
-      'ja-JP',
-      'ko-KR',
-      'zh-CN',
-      'es-ES',
-    ]);
+    expect([
+      JAPANESE_LOCALE,
+      KOREAN_LOCALE,
+      SIMPLIFIED_CHINESE_LOCALE,
+      SPANISH_LOCALE,
+      COLOMBIAN_SPANISH_LOCALE,
+    ]).toEqual(['ja-JP', 'ko-KR', 'zh-CN', 'es-ES', 'es-CO']);
   });
 
   describe('isSupportedLocale', () => {
-    it.each([['ja-JP'], ['ko-KR'], ['zh-CN'], ['es-ES'], ['en']])('accepts %s', (locale) => {
-      expect(isSupportedLocale(locale)).toBe(true);
-    });
+    it.each([['ja-JP'], ['ko-KR'], ['zh-CN'], ['es-ES'], ['es-CO'], ['en']])(
+      'accepts %s',
+      (locale) => {
+        expect(isSupportedLocale(locale)).toBe(true);
+      }
+    );
 
     it.each([['ja'], ['zh-Hans'], [''], [undefined], [null]])('rejects %s', (locale) => {
       expect(isSupportedLocale(locale as string | undefined)).toBe(false);
@@ -50,6 +56,8 @@ describe('locale helpers', () => {
     it('reads the locale from the first segment', () => {
       expect(getLocaleFromPathname('/ja-JP/quality')).toBe('ja-JP');
       expect(getLocaleFromPathname('/ja-JP')).toBe('ja-JP');
+      expect(getLocaleFromPathname('/es-CO/for-providers')).toBe('es-CO');
+      expect(getLocaleFromPathname('/es-ES/visit')).toBe('es-ES');
     });
 
     it('returns undefined for unprefixed and unsupported paths', () => {
@@ -110,8 +118,11 @@ describe('locale helpers', () => {
       expect(buildLanguageSwitchPathname('/quality/', 'ja-JP')).toBe('/ja-JP/quality');
     });
 
-    it('prefixes Spanish with the Sitecore language name', () => {
+    it('prefixes Atlanta Spanish with es-ES and LCMC Spanish with es-CO', () => {
       expect(buildLanguageSwitchPathname('/visit', SPANISH_LOCALE)).toBe('/es-ES/visit');
+      expect(buildLanguageSwitchPathname('/for-providers', COLOMBIAN_SPANISH_LOCALE)).toBe(
+        '/es-CO/for-providers'
+      );
     });
   });
 
@@ -135,7 +146,7 @@ describe('locale helpers', () => {
       ]);
     });
 
-    it('maps short codes onto installed Sitecore language names', () => {
+    it('maps short codes onto installed Sitecore language names (es → es-ES, not es-CO)', () => {
       expect(resolveAtlantaApparelLanguageOptions(['en', 'ja', 'es'])).toEqual([
         { text: 'English', locale: 'en' },
         { text: 'Japanese', locale: 'ja-JP' },
@@ -155,6 +166,7 @@ describe('locale helpers', () => {
       expect(getLocaleDisplayName('en')).toBe('English');
       expect(getLocaleDisplayName('ja-JP')).toBe('Japanese');
       expect(getLocaleDisplayName('es-ES')).toBe('Spanish');
+      expect(getLocaleDisplayName('es-CO')).toBe('Spanish');
     });
 
     it('recognizes the Atlanta Apparel site name', () => {

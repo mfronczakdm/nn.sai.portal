@@ -25,7 +25,7 @@ import {
   JAPANESE_LOCALE,
   KOREAN_LOCALE,
   SIMPLIFIED_CHINESE_LOCALE,
-  SPANISH_LOCALE,
+  COLOMBIAN_SPANISH_LOCALE,
   buildLanguageSwitchPathname,
   getLocaleFromPathname,
   isAtlantaApparelSiteName,
@@ -940,7 +940,7 @@ const version3UtilityLabels = new Set(version3UtilityLinks.map((link) => link.te
 
 const version3LanguageLinks = [
   { text: 'English', locale: DEFAULT_LOCALE, country: 'US' as const },
-  { text: 'Español', locale: SPANISH_LOCALE, country: 'ES' as const },
+  { text: 'Español', locale: COLOMBIAN_SPANISH_LOCALE, country: 'ES' as const },
 ];
 
 const Version3FlagGlyph = ({ country }: { country: 'US' | 'ES' }) =>

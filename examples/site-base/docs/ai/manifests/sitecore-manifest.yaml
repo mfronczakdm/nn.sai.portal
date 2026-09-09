@@ -9032,7 +9032,7 @@ ia:
     category: "Global Elements"
     status: "complete"
     createdAt: "2026-08-19T18:30:00Z"
-    updatedAt: "2026-09-09T17:15:00Z"
+    updatedAt: "2026-09-09T19:30:00Z"
 
     react:
       filePath: "src/components/site-three/HeaderST.tsx"
@@ -9150,7 +9150,7 @@ ia:
       note: "2026-09-03: LoginLink set to Sign In → https://www.atlanta-apparel.com/login. SupportLink remains Register → Visit/Registration {EBD89713-040D-4B8F-810D-23E44B93F2A6}. City menus are Version2-hardcoded, not datasource fields."
 
     verification:
-      checkedAt: "2026-09-09T17:15:00Z"
+      checkedAt: "2026-09-09T19:30:00Z"
       passed:
         - "LoginLink field created on HeaderST datasource template"
         - "Headless Variants container + Default + LoginRequired verified via MCP"
@@ -9173,7 +9173,8 @@ ia:
         - "2026-09-03: atlanta-apparel Header LoginLink populated as Sign In"
         - "2026-09-04: Atlanta Apparel Header partial {506BF874-2F4C-4415-8A7B-A17014A1E65C} confirmed HeaderST FieldNames Version2 {F0F3B5E5-DA94-4B53-A6BD-143F3F9B5538}"
         - "2026-09-04: Version2 Atlanta-only language dropdown (en / ja-JP / es-ES) — no new Sitecore variants or RP fields"
-        - "2026-09-09: Version3 EN/ES flag switcher (US → /en, Spain → /es-ES) left of search; Default unchanged; no new Sitecore items"
+        - "2026-09-09: Version3 EN/ES flag switcher (US → /en, Spain → /es-CO) left of search; Default unchanged; no new Sitecore items"
+        - "2026-09-09: LCMC Version3 Spanish locale is es-CO (Colombia); es-ES remains Atlanta Apparel Version2"
       failed: []
       pendingManual:
         - "Select Version3 on lcmc Header partial design HeaderST rendering in Pages"
@@ -9193,7 +9194,8 @@ ia:
         - "Optional: add postLogoutRedirect to HeaderST rendering parameters template"
 
     notes:
-      - "2026-09-09: Version3 EN/ES flag language switcher for the LCMC demo. US flag → English, Spain flag → Español. Placement: right cluster immediately left of search (does not wrap primary nav). Reuses existing useLanguageSwitcher + buildLanguageSwitchPathname; Sitecore Spanish language name is es-ES (ISO es), so hrefs are /en/… and /es-ES/…. No new Sitecore items, variants, or rendering params. Default/LoginRequired/Version1/Version2 unchanged."
+      - "2026-09-09: Version3 Spanish flag hrefs use Sitecore Colombia language es-CO (/es-CO/{path}), not es-ES. Added COLOMBIAN_SPANISH_LOCALE to src/lib/locale.ts SUPPORTED_LOCALES so next-intl / LocaleProxy / app-locale cookie treat /es-CO like other non-default locales. Atlanta Apparel Version2 keeps SPANISH_LOCALE es-ES. Default/LoginRequired/Version1/Version2 UI unchanged; no new Sitecore items."
+      - "2026-09-09: Version3 EN/ES flag language switcher for the LCMC demo. US flag → English, Spain flag → Español. Placement: right cluster immediately left of search (does not wrap primary nav). Reuses existing useLanguageSwitcher + buildLanguageSwitchPathname; Sitecore Spanish language name is es-CO (Colombia), so hrefs are /en/… and /es-CO/…. No new Sitecore items, variants, or rendering params. Default/LoginRequired/Version1/Version2 unchanged."
       - "2026-09-04: Atlanta Apparel HeaderST Version2 language dropdown (top-right of the dark utility row). Confirmed on Header partial {506BF874-2F4C-4415-8A7B-A17014A1E65C} FieldNames={F0F3B5E5-DA94-4B53-A6BD-143F3F9B5538} (Version2). Dropdown is gated to atlanta-apparel via page.siteName / context.site.name / ?site= so americasmart Version2 is unchanged. Languages: English (en), Japanese (ja-JP), Spanish (es-ES) — Sitecore tenant language names; prefers layout context.languages when that list includes en+ja+es, else this fallback. Href pattern matches Version1: /{locale}{path}?{query} via buildLanguageSwitchPathname. Added SPANISH_LOCALE to src/lib/locale.ts SUPPORTED_LOCALES so next-intl / LocaleProxy / app-locale cookie treat /es-ES the same as /ja-JP. No new Sitecore items, variants, or rendering params. Default/LoginRequired/Version1/Version3 unchanged."
       - "2026-09-03: Version2 lg-band (1024-1279px) crowding fix for atlanta-apparel Pages laptop breakpoint. Logo was lg:h-12/320px and centered nav collided with Exhibitor Directory. Cap logo at lg:h-9/168px (xl restores h-12/280px), main-row lg:gap-3, primary nav flex-nowrap justify-end overflow-visible, compact a/span/button padding, force li w-auto so Sitecore col-12 cannot stretch under the logo. City triggers slightly tighter until xl. Code-only; no new Sitecore variants or RP fields. Default/LoginRequired/Version1/Version3 unchanged."
       - "2026-09-03: Version2 now renders live-matching ANDMORE city pull-downs (ATLANTA, LAS VEGAS, HIGH POINT, NEW YORK) plus Market Plan on the dark utility row. Code-only menus in HeaderST.tsx (version2LocationMenus) because HeaderST's shared datasource has no location fields and the skill forbids new cosmetic datasource fields. Accessible button+menu (hover or click, Escape/outside close). Atlanta Apparel (/) is internal; sister markets are live ANDMORE URLs. Market Plan → /visit/plan-your-market {94A9563C-55F2-4348-BFAF-95D95DDD58A6}. atlanta-apparel Header datasource LoginLink set to Sign In → https://www.atlanta-apparel.com/login. Default/LoginRequired/Version1/Version3 layouts unchanged. No new Sitecore variants or RP fields."
