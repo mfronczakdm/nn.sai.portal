@@ -226,6 +226,14 @@ describe('HeaderST Component', () => {
       expect(screen.queryByRole('button', { name: 'Language' })).not.toBeInTheDocument();
     });
 
+    it('does not render Version3 language flags', () => {
+      render(<HeaderSTDefault {...defaultHeaderSTProps} />);
+
+      expect(document.querySelector('[data-header-st-langs="version3"]')).not.toBeInTheDocument();
+      expect(screen.queryByRole('link', { name: 'English' })).not.toBeInTheDocument();
+      expect(screen.queryByRole('link', { name: 'Español' })).not.toBeInTheDocument();
+    });
+
     it('renders header structure with all components', () => {
       render(<HeaderSTDefault {...defaultHeaderSTProps} />);
 
@@ -1221,6 +1229,65 @@ describe('HeaderST Component', () => {
       );
 
       expect(screen.getByTestId('mini-cart')).toBeInTheDocument();
+    });
+
+    it('renders US and Spain flag links with accessible English / Español names', () => {
+      render(<HeaderSTVersion3 {...headerSTPropsVersion3} />);
+
+      const switcher = document.querySelector('[data-header-st-langs="version3"]');
+      expect(switcher).toBeInTheDocument();
+      expect(switcher).toHaveAttribute('aria-label', 'Language');
+
+      const english = screen.getByRole('link', { name: 'English' });
+      const spanish = screen.getByRole('link', { name: 'Español' });
+      expect(english).toHaveAttribute('href', '/en');
+      expect(english).toHaveAttribute('aria-current', 'true');
+      expect(english).toHaveAttribute('hrefLang', 'en');
+      expect(spanish).toHaveAttribute('href', '/es-ES');
+      expect(spanish).toHaveAttribute('hrefLang', 'es-ES');
+      expect(spanish).not.toHaveAttribute('aria-current');
+    });
+
+    it('keeps the visitor on the current page when switching Version3 language', () => {
+      mockPathname = '/for-providers';
+      render(<HeaderSTVersion3 {...headerSTPropsVersion3} />);
+
+      expect(screen.getByRole('link', { name: 'English' })).toHaveAttribute(
+        'href',
+        '/en/for-providers'
+      );
+      expect(screen.getByRole('link', { name: 'Español' })).toHaveAttribute(
+        'href',
+        '/es-ES/for-providers'
+      );
+    });
+
+    it('marks Spanish current and swaps the locale segment on Version3', () => {
+      mockPathname = '/es-ES/contact-us';
+      render(<HeaderSTVersion3 {...headerSTPropsVersion3} />);
+
+      const spanish = screen.getByRole('link', { name: 'Español' });
+      expect(spanish).toHaveAttribute('aria-current', 'true');
+      expect(screen.getByRole('link', { name: 'English' })).toHaveAttribute(
+        'href',
+        '/en/contact-us'
+      );
+      expect(screen.getByRole('link', { name: 'English' })).not.toHaveAttribute('aria-current');
+    });
+
+    it('preserves the site query parameter on Version3 language links', () => {
+      mockPathname = '/our-locations';
+      mockSearch = 'site=lcmc';
+      render(<HeaderSTVersion3 {...headerSTPropsVersion3} />);
+
+      expect(screen.getByRole('link', { name: 'Español' })).toHaveAttribute(
+        'href',
+        '/es-ES/our-locations?site=lcmc'
+      );
+      expect(screen.getByRole('link', { name: 'English' })).toHaveAttribute(
+        'href',
+        '/en/our-locations?site=lcmc'
+      );
     });
   });
 });

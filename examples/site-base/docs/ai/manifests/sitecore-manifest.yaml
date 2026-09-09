@@ -1,5 +1,5 @@
 ﻿generatedAt: "2026-03-20T09:00:00Z"
-lastUpdatedAt: "2026-09-08T21:30:00Z"
+lastUpdatedAt: "2026-09-09T17:05:00Z"
 lastUpdatedBy: "cursor-agent"
 
 project:
@@ -9032,7 +9032,7 @@ ia:
     category: "Global Elements"
     status: "complete"
     createdAt: "2026-08-19T18:30:00Z"
-    updatedAt: "2026-09-04T13:30:00Z"
+    updatedAt: "2026-09-09T17:15:00Z"
 
     react:
       filePath: "src/components/site-three/HeaderST.tsx"
@@ -9150,7 +9150,7 @@ ia:
       note: "2026-09-03: LoginLink set to Sign In → https://www.atlanta-apparel.com/login. SupportLink remains Register → Visit/Registration {EBD89713-040D-4B8F-810D-23E44B93F2A6}. City menus are Version2-hardcoded, not datasource fields."
 
     verification:
-      checkedAt: "2026-09-04T13:30:00Z"
+      checkedAt: "2026-09-09T17:15:00Z"
       passed:
         - "LoginLink field created on HeaderST datasource template"
         - "Headless Variants container + Default + LoginRequired verified via MCP"
@@ -9173,6 +9173,7 @@ ia:
         - "2026-09-03: atlanta-apparel Header LoginLink populated as Sign In"
         - "2026-09-04: Atlanta Apparel Header partial {506BF874-2F4C-4415-8A7B-A17014A1E65C} confirmed HeaderST FieldNames Version2 {F0F3B5E5-DA94-4B53-A6BD-143F3F9B5538}"
         - "2026-09-04: Version2 Atlanta-only language dropdown (en / ja-JP / es-ES) — no new Sitecore variants or RP fields"
+        - "2026-09-09: Version3 EN/ES flag switcher (US → /en, Spain → /es-ES) left of search; Default unchanged; no new Sitecore items"
       failed: []
       pendingManual:
         - "Select Version3 on lcmc Header partial design HeaderST rendering in Pages"
@@ -9192,6 +9193,7 @@ ia:
         - "Optional: add postLogoutRedirect to HeaderST rendering parameters template"
 
     notes:
+      - "2026-09-09: Version3 EN/ES flag language switcher for the LCMC demo. US flag → English, Spain flag → Español. Placement: right cluster immediately left of search (does not wrap primary nav). Reuses existing useLanguageSwitcher + buildLanguageSwitchPathname; Sitecore Spanish language name is es-ES (ISO es), so hrefs are /en/… and /es-ES/…. No new Sitecore items, variants, or rendering params. Default/LoginRequired/Version1/Version2 unchanged."
       - "2026-09-04: Atlanta Apparel HeaderST Version2 language dropdown (top-right of the dark utility row). Confirmed on Header partial {506BF874-2F4C-4415-8A7B-A17014A1E65C} FieldNames={F0F3B5E5-DA94-4B53-A6BD-143F3F9B5538} (Version2). Dropdown is gated to atlanta-apparel via page.siteName / context.site.name / ?site= so americasmart Version2 is unchanged. Languages: English (en), Japanese (ja-JP), Spanish (es-ES) — Sitecore tenant language names; prefers layout context.languages when that list includes en+ja+es, else this fallback. Href pattern matches Version1: /{locale}{path}?{query} via buildLanguageSwitchPathname. Added SPANISH_LOCALE to src/lib/locale.ts SUPPORTED_LOCALES so next-intl / LocaleProxy / app-locale cookie treat /es-ES the same as /ja-JP. No new Sitecore items, variants, or rendering params. Default/LoginRequired/Version1/Version3 unchanged."
       - "2026-09-03: Version2 lg-band (1024-1279px) crowding fix for atlanta-apparel Pages laptop breakpoint. Logo was lg:h-12/320px and centered nav collided with Exhibitor Directory. Cap logo at lg:h-9/168px (xl restores h-12/280px), main-row lg:gap-3, primary nav flex-nowrap justify-end overflow-visible, compact a/span/button padding, force li w-auto so Sitecore col-12 cannot stretch under the logo. City triggers slightly tighter until xl. Code-only; no new Sitecore variants or RP fields. Default/LoginRequired/Version1/Version3 unchanged."
       - "2026-09-03: Version2 now renders live-matching ANDMORE city pull-downs (ATLANTA, LAS VEGAS, HIGH POINT, NEW YORK) plus Market Plan on the dark utility row. Code-only menus in HeaderST.tsx (version2LocationMenus) because HeaderST's shared datasource has no location fields and the skill forbids new cosmetic datasource fields. Accessible button+menu (hover or click, Escape/outside close). Atlanta Apparel (/) is internal; sister markets are live ANDMORE URLs. Market Plan → /visit/plan-your-market {94A9563C-55F2-4348-BFAF-95D95DDD58A6}. atlanta-apparel Header datasource LoginLink set to Sign In → https://www.atlanta-apparel.com/login. Default/LoginRequired/Version1/Version3 layouts unchanged. No new Sitecore variants or RP fields."
@@ -10981,6 +10983,7 @@ ia:
       ArticleContent placed on each new page headless-main. Header gained a 6th MegaMenuItem
       (visual QA recommended). Unused duplicate MegaMenuItem {0707C558-1F8F-42F0-A540-758066F914BE}
       remains under Header/Data; rendering uses auto-created West_Jefferson_Medical_Center.
+      2026-09-09: Page Design mass-assign to children was not applied (Marketer MCP tool timeout). See lcmc-wjmc-page-design-mass-update.
     items:
       - { name: "West Jefferson Medical Center", itemId: "{244D564F-91DC-4CCE-8AE7-B074BFB26EA3}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center" }
       - { name: "Our Services", itemId: "{2C56B473-70EE-4A89-BDD5-CFED2A5FCDD8}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services" }
@@ -11035,6 +11038,139 @@ ia:
         - "Visual QA of 6th header L1 at desktop and mobile"
         - "Unused Header/Data MegaMenuItem {0707C558-...} can be deleted in CE"
         - "Remaining pages besides ENT/home may still be Draft until published"
+
+  - name: "lcmc-wjmc-page-design-mass-update"
+    kind: "update"
+    category: "IA"
+    status: "failed"
+    createdAt: "2026-09-09T16:34:00Z"
+    updatedAt: "2026-09-09T16:50:00Z"
+    siteName: "lcmc"
+    siteCollection: "lcmc"
+    contentRootPath: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center"
+    contentRootItemId: "{244D564F-91DC-4CCE-8AE7-B074BFB26EA3}"
+    pageTemplateId: "{D77937AC-BAE4-4EB0-8D7E-69EC09D5BBFC}"
+    pageTemplateName: "Services Page"
+    pagesUi:
+      section: "Designing"
+      control: "Page Design"
+      fieldName: "Page Design"
+      note: "XM Cloud Pages right-hand pane → Designing → Page Design dropdown. MCP field name is exactly 'Page Design' (space). Write GUID of the Page Design item."
+    targetPageDesign:
+      name: "West Jefferson Default"
+      expectedPath: "/sitecore/content/lcmc/lcmc/Presentation/Page Designs/West Jefferson Default"
+      itemId: ""
+      note: "Not resolved this session. Do not reuse IA create pageDesignId {917B09BA-1495-4EE0-9E1C-36AA268CB54B} — that is the prior Default assigned on create, not West Jefferson Default."
+    priorPageDesignId: "{917B09BA-1495-4EE0-9E1C-36AA268CB54B}"
+    updatePlan:
+      tool: "update_fields_on_item"
+      fields:
+        - { name: "Page Design", value: "<West Jefferson Default item GUID>" }
+      testFirst: "{3C6D2FF3-5E8F-483D-9FFD-A24AFCF83A58}"
+      scope: "direct children of WJMC home only (siblings of About Us); L3 Our Services pages not in this sibling set"
+    children:
+      - { name: "Our Services", itemId: "{2C56B473-70EE-4A89-BDD5-CFED2A5FCDD8}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services", result: "not-attempted" }
+      - { name: "Patients and Visitors", itemId: "{D922D27F-C05C-4431-98BB-27A36A5DEE2F}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Patients and Visitors", result: "not-attempted" }
+      - { name: "About Us", itemId: "{3C6D2FF3-5E8F-483D-9FFD-A24AFCF83A58}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/About Us", result: "failed-mcp-timeout" }
+      - { name: "Our Locations", itemId: "{2C5BA133-5EC7-49FC-8EFF-03B25011B504}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Locations", result: "not-attempted" }
+      - { name: "Contact Us", itemId: "{2B129408-A7FC-4E51-A079-5F3627F47485}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Contact Us", result: "not-attempted" }
+    verification:
+      checkedAt: "2026-09-09T16:50:00Z"
+      passed:
+        - "mcp_auth succeeded for user-marketer"
+        - "Field name Page Design confirmed from prior MCP reads of Services Page items"
+      failed:
+        - "All Marketer MCP item reads/writes timed out waiting for scoped connection after auth"
+        - "West Jefferson Default page design item ID not resolved"
+        - "About Us Page Design not updated or read back"
+      pendingManual:
+        - "Retry MCP from a session where user-marketer tools connect (not only mcp_auth)"
+        - "Resolve /sitecore/content/lcmc/lcmc/Presentation/Page Designs/West Jefferson Default ID"
+        - "update_fields_on_item About Us first, read back Page Design, then siblings"
+        - "Publish WJMC children after Page Design assignment"
+    notes:
+      - "2026-09-09: Direct children listed from lcmc-wjmc-microsite manifest IDs. Parent WJMC home not in scope. L3 service pages under Our Services not updated. GitLens MCP connected; Marketer tools did not."
+
+  - name: "lcmc-wjmc-ent-subpages"
+    kind: "ia-create"
+    category: "IA"
+    status: "complete"
+    createdAt: "2026-09-09T16:47:00Z"
+    updatedAt: "2026-09-09T17:25:00Z"
+    siteName: "lcmc"
+    siteCollection: "lcmc"
+    contentRootPath: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/Ears Nose and Throat Care"
+    contentRootItemId: "{66B44E6A-6D2F-4B01-BB8A-A26E4E3EC29C}"
+    pageTemplateId: "{D77937AC-BAE4-4EB0-8D7E-69EC09D5BBFC}"
+    pageTemplateName: "Services Page"
+    pageTemplateSource: "Confirmed on parent ENT hub and About Us via MCP; same Services Page as sibling WJMC service pages."
+    targetPageDesign:
+      name: "West Jefferson Default"
+      expectedPath: "/sitecore/content/lcmc/lcmc/Presentation/Page Designs/West Jefferson Default"
+      itemId: "{5944F724-0620-4D9F-9317-AB0B80D9D094}"
+      copyFrom:
+        - { name: "About Us", itemId: "{3C6D2FF3-5E8F-483D-9FFD-A24AFCF83A58}" }
+        - { name: "Contact Us", itemId: "{2B129408-A7FC-4E51-A079-5F3627F47485}" }
+      doNotUse: "{917B09BA-1495-4EE0-9E1C-36AA268CB54B}"
+    iaSource: "docs/ai/ia/lcmc-wjmc-ia.md"
+    sourceSite: "https://www.lcmchealth.org/west-jefferson-medical-center/our-services/ears-nose-throat-care/"
+    createdCount: 3
+    skippedCount: 0
+    failedCount: 0
+    plannedPages:
+      - name: "Ear"
+        itemId: "{B8E18689-CB80-4194-9166-797ED30706F2}"
+        path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/Ears Nose and Throat Care/Ear"
+        route: "/West-Jefferson-Medical-Center/Our-Services/Ears-Nose-and-Throat-Care/Ear"
+        liveUrl: "https://www.lcmchealth.org/west-jefferson-medical-center/our-services/ears-nose-throat-care/ear/"
+        liveTitle: "Ear / Ear Care Services Marrero"
+        pageTitle: "Ear"
+        pageSubtitle: "From balance problems to surgical ear treatments, we're here to help"
+        pageDesign: "{5944F724-0620-4D9F-9317-AB0B80D9D094}"
+        workflow: "Draft"
+        result: "created"
+      - name: "Nose"
+        itemId: "{B95A263A-FD7A-4243-82CA-8FEBE67C4134}"
+        path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/Ears Nose and Throat Care/Nose"
+        route: "/West-Jefferson-Medical-Center/Our-Services/Ears-Nose-and-Throat-Care/Nose"
+        liveUrl: "https://www.lcmchealth.org/west-jefferson-medical-center/our-services/ears-nose-throat-care/nose/"
+        liveTitle: "Nose / Nasal and Sinus Care"
+        pageTitle: "Nose"
+        pageSubtitle: "From allergies to sinus infections, we're here to help"
+        pageDesign: "{5944F724-0620-4D9F-9317-AB0B80D9D094}"
+        workflow: "Draft"
+        result: "created"
+      - name: "Throat Neck and Face Care"
+        itemId: "{FDEEC078-E398-4CE2-91E3-2D0BDA4EC30E}"
+        path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/Ears Nose and Throat Care/Throat Neck and Face Care"
+        route: "/West-Jefferson-Medical-Center/Our-Services/Ears-Nose-and-Throat-Care/Throat-Neck-and-Face-Care"
+        liveUrl: "https://www.lcmchealth.org/west-jefferson-medical-center/our-services/ears-nose-throat-care/throat/"
+        liveTitle: "Throat, Neck, and Face Care"
+        pageTitle: "Throat, Neck, and Face Care"
+        pageSubtitle: "From sore throats to neck cancer, we're here for you"
+        pageDesign: "{5944F724-0620-4D9F-9317-AB0B80D9D094}"
+        workflow: "Draft"
+        result: "created"
+    omittedLivePages:
+      - { name: "Tympanoplasty", url: "https://www.lcmchealth.org/west-jefferson-medical-center/our-services/ears-nose-throat-care/ear/tympanoplasty/", reason: "L4 under Ear; stayed within 3 L3 hub children" }
+      - { name: "Hearing Care", url: "https://www.lcmchealth.org/west-jefferson-medical-center/our-services/ears-nose-throat-care/ear/hearing-care/", reason: "L4 under Ear; stayed within 3 L3 hub children" }
+    verification:
+      checkedAt: "2026-09-09T17:25:00Z"
+      passed:
+        - "list_sites confirmed site lcmc"
+        - "Parent ENT item confirmed by ID and path {66B44E6A-6D2F-4B01-BB8A-A26E4E3EC29C}"
+        - "Services Page template {D77937AC-BAE4-4EB0-8D7E-69EC09D5BBFC} confirmed on parent and get_page_template_by_id"
+        - "Page Design copied from About Us: West Jefferson Default {5944F724-0620-4D9F-9317-AB0B80D9D094}; not {917B09BA-1495-4EE0-9E1C-36AA268CB54B}"
+        - "All 3 children created via create_content_item; none existed beforehand"
+        - "get_content_item_by_id verified Page Design, pageTitle, Detail, and image on all 3"
+      failed: []
+      pendingManual:
+        - "Publish subtree (items are Draft workflow)"
+        - "Insert options under ENT parent list only Detail Page {26D9BBEB-8766-40C6-AD67-83C9DA93FA14}; authors cannot insert Services Page without updating __Masters"
+        - "Replace external image XML with DAM dam-id when assets are uploaded"
+    notes:
+      - "2026-09-09: Research complete from live lcmchealth.org WJMC ENT hub. Chose the three live L3 children (Ear, Nose, Throat Neck and Face Care) rather than L4 Hearing Care / Tympanoplasty. GitLens MCP invoke worked; Marketer invoke did not. Same scoped-connection timeout as lcmc-wjmc-page-design-mass-update."
+      - "2026-09-09: Retry after Marketer MCP reauth succeeded. Created 3 Services Pages under ENT parent; Page Design West Jefferson Default {5944F724-...} set on create and verified on read-back."
 
   - name: "MultiPromo"
     kind: "update"

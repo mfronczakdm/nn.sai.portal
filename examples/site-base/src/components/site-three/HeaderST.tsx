@@ -25,6 +25,7 @@ import {
   JAPANESE_LOCALE,
   KOREAN_LOCALE,
   SIMPLIFIED_CHINESE_LOCALE,
+  SPANISH_LOCALE,
   buildLanguageSwitchPathname,
   getLocaleFromPathname,
   isAtlantaApparelSiteName,
@@ -937,6 +938,63 @@ const version3UtilityLinks = [
 
 const version3UtilityLabels = new Set(version3UtilityLinks.map((link) => link.text.toLowerCase()));
 
+const version3LanguageLinks = [
+  { text: 'English', locale: DEFAULT_LOCALE, country: 'US' as const },
+  { text: 'Español', locale: SPANISH_LOCALE, country: 'ES' as const },
+];
+
+const Version3FlagGlyph = ({ country }: { country: 'US' | 'ES' }) =>
+  country === 'US' ? (
+    <svg viewBox="0 0 19 10" className="h-4 w-[1.52rem] rounded-[2px]" aria-hidden>
+      <rect width="19" height="10" fill="#b22234" />
+      <path
+        fill="#fff"
+        d="M0 .77h19v.77H0zm0 1.54h19v.77H0zm0 1.54h19v.77H0zm0 1.54h19v.77H0zm0 1.54h19v.77H0zm0 1.54h19v.77H0z"
+      />
+      <rect width="7.6" height="5.38" fill="#3c3b6e" />
+    </svg>
+  ) : (
+    <svg viewBox="0 0 6 4" className="h-4 w-[1.52rem] rounded-[2px]" aria-hidden>
+      <rect width="6" height="4" fill="#c60b1e" />
+      <rect y="1" width="6" height="2" fill="#ffc400" />
+    </svg>
+  );
+
+const Version3LanguageSwitcher = () => {
+  const { activeLocale, buildLanguageSwitchHref } = useLanguageSwitcher();
+
+  return (
+    <ul
+      data-header-st-langs="version3"
+      className="m-0 flex list-none flex-row items-center gap-1 p-0"
+      aria-label="Language"
+    >
+      {version3LanguageLinks.map((link) => {
+        const isActive = link.locale === activeLocale;
+        return (
+          <li key={link.locale}>
+            <Link
+              href={buildLanguageSwitchHref(link.locale)}
+              prefetch={false}
+              lang={link.locale}
+              hrefLang={link.locale}
+              aria-label={link.text}
+              title={link.text}
+              aria-current={isActive ? 'true' : undefined}
+              className={cn(
+                'flex items-center rounded-sm p-0.5 hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',
+                isActive && 'ring-2 ring-primary'
+              )}
+            >
+              <Version3FlagGlyph country={link.country} />
+            </Link>
+          </li>
+        );
+      })}
+    </ul>
+  );
+};
+
 const Version3UtilityLink = ({
   text,
   href,
@@ -1065,6 +1123,9 @@ const HeaderSTVersion3View = (props: HeaderSTViewProps) => {
               ) : null}
 
               <ul className="flex shrink-0 list-none flex-row items-center gap-2 p-0">
+                <li className="flex items-center">
+                  <Version3LanguageSwitcher />
+                </li>
                 <li className="flex items-center">{searchControl}</li>
                 {!hideCart ? (
                   <li>

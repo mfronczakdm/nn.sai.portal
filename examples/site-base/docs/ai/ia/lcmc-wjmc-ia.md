@@ -44,6 +44,9 @@ Home (exists — skip)
     - Centro Hispano de Salud
     - Digestive Care
     - Ears Nose and Throat Care
+      - Ear
+      - Nose
+      - Throat Neck and Face Care
     - Emergency Care
     - Heart and Vascular Care
     - Hyperbaric
@@ -64,3 +67,15 @@ Home (exists — skip)
   - About Us
   - Our Locations
   - Contact Us
+
+## ENT L3 children (live WJMC, 2026-09-09)
+
+Direct children of **Ears Nose and Throat Care**, matching live LCMC hub sections (not L4 procedure pages):
+
+| Sitecore item name | Live URL | Live H1 / title |
+|---|---|---|
+| Ear | https://www.lcmchealth.org/west-jefferson-medical-center/our-services/ears-nose-throat-care/ear/ | Ear / Ear Care Services Marrero |
+| Nose | https://www.lcmchealth.org/west-jefferson-medical-center/our-services/ears-nose-throat-care/nose/ | Nose / Nasal and Sinus Care |
+| Throat Neck and Face Care | https://www.lcmchealth.org/west-jefferson-medical-center/our-services/ears-nose-throat-care/throat/ | Throat, Neck, and Face Care |
+
+Not created as extra L3 pages (live L4 under Ear): Tympanoplasty, Hearing Care.
