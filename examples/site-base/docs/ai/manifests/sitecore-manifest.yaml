@@ -1,5 +1,5 @@
 ﻿generatedAt: "2026-03-20T09:00:00Z"
-lastUpdatedAt: "2026-09-09T17:05:00Z"
+lastUpdatedAt: "2026-09-10T16:45:00Z"
 lastUpdatedBy: "cursor-agent"
 
 project:
@@ -3620,6 +3620,14 @@ lookups:
   - path: "/sitecore/content/lcmc/lcmc/Presentation/Headless Variants/LocationListing"
     itemId: "{71C8C840-11B1-4D86-84C9-41978B4842BB}"
     lastReadAt: "2026-09-08T21:00:00Z"
+  - path: "/sitecore/content/lcmc/lcmc/Presentation/Headless Variants/HeroST"
+    itemId: "{4A003C37-D137-47DD-9CF8-149F3D9BFEFF}"
+    lastReadAt: "2026-09-10T16:45:00Z"
+    note: "HeroST variants Default, Centered, Right, SplitScreen, Stacked, Version1, Version2"
+  - path: "/sitecore/content/lcmc/lcmc/Presentation/Headless Variants/MultiPromo"
+    itemId: "{093498E0-C8F7-40B5-93C9-7F7A3CF147BE}"
+    lastReadAt: "2026-09-10T16:45:00Z"
+    note: "MultiPromo variants Default, SingleColumn, Stacked, SideTabs, TopTabs, TopTabsNoImage, Version1, Version2"
   - path: "/sitecore/layout/Renderings/Project/lcmc/Locations/LocationListing"
     itemId: "{3CD4CF10-AD03-43E0-BB82-4F3FAE827AF8}"
     lastReadAt: "2026-09-08T21:00:00Z"
@@ -10842,6 +10850,7 @@ ia:
       - "2026-09-09: Code-only LCMC PhysicianDetail header — teal profile band, professional photo, Book an appointment now CTA via buildLcmcPhysicianAppointmentHref (visit=sick-visit + provider/specialty/location). No Sitecore field or Default-layout changes. Named photos for Craig Conard / Jose Wiley / Aimee Aysenne from lcmchealth.org public assets under public/lcmc/physicians/; demo catalog names use Unsplash clinical placeholders. Craig Conard is not in Data/Physicians."
       - "2026-09-09: Book CTA hover/focus no longer uses bg-primary (same teal as the header). Rest is white + teal text; hover/focus is muted off-white + teal text. Theme lock in lcmc.css on .physician-detail__book-cta."
       - "2026-09-10: Added LanguagesSpoken Single-Line Text {994C5B31-453A-473A-BBE9-DC87F28CE361} on LCMC Physician. All 26 Data/Physicians speak English; 20 also Spanish including Gabrielle Moreau and Dominic Lirette. English-only: Hannah Scott, Keisha Williams, Michael Tran, Omar Hassan, Priya Raman, Thomas Nguyen. PhysicianDetail shows Languages spoken badges in the teal header (Spanish is the solid white pill) plus Speaks … in Contact. Code fallback in src/lib/lcmc-physician-languages.ts if Edge has not published the field yet."
+      - "2026-09-10: Wrote physician/location copy onto Data items only (not display pages): Gabrielle Moreau MD, Dominic Lirette MD, Camille Landry MD; West Jefferson Medical Center {35C77454-5FB8-460D-BC12-299F7B31DE5A}; East Jefferson General Hospital {EFEAC293-2BF4-4516-873D-4EAC1F998474}."
     react:
       filePath: "src/components/uiim/locations/PhysicianDetail.tsx"
       componentMapKey: "PhysicianDetail"
@@ -11232,6 +11241,122 @@ ia:
     notes:
       - "New Orleans ENT story: festivals, brass, humidity vs sinus/hearing. CTAs Book an ENT visit (Patient Appointments + Gabrielle Moreau query) and Explore ENT care (WJMC ENT hub). Reused Neighborhood Care DAM image until an ENT-specific asset is uploaded. Assign SplitFeature on a page in Pages; publish Draft."
 
+  - name: "lcmc-ent-multipromo-datasources"
+    kind: "content-create"
+    category: "Promos"
+    status: "complete"
+    createdAt: "2026-09-10T16:35:00Z"
+    updatedAt: "2026-09-10T16:35:00Z"
+    siteCollection: "lcmc"
+    siteName: "lcmc"
+    componentName: "MultiPromo"
+    renderingId: "{D806DDF7-39A7-4A6D-8E0A-D138BC53845D}"
+    datasourceTemplateId: "{775D6354-CF01-4F34-9713-D34645079C88}"
+    childTemplateId: "{F94C8C17-70E8-4D8B-9D35-D0465C0E0945}"
+    notes:
+      - "Four ENT MultiPromo parents under Data/MultiPromos {31C8ABD2-3A69-4EB8-90B6-5FF29D52F892}. Sixteen SimplePromo children (4 each). Pages not modified. Suggested variant Version1. Publish folder for Edge."
+    folder:
+      name: "MultiPromos"
+      itemId: "{31C8ABD2-3A69-4EB8-90B6-5FF29D52F892}"
+      path: "/sitecore/content/lcmc/lcmc/Data/MultiPromos"
+      preexisting: true
+    items:
+      - { name: "ENT Care Areas", itemId: "{9F750D63-F9FE-463D-B16D-9BA31A397E3B}", path: "/sitecore/content/lcmc/lcmc/Data/MultiPromos/ENT Care Areas" }
+      - { name: "ENT Physicians", itemId: "{E20851C5-252F-425B-8D1F-672C817BEDBA}", path: "/sitecore/content/lcmc/lcmc/Data/MultiPromos/ENT Physicians" }
+      - { name: "Care at West Jefferson", itemId: "{5C85CEA9-9426-4CCE-9CF4-807983E5578E}", path: "/sitecore/content/lcmc/lcmc/Data/MultiPromos/Care at West Jefferson" }
+      - { name: "Start an ENT Visit", itemId: "{A50AFB1D-3E3E-46D7-812C-87E62288EB98}", path: "/sitecore/content/lcmc/lcmc/Data/MultiPromos/Start an ENT Visit" }
+    verification:
+      checkedAt: "2026-09-10T16:35:00Z"
+      passed:
+        - "Four MultiPromo parents created under Data/MultiPromos"
+        - "Sixteen SimplePromo children created (4 per parent)"
+        - "ENT Care Areas children + Moreau heading/link read-back verified"
+      failed: []
+      pendingManual:
+        - "Publish Data/MultiPromos including subitems"
+        - "Place MultiPromo on a page and assign one ENT datasource per instance"
+        - "Select Version1 for LCMC teal layout when desired"
+
+  - name: "lcmc-herost-datasources"
+    kind: "content-create"
+    category: "Hero"
+    status: "complete"
+    createdAt: "2026-09-10T16:40:00Z"
+    updatedAt: "2026-09-10T16:40:00Z"
+    siteCollection: "lcmc"
+    siteName: "lcmc"
+    componentName: "HeroST"
+    renderingId: "{7943A20A-669D-4921-81EE-F4EC7F2E78A3}"
+    datasourceTemplateId: "{C241957A-B7CC-4BDD-962F-BF8652ED595C}"
+    notes:
+      - "HeroST picker requires @@templatename HeroST Folder. Data/Heros is Hero Folder (old Hero template only), so created /sitecore/content/lcmc/lcmc/Data/HeroST {2FCF0F10-9874-4444-8C58-8FB317432623}. Four HeroST items; Image1/Image2 left empty for authoring. Two ENT-focused (Hear the Parade, ENT Physicians)."
+    folder:
+      name: "HeroST"
+      itemId: "{2FCF0F10-9874-4444-8C58-8FB317432623}"
+      path: "/sitecore/content/lcmc/lcmc/Data/HeroST"
+      templateId: "{91F1954F-86D9-4859-9885-3E42E8D8A2A9}"
+    items:
+      - { name: "ENT Hear the Parade", itemId: "{40033320-2E3A-40C1-89B3-FD98F165E677}", eyebrow: "West Jefferson ENT", title: "Hear the music. Breathe the parade." }
+      - { name: "ENT Physicians Hero", itemId: "{07B4A14B-231F-462D-A696-7EF41BD6EABB}", eyebrow: "Find a specialist", title: "ENT physicians who speak your language." }
+      - { name: "Westbank Care Hero", itemId: "{4741156F-7FD0-4324-8C17-0AEAA71BC795}", eyebrow: "West Jefferson Medical Center", title: "The right care, right on the Westbank." }
+      - { name: "Book a Visit Hero", itemId: "{047BD9D9-BE88-4341-976F-CEC6B4D79253}", eyebrow: "Patient appointments", title: "Book a visit in a few steps." }
+    verification:
+      checkedAt: "2026-09-10T16:40:00Z"
+      passed:
+        - "HeroST Folder created; four HeroST children verified; Image1/Image2 empty; ENT eyebrow/title/links verified"
+      failed: []
+      pendingManual:
+        - "Publish Data/HeroST including subitems"
+        - "Assign Image1 (and Image2 if using a two-image variant) in Pages"
+        - "Place HeroST on a page and pick a datasource; enable Dark Image if photos are dark"
+
+  - name: "lcmc-herost-multipromo-headless-variants"
+    kind: "content-create"
+    category: "Presentation"
+    status: "complete"
+    createdAt: "2026-09-10T16:45:00Z"
+    updatedAt: "2026-09-10T16:45:00Z"
+    siteCollection: "lcmc"
+    siteName: "lcmc"
+    notes: >
+      Ensured LCMC Headless Variants match all React named exports for HeroST and MultiPromo.
+      HeroST already had Default/Centered/Right/SplitScreen/Stacked; added Version1 and Version2.
+      MultiPromo already had Default/SingleColumn/Stacked/Version1; added SideTabs, TopTabs,
+      TopTabsNoImage, Version2.
+    heroST:
+      containerPath: "/sitecore/content/lcmc/lcmc/Presentation/Headless Variants/HeroST"
+      containerId: "{4A003C37-D137-47DD-9CF8-149F3D9BFEFF}"
+      variants:
+        - { name: "Default", itemId: "{47A07212-D874-4077-BC67-C82B71B23AB7}", preexisting: true }
+        - { name: "Centered", itemId: "{D86E6F76-23E1-4EB0-A0D3-418FB37E2480}", preexisting: true }
+        - { name: "Right", itemId: "{DED60EE8-1604-4D22-A156-04DB30D44B3F}", preexisting: true }
+        - { name: "SplitScreen", itemId: "{EBC60782-8D0A-4BEB-AB0A-00113E93B6E4}", preexisting: true }
+        - { name: "Stacked", itemId: "{4F88894D-6CC6-4C97-A404-7469F749F93A}", preexisting: true }
+        - { name: "Version1", itemId: "{BF724F13-2FA9-44FD-A4E6-8289E404A847}" }
+        - { name: "Version2", itemId: "{35522CCF-E04A-4D82-98BE-A06B94DBF093}" }
+    multiPromo:
+      containerPath: "/sitecore/content/lcmc/lcmc/Presentation/Headless Variants/MultiPromo"
+      containerId: "{093498E0-C8F7-40B5-93C9-7F7A3CF147BE}"
+      variants:
+        - { name: "Default", itemId: "{53094257-4E18-40AD-AC8B-8F70BACC45F5}", preexisting: true }
+        - { name: "SingleColumn", itemId: "{915D9AB6-D335-49F1-8E44-9FF86E88F9D0}", preexisting: true }
+        - { name: "Stacked", itemId: "{C5F7A623-F143-4CD7-90A9-6613B9758293}", preexisting: true }
+        - { name: "SideTabs", itemId: "{ACB48A62-F32F-43C4-82F6-BEA206DFEEC2}" }
+        - { name: "TopTabs", itemId: "{3BEC9A5D-A1FD-4AEB-BF04-7944EDAD44BE}" }
+        - { name: "TopTabsNoImage", itemId: "{252E0194-AF9C-4C7F-96D9-F403D789EE79}" }
+        - { name: "Version1", itemId: "{06714DB7-4BC2-430E-8990-82F264AA101F}", preexisting: true }
+        - { name: "Version2", itemId: "{905A46D8-D7B5-48A7-A77F-A590173937F0}" }
+    verification:
+      checkedAt: "2026-09-10T16:45:00Z"
+      passed:
+        - "HeroST container has all 7 React exports as Variant Definitions"
+        - "MultiPromo container has all 8 React exports as Variant Definitions"
+        - "Verified via get_content_item_by_path after create"
+      failed: []
+      pendingManual:
+        - "Publish Presentation/Headless Variants/HeroST and MultiPromo for Edge"
+        - "Refresh Pages; Design tab should list the new variants"
+
   - name: "MultiPromo"
     kind: "update"
     category: "Promos"
@@ -11250,7 +11375,8 @@ ia:
         - "TopTabs"
         - "TopTabsNoImage"
         - "Version1"
-      note: "Version1 named export implemented 2026-08-25. Teal/white split, three-up overlapping cards, optional portrait with concave white mask, carousel when more than 3 children."
+        - "Version2"
+      note: "Version1 named export implemented 2026-08-25. Teal/white split, three-up overlapping cards, optional portrait with concave white mask, carousel when more than 3 children. LCMC Headless Variants synced 2026-09-10 including tab variants and Version2."
 
     sitecoreEnvironment:
       siteName: "lcmc"
