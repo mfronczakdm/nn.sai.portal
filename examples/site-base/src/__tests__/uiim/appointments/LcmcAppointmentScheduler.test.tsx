@@ -64,8 +64,10 @@ jest.mock('@/lib/physician-listing-from-edge', () => ({
 }));
 
 const mockTrackBookingStarted = jest.fn();
+const mockTrackAppointmentBooked = jest.fn();
 jest.mock('@/lib/lcmc-booking-started-event', () => ({
   trackLcmcBookingStartedEvent: (...args: unknown[]) => mockTrackBookingStarted(...args),
+  trackLcmcAppointmentBookedEvent: (...args: unknown[]) => mockTrackAppointmentBooked(...args),
 }));
 
 const baseParams = { styles: '', RenderingIdentifier: 'lcmc-appt-test' };
@@ -123,6 +125,7 @@ describe('LcmcAppointmentScheduler', () => {
     window.history.pushState({}, '', '/For-Patients/Patient-Appointments');
     global.fetch = jest.fn().mockImplementation(() => new Promise(() => undefined));
     mockTrackBookingStarted.mockClear();
+    mockTrackAppointmentBooked.mockClear();
   });
 
   afterEach(() => {
@@ -220,6 +223,7 @@ describe('LcmcAppointmentScheduler', () => {
     expect(screen.getByTestId('lcmc-appt-confirmed')).toBeInTheDocument();
     expect(screen.getByText('Your visit is scheduled')).toBeInTheDocument();
     expect(screen.getByText(/Booked as My LCMC Health/)).toBeInTheDocument();
+    expect(mockTrackAppointmentBooked).not.toHaveBeenCalled();
   });
 
   it('does not send Booking Started until the visitor picks a visit type', () => {
@@ -419,6 +423,14 @@ describe('LcmcAppointmentScheduler', () => {
     fireEvent.change(screen.getByLabelText('Phone'), { target: { value: '504-555-0100' } });
     fireEvent.click(screen.getByTestId('lcmc-appt-guest-submit'));
     expect(screen.getByText(/Booked as guest for Avery Nguyen/)).toBeInTheDocument();
+    expect(mockTrackAppointmentBooked).toHaveBeenCalledTimes(1);
+    expect(mockTrackAppointmentBooked).toHaveBeenCalledWith(
+      expect.objectContaining({
+        bookedAs: 'guest',
+        visitKey: 'sick-visit',
+        visitTitle: 'Sick visit',
+      })
+    );
   });
 });
 

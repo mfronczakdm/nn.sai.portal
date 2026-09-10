@@ -1,4 +1,7 @@
-import { trackLcmcBookingStartedEvent } from '@/lib/lcmc-booking-started-event';
+import {
+  trackLcmcAppointmentBookedEvent,
+  trackLcmcBookingStartedEvent,
+} from '@/lib/lcmc-booking-started-event';
 
 const mockEvent = jest.fn().mockResolvedValue({ status: 'ok' });
 
@@ -44,5 +47,30 @@ describe('trackLcmcBookingStartedEvent', () => {
     await trackLcmcBookingStartedEvent({ visitKey: 'sick-visit' });
 
     expect(mockEvent).not.toHaveBeenCalled();
+  });
+
+  it('sends Appointment-Booked on WEB when a guest confirms', async () => {
+    process.env.NODE_ENV = 'production';
+
+    await trackLcmcAppointmentBookedEvent({
+      bookedAs: 'guest',
+      visitKey: 'sick-visit',
+      visitTitle: 'Sick visit',
+      providerName: 'Gabrielle Moreau, MD',
+    });
+
+    expect(mockEvent).toHaveBeenCalledWith({
+      channel: 'WEB',
+      type: 'Appointment-Booked',
+      page: 'Patient Appointments',
+      extensionData: {
+        label: 'Appointment Booked',
+        eventName: 'Appointment Booked',
+        bookedAs: 'guest',
+        visitKey: 'sick-visit',
+        visitTitle: 'Sick visit',
+        providerName: 'Gabrielle Moreau, MD',
+      },
+    });
   });
 });

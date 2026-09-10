@@ -19,7 +19,7 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/componen
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { cn } from '@/lib/utils';
-import { trackLcmcBookingStartedEvent } from '@/lib/lcmc-booking-started-event';
+import { trackLcmcAppointmentBookedEvent, trackLcmcBookingStartedEvent } from '@/lib/lcmc-booking-started-event';
 import { ComponentProps } from '@/lib/component-props';
 import { NoDataFallback } from '@/utils/NoDataFallback';
 import {
@@ -440,6 +440,14 @@ const LcmcAppointmentSchedulerInner = ({
   };
 
   const completeBooking = (mode: 'my-lcmc' | 'guest') => {
+    if (mode === 'guest' && !isEditing) {
+      void trackLcmcAppointmentBookedEvent({
+        bookedAs: 'guest',
+        visitKey: selected?.visitKey || visitKey,
+        visitTitle: selected?.visitLabel || visitTitle,
+        providerName: selected?.provider.name,
+      });
+    }
     setBookedAs(mode);
     setConfirmCode(confirmationNumber(new Date()));
     setStep('confirmed');

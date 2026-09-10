@@ -11,6 +11,43 @@ export type LcmcBookingStartedDetails = {
   visitTitle?: string;
 };
 
+export const LCMC_APPOINTMENT_BOOKED_EVENT_NAME = 'Appointment Booked';
+export const LCMC_APPOINTMENT_BOOKED_EVENT_TYPE = 'Appointment-Booked';
+
+export type LcmcAppointmentBookedDetails = {
+  visitKey?: string;
+  visitTitle?: string;
+  providerName?: string;
+  bookedAs?: 'guest';
+};
+
+async function sendLcmcSchedulerEvent(
+  type: string,
+  label: string,
+  extensionData: Record<string, string>
+): Promise<void> {
+  if (!isCdpAnalyticsEnabled()) return;
+
+  try {
+    const response = await event({
+      channel: 'WEB',
+      type,
+      page: 'Patient Appointments',
+      extensionData: {
+        label,
+        eventName: label,
+        ...extensionData,
+      },
+    });
+
+    if (!response) {
+      console.warn(`[${label}] Event failed to send`, extensionData);
+    }
+  } catch (error) {
+    console.warn(`[${label}] Event failed`, { extensionData, error });
+  }
+}
+
 /**
  * SitecoreAI / CDP custom event when a visitor starts the LCMC appointment wizard.
  * Call once per page visit, on the first scheduler interaction (visit type or slot).
@@ -18,25 +55,22 @@ export type LcmcBookingStartedDetails = {
 export async function trackLcmcBookingStartedEvent(
   details?: LcmcBookingStartedDetails
 ): Promise<void> {
-  if (!isCdpAnalyticsEnabled()) return;
+  await sendLcmcSchedulerEvent(LCMC_BOOKING_STARTED_EVENT_TYPE, LCMC_BOOKING_STARTED_EVENT_NAME, {
+    ...(details?.visitKey ? { visitKey: details.visitKey } : {}),
+    ...(details?.visitTitle ? { visitTitle: details.visitTitle } : {}),
+  });
+}
 
-  try {
-    const response = await event({
-      channel: 'WEB',
-      type: LCMC_BOOKING_STARTED_EVENT_TYPE,
-      page: 'Patient Appointments',
-      extensionData: {
-        label: LCMC_BOOKING_STARTED_EVENT_NAME,
-        eventName: LCMC_BOOKING_STARTED_EVENT_NAME,
-        ...(details?.visitKey ? { visitKey: details.visitKey } : {}),
-        ...(details?.visitTitle ? { visitTitle: details.visitTitle } : {}),
-      },
-    });
-
-    if (!response) {
-      console.warn('[LcmcBookingStarted] Event failed to send', details);
-    }
-  } catch (error) {
-    console.warn('[LcmcBookingStarted] Event failed', { details, error });
-  }
+/**
+ * SitecoreAI / CDP custom event when a guest confirms the appointment.
+ */
+export async function trackLcmcAppointmentBookedEvent(
+  details?: LcmcAppointmentBookedDetails
+): Promise<void> {
+  await sendLcmcSchedulerEvent(LCMC_APPOINTMENT_BOOKED_EVENT_TYPE, LCMC_APPOINTMENT_BOOKED_EVENT_NAME, {
+    bookedAs: details?.bookedAs || 'guest',
+    ...(details?.visitKey ? { visitKey: details.visitKey } : {}),
+    ...(details?.visitTitle ? { visitTitle: details.visitTitle } : {}),
+    ...(details?.providerName ? { providerName: details.providerName } : {}),
+  });
 }

@@ -3225,6 +3225,7 @@ pageTemplates:
       - "2026-09-09: Scheduler reads Pulse deep-link query params specialty, location/clinic, and provider (West Jefferson Medical Clinic maps to West Jefferson Medical Center). Code-only; no Sitecore item changes."
       - "2026-09-09: visit=sick-visit or step=slots skips the visit-type grid and opens slots. ENT Pulse book links include visit=sick-visit and provider=Gabrielle Moreau. Delivery copy is adult (no child/well-baby). Demo URL: /For-Patients/Patient-Appointments?visit=sick-visit&specialty=ENT&location=West Jefferson Medical Center&provider=Gabrielle Moreau"
       - "2026-09-09: First scheduler interaction (visit type, or slot if visit types were skipped) sends SitecoreAI/CDP custom event type Booking-Started with label Booking Started. Once per page visit. Skipped in Pages editing. Same event() pipeline as TrackedCtaLink."
+      - "2026-09-09: Guest Confirm appointment sends Appointment-Booked (type Appointment-Booked, label Appointment Booked). My LCMC login confirm does not send this event."
 
 lookups:
   - path: "/sitecore/content/progressive/pkm/Data"
@@ -11174,6 +11175,22 @@ ia:
     notes:
       - "2026-09-09: Research complete from live lcmchealth.org WJMC ENT hub. Chose the three live L3 children (Ear, Nose, Throat Neck and Face Care) rather than L4 Hearing Care / Tympanoplasty. GitLens MCP invoke worked; Marketer invoke did not. Same scoped-connection timeout as lcmc-wjmc-page-design-mass-update."
       - "2026-09-09: Retry after Marketer MCP reauth succeeded. Created 3 Services Pages under ENT parent; Page Design West Jefferson Default {5944F724-...} set on create and verified on read-back."
+
+  - name: "lcmc-ent-split-feature"
+    kind: "datasource"
+    category: "split-feature"
+    status: "complete"
+    createdAt: "2026-09-09T23:00:00Z"
+    updatedAt: "2026-09-09T23:00:00Z"
+    siteName: "lcmc"
+    exampleItem:
+      name: "ENT Hear the Parade"
+      itemId: "{44954917-B4A7-47CC-AC79-6FEA2F74B9FC}"
+      path: "/sitecore/content/lcmc/lcmc/Data/Split Features/ENT Hear the Parade"
+      templateId: "{70780390-A3EB-478D-B5DE-062BA3C9E897}"
+      parentId: "{23FFFC7A-4D86-4004-8D56-B99795DD32FB}"
+    notes:
+      - "New Orleans ENT story: festivals, brass, humidity vs sinus/hearing. CTAs Book an ENT visit (Patient Appointments + Gabrielle Moreau query) and Explore ENT care (WJMC ENT hub). Reused Neighborhood Care DAM image until an ENT-specific asset is uploaded. Assign SplitFeature on a page in Pages; publish Draft."
 
   - name: "MultiPromo"
     kind: "update"
