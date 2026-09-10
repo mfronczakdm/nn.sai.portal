@@ -938,6 +938,18 @@ const version3UtilityLinks = [
 
 const version3UtilityLabels = new Set(version3UtilityLinks.map((link) => link.text.toLowerCase()));
 
+/**
+ * Version3 SearchLink was reused as a utility slot (Contact Us). Search always
+ * goes to the Search Results page so Enter never follows that utility href.
+ */
+const VERSION3_SEARCH_RESULTS_LINK: LinkField = {
+  value: {
+    href: '/Search-Results',
+    text: 'Search',
+    linktype: 'internal',
+  },
+};
+
 const version3LanguageLinks = [
   { text: 'English', locale: DEFAULT_LOCALE, country: 'US' as const },
   { text: 'Español', locale: COLOMBIAN_SPANISH_LOCALE, country: 'ES' as const },
@@ -1027,18 +1039,18 @@ const HeaderSTVersion3View = (props: HeaderSTViewProps) => {
 
   const searchControl = params.showSearchBox ? (
     <HeaderPreviewSearch
-      searchLink={fields?.SearchLink}
+      searchLink={VERSION3_SEARCH_RESULTS_LINK}
       appearance="contained"
       className="min-w-0"
     />
   ) : (
     <ContentSdkLink
-      field={fields?.SearchLink}
+      field={VERSION3_SEARCH_RESULTS_LINK}
       prefetch={false}
       className="flex items-center gap-2 px-2 py-2 text-sm text-foreground hover:text-primary"
     >
       <Search className="h-4 w-4 shrink-0" strokeWidth={2} aria-hidden />
-      <span>{fields?.SearchLink?.value?.text || 'Search'}</span>
+      <span>{VERSION3_SEARCH_RESULTS_LINK.value?.text || 'Search'}</span>
     </ContentSdkLink>
   );
 

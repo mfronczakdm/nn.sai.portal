@@ -7870,6 +7870,44 @@ ia:
         - "Open /amkor/en/Search-Results?q=S-Connect on the shared editing host and confirm AI panel + packaging facets"
         - "Confirm Quanex /Search-Results?q=super+spacer is unchanged"
 
+  - name: "lcmc-search-results-site-pack"
+    kind: "content"
+    status: "complete"
+    createdAt: "2026-09-10T10:05:00Z"
+    updatedAt: "2026-09-10T10:05:00Z"
+    siteCollection: "lcmc"
+    siteName: "lcmc"
+    notes:
+      - "2026-09-10: Added LCMC SearchResults site pack (src/lib/search-packs/lcmc.ts) keyed by site name lcmc. Same Default SearchResults component as Quanex/Amkor; catalog covers physicians (Moreau, Lirette), locations (WJMC / West Jefferson Medical Clinic nickname, EJGH, UMC, Touro), ENT services, and Patient Appointments. Unknown sites still fall back to env default then Quanex."
+      - "2026-09-10: Placed SearchResults ({7691AC50-2BAE-4FBD-9BA9-05480FD844E4}) on LCMC Search Results page headless-main (instance {1DA0B742-C078-43C1-B962-5976D40216A1}). SearchResults was not on the placeholder whitelist; add succeeded like Quanex."
+      - "2026-09-10: Pointed HeaderST SearchLink at Search Results {B22CA21A-3609-448D-98B3-EE528B80A68A} (was Contact Us). Authored pageTitle/metadata on Search Results."
+      - "2026-09-10: Version3 search no longer uses SearchLink href/text. Edge still served Contact Us on SearchLink, so Enter went to /Contact-Us?q=…. HeaderST Version3 now always submits to /Search-Results. Default/Version1/Version2 unchanged."
+    pages:
+      - { displayName: "Search Results", name: "Search Results", itemId: "{B22CA21A-3609-448D-98B3-EE528B80A68A}", path: "/sitecore/content/lcmc/lcmc/Home/Search Results", route: "/Search-Results", renderingUid: "{1DA0B742-C078-43C1-B962-5976D40216A1}" }
+    exampleItems:
+      - { name: "HeaderST datasource", itemId: "{D7264BD2-810B-479E-8468-FB894F9A8C17}", path: "/sitecore/content/lcmc/lcmc/Presentation/Partial Designs/Global/Header/Data/Header", note: "SearchLink internal to Search Results" }
+    rendering:
+      name: "SearchResults"
+      path: "/sitecore/layout/Renderings/Project/Portal/SearchResults/SearchResults"
+      itemId: "{7691AC50-2BAE-4FBD-9BA9-05480FD844E4}"
+      componentName: "SearchResults"
+    codeChanges:
+      - "src/lib/search-packs/lcmc.ts"
+      - "src/lib/search-packs/index.ts"
+      - "src/__tests__/lib/search-packs.test.ts"
+      - "src/__tests__/search-results/SearchResults.test.tsx"
+    verification:
+      checkedAt: "2026-09-10T10:05:00Z"
+      passed:
+        - "get_components_on_page shows SearchResults on LCMC Search Results headless-main"
+        - "HeaderST SearchLink id={B22CA21A-3609-448D-98B3-EE528B80A68A}"
+        - "Jest search-packs + SearchResults: 35 passed"
+      failed: []
+      pendingManual:
+        - "Publish Search Results page + HeaderST datasource for Edge"
+        - "Open /lcmc/en/Search-Results?q=ENT+West+Jefferson and confirm Moreau, WJMC, ENT facets"
+        - "Confirm Quanex /Search-Results?q=super+spacer and Amkor S-Connect are unchanged"
+
   - name: "atlanta-apparel-search-results-version1"
     kind: "content"
     status: "complete"

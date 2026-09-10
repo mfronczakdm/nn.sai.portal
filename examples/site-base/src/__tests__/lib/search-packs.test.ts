@@ -20,9 +20,9 @@ jest.mock('lucide-react', () => {
 const KNOWN = listSearchPackSiteNames();
 
 describe('search pack registry', () => {
-  it('registers quanex, era, amesburytruth, pillsburylaw, amkor, and atlanta-apparel', () => {
+  it('registers quanex, era, amesburytruth, pillsburylaw, amkor, atlanta-apparel, and lcmc', () => {
     expect(KNOWN.sort()).toEqual(
-      ['amesburytruth', 'amkor', 'atlanta-apparel', 'era', 'pillsburylaw', 'quanex'].sort()
+      ['amesburytruth', 'amkor', 'atlanta-apparel', 'era', 'lcmc', 'pillsburylaw', 'quanex'].sort()
     );
   });
 
@@ -166,6 +166,52 @@ describe('Amkor catalog matching', () => {
 
   it('does not leak Quanex or Pillsbury popular searches', () => {
     const joined = pack.popularSearches.join(' ').toLowerCase();
+    expect(joined).not.toMatch(/super spacer|lawyer|mark abate/);
+  });
+});
+
+describe('LCMC catalog matching', () => {
+  const pack = getSearchPack('lcmc');
+
+  it('returns ENT, WJMC, and Moreau for ENT queries, not Quanex products', () => {
+    const hits = pack.catalog.filter((item) =>
+      itemMatchesQuery(item, 'ENT West Jefferson', pack.bucketSynonyms)
+    );
+    expect(hits.some((item) => /gabrielle moreau/i.test(item.title))).toBe(true);
+    expect(hits.some((item) => /west jefferson medical center/i.test(item.title))).toBe(true);
+    expect(hits.some((item) => /ears, nose and throat/i.test(item.title))).toBe(true);
+    expect(
+      hits.every((item) => !/super spacer|duralite|quanex|pillsbury/i.test(`${item.title} ${item.href}`))
+    ).toBe(true);
+  });
+
+  it('maps West Jefferson Medical Clinic to the hospital campus', () => {
+    const hits = pack.catalog.filter((item) =>
+      itemMatchesQuery(item, 'West Jefferson Medical Clinic', pack.bucketSynonyms)
+    );
+    expect(hits.some((item) => item.id === 'lcmc-wjmc')).toBe(true);
+  });
+
+  it('selects ENT insight for sinus queries', () => {
+    const insight = selectAiSearchInsight('sinus specialist near me', pack.insightRules);
+    expect(insight?.id).toBe('ai-lcmc-ent');
+    expect(insight?.citations.some((c) => /moreau/i.test(c.title))).toBe(true);
+  });
+
+  it('puts Moreau and Lirette in Care-Aware guidance for sinus near West Jefferson', () => {
+    const insight = selectAiSearchInsight(
+      'I need someone for sinus problems near West Jefferson',
+      pack.insightRules
+    );
+    expect(insight?.id).toBe('ai-lcmc-ent');
+    expect(insight?.citations.some((c) => /gabrielle moreau/i.test(c.title))).toBe(true);
+    expect(insight?.citations.some((c) => /dominic lirette/i.test(c.title))).toBe(true);
+    expect(insight?.citations[0]?.href).toBe('/Find-a-Provider/Gabrielle-Moreau-MD');
+  });
+
+  it('does not leak Quanex or Pillsbury popular searches', () => {
+    const joined = pack.popularSearches.join(' ').toLowerCase();
+    expect(joined).toMatch(/ent west jefferson/);
     expect(joined).not.toMatch(/super spacer|lawyer|mark abate/);
   });
 });

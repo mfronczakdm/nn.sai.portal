@@ -1187,7 +1187,23 @@ describe('HeaderST Component', () => {
       const searchBox = screen.getByTestId('search-box');
       expect(searchBox).toBeInTheDocument();
       expect(searchBox).toHaveAttribute('data-appearance', 'contained');
-      expect(searchBox).toHaveAttribute('data-search-link', '/search');
+      expect(searchBox).toHaveAttribute('data-search-link', '/Search-Results');
+    });
+
+    it('sends Version3 search to Search Results even when SearchLink is Contact Us', () => {
+      render(
+        <HeaderSTVersion3
+          {...headerSTPropsVersion3}
+          fields={{
+            ...headerSTPropsVersion3.fields,
+            SearchLink: { value: { href: '/Contact-Us', text: 'Contact Us' } },
+          }}
+        />
+      );
+
+      const searchBox = screen.getByTestId('search-box');
+      expect(searchBox).toHaveAttribute('data-search-link', '/Search-Results');
+      expect(searchBox).not.toHaveAttribute('data-search-link', '/Contact-Us');
     });
 
     it('shows SearchLink as text/icon when showSearchBox is unset', () => {
@@ -1205,7 +1221,7 @@ describe('HeaderST Component', () => {
       expect(screen.getByTestId('lucide-search')).toBeInTheDocument();
       const searchLinks = screen
         .getAllByTestId('sitecore-link')
-        .filter((link) => link.getAttribute('href') === '/search');
+        .filter((link) => link.getAttribute('href') === '/Search-Results');
       expect(searchLinks.length).toBeGreaterThan(0);
     });
 
