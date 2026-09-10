@@ -7,13 +7,14 @@ import {
   type ImageField,
   type RichTextField,
 } from '@sitecore-content-sdk/nextjs';
-import { Calendar, MapPin, Phone, Stethoscope, UserRound } from 'lucide-react';
+import { Calendar, Globe, MapPin, Phone, Stethoscope, UserRound } from 'lucide-react';
 
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
 import { ComponentProps } from '@/lib/component-props';
 import { buildLcmcPhysicianAppointmentHref } from '@/lib/lcmc-appointment-pack';
+import { resolveLcmcPhysicianLanguages } from '@/lib/lcmc-physician-languages';
 import { resolveLcmcPhysicianPhoto } from '@/lib/lcmc-physician-photos';
 import { NoDataFallback } from '@/utils/NoDataFallback';
 
@@ -35,6 +36,7 @@ export interface PhysicianDetailFields {
   Credentials?: Field<string>;
   Specialty?: Field<string>;
   PhysicianPhone?: Field<string>;
+  LanguagesSpoken?: Field<string>;
   PhysicianBio?: RichTextField;
   ServingLocations?: PhysicianDetailLinkedItem[] | Field<string>;
   PhysicianDetailPage?: Field<string>;
@@ -108,6 +110,7 @@ export const Default = (props: PhysicianDetailProps): JSX.Element => {
   const specialtyLabels = splitSpecialties(specialty);
   const primarySpecialty = specialtyLabels[0] || specialty;
   const additionalSpecialties = specialtyLabels.slice(1);
+  const languages = resolveLcmcPhysicianLanguages(fullName, textValue(fields.LanguagesSpoken));
   const credentialsAlreadyInName = Boolean(
     credentials && fullName && new RegExp(`\\b${credentials.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\s*$`, 'i').test(fullName)
   );
@@ -185,6 +188,39 @@ export const Default = (props: PhysicianDetailProps): JSX.Element => {
                   <span>{label}</span>
                 </li>
               ))}
+              {(languages.length > 0 || isEditing) && (
+                <li
+                  className="flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3"
+                  data-testid="physician-detail-languages"
+                >
+                  <strong className="inline-flex items-center justify-center gap-1.5 font-semibold md:justify-start">
+                    <Globe aria-hidden className="size-4 shrink-0" />
+                    Languages spoken:
+                  </strong>
+                  {isEditing ? (
+                    <Text field={fields.LanguagesSpoken} tag="span" />
+                  ) : (
+                    <span className="inline-flex flex-wrap items-center justify-center gap-2 md:justify-start">
+                      {languages.map((language) => {
+                        const isSpanish = language.toLowerCase() === 'spanish';
+                        return (
+                          <span
+                            key={language}
+                            className={cn(
+                              'inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold',
+                              isSpanish
+                                ? 'border-white bg-white text-primary'
+                                : 'border-white/70 bg-white/10 text-primary-foreground'
+                            )}
+                          >
+                            {language}
+                          </span>
+                        );
+                      })}
+                    </span>
+                  )}
+                </li>
+              )}
             </ul>
 
             <Link
@@ -231,6 +267,14 @@ export const Default = (props: PhysicianDetailProps): JSX.Element => {
                 <div className="flex items-start gap-3">
                   <Stethoscope aria-hidden className="mt-0.5 size-5 shrink-0" />
                   <Text field={fields.Specialty} tag="p" className="text-sm leading-relaxed" />
+                </div>
+              )}
+              {languages.length > 0 && (
+                <div className="flex items-start gap-3" data-testid="physician-detail-languages-contact">
+                  <Globe aria-hidden className="mt-0.5 size-5 shrink-0" />
+                  <p className="text-sm leading-relaxed">
+                    Speaks {languages.join(' and ')}
+                  </p>
                 </div>
               )}
               {(phone || isEditing) && (

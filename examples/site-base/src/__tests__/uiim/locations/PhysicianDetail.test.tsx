@@ -22,6 +22,7 @@ jest.mock('lucide-react', () => ({
   Calendar: () => <span data-testid="calendar" />,
   MapPin: () => <span data-testid="map-pin" />,
   Phone: () => <span data-testid="phone" />,
+  Globe: () => <span data-testid="globe" />,
   Stethoscope: () => <span data-testid="stethoscope" />,
   UserRound: () => <span data-testid="user-round" />,
 }));
@@ -126,6 +127,30 @@ describe('PhysicianDetail', () => {
     expect(cta).toHaveClass('focus:bg-muted', 'focus:text-primary');
     expect(cta).toHaveClass('focus-visible:bg-muted', 'focus-visible:text-primary');
     expect(cta).not.toHaveClass('hover:bg-primary', 'hover:bg-primary-hover', 'focus:bg-primary');
+  });
+
+  it('shows English and Spanish for Gabrielle Moreau in the header', () => {
+    render(<Default fields={moreauFields} params={params} page={page} rendering={rendering} />);
+    const languages = screen.getByTestId('physician-detail-languages');
+    expect(languages).toHaveTextContent('English');
+    expect(languages).toHaveTextContent('Spanish');
+    expect(screen.getByTestId('physician-detail-languages-contact')).toHaveTextContent(
+      'Speaks English and Spanish'
+    );
+  });
+
+  it('shows authored languages when LanguagesSpoken is set', () => {
+    render(
+      <Default
+        fields={{ ...fields, LanguagesSpoken: { value: 'English' } }}
+        params={params}
+        page={page}
+        rendering={rendering}
+      />
+    );
+    const languages = screen.getByTestId('physician-detail-languages');
+    expect(languages).toHaveTextContent('English');
+    expect(languages).not.toHaveTextContent('Spanish');
   });
 
   it('deep-links Gabrielle Moreau ENT at West Jefferson onto slot selection', () => {

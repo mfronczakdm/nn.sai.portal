@@ -10829,7 +10829,7 @@ ia:
     category: "Locations"
     status: "complete"
     createdAt: "2026-09-08T18:30:00Z"
-    updatedAt: "2026-09-09T14:30:00Z"
+    updatedAt: "2026-09-10T12:20:00Z"
     siteName: "lcmc"
     siteCollection: "lcmc"
     contentRootPath: "/sitecore/content/lcmc/lcmc"
@@ -10841,6 +10841,7 @@ ia:
       - "2026-09-08: Added ENT detail pages Gabrielle Moreau MD and Dominic Lirette MD under Find a Provider (Services Page). PhysicianDetail on headless-main points at Data/Physicians items. Auto-created local /Data/PhysicianDetail items deleted. Existing 24 pages unchanged."
       - "2026-09-09: Code-only LCMC PhysicianDetail header — teal profile band, professional photo, Book an appointment now CTA via buildLcmcPhysicianAppointmentHref (visit=sick-visit + provider/specialty/location). No Sitecore field or Default-layout changes. Named photos for Craig Conard / Jose Wiley / Aimee Aysenne from lcmchealth.org public assets under public/lcmc/physicians/; demo catalog names use Unsplash clinical placeholders. Craig Conard is not in Data/Physicians."
       - "2026-09-09: Book CTA hover/focus no longer uses bg-primary (same teal as the header). Rest is white + teal text; hover/focus is muted off-white + teal text. Theme lock in lcmc.css on .physician-detail__book-cta."
+      - "2026-09-10: Added LanguagesSpoken Single-Line Text {994C5B31-453A-473A-BBE9-DC87F28CE361} on LCMC Physician. All 26 Data/Physicians speak English; 20 also Spanish including Gabrielle Moreau and Dominic Lirette. English-only: Hannah Scott, Keisha Williams, Michael Tran, Omar Hassan, Priya Raman, Thomas Nguyen. PhysicianDetail shows Languages spoken badges in the teal header (Spanish is the solid white pill) plus Speaks … in Contact. Code fallback in src/lib/lcmc-physician-languages.ts if Edge has not published the field yet."
     react:
       filePath: "src/components/uiim/locations/PhysicianDetail.tsx"
       componentMapKey: "PhysicianDetail"
@@ -10862,6 +10863,7 @@ ia:
           - { name: "PhysicianBio", type: "Rich Text" }
           - { name: "ServingLocations", type: "Treelist" }
           - { name: "PhysicianDetailPage", type: "Droptree", itemId: "{1499B7E7-BFD9-4192-BF06-67BF1A9FD65F}" }
+          - { name: "LanguagesSpoken", type: "Single-Line Text", itemId: "{994C5B31-453A-473A-BBE9-DC87F28CE361}" }
       folder:
         name: "LCMC Physician Folder"
         path: "/sitecore/templates/Project/lcmc/Folders/LCMC Physician Folder"
