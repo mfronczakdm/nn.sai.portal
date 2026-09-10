@@ -3,21 +3,24 @@
 import { useMemo, useState } from 'react';
 import { Button } from '@/components/ui/Button';
 import { cn } from '@/lib/utils';
+import { useKioskI18n } from './LocaleProvider';
 
 const ROWS = [
   ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'],
   ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'],
-  ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L'],
+  ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'Ñ'],
   ['Z', 'X', 'C', 'V', 'B', 'N', 'M'],
 ];
 
 type OnScreenKeyboardProps = {
   value: string;
   onChange: (value: string) => void;
+  onDone?: () => void;
   className?: string;
 };
 
-export function OnScreenKeyboard({ value, onChange, className }: OnScreenKeyboardProps) {
+export function OnScreenKeyboard({ value, onChange, onDone, className }: OnScreenKeyboardProps) {
+  const { dictionary } = useKioskI18n();
   const [shift, setShift] = useState(false);
 
   const rows = useMemo(
@@ -29,7 +32,7 @@ export function OnScreenKeyboard({ value, onChange, className }: OnScreenKeyboar
   );
 
   return (
-    <div className={cn('rounded-3xl bg-lcmc-navy-dark p-4', className)} aria-label="On-screen keyboard">
+    <div className={cn('rounded-3xl bg-lcmc-navy-dark p-3', className)} aria-label={dictionary.keyboardAriaLabel}>
       <div className="flex flex-col gap-2">
         {rows.map((row) => (
           <div key={row.join('')} className="flex justify-center gap-2">
@@ -37,7 +40,7 @@ export function OnScreenKeyboard({ value, onChange, className }: OnScreenKeyboar
               <button
                 key={key}
                 type="button"
-                className="kiosk-tap min-w-[3.75rem] bg-white text-2xl text-lcmc-navy"
+                className="kiosk-tap min-w-[3.5rem] bg-white text-2xl text-lcmc-navy"
                 onClick={() => onChange(value + key)}
               >
                 {key}
@@ -45,12 +48,12 @@ export function OnScreenKeyboard({ value, onChange, className }: OnScreenKeyboar
             ))}
           </div>
         ))}
-        <div className="flex justify-center gap-2">
+        <div className="flex flex-wrap justify-center gap-2">
           <Button variant="secondary" onClick={() => setShift((current) => !current)}>
             {shift ? 'abc' : 'ABC'}
           </Button>
-          <Button variant="secondary" className="min-w-[12rem]" onClick={() => onChange(`${value} `)}>
-            Space
+          <Button variant="secondary" className="min-w-[10rem]" onClick={() => onChange(`${value} `)}>
+            {dictionary.keyboardSpace}
           </Button>
           <Button
             variant="secondary"
@@ -60,13 +63,16 @@ export function OnScreenKeyboard({ value, onChange, className }: OnScreenKeyboar
             ⌫
           </Button>
           <Button variant="danger" onClick={() => onChange('')}>
-            Clear
+            {dictionary.keyboardClear}
           </Button>
+          {onDone ? (
+            <Button variant="primary" onClick={onDone}>
+              {dictionary.keyboardDone}
+            </Button>
+          ) : null}
         </div>
       </div>
-      <p className="mt-3 text-center text-sm text-white/80">
-        Hardware kiosk keyboards, if attached, also type into the search field.
-      </p>
+      <p className="mt-2 text-center text-sm text-white/80">{dictionary.keyboardHint}</p>
     </div>
   );
 }

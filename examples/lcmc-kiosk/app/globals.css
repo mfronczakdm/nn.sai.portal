@@ -19,6 +19,36 @@ body {
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
 
+@keyframes kiosk-route-draw {
+  from {
+    stroke-dashoffset: 1400;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes kiosk-pin-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.12);
+  }
+}
+
+.kiosk-route-path {
+  stroke-dasharray: 16 12;
+  animation: kiosk-route-draw 2.2s ease-out forwards;
+}
+
+.kiosk-pin-pulse {
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: kiosk-pin-pulse 1.6s ease-in-out infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

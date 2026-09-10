@@ -1,9 +1,14 @@
+'use client';
+
 import type { Physician } from '@/lib/sitecore/types';
+import { useKioskI18n } from '@/components/kiosk/LocaleProvider';
 import { PhysicianCard } from './PhysicianCard';
 
 export function PhysicianGrid({ physicians }: { physicians: Physician[] }) {
+  const { dictionary } = useKioskI18n();
+
   if (physicians.length === 0) {
-    return <p className="text-xl text-lcmc-ink">No physicians match those filters.</p>;
+    return <p className="text-xl text-lcmc-ink">{dictionary.noPhysicians}</p>;
   }
 
   return (

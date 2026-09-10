@@ -13,13 +13,14 @@ import {
 } from '../client';
 import {
   DEFAULT_CHILD_PAGE_SIZE,
-  DEFAULT_LANGUAGE,
   DEPARTMENTS_ROOT_PATH,
   LOCATIONS_ROOT_PATH,
   PHYSICIANS_ROOT_PATH,
 } from '../constants';
 import { isMockDataEnabled } from '../env';
 import { SitecoreFetchError, SitecoreValidationError } from '../errors';
+import { getKioskLocale } from '@/lib/i18n/get-locale';
+import { sitecoreLanguage } from '@/lib/i18n/config';
 import {
   attachDepartmentNames,
   locationMap,
@@ -29,9 +30,9 @@ import {
   physiciansForDepartment,
 } from '../mappers';
 import {
-  mockDepartmentsResponse,
-  mockLocationsResponse,
-  mockPhysiciansResponse,
+  getMockDepartmentsResponse,
+  getMockLocationsResponse,
+  getMockPhysiciansResponse,
 } from '../mock';
 import {
   departmentByPathQuerySchema,
@@ -66,13 +67,18 @@ async function requestLive<T>(document: string, operationName: string, variables
   }
 }
 
+function activeLanguage() {
+  return sitecoreLanguage(getKioskLocale());
+}
+
 export async function getLocations(): Promise<LocationSummary[]> {
   try {
+    const language = activeLanguage();
     const raw = isMockDataEnabled()
-      ? mockLocationsResponse
+      ? getMockLocationsResponse(getKioskLocale())
       : await requestLive(locationsDocument(), 'GetLocations', {
           path: LOCATIONS_ROOT_PATH,
-          language: DEFAULT_LANGUAGE,
+          language,
           first: DEFAULT_CHILD_PAGE_SIZE,
         });
     const parsed = locationsQuerySchema.parse(raw);
@@ -83,22 +89,24 @@ export async function getLocations(): Promise<LocationSummary[]> {
 }
 
 async function getPhysicianItems() {
+  const language = activeLanguage();
   const raw = isMockDataEnabled()
-    ? mockPhysiciansResponse
+    ? getMockPhysiciansResponse(getKioskLocale())
     : await requestLive(physiciansDocument(), 'GetPhysicians', {
         path: PHYSICIANS_ROOT_PATH,
-        language: DEFAULT_LANGUAGE,
+        language,
         first: DEFAULT_CHILD_PAGE_SIZE,
       });
   return physiciansQuerySchema.parse(raw).item?.children?.results ?? [];
 }
 
 async function getDepartmentItems() {
+  const language = activeLanguage();
   const raw = isMockDataEnabled()
-    ? mockDepartmentsResponse
+    ? getMockDepartmentsResponse(getKioskLocale())
     : await requestLive(departmentsDocument(), 'GetDepartments', {
         path: DEPARTMENTS_ROOT_PATH,
-        language: DEFAULT_LANGUAGE,
+        language,
         first: DEFAULT_CHILD_PAGE_SIZE,
       });
   return departmentsQuerySchema.parse(raw).item?.children?.results ?? [];
@@ -136,7 +144,7 @@ export async function getPhysicianBySlug(slug: string): Promise<Physician | null
     const path = `${PHYSICIANS_ROOT_PATH}/${slug.replace(/-/g, ' ')}`;
     const raw = await requestLive(physicianByPathDocument(), 'GetPhysicianByPath', {
       path,
-      language: DEFAULT_LANGUAGE,
+      language: activeLanguage(),
     });
     const parsed = physicianByPathQuerySchema.parse(raw);
     if (!parsed.item) return null;
@@ -178,7 +186,7 @@ export async function getDepartmentBySlug(slug: string): Promise<Department | nu
     const path = `${DEPARTMENTS_ROOT_PATH}/${slug.replace(/-/g, ' ')}`;
     const raw = await requestLive(departmentByPathDocument(), 'GetDepartmentByPath', {
       path,
-      language: DEFAULT_LANGUAGE,
+      language: activeLanguage(),
     });
     const parsed = departmentByPathQuerySchema.parse(raw);
     if (!parsed.item) return null;

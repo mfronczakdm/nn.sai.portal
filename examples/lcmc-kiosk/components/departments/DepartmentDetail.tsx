@@ -1,7 +1,13 @@
+'use client';
+
 import { PhysicianGrid } from '@/components/physicians/PhysicianGrid';
+import { useKioskI18n } from '@/components/kiosk/LocaleProvider';
+import { FindMyWayButton } from '@/components/wayfinding/FindMyWayButton';
 import type { Department } from '@/lib/sitecore/types';
 
 export function DepartmentDetail({ department }: { department: Department }) {
+  const { dictionary } = useKioskI18n();
+
   return (
     <article className="space-y-8">
       <header>
@@ -24,10 +30,8 @@ export function DepartmentDetail({ department }: { department: Department }) {
       ) : null}
 
       <section>
-        <h2 className="text-2xl font-bold text-lcmc-navy">Where to go</h2>
-        <p className="mt-2 text-lg text-lcmc-muted">
-          Map placeholder — campus maps can be added when facilities provides floor plans.
-        </p>
+        <h2 className="text-2xl font-bold text-lcmc-navy">{dictionary.whereToGo}</h2>
+        <p className="mt-2 text-lg text-lcmc-muted">{dictionary.mapPlaceholder}</p>
         <ul className="mt-4 grid gap-4 md:grid-cols-2">
           {department.locations.map((location) => (
             <li key={location.id} className="rounded-2xl bg-white p-5 text-lg">
@@ -41,13 +45,20 @@ export function DepartmentDetail({ department }: { department: Department }) {
                   dangerouslySetInnerHTML={{ __html: location.visitorInfoHtml }}
                 />
               ) : null}
+              <div className="mt-4">
+                <FindMyWayButton
+                  destinationName={department.name}
+                  buildingName={location.shortName || location.name}
+                  address={location.address}
+                />
+              </div>
             </li>
           ))}
         </ul>
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-lcmc-navy">Physicians in this service</h2>
+        <h2 className="text-2xl font-bold text-lcmc-navy">{dictionary.physiciansInService}</h2>
         <div className="mt-4">
           <PhysicianGrid physicians={department.physicians} />
         </div>

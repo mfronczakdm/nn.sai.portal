@@ -91,14 +91,28 @@ Reconcile any new fields against the templates before go-live. Do not add guesse
 - `graphql-request` + path-based `item(path:)` queries.
 - zod validates the Edge payload at the API boundary.
 - `graphql-codegen` types come from the local schema subset in `lib/sitecore/schema.graphql` plus the `.graphql` documents. Introspect the real endpoint later if you want a fuller schema.
-- Idle reset (`useIdleRedirect`, 90s) returns to `/` on every screen except home. Search state lives in client components, so it clears on that navigation.
-- On-screen keyboard is a custom QWERTY overlay. A hardware kiosk keyboard still types into the same inputs.
+- Idle reset (`useIdleRedirect`, 90s) returns to `/` on every screen except home and resets language to English for the next visitor. Tapping **Home** keeps the current language.
+- On-screen keyboard is a custom QWERTY overlay (includes Ñ). Results update as you type; they sit above a sticky keyboard so they stay visible. Enter / **Done** only hides the keyboard.
+- English and `es-CO` UI chrome via a cookie (`lcmc_kiosk_locale`) and the **English | Español** control in the header. Sitecore content is requested with GraphQL `$language` — no content-tree or template changes. Mock mode overlays Spanish field values onto the English JSON fixtures.
+
+## Language
+
+The kiosk does not use Next.js locale routes. Language is a kiosk-session cookie so URLs stay the same as the public LCMC site.
+
+| Locale | UI chrome | Sitecore GraphQL `language` |
+| --- | --- | --- |
+| `en` (default) | English | `en` |
+| `es-CO` | Español | `es-CO` |
+
+Live Edge returns the existing `es-CO` item versions. Mock data uses `lib/sitecore/mock/overlays-es-co.ts` keyed by item ID. Do not add folders, templates, or fields in Sitecore for this kiosk.
 
 ## Routes
 
-- `/` attract / home
-- `/physicians` directory with search + specialty chips
-- `/physicians/[slug]` physician detail
-- `/departments` service directory
+- `/` attract / home (language switcher in the header)
+- `/physicians` directory with live type-ahead search + specialty chips
+- `/physicians/[slug]` physician detail, with a static **Find my way** lobby map
+- `/departments` service directory with live type-ahead
 - `/departments/[slug]` service detail, locations, related physicians
-- `/wayfinding` hospital visitor / parking overview
+- `/wayfinding` location search, parking, and visitor information
+
+Physician and department screens can open a **static demo floor plan** (lobby kiosk → clinic). It is kiosk-only artwork — it does not change Sitecore items and is not live indoor GPS.

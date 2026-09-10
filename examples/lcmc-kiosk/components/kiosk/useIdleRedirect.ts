@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useRef } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import { IDLE_TIMEOUT_MS } from '@/lib/kiosk/constants';
+import { resetKioskLocale } from './LanguageSwitcher';
 
 type UseIdleRedirectOptions = {
   timeoutMs?: number;
@@ -28,7 +29,9 @@ export function useIdleRedirect({
     clearTimer();
     if (!enabled) return;
     timerRef.current = window.setTimeout(() => {
+      resetKioskLocale();
       router.push('/');
+      router.refresh();
     }, timeoutMs);
   }, [clearTimer, enabled, router, timeoutMs]);
 

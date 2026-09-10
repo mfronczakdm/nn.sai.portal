@@ -1,8 +1,13 @@
+'use client';
+
 import Link from 'next/link';
 import type { Department } from '@/lib/sitecore/types';
+import { useKioskI18n } from '@/components/kiosk/LocaleProvider';
 
 export function DepartmentCard({ department }: { department: Department }) {
+  const { dictionary } = useKioskI18n();
   const primaryLocation = department.locations[0];
+  const extraLocations = Math.max(department.locations.length - 1, 0);
 
   return (
     <Link
@@ -14,7 +19,7 @@ export function DepartmentCard({ department }: { department: Department }) {
       {primaryLocation ? (
         <p className="mt-3 text-base text-lcmc-muted">
           {primaryLocation.shortName}
-          {department.locations.length > 1 ? ` + ${department.locations.length - 1} more` : ''}
+          {extraLocations > 0 ? dictionary.moreLocations(extraLocations) : ''}
         </p>
       ) : null}
     </Link>

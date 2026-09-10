@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
+import { htmlLang } from '@/lib/i18n/config';
+import { getKioskLocale } from '@/lib/i18n/get-locale';
 import './globals.css';
 
 const geistSans = localFont({
@@ -14,8 +16,10 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  const locale = getKioskLocale();
+
   return (
-    <html lang="en">
+    <html lang={htmlLang(locale)}>
       <body className={`${geistSans.variable} h-full antialiased`}>{children}</body>
     </html>
   );

@@ -2,9 +2,11 @@
 
 import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/Button';
+import { useKioskI18n } from './LocaleProvider';
 
 export function BackButton({ light = true }: { light?: boolean }) {
   const router = useRouter();
+  const { dictionary } = useKioskI18n();
 
   return (
     <Button
@@ -18,7 +20,7 @@ export function BackButton({ light = true }: { light?: boolean }) {
         router.push('/');
       }}
     >
-      Back
+      {dictionary.back}
     </Button>
   );
 }

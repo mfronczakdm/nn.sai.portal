@@ -42,6 +42,26 @@ export function physicianDisplayName(name: string, credentials: string): string 
   return `${name}, ${credentials}`;
 }
 
+export function foldSearch(value: string): string {
+  return value
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+export function matchesSearch(haystack: string, needle: string): boolean {
+  const foldedNeedle = foldSearch(needle);
+  if (!foldedNeedle) return true;
+  return foldSearch(haystack).includes(foldedNeedle);
+}
+
+export function isHospitalLocationType(locationType: string): boolean {
+  return foldSearch(locationType) === 'hospital';
+}
+
 export function initialsFromName(name: string): string {
   const cleaned = name.replace(/,?\s*(md|do|np|pa|rn|phd|mph|facc|faap|facs|facog)\b/gi, ' ').trim();
   const parts = cleaned.split(/\s+/).filter(Boolean);

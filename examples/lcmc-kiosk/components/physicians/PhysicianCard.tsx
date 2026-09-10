@@ -1,9 +1,13 @@
+'use client';
+
 import Link from 'next/link';
 import type { Physician } from '@/lib/sitecore/types';
 import { physicianDisplayName } from '@/lib/utils';
+import { useKioskI18n } from '@/components/kiosk/LocaleProvider';
 import { PhysicianAvatar } from './PhysicianAvatar';
 
 export function PhysicianCard({ physician }: { physician: Physician }) {
+  const { dictionary } = useKioskI18n();
   const location = physician.locations[0]?.shortName;
 
   return (
@@ -16,7 +20,7 @@ export function PhysicianCard({ physician }: { physician: Physician }) {
         <h2 className="text-2xl font-bold text-lcmc-navy">
           {physicianDisplayName(physician.name, physician.credentials)}
         </h2>
-        <p className="mt-1 text-lg text-lcmc-ink">{physician.specialty || 'Specialty not listed'}</p>
+        <p className="mt-1 text-lg text-lcmc-ink">{physician.specialty || dictionary.specialtyNotListed}</p>
         {location ? <p className="mt-1 text-base text-lcmc-muted">{location}</p> : null}
       </div>
     </Link>

@@ -1,7 +1,12 @@
+'use client';
+
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
+import { useKioskI18n } from './LocaleProvider';
 
 export function HomeButton({ light = true }: { light?: boolean }) {
+  const { dictionary } = useKioskI18n();
+
   return (
     <Link
       href="/"
@@ -12,7 +17,7 @@ export function HomeButton({ light = true }: { light?: boolean }) {
           : 'border-lcmc-navy bg-white text-lcmc-navy hover:bg-lcmc-cream'
       )}
     >
-      Home
+      {dictionary.home}
     </Link>
   );
 }
