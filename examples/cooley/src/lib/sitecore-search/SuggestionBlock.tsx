@@ -34,10 +34,10 @@ const SuggestionBlock = ({
           id={blockId}
           filterAttribute={filterAttribute}
         >
-          <h2 className="m-2 box-border block pl-1 text-sm font-bold text-foreground">{title}</h2>
+          <h2 className="m-2 box-border block pl-1 text-sm font-bold text-gray-900">{title}</h2>
           {items.map(({ text }) => (
             <PreviewSearch.SuggestionTrigger
-              className="cursor-pointer p-2 text-sm text-foreground hover:bg-background focus:bg-background focus:outline-none data-[state=active]:bg-background data-[state=active]:outline-none"
+              className="cursor-pointer p-2 text-sm text-gray-900 hover:bg-background focus:bg-background focus:outline-none data-[state=active]:bg-background data-[state=active]:outline-none"
               id={text}
               key={text}
               asChild

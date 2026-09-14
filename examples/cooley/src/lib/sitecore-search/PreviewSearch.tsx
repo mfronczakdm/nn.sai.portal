@@ -54,7 +54,7 @@ export const PreviewSearchComponent = ({
   resultsPath = '/search',
   className,
   inputClassName,
-  placeholder = 'Search the Knowledge Base...',
+  placeholder = 'Search ...',
 }: PreviewSearchComponentProps) => {
   const router = useRouter();
   const { handleSearch } = useSearchTracking();
@@ -122,9 +122,14 @@ export const PreviewSearchComponent = ({
 
         {isOpen && (
           <PreviewSearch.Content
+            // Sitecore UI defaults align="start"; override so a wider panel grows left
+            // and its right edge lines up with the input (types omit `align`, runtime accepts it).
+            {...({ align: 'end' } as Record<string, unknown>)}
             className={cn(
-              'absolute left-0 right-0 z-50 mt-1 flex max-h-[min(400px,70vh)] w-full justify-center overflow-hidden',
-              'rounded-xl border border-border bg-muted pt-0 shadow-lg'
+              // Wider than the input so suggestion + card grid can render at readable sizes.
+              // Do not bind to --radix-popper-anchor-width (input is too narrow for cards).
+              'z-50 mt-1 flex max-h-[min(480px,75vh)] w-[min(92vw,56rem)] overflow-hidden',
+              'rounded-xl border border-border bg-muted pt-0 text-gray-900 shadow-lg'
             )}
           >
             <Spinner loading={loading} />
@@ -132,7 +137,7 @@ export const PreviewSearchComponent = ({
             {!loading && (
               <React.Fragment key="preview-body">
                 {articleSuggestions.length > 0 && (
-                  <PreviewSearch.Suggestions className="box-border block w-40 shrink-0 list-none border-r border-border bg-muted/80 text-sm sm:w-48">
+                  <PreviewSearch.Suggestions className="box-border block w-44 shrink-0 list-none overflow-y-auto border-r border-border bg-muted/80 text-sm text-gray-900 sm:w-52">
                     <SuggestionBlock
                       blockId="title_context_aware"
                       items={articleSuggestions}
@@ -147,7 +152,12 @@ export const PreviewSearchComponent = ({
                   {({ isFetching: isResultsFetching, data: { content: articles = [] } = {} }) => (
                     <PreviewSearch.Items
                       data-loading={isResultsFetching}
-                      className="relative flex min-h-[8rem] flex-[3] overflow-y-auto bg-background data-[loading=false]:m-0 data-[loading=false]:grid data-[loading=false]:list-none data-[loading=false]:grid-cols-1 data-[loading=false]:gap-2 data-[loading=false]:p-2 sm:data-[loading=false]:grid-cols-2 lg:data-[loading=false]:grid-cols-3"
+                      className={cn(
+                        'relative flex min-h-[12rem] min-w-0 flex-1 overflow-y-auto bg-background',
+                        'data-[loading=false]:m-0 data-[loading=false]:grid data-[loading=false]:list-none',
+                        'data-[loading=false]:grid-cols-2 data-[loading=false]:gap-3 data-[loading=false]:p-3',
+                        'md:data-[loading=false]:grid-cols-3'
+                      )}
                     >
                       <Spinner loading={isResultsFetching} />
 
@@ -169,20 +179,20 @@ export const PreviewSearchComponent = ({
                                   })
                                 }
                                 href={article.url}
-                                className="box-border flex w-full text-foreground no-underline focus:shadow-md"
+                                className="box-border flex min-w-0 w-full text-gray-900 no-underline focus:shadow-md"
                               >
-                                <ArticleCard.Root className="block w-full cursor-pointer rounded-lg border border-border p-2 text-left shadow-sm transition-shadow hover:shadow-md">
-                                  <div className="relative mb-2 flex h-16 items-center justify-center overflow-hidden rounded-md bg-muted">
+                                <ArticleCard.Root className="flex w-full min-w-0 cursor-pointer flex-col rounded-lg border border-border p-3 text-left text-gray-900 shadow-sm transition-shadow hover:shadow-md">
+                                  <div className="relative mb-3 flex h-28 w-full items-center justify-center overflow-hidden rounded-md bg-muted">
                                     <Image
                                       src={imageUrl}
-                                      className="block h-auto max-h-full w-auto max-w-full object-contain"
+                                      className="h-full w-full object-cover"
                                       alt=""
-                                      width={200}
-                                      height={100}
+                                      width={320}
+                                      height={160}
                                       unoptimized
                                     />
                                   </div>
-                                  <ArticleCard.Title className="m-0 line-clamp-2 text-xs font-medium">
+                                  <ArticleCard.Title className="m-0 line-clamp-2 text-sm font-medium leading-snug text-gray-900">
                                     {label}
                                   </ArticleCard.Title>
                                 </ArticleCard.Root>
