@@ -1,5 +1,5 @@
 generatedAt: "2026-03-20T09:00:00Z"
-lastUpdatedAt: "2026-08-18T20:00:00Z"
+lastUpdatedAt: "2026-09-14T07:10:00Z"
 lastUpdatedBy: "cursor-agent"
 
 project:
@@ -5802,3 +5802,61 @@ contentPages:
         - "Swap sample PDF URLs for real Content Hub public links"
         - "Publish templates, rendering, variants, and Data/DocumentCards for Edge"
         - "_HorizonDatasourceGrouping not found on this instance — optional follow-up; MediaCanvas parent also Standard + Grid Parameters only"
+
+  - name: "SitecoreSearchResults"
+    kind: "context-only"
+    category: "Search"
+    status: "complete"
+    createdAt: "2026-09-14T07:08:00Z"
+    updatedAt: "2026-09-14T07:10:00Z"
+    siteCollection: "progressive"
+    siteName: "pkm"
+    notes: >
+      Context-only JSON Rendering for legacy Sitecore Search results + Q&A.
+      No datasource — reads ?q= from the URL via React. Registered on progressive/pkm.
+    react:
+      filePath: "src/components/search/SitecoreSearchResults.tsx"
+      componentMapKey: "SitecoreSearchResults"
+      variants:
+        - "Default"
+    templates:
+      renderingParams:
+        name: "SitecoreSearchResults"
+        path: "/sitecore/templates/Project/progressive/Rendering Parameters/SitecoreSearchResults"
+        itemId: "{DA819F87-B539-4A84-A413-EB67D934564D}"
+        baseTemplatesSet: true
+    rendering:
+      name: "SitecoreSearchResults"
+      path: "/sitecore/layout/Renderings/Project/progressive/SitecoreSearchResults"
+      itemId: "{6103C820-2EE1-460B-A394-C69A4BCE8682}"
+      componentName: "SitecoreSearchResults"
+      datasourceRequired: false
+      datasourceTemplatePath: ""
+      datasourceLocationQuery: ""
+      parametersTemplateId: "{DA819F87-B539-4A84-A413-EB67D934564D}"
+      componentQuery: ""
+      addFieldEditorButton: "1"
+      registeredInAvailableRenderings: true
+    headlessVariants:
+      containerPath: "/sitecore/content/progressive/pkm/Presentation/Headless Variants/SitecoreSearchResults"
+      containerId: "{B055194E-9471-4713-AC47-5671EB080A23}"
+      variants:
+        - { name: "Default", itemId: "{4BC9FF39-5824-410E-B001-1A7EAA96F4DD}" }
+    availableRenderings:
+      path: "/sitecore/content/progressive/pkm/Presentation/Available Renderings/Page Content"
+      itemId: "{5EA156B8-2FF0-4FDC-81C1-5791F1A50CDD}"
+      lastKnownValue: "{C5F905F8-FD1F-444E-A9E5-AC6B774FF0DE}|{2492BAC4-DA07-4C86-87F0-9873D40E2276}|{9C6D53E3-FE57-4638-AF7B-6D68304C7A94}|{3836D951-BB14-43AC-9231-649B7F245DC5}|{6103C820-2EE1-460B-A394-C69A4BCE8682}"
+    verification:
+      checkedAt: "2026-09-14T07:10:00Z"
+      passed:
+        - "Rendering Parameters template created with four base templates"
+        - "JSON Rendering componentName=SitecoreSearchResults"
+        - "Parameters Template set to {DA819F87-B539-4A84-A413-EB67D934564D}"
+        - "Datasource Template and Location empty (context-only)"
+        - "get_component confirms datasourceRequired=false"
+        - "Default Headless Variant created"
+        - "Appended to Available Renderings/Page Content (MCP read-back confirmed)"
+      failed: []
+      pendingManual:
+        - "Publish rendering, variants, and Available Renderings for Edge"
+        - "Place SitecoreSearchResults on a search results page and link header search to ?q="

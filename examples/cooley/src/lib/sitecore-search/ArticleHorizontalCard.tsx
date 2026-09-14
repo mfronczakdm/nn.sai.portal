@@ -41,16 +41,18 @@ const ArticleHorizontalItemCard = ({ className = '', article }: ArticleCardItemC
       <div className="grow flex-col pl-4">
         <a className="focus:outline-indigo-500" href={article.url}>
           <span aria-hidden="true" className="absolute inset-0"></span>
-          <ArticleCard.Title className="mb-2 text-lg font-semibold text-gray-900">
+          <ArticleCard.Title className="text-primary mb-2 text-lg font-semibold">
             {article.name || article.title}
           </ArticleCard.Title>
         </a>
-        <ArticleCard.Subtitle className="mt-3 line-clamp-2 text-sm text-gray-600 dark:text-gray-300">
+        <ArticleCard.Subtitle className="mt-3 line-clamp-2 text-sm text-gray-900">
           {article.description}
         </ArticleCard.Subtitle>
-        <div className="text-primary-foreground absolute top-4 right-4 rounded-md border border-transparent bg-gray-300 px-2.5 py-0.5 text-xs font-semibold">
-          {article.type}
-        </div>
+        {article.type && (
+          <div className="absolute top-4 right-4 rounded-md border border-transparent bg-gray-700 px-2.5 py-0.5 text-xs font-semibold text-white">
+            {article.type}
+          </div>
+        )}
       </div>
     </ArticleCard.Root>
   );
