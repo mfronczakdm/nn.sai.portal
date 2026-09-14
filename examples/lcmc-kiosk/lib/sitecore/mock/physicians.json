@@ -1,0 +1,816 @@
+{
+  "item": {
+    "id": "13C422FB-8991-4468-B996-BE73A904C23E",
+    "name": "Physicians",
+    "children": {
+      "results": [
+        {
+          "id": "3248558F-44BA-478E-97FE-80E84A000603",
+          "name": "Alicia Broussard MD",
+          "displayName": "Alicia Broussard MD",
+          "path": "/sitecore/content/lcmc/lcmc/Data/Physicians/Alicia Broussard MD",
+          "physicianFullName": {
+            "value": "Alicia Broussard"
+          },
+          "credentials": {
+            "value": "MD"
+          },
+          "specialty": {
+            "value": "Urgent Care"
+          },
+          "physicianBio": {
+            "value": "<p>Dr. Broussard provides Westbank walk-in care at Gretna Urgent Care and refers patients to West Jefferson when needed.</p>"
+          },
+          "physicianPhone": {
+            "value": "504-349-6747"
+          },
+          "servingLocations": {
+            "value": "{F1E5353C-A2B7-47F0-9570-85B8FD6D9FED}",
+            "targetItems": [
+              {
+                "id": "F1E5353C-A2B7-47F0-9570-85B8FD6D9FED",
+                "name": "LCMC Health Gretna Urgent Care",
+                "displayName": "LCMC Health Gretna Urgent Care"
+              }
+            ]
+          }
+        },
+        {
+          "id": "9BC27AE8-3D1C-468A-8A1D-336EDB3F11D9",
+          "name": "Andre Baptiste MD",
+          "displayName": "Andre Baptiste MD",
+          "path": "/sitecore/content/lcmc/lcmc/Data/Physicians/Andre Baptiste MD",
+          "physicianFullName": {
+            "value": "Andre Baptiste"
+          },
+          "credentials": {
+            "value": "MD"
+          },
+          "specialty": {
+            "value": "Family Medicine"
+          },
+          "physicianBio": {
+            "value": "<p>Dr. Baptiste provides primary and hospital medicine for families at New Orleans East Hospital.</p>"
+          },
+          "physicianPhone": {
+            "value": "504-592-6600"
+          },
+          "servingLocations": {
+            "value": "{6766AE91-0553-4034-B328-2327CB54AB85}",
+            "targetItems": [
+              {
+                "id": "6766AE91-0553-4034-B328-2327CB54AB85",
+                "name": "New Orleans East Hospital",
+                "displayName": "New Orleans East Hospital"
+              }
+            ]
+          }
+        },
+        {
+          "id": "C176B05D-10A5-49C8-A980-9380046CE24F",
+          "name": "Anita Chauvin MD",
+          "displayName": "Anita Chauvin MD",
+          "path": "/sitecore/content/lcmc/lcmc/Data/Physicians/Anita Chauvin MD",
+          "physicianFullName": {
+            "value": "Anita Chauvin"
+          },
+          "credentials": {
+            "value": "MD"
+          },
+          "specialty": {
+            "value": "Medical Oncology"
+          },
+          "physicianBio": {
+            "value": "<p>Dr. Chauvin treats solid tumors and coordinates cancer care at East Jefferson, including access to LSU LCMC Health Cancer Center resources.</p>"
+          },
+          "physicianPhone": {
+            "value": "504-503-4200"
+          },
+          "servingLocations": {
+            "value": "{EFEAC293-2BF4-4516-873D-4EAC1F998474}",
+            "targetItems": [
+              {
+                "id": "EFEAC293-2BF4-4516-873D-4EAC1F998474",
+                "name": "East Jefferson General Hospital",
+                "displayName": "East Jefferson General Hospital"
+              }
+            ]
+          }
+        },
+        {
+          "id": "31A4B5A2-10FB-4CF1-B1E5-8FC21C802D06",
+          "name": "Brian LeBlanc MD",
+          "displayName": "Brian LeBlanc MD",
+          "path": "/sitecore/content/lcmc/lcmc/Data/Physicians/Brian LeBlanc MD",
+          "physicianFullName": {
+            "value": "Brian LeBlanc"
+          },
+          "credentials": {
+            "value": "MD"
+          },
+          "specialty": {
+            "value": "Orthopedic Surgery"
+          },
+          "physicianBio": {
+            "value": "<p>Dr. LeBlanc is an orthopedic surgeon at West Jefferson Medical Center, treating fractures, joints, and sports injuries on the Westbank.</p>"
+          },
+          "physicianPhone": {
+            "value": "504-349-6800"
+          },
+          "servingLocations": {
+            "value": "{35C77454-5FB8-460D-BC12-299F7B31DE5A}",
+            "targetItems": [
+              {
+                "id": "35C77454-5FB8-460D-BC12-299F7B31DE5A",
+                "name": "West Jefferson Medical Center",
+                "displayName": "West Jefferson Medical Center"
+              }
+            ]
+          }
+        },
+        {
+          "id": "12B533A6-8DF8-4D80-B466-111A5B26B8E4",
+          "name": "Camille Landry MD",
+          "displayName": "Camille Landry MD",
+          "path": "/sitecore/content/lcmc/lcmc/Data/Physicians/Camille Landry MD",
+          "physicianFullName": {
+            "value": "Camille Landry"
+          },
+          "credentials": {
+            "value": "MD, FACC"
+          },
+          "specialty": {
+            "value": "Cardiology"
+          },
+          "physicianBio": {
+            "value": "<p>Dr. Landry is a board-certified cardiologist at East Jefferson General Hospital, focusing on heart failure and preventive cardiology for Jefferson Parish patients.</p>"
+          },
+          "physicianPhone": {
+            "value": "504-503-4100"
+          },
+          "servingLocations": {
+            "value": "{EFEAC293-2BF4-4516-873D-4EAC1F998474}",
+            "targetItems": [
+              {
+                "id": "EFEAC293-2BF4-4516-873D-4EAC1F998474",
+                "name": "East Jefferson General Hospital",
+                "displayName": "East Jefferson General Hospital"
+              }
+            ]
+          }
+        },
+        {
+          "id": "3188F21C-974C-43D5-8722-C676D09A8293",
+          "name": "Claire Fontenot MD",
+          "displayName": "Claire Fontenot MD",
+          "path": "/sitecore/content/lcmc/lcmc/Data/Physicians/Claire Fontenot MD",
+          "physicianFullName": {
+            "value": "Claire Fontenot"
+          },
+          "credentials": {
+            "value": "MD"
+          },
+          "specialty": {
+            "value": "Urgent Care"
+          },
+          "physicianBio": {
+            "value": "<p>Dr. Fontenot provides walk-in urgent care on Magazine Street and refers patients to Touro or Manning Family Children's when a higher level of care is needed.</p>"
+          },
+          "physicianPhone": {
+            "value": "504-900-3160"
+          },
+          "servingLocations": {
+            "value": "{9E0B2413-44E2-488E-9346-39243F87E342}",
+            "targetItems": [
+              {
+                "id": "9E0B2413-44E2-488E-9346-39243F87E342",
+                "name": "LCMC Health Uptown Urgent Care",
+                "displayName": "LCMC Health Uptown Urgent Care"
+              }
+            ]
+          }
+        },
+        {
+          "id": "49B7EB4F-7C96-4D02-BA27-99FF3F2C75E2",
+          "name": "Daniel Hebert MD",
+          "displayName": "Daniel Hebert MD",
+          "path": "/sitecore/content/lcmc/lcmc/Data/Physicians/Daniel Hebert MD",
+          "physicianFullName": {
+            "value": "Daniel Hebert"
+          },
+          "credentials": {
+            "value": "MD"
+          },
+          "specialty": {
+            "value": "Pediatric Emergency Medicine"
+          },
+          "physicianBio": {
+            "value": "<p>Dr. Hebert staffs the pediatric emergency department at Manning Family Children's, treating urgent and emergent conditions in children.</p>"
+          },
+          "physicianPhone": {
+            "value": "504-899-9511"
+          },
+          "servingLocations": {
+            "value": "{6B468248-C9D1-4DD0-9E8D-44B477FDB96C}",
+            "targetItems": [
+              {
+                "id": "6B468248-C9D1-4DD0-9E8D-44B477FDB96C",
+                "name": "Manning Family Childrens",
+                "displayName": "Manning Family Childrens"
+              }
+            ]
+          }
+        },
+        {
+          "id": "010E3311-06A7-4904-AFD0-202FD565A796",
+          "name": "Dominic Lirette MD",
+          "displayName": "Dominic Lirette MD",
+          "path": "/sitecore/content/lcmc/lcmc/Data/Physicians/Dominic Lirette MD",
+          "physicianFullName": {
+            "value": "Dominic Lirette"
+          },
+          "credentials": {
+            "value": "MD"
+          },
+          "specialty": {
+            "value": "ENT"
+          },
+          "physicianBio": {
+            "value": "<p>Dr. Lirette is a board-certified ENT surgeon at West Jefferson Medical Center, focusing on sinus, hearing, and throat care for Marrero and Westbank families.</p>"
+          },
+          "physicianPhone": {
+            "value": "504-349-6420"
+          },
+          "servingLocations": {
+            "value": "{35C77454-5FB8-460D-BC12-299F7B31DE5A}",
+            "targetItems": [
+              {
+                "id": "35C77454-5FB8-460D-BC12-299F7B31DE5A",
+                "name": "West Jefferson Medical Center",
+                "displayName": "West Jefferson Medical Center"
+              }
+            ]
+          }
+        },
+        {
+          "id": "EED3B2C7-4DEF-4F96-B129-46E86DF0559D",
+          "name": "Elise Boudreaux MD",
+          "displayName": "Elise Boudreaux MD",
+          "path": "/sitecore/content/lcmc/lcmc/Data/Physicians/Elise Boudreaux MD",
+          "physicianFullName": {
+            "value": "Elise Boudreaux"
+          },
+          "credentials": {
+            "value": "MD"
+          },
+          "specialty": {
+            "value": "Emergency Medicine"
+          },
+          "physicianBio": {
+            "value": "<p>Dr. Boudreaux is an emergency physician at Lakeside Hospital, caring for urgent and emergent conditions around the clock.</p>"
+          },
+          "physicianPhone": {
+            "value": "504-780-8282"
+          },
+          "servingLocations": {
+            "value": "{C6A3CDB7-8708-4C60-861B-009B7FB9E786}",
+            "targetItems": [
+              {
+                "id": "C6A3CDB7-8708-4C60-861B-009B7FB9E786",
+                "name": "Lakeside Hospital",
+                "displayName": "Lakeside Hospital"
+              }
+            ]
+          }
+        },
+        {
+          "id": "24EB9BF3-BFD6-4D01-87A7-BAF6D3DA421C",
+          "name": "Gabrielle Moreau MD",
+          "displayName": "Gabrielle Moreau MD",
+          "path": "/sitecore/content/lcmc/lcmc/Data/Physicians/Gabrielle Moreau MD",
+          "physicianFullName": {
+            "value": "Gabrielle Moreau"
+          },
+          "credentials": {
+            "value": "MD"
+          },
+          "specialty": {
+            "value": "ENT"
+          },
+          "physicianBio": {
+            "value": "<p>Dr. Moreau is a board-certified otolaryngologist at West Jefferson Medical Center, caring for adults and children with ear, nose, and throat conditions on the Westbank.</p>"
+          },
+          "physicianPhone": {
+            "value": "504-349-6400"
+          },
+          "servingLocations": {
+            "value": "{35C77454-5FB8-460D-BC12-299F7B31DE5A}",
+            "targetItems": [
+              {
+                "id": "35C77454-5FB8-460D-BC12-299F7B31DE5A",
+                "name": "West Jefferson Medical Center",
+                "displayName": "West Jefferson Medical Center"
+              }
+            ]
+          }
+        },
+        {
+          "id": "1B865C3A-A093-4A6D-8DB8-554028EB662F",
+          "name": "Hannah Scott MD",
+          "displayName": "Hannah Scott MD",
+          "path": "/sitecore/content/lcmc/lcmc/Data/Physicians/Hannah Scott MD",
+          "physicianFullName": {
+            "value": "Hannah Scott"
+          },
+          "credentials": {
+            "value": "MD"
+          },
+          "specialty": {
+            "value": "Urgent Care"
+          },
+          "physicianBio": {
+            "value": "<p>Dr. Scott provides neighborhood walk-in care at Lakeview Urgent Care on Harrison Avenue.</p>"
+          },
+          "physicianPhone": {
+            "value": "504-309-7108"
+          },
+          "servingLocations": {
+            "value": "{53907833-68C9-4A0D-A500-FAD77D27FBD0}",
+            "targetItems": [
+              {
+                "id": "53907833-68C9-4A0D-A500-FAD77D27FBD0",
+                "name": "LCMC Health Lakeview Urgent Care",
+                "displayName": "LCMC Health Lakeview Urgent Care"
+              }
+            ]
+          }
+        },
+        {
+          "id": "3649DA30-9C2F-445B-9B40-AD91F25276DC",
+          "name": "James Thibodeaux MD",
+          "displayName": "James Thibodeaux MD",
+          "path": "/sitecore/content/lcmc/lcmc/Data/Physicians/James Thibodeaux MD",
+          "physicianFullName": {
+            "value": "James Thibodeaux"
+          },
+          "credentials": {
+            "value": "MD, FACC"
+          },
+          "specialty": {
+            "value": "Cardiology"
+          },
+          "physicianBio": {
+            "value": "<p>Dr. Thibodeaux provides heart and vascular care at Lakeview Hospital and the LCMC Health Heart and Vascular clinic in Covington.</p>"
+          },
+          "physicianPhone": {
+            "value": "985-867-2131"
+          },
+          "servingLocations": {
+            "value": "{C5D069A3-C8BB-40FE-89BE-D7F9D5C9614F}",
+            "targetItems": [
+              {
+                "id": "C5D069A3-C8BB-40FE-89BE-D7F9D5C9614F",
+                "name": "Lakeview Hospital",
+                "displayName": "Lakeview Hospital"
+              }
+            ]
+          }
+        },
+        {
+          "id": "65C2FDCF-7791-43DA-8354-7030BB6CD025",
+          "name": "Joseph Allemand MD",
+          "displayName": "Joseph Allemand MD",
+          "path": "/sitecore/content/lcmc/lcmc/Data/Physicians/Joseph Allemand MD",
+          "physicianFullName": {
+            "value": "Joseph Allemand"
+          },
+          "credentials": {
+            "value": "MD"
+          },
+          "specialty": {
+            "value": "Urgent Care"
+          },
+          "physicianBio": {
+            "value": "<p>Dr. Allemand provides walk-in urgent care for St. Charles Parish patients at the Luling clinic.</p>"
+          },
+          "physicianPhone": {
+            "value": "504-702-4862"
+          },
+          "servingLocations": {
+            "value": "{4C15C596-29EB-46C8-BD93-53E7DEBA82E0}",
+            "targetItems": [
+              {
+                "id": "4C15C596-29EB-46C8-BD93-53E7DEBA82E0",
+                "name": "LCMC Health Luling Urgent Care",
+                "displayName": "LCMC Health Luling Urgent Care"
+              }
+            ]
+          }
+        },
+        {
+          "id": "B58527CE-BA45-4C9E-B506-D0A3D75AC996",
+          "name": "Keisha Williams MD",
+          "displayName": "Keisha Williams MD",
+          "path": "/sitecore/content/lcmc/lcmc/Data/Physicians/Keisha Williams MD",
+          "physicianFullName": {
+            "value": "Keisha Williams"
+          },
+          "credentials": {
+            "value": "MD"
+          },
+          "specialty": {
+            "value": "Emergency Medicine"
+          },
+          "physicianBio": {
+            "value": "<p>Dr. Williams is an emergency physician at New Orleans East Hospital, caring for patients across the East Bank community.</p>"
+          },
+          "physicianPhone": {
+            "value": "504-592-6600"
+          },
+          "servingLocations": {
+            "value": "{6766AE91-0553-4034-B328-2327CB54AB85}",
+            "targetItems": [
+              {
+                "id": "6766AE91-0553-4034-B328-2327CB54AB85",
+                "name": "New Orleans East Hospital",
+                "displayName": "New Orleans East Hospital"
+              }
+            ]
+          }
+        },
+        {
+          "id": "47043241-18E6-4A37-8F69-4108CDBD78A2",
+          "name": "Kevin Romero MD",
+          "displayName": "Kevin Romero MD",
+          "path": "/sitecore/content/lcmc/lcmc/Data/Physicians/Kevin Romero MD",
+          "physicianFullName": {
+            "value": "Kevin Romero"
+          },
+          "credentials": {
+            "value": "MD"
+          },
+          "specialty": {
+            "value": "Family Medicine"
+          },
+          "physicianBio": {
+            "value": "<p>Dr. Romero sees walk-in patients at Clearview Urgent Care for everyday illnesses and minor injuries.</p>"
+          },
+          "physicianPhone": {
+            "value": "504-676-5550"
+          },
+          "servingLocations": {
+            "value": "{A2D66593-0A5D-4EE4-82D3-FA88A59C71FA}",
+            "targetItems": [
+              {
+                "id": "A2D66593-0A5D-4EE4-82D3-FA88A59C71FA",
+                "name": "LCMC Health Clearview Urgent Care",
+                "displayName": "LCMC Health Clearview Urgent Care"
+              }
+            ]
+          }
+        },
+        {
+          "id": "B7224F06-A404-40C9-8F72-8A1FDD04C472",
+          "name": "Leah Castillo MD",
+          "displayName": "Leah Castillo MD",
+          "path": "/sitecore/content/lcmc/lcmc/Data/Physicians/Leah Castillo MD",
+          "physicianFullName": {
+            "value": "Leah Castillo"
+          },
+          "credentials": {
+            "value": "MD"
+          },
+          "specialty": {
+            "value": "Psychiatry"
+          },
+          "physicianBio": {
+            "value": "<p>Dr. Castillo provides inpatient and emergency behavioral health care at University Medical Center New Orleans.</p>"
+          },
+          "physicianPhone": {
+            "value": "504-702-3000"
+          },
+          "servingLocations": {
+            "value": "{E8F05084-0214-424F-B1D4-B5B562499F5C}",
+            "targetItems": [
+              {
+                "id": "E8F05084-0214-424F-B1D4-B5B562499F5C",
+                "name": "University Medical Center New Orleans",
+                "displayName": "University Medical Center New Orleans"
+              }
+            ]
+          }
+        },
+        {
+          "id": "B257CB21-E4C2-44BA-8C70-28D893D45C97",
+          "name": "Marcus Fontenot MD",
+          "displayName": "Marcus Fontenot MD",
+          "path": "/sitecore/content/lcmc/lcmc/Data/Physicians/Marcus Fontenot MD",
+          "physicianFullName": {
+            "value": "Marcus Fontenot"
+          },
+          "credentials": {
+            "value": "MD"
+          },
+          "specialty": {
+            "value": "Orthopedic Surgery"
+          },
+          "physicianBio": {
+            "value": "<p>Dr. Fontenot practices orthopedic surgery at Lakeside Hospital, treating joint, sports, and fracture care for Metairie patients.</p>"
+          },
+          "physicianPhone": {
+            "value": "504-780-8300"
+          },
+          "servingLocations": {
+            "value": "{C6A3CDB7-8708-4C60-861B-009B7FB9E786}",
+            "targetItems": [
+              {
+                "id": "C6A3CDB7-8708-4C60-861B-009B7FB9E786",
+                "name": "Lakeside Hospital",
+                "displayName": "Lakeside Hospital"
+              }
+            ]
+          }
+        },
+        {
+          "id": "6877B226-0CC6-408C-9E51-E2C5D2351A61",
+          "name": "Michael Tran MD",
+          "displayName": "Michael Tran MD",
+          "path": "/sitecore/content/lcmc/lcmc/Data/Physicians/Michael Tran MD",
+          "physicianFullName": {
+            "value": "Michael Tran"
+          },
+          "credentials": {
+            "value": "MD"
+          },
+          "specialty": {
+            "value": "Urgent Care"
+          },
+          "physicianBio": {
+            "value": "<p>Dr. Tran treats common illnesses and minor injuries at LCMC Health Kenner Urgent Care.</p>"
+          },
+          "physicianPhone": {
+            "value": "504-389-6600"
+          },
+          "servingLocations": {
+            "value": "{57D504EA-804B-4166-84EB-CE298A6853F0}",
+            "targetItems": [
+              {
+                "id": "57D504EA-804B-4166-84EB-CE298A6853F0",
+                "name": "LCMC Health Kenner Urgent Care",
+                "displayName": "LCMC Health Kenner Urgent Care"
+              }
+            ]
+          }
+        },
+        {
+          "id": "048E9D17-4B8B-4FBF-90EA-8E66D97E4F89",
+          "name": "Nicole Doucet MD",
+          "displayName": "Nicole Doucet MD",
+          "path": "/sitecore/content/lcmc/lcmc/Data/Physicians/Nicole Doucet MD",
+          "physicianFullName": {
+            "value": "Nicole Doucet"
+          },
+          "credentials": {
+            "value": "MD"
+          },
+          "specialty": {
+            "value": "Medical Oncology"
+          },
+          "physicianBio": {
+            "value": "<p>Dr. Doucet treats cancer patients at West Jefferson Medical Center and coordinates care with system oncology programs.</p>"
+          },
+          "physicianPhone": {
+            "value": "504-349-6360"
+          },
+          "servingLocations": {
+            "value": "{35C77454-5FB8-460D-BC12-299F7B31DE5A}",
+            "targetItems": [
+              {
+                "id": "35C77454-5FB8-460D-BC12-299F7B31DE5A",
+                "name": "West Jefferson Medical Center",
+                "displayName": "West Jefferson Medical Center"
+              }
+            ]
+          }
+        },
+        {
+          "id": "79C12EE1-19F2-48EB-89CF-3473364D2488",
+          "name": "Omar Hassan MD",
+          "displayName": "Omar Hassan MD",
+          "path": "/sitecore/content/lcmc/lcmc/Data/Physicians/Omar Hassan MD",
+          "physicianFullName": {
+            "value": "Omar Hassan"
+          },
+          "credentials": {
+            "value": "MD, FACS"
+          },
+          "specialty": {
+            "value": "Trauma Surgery"
+          },
+          "physicianBio": {
+            "value": "<p>Dr. Hassan is a trauma surgeon at University Medical Center New Orleans, the region's Level I Trauma Center.</p>"
+          },
+          "physicianPhone": {
+            "value": "504-702-3000"
+          },
+          "servingLocations": {
+            "value": "{E8F05084-0214-424F-B1D4-B5B562499F5C}",
+            "targetItems": [
+              {
+                "id": "E8F05084-0214-424F-B1D4-B5B562499F5C",
+                "name": "University Medical Center New Orleans",
+                "displayName": "University Medical Center New Orleans"
+              }
+            ]
+          }
+        },
+        {
+          "id": "24F0A42F-B1A5-43C2-9E26-E63E63E07162",
+          "name": "Patrice Morales MD",
+          "displayName": "Patrice Morales MD",
+          "path": "/sitecore/content/lcmc/lcmc/Data/Physicians/Patrice Morales MD",
+          "physicianFullName": {
+            "value": "Patrice Morales"
+          },
+          "credentials": {
+            "value": "MD"
+          },
+          "specialty": {
+            "value": "Urgent Care"
+          },
+          "physicianBio": {
+            "value": "<p>Dr. Morales provides walk-in urgent care at the Chalmette clinic for non-life-threatening illnesses and injuries.</p>"
+          },
+          "physicianPhone": {
+            "value": "504-345-1330"
+          },
+          "servingLocations": {
+            "value": "{764E7C6F-75BB-49EE-B304-4E5A0E6F3DAC}",
+            "targetItems": [
+              {
+                "id": "764E7C6F-75BB-49EE-B304-4E5A0E6F3DAC",
+                "name": "LCMC Health Chalmette Urgent Care",
+                "displayName": "LCMC Health Chalmette Urgent Care"
+              }
+            ]
+          }
+        },
+        {
+          "id": "BC61F2D9-4655-42D8-867B-41407505B6DC",
+          "name": "Priya Raman MD",
+          "displayName": "Priya Raman MD",
+          "path": "/sitecore/content/lcmc/lcmc/Data/Physicians/Priya Raman MD",
+          "physicianFullName": {
+            "value": "Priya Raman"
+          },
+          "credentials": {
+            "value": "MD, FAAP"
+          },
+          "specialty": {
+            "value": "Pediatrics"
+          },
+          "physicianBio": {
+            "value": "<p>Dr. Raman is a pediatrician at Manning Family Children's, caring for infants through adolescents with both wellness and complex needs.</p>"
+          },
+          "physicianPhone": {
+            "value": "504-899-9511"
+          },
+          "servingLocations": {
+            "value": "{6B468248-C9D1-4DD0-9E8D-44B477FDB96C}",
+            "targetItems": [
+              {
+                "id": "6B468248-C9D1-4DD0-9E8D-44B477FDB96C",
+                "name": "Manning Family Childrens",
+                "displayName": "Manning Family Childrens"
+              }
+            ]
+          }
+        },
+        {
+          "id": "4A1FED30-0480-4CF5-9DCC-4149B3164046",
+          "name": "Renee Guidry MD",
+          "displayName": "Renee Guidry MD",
+          "path": "/sitecore/content/lcmc/lcmc/Data/Physicians/Renee Guidry MD",
+          "physicianFullName": {
+            "value": "Renee Guidry"
+          },
+          "credentials": {
+            "value": "MD"
+          },
+          "specialty": {
+            "value": "Neurology"
+          },
+          "physicianBio": {
+            "value": "<p>Dr. Guidry is a neurologist with the Neuroscience Institute at Lakeview Hospital, treating stroke, headache, and movement disorders.</p>"
+          },
+          "physicianPhone": {
+            "value": "985-867-3800"
+          },
+          "servingLocations": {
+            "value": "{C5D069A3-C8BB-40FE-89BE-D7F9D5C9614F}",
+            "targetItems": [
+              {
+                "id": "C5D069A3-C8BB-40FE-89BE-D7F9D5C9614F",
+                "name": "Lakeview Hospital",
+                "displayName": "Lakeview Hospital"
+              }
+            ]
+          }
+        },
+        {
+          "id": "F42ECEC4-C3D2-43BA-8FF1-2BA640F66251",
+          "name": "Sarah Melancon MD",
+          "displayName": "Sarah Melancon MD",
+          "path": "/sitecore/content/lcmc/lcmc/Data/Physicians/Sarah Melancon MD",
+          "physicianFullName": {
+            "value": "Sarah Melancon"
+          },
+          "credentials": {
+            "value": "MD, FACOG"
+          },
+          "specialty": {
+            "value": "Obstetrics and Gynecology"
+          },
+          "physicianBio": {
+            "value": "<p>Dr. Melancon practices obstetrics and gynecology at Touro, including prenatal care and labor and delivery.</p>"
+          },
+          "physicianPhone": {
+            "value": "504-897-7011"
+          },
+          "servingLocations": {
+            "value": "{063FFD1D-6681-4DFC-8A7A-504EA903090F}",
+            "targetItems": [
+              {
+                "id": "063FFD1D-6681-4DFC-8A7A-504EA903090F",
+                "name": "Touro",
+                "displayName": "Touro"
+              }
+            ]
+          }
+        },
+        {
+          "id": "74789E69-47D3-463D-AEAC-CEA3F20A5647",
+          "name": "Tanya Ricard MD",
+          "displayName": "Tanya Ricard MD",
+          "path": "/sitecore/content/lcmc/lcmc/Data/Physicians/Tanya Ricard MD",
+          "physicianFullName": {
+            "value": "Tanya Ricard"
+          },
+          "credentials": {
+            "value": "MD"
+          },
+          "specialty": {
+            "value": "Urgent Care"
+          },
+          "physicianBio": {
+            "value": "<p>Dr. Ricard sees walk-in patients at Marrero Urgent Care and connects Westbank families with West Jefferson when follow-up is needed.</p>"
+          },
+          "physicianPhone": {
+            "value": "504-301-2825"
+          },
+          "servingLocations": {
+            "value": "{EBC36A98-6CF2-477A-827A-7BEFEB2FE5A8}",
+            "targetItems": [
+              {
+                "id": "EBC36A98-6CF2-477A-827A-7BEFEB2FE5A8",
+                "name": "LCMC Health Marrero Urgent Care",
+                "displayName": "LCMC Health Marrero Urgent Care"
+              }
+            ]
+          }
+        },
+        {
+          "id": "F74FE325-06CA-4905-88E7-462F02FD74EA",
+          "name": "Thomas Nguyen MD",
+          "displayName": "Thomas Nguyen MD",
+          "path": "/sitecore/content/lcmc/lcmc/Data/Physicians/Thomas Nguyen MD",
+          "physicianFullName": {
+            "value": "Thomas Nguyen"
+          },
+          "credentials": {
+            "value": "MD"
+          },
+          "specialty": {
+            "value": "Gastroenterology"
+          },
+          "physicianBio": {
+            "value": "<p>Dr. Nguyen provides digestive care and endoscopy at Touro for Uptown and surrounding New Orleans patients.</p>"
+          },
+          "physicianPhone": {
+            "value": "504-897-7877"
+          },
+          "servingLocations": {
+            "value": "{063FFD1D-6681-4DFC-8A7A-504EA903090F}",
+            "targetItems": [
+              {
+                "id": "063FFD1D-6681-4DFC-8A7A-504EA903090F",
+                "name": "Touro",
+                "displayName": "Touro"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

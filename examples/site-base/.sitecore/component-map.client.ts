@@ -9,6 +9,9 @@ import * as VariantContent from 'src/components/variant-content/VariantContent';
 import * as ProductDetail from 'src/components/uiim/products/ProductDetail';
 import * as ProductCarousel from 'src/components/uiim/products/ProductCarousel';
 import * as NewsListing from 'src/components/uiim/news/NewsListing';
+import * as PhysicianListing from 'src/components/uiim/locations/PhysicianListing';
+import * as LocationListingMapdev from 'src/components/uiim/locations/LocationListingMap.dev';
+import * as LocationListing from 'src/components/uiim/locations/LocationListing';
 import * as CareerListing from 'src/components/uiim/lawyers/CareerListing';
 import * as BioListing from 'src/components/uiim/lawyers/BioListing';
 import * as BioDetail from 'src/components/uiim/lawyers/BioDetail';
@@ -149,6 +152,9 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['ProductDetail', { ...ProductDetail }],
   ['ProductCarousel', { ...ProductCarousel }],
   ['NewsListing', { ...NewsListing }],
+  ['PhysicianListing', { ...PhysicianListing }],
+  ['LocationListingMap', { ...LocationListingMapdev }],
+  ['LocationListing', { ...LocationListing }],
   ['CareerListing', { ...CareerListing }],
   ['BioListing', { ...BioListing }],
   ['BioDetail', { ...BioDetail }],

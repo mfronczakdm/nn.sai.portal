@@ -1,4 +1,4 @@
-import type { PulseSource, PulseSourceType } from '@/lib/pulse-types';
+import type { PulseAskResponse, PulseRetrieveOptions, PulseSource, PulseSourceType } from '@/lib/pulse-types';
 
 /**
  * Per-site Pulse pack: demo intents + Home scope for Experience Edge retrieval.
@@ -23,6 +23,13 @@ export type PulseTypeLabels = Partial<Record<PulseSourceType, string>> & {
   default?: string;
 };
 
+export type PulseWidgetCopy = {
+  subtitle?: string;
+  emptyState?: string;
+  placeholder?: string;
+  searching?: string;
+};
+
 export type PulseSitePack = {
   siteName: string;
   brandName: string;
@@ -38,6 +45,21 @@ export type PulseSitePack = {
    * Prefer published Edge content; do not grow this map for new sites.
    */
   citationFallbacks?: Record<string, Omit<PulseSource, 'score'>>;
+  /** Optional widget chrome. Other sites keep the shared Default Pulse copy. */
+  widgetCopy?: PulseWidgetCopy;
+  /**
+   * Optional extra retrieval (e.g. LCMC Data/Physicians). Merged ahead of Home Edge hits.
+   * Do not put site-specific catalog logic in pulse-retrieve.ts.
+   */
+  retrieveExtraSources?: (
+    question: string,
+    options: PulseRetrieveOptions
+  ) => Promise<PulseSource[]>;
+  /**
+   * Optional pack-owned answer. When it returns a payload, shared composePulseAnswer
+   * templates (product / career / Default) are skipped for that site only.
+   */
+  composeAnswer?: (question: string, sources: PulseSource[]) => PulseAskResponse | null;
 };
 
 export type MatchedPulseIntent = PulsePackIntent & {

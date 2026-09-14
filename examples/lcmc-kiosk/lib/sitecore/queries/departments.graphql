@@ -1,0 +1,30 @@
+# Query LCMC Service items under SERVICES_ROOT_PATH.
+# These power the kiosk /departments routes — there is no Departments folder.
+
+query GetDepartments($path: String!, $language: String!, $first: Int!) {
+  item(path: $path, language: $language) {
+    ...ItemIdentity
+    children(first: $first) {
+      results {
+        ...ItemIdentity
+        serviceTitle: field(name: "ServiceTitle") {
+          ...FieldValue
+        }
+        serviceShortDescription: field(name: "ServiceShortDescription") {
+          ...FieldValue
+        }
+        serviceDetail: field(name: "ServiceDetail") {
+          ...FieldValue
+        }
+        offeredAtLocations: field(name: "OfferedAtLocations") {
+          value
+          ... on MultilistField {
+            targetItems {
+              ...LocationTarget
+            }
+          }
+        }
+      }
+    }
+  }
+}

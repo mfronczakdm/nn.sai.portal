@@ -1,8 +1,15 @@
 import type { MatchedPulseIntent, PulsePackIntent, PulseSitePack } from './types';
 
-export function normalizePulseQuestion(question: string): string {
-  return question
+/** Lowercase + strip diacritics so Spanish tokens (oído → oido) still match. */
+export function foldPulseText(text: string): string {
+  return text
     .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '');
+}
+
+export function normalizePulseQuestion(question: string): string {
+  return foldPulseText(question)
     .replace(/[^a-z0-9\s]/g, ' ')
     .replace(/\s+/g, ' ')
     .trim();

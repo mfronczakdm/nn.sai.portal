@@ -314,3 +314,15 @@ html[data-theme='lcmc'] .btn.btn-primary:hover {
   background-color: var(--color-accent-hover);
   color: var(--color-accent-foreground);
 }
+
+/* Shared .btn-secondary uses text-secondary-foreground (white on LCMC) on bg-light. */
+html[data-theme='lcmc'] .btn.btn-secondary {
+  background-color: #ffffff;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+
+html[data-theme='lcmc'] .btn.btn-secondary:hover {
+  background-color: var(--color-muted);
+  color: var(--color-primary);
+}

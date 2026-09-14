@@ -12,7 +12,7 @@ import type { PulseSource } from '@/lib/pulse-types';
 describe('pulse pack registry', () => {
   it('registers quanex, era, amesburytruth, pillsburylaw, and amkor', () => {
     expect(listPulsePackSiteNames().sort()).toEqual(
-      ['amesburytruth', 'amkor', 'atlanta-apparel', 'era', 'pillsburylaw', 'quanex'].sort()
+      ['amesburytruth', 'amkor', 'atlanta-apparel', 'era', 'lcmc', 'pillsburylaw', 'quanex'].sort()
     );
   });
 
@@ -61,6 +61,15 @@ describe('pulse pack registry', () => {
     expect(joined).toMatch(/register/);
     expect(joined).toMatch(/october|outdoor living/);
     expect(joined).not.toMatch(/lawyer|super spacer|s-connect/);
+  });
+
+  it('returns LCMC provider and appointment starters, not Quanex or law-firm copy', () => {
+    const prompts = getPulseStarterPrompts('lcmc');
+    const joined = prompts.join(' ').toLowerCase();
+    expect(prompts.some((p) => /west jefferson/i.test(p))).toBe(true);
+    expect(prompts.some((p) => /oído|oido|nariz y garganta/i.test(p))).toBe(true);
+    expect(joined).toMatch(/appointment|heart doctor/);
+    expect(joined).not.toMatch(/lawyer|super spacer|s-connect|saudi/);
   });
 
   it('keeps Pillsbury Saudi / careers starters', () => {
@@ -218,6 +227,16 @@ describe('pulse pack intent matching', () => {
       pack
     );
     expect(intent).toBeNull();
+  });
+
+  it('matches LCMC ENT / West Jefferson asks without changing other packs', () => {
+    const intent = matchPulseIntentForSite(
+      'I need someone for sinus problems near West Jefferson',
+      'lcmc'
+    );
+    expect(intent?.id).toMatch(/ent-care|west-jefferson|find-provider/);
+    expect(getPulsePack('lcmc').composeAnswer).toEqual(expect.any(Function));
+    expect(getPulsePack('quanex').composeAnswer).toBeUndefined();
   });
 
   it('does not cross-match quanex prompts against pillsbury pack', () => {

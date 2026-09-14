@@ -1,0 +1,22 @@
+query GetDepartmentByPath($path: String!, $language: String!) {
+  item(path: $path, language: $language) {
+    ...ItemIdentity
+    serviceTitle: field(name: "ServiceTitle") {
+      ...FieldValue
+    }
+    serviceShortDescription: field(name: "ServiceShortDescription") {
+      ...FieldValue
+    }
+    serviceDetail: field(name: "ServiceDetail") {
+      ...FieldValue
+    }
+    offeredAtLocations: field(name: "OfferedAtLocations") {
+      value
+      ... on MultilistField {
+        targetItems {
+          ...LocationTarget
+        }
+      }
+    }
+  }
+}

@@ -214,6 +214,26 @@ describe('HeaderST Component', () => {
       expect(screen.queryByText('Market Plan')).not.toBeInTheDocument();
     });
 
+    it('does not render the Atlanta language dropdown', () => {
+      render(
+        <HeaderSTDefault
+          {...defaultHeaderSTProps}
+          page={{ ...defaultHeaderSTProps.page, siteName: 'atlanta-apparel' } as typeof defaultHeaderSTProps.page}
+        />
+      );
+
+      expect(document.querySelector('[data-header-st-language-switcher]')).not.toBeInTheDocument();
+      expect(screen.queryByRole('button', { name: 'Language' })).not.toBeInTheDocument();
+    });
+
+    it('does not render Version3 language flags', () => {
+      render(<HeaderSTDefault {...defaultHeaderSTProps} />);
+
+      expect(document.querySelector('[data-header-st-langs="version3"]')).not.toBeInTheDocument();
+      expect(screen.queryByRole('link', { name: 'English' })).not.toBeInTheDocument();
+      expect(screen.queryByRole('link', { name: 'Español' })).not.toBeInTheDocument();
+    });
+
     it('renders header structure with all components', () => {
       render(<HeaderSTDefault {...defaultHeaderSTProps} />);
 
@@ -954,6 +974,125 @@ describe('HeaderST Component', () => {
       expect(marketPlan).toHaveAttribute('href', '/visit/plan-your-market');
       expect(screen.getByTestId('lucide-bookmark')).toBeInTheDocument();
     });
+
+    it('does not show a language selector on non-Atlanta Version2 sites', () => {
+      render(
+        <HeaderSTVersion2
+          {...headerSTPropsVersion2}
+          page={{ ...headerSTPropsVersion2.page, siteName: 'americasmart' } as typeof headerSTPropsVersion2.page}
+        />
+      );
+
+      expect(document.querySelector('[data-header-st-language-switcher]')).not.toBeInTheDocument();
+      expect(screen.queryByRole('button', { name: 'Language' })).not.toBeInTheDocument();
+    });
+
+    it('shows an Atlanta-only language dropdown in the top-right utility row', () => {
+      render(
+        <HeaderSTVersion2
+          {...headerSTPropsVersion2}
+          page={{ ...headerSTPropsVersion2.page, siteName: 'atlanta-apparel' } as typeof headerSTPropsVersion2.page}
+        />
+      );
+
+      const switcher = document.querySelector('[data-header-st-language-switcher]');
+      expect(switcher).toBeInTheDocument();
+      const utilityRight = switcher?.closest('ul');
+      expect(utilityRight?.lastElementChild).toBe(switcher);
+      expect(screen.getByRole('button', { name: 'Language' })).toHaveTextContent('English');
+      expect(screen.getByRole('button', { name: 'ATLANTA' })).toBeInTheDocument();
+      expect(screen.getByRole('link', { name: 'Market Plan' })).toBeInTheDocument();
+    });
+
+    it('lists English, Japanese, and Spanish with locale-prefixed hrefs', () => {
+      render(
+        <HeaderSTVersion2
+          {...headerSTPropsVersion2}
+          page={{ ...headerSTPropsVersion2.page, siteName: 'atlanta-apparel' } as typeof headerSTPropsVersion2.page}
+        />
+      );
+
+      fireEvent.click(screen.getByRole('button', { name: 'Language' }));
+
+      const english = screen.getByRole('menuitem', { name: 'English' });
+      expect(english).toHaveAttribute('href', '/en');
+      expect(english).toHaveAttribute('aria-current', 'true');
+      expect(screen.getByRole('menuitem', { name: 'Japanese' })).toHaveAttribute('href', '/ja-JP');
+      expect(screen.getByRole('menuitem', { name: 'Spanish' })).toHaveAttribute('href', '/es-ES');
+    });
+
+    it('keeps the visitor on the current Atlanta page when switching language', () => {
+      mockPathname = '/visit/plan-your-market';
+      render(
+        <HeaderSTVersion2
+          {...headerSTPropsVersion2}
+          page={{ ...headerSTPropsVersion2.page, siteName: 'atlanta-apparel' } as typeof headerSTPropsVersion2.page}
+        />
+      );
+
+      fireEvent.click(screen.getByRole('button', { name: 'Language' }));
+
+      expect(screen.getByRole('menuitem', { name: 'Japanese' })).toHaveAttribute(
+        'href',
+        '/ja-JP/visit/plan-your-market'
+      );
+      expect(screen.getByRole('menuitem', { name: 'Spanish' })).toHaveAttribute(
+        'href',
+        '/es-ES/visit/plan-your-market'
+      );
+      expect(screen.getByRole('menuitem', { name: 'English' })).toHaveAttribute(
+        'href',
+        '/en/visit/plan-your-market'
+      );
+    });
+
+    it('marks the active Atlanta language and preserves the site query parameter', () => {
+      mockPathname = '/es-ES/visit';
+      mockSearch = 'site=atlanta-apparel';
+      render(<HeaderSTVersion2 {...headerSTPropsVersion2} />);
+
+      expect(screen.getByRole('button', { name: 'Language' })).toHaveTextContent('Spanish');
+      fireEvent.click(screen.getByRole('button', { name: 'Language' }));
+
+      const spanish = screen.getByRole('menuitem', { name: 'Spanish' });
+      expect(spanish).toHaveAttribute('aria-current', 'true');
+      expect(screen.getByRole('menuitem', { name: 'English' })).toHaveAttribute(
+        'href',
+        '/en/visit?site=atlanta-apparel'
+      );
+      expect(screen.getByRole('menuitem', { name: 'Japanese' })).toHaveAttribute(
+        'href',
+        '/ja-JP/visit?site=atlanta-apparel'
+      );
+    });
+
+    it('uses Sitecore context languages when they include English, Japanese, and Spanish', () => {
+      render(
+        <HeaderSTVersion2
+          {...headerSTPropsVersion2}
+          page={{
+            ...headerSTPropsVersion2.page,
+            siteName: 'atlanta-apparel',
+            layout: {
+              sitecore: {
+                context: {
+                  languages: ['en', 'ja-JP', 'es-ES', 'ko-KR'],
+                  site: { name: 'atlanta-apparel' },
+                },
+                route: null,
+              },
+            },
+          } as typeof headerSTPropsVersion2.page}
+        />
+      );
+
+      fireEvent.click(screen.getByRole('button', { name: 'Language' }));
+
+      expect(screen.getByRole('menuitem', { name: 'English' })).toBeInTheDocument();
+      expect(screen.getByRole('menuitem', { name: 'Japanese' })).toBeInTheDocument();
+      expect(screen.getByRole('menuitem', { name: 'Spanish' })).toBeInTheDocument();
+      expect(screen.queryByRole('menuitem', { name: '한국어' })).not.toBeInTheDocument();
+    });
   });
 
   describe('Version3 variant', () => {
@@ -1048,7 +1187,23 @@ describe('HeaderST Component', () => {
       const searchBox = screen.getByTestId('search-box');
       expect(searchBox).toBeInTheDocument();
       expect(searchBox).toHaveAttribute('data-appearance', 'contained');
-      expect(searchBox).toHaveAttribute('data-search-link', '/search');
+      expect(searchBox).toHaveAttribute('data-search-link', '/Search-Results');
+    });
+
+    it('sends Version3 search to Search Results even when SearchLink is Contact Us', () => {
+      render(
+        <HeaderSTVersion3
+          {...headerSTPropsVersion3}
+          fields={{
+            ...headerSTPropsVersion3.fields,
+            SearchLink: { value: { href: '/Contact-Us', text: 'Contact Us' } },
+          }}
+        />
+      );
+
+      const searchBox = screen.getByTestId('search-box');
+      expect(searchBox).toHaveAttribute('data-search-link', '/Search-Results');
+      expect(searchBox).not.toHaveAttribute('data-search-link', '/Contact-Us');
     });
 
     it('shows SearchLink as text/icon when showSearchBox is unset', () => {
@@ -1066,7 +1221,7 @@ describe('HeaderST Component', () => {
       expect(screen.getByTestId('lucide-search')).toBeInTheDocument();
       const searchLinks = screen
         .getAllByTestId('sitecore-link')
-        .filter((link) => link.getAttribute('href') === '/search');
+        .filter((link) => link.getAttribute('href') === '/Search-Results');
       expect(searchLinks.length).toBeGreaterThan(0);
     });
 
@@ -1090,6 +1245,66 @@ describe('HeaderST Component', () => {
       );
 
       expect(screen.getByTestId('mini-cart')).toBeInTheDocument();
+    });
+
+    it('renders US and Spain flag links with accessible English / Español names', () => {
+      render(<HeaderSTVersion3 {...headerSTPropsVersion3} />);
+
+      const switcher = document.querySelector('[data-header-st-langs="version3"]');
+      expect(switcher).toBeInTheDocument();
+      expect(switcher).toHaveAttribute('aria-label', 'Language');
+
+      const english = screen.getByRole('link', { name: 'English' });
+      const spanish = screen.getByRole('link', { name: 'Español' });
+      expect(english).toHaveAttribute('href', '/en');
+      expect(english).toHaveAttribute('aria-current', 'true');
+      expect(english).toHaveAttribute('hrefLang', 'en');
+      expect(spanish).toHaveAttribute('href', '/es-CO');
+      expect(spanish).toHaveAttribute('hrefLang', 'es-CO');
+      expect(spanish).toHaveAttribute('lang', 'es-CO');
+      expect(spanish).not.toHaveAttribute('aria-current');
+    });
+
+    it('keeps the visitor on the current page when switching Version3 language', () => {
+      mockPathname = '/for-providers';
+      render(<HeaderSTVersion3 {...headerSTPropsVersion3} />);
+
+      expect(screen.getByRole('link', { name: 'English' })).toHaveAttribute(
+        'href',
+        '/en/for-providers'
+      );
+      expect(screen.getByRole('link', { name: 'Español' })).toHaveAttribute(
+        'href',
+        '/es-CO/for-providers'
+      );
+    });
+
+    it('marks Spanish current and swaps the locale segment on Version3', () => {
+      mockPathname = '/es-CO/contact-us';
+      render(<HeaderSTVersion3 {...headerSTPropsVersion3} />);
+
+      const spanish = screen.getByRole('link', { name: 'Español' });
+      expect(spanish).toHaveAttribute('aria-current', 'true');
+      expect(screen.getByRole('link', { name: 'English' })).toHaveAttribute(
+        'href',
+        '/en/contact-us'
+      );
+      expect(screen.getByRole('link', { name: 'English' })).not.toHaveAttribute('aria-current');
+    });
+
+    it('preserves the site query parameter on Version3 language links', () => {
+      mockPathname = '/our-locations';
+      mockSearch = 'site=lcmc';
+      render(<HeaderSTVersion3 {...headerSTPropsVersion3} />);
+
+      expect(screen.getByRole('link', { name: 'Español' })).toHaveAttribute(
+        'href',
+        '/es-CO/our-locations?site=lcmc'
+      );
+      expect(screen.getByRole('link', { name: 'English' })).toHaveAttribute(
+        'href',
+        '/en/our-locations?site=lcmc'
+      );
     });
   });
 });

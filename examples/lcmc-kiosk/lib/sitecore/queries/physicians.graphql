@@ -1,0 +1,36 @@
+# Query all physicians under PHYSICIANS_ROOT_PATH.
+# $path must be the Physicians folder, not a global search.
+
+query GetPhysicians($path: String!, $language: String!, $first: Int!) {
+  item(path: $path, language: $language) {
+    ...ItemIdentity
+    children(first: $first) {
+      results {
+        ...ItemIdentity
+        physicianFullName: field(name: "PhysicianFullName") {
+          ...FieldValue
+        }
+        credentials: field(name: "Credentials") {
+          ...FieldValue
+        }
+        specialty: field(name: "Specialty") {
+          ...FieldValue
+        }
+        physicianBio: field(name: "PhysicianBio") {
+          ...FieldValue
+        }
+        physicianPhone: field(name: "PhysicianPhone") {
+          ...FieldValue
+        }
+        servingLocations: field(name: "ServingLocations") {
+          value
+          ... on MultilistField {
+            targetItems {
+              ...LocationTarget
+            }
+          }
+        }
+      }
+    }
+  }
+}

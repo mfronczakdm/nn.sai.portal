@@ -1,5 +1,5 @@
 ﻿generatedAt: "2026-03-20T09:00:00Z"
-lastUpdatedAt: "2026-09-03T16:55:00Z"
+lastUpdatedAt: "2026-09-10T16:45:00Z"
 lastUpdatedBy: "cursor-agent"
 
 project:
@@ -3074,12 +3074,12 @@ pageTemplates:
     category: "appointments"
     status: "complete"
     createdAt: "2026-09-02T18:00:00Z"
-    updatedAt: "2026-09-02T18:50:00Z"
+    updatedAt: "2026-09-09T00:20:00Z"
 
     react:
       filePath: "src/components/uiim/appointments/LcmcAppointmentScheduler.tsx"
       componentMapKey: "LcmcAppointmentScheduler"
-      dataStrategy: "GraphQL datasource parent + LcmcVisitType children; slot grid from src/lib/lcmc-appointment-pack.ts (relative dates)"
+      dataStrategy: "GraphQL datasource parent + LcmcVisitType children for visit-type copy; physician names/specialty/locations from Data/Physicians via /api/physician-listing (same Edge path as PhysicianListing). Slots generated in src/lib/lcmc-appointment-pack.ts from that catalog."
       variants:
         - "Default"
 
@@ -3196,21 +3196,24 @@ pageTemplates:
         datasourceItemId: "{67471114-7CD2-4099-9331-CCCF8E61D20F}"
 
     verification:
-      checkedAt: "2026-09-02T18:50:00Z"
+      checkedAt: "2026-09-09T00:20:00Z"
       passed:
         - "Parent template base templates now include Standard + Grid + _HorizonDatasourceGrouping {D0F6BE14-2A2D-4C56-ACB5-80CAA573B8E2} + _PublishingGroupingTemplate {8BA7DAC6-32ED-4378-BD9E-5DA5B0F9848D}"
         - "JSON Rendering Datasource Template is parent path; Datasource Location query; ComponentQuery field(name) + children.results"
         - "Assigned page datasource is parent Patient Appointments {67471114-7CD2-4099-9331-CCCF8E61D20F} (template matches rendering)"
         - "Insert options: folder → LcmcAppointmentScheduler; parent DS → LcmcVisitType"
         - "React resolveDatasource accepts GraphQL jsonValue, JSS PascalCase fields, and Pages editing empty GraphQL"
-        - "Jest: LcmcAppointmentScheduler (6 tests)"
+        - "Jest: LcmcAppointmentScheduler + lcmc-appointment-pack (14 tests)"
+        - "Data/Physicians folder has 26 LCMC Physician children including Gabrielle Moreau MD {24EB9BF3-BFD6-4D01-87A7-BAF6D3DA421C} and Dominic Lirette MD {010E3311-06A7-4904-AFD0-202FD565A796}"
+        - "Gabrielle Moreau Specialty=ENT, ServingLocations=WJMC {35C77454-5FB8-460D-BC12-299F7B31DE5A}; flagged isDemoEntWjmc in scheduler"
       failed: []
       pendingManual:
         - "Publish templates (especially parent template + grouping bases), rendering, Data/LcmcAppointmentSchedulers, Headless Variants, and the Patient Appointments page for Edge"
+        - "Publish Data/Physicians (all 26, especially Gabrielle Moreau and Dominic Lirette) so Edge /api/physician-listing returns ENT + WJMC"
         - "Reload Pages on /For-Patients/Patient-Appointments and confirm the native datasource warning is gone and visit-type cards render"
         - "Verify __Masters on parent SV {55F5BFFD-2D68-42C7-8B26-5EF789CB1308} in Content Editor (silent-write)"
         - "Append {2408797C-36C7-4BD5-A3B9-90B409A06CCD} to Available Renderings/Page Content if not already registered"
-        - "Redeploy the site-base rendering host so Pages picks up LcmcAppointmentScheduler.tsx"
+        - "Redeploy the site-base rendering host so Pages picks up LcmcAppointmentScheduler.tsx physician catalog fetch"
 
     notes:
       - "2026-09-02: Word doc flow (visit types → pick a relative-date slot → Finish Scheduling → My LCMC Health login or guest → demo confirmation). PortalHub can only represent the visit-type card grid; PortalPageDetail cannot represent slot picking or login. New LCMC-scoped list component used instead of changing shared Default portal layouts."
@@ -3218,6 +3221,11 @@ pageTemplates:
       - "Login after Finish Scheduling is a demo form (any email/password); no Epic MyChart screenshots existed in the Word doc."
       - "2026-09-02T18:45: Visit-type cards sorted by LCMC_VISIT_KEYS so GraphQL child order matches the Word screenshot (Sick visit second). Emergency banner always renders with authored override."
       - "2026-09-02T18:50: Pages still showed 'requires a datasource' after the parent DS was assigned. Root cause: parent template was missing _HorizonDatasourceGrouping and _PublishingGroupingTemplate, so Pages did not treat Patient Appointments as a valid grouping datasource and GraphQL/layout returned empty fields.data.datasource (React NoDataFallback). Added grouping bases; re-assigned DS; React now maps jsonValue/JSS fields and renders fallback visit cards in editing when GraphQL is empty. Do not pick a visit-type child or the folder as the datasource."
+      - "2026-09-09: Replaced the 3 hardcoded pack names with Data/Physicians via /api/physician-listing (same Edge complexity workaround as PhysicianListing). Did not add physician children under Patient Appointments. Did not change shared portal Default appointment UI. Gabrielle Moreau is the demo ENT + West Jefferson Medical Center doctor; Dominic Lirette is the second ENT at WJMC. Scheduler filters now include Specialty, Location, and all 26 provider names."
+      - "2026-09-09: Scheduler reads Pulse deep-link query params specialty, location/clinic, and provider (West Jefferson Medical Clinic maps to West Jefferson Medical Center). Code-only; no Sitecore item changes."
+      - "2026-09-09: visit=sick-visit or step=slots skips the visit-type grid and opens slots. ENT Pulse book links include visit=sick-visit and provider=Gabrielle Moreau. Delivery copy is adult (no child/well-baby). Demo URL: /For-Patients/Patient-Appointments?visit=sick-visit&specialty=ENT&location=West Jefferson Medical Center&provider=Gabrielle Moreau"
+      - "2026-09-09: First scheduler interaction (visit type, or slot if visit types were skipped) sends SitecoreAI/CDP custom event type Booking-Started with label Booking Started. Once per page visit. Skipped in Pages editing. Same event() pipeline as TrackedCtaLink."
+      - "2026-09-09: Guest Confirm appointment sends Appointment-Booked (type Appointment-Booked, label Appointment Booked). My LCMC login confirm does not send this event."
 
 lookups:
   - path: "/sitecore/content/progressive/pkm/Data"
@@ -3438,7 +3446,20 @@ lookups:
     lastReadAt: "2026-08-25T02:00:00Z"
   - path: "/sitecore/content/lcmc/lcmc/Data"
     itemId: "{227DEDF2-DDB8-4E81-AB05-867119366ACE}"
-    lastReadAt: "2026-08-25T02:00:00Z"
+    lastReadAt: "2026-09-08T00:40:00Z"
+  - path: "/sitecore/templates/Project/lcmc/Components/Locations"
+    itemId: "{ED1BADBD-E1AB-4B09-BC7A-B3C1714FFE69}"
+    lastReadAt: "2026-09-08T00:40:00Z"
+  - path: "/sitecore/content/lcmc/lcmc/Data/Locations"
+    itemId: "{76041887-6E16-4844-AD13-366BC2E32265}"
+    lastReadAt: "2026-09-08T01:10:00Z"
+    note: "LCMC Hospital Location data folder — 8 hospitals + 8 urgent cares"
+  - path: "/sitecore/content/lcmc/lcmc/Data/Physicians"
+    itemId: "{13C422FB-8991-4468-B996-BE73A904C23E}"
+    lastReadAt: "2026-09-08T01:00:00Z"
+  - path: "/sitecore/content/lcmc/lcmc/Data/Services"
+    itemId: "{D9CB7792-EE41-4A8F-A1F8-729D90B4E527}"
+    lastReadAt: "2026-09-08T00:50:00Z"
   - path: "/sitecore/content/amkor/amkor/Data"
     itemId: "{F48777EF-EC88-4406-B6D8-D05BF1742F78}"
     lastReadAt: "2026-08-25T02:00:00Z"
@@ -3579,8 +3600,45 @@ lookups:
     lastReadAt: "2026-09-02T18:15:00Z"
   - path: "/sitecore/content/lcmc/lcmc/Presentation/Available Renderings/Page Content"
     itemId: "{B4A750D2-E123-436D-BF2E-5D2905E9CA19}"
-    lastReadAt: "2026-09-02T18:15:00Z"
-    note: "MCP Renderings read returned only 4 GUIDs (truncated). NEVER replace. Append LcmcAppointmentScheduler {2408797C-36C7-4BD5-A3B9-90B409A06CCD} in Content Editor."
+    lastReadAt: "2026-09-08T21:00:00Z"
+    note: "2026-09-08 reconstructed from get_allowed_comps_by_ph then appended LcmcAppointmentScheduler {2408797C-36C7-4BD5-A3B9-90B409A06CCD}, HospitalDetail {E9E80BA0-F80C-4351-96AA-1D8C590F9B15}, PhysicianDetail {DD6635F5-828D-46E1-97B6-8657A16564FA}, PhysicianListing {7D799AC3-A9A5-4A6B-B2D8-E3F9ED580179}, LocationListing {3CD4CF10-AD03-43E0-BB82-4F3FAE827AF8}. Direct Renderings read still truncates. get_allowed_comps_by_ph includes LocationListing."
+  - path: "/sitecore/layout/Renderings/Project/lcmc/Locations"
+    itemId: "{6F1F9D14-BCBF-462F-95EE-3517CF187AEF}"
+    lastReadAt: "2026-09-08T19:15:00Z"
+  - path: "/sitecore/templates/Project/lcmc/Rendering Parameters/Locations"
+    itemId: "{153A2F56-EDEC-4E89-A721-5DA62A63E8ED}"
+    lastReadAt: "2026-09-08T19:15:00Z"
+  - path: "/sitecore/content/lcmc/lcmc/Presentation/Headless Variants/HospitalDetail"
+    itemId: "{515C6FC9-9A5A-4E9F-8D17-CBADD14334D9}"
+    lastReadAt: "2026-09-08T16:30:00Z"
+  - path: "/sitecore/content/lcmc/lcmc/Presentation/Headless Variants/PhysicianDetail"
+    itemId: "{E0F110D0-9D60-435A-995B-EF0C60C8936D}"
+    lastReadAt: "2026-09-08T19:15:00Z"
+  - path: "/sitecore/content/lcmc/lcmc/Presentation/Headless Variants/PhysicianListing"
+    itemId: "{57FFA122-3A05-4334-A296-E9D89433C064}"
+    lastReadAt: "2026-09-08T19:15:00Z"
+  - path: "/sitecore/content/lcmc/lcmc/Presentation/Headless Variants/LocationListing"
+    itemId: "{71C8C840-11B1-4D86-84C9-41978B4842BB}"
+    lastReadAt: "2026-09-08T21:00:00Z"
+  - path: "/sitecore/content/lcmc/lcmc/Presentation/Headless Variants/HeroST"
+    itemId: "{4A003C37-D137-47DD-9CF8-149F3D9BFEFF}"
+    lastReadAt: "2026-09-10T16:45:00Z"
+    note: "HeroST variants Default, Centered, Right, SplitScreen, Stacked, Version1, Version2"
+  - path: "/sitecore/content/lcmc/lcmc/Presentation/Headless Variants/MultiPromo"
+    itemId: "{093498E0-C8F7-40B5-93C9-7F7A3CF147BE}"
+    lastReadAt: "2026-09-10T16:45:00Z"
+    note: "MultiPromo variants Default, SingleColumn, Stacked, SideTabs, TopTabs, TopTabsNoImage, Version1, Version2"
+  - path: "/sitecore/layout/Renderings/Project/lcmc/Locations/LocationListing"
+    itemId: "{3CD4CF10-AD03-43E0-BB82-4F3FAE827AF8}"
+    lastReadAt: "2026-09-08T21:00:00Z"
+  - path: "/sitecore/content/lcmc/lcmc/Home/Our Locations"
+    itemId: "{0A471272-462E-4497-BEA2-D03C904BCBE5}"
+    lastReadAt: "2026-09-08T21:00:00Z"
+    note: "Hub directory. LocationListing on headless-main with Data/Locations. No HospitalDetail."
+  - path: "/sitecore/content/lcmc/lcmc/Home/Find a Provider"
+    itemId: "{BAE717F7-D99D-4722-8FAF-CED2581DF809}"
+    lastReadAt: "2026-09-08T19:15:00Z"
+    note: "Existing L1 reused for physician listing. 24 physician detail child pages plus page Data folder."
 
 # Demo datasource items (AI-created content, not new component definitions)
 demoContent:
@@ -4115,18 +4173,45 @@ ia:
     category: "Pulse"
     status: "complete"
     createdAt: "2026-08-12T13:20:00Z"
-    updatedAt: "2026-08-12T13:20:00Z"
+    updatedAt: "2026-09-09T00:40:00Z"
     notes: >
       Refactored Pulse into a multi-site pack platform (code-only; no new Sitecore items).
-      Packs: quanex, era, amesburytruth, pillsburylaw under src/lib/pulse-packs/.
+      Packs: quanex, era, amesburytruth, pillsburylaw, amkor, atlanta-apparel, lcmc under src/lib/pulse-packs/.
       Experience Edge GraphQL is the primary content source (Home-scoped per pack).
       Sitecore Search remains optional via isSitecoreSearchConfigured() � not required for
       Quanex family. Intent citationItemIds hydrate title/url/excerpt from Edge at ask-time.
       Docs: docs/ai/demo/pulse-multi-site.md. Publish each site Home tree to Edge for Pulse.
+      2026-09-09: Added LCMC-only pack. Shared Default Pulse prompts/templates unchanged.
     relatedHomeRoots:
       - { siteName: "quanex", homeRootId: "{E6276198-3FC7-4D8B-BD14-8669B1701536}", path: "/sitecore/content/quanex/quanex/Home" }
       - { siteName: "era", homeRootId: "{69A414F6-9E12-48D6-92C1-215609517A83}", path: "/sitecore/content/quanex/era/Home" }
       - { siteName: "amesburytruth", homeRootId: "{A57ED898-AA1D-46E6-B7CF-7C7804688EC8}", path: "/sitecore/content/quanex/amesburytruth/Home" }
+      - { siteName: "lcmc", homeRootId: "{194F8944-6400-40DD-BDCB-931686A42643}", path: "/sitecore/content/lcmc/lcmc/Home" }
+
+  - name: "lcmc-pulse-pack"
+    kind: "platform-note"
+    category: "Pulse"
+    status: "complete"
+    createdAt: "2026-09-09T00:40:00Z"
+    updatedAt: "2026-09-09T00:40:00Z"
+    siteName: "lcmc"
+    siteCollection: "lcmc"
+    notes:
+      - "2026-09-09: LCMC-only Pulse overlay. Code-only; no new Sitecore items. Pack at src/lib/pulse-packs/lcmc.ts keyed by site name lcmc."
+      - "Providers from Data/Physicians via fetchPhysicianListingPayload (same Edge catalog as Find a Provider / LcmcAppointmentScheduler). ENT + WJMC demo: Gabrielle Moreau MD {24EB9BF3-BFD6-4D01-87A7-BAF6D3DA421C}, Dominic Lirette MD {010E3311-06A7-4904-AFD0-202FD565A796}."
+      - "Language: detect Spanish vs English from the user question; reply in that language. Do not translate physician or hospital proper names."
+      - "Book deep-link: /For-Patients/Patient-Appointments?specialty=&location=. LcmcAppointmentScheduler reads those query params. Did not change Default Pulse copy used by Quanex/Pillsbury/Amkor."
+    verification:
+      checkedAt: "2026-09-09T00:40:00Z"
+      passed:
+        - "lcmc registered in PULSE_SITE_PACKS; other packs keep composeAnswer/widgetCopy undefined"
+        - "Jest: LCMC language detection, ENT/WJMC matching, appointment query mapping"
+      failed: []
+      pendingManual:
+        - "Publish Data/Physicians (26 items including Gabrielle Moreau and Dominic Lirette) and Patient Appointments so Edge/live Pulse can hydrate the catalog"
+        - "Redeploy the site-base rendering host so /lcmc/en/ Pulse uses the LCMC pack"
+        - "On /lcmc/en/ ask Pulse the EN and ES ENT + West Jefferson questions and confirm Moreau + Lirette plus the appointment deep-link"
+        - "On /quanex/en/ confirm Pulse still answers IG spacers with Quanex starters"
 
   - name: "quanex-header-nav-remap"
     kind: "content-update"
@@ -7793,6 +7878,44 @@ ia:
         - "Open /amkor/en/Search-Results?q=S-Connect on the shared editing host and confirm AI panel + packaging facets"
         - "Confirm Quanex /Search-Results?q=super+spacer is unchanged"
 
+  - name: "lcmc-search-results-site-pack"
+    kind: "content"
+    status: "complete"
+    createdAt: "2026-09-10T10:05:00Z"
+    updatedAt: "2026-09-10T10:05:00Z"
+    siteCollection: "lcmc"
+    siteName: "lcmc"
+    notes:
+      - "2026-09-10: Added LCMC SearchResults site pack (src/lib/search-packs/lcmc.ts) keyed by site name lcmc. Same Default SearchResults component as Quanex/Amkor; catalog covers physicians (Moreau, Lirette), locations (WJMC / West Jefferson Medical Clinic nickname, EJGH, UMC, Touro), ENT services, and Patient Appointments. Unknown sites still fall back to env default then Quanex."
+      - "2026-09-10: Placed SearchResults ({7691AC50-2BAE-4FBD-9BA9-05480FD844E4}) on LCMC Search Results page headless-main (instance {1DA0B742-C078-43C1-B962-5976D40216A1}). SearchResults was not on the placeholder whitelist; add succeeded like Quanex."
+      - "2026-09-10: Pointed HeaderST SearchLink at Search Results {B22CA21A-3609-448D-98B3-EE528B80A68A} (was Contact Us). Authored pageTitle/metadata on Search Results."
+      - "2026-09-10: Version3 search no longer uses SearchLink href/text. Edge still served Contact Us on SearchLink, so Enter went to /Contact-Us?q=…. HeaderST Version3 now always submits to /Search-Results. Default/Version1/Version2 unchanged."
+    pages:
+      - { displayName: "Search Results", name: "Search Results", itemId: "{B22CA21A-3609-448D-98B3-EE528B80A68A}", path: "/sitecore/content/lcmc/lcmc/Home/Search Results", route: "/Search-Results", renderingUid: "{1DA0B742-C078-43C1-B962-5976D40216A1}" }
+    exampleItems:
+      - { name: "HeaderST datasource", itemId: "{D7264BD2-810B-479E-8468-FB894F9A8C17}", path: "/sitecore/content/lcmc/lcmc/Presentation/Partial Designs/Global/Header/Data/Header", note: "SearchLink internal to Search Results" }
+    rendering:
+      name: "SearchResults"
+      path: "/sitecore/layout/Renderings/Project/Portal/SearchResults/SearchResults"
+      itemId: "{7691AC50-2BAE-4FBD-9BA9-05480FD844E4}"
+      componentName: "SearchResults"
+    codeChanges:
+      - "src/lib/search-packs/lcmc.ts"
+      - "src/lib/search-packs/index.ts"
+      - "src/__tests__/lib/search-packs.test.ts"
+      - "src/__tests__/search-results/SearchResults.test.tsx"
+    verification:
+      checkedAt: "2026-09-10T10:05:00Z"
+      passed:
+        - "get_components_on_page shows SearchResults on LCMC Search Results headless-main"
+        - "HeaderST SearchLink id={B22CA21A-3609-448D-98B3-EE528B80A68A}"
+        - "Jest search-packs + SearchResults: 35 passed"
+      failed: []
+      pendingManual:
+        - "Publish Search Results page + HeaderST datasource for Edge"
+        - "Open /lcmc/en/Search-Results?q=ENT+West+Jefferson and confirm Moreau, WJMC, ENT facets"
+        - "Confirm Quanex /Search-Results?q=super+spacer and Amkor S-Connect are unchanged"
+
   - name: "atlanta-apparel-search-results-version1"
     kind: "content"
     status: "complete"
@@ -8957,7 +9080,7 @@ ia:
     category: "Global Elements"
     status: "complete"
     createdAt: "2026-08-19T18:30:00Z"
-    updatedAt: "2026-09-03T19:15:00Z"
+    updatedAt: "2026-09-09T19:30:00Z"
 
     react:
       filePath: "src/components/site-three/HeaderST.tsx"
@@ -9075,7 +9198,7 @@ ia:
       note: "2026-09-03: LoginLink set to Sign In → https://www.atlanta-apparel.com/login. SupportLink remains Register → Visit/Registration {EBD89713-040D-4B8F-810D-23E44B93F2A6}. City menus are Version2-hardcoded, not datasource fields."
 
     verification:
-      checkedAt: "2026-09-03T19:15:00Z"
+      checkedAt: "2026-09-09T19:30:00Z"
       passed:
         - "LoginLink field created on HeaderST datasource template"
         - "Headless Variants container + Default + LoginRequired verified via MCP"
@@ -9096,7 +9219,10 @@ ia:
         - "2026-08-29: Amkor Header Partial Design mega menus remapped to Home IA L1 (About Us, Packaging, Technology, Test Services, Services, Applications, Quality)"
         - "2026-09-03: Version2 ANDMORE city pull-downs (ATLANTA / LAS VEGAS / HIGH POINT / NEW YORK) + Market Plan hardcoded in HeaderSTVersion2View only"
         - "2026-09-03: atlanta-apparel Header LoginLink populated as Sign In"
-        - "2026-09-03: Version2 lg (1024px) header compact — logo cap + nowrap justify-end nav (Default/Version1/Version3 unchanged)"
+        - "2026-09-04: Atlanta Apparel Header partial {506BF874-2F4C-4415-8A7B-A17014A1E65C} confirmed HeaderST FieldNames Version2 {F0F3B5E5-DA94-4B53-A6BD-143F3F9B5538}"
+        - "2026-09-04: Version2 Atlanta-only language dropdown (en / ja-JP / es-ES) — no new Sitecore variants or RP fields"
+        - "2026-09-09: Version3 EN/ES flag switcher (US → /en, Spain → /es-CO) left of search; Default unchanged; no new Sitecore items"
+        - "2026-09-09: LCMC Version3 Spanish locale is es-CO (Colombia); es-ES remains Atlanta Apparel Version2"
       failed: []
       pendingManual:
         - "Select Version3 on lcmc Header partial design HeaderST rendering in Pages"
@@ -9116,6 +9242,9 @@ ia:
         - "Optional: add postLogoutRedirect to HeaderST rendering parameters template"
 
     notes:
+      - "2026-09-09: Version3 Spanish flag hrefs use Sitecore Colombia language es-CO (/es-CO/{path}), not es-ES. Added COLOMBIAN_SPANISH_LOCALE to src/lib/locale.ts SUPPORTED_LOCALES so next-intl / LocaleProxy / app-locale cookie treat /es-CO like other non-default locales. Atlanta Apparel Version2 keeps SPANISH_LOCALE es-ES. Default/LoginRequired/Version1/Version2 UI unchanged; no new Sitecore items."
+      - "2026-09-09: Version3 EN/ES flag language switcher for the LCMC demo. US flag → English, Spain flag → Español. Placement: right cluster immediately left of search (does not wrap primary nav). Reuses existing useLanguageSwitcher + buildLanguageSwitchPathname; Sitecore Spanish language name is es-CO (Colombia), so hrefs are /en/… and /es-CO/…. No new Sitecore items, variants, or rendering params. Default/LoginRequired/Version1/Version2 unchanged."
+      - "2026-09-04: Atlanta Apparel HeaderST Version2 language dropdown (top-right of the dark utility row). Confirmed on Header partial {506BF874-2F4C-4415-8A7B-A17014A1E65C} FieldNames={F0F3B5E5-DA94-4B53-A6BD-143F3F9B5538} (Version2). Dropdown is gated to atlanta-apparel via page.siteName / context.site.name / ?site= so americasmart Version2 is unchanged. Languages: English (en), Japanese (ja-JP), Spanish (es-ES) — Sitecore tenant language names; prefers layout context.languages when that list includes en+ja+es, else this fallback. Href pattern matches Version1: /{locale}{path}?{query} via buildLanguageSwitchPathname. Added SPANISH_LOCALE to src/lib/locale.ts SUPPORTED_LOCALES so next-intl / LocaleProxy / app-locale cookie treat /es-ES the same as /ja-JP. No new Sitecore items, variants, or rendering params. Default/LoginRequired/Version1/Version3 unchanged."
       - "2026-09-03: Version2 lg-band (1024-1279px) crowding fix for atlanta-apparel Pages laptop breakpoint. Logo was lg:h-12/320px and centered nav collided with Exhibitor Directory. Cap logo at lg:h-9/168px (xl restores h-12/280px), main-row lg:gap-3, primary nav flex-nowrap justify-end overflow-visible, compact a/span/button padding, force li w-auto so Sitecore col-12 cannot stretch under the logo. City triggers slightly tighter until xl. Code-only; no new Sitecore variants or RP fields. Default/LoginRequired/Version1/Version3 unchanged."
       - "2026-09-03: Version2 now renders live-matching ANDMORE city pull-downs (ATLANTA, LAS VEGAS, HIGH POINT, NEW YORK) plus Market Plan on the dark utility row. Code-only menus in HeaderST.tsx (version2LocationMenus) because HeaderST's shared datasource has no location fields and the skill forbids new cosmetic datasource fields. Accessible button+menu (hover or click, Escape/outside close). Atlanta Apparel (/) is internal; sister markets are live ANDMORE URLs. Market Plan → /visit/plan-your-market {94A9563C-55F2-4348-BFAF-95D95DDD58A6}. atlanta-apparel Header datasource LoginLink set to Sign In → https://www.atlanta-apparel.com/login. Default/LoginRequired/Version1/Version3 layouts unchanged. No new Sitecore variants or RP fields."
       - "2026-08-31: Version1 language selector is now functional. English/Korean/Japanese/Simplified Chinese link to locale-prefixed URLs for the CURRENT page (/en/..., /ko-KR/..., /ja-JP/..., /zh-CN/...) instead of the old external amkor.com/kr|/jp|/cn hrefs, and the active language is highlighted via aria-current + --color-header-lang-active. Locale codes are the Sitecore language names (ja-JP, ko-KR, zh-CN). Shared plumbing: src/lib/locale.ts (new), routing.locales extended from [en] to [en, ja-JP, ko-KR, zh-CN], proxy.ts remembers the chosen language in an app-locale cookie and replays it on Sitecore's unprefixed links, and the catch-all page falls back to the default language when a page has no version in the requested language. amkor Home + children have real ja-JP content; ko-KR and zh-CN have no versions and therefore render the English fallback. No Sitecore items created or changed (amkor Version1 variant {3C5FBC3A-F12E-4EAF-A2B2-17DF9BEECE5A} already existed). Default/LoginRequired/Version2/Version3 unchanged."
@@ -10262,6 +10391,570 @@ ia:
         - "Wire navigation to new IA pages; starter Speakers/Video/Data left in tree"
         - "Publish Footer Partial Design + Footer/Data for Edge (footer links remapped 2026-08-25)"
 
+  - name: "lcmc-hospital-location-data"
+    kind: "data-model"
+    category: "Locations"
+    status: "complete"
+    createdAt: "2026-09-08T00:40:00Z"
+    updatedAt: "2026-09-09T00:15:00Z"
+    siteName: "lcmc"
+    siteCollection: "lcmc"
+    contentRootPath: "/sitecore/content/lcmc/lcmc"
+    dataRoot: "/sitecore/content/lcmc/lcmc/Data"
+    notes:
+      - "2026-09-08: Created LCMC Hospital Location / Physician / Service templates and Data items only (no React rendering). Existing Location Search Item folder left unused — it is an empty map-search picker, not hospital/physician/service data. Location Search templates were not reused."
+      - "Primary model: locations Treelist OfferedServices + LocationPhysicians. Reverse Treelists on physicians (ServingLocations) and services (OfferedAtLocations)."
+      - "16 location items match Our Locations landing pages (8 hospitals + 8 urgent cares). Urgent Care Locations hub page was not given a data item. Luling address/phone is representative because the live directory had no dedicated card."
+      - "2026-09-08: HospitalDetail rendering now consumes these Data/Locations items on the 16 physical location pages."
+      - "2026-09-08: Added PhysicianDetailPage Droptree on LCMC Physician (source Find a Provider). Did not duplicate the physician template or Data/Physicians items. PhysicianListing + PhysicianDetail consume the existing 24 physician data items."
+      - "2026-09-08: Added 2 ENT physicians serving West Jefferson Medical Center — Gabrielle Moreau MD {24EB9BF3-BFD6-4D01-87A7-BAF6D3DA421C} and Dominic Lirette MD {010E3311-06A7-4904-AFD0-202FD565A796}. Specialty string is ENT. Appended both to WJMC LocationPhysicians. Did not delete existing physicians or rewrite other location items."
+    templates:
+      location:
+        name: "LCMC Hospital Location"
+        path: "/sitecore/templates/Project/lcmc/Components/Locations/LCMC Hospital Location"
+        itemId: "{1BE17BB8-084F-4FBA-A33F-8568E92F5B45}"
+        sectionName: "Data"
+        sectionId: "{A94A9AC5-AEEA-4BBC-B249-F0EDE9C54652}"
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{4271439B-3206-4AA3-ACB9-EA78C03EE108}"
+          linked: true
+        fields:
+          - { name: "LocationTitle", type: "Single-Line Text", itemId: "{5B761C6E-2119-4E9F-88AD-2CA564AC098E}" }
+          - { name: "LocationShortName", type: "Single-Line Text", itemId: "{E9488A30-C918-403C-BBAA-11FEBA2DFCB1}" }
+          - { name: "LocationDescription", type: "Rich Text", itemId: "{F565CF13-09F9-4FBE-943E-1551FA1F6056}" }
+          - { name: "StreetAddress", type: "Single-Line Text", itemId: "{A527F3E4-3842-44E6-8E33-4E4D4B07CB4C}" }
+          - { name: "City", type: "Single-Line Text", itemId: "{EE630347-777D-47F6-8DF9-C27C904A7903}" }
+          - { name: "State", type: "Single-Line Text", itemId: "{949F2600-C710-4B8F-9C6A-45287B4B177A}" }
+          - { name: "PostalCode", type: "Single-Line Text", itemId: "{CE0500E1-7C8B-4845-B54C-909C049E7F63}" }
+          - { name: "PhoneNumber", type: "Single-Line Text", itemId: "{B71A3795-49F5-4073-8783-6E811D20E7CD}" }
+          - { name: "HoursText", type: "Multi-Line Text", itemId: "{3BD52B62-4C4C-414B-BADB-7B22A8302C2B}" }
+          - { name: "Latitude", type: "Single-Line Text", itemId: "{DE83B497-49BC-41DA-9B5F-3D04437DD153}" }
+          - { name: "Longitude", type: "Single-Line Text", itemId: "{FACB5AFF-7D1D-4234-88D6-50DE5299D83F}" }
+          - { name: "HasEmergencyDepartment", type: "Checkbox", itemId: "{BC5EB2B3-2E35-42B6-A006-49A269250E79}" }
+          - { name: "ParkingInfo", type: "Multi-Line Text", itemId: "{1A4B9586-EE63-4F6B-AA77-FE5FA10B298D}" }
+          - { name: "VisitorInfo", type: "Rich Text", itemId: "{0CBD1FEB-1E88-4B8F-974E-40A39D92B678}" }
+          - { name: "LocationType", type: "Single-Line Text", itemId: "{B8865CAD-75B2-44BE-A7FC-81898A04CE1D}" }
+          - { name: "LandingPage", type: "Droptree", itemId: "{2C7FC5D0-8C5E-4947-96ED-5B9A8C1A6553}", source: "/sitecore/content/lcmc/lcmc/Home/Our Locations" }
+          - { name: "OfferedServices", type: "Treelist", itemId: "{C0D058FF-7EEE-4FB6-8B01-50FCAFCEC82A}", source: "/sitecore/content/lcmc/lcmc/Data/Services" }
+          - { name: "LocationPhysicians", type: "Treelist", itemId: "{FA6567C5-386F-4030-B03E-9CEF3568CB4F}", source: "/sitecore/content/lcmc/lcmc/Data/Physicians" }
+      physician:
+        name: "LCMC Physician"
+        path: "/sitecore/templates/Project/lcmc/Components/Locations/LCMC Physician"
+        itemId: "{DD974469-0EF7-479D-8E2B-F61C09E0C4DB}"
+        sectionId: "{DB4660D0-D620-4E90-BD22-DDD6BFCB4548}"
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{DDCE0A4F-0BF7-4761-9F2F-5D7EBF1D3766}"
+          linked: true
+        fields:
+          - { name: "PhysicianFullName", type: "Single-Line Text", itemId: "{BA01A187-99BB-480E-BAC0-225160CEC41D}" }
+          - { name: "Credentials", type: "Single-Line Text", itemId: "{E633A16F-0854-4684-B841-B4742C322099}" }
+          - { name: "Specialty", type: "Single-Line Text", itemId: "{D4C17411-0FCD-44A2-AF62-A97801B89B46}" }
+          - { name: "PhysicianBio", type: "Rich Text", itemId: "{3C71E7A2-30B6-4199-847B-808DE57253FF}" }
+          - { name: "PhysicianPhone", type: "Single-Line Text", itemId: "{53091AFB-0D3F-4B5B-A945-9555D8CF59D7}" }
+          - { name: "ServingLocations", type: "Treelist", itemId: "{66EA9126-0717-40DC-9BBF-0E726397EF3D}", source: "/sitecore/content/lcmc/lcmc/Data/Locations" }
+          - { name: "PhysicianDetailPage", type: "Droptree", itemId: "{1499B7E7-BFD9-4192-BF06-67BF1A9FD65F}", source: "/sitecore/content/lcmc/lcmc/Home/Find a Provider" }
+      service:
+        name: "LCMC Service"
+        path: "/sitecore/templates/Project/lcmc/Components/Locations/LCMC Service"
+        itemId: "{4540C3AD-240B-4D59-BD8B-F2A34D1EDC79}"
+        sectionId: "{BED2E6D0-34C8-4B05-93FC-5F297AC866D9}"
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{D5CF81F4-C0B2-4547-92D9-D6165E720A81}"
+          linked: true
+        fields:
+          - { name: "ServiceTitle", type: "Single-Line Text", itemId: "{195A3EB9-2014-4ADE-9528-46016044C588}" }
+          - { name: "ServiceShortDescription", type: "Multi-Line Text", itemId: "{4491D77B-DA17-4A4D-8480-8A09826476A5}" }
+          - { name: "ServiceDetail", type: "Rich Text", itemId: "{249F0EDB-A3F4-4F20-A0B6-E389BDBE8547}" }
+          - { name: "OfferedAtLocations", type: "Treelist", itemId: "{36F9CC2A-C286-48DC-8161-CBC3300F8601}", source: "/sitecore/content/lcmc/lcmc/Data/Locations" }
+      folders:
+        - name: "LCMC Hospital Location Folder"
+          path: "/sitecore/templates/Project/lcmc/Folders/LCMC Hospital Location Folder"
+          itemId: "{E1B1169B-8AAA-4A87-9B55-22D14AF553E7}"
+          standardValues: { itemId: "{93F88091-75F9-41A5-9C10-EA879F789521}", linked: true, masters: ["LCMC Hospital Location"] }
+        - name: "LCMC Physician Folder"
+          path: "/sitecore/templates/Project/lcmc/Folders/LCMC Physician Folder"
+          itemId: "{5793E2A8-0938-4E48-A1EF-404FF99D97B7}"
+          standardValues: { itemId: "{EB1FB931-EB2C-4952-8CAB-40277D7133A5}", linked: true, masters: ["LCMC Physician"] }
+        - name: "LCMC Service Folder"
+          path: "/sitecore/templates/Project/lcmc/Folders/LCMC Service Folder"
+          itemId: "{1965C5EF-88CF-4B61-B59D-91566414B39F}"
+          standardValues: { itemId: "{4567587A-9600-4CE6-85B7-9C4F3369EC95}", linked: true, masters: ["LCMC Service"] }
+    datasourceFolders:
+      - name: "Locations"
+        path: "/sitecore/content/lcmc/lcmc/Data/Locations"
+        itemId: "{76041887-6E16-4844-AD13-366BC2E32265}"
+        insertOptionsSet: true
+      - name: "Physicians"
+        path: "/sitecore/content/lcmc/lcmc/Data/Physicians"
+        itemId: "{13C422FB-8991-4468-B996-BE73A904C23E}"
+        insertOptionsSet: true
+      - name: "Services"
+        path: "/sitecore/content/lcmc/lcmc/Data/Services"
+        itemId: "{D9CB7792-EE41-4A8F-A1F8-729D90B4E527}"
+        insertOptionsSet: true
+    locationItems:
+      - { name: "East Jefferson General Hospital", itemId: "{EFEAC293-2BF4-4516-873D-4EAC1F998474}", landingPageId: "{8EED2D44-9041-483E-9DE2-6DEE4E92B0B0}", type: "Hospital" }
+      - { name: "Lakeside Hospital", itemId: "{C6A3CDB7-8708-4C60-861B-009B7FB9E786}", landingPageId: "{3A19DAC6-9E88-416D-AEB9-B677B796A2F8}", type: "Hospital" }
+      - { name: "Lakeview Hospital", itemId: "{C5D069A3-C8BB-40FE-89BE-D7F9D5C9614F}", landingPageId: "{B570613E-4755-4797-B953-D0FA40E87AB2}", type: "Hospital" }
+      - { name: "Manning Family Childrens", itemId: "{6B468248-C9D1-4DD0-9E8D-44B477FDB96C}", landingPageId: "{733FA878-5E4D-4882-9F64-5F55FF00F1D8}", type: "Hospital" }
+      - { name: "New Orleans East Hospital", itemId: "{6766AE91-0553-4034-B328-2327CB54AB85}", landingPageId: "{31988E67-198E-431F-A244-834AE4D473D8}", type: "Hospital" }
+      - { name: "Touro", itemId: "{063FFD1D-6681-4DFC-8A7A-504EA903090F}", landingPageId: "{3FB47445-1BE8-4622-8E2D-AC071AC2D56A}", type: "Hospital" }
+      - { name: "University Medical Center New Orleans", itemId: "{E8F05084-0214-424F-B1D4-B5B562499F5C}", landingPageId: "{618FA09A-743B-4623-A06C-F1CEE45FDF4F}", type: "Hospital" }
+      - { name: "West Jefferson Medical Center", itemId: "{35C77454-5FB8-460D-BC12-299F7B31DE5A}", landingPageId: "{130578E9-32C7-474B-9C19-E452C5DD0215}", type: "Hospital" }
+      - { name: "LCMC Health Chalmette Urgent Care", itemId: "{764E7C6F-75BB-49EE-B304-4E5A0E6F3DAC}", landingPageId: "{249D74AF-E407-4786-B643-48830A467D54}", type: "Urgent Care" }
+      - { name: "LCMC Health Clearview Urgent Care", itemId: "{A2D66593-0A5D-4EE4-82D3-FA88A59C71FA}", landingPageId: "{6B3630CF-2011-4EC0-9329-EBDA3E104D9A}", type: "Urgent Care" }
+      - { name: "LCMC Health Gretna Urgent Care", itemId: "{F1E5353C-A2B7-47F0-9570-85B8FD6D9FED}", landingPageId: "{2F519DB5-833E-4540-93D6-25E1A2382071}", type: "Urgent Care" }
+      - { name: "LCMC Health Kenner Urgent Care", itemId: "{57D504EA-804B-4166-84EB-CE298A6853F0}", landingPageId: "{4961F1F3-B83E-4E6E-95C5-5AA373092BCA}", type: "Urgent Care" }
+      - { name: "LCMC Health Lakeview Urgent Care", itemId: "{53907833-68C9-4A0D-A500-FAD77D27FBD0}", landingPageId: "{9C37B7E0-C075-4FD8-8E6F-BCED1C5A1767}", type: "Urgent Care" }
+      - { name: "LCMC Health Luling Urgent Care", itemId: "{4C15C596-29EB-46C8-BD93-53E7DEBA82E0}", landingPageId: "{B423D1CE-D9F7-4343-87FC-B0DE6496CB27}", type: "Urgent Care" }
+      - { name: "LCMC Health Marrero Urgent Care", itemId: "{EBC36A98-6CF2-477A-827A-7BEFEB2FE5A8}", landingPageId: "{FA259C01-E1C9-4649-8332-210A24C1D6AF}", type: "Urgent Care" }
+      - { name: "LCMC Health Uptown Urgent Care", itemId: "{9E0B2413-44E2-488E-9346-39243F87E342}", landingPageId: "{4970D71E-474B-4EAA-878B-787BB6216EAB}", type: "Urgent Care" }
+    serviceItems:
+      - { name: "Emergency Care", itemId: "{21FB8DB6-1732-4A44-8BEC-E39C52C1961A}" }
+      - { name: "Heart and Vascular Care", itemId: "{872D3FA1-DBC7-4ABF-9544-5A668C0D08B1}" }
+      - { name: "Cancer Care", itemId: "{72C9C518-0BB1-4BB0-9319-A38875217CD3}" }
+      - { name: "Orthopedic Care", itemId: "{D2B7F3AD-6DF9-4B0D-AB3B-58AD3669DB5B}" }
+      - { name: "Womens Health", itemId: "{168532F3-37CE-4045-A84C-F0672164EEBE}" }
+      - { name: "Imaging", itemId: "{2C7094F3-7E17-4A5F-8E1F-68830FDC81B6}" }
+      - { name: "Laboratory Services", itemId: "{EF79ADEF-3A78-4992-B297-04B3447C9CF4}" }
+      - { name: "Behavioral Health", itemId: "{DB0C3D51-6686-4387-89A4-97B0AB5E440E}" }
+      - { name: "Neuroscience", itemId: "{DBD2AAB8-F409-4288-9EE0-5CFD676A1C66}" }
+      - { name: "Pediatric Care", itemId: "{BEEA85BD-08B1-40E3-AAD6-7600A802F71F}" }
+      - { name: "Urgent Care", itemId: "{B69F3F30-2DFD-4668-ACED-3CEE2B15273D}" }
+      - { name: "Digestive Care", itemId: "{B491C6F0-3A49-4E3A-B94E-815639B35B92}" }
+    physicianCount: 26
+    verification:
+      checkedAt: "2026-09-08T01:10:00Z"
+      passed:
+        - "Site lcmc verified via list_sites"
+        - "Templates created under /sitecore/templates/Project/lcmc/Components/Locations"
+        - "Base templates set on all three datasource templates"
+        - "Field Types set; OfferedServices Type Treelist + Source verified via MCP"
+        - "Standard Values created on owning templates"
+        - "Data folders Locations / Physicians / Services created under /sitecore/content/lcmc/lcmc/Data"
+        - "16 location items verified under Data/Locations with LandingPage + OfferedServices + LocationPhysicians"
+        - "12 service items verified with OfferedAtLocations"
+        - "Sample physician Camille Landry ServingLocations points at East Jefferson"
+      failed: []
+      pendingManual:
+        - "__Standard values link and folder __Masters are silent-write — verify in Content Editor"
+        - "Publish Data/Locations, Data/Physicians, Data/Services and the three templates for Edge"
+        - "Confirm Luling Urgent Care street address against a live listing (directory had no dedicated card)"
+
+  - name: "HospitalDetail"
+    kind: "simple"
+    category: "Locations"
+    status: "complete"
+    createdAt: "2026-09-08T16:20:00Z"
+    updatedAt: "2026-09-08T16:30:00Z"
+    siteName: "lcmc"
+    siteCollection: "lcmc"
+    contentRootPath: "/sitecore/content/lcmc/lcmc"
+    notes:
+      - "2026-09-08: Simple datasource component reusing existing LCMC Hospital Location template {1BE17BB8-084F-4FBA-A33F-8568E92F5B45}. Did not create a duplicate location template, folder template, or Data/Locations items."
+      - "ComponentQuery left empty (simple-component skill). Scalar fields bind via Sitecore Text/RichText. Treelist OfferedServices/LocationPhysicians render names/credentials/specialty when Layout Service expands linked items; editing uses AddFieldEditorButton."
+      - "add_component_on_page auto-created empty local:/Data/HospitalDetail items; those were deleted after set_component_datasource pointed each page at Data/Locations."
+      - "Available Renderings Page Content reconstructed from get_allowed_comps_by_ph (direct Renderings read truncated to 4 GUIDs) then appended HospitalDetail + LcmcAppointmentScheduler. get_allowed_comps_by_ph now includes HospitalDetail."
+    react:
+      filePath: "src/components/uiim/locations/HospitalDetail.tsx"
+      componentMapKey: "HospitalDetail"
+      dataStrategy: "default-jss top-level fields on LCMC Hospital Location datasource"
+      variants:
+        - "Default"
+    templates:
+      datasource:
+        name: "LCMC Hospital Location"
+        path: "/sitecore/templates/Project/lcmc/Components/Locations/LCMC Hospital Location"
+        itemId: "{1BE17BB8-084F-4FBA-A33F-8568E92F5B45}"
+        reusedExisting: true
+        sectionName: "Data"
+        fields:
+          - { name: "LocationTitle", type: "Single-Line Text" }
+          - { name: "LocationShortName", type: "Single-Line Text" }
+          - { name: "LocationDescription", type: "Rich Text" }
+          - { name: "StreetAddress", type: "Single-Line Text" }
+          - { name: "City", type: "Single-Line Text" }
+          - { name: "State", type: "Single-Line Text" }
+          - { name: "PostalCode", type: "Single-Line Text" }
+          - { name: "PhoneNumber", type: "Single-Line Text" }
+          - { name: "HoursText", type: "Multi-Line Text" }
+          - { name: "ParkingInfo", type: "Multi-Line Text" }
+          - { name: "VisitorInfo", type: "Rich Text" }
+          - { name: "LocationType", type: "Single-Line Text" }
+          - { name: "HasEmergencyDepartment", type: "Checkbox" }
+          - { name: "OfferedServices", type: "Treelist" }
+          - { name: "LocationPhysicians", type: "Treelist" }
+      folder:
+        name: "LCMC Hospital Location Folder"
+        path: "/sitecore/templates/Project/lcmc/Folders/LCMC Hospital Location Folder"
+        itemId: "{E1B1169B-8AAA-4A87-9B55-22D14AF553E7}"
+        reusedExisting: true
+      renderingParams:
+        name: "HospitalDetail"
+        path: "/sitecore/templates/Project/lcmc/Rendering Parameters/Locations/HospitalDetail"
+        itemId: "{C41F24B7-2F0C-4E67-B872-24671C099C18}"
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{B9621BCA-363A-4B9E-90CF-FA99BD39B189}"
+          linked: true
+    datasourceFolder:
+      name: "Locations"
+      path: "/sitecore/content/lcmc/lcmc/Data/Locations"
+      itemId: "{76041887-6E16-4844-AD13-366BC2E32265}"
+      reusedExisting: true
+    rendering:
+      name: "HospitalDetail"
+      path: "/sitecore/layout/Renderings/Project/lcmc/Locations/HospitalDetail"
+      itemId: "{E9E80BA0-F80C-4351-96AA-1D8C590F9B15}"
+      componentName: "HospitalDetail"
+      datasourceTemplatePath: "/sitecore/templates/Project/lcmc/Components/Locations/LCMC Hospital Location"
+      datasourceLocationQuery: "query:$site/*[@@name='Data']/*[@@templatename='LCMC Hospital Location Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='LCMC Hospital Location Folder']|/sitecore/content/lcmc/lcmc/Data/Locations"
+      parametersTemplateId: "{C41F24B7-2F0C-4E67-B872-24671C099C18}"
+      componentQuery: ""
+      addFieldEditorButton: "1"
+      registeredInAvailableRenderings: true
+    headlessVariants:
+      containerPath: "/sitecore/content/lcmc/lcmc/Presentation/Headless Variants/HospitalDetail"
+      containerId: "{515C6FC9-9A5A-4E9F-8D17-CBADD14334D9}"
+      variants:
+        - { name: "Default", itemId: "{7C6C2A1D-6BE3-47CC-A2F5-4BC17AA7CE29}" }
+    pages:
+      - { name: "East Jefferson General Hospital", pageId: "{8EED2D44-9041-483E-9DE2-6DEE4E92B0B0}", instanceId: "{4F346C3D-A53E-446A-A6A3-CE5ADD7B476E}", datasourceId: "{EFEAC293-2BF4-4516-873D-4EAC1F998474}", placeholder: "headless-main" }
+      - { name: "Lakeside Hospital", pageId: "{3A19DAC6-9E88-416D-AEB9-B677B796A2F8}", instanceId: "{D3A61F4C-9CDF-4C80-8260-22993702D27A}", datasourceId: "{C6A3CDB7-8708-4C60-861B-009B7FB9E786}", placeholder: "headless-main" }
+      - { name: "Lakeview Hospital", pageId: "{B570613E-4755-4797-B953-D0FA40E87AB2}", instanceId: "{3AFAE226-2731-416C-AA5F-36DAD4B29990}", datasourceId: "{C5D069A3-C8BB-40FE-89BE-D7F9D5C9614F}", placeholder: "headless-main" }
+      - { name: "Manning Family Childrens", pageId: "{733FA878-5E4D-4882-9F64-5F55FF00F1D8}", instanceId: "{E4F4823A-5B44-453A-90E6-DE2CCAC42F90}", datasourceId: "{6B468248-C9D1-4DD0-9E8D-44B477FDB96C}", placeholder: "headless-main" }
+      - { name: "New Orleans East Hospital", pageId: "{31988E67-198E-431F-A244-834AE4D473D8}", instanceId: "{D5AFEF3A-AFE5-407B-B924-08B2CE6781C7}", datasourceId: "{6766AE91-0553-4034-B328-2327CB54AB85}", placeholder: "headless-main" }
+      - { name: "Touro", pageId: "{3FB47445-1BE8-4622-8E2D-AC071AC2D56A}", instanceId: "{651525EA-E3A9-4481-9017-95E7C38FF863}", datasourceId: "{063FFD1D-6681-4DFC-8A7A-504EA903090F}", placeholder: "headless-main" }
+      - { name: "University Medical Center New Orleans", pageId: "{618FA09A-743B-4623-A06C-F1CEE45FDF4F}", instanceId: "{0384051D-E02A-44BA-A881-832ECCE4FC4D}", datasourceId: "{E8F05084-0214-424F-B1D4-B5B562499F5C}", placeholder: "headless-main" }
+      - { name: "West Jefferson Medical Center", pageId: "{130578E9-32C7-474B-9C19-E452C5DD0215}", instanceId: "{7062A2A0-5977-4E10-8BD2-6107A6468408}", datasourceId: "{35C77454-5FB8-460D-BC12-299F7B31DE5A}", placeholder: "headless-main" }
+      - { name: "LCMC Health Chalmette Urgent Care", pageId: "{249D74AF-E407-4786-B643-48830A467D54}", instanceId: "{D8E12F50-3251-4DE9-9EBA-4520979F2A84}", datasourceId: "{764E7C6F-75BB-49EE-B304-4E5A0E6F3DAC}", placeholder: "headless-main" }
+      - { name: "LCMC Health Clearview Urgent Care", pageId: "{6B3630CF-2011-4EC0-9329-EBDA3E104D9A}", instanceId: "{6733D90D-2784-46AA-BF4D-F210E0FBB855}", datasourceId: "{A2D66593-0A5D-4EE4-82D3-FA88A59C71FA}", placeholder: "headless-main" }
+      - { name: "LCMC Health Gretna Urgent Care", pageId: "{2F519DB5-833E-4540-93D6-25E1A2382071}", instanceId: "{CF88385D-29DD-4492-8BEA-3D8C0AC92BE6}", datasourceId: "{F1E5353C-A2B7-47F0-9570-85B8FD6D9FED}", placeholder: "headless-main" }
+      - { name: "LCMC Health Kenner Urgent Care", pageId: "{4961F1F3-B83E-4E6E-95C5-5AA373092BCA}", instanceId: "{FD8B9814-5055-4ED8-98CD-33575D6C4EAB}", datasourceId: "{57D504EA-804B-4166-84EB-CE298A6853F0}", placeholder: "headless-main" }
+      - { name: "LCMC Health Lakeview Urgent Care", pageId: "{9C37B7E0-C075-4FD8-8E6F-BCED1C5A1767}", instanceId: "{250B9B21-D2F3-4DC0-BA79-9DF562CB6282}", datasourceId: "{53907833-68C9-4A0D-A500-FAD77D27FBD0}", placeholder: "headless-main" }
+      - { name: "LCMC Health Luling Urgent Care", pageId: "{B423D1CE-D9F7-4343-87FC-B0DE6496CB27}", instanceId: "{89F25225-939C-4D6B-B762-F2A24659DA5D}", datasourceId: "{4C15C596-29EB-46C8-BD93-53E7DEBA82E0}", placeholder: "headless-main" }
+      - { name: "LCMC Health Marrero Urgent Care", pageId: "{FA259C01-E1C9-4649-8332-210A24C1D6AF}", instanceId: "{4DE8E0B0-9F4C-4367-AB8C-029C5DC8B0D4}", datasourceId: "{EBC36A98-6CF2-477A-827A-7BEFEB2FE5A8}", placeholder: "headless-main" }
+      - { name: "LCMC Health Uptown Urgent Care", pageId: "{4970D71E-474B-4EAA-878B-787BB6216EAB}", instanceId: "{83282D4D-8FB8-449F-A491-2F82B387EEFF}", datasourceId: "{9E0B2413-44E2-488E-9346-39243F87E342}", placeholder: "headless-main" }
+    skippedPages:
+      - { name: "Our Locations", pageId: "{0A471272-462E-4497-BEA2-D03C904BCBE5}", reason: "hub directory, not a physical site" }
+      - { name: "Urgent Care Locations", pageId: "{8E01B094-506C-4379-8257-8E02A97E9291}", reason: "hub directory, not a physical site" }
+    verification:
+      checkedAt: "2026-09-08T16:30:00Z"
+      passed:
+        - "Reused LCMC Hospital Location template; get_component datasourceTemplateId {1BE17BB8-084F-4FBA-A33F-8568E92F5B45}"
+        - "JSON Rendering created; componentName HospitalDetail; Parameters Template GUID; AddFieldEditorButton 1"
+        - "Datasource Template full path and Datasource Location query+path verified via MCP read-back"
+        - "ComponentQuery empty"
+        - "Rendering Parameters base templates set; Default Headless Variant created"
+        - "HospitalDetail allowed on headless-main via get_allowed_comps_by_ph"
+        - "16 physical location pages have HospitalDetail on headless-main with matching Data/Locations datasource IDs"
+        - "Hub pages Our Locations and Urgent Care Locations have no HospitalDetail"
+        - "React file created; generate-map registered HospitalDetail"
+      failed: []
+      pendingManual:
+        - "Publish rendering, Headless Variants, Available Renderings, Data/Locations, and the 16 location pages for Edge"
+        - "Redeploy site-base rendering host so Pages picks up HospitalDetail.tsx"
+        - "Confirm Treelist services/physicians expand in Layout Service (no ComponentQuery); Field Editor covers authoring either way"
+        - "__Standard values link on rendering params template is silent-write"
+
+  - name: "LocationListing"
+    kind: "list"
+    category: "Locations"
+    status: "complete"
+    createdAt: "2026-09-08T21:00:00Z"
+    updatedAt: "2026-09-08T22:15:00Z"
+    siteName: "lcmc"
+    siteCollection: "lcmc"
+    contentRootPath: "/sitecore/content/lcmc/lcmc"
+    notes:
+      - "2026-09-08: No existing LocationListing rendering. Shared Portal LocationSearch Default uses Google Maps and is used by other sites — not reused. Created a new LCMC-only LocationListing under Project/lcmc/Locations."
+      - "Reused existing Data/Locations folder {76041887-6E16-4844-AD13-366BC2E32265} and LCMC Hospital Location children. Did not duplicate location templates or items."
+      - "Map is OpenStreetMap raster tiles + Mercator pin overlay (same no-Google approach as LocationSearch Version2 / FootprintGlobalMap). No Leaflet package, no Google Maps API key."
+      - "Placed only on Our Locations hub {0A471272-462E-4497-BEA2-D03C904BCBE5}. Hospital detail pages still have HospitalDetail only."
+      - "add_component_on_page auto-created empty local:/Data/LocationListing {734FD62B-7FA4-4799-9BAE-A9B03CB98564}; deleted after set_component_datasource pointed at Data/Locations."
+      - "2026-09-08: Pages empty list/map with Content item Locations. Live instance datasource was already Data/Locations {76041887-6E16-4844-AD13-366BC2E32265} (folder display name Locations), not the Our Locations page. Lat/long already populated on all 16 Data items — not rewritten. Root causes: slim ComponentQuery returned id/name only so Pages depended on /api/location-listing; API loaded direct children only so Our Locations page children (sitemap pages) had no Hospital Location fields; fetch used rendering.dataSource only, not ComponentQuery datasource.id. Fix: lite children on ComponentQuery; resolve Our Locations page (and unmatched page children) to Data/Locations; filter looksLikeHospitalLocation; datasource.id fallback. Picker: Can select Page as a data source=1, Additional compatible templates=Services Page {D77937AC-BAE4-4EB0-8D7E-69EC09D5BBFC}, Datasource Location includes Home/Our Locations. Official datasource remains LCMC Hospital Location Folder."
+      - "2026-09-08: Pages still empty after datasource fix. CM has all 16 children with Latitude/Longitude; MCP workflow is null; Pages Version 1 has slashed-circle; get_components_on_page dataSourceItem is null. Edge probe: default SITECORE_EDGE_CONTEXT_ID has 16 items with lat/title; SITECORE_EDGE_CONTEXT_ID_LIVE and _PREVIEW both return item=null / 0 children / search total 0. Field names Latitude/Longitude match the template. No MCP publish tool. Root cause: Pages preview=1 queried Preview (empty) and live fallback used default client only when IDs differ; dedicated Live/Preview Edge for this XM Cloud env do not have Data/Locations. Fix: try preview + default + live contexts; API returns status/message; editing mode shows API error vs publish hint. User must publish the folder + 16 children to current Preview and Live."
+    react:
+      filePath: "src/components/uiim/locations/LocationListing.tsx"
+      componentMapKey: "LocationListing"
+      dataStrategy: "ComponentQuery lite children (LocationTitle/Type/address/lat/long/LandingPage jsonValue, no Treelist). Client filters hospital-location fields then /api/location-listing. API tries preview/default/live Edge contexts and returns status/message. OSM map from Latitude/Longitude. Client Hospital vs Urgent Care filter."
+      variants:
+        - "Default"
+    templates:
+      datasource:
+        name: "LCMC Hospital Location Folder"
+        path: "/sitecore/templates/Project/lcmc/Folders/LCMC Hospital Location Folder"
+        itemId: "{E1B1169B-8AAA-4A87-9B55-22D14AF553E7}"
+        reusedExisting: true
+      child:
+        name: "LCMC Hospital Location"
+        path: "/sitecore/templates/Project/lcmc/Components/Locations/LCMC Hospital Location"
+        itemId: "{1BE17BB8-084F-4FBA-A33F-8568E92F5B45}"
+        reusedExisting: true
+      renderingParams:
+        name: "LocationListing"
+        path: "/sitecore/templates/Project/lcmc/Rendering Parameters/Locations/LocationListing"
+        itemId: "{6277500C-BADB-472B-8B3C-EB6DA631CBDB}"
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{FEC47D6F-7FAF-4E9F-846B-DE067388CF0C}"
+          linked: true
+    datasourceFolder:
+      name: "Locations"
+      path: "/sitecore/content/lcmc/lcmc/Data/Locations"
+      itemId: "{76041887-6E16-4844-AD13-366BC2E32265}"
+      reusedExisting: true
+    rendering:
+      name: "LocationListing"
+      path: "/sitecore/layout/Renderings/Project/lcmc/Locations/LocationListing"
+      itemId: "{3CD4CF10-AD03-43E0-BB82-4F3FAE827AF8}"
+      componentName: "LocationListing"
+      datasourceTemplatePath: "/sitecore/templates/Project/lcmc/Folders/LCMC Hospital Location Folder"
+      datasourceLocationQuery: "query:$site/*[@@name='Data']/*[@@templatename='LCMC Hospital Location Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='LCMC Hospital Location Folder']|/sitecore/content/lcmc/lcmc/Data/Locations|/sitecore/content/lcmc/lcmc/Home/Our Locations"
+      parametersTemplateId: "{6277500C-BADB-472B-8B3C-EB6DA631CBDB}"
+      addFieldEditorButton: "1"
+      registeredInAvailableRenderings: true
+      componentQuery: "query LocationListing($datasource: String!, $language: String!) { datasource: item(path: $datasource, language: $language) { id name children(first: 20) { results { id name url { path } locationTitle: field(name: \"LocationTitle\") { jsonValue } locationShortName: field(name: \"LocationShortName\") { jsonValue } locationType: field(name: \"LocationType\") { jsonValue } streetAddress: field(name: \"StreetAddress\") { jsonValue } city: field(name: \"City\") { jsonValue } state: field(name: \"State\") { jsonValue } postalCode: field(name: \"PostalCode\") { jsonValue } phoneNumber: field(name: \"PhoneNumber\") { jsonValue } latitude: field(name: \"Latitude\") { jsonValue } longitude: field(name: \"Longitude\") { jsonValue } landingPage: field(name: \"LandingPage\") { jsonValue } } } } }"
+      canSelectPageAsDatasource: true
+      additionalCompatibleTemplates:
+        - { name: "Services Page", itemId: "{D77937AC-BAE4-4EB0-8D7E-69EC09D5BBFC}" }
+    headlessVariants:
+      containerPath: "/sitecore/content/lcmc/lcmc/Presentation/Headless Variants/LocationListing"
+      containerId: "{71C8C840-11B1-4D86-84C9-41978B4842BB}"
+      variants:
+        - { name: "Default", itemId: "{348CF6D9-943E-46E5-8824-65A981E732B9}" }
+    pages:
+      - { name: "Our Locations", pageId: "{0A471272-462E-4497-BEA2-D03C904BCBE5}", instanceId: "{08FBC2F7-6491-4BC7-91A9-23362CD40266}", datasourceId: "{76041887-6E16-4844-AD13-366BC2E32265}", placeholder: "headless-main", route: "/Our-Locations" }
+    verification:
+      checkedAt: "2026-09-08T22:15:00Z"
+      passed:
+        - "JSON Rendering componentName LocationListing; Datasource Template still LCMC Hospital Location Folder"
+        - "get_component confirms datasourceTemplateId {E1B1169B-8AAA-4A87-9B55-22D14AF553E7} and picker roots Data/Locations + Home/Our Locations"
+        - "ComponentQuery verified with lite children(first: 20) jsonValue location fields (no Treelist/LookupField)"
+        - "Can select Page as a data source=1; Additional compatible templates Services Page {D77937AC-BAE4-4EB0-8D7E-69EC09D5BBFC}"
+        - "Parameters Template GUID {6277500C-BADB-472B-8B3C-EB6DA631CBDB}; AddFieldEditorButton 1"
+        - "Our Locations instance {08FBC2F7-6491-4BC7-91A9-23362CD40266} datasource is still Data/Locations {76041887-6E16-4844-AD13-366BC2E32265}"
+        - "All 16 Data/Locations items already have Latitude/Longitude — not rewritten"
+        - "MCP CM read: folder + 16 children exist; workflow null; Latitude/Longitude field names match GraphQL"
+        - "Edge probe: default context 16 children with lat/title; LIVE and PREVIEW contexts item=null / 0 children"
+        - "No marketer MCP publish tool — publish is a manual Pages/Content Editor step"
+      failed: []
+      pendingManual:
+        - "Publish /sitecore/content/lcmc/lcmc/Data/Locations {76041887-6E16-4844-AD13-366BC2E32265} and all 16 LCMC Hospital Location children to the current XM Cloud Preview and Live Edge (Pages Publish on the folder, include subitems)"
+        - "Redeploy site-base editing host so Pages picks up multi-context /api/location-listing and the editing-mode publish/API error copy"
+        - "In Pages, Our Locations should show 16 cards + OSM pins after that publish + deploy; until then editing shows the publish hint or API error instead of a silent empty list"
+        - "__Standard values link on rendering params template is silent-write"
+
+  - name: "PhysicianListing"
+    kind: "list"
+    category: "Locations"
+    status: "complete"
+    createdAt: "2026-09-08T18:30:00Z"
+    updatedAt: "2026-09-09T00:15:00Z"
+    siteName: "lcmc"
+    siteCollection: "lcmc"
+    contentRootPath: "/sitecore/content/lcmc/lcmc"
+    notes:
+      - "2026-09-08: List component over existing Data/Physicians folder {13C422FB-8991-4468-B996-BE73A904C23E}. Did not duplicate physician records. Datasource Template is LCMC Physician Folder; ComponentQuery reads children.results of that folder."
+      - "Placed on existing L1 Find a Provider {BAE717F7-D99D-4722-8FAF-CED2581DF809} rather than creating Find a Doctor / Our Physicians. Page already in header mega menu and footer."
+      - "Card links use PhysicianDetailPage Droptree targetItem.url.path, jsonValue href, or fallback /Find-a-Provider/{item-name}."
+      - "add_component_on_page auto-created a local listing datasource; deleted after set_component_datasource pointed at Data/Physicians. Do not pass headless variant IDs as set_component_datasource variantId (404)."
+      - "2026-09-08: Pages showed only 10 of 24 physicians because Edge children defaults to first: 10. ComponentQuery now uses children(first: 50) with total + pageInfo.hasNext/endCursor. Dropped LookupField.targetItem expansion (jsonValue href + url.path remain) to reduce layout-query complexity with first: 50. React is a client listing with name/specialty/location filters and page size 9."
+      - "2026-09-08: children(first: 50) + ServingLocations MultilistField exceeded Edge layout complexity. Pages still had Data/Physicians on instance {65D0631D-E2FE-449D-984F-26694B6A5EB7} (dataSource 13c422fb-..., dataSourceItem null). Slimmed ComponentQuery to datasource id/name only. Children now load via /api/physician-listing (Content API, page 10, value fields). React treats rendering.dataSource as assigned so NoDataFallback is not shown when GraphQL fields.data is empty. Tradeoff: layout query no longer inlines cards; location filter uses targetItems name/displayName from the API (retries without Multilist expansion if needed)."
+      - "2026-09-08: Location dropdown now uses the full Data/Locations catalog (8 hospitals + 8 urgent cares), not only unique ServingLocations on currently loaded physicians. /api/physician-listing returns { physicians, locations }. GUID-only Treelist values are hydrated to LocationTitle/displayName so West Jefferson Medical Center is filterable. Specialty ENT comes from Data/Physicians Specialty = ENT on Gabrielle Moreau and Dominic Lirette."
+    react:
+      filePath: "src/components/uiim/locations/PhysicianListing.tsx"
+      componentMapKey: "PhysicianListing"
+      dataStrategy: "Slim ComponentQuery (datasource id/name). Children + Data/Locations catalog via /api/physician-listing. Client filters and paging (page size 9)."
+      variants:
+        - "Default"
+    templates:
+      datasource:
+        name: "LCMC Physician Folder"
+        path: "/sitecore/templates/Project/lcmc/Folders/LCMC Physician Folder"
+        itemId: "{5793E2A8-0938-4E48-A1EF-404FF99D97B7}"
+        reusedExisting: true
+      child:
+        name: "LCMC Physician"
+        path: "/sitecore/templates/Project/lcmc/Components/Locations/LCMC Physician"
+        itemId: "{DD974469-0EF7-479D-8E2B-F61C09E0C4DB}"
+        reusedExisting: true
+      renderingParams:
+        name: "PhysicianListing"
+        path: "/sitecore/templates/Project/lcmc/Rendering Parameters/Locations/PhysicianListing"
+        itemId: "{CC41815F-B618-4635-AE07-43C4D9194C36}"
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{E39F2655-ED0A-4C8C-AF64-B06A9A748C54}"
+          linked: true
+    datasourceFolder:
+      name: "Physicians"
+      path: "/sitecore/content/lcmc/lcmc/Data/Physicians"
+      itemId: "{13C422FB-8991-4468-B996-BE73A904C23E}"
+      reusedExisting: true
+    rendering:
+      name: "PhysicianListing"
+      path: "/sitecore/layout/Renderings/Project/lcmc/Locations/PhysicianListing"
+      itemId: "{7D799AC3-A9A5-4A6B-B2D8-E3F9ED580179}"
+      componentName: "PhysicianListing"
+      datasourceTemplatePath: "/sitecore/templates/Project/lcmc/Folders/LCMC Physician Folder"
+      datasourceLocationQuery: "query:$site/*[@@name='Data']/*[@@templatename='LCMC Physician Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='LCMC Physician Folder']|/sitecore/content/lcmc/lcmc/Data/Physicians"
+      parametersTemplateId: "{CC41815F-B618-4635-AE07-43C4D9194C36}"
+      addFieldEditorButton: "1"
+      registeredInAvailableRenderings: true
+      componentQuery: "query PhysicianListing($datasource: String!, $language: String!) { datasource: item(path: $datasource, language: $language) { id name } }"
+    headlessVariants:
+      containerPath: "/sitecore/content/lcmc/lcmc/Presentation/Headless Variants/PhysicianListing"
+      containerId: "{57FFA122-3A05-4334-A296-E9D89433C064}"
+      variants:
+        - { name: "Default", itemId: "{ED5F081D-B23A-442B-B8F4-A9A5F4FF7D7D}" }
+    pages:
+      - { name: "Find a Provider", pageId: "{BAE717F7-D99D-4722-8FAF-CED2581DF809}", instanceId: "{65D0631D-E2FE-449D-984F-26694B6A5EB7}", datasourceId: "{13C422FB-8991-4468-B996-BE73A904C23E}", placeholder: "headless-main", route: "/Find-a-Provider" }
+    verification:
+      checkedAt: "2026-09-09T00:15:00Z"
+      passed:
+        - "JSON Rendering created; componentName PhysicianListing; Datasource Template LCMC Physician Folder; ComponentQuery present"
+        - "Find a Provider listing instance datasource is Data/Physicians {13C422FB-8991-4468-B996-BE73A904C23E} — proven still assigned after NoDataFallback (do not re-pick)"
+        - "PhysicianListing allowed on headless-main via get_allowed_comps_by_ph"
+        - "React file created; generate-map registered PhysicianListing; Jest tests passed"
+        - "ComponentQuery slimmed to datasource id/name; MCP get_content_item_by_id confirmed"
+        - "Parameters Template still {CC41815F-B618-4635-AE07-43C4D9194C36}; Datasource Template/Location unchanged"
+        - "PhysicianListing.test.tsx + physician-listing-from-edge.test.ts passed (19 tests) including ENT specialty and Data/Locations catalog dropdown"
+        - "Gabrielle Moreau and Dominic Lirette created with Specialty ENT and ServingLocations WJMC {35C77454-5FB8-460D-BC12-299F7B31DE5A}"
+      failed: []
+      pendingManual:
+        - "Publish the PhysicianListing rendering so Edge/Pages pick up the slim ComponentQuery (layout GraphQL will succeed and fields.data.datasource returns id/name)"
+        - "Redeploy site-base rendering host so Pages picks up /api/physician-listing locations catalog + React dropdown"
+        - "Publish Data/Physicians (Gabrielle Moreau, Dominic Lirette), their Find a Provider pages, and WJMC LocationPhysicians for Edge"
+        - "In Pages, stay on Find a Provider, select PhysicianListing, open the Content tab to confirm Data/Physicians, then confirm the canvas shows filters + cards instead of NoDataFallback (Design tab being open does not mean the datasource is missing)"
+        - "__Standard values link on rendering params template is silent-write"
+
+  - name: "PhysicianDetail"
+    kind: "simple"
+    category: "Locations"
+    status: "complete"
+    createdAt: "2026-09-08T18:30:00Z"
+    updatedAt: "2026-09-10T12:20:00Z"
+    siteName: "lcmc"
+    siteCollection: "lcmc"
+    contentRootPath: "/sitecore/content/lcmc/lcmc"
+    notes:
+      - "2026-09-08: Simple datasource component reusing existing LCMC Physician template {DD974469-0EF7-479D-8E2B-F61C09E0C4DB}. Did not duplicate physician data items."
+      - "Added PhysicianDetailPage Droptree on the existing template (source Find a Provider) so listing cards can resolve detail URLs. All 24 Data/Physicians items now point at matching child pages."
+      - "24 Services Page children created under Find a Provider; names match Data/Physicians items. Each has PhysicianDetail on headless-main with matching Data/Physicians datasource. Auto-created local /Data/PhysicianDetail items deleted."
+      - "Find a Provider hub has PhysicianListing only — no PhysicianDetail on the hub."
+      - "2026-09-08: Added ENT detail pages Gabrielle Moreau MD and Dominic Lirette MD under Find a Provider (Services Page). PhysicianDetail on headless-main points at Data/Physicians items. Auto-created local /Data/PhysicianDetail items deleted. Existing 24 pages unchanged."
+      - "2026-09-09: Code-only LCMC PhysicianDetail header — teal profile band, professional photo, Book an appointment now CTA via buildLcmcPhysicianAppointmentHref (visit=sick-visit + provider/specialty/location). No Sitecore field or Default-layout changes. Named photos for Craig Conard / Jose Wiley / Aimee Aysenne from lcmchealth.org public assets under public/lcmc/physicians/; demo catalog names use Unsplash clinical placeholders. Craig Conard is not in Data/Physicians."
+      - "2026-09-09: Book CTA hover/focus no longer uses bg-primary (same teal as the header). Rest is white + teal text; hover/focus is muted off-white + teal text. Theme lock in lcmc.css on .physician-detail__book-cta."
+      - "2026-09-10: Added LanguagesSpoken Single-Line Text {994C5B31-453A-473A-BBE9-DC87F28CE361} on LCMC Physician. All 26 Data/Physicians speak English; 20 also Spanish including Gabrielle Moreau and Dominic Lirette. English-only: Hannah Scott, Keisha Williams, Michael Tran, Omar Hassan, Priya Raman, Thomas Nguyen. PhysicianDetail shows Languages spoken badges in the teal header (Spanish is the solid white pill) plus Speaks … in Contact. Code fallback in src/lib/lcmc-physician-languages.ts if Edge has not published the field yet."
+      - "2026-09-10: Wrote physician/location copy onto Data items only (not display pages): Gabrielle Moreau MD, Dominic Lirette MD, Camille Landry MD; West Jefferson Medical Center {35C77454-5FB8-460D-BC12-299F7B31DE5A}; East Jefferson General Hospital {EFEAC293-2BF4-4516-873D-4EAC1F998474}."
+    react:
+      filePath: "src/components/uiim/locations/PhysicianDetail.tsx"
+      componentMapKey: "PhysicianDetail"
+      dataStrategy: "default-jss top-level fields on LCMC Physician datasource"
+      variants:
+        - "Default"
+    templates:
+      datasource:
+        name: "LCMC Physician"
+        path: "/sitecore/templates/Project/lcmc/Components/Locations/LCMC Physician"
+        itemId: "{DD974469-0EF7-479D-8E2B-F61C09E0C4DB}"
+        reusedExisting: true
+        sectionName: "Data"
+        fields:
+          - { name: "PhysicianFullName", type: "Single-Line Text" }
+          - { name: "Credentials", type: "Single-Line Text" }
+          - { name: "Specialty", type: "Single-Line Text" }
+          - { name: "PhysicianPhone", type: "Single-Line Text" }
+          - { name: "PhysicianBio", type: "Rich Text" }
+          - { name: "ServingLocations", type: "Treelist" }
+          - { name: "PhysicianDetailPage", type: "Droptree", itemId: "{1499B7E7-BFD9-4192-BF06-67BF1A9FD65F}" }
+          - { name: "LanguagesSpoken", type: "Single-Line Text", itemId: "{994C5B31-453A-473A-BBE9-DC87F28CE361}" }
+      folder:
+        name: "LCMC Physician Folder"
+        path: "/sitecore/templates/Project/lcmc/Folders/LCMC Physician Folder"
+        itemId: "{5793E2A8-0938-4E48-A1EF-404FF99D97B7}"
+        reusedExisting: true
+      renderingParams:
+        name: "PhysicianDetail"
+        path: "/sitecore/templates/Project/lcmc/Rendering Parameters/Locations/PhysicianDetail"
+        itemId: "{86B61C96-97CA-44AE-8121-682E44135BAA}"
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{2A8948D6-C834-4EDD-AECF-1868C3C7218D}"
+          linked: true
+    datasourceFolder:
+      name: "Physicians"
+      path: "/sitecore/content/lcmc/lcmc/Data/Physicians"
+      itemId: "{13C422FB-8991-4468-B996-BE73A904C23E}"
+      reusedExisting: true
+    rendering:
+      name: "PhysicianDetail"
+      path: "/sitecore/layout/Renderings/Project/lcmc/Locations/PhysicianDetail"
+      itemId: "{DD6635F5-828D-46E1-97B6-8657A16564FA}"
+      componentName: "PhysicianDetail"
+      datasourceTemplatePath: "/sitecore/templates/Project/lcmc/Components/Locations/LCMC Physician"
+      datasourceLocationQuery: "query:$site/*[@@name='Data']/*[@@templatename='LCMC Physician Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='LCMC Physician Folder']|/sitecore/content/lcmc/lcmc/Data/Physicians"
+      parametersTemplateId: "{86B61C96-97CA-44AE-8121-682E44135BAA}"
+      componentQuery: ""
+      addFieldEditorButton: "1"
+      registeredInAvailableRenderings: true
+    headlessVariants:
+      containerPath: "/sitecore/content/lcmc/lcmc/Presentation/Headless Variants/PhysicianDetail"
+      containerId: "{E0F110D0-9D60-435A-995B-EF0C60C8936D}"
+      variants:
+        - { name: "Default", itemId: "{0F428F61-54C2-4B69-A36C-2C7ABA42232A}" }
+    pages:
+      - { name: "Alicia Broussard MD", pageId: "{AAE8FB28-DAD3-40EF-9E26-D545C46E5C2C}", instanceId: "{0EBC8BD4-3F7C-4923-B976-8AEBA283E564}", datasourceId: "{3248558F-44BA-478E-97FE-80E84A000603}", placeholder: "headless-main", route: "/Find-a-Provider/Alicia-Broussard-MD" }
+      - { name: "Andre Baptiste MD", pageId: "{17056557-572C-4684-83B0-7203A17F190A}", instanceId: "{C743229A-100A-483C-8BFC-4CC880262CC5}", datasourceId: "{9BC27AE8-3D1C-468A-8A1D-336EDB3F11D9}", placeholder: "headless-main", route: "/Find-a-Provider/Andre-Baptiste-MD" }
+      - { name: "Anita Chauvin MD", pageId: "{7FE1960D-5226-4979-A736-B9DB34342136}", instanceId: "{D49D8F27-5EF4-4A8F-9E76-3D4F38F71C47}", datasourceId: "{C176B05D-10A5-49C8-A980-9380046CE24F}", placeholder: "headless-main", route: "/Find-a-Provider/Anita-Chauvin-MD" }
+      - { name: "Brian LeBlanc MD", pageId: "{5D495AF6-DED3-47C3-AA72-ABC901C9D616}", instanceId: "{21EA3ABF-AC0F-4B65-A68F-5CFFA7E1D4AD}", datasourceId: "{31A4B5A2-10FB-4CF1-B1E5-8FC21C802D06}", placeholder: "headless-main", route: "/Find-a-Provider/Brian-LeBlanc-MD" }
+      - { name: "Camille Landry MD", pageId: "{8118B0CB-720B-4707-9C67-DCE15ECF16FB}", instanceId: "{145FC6F9-DB90-4D9B-B844-A74DE556F2CE}", datasourceId: "{12B533A6-8DF8-4D80-B466-111A5B26B8E4}", placeholder: "headless-main", route: "/Find-a-Provider/Camille-Landry-MD" }
+      - { name: "Claire Fontenot MD", pageId: "{6AD41D51-E8AD-45FB-AB64-E508D4B0EDAD}", instanceId: "{68D80B94-9D36-409C-A4ED-E8025C734DC5}", datasourceId: "{3188F21C-974C-43D5-8722-C676D09A8293}", placeholder: "headless-main", route: "/Find-a-Provider/Claire-Fontenot-MD" }
+      - { name: "Daniel Hebert MD", pageId: "{A9E27C9F-F974-41A3-A416-D5872B51C13C}", instanceId: "{30631687-9703-45DE-A1DD-93231433E69E}", datasourceId: "{49B7EB4F-7C96-4D02-BA27-99FF3F2C75E2}", placeholder: "headless-main", route: "/Find-a-Provider/Daniel-Hebert-MD" }
+      - { name: "Elise Boudreaux MD", pageId: "{F0212F29-E6D5-4E39-BC05-6E568E9B99D7}", instanceId: "{7FDDED77-3605-43D9-A6E1-D5DEF9C2D135}", datasourceId: "{EED3B2C7-4DEF-4F96-B129-46E86DF0559D}", placeholder: "headless-main", route: "/Find-a-Provider/Elise-Boudreaux-MD" }
+      - { name: "Hannah Scott MD", pageId: "{18CC0ED3-187D-4F2B-973F-E9CD0DA24F64}", instanceId: "{4055752D-9BD8-4DDD-9234-0179E4967D51}", datasourceId: "{1B865C3A-A093-4A6D-8DB8-554028EB662F}", placeholder: "headless-main", route: "/Find-a-Provider/Hannah-Scott-MD" }
+      - { name: "James Thibodeaux MD", pageId: "{166BF434-5AA4-449F-89CB-8CB37B8343A0}", instanceId: "{C437C148-50A1-470F-95F7-1EBB882FBE89}", datasourceId: "{3649DA30-9C2F-445B-9B40-AD91F25276DC}", placeholder: "headless-main", route: "/Find-a-Provider/James-Thibodeaux-MD" }
+      - { name: "Joseph Allemand MD", pageId: "{63D03FF3-5454-43C7-A608-92F55D0A9F0E}", instanceId: "{B8804072-01ED-463E-98EC-B658BE3CED39}", datasourceId: "{65C2FDCF-7791-43DA-8354-7030BB6CD025}", placeholder: "headless-main", route: "/Find-a-Provider/Joseph-Allemand-MD" }
+      - { name: "Keisha Williams MD", pageId: "{2C44733E-30DE-47FD-A86C-4E78BF6B0587}", instanceId: "{5EAC002A-F106-4F6F-B52D-F2F03555A915}", datasourceId: "{B58527CE-BA45-4C9E-B506-D0A3D75AC996}", placeholder: "headless-main", route: "/Find-a-Provider/Keisha-Williams-MD" }
+      - { name: "Kevin Romero MD", pageId: "{817B972A-FEB5-4F61-8674-52F2DB2F768E}", instanceId: "{E7DB5754-8E9C-43D5-9D78-321F44B43923}", datasourceId: "{47043241-18E6-4A37-8F69-4108CDBD78A2}", placeholder: "headless-main", route: "/Find-a-Provider/Kevin-Romero-MD" }
+      - { name: "Leah Castillo MD", pageId: "{19405B92-A8DE-4C10-BA51-16DEDFE5BAC6}", instanceId: "{865B4CF1-4EF0-457A-A450-50C698424359}", datasourceId: "{B7224F06-A404-40C9-8F72-8A1FDD04C472}", placeholder: "headless-main", route: "/Find-a-Provider/Leah-Castillo-MD" }
+      - { name: "Marcus Fontenot MD", pageId: "{149350FF-AD01-43AD-B158-29B4A7F9D25B}", instanceId: "{4C097243-9EB9-47D7-8ECB-B72C61E9F72E}", datasourceId: "{B257CB21-E4C2-44BA-8C70-28D893D45C97}", placeholder: "headless-main", route: "/Find-a-Provider/Marcus-Fontenot-MD" }
+      - { name: "Michael Tran MD", pageId: "{10A0B74D-57F9-4EB5-AF88-3461EA0DE4B3}", instanceId: "{4E4704AC-64FC-4754-B25D-85B25CCF1520}", datasourceId: "{6877B226-0CC6-408C-9E51-E2C5D2351A61}", placeholder: "headless-main", route: "/Find-a-Provider/Michael-Tran-MD" }
+      - { name: "Nicole Doucet MD", pageId: "{99912ABE-285F-4D07-803C-91CE56D60A9A}", instanceId: "{DA133B05-0FB4-46DA-B69A-857CFA81AB58}", datasourceId: "{048E9D17-4B8B-4FBF-90EA-8E66D97E4F89}", placeholder: "headless-main", route: "/Find-a-Provider/Nicole-Doucet-MD" }
+      - { name: "Omar Hassan MD", pageId: "{9A577B49-1851-4CA2-80DE-2B9B97A21223}", instanceId: "{9C5DF40C-21DA-49D2-9CC0-0482CA871FBC}", datasourceId: "{79C12EE1-19F2-48EB-89CF-3473364D2488}", placeholder: "headless-main", route: "/Find-a-Provider/Omar-Hassan-MD" }
+      - { name: "Patrice Morales MD", pageId: "{74754925-AD4E-4C64-A425-5DE56808A67E}", instanceId: "{4273B342-878E-4B3E-B9E6-4ADDCAEE9D24}", datasourceId: "{24F0A42F-B1A5-43C2-9E26-E63E63E07162}", placeholder: "headless-main", route: "/Find-a-Provider/Patrice-Morales-MD" }
+      - { name: "Priya Raman MD", pageId: "{1A86AEF2-C81D-4040-9EDD-2BC222FD745F}", instanceId: "{2C41828B-4D42-41B2-8305-947C877317B2}", datasourceId: "{BC61F2D9-4655-42D8-867B-41407505B6DC}", placeholder: "headless-main", route: "/Find-a-Provider/Priya-Raman-MD" }
+      - { name: "Renee Guidry MD", pageId: "{C4BA27FF-A948-4865-9AB5-D45A23D2CF31}", instanceId: "{B288739D-3421-45D2-9E1A-971E51F6022A}", datasourceId: "{4A1FED30-0480-4CF5-9DCC-4149B3164046}", placeholder: "headless-main", route: "/Find-a-Provider/Renee-Guidry-MD" }
+      - { name: "Sarah Melancon MD", pageId: "{E394BD63-2F74-496D-8E4D-5081E656FCD4}", instanceId: "{F827DC2E-62E7-4884-AF3D-9AA46AC3D3C9}", datasourceId: "{F42ECEC4-C3D2-43BA-8FF1-2BA640F66251}", placeholder: "headless-main", route: "/Find-a-Provider/Sarah-Melancon-MD" }
+      - { name: "Tanya Ricard MD", pageId: "{32E5DA95-CEF8-4FD8-B31C-58C21E5077B1}", instanceId: "{877C9F7E-84BB-4979-BD0C-4FE51973320A}", datasourceId: "{74789E69-47D3-463D-AEAC-CEA3F20A5647}", placeholder: "headless-main", route: "/Find-a-Provider/Tanya-Ricard-MD" }
+      - { name: "Thomas Nguyen MD", pageId: "{9B2409F9-61D1-40F6-962F-137A96F8F0ED}", instanceId: "{FD44F5A8-8A58-4D4F-8B50-7CCDA5D05B1F}", datasourceId: "{F74FE325-06CA-4905-88E7-462F02FD74EA}", placeholder: "headless-main", route: "/Find-a-Provider/Thomas-Nguyen-MD" }
+      - { name: "Gabrielle Moreau MD", pageId: "{5F05A3ED-0BC5-4274-AF3C-80D66CF30503}", instanceId: "{C817A57B-2F67-41B2-9B89-D53E143CD39C}", datasourceId: "{24EB9BF3-BFD6-4D01-87A7-BAF6D3DA421C}", placeholder: "headless-main", route: "/Find-a-Provider/Gabrielle-Moreau-MD" }
+      - { name: "Dominic Lirette MD", pageId: "{B31263CB-7374-46AF-A728-B474AA98388D}", instanceId: "{4B2B4FB7-1FED-4B05-8C21-4B84373D9AC7}", datasourceId: "{010E3311-06A7-4904-AFD0-202FD565A796}", placeholder: "headless-main", route: "/Find-a-Provider/Dominic-Lirette-MD" }
+    skippedPages:
+      - { name: "Find a Provider", pageId: "{BAE717F7-D99D-4722-8FAF-CED2581DF809}", reason: "listing hub — PhysicianListing only, not a person" }
+    verification:
+      checkedAt: "2026-09-09T14:30:00Z"
+      passed:
+        - "Reused LCMC Physician template; get_component datasourceTemplateId {DD974469-0EF7-479D-8E2B-F61C09E0C4DB}"
+        - "JSON Rendering created; componentName PhysicianDetail; ComponentQuery empty; AddFieldEditorButton 1"
+        - "PhysicianDetail allowed on headless-main via get_allowed_comps_by_ph"
+        - "Camille Landry and Thomas Nguyen pages use matching Data/Physicians datasource IDs (not local Data items)"
+        - "Find a Provider has 26 physician child pages; listing datasource is the Physicians folder"
+        - "React file created; generate-map registered PhysicianDetail; Jest tests passed"
+        - "2026-09-09: Jest PhysicianDetail + lcmc-appointment-pack + lcmc-physician-photos — Book CTA href visit=sick-visit for mocked physician"
+        - "2026-09-09: Jest PhysicianDetail — Book CTA rest/hover/focus classes stay high-contrast (bg-white/hover:bg-muted, not hover:bg-primary)"
+      failed: []
+      pendingManual:
+        - "Publish rendering, Headless Variants, Available Renderings, Data/Physicians (including Gabrielle Moreau and Dominic Lirette), Find a Provider, and 26 detail pages for Edge"
+        - "Publish Data/Locations/West Jefferson Medical Center so LocationPhysicians includes the two ENT physicians"
+        - "Redeploy site-base rendering host so Pages picks up PhysicianDetail.tsx"
+        - "Confirm Treelist ServingLocations expand in Layout Service (no ComponentQuery); Field Editor covers authoring either way"
+        - "__Standard values link on rendering params template is silent-write"
+
   - name: "lcmc-footer-nav-remap"
     kind: "content-update"
     category: "Navigation"
@@ -10315,8 +11008,354 @@ ia:
       pendingManual:
         - "Publish Footer Partial Design + Footer/Data for Edge"
         - "FooterST cannot show ADA.gov service-animal block, X/YouTube, or GFE/balance-billing PDFs as dedicated columns"
-        - "Notice of Privacy Practices has no IA page � linked to live UMC notice URL"
+        - "Notice of Privacy Practices has no IA page — linked to live UMC notice URL"
 
+  - name: "lcmc-wjmc-microsite"
+    kind: "ia-create"
+    category: "IA"
+    status: "complete"
+    createdAt: "2026-09-08T21:10:00Z"
+    updatedAt: "2026-09-08T21:30:00Z"
+    siteName: "lcmc"
+    siteCollection: "lcmc"
+    contentRootPath: "/sitecore/content/lcmc/lcmc/Home"
+    contentRootItemId: "{194F8944-6400-40DD-BDCB-931686A42643}"
+    pageTemplateId: "{D77937AC-BAE4-4EB0-8D7E-69EC09D5BBFC}"
+    pageTemplateName: "Services Page"
+    pageDesignId: "{917B09BA-1495-4EE0-9E1C-36AA268CB54B}"
+    iaSource: "docs/ai/ia/lcmc-wjmc-ia.md"
+    sourceSite: "https://www.lcmchealth.org/west-jefferson-medical-center/"
+    createdCount: 26
+    skippedCount: 0
+    failedCount: 0
+    notes: >
+      Created West Jefferson Medical Center hospital microsite under Home without moving
+      system Our Services, Our Locations, or Find a Provider. Did not edit Data/Locations
+      or Data/Physicians. Existing /Home/Our Locations/West Jefferson Medical Center left
+      as the hospital location page. All 20 live WJMC our-services directory pages created.
+      ArticleContent placed on each new page headless-main. Header gained a 6th MegaMenuItem
+      (visual QA recommended). Unused duplicate MegaMenuItem {0707C558-1F8F-42F0-A540-758066F914BE}
+      remains under Header/Data; rendering uses auto-created West_Jefferson_Medical_Center.
+      2026-09-09: Page Design mass-assign to children was not applied (Marketer MCP tool timeout). See lcmc-wjmc-page-design-mass-update.
+    items:
+      - { name: "West Jefferson Medical Center", itemId: "{244D564F-91DC-4CCE-8AE7-B074BFB26EA3}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center" }
+      - { name: "Our Services", itemId: "{2C56B473-70EE-4A89-BDD5-CFED2A5FCDD8}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services" }
+      - { name: "Patients and Visitors", itemId: "{D922D27F-C05C-4431-98BB-27A36A5DEE2F}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Patients and Visitors" }
+      - { name: "About Us", itemId: "{3C6D2FF3-5E8F-483D-9FFD-A24AFCF83A58}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/About Us" }
+      - { name: "Our Locations", itemId: "{2C5BA133-5EC7-49FC-8EFF-03B25011B504}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Locations" }
+      - { name: "Contact Us", itemId: "{2B129408-A7FC-4E51-A079-5F3627F47485}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Contact Us" }
+      - { name: "Cancer Center", itemId: "{6AB96D17-DEBF-4F9C-8411-EC8691832E56}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/Cancer Center" }
+      - { name: "Centro Hispano de Salud", itemId: "{F9251FFF-D3B2-4D4B-9453-3057E67E650C}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/Centro Hispano de Salud" }
+      - { name: "Digestive Care", itemId: "{C72E1FEE-24E9-48A8-BD69-C1A40A3947D3}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/Digestive Care" }
+      - { name: "Ears Nose and Throat Care", itemId: "{66B44E6A-6D2F-4B01-BB8A-A26E4E3EC29C}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/Ears Nose and Throat Care", route: "/West-Jefferson-Medical-Center/Our-Services/Ears-Nose-and-Throat-Care" }
+      - { name: "Emergency Care", itemId: "{3F790DB9-D631-452D-B0FC-81038A84120C}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/Emergency Care" }
+      - { name: "Heart and Vascular Care", itemId: "{2AAE391D-27A1-404C-807F-0BAF075D387A}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/Heart and Vascular Care" }
+      - { name: "Hyperbaric", itemId: "{289F3863-A653-433E-9225-23DDF433BD55}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/Hyperbaric" }
+      - { name: "Imaging Services", itemId: "{9DD1F2F2-A240-4B75-8E3F-D7FF7348DFEE}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/Imaging Services" }
+      - { name: "Orthopedic Care", itemId: "{1B75ABBA-D25D-4A8B-A08D-95F8B2829A67}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/Orthopedic Care" }
+      - { name: "Physical Rehabilitation", itemId: "{51045ED1-5C87-4F78-A434-448D19F9CB83}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/Physical Rehabilitation" }
+      - { name: "Primary Care", itemId: "{79A49E07-D709-4630-B997-219904592653}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/Primary Care" }
+      - { name: "Respiratory Care", itemId: "{EC11CB8A-34A9-4F6D-9DAB-AC381A08343B}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/Respiratory Care" }
+      - { name: "Sleep Care", itemId: "{0BA81109-865D-4693-A971-E1FA04A1D16D}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/Sleep Care" }
+      - { name: "Surgery", itemId: "{808311AD-E478-4635-B0BC-79B40D9257FE}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/Surgery" }
+      - { name: "Stroke Care", itemId: "{CD872D5F-9CE6-44C5-98AA-9FCB620C1960}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/Stroke Care" }
+      - { name: "The Family Birth Place", itemId: "{7BC21FBE-E56F-46BC-95D7-218CA42CC826}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/The Family Birth Place" }
+      - { name: "The Hispanic Health Center", itemId: "{AACF6EB0-24E3-45B3-B6EC-1E430E50CDB7}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/The Hispanic Health Center" }
+      - { name: "Urology", itemId: "{B03D49E6-EE3A-4CC5-9CBE-E9AA2270B7D9}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/Urology" }
+      - { name: "Womens Health", itemId: "{CE2546D3-D952-42D8-AB96-669645B8DEDB}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/Womens Health" }
+      - { name: "Wound Care", itemId: "{30494497-6F54-48BA-B713-A9C0D70CBEBA}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/Wound Care" }
+    navigation:
+      headerMegaMenuItem:
+        itemId: "{DBADE7CB-B4E7-4D97-97DE-90E06D5333D7}"
+        renderingInstanceId: "{C2F26BCF-F4E1-443F-A057-651030A119BD}"
+        path: "/sitecore/content/lcmc/lcmc/Presentation/Partial Designs/Global/Header/Data/West_Jefferson_Medical_Center"
+      unusedNamedMegaMenuItem: "{0707C558-1F8F-42F0-A540-758066F914BE}"
+      headerLinkList:
+        itemId: "{ABBC8AEF-CB59-46B4-9F60-09622BF04E0A}"
+        renderingInstanceId: "{B465B549-9F53-4D94-A8C5-89EA8400876E}"
+        placeholder: "/headless-header/header-navigation-1/mega-menu-item-primary-links-7"
+      footerPrimaryLink: "{C56F5A62-E6E8-4DA4-87E8-0B0530074DBF}"
+    verification:
+      checkedAt: "2026-09-08T21:30:00Z"
+      passed:
+        - "Site lcmc verified via list_sites"
+        - "26 Services Pages created under Home/West Jefferson Medical Center"
+        - "ENT Detail + page fields + ArticleContent verified; route /West-Jefferson-Medical-Center/Our-Services/Ears-Nose-and-Throat-Care"
+        - "System Our Services unchanged"
+        - "Data/Locations/West Jefferson Medical Center read only"
+        - "Header MegaMenuItem Title+Link verified; Link List datasource bound"
+        - "Footer primary link verified"
+      failed: []
+      pendingManual:
+        - "Publish Home/West Jefferson Medical Center subtree + Header/Footer Partial Design Data for Edge"
+        - "Visual QA of 6th header L1 at desktop and mobile"
+        - "Unused Header/Data MegaMenuItem {0707C558-...} can be deleted in CE"
+        - "Remaining pages besides ENT/home may still be Draft until published"
+
+  - name: "lcmc-wjmc-page-design-mass-update"
+    kind: "update"
+    category: "IA"
+    status: "failed"
+    createdAt: "2026-09-09T16:34:00Z"
+    updatedAt: "2026-09-09T16:50:00Z"
+    siteName: "lcmc"
+    siteCollection: "lcmc"
+    contentRootPath: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center"
+    contentRootItemId: "{244D564F-91DC-4CCE-8AE7-B074BFB26EA3}"
+    pageTemplateId: "{D77937AC-BAE4-4EB0-8D7E-69EC09D5BBFC}"
+    pageTemplateName: "Services Page"
+    pagesUi:
+      section: "Designing"
+      control: "Page Design"
+      fieldName: "Page Design"
+      note: "XM Cloud Pages right-hand pane → Designing → Page Design dropdown. MCP field name is exactly 'Page Design' (space). Write GUID of the Page Design item."
+    targetPageDesign:
+      name: "West Jefferson Default"
+      expectedPath: "/sitecore/content/lcmc/lcmc/Presentation/Page Designs/West Jefferson Default"
+      itemId: ""
+      note: "Not resolved this session. Do not reuse IA create pageDesignId {917B09BA-1495-4EE0-9E1C-36AA268CB54B} — that is the prior Default assigned on create, not West Jefferson Default."
+    priorPageDesignId: "{917B09BA-1495-4EE0-9E1C-36AA268CB54B}"
+    updatePlan:
+      tool: "update_fields_on_item"
+      fields:
+        - { name: "Page Design", value: "<West Jefferson Default item GUID>" }
+      testFirst: "{3C6D2FF3-5E8F-483D-9FFD-A24AFCF83A58}"
+      scope: "direct children of WJMC home only (siblings of About Us); L3 Our Services pages not in this sibling set"
+    children:
+      - { name: "Our Services", itemId: "{2C56B473-70EE-4A89-BDD5-CFED2A5FCDD8}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services", result: "not-attempted" }
+      - { name: "Patients and Visitors", itemId: "{D922D27F-C05C-4431-98BB-27A36A5DEE2F}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Patients and Visitors", result: "not-attempted" }
+      - { name: "About Us", itemId: "{3C6D2FF3-5E8F-483D-9FFD-A24AFCF83A58}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/About Us", result: "failed-mcp-timeout" }
+      - { name: "Our Locations", itemId: "{2C5BA133-5EC7-49FC-8EFF-03B25011B504}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Locations", result: "not-attempted" }
+      - { name: "Contact Us", itemId: "{2B129408-A7FC-4E51-A079-5F3627F47485}", path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Contact Us", result: "not-attempted" }
+    verification:
+      checkedAt: "2026-09-09T16:50:00Z"
+      passed:
+        - "mcp_auth succeeded for user-marketer"
+        - "Field name Page Design confirmed from prior MCP reads of Services Page items"
+      failed:
+        - "All Marketer MCP item reads/writes timed out waiting for scoped connection after auth"
+        - "West Jefferson Default page design item ID not resolved"
+        - "About Us Page Design not updated or read back"
+      pendingManual:
+        - "Retry MCP from a session where user-marketer tools connect (not only mcp_auth)"
+        - "Resolve /sitecore/content/lcmc/lcmc/Presentation/Page Designs/West Jefferson Default ID"
+        - "update_fields_on_item About Us first, read back Page Design, then siblings"
+        - "Publish WJMC children after Page Design assignment"
+    notes:
+      - "2026-09-09: Direct children listed from lcmc-wjmc-microsite manifest IDs. Parent WJMC home not in scope. L3 service pages under Our Services not updated. GitLens MCP connected; Marketer tools did not."
+
+  - name: "lcmc-wjmc-ent-subpages"
+    kind: "ia-create"
+    category: "IA"
+    status: "complete"
+    createdAt: "2026-09-09T16:47:00Z"
+    updatedAt: "2026-09-09T17:25:00Z"
+    siteName: "lcmc"
+    siteCollection: "lcmc"
+    contentRootPath: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/Ears Nose and Throat Care"
+    contentRootItemId: "{66B44E6A-6D2F-4B01-BB8A-A26E4E3EC29C}"
+    pageTemplateId: "{D77937AC-BAE4-4EB0-8D7E-69EC09D5BBFC}"
+    pageTemplateName: "Services Page"
+    pageTemplateSource: "Confirmed on parent ENT hub and About Us via MCP; same Services Page as sibling WJMC service pages."
+    targetPageDesign:
+      name: "West Jefferson Default"
+      expectedPath: "/sitecore/content/lcmc/lcmc/Presentation/Page Designs/West Jefferson Default"
+      itemId: "{5944F724-0620-4D9F-9317-AB0B80D9D094}"
+      copyFrom:
+        - { name: "About Us", itemId: "{3C6D2FF3-5E8F-483D-9FFD-A24AFCF83A58}" }
+        - { name: "Contact Us", itemId: "{2B129408-A7FC-4E51-A079-5F3627F47485}" }
+      doNotUse: "{917B09BA-1495-4EE0-9E1C-36AA268CB54B}"
+    iaSource: "docs/ai/ia/lcmc-wjmc-ia.md"
+    sourceSite: "https://www.lcmchealth.org/west-jefferson-medical-center/our-services/ears-nose-throat-care/"
+    createdCount: 3
+    skippedCount: 0
+    failedCount: 0
+    plannedPages:
+      - name: "Ear"
+        itemId: "{B8E18689-CB80-4194-9166-797ED30706F2}"
+        path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/Ears Nose and Throat Care/Ear"
+        route: "/West-Jefferson-Medical-Center/Our-Services/Ears-Nose-and-Throat-Care/Ear"
+        liveUrl: "https://www.lcmchealth.org/west-jefferson-medical-center/our-services/ears-nose-throat-care/ear/"
+        liveTitle: "Ear / Ear Care Services Marrero"
+        pageTitle: "Ear"
+        pageSubtitle: "From balance problems to surgical ear treatments, we're here to help"
+        pageDesign: "{5944F724-0620-4D9F-9317-AB0B80D9D094}"
+        workflow: "Draft"
+        result: "created"
+      - name: "Nose"
+        itemId: "{B95A263A-FD7A-4243-82CA-8FEBE67C4134}"
+        path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/Ears Nose and Throat Care/Nose"
+        route: "/West-Jefferson-Medical-Center/Our-Services/Ears-Nose-and-Throat-Care/Nose"
+        liveUrl: "https://www.lcmchealth.org/west-jefferson-medical-center/our-services/ears-nose-throat-care/nose/"
+        liveTitle: "Nose / Nasal and Sinus Care"
+        pageTitle: "Nose"
+        pageSubtitle: "From allergies to sinus infections, we're here to help"
+        pageDesign: "{5944F724-0620-4D9F-9317-AB0B80D9D094}"
+        workflow: "Draft"
+        result: "created"
+      - name: "Throat Neck and Face Care"
+        itemId: "{FDEEC078-E398-4CE2-91E3-2D0BDA4EC30E}"
+        path: "/sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/Ears Nose and Throat Care/Throat Neck and Face Care"
+        route: "/West-Jefferson-Medical-Center/Our-Services/Ears-Nose-and-Throat-Care/Throat-Neck-and-Face-Care"
+        liveUrl: "https://www.lcmchealth.org/west-jefferson-medical-center/our-services/ears-nose-throat-care/throat/"
+        liveTitle: "Throat, Neck, and Face Care"
+        pageTitle: "Throat, Neck, and Face Care"
+        pageSubtitle: "From sore throats to neck cancer, we're here for you"
+        pageDesign: "{5944F724-0620-4D9F-9317-AB0B80D9D094}"
+        workflow: "Draft"
+        result: "created"
+    omittedLivePages:
+      - { name: "Tympanoplasty", url: "https://www.lcmchealth.org/west-jefferson-medical-center/our-services/ears-nose-throat-care/ear/tympanoplasty/", reason: "L4 under Ear; stayed within 3 L3 hub children" }
+      - { name: "Hearing Care", url: "https://www.lcmchealth.org/west-jefferson-medical-center/our-services/ears-nose-throat-care/ear/hearing-care/", reason: "L4 under Ear; stayed within 3 L3 hub children" }
+    verification:
+      checkedAt: "2026-09-09T17:25:00Z"
+      passed:
+        - "list_sites confirmed site lcmc"
+        - "Parent ENT item confirmed by ID and path {66B44E6A-6D2F-4B01-BB8A-A26E4E3EC29C}"
+        - "Services Page template {D77937AC-BAE4-4EB0-8D7E-69EC09D5BBFC} confirmed on parent and get_page_template_by_id"
+        - "Page Design copied from About Us: West Jefferson Default {5944F724-0620-4D9F-9317-AB0B80D9D094}; not {917B09BA-1495-4EE0-9E1C-36AA268CB54B}"
+        - "All 3 children created via create_content_item; none existed beforehand"
+        - "get_content_item_by_id verified Page Design, pageTitle, Detail, and image on all 3"
+      failed: []
+      pendingManual:
+        - "Publish subtree (items are Draft workflow)"
+        - "Insert options under ENT parent list only Detail Page {26D9BBEB-8766-40C6-AD67-83C9DA93FA14}; authors cannot insert Services Page without updating __Masters"
+        - "Replace external image XML with DAM dam-id when assets are uploaded"
+    notes:
+      - "2026-09-09: Research complete from live lcmchealth.org WJMC ENT hub. Chose the three live L3 children (Ear, Nose, Throat Neck and Face Care) rather than L4 Hearing Care / Tympanoplasty. GitLens MCP invoke worked; Marketer invoke did not. Same scoped-connection timeout as lcmc-wjmc-page-design-mass-update."
+      - "2026-09-09: Retry after Marketer MCP reauth succeeded. Created 3 Services Pages under ENT parent; Page Design West Jefferson Default {5944F724-...} set on create and verified on read-back."
+
+  - name: "lcmc-ent-split-feature"
+    kind: "datasource"
+    category: "split-feature"
+    status: "complete"
+    createdAt: "2026-09-09T23:00:00Z"
+    updatedAt: "2026-09-09T23:00:00Z"
+    siteName: "lcmc"
+    exampleItem:
+      name: "ENT Hear the Parade"
+      itemId: "{44954917-B4A7-47CC-AC79-6FEA2F74B9FC}"
+      path: "/sitecore/content/lcmc/lcmc/Data/Split Features/ENT Hear the Parade"
+      templateId: "{70780390-A3EB-478D-B5DE-062BA3C9E897}"
+      parentId: "{23FFFC7A-4D86-4004-8D56-B99795DD32FB}"
+    notes:
+      - "New Orleans ENT story: festivals, brass, humidity vs sinus/hearing. CTAs Book an ENT visit (Patient Appointments + Gabrielle Moreau query) and Explore ENT care (WJMC ENT hub). Reused Neighborhood Care DAM image until an ENT-specific asset is uploaded. Assign SplitFeature on a page in Pages; publish Draft."
+
+  - name: "lcmc-ent-multipromo-datasources"
+    kind: "content-create"
+    category: "Promos"
+    status: "complete"
+    createdAt: "2026-09-10T16:35:00Z"
+    updatedAt: "2026-09-10T16:35:00Z"
+    siteCollection: "lcmc"
+    siteName: "lcmc"
+    componentName: "MultiPromo"
+    renderingId: "{D806DDF7-39A7-4A6D-8E0A-D138BC53845D}"
+    datasourceTemplateId: "{775D6354-CF01-4F34-9713-D34645079C88}"
+    childTemplateId: "{F94C8C17-70E8-4D8B-9D35-D0465C0E0945}"
+    notes:
+      - "Four ENT MultiPromo parents under Data/MultiPromos {31C8ABD2-3A69-4EB8-90B6-5FF29D52F892}. Sixteen SimplePromo children (4 each). Pages not modified. Suggested variant Version1. Publish folder for Edge."
+    folder:
+      name: "MultiPromos"
+      itemId: "{31C8ABD2-3A69-4EB8-90B6-5FF29D52F892}"
+      path: "/sitecore/content/lcmc/lcmc/Data/MultiPromos"
+      preexisting: true
+    items:
+      - { name: "ENT Care Areas", itemId: "{9F750D63-F9FE-463D-B16D-9BA31A397E3B}", path: "/sitecore/content/lcmc/lcmc/Data/MultiPromos/ENT Care Areas" }
+      - { name: "ENT Physicians", itemId: "{E20851C5-252F-425B-8D1F-672C817BEDBA}", path: "/sitecore/content/lcmc/lcmc/Data/MultiPromos/ENT Physicians" }
+      - { name: "Care at West Jefferson", itemId: "{5C85CEA9-9426-4CCE-9CF4-807983E5578E}", path: "/sitecore/content/lcmc/lcmc/Data/MultiPromos/Care at West Jefferson" }
+      - { name: "Start an ENT Visit", itemId: "{A50AFB1D-3E3E-46D7-812C-87E62288EB98}", path: "/sitecore/content/lcmc/lcmc/Data/MultiPromos/Start an ENT Visit" }
+    verification:
+      checkedAt: "2026-09-10T16:35:00Z"
+      passed:
+        - "Four MultiPromo parents created under Data/MultiPromos"
+        - "Sixteen SimplePromo children created (4 per parent)"
+        - "ENT Care Areas children + Moreau heading/link read-back verified"
+      failed: []
+      pendingManual:
+        - "Publish Data/MultiPromos including subitems"
+        - "Place MultiPromo on a page and assign one ENT datasource per instance"
+        - "Select Version1 for LCMC teal layout when desired"
+
+  - name: "lcmc-herost-datasources"
+    kind: "content-create"
+    category: "Hero"
+    status: "complete"
+    createdAt: "2026-09-10T16:40:00Z"
+    updatedAt: "2026-09-10T16:40:00Z"
+    siteCollection: "lcmc"
+    siteName: "lcmc"
+    componentName: "HeroST"
+    renderingId: "{7943A20A-669D-4921-81EE-F4EC7F2E78A3}"
+    datasourceTemplateId: "{C241957A-B7CC-4BDD-962F-BF8652ED595C}"
+    notes:
+      - "HeroST picker requires @@templatename HeroST Folder. Data/Heros is Hero Folder (old Hero template only), so created /sitecore/content/lcmc/lcmc/Data/HeroST {2FCF0F10-9874-4444-8C58-8FB317432623}. Four HeroST items; Image1/Image2 left empty for authoring. Two ENT-focused (Hear the Parade, ENT Physicians)."
+    folder:
+      name: "HeroST"
+      itemId: "{2FCF0F10-9874-4444-8C58-8FB317432623}"
+      path: "/sitecore/content/lcmc/lcmc/Data/HeroST"
+      templateId: "{91F1954F-86D9-4859-9885-3E42E8D8A2A9}"
+    items:
+      - { name: "ENT Hear the Parade", itemId: "{40033320-2E3A-40C1-89B3-FD98F165E677}", eyebrow: "West Jefferson ENT", title: "Hear the music. Breathe the parade." }
+      - { name: "ENT Physicians Hero", itemId: "{07B4A14B-231F-462D-A696-7EF41BD6EABB}", eyebrow: "Find a specialist", title: "ENT physicians who speak your language." }
+      - { name: "Westbank Care Hero", itemId: "{4741156F-7FD0-4324-8C17-0AEAA71BC795}", eyebrow: "West Jefferson Medical Center", title: "The right care, right on the Westbank." }
+      - { name: "Book a Visit Hero", itemId: "{047BD9D9-BE88-4341-976F-CEC6B4D79253}", eyebrow: "Patient appointments", title: "Book a visit in a few steps." }
+    verification:
+      checkedAt: "2026-09-10T16:40:00Z"
+      passed:
+        - "HeroST Folder created; four HeroST children verified; Image1/Image2 empty; ENT eyebrow/title/links verified"
+      failed: []
+      pendingManual:
+        - "Publish Data/HeroST including subitems"
+        - "Assign Image1 (and Image2 if using a two-image variant) in Pages"
+        - "Place HeroST on a page and pick a datasource; enable Dark Image if photos are dark"
+
+  - name: "lcmc-herost-multipromo-headless-variants"
+    kind: "content-create"
+    category: "Presentation"
+    status: "complete"
+    createdAt: "2026-09-10T16:45:00Z"
+    updatedAt: "2026-09-10T16:45:00Z"
+    siteCollection: "lcmc"
+    siteName: "lcmc"
+    notes: >
+      Ensured LCMC Headless Variants match all React named exports for HeroST and MultiPromo.
+      HeroST already had Default/Centered/Right/SplitScreen/Stacked; added Version1 and Version2.
+      MultiPromo already had Default/SingleColumn/Stacked/Version1; added SideTabs, TopTabs,
+      TopTabsNoImage, Version2.
+    heroST:
+      containerPath: "/sitecore/content/lcmc/lcmc/Presentation/Headless Variants/HeroST"
+      containerId: "{4A003C37-D137-47DD-9CF8-149F3D9BFEFF}"
+      variants:
+        - { name: "Default", itemId: "{47A07212-D874-4077-BC67-C82B71B23AB7}", preexisting: true }
+        - { name: "Centered", itemId: "{D86E6F76-23E1-4EB0-A0D3-418FB37E2480}", preexisting: true }
+        - { name: "Right", itemId: "{DED60EE8-1604-4D22-A156-04DB30D44B3F}", preexisting: true }
+        - { name: "SplitScreen", itemId: "{EBC60782-8D0A-4BEB-AB0A-00113E93B6E4}", preexisting: true }
+        - { name: "Stacked", itemId: "{4F88894D-6CC6-4C97-A404-7469F749F93A}", preexisting: true }
+        - { name: "Version1", itemId: "{BF724F13-2FA9-44FD-A4E6-8289E404A847}" }
+        - { name: "Version2", itemId: "{35522CCF-E04A-4D82-98BE-A06B94DBF093}" }
+    multiPromo:
+      containerPath: "/sitecore/content/lcmc/lcmc/Presentation/Headless Variants/MultiPromo"
+      containerId: "{093498E0-C8F7-40B5-93C9-7F7A3CF147BE}"
+      variants:
+        - { name: "Default", itemId: "{53094257-4E18-40AD-AC8B-8F70BACC45F5}", preexisting: true }
+        - { name: "SingleColumn", itemId: "{915D9AB6-D335-49F1-8E44-9FF86E88F9D0}", preexisting: true }
+        - { name: "Stacked", itemId: "{C5F7A623-F143-4CD7-90A9-6613B9758293}", preexisting: true }
+        - { name: "SideTabs", itemId: "{ACB48A62-F32F-43C4-82F6-BEA206DFEEC2}" }
+        - { name: "TopTabs", itemId: "{3BEC9A5D-A1FD-4AEB-BF04-7944EDAD44BE}" }
+        - { name: "TopTabsNoImage", itemId: "{252E0194-AF9C-4C7F-96D9-F403D789EE79}" }
+        - { name: "Version1", itemId: "{06714DB7-4BC2-430E-8990-82F264AA101F}", preexisting: true }
+        - { name: "Version2", itemId: "{905A46D8-D7B5-48A7-A77F-A590173937F0}" }
+    verification:
+      checkedAt: "2026-09-10T16:45:00Z"
+      passed:
+        - "HeroST container has all 7 React exports as Variant Definitions"
+        - "MultiPromo container has all 8 React exports as Variant Definitions"
+        - "Verified via get_content_item_by_path after create"
+      failed: []
+      pendingManual:
+        - "Publish Presentation/Headless Variants/HeroST and MultiPromo for Edge"
+        - "Refresh Pages; Design tab should list the new variants"
 
   - name: "MultiPromo"
     kind: "update"
@@ -10336,7 +11375,8 @@ ia:
         - "TopTabs"
         - "TopTabsNoImage"
         - "Version1"
-      note: "Version1 named export implemented 2026-08-25. Teal/white split, three-up overlapping cards, optional portrait with concave white mask, carousel when more than 3 children."
+        - "Version2"
+      note: "Version1 named export implemented 2026-08-25. Teal/white split, three-up overlapping cards, optional portrait with concave white mask, carousel when more than 3 children. LCMC Headless Variants synced 2026-09-10 including tab variants and Version2."
 
     sitecoreEnvironment:
       siteName: "lcmc"

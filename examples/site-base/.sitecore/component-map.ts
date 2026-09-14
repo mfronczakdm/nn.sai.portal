@@ -15,6 +15,11 @@ import * as ProductCarousel from 'src/components/uiim/products/ProductCarousel';
 import * as productdetailprops from 'src/components/uiim/products/product-detail.props';
 import * as productcarouselprops from 'src/components/uiim/products/product-carousel.props';
 import * as NewsListing from 'src/components/uiim/news/NewsListing';
+import * as PhysicianListing from 'src/components/uiim/locations/PhysicianListing';
+import * as PhysicianDetail from 'src/components/uiim/locations/PhysicianDetail';
+import * as LocationListingMapdev from 'src/components/uiim/locations/LocationListingMap.dev';
+import * as LocationListing from 'src/components/uiim/locations/LocationListing';
+import * as HospitalDetail from 'src/components/uiim/locations/HospitalDetail';
 import * as CareerListing from 'src/components/uiim/lawyers/CareerListing';
 import * as careerlistingprops from 'src/components/uiim/lawyers/career-listing.props';
 import * as BioListing from 'src/components/uiim/lawyers/BioListing';
@@ -334,6 +339,11 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['product-detail', { ...productdetailprops }],
   ['product-carousel', { ...productcarouselprops }],
   ['NewsListing', { ...NewsListing, componentType: 'client' }],
+  ['PhysicianListing', { ...PhysicianListing, componentType: 'client' }],
+  ['PhysicianDetail', { ...PhysicianDetail }],
+  ['LocationListingMap', { ...LocationListingMapdev }],
+  ['LocationListing', { ...LocationListing, componentType: 'client' }],
+  ['HospitalDetail', { ...HospitalDetail }],
   ['CareerListing', { ...CareerListing, componentType: 'client' }],
   ['career-listing', { ...careerlistingprops }],
   ['BioListing', { ...BioListing, componentType: 'client' }],

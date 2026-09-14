@@ -6,6 +6,7 @@ import {
   SEARCH_WIDGET_ID,
 } from '@/lib/search-customizations';
 import {
+  foldPulseText,
   getPulsePack,
   matchPulsePackIntent,
   type PulseSitePack,
@@ -144,8 +145,7 @@ function stripHtml(html: string): string {
 
 /** Significant tokens from the user question for Edge matching / scoring. */
 export function extractKeywords(question: string): string[] {
-  const tokens = question
-    .toLowerCase()
+  const tokens = foldPulseText(question)
     .replace(/[^a-z0-9\s/-]/g, ' ')
     .split(/\s+/)
     .map((t) => t.trim())
@@ -166,6 +166,7 @@ export function classifySourceType(path?: string): PulseSourceType {
   if (/\/Resources\//i.test(p) || /\/Technical\//i.test(p)) return 'knowledge-article';
   if (/\/Lawyers\/Bios?\//i.test(p) || /\/Bios?\//i.test(p)) return 'people-and-teams';
   if (/\/People(?:%20|-)?and(?:%20|-)?Teams?\//i.test(p)) return 'people-and-teams';
+  if (/\/Find(?:%20|-)?a(?:%20|-)?Provider\//i.test(p)) return 'people-and-teams';
   if (
     /\/Products?(?:\/|$)/i.test(p) ||
     /\/Capabilities(?:\/|$)/i.test(p) ||
@@ -648,6 +649,10 @@ export async function retrievePulseSources(
   const stateCode = pack.enableStatePersona ? opts.stateCode ?? null : null;
   const keywords = extractKeywords(question);
 
+  const extras = pack.retrieveExtraSources
+    ? await pack.retrieveExtraSources(question, opts)
+    : [];
+
   const intent = matchPulsePackIntent(question, pack);
   let intentSources: PulseSource[] = [];
   if (intent?.citationItemIds?.length) {
@@ -675,6 +680,7 @@ export async function retrievePulseSources(
     }
   }
 
-  if (!intentSources.length) return dynamic;
-  return mergeIntentAndDynamic(intentSources, dynamic);
+  const withIntent = intentSources.length ? mergeIntentAndDynamic(intentSources, dynamic) : dynamic;
+  if (!extras.length) return withIntent;
+  return mergeIntentAndDynamic(extras, withIntent);
 }

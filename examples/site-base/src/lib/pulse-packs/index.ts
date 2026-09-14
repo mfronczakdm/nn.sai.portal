@@ -2,6 +2,7 @@ import { amkorPulsePack } from './amkor';
 import { amesburytruthPulsePack } from './amesburytruth';
 import { atlantaApparelPulsePack } from './atlanta-apparel';
 import { eraPulsePack } from './era';
+import { lcmcPulsePack } from './lcmc';
 import { matchPulsePackIntent } from './match';
 import { pillsburylawPulsePack } from './pillsburylaw';
 import { quanexPulsePack } from './quanex';
@@ -13,8 +14,9 @@ export type {
   PulsePackIntentAnswer,
   PulseSitePack,
   PulseTypeLabels,
+  PulseWidgetCopy,
 } from './types';
-export { matchPulsePackIntent, normalizePulseQuestion } from './match';
+export { foldPulseText, matchPulsePackIntent, normalizePulseQuestion } from './match';
 
 const DEFAULT_PACK_SITE = 'pillsburylaw';
 
@@ -26,6 +28,7 @@ export const PULSE_SITE_PACKS: Readonly<Record<string, PulseSitePack>> = {
   pillsburylaw: pillsburylawPulsePack,
   amkor: amkorPulsePack,
   'atlanta-apparel': atlantaApparelPulsePack,
+  lcmc: lcmcPulsePack,
 };
 
 export function normalizePulseSiteName(siteName?: string | null): string {

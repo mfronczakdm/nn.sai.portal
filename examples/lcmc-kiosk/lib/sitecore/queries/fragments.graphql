@@ -1,0 +1,44 @@
+# =============================================================================
+# FIELD NAME STATUS — reconcile before go-live
+# =============================================================================
+# These queries use the REAL LCMC Sitecore field names confirmed from
+# /sitecore/content/lcmc/lcmc/Data on 2026-09-09.
+#
+# LCMC Physician (template: LCMC Physician)
+#   PhysicianFullName, Credentials, Specialty, PhysicianBio,
+#   PhysicianPhone, ServingLocations, PhysicianDetailPage
+#
+# LCMC Hospital Location
+#   LocationTitle, LocationShortName, LocationDescription, StreetAddress,
+#   City, State, PostalCode, PhoneNumber, HoursText, Latitude, Longitude,
+#   HasEmergencyDepartment, ParkingInfo, VisitorInfo, LocationType,
+#   LandingPage, OfferedServices, LocationPhysicians
+#
+# LCMC Service  ← used as the kiosk "department" (there is no Departments folder)
+#   ServiceTitle, ServiceShortDescription, ServiceDetail, OfferedAtLocations
+#
+# Assumed in the original kiosk brief but NOT present on current templates:
+#   Physician.photo / PhysicianPhoto, acceptingNewPatients, languagesSpoken,
+#   departmentRef, Department.floor, Department.wing, Department.icon,
+#   Location.building, Location.floor (as dedicated fields)
+#
+# Do not add those names to live queries until they exist on the templates —
+# Edge will error or return empty field objects. UI treats them as optional.
+# =============================================================================
+
+fragment ItemIdentity on Item {
+  id
+  name
+  displayName
+  path
+}
+
+fragment FieldValue on Field {
+  value
+}
+
+fragment LocationTarget on Item {
+  id
+  name
+  displayName
+}

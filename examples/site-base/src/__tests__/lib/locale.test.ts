@@ -1,38 +1,51 @@
 import {
+  ATLANTA_APPAREL_LOCALES,
   DEFAULT_LOCALE,
   JAPANESE_LOCALE,
   KOREAN_LOCALE,
   SIMPLIFIED_CHINESE_LOCALE,
+  COLOMBIAN_SPANISH_LOCALE,
+  SPANISH_LOCALE,
   SUPPORTED_LOCALES,
   buildLanguageSwitchPathname,
   buildLocalePathname,
+  getLocaleDisplayName,
   getLocaleFromPathname,
+  isAtlantaApparelSiteName,
   isSupportedLocale,
+  resolveAtlantaApparelLanguageOptions,
   stripLocaleFromPathname,
 } from '@/lib/locale';
 
 describe('locale helpers', () => {
-  it('supports the default language plus the three Amkor languages', () => {
+  it('supports the default language plus Amkor, Atlanta Apparel, and LCMC languages', () => {
     expect(SUPPORTED_LOCALES).toEqual([
       DEFAULT_LOCALE,
       JAPANESE_LOCALE,
       KOREAN_LOCALE,
       SIMPLIFIED_CHINESE_LOCALE,
+      SPANISH_LOCALE,
+      COLOMBIAN_SPANISH_LOCALE,
     ]);
   });
 
   it('uses the Sitecore language names as locale codes', () => {
-    expect([JAPANESE_LOCALE, KOREAN_LOCALE, SIMPLIFIED_CHINESE_LOCALE]).toEqual([
-      'ja-JP',
-      'ko-KR',
-      'zh-CN',
-    ]);
+    expect([
+      JAPANESE_LOCALE,
+      KOREAN_LOCALE,
+      SIMPLIFIED_CHINESE_LOCALE,
+      SPANISH_LOCALE,
+      COLOMBIAN_SPANISH_LOCALE,
+    ]).toEqual(['ja-JP', 'ko-KR', 'zh-CN', 'es-ES', 'es-CO']);
   });
 
   describe('isSupportedLocale', () => {
-    it.each([['ja-JP'], ['ko-KR'], ['zh-CN'], ['en']])('accepts %s', (locale) => {
-      expect(isSupportedLocale(locale)).toBe(true);
-    });
+    it.each([['ja-JP'], ['ko-KR'], ['zh-CN'], ['es-ES'], ['es-CO'], ['en']])(
+      'accepts %s',
+      (locale) => {
+        expect(isSupportedLocale(locale)).toBe(true);
+      }
+    );
 
     it.each([['ja'], ['zh-Hans'], [''], [undefined], [null]])('rejects %s', (locale) => {
       expect(isSupportedLocale(locale as string | undefined)).toBe(false);
@@ -43,6 +56,8 @@ describe('locale helpers', () => {
     it('reads the locale from the first segment', () => {
       expect(getLocaleFromPathname('/ja-JP/quality')).toBe('ja-JP');
       expect(getLocaleFromPathname('/ja-JP')).toBe('ja-JP');
+      expect(getLocaleFromPathname('/es-CO/for-providers')).toBe('es-CO');
+      expect(getLocaleFromPathname('/es-ES/visit')).toBe('es-ES');
     });
 
     it('returns undefined for unprefixed and unsupported paths', () => {
@@ -101,6 +116,63 @@ describe('locale helpers', () => {
 
     it('normalizes trailing slashes', () => {
       expect(buildLanguageSwitchPathname('/quality/', 'ja-JP')).toBe('/ja-JP/quality');
+    });
+
+    it('prefixes Atlanta Spanish with es-ES and LCMC Spanish with es-CO', () => {
+      expect(buildLanguageSwitchPathname('/visit', SPANISH_LOCALE)).toBe('/es-ES/visit');
+      expect(buildLanguageSwitchPathname('/for-providers', COLOMBIAN_SPANISH_LOCALE)).toBe(
+        '/es-CO/for-providers'
+      );
+    });
+  });
+
+  describe('Atlanta Apparel language options', () => {
+    it('falls back to English, Japanese, and Spanish Sitecore names', () => {
+      expect(ATLANTA_APPAREL_LOCALES).toEqual(['en', 'ja-JP', 'es-ES']);
+      expect(resolveAtlantaApparelLanguageOptions()).toEqual([
+        { text: 'English', locale: 'en' },
+        { text: 'Japanese', locale: 'ja-JP' },
+        { text: 'Spanish', locale: 'es-ES' },
+      ]);
+    });
+
+    it('prefers Sitecore site languages when they include en, ja, and es', () => {
+      expect(
+        resolveAtlantaApparelLanguageOptions(['en', 'ja-JP', 'es-ES', 'ko-KR', 'zh-CN'])
+      ).toEqual([
+        { text: 'English', locale: 'en' },
+        { text: 'Japanese', locale: 'ja-JP' },
+        { text: 'Spanish', locale: 'es-ES' },
+      ]);
+    });
+
+    it('maps short codes onto installed Sitecore language names (es → es-ES, not es-CO)', () => {
+      expect(resolveAtlantaApparelLanguageOptions(['en', 'ja', 'es'])).toEqual([
+        { text: 'English', locale: 'en' },
+        { text: 'Japanese', locale: 'ja-JP' },
+        { text: 'Spanish', locale: 'es-ES' },
+      ]);
+    });
+
+    it('keeps the fallback when the site list is missing Japanese or Spanish', () => {
+      expect(resolveAtlantaApparelLanguageOptions(['en'])).toEqual([
+        { text: 'English', locale: 'en' },
+        { text: 'Japanese', locale: 'ja-JP' },
+        { text: 'Spanish', locale: 'es-ES' },
+      ]);
+    });
+
+    it('labels locales for the Atlanta dropdown', () => {
+      expect(getLocaleDisplayName('en')).toBe('English');
+      expect(getLocaleDisplayName('ja-JP')).toBe('Japanese');
+      expect(getLocaleDisplayName('es-ES')).toBe('Spanish');
+      expect(getLocaleDisplayName('es-CO')).toBe('Spanish');
+    });
+
+    it('recognizes the Atlanta Apparel site name', () => {
+      expect(isAtlantaApparelSiteName('atlanta-apparel')).toBe(true);
+      expect(isAtlantaApparelSiteName('AmericasMart')).toBe(false);
+      expect(isAtlantaApparelSiteName(undefined)).toBe(false);
     });
   });
 });

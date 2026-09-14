@@ -1,7 +1,7 @@
 'use client';
 
 import type { JSX } from 'react';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { RichText, Text, useSitecore } from '@sitecore-content-sdk/nextjs';
 import {
   ArrowRight,
@@ -19,23 +19,38 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/componen
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { cn } from '@/lib/utils';
+import { trackLcmcAppointmentBookedEvent, trackLcmcBookingStartedEvent } from '@/lib/lcmc-booking-started-event';
 import { ComponentProps } from '@/lib/component-props';
 import { NoDataFallback } from '@/utils/NoDataFallback';
 import {
+  applyLcmcAppointmentQuery,
   buildLcmcAvailability,
   confirmationNumber,
   filterLcmcAvailability,
   findLcmcSlot,
   formatHoldUntil,
   formatSlotTime,
+  LCMC_ENT_SPECIALTY,
+  LCMC_FALLBACK_PROVIDERS,
+  LCMC_PHYSICIANS_FOLDER_PATH,
   LCMC_VISIT_KEYS,
+  LCMC_WJMC_LOCATION_NAME,
   lcmcVisitDetailLine,
   lcmcVisitLabel,
-  listLcmcLocations,
-  listLcmcProviders,
+  listLcmcFilterOptions,
+  parseLcmcAppointmentSearch,
+  providersFromPhysicianListing,
+  resolveLcmcDeepLinkVisit,
+  shouldSkipLcmcVisitTypes,
   type LcmcDayGroup,
+  type LcmcProvider,
   type LcmcSelectedSlot,
 } from '@/lib/lcmc-appointment-pack';
+import {
+  hydratePhysicianLocations,
+  type PhysicianListingChild,
+  type PhysicianListingLocation,
+} from '@/lib/physician-listing-from-edge';
 
 type JsonText = { jsonValue?: { value?: string } };
 
@@ -82,13 +97,13 @@ const FALLBACK_VISITS: { key: string; title: string; description: string }[] = [
   {
     key: 'check-up',
     title: 'Check up',
-    description: 'Your child needs a well-baby visit or an annual, sports, or camp physical.',
+    description: 'You need an annual physical, sports physical, or a routine wellness visit.',
   },
   {
     key: 'sick-visit',
     title: 'Sick visit',
     description:
-      'Your child is sick. For example, your child has a cold, fever, sore throat, ear pain or other illness.',
+      'You are sick. For example, you have a cold, fever, sore throat, ear pain or other illness.',
   },
   {
     key: 'medicine-behavior',
@@ -99,19 +114,17 @@ const FALLBACK_VISITS: { key: string; title: string; description: string }[] = [
   {
     key: 'flu-shot',
     title: 'Flu shot (seasonal)',
-    description:
-      'Your child is healthy and needs a flu shot. You can schedule flu shots at any primary care location.',
+    description: 'You are healthy and need a flu shot. You can schedule flu shots at any primary care location.',
   },
   {
     key: 'covid-vaccine',
     title: 'COVID-19 vaccine',
-    description: 'Kids ages 6 months+ are eligible for the COVID-19 vaccine.',
+    description: 'Adults and teens are eligible for the COVID-19 vaccine.',
   },
   {
     key: 'flu-and-covid',
     title: 'Flu and COVID-19',
-    description:
-      'Your child can receive the flu vaccine and this season’s COVID-19 vaccine at the same time.',
+    description: 'You can receive the flu vaccine and this season’s COVID-19 vaccine at the same time.',
   },
 ];
 
@@ -130,6 +143,12 @@ function toJsonText(field: unknown): JsonText | undefined {
 function fieldString(field?: JsonText | null): string {
   const value = field?.jsonValue?.value;
   return typeof value === 'string' ? value.trim() : '';
+}
+
+function adultVisitQuestion(field?: JsonText | null): string {
+  const authored = fieldString(field);
+  if (!authored) return 'What type of visit would you like to schedule?';
+  return authored.replace(/\s+for your child\??/i, '?').replace(/\?\?+/g, '?');
 }
 
 function toEditableField(field?: JsonText | null): JsonFieldValue | undefined {
@@ -153,8 +172,16 @@ function mapVisitChild(child: Record<string, unknown>, index: number): LcmcVisit
   };
 }
 
+function hasAssignedAppointmentDatasource(
+  fields?: LcmcAppointmentSchedulerProps['fields'] | null,
+  rendering?: { dataSource?: string } | null
+): boolean {
+  if (resolveDatasource(fields)) return true;
+  return Boolean(rendering?.dataSource?.trim());
+}
+
 function resolveDatasource(
-  fields?: LcmcAppointmentSchedulerProps['fields']
+  fields?: LcmcAppointmentSchedulerProps['fields'] | null
 ): LcmcAppointmentDatasource | null {
   const graphql = fields?.data?.datasource;
   if (graphql && typeof graphql === 'object') {
@@ -240,15 +267,21 @@ function InitialsAvatar({ initials, name }: { initials: string; name: string }):
   );
 }
 
-type InnerProps = LcmcAppointmentSchedulerProps & { isEditing: boolean };
+type InnerProps = LcmcAppointmentSchedulerProps & { isEditing: boolean; language: string };
 
 const LcmcAppointmentSchedulerInner = ({
   fields,
   params,
+  rendering,
   isEditing,
+  language,
 }: InnerProps): JSX.Element => {
   const { styles, RenderingIdentifier } = params || {};
-  const datasource = resolveDatasource(fields) ?? (isEditing ? {} : null);
+  const resolved = resolveDatasource(fields);
+  const datasourceAssigned = hasAssignedAppointmentDatasource(fields, rendering);
+  // Edge can drop fields.data when ComponentQuery fails, same as PhysicianListing.
+  // If Pages assigned a datasource GUID, still render fallback visit copy.
+  const datasource = resolved ?? (isEditing || datasourceAssigned ? {} : null);
 
   const [step, setStep] = useState<WizardStep>('visit-types');
   const [visitKey, setVisitKey] = useState('');
@@ -258,6 +291,8 @@ const LcmcAppointmentSchedulerInner = ({
   const [filtersOpen, setFiltersOpen] = useState(false);
   const [clinicFilters, setClinicFilters] = useState<string[]>([]);
   const [providerFilters, setProviderFilters] = useState<string[]>([]);
+  const [specialtyFilters, setSpecialtyFilters] = useState<string[]>([]);
+  const [catalogProviders, setCatalogProviders] = useState<LcmcProvider[]>(LCMC_FALLBACK_PROVIDERS);
   const [loginEmail, setLoginEmail] = useState('');
   const [loginPassword, setLoginPassword] = useState('');
   const [guestFirst, setGuestFirst] = useState('');
@@ -266,19 +301,84 @@ const LcmcAppointmentSchedulerInner = ({
   const [guestPhone, setGuestPhone] = useState('');
   const [confirmCode, setConfirmCode] = useState('');
   const [bookedAs, setBookedAs] = useState<'my-lcmc' | 'guest' | null>(null);
+  const bookingStartedSent = useRef(false);
+
+  const sendBookingStartedOnce = (visitKeyValue?: string, visitTitleValue?: string) => {
+    if (isEditing || bookingStartedSent.current) return;
+    bookingStartedSent.current = true;
+    void trackLcmcBookingStartedEvent({
+      visitKey: visitKeyValue,
+      visitTitle: visitTitleValue,
+    });
+  };
+
+  useEffect(() => {
+    if (typeof fetch === 'undefined') return;
+
+    const controller = new AbortController();
+    const query = new URLSearchParams({
+      datasource: LCMC_PHYSICIANS_FOLDER_PATH,
+      language: language || 'en',
+    });
+    if (isEditing) query.set('preview', '1');
+
+    fetch(`/api/physician-listing?${query.toString()}`, { signal: controller.signal })
+      .then((response) => {
+        if (!response.ok) {
+          console.error('[LcmcAppointmentScheduler] /api/physician-listing failed', response.status);
+          return { physicians: [] as PhysicianListingChild[], locations: [] as PhysicianListingLocation[] };
+        }
+        return response.json() as Promise<{
+          physicians?: PhysicianListingChild[];
+          locations?: PhysicianListingLocation[];
+        }>;
+      })
+      .then((payload) => {
+        const hydrated = hydratePhysicianLocations(payload?.physicians ?? [], payload?.locations ?? []);
+        const mapped = providersFromPhysicianListing(hydrated);
+        if (mapped.length > 0) setCatalogProviders(mapped);
+      })
+      .catch((error: unknown) => {
+        if ((error as { name?: string })?.name !== 'AbortError') {
+          console.error('[LcmcAppointmentScheduler] failed to load physicians', error);
+        }
+      });
+
+    return () => controller.abort();
+  }, [isEditing, language]);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const query = parseLcmcAppointmentSearch(window.location.search);
+    const deepLinkVisit = resolveLcmcDeepLinkVisit(query);
+    if (deepLinkVisit && shouldSkipLcmcVisitTypes(query)) {
+      setVisitKey(deepLinkVisit);
+      setVisitTitle(lcmcVisitLabel(deepLinkVisit));
+      setStep('slots');
+    }
+    if (!query.specialty && !query.location && !query.provider) return;
+    const applied = applyLcmcAppointmentQuery(query, listLcmcFilterOptions(catalogProviders));
+    if (applied.specialties.length) setSpecialtyFilters(applied.specialties);
+    if (applied.clinics.length) setClinicFilters(applied.clinics);
+    if (applied.providers.length) setProviderFilters(applied.providers);
+  }, [catalogProviders]);
 
   const now = useMemo(() => new Date(), []);
   const availability = useMemo(
-    () => buildLcmcAvailability({ now, visitKey: visitKey || 'sick-visit' }),
-    [now, visitKey]
+    () => buildLcmcAvailability({ now, visitKey: visitKey || 'sick-visit', providers: catalogProviders }),
+    [now, visitKey, catalogProviders]
   );
   const filtered = useMemo(
-    () => filterLcmcAvailability(availability, { clinics: clinicFilters, providers: providerFilters }),
-    [availability, clinicFilters, providerFilters]
+    () =>
+      filterLcmcAvailability(availability, {
+        clinics: clinicFilters,
+        providers: providerFilters,
+        specialties: specialtyFilters,
+      }),
+    [availability, clinicFilters, providerFilters, specialtyFilters]
   );
   const visibleDays: LcmcDayGroup[] = showAllDays ? filtered : filtered.slice(0, 2);
-  const locations = listLcmcLocations(availability);
-  const providers = listLcmcProviders(availability);
+  const filterOptions = listLcmcFilterOptions(catalogProviders);
   const holdUntil = useMemo(() => new Date(now.getTime() + 15 * 60 * 1000), [now]);
 
   if (!datasource) {
@@ -316,6 +416,7 @@ const LcmcAppointmentSchedulerInner = ({
         }));
 
   const handlePickVisit = (key: string, title: string) => {
+    sendBookingStartedOnce(key, title);
     setVisitKey(key);
     setVisitTitle(title);
     setShowAllDays(false);
@@ -324,6 +425,7 @@ const LcmcAppointmentSchedulerInner = ({
   };
 
   const handlePickSlot = (slotId: string) => {
+    sendBookingStartedOnce(visitKey || 'sick-visit', visitTitle || lcmcVisitLabel(visitKey || 'sick-visit'));
     const found = findLcmcSlot(availability, slotId);
     if (!found) return;
     setSelected({
@@ -338,6 +440,14 @@ const LcmcAppointmentSchedulerInner = ({
   };
 
   const completeBooking = (mode: 'my-lcmc' | 'guest') => {
+    if (mode === 'guest' && !isEditing) {
+      void trackLcmcAppointmentBookedEvent({
+        bookedAs: 'guest',
+        visitKey: selected?.visitKey || visitKey,
+        visitTitle: selected?.visitLabel || visitTitle,
+        providerName: selected?.provider.name,
+      });
+    }
     setBookedAs(mode);
     setConfirmCode(confirmationNumber(new Date()));
     setStep('confirmed');
@@ -352,6 +462,7 @@ const LcmcAppointmentSchedulerInner = ({
     setFiltersOpen(false);
     setClinicFilters([]);
     setProviderFilters([]);
+    setSpecialtyFilters([]);
     setLoginEmail('');
     setLoginPassword('');
     setGuestFirst('');
@@ -393,18 +504,17 @@ const LcmcAppointmentSchedulerInner = ({
 
           {step === 'visit-types' ? (
             <>
-              {(fieldString(datasource.visitQuestion) || isEditing) && (
+              {isEditing && toEditableField(datasource.visitQuestion) ? (
                 <Text
                   tag="h2"
                   field={toEditableField(datasource.visitQuestion)}
                   className="text-foreground text-lg font-semibold md:text-xl"
                 />
-              )}
-              {!fieldString(datasource.visitQuestion) && !isEditing ? (
+              ) : (
                 <h2 className="text-foreground text-lg font-semibold md:text-xl">
-                  What type of visit would you like to schedule for your child?
+                  {adultVisitQuestion(datasource.visitQuestion)}
                 </h2>
-              ) : null}
+              )}
 
               <div className="grid gap-4 sm:grid-cols-2" data-testid="lcmc-appt-visit-grid">
                 {visits.map((visit) => (
@@ -476,35 +586,79 @@ const LcmcAppointmentSchedulerInner = ({
                   <CardHeader>
                     <CardTitle className="text-base">Narrow results</CardTitle>
                   </CardHeader>
-                  <CardContent className="grid gap-6 sm:grid-cols-2">
+                  <CardContent className="grid gap-6 sm:grid-cols-3">
+                    <fieldset>
+                      <legend className="mb-2 text-sm font-semibold">Specialty</legend>
+                      <div className="max-h-48 space-y-2 overflow-y-auto pr-1">
+                        {filterOptions.specialties.map((specialty) => (
+                          <label key={specialty} className="flex items-center gap-2 text-sm">
+                            <input
+                              type="checkbox"
+                              data-testid={`lcmc-filter-specialty-${specialty}`}
+                              checked={specialtyFilters.includes(specialty)}
+                              onChange={() =>
+                                toggleValue(specialtyFilters, specialty, setSpecialtyFilters)
+                              }
+                            />
+                            <span>
+                              {specialty}
+                              {specialty === LCMC_ENT_SPECIALTY ? (
+                                <span className="text-muted-foreground"> (demo)</span>
+                              ) : null}
+                            </span>
+                          </label>
+                        ))}
+                      </div>
+                    </fieldset>
                     <fieldset>
                       <legend className="mb-2 text-sm font-semibold">Location</legend>
-                      <div className="space-y-2">
-                        {locations.map((clinic) => (
+                      <div className="max-h-48 space-y-2 overflow-y-auto pr-1">
+                        {filterOptions.clinics.map((clinic) => (
                           <label key={clinic} className="flex items-center gap-2 text-sm">
                             <input
                               type="checkbox"
                               checked={clinicFilters.includes(clinic)}
                               onChange={() => toggleValue(clinicFilters, clinic, setClinicFilters)}
                             />
-                            {clinic}
+                            <span>
+                              {clinic}
+                              {clinic === LCMC_WJMC_LOCATION_NAME ? (
+                                <span className="text-muted-foreground"> (demo)</span>
+                              ) : null}
+                            </span>
                           </label>
                         ))}
                       </div>
                     </fieldset>
                     <fieldset>
                       <legend className="mb-2 text-sm font-semibold">Provider</legend>
-                      <div className="space-y-2">
-                        {providers.map((name) => (
-                          <label key={name} className="flex items-center gap-2 text-sm">
-                            <input
-                              type="checkbox"
-                              checked={providerFilters.includes(name)}
-                              onChange={() => toggleValue(providerFilters, name, setProviderFilters)}
-                            />
-                            {name}
-                          </label>
-                        ))}
+                      <div
+                        className="max-h-48 space-y-2 overflow-y-auto pr-1"
+                        data-testid="lcmc-appt-provider-filters"
+                      >
+                        {filterOptions.names.map((name) => {
+                          const provider = catalogProviders.find((item) => item.name === name);
+                          return (
+                            <label key={name} className="flex items-center gap-2 text-sm">
+                              <input
+                                type="checkbox"
+                                checked={providerFilters.includes(name)}
+                                onChange={() =>
+                                  toggleValue(providerFilters, name, setProviderFilters)
+                                }
+                              />
+                              <span>
+                                {name}
+                                {provider?.isDemoEntWjmc ? (
+                                  <span className="text-muted-foreground">
+                                    {' '}
+                                    · {LCMC_ENT_SPECIALTY} at {LCMC_WJMC_LOCATION_NAME}
+                                  </span>
+                                ) : null}
+                              </span>
+                            </label>
+                          );
+                        })}
                       </div>
                     </fieldset>
                   </CardContent>
@@ -522,8 +676,21 @@ const LcmcAppointmentSchedulerInner = ({
                         <div className="flex gap-3">
                           <InitialsAvatar initials={row.provider.initials} name={row.provider.name} />
                           <div>
-                            <p className="text-primary font-medium underline-offset-4">{row.provider.name}</p>
+                            <p
+                              className="text-primary font-medium underline-offset-4"
+                              data-testid={
+                                row.provider.isDemoEntWjmc ? 'lcmc-demo-ent-wjmc' : undefined
+                              }
+                            >
+                              {row.provider.name}
+                              {row.provider.isDemoEntWjmc ? (
+                                <span className="text-muted-foreground ml-2 text-xs font-semibold tracking-wide uppercase">
+                                  Demo · {LCMC_ENT_SPECIALTY} · {LCMC_WJMC_LOCATION_NAME}
+                                </span>
+                              ) : null}
+                            </p>
                             <p className="text-muted-foreground text-sm">
+                              {row.provider.specialty ? `${row.provider.specialty} · ` : ''}
                               {row.provider.clinic}
                               <br />
                               {row.provider.address}
@@ -581,7 +748,7 @@ const LcmcAppointmentSchedulerInner = ({
                 ) : (
                   <p>
                     For urgent needs, consider urgent care or the emergency department. Use our
-                    symptom checker for help on where to take your child.
+                    symptom checker for help on where to go.
                   </p>
                 )}
               </div>
@@ -597,7 +764,7 @@ const LcmcAppointmentSchedulerInner = ({
         >
           <Card className="mx-auto max-w-4xl overflow-hidden rounded-2xl shadow-lg">
             <CardHeader className="space-y-2">
-              <p className="text-muted-foreground text-sm">LCMC Health · Manning Family Children&apos;s</p>
+              <p className="text-muted-foreground text-sm">LCMC Health</p>
               <CardTitle className="font-heading text-3xl">
                 {fieldString(datasource.finishTitle) || 'Finish Scheduling'}
               </CardTitle>
@@ -761,7 +928,7 @@ const LcmcAppointmentSchedulerInner = ({
               </div>
             </div>
             <div className="space-y-2">
-              <Label htmlFor="lcmc-guest-dob">Child&apos;s date of birth</Label>
+              <Label htmlFor="lcmc-guest-dob">Date of birth</Label>
               <Input
                 id="lcmc-guest-dob"
                 type="date"
@@ -835,5 +1002,7 @@ const LcmcAppointmentSchedulerInner = ({
 export const Default = (props: LcmcAppointmentSchedulerProps): JSX.Element => {
   const { page } = useSitecore();
   const isEditing = Boolean(page?.mode?.isEditing);
-  return <LcmcAppointmentSchedulerInner {...props} isEditing={isEditing} />;
+  const language =
+    (page?.layout?.sitecore?.context as { language?: string } | undefined)?.language || 'en';
+  return <LcmcAppointmentSchedulerInner {...props} isEditing={isEditing} language={language} />;
 };

@@ -19,6 +19,15 @@ source:
 react:
   propsShape: graphql-datasource
   variants: [Default]
+  physicians:
+    source: /sitecore/content/lcmc/lcmc/Data/Physicians
+    api: /api/physician-listing
+    count: 26
+    demoEntWjmc:
+      name: Gabrielle Moreau, MD
+      itemId: "{24EB9BF3-BFD6-4D01-87A7-BAF6D3DA421C}"
+      specialty: ENT
+      location: West Jefferson Medical Center
 
 rendering:
   datasourceRequired: true

@@ -81,6 +81,17 @@ describe('SearchResults site packs', () => {
     ).not.toBeInTheDocument();
   });
 
+  it('shows LCMC ENT and West Jefferson results, not Quanex products', () => {
+    render(<SearchResults siteName="lcmc" disableUrlSync initialQuery="ENT West Jefferson" />);
+
+    expect(screen.getByText('LCMC Health search')).toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 3, name: /Gabrielle Moreau/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', { level: 3, name: 'West Jefferson Medical Center' })
+    ).toBeInTheDocument();
+    expect(screen.queryByRole('heading', { name: 'Super Spacer' })).not.toBeInTheDocument();
+  });
+
   it('Atlanta directory variant shows exhibitor cards and a register CTA', () => {
     render(
       <SearchResults

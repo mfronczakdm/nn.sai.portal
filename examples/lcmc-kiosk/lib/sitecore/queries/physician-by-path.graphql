@@ -1,0 +1,28 @@
+query GetPhysicianByPath($path: String!, $language: String!) {
+  item(path: $path, language: $language) {
+    ...ItemIdentity
+    physicianFullName: field(name: "PhysicianFullName") {
+      ...FieldValue
+    }
+    credentials: field(name: "Credentials") {
+      ...FieldValue
+    }
+    specialty: field(name: "Specialty") {
+      ...FieldValue
+    }
+    physicianBio: field(name: "PhysicianBio") {
+      ...FieldValue
+    }
+    physicianPhone: field(name: "PhysicianPhone") {
+      ...FieldValue
+    }
+    servingLocations: field(name: "ServingLocations") {
+      value
+      ... on MultilistField {
+        targetItems {
+          ...LocationTarget
+        }
+      }
+    }
+  }
+}

@@ -25,8 +25,11 @@ import {
   JAPANESE_LOCALE,
   KOREAN_LOCALE,
   SIMPLIFIED_CHINESE_LOCALE,
+  COLOMBIAN_SPANISH_LOCALE,
   buildLanguageSwitchPathname,
   getLocaleFromPathname,
+  isAtlantaApparelSiteName,
+  resolveAtlantaApparelLanguageOptions,
 } from '@/lib/locale';
 
 type ComponentMap = typeof import('.sitecore/component-map').default;
@@ -345,6 +348,42 @@ const version2LocationMenus: readonly Version2LocationMenu[] = [
 
 const version2MarketPlanLink = { text: 'Market Plan', href: '/visit/plan-your-market' } as const;
 
+const version2LanguageTriggerClass =
+  'inline-flex items-center gap-1 whitespace-nowrap px-2 py-1 font-[family-name:var(--font-body)] text-xs font-medium text-background hover:opacity-80';
+
+const version2LanguageItemClass =
+  'block whitespace-nowrap px-3 py-2 font-[family-name:var(--font-body)] text-xs font-medium text-foreground hover:bg-muted';
+
+function getPageSiteName(page: HeaderSTViewProps['page']): string | undefined {
+  return (
+    (page as { siteName?: string } | undefined)?.siteName ||
+    (page?.layout?.sitecore?.context as { site?: { name?: string } } | undefined)?.site?.name
+  );
+}
+
+function getPageLanguageCodes(page: HeaderSTViewProps['page']): string[] {
+  const context = page?.layout?.sitecore?.context as
+    | { languages?: unknown; site?: { languages?: unknown } }
+    | undefined;
+  const raw = context?.languages ?? context?.site?.languages;
+  if (!Array.isArray(raw)) {
+    return [];
+  }
+
+  return raw
+    .map((item) => {
+      if (typeof item === 'string') {
+        return item;
+      }
+      if (item && typeof item === 'object') {
+        const record = item as { name?: string; iso?: string };
+        return record.name || record.iso || '';
+      }
+      return '';
+    })
+    .filter(Boolean);
+}
+
 const version2LocationTriggerClass =
   'inline-flex items-center gap-0.5 whitespace-nowrap px-1.5 py-1 font-[family-name:var(--font-body)] text-[0.625rem] font-bold uppercase tracking-[0.12em] text-background hover:opacity-80 xl:gap-1 xl:px-2 xl:text-[0.6875rem] xl:tracking-[0.14em]';
 
@@ -439,6 +478,97 @@ function useLanguageSwitcher() {
     },
   };
 }
+
+const Version2LanguageDropdown = ({
+  languages,
+}: {
+  languages: readonly { text: string; locale: string }[];
+}) => {
+  const [open, setOpen] = useState(false);
+  const rootRef = useRef<HTMLLIElement>(null);
+  const menuId = useId();
+  const { activeLocale, buildLanguageSwitchHref } = useLanguageSwitcher();
+  const current =
+    languages.find((language) => language.locale === activeLocale) ?? languages[0];
+
+  useEffect(() => {
+    if (!open) {
+      return;
+    }
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setOpen(false);
+      }
+    };
+    const handlePointerDown = (event: PointerEvent) => {
+      if (!rootRef.current?.contains(event.target as Node)) {
+        setOpen(false);
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('pointerdown', handlePointerDown);
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('pointerdown', handlePointerDown);
+    };
+  }, [open]);
+
+  if (!current) {
+    return null;
+  }
+
+  return (
+    <li
+      ref={rootRef}
+      className="relative"
+      data-header-st-language-switcher
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+    >
+      <button
+        type="button"
+        className={version2LanguageTriggerClass}
+        aria-expanded={open}
+        aria-haspopup="menu"
+        aria-controls={menuId}
+        aria-label="Language"
+        onClick={() => setOpen((currentOpen) => !currentOpen)}
+      >
+        {current.text}
+        <ChevronDown className="h-3 w-3" aria-hidden />
+      </button>
+      {open ? (
+        <ul
+          id={menuId}
+          role="menu"
+          aria-label="Language"
+          className="absolute right-0 top-full z-50 min-w-[10rem] border border-border bg-background py-1 text-foreground shadow-lg"
+        >
+          {languages.map((language) => {
+            const isActive = language.locale === activeLocale;
+            return (
+              <li key={language.locale} role="none">
+                <Link
+                  href={buildLanguageSwitchHref(language.locale)}
+                  prefetch={false}
+                  role="menuitem"
+                  lang={language.locale}
+                  hrefLang={language.locale}
+                  aria-current={isActive ? 'true' : undefined}
+                  className={cn(version2LanguageItemClass, isActive && 'bg-muted')}
+                >
+                  {language.text}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      ) : null}
+    </li>
+  );
+};
 
 /* Version1 — inverted two-row header: langs + utilities on top, MENU + search + logo-right below. */
 const HeaderSTVersion1View = (props: HeaderSTViewProps) => {
@@ -616,6 +746,14 @@ const HeaderSTVersion2View = (props: HeaderSTViewProps) => {
   const componentMap = getComponentMap();
   const hideCart = isTruthyParam(params?.HideCart);
   const isReverse = isReverseThemeParam(params?.ReverseTheme);
+  const searchParams = useSearchParams();
+  const showLanguageSelector =
+    isAtlantaApparelSiteName(getPageSiteName(props.page)) ||
+    isAtlantaApparelSiteName(searchParams?.get('site')) ||
+    isAtlantaApparelSiteName(searchParams?.get('sc_site'));
+  const languageOptions = showLanguageSelector
+    ? resolveAtlantaApparelLanguageOptions(getPageLanguageCodes(props.page))
+    : [];
 
   const searchControl = params.showSearchBox ? (
     <HeaderPreviewSearch searchLink={fields?.SearchLink} className="min-w-0" />
@@ -646,7 +784,7 @@ const HeaderSTVersion2View = (props: HeaderSTViewProps) => {
       data-header-st-layout="version2"
     >
       <div className="flex w-full min-w-0 flex-col" role="navigation" aria-label="Site header">
-        {/* Utility row — always dark; city menus left, Register / Sign In / cart right */}
+        {/* Utility row — always dark; city menus left, Register / Sign In / cart / language right */}
         <div className="w-full min-w-0 bg-foreground text-background">
           <div className="mx-auto flex w-full max-w-[100rem] items-center justify-between gap-2 px-4 py-1.5 sm:px-6 lg:gap-3 lg:px-5 xl:px-8">
             <ul
@@ -697,6 +835,7 @@ const HeaderSTVersion2View = (props: HeaderSTViewProps) => {
                   )}
                 </li>
               ) : null}
+              {showLanguageSelector ? <Version2LanguageDropdown languages={languageOptions} /> : null}
             </ul>
           </div>
         </div>
@@ -799,6 +938,75 @@ const version3UtilityLinks = [
 
 const version3UtilityLabels = new Set(version3UtilityLinks.map((link) => link.text.toLowerCase()));
 
+/**
+ * Version3 SearchLink was reused as a utility slot (Contact Us). Search always
+ * goes to the Search Results page so Enter never follows that utility href.
+ */
+const VERSION3_SEARCH_RESULTS_LINK: LinkField = {
+  value: {
+    href: '/Search-Results',
+    text: 'Search',
+    linktype: 'internal',
+  },
+};
+
+const version3LanguageLinks = [
+  { text: 'English', locale: DEFAULT_LOCALE, country: 'US' as const },
+  { text: 'Español', locale: COLOMBIAN_SPANISH_LOCALE, country: 'ES' as const },
+];
+
+const Version3FlagGlyph = ({ country }: { country: 'US' | 'ES' }) =>
+  country === 'US' ? (
+    <svg viewBox="0 0 19 10" className="h-4 w-[1.52rem] rounded-[2px]" aria-hidden>
+      <rect width="19" height="10" fill="#b22234" />
+      <path
+        fill="#fff"
+        d="M0 .77h19v.77H0zm0 1.54h19v.77H0zm0 1.54h19v.77H0zm0 1.54h19v.77H0zm0 1.54h19v.77H0zm0 1.54h19v.77H0z"
+      />
+      <rect width="7.6" height="5.38" fill="#3c3b6e" />
+    </svg>
+  ) : (
+    <svg viewBox="0 0 6 4" className="h-4 w-[1.52rem] rounded-[2px]" aria-hidden>
+      <rect width="6" height="4" fill="#c60b1e" />
+      <rect y="1" width="6" height="2" fill="#ffc400" />
+    </svg>
+  );
+
+const Version3LanguageSwitcher = () => {
+  const { activeLocale, buildLanguageSwitchHref } = useLanguageSwitcher();
+
+  return (
+    <ul
+      data-header-st-langs="version3"
+      className="m-0 flex list-none flex-row items-center gap-1 p-0"
+      aria-label="Language"
+    >
+      {version3LanguageLinks.map((link) => {
+        const isActive = link.locale === activeLocale;
+        return (
+          <li key={link.locale}>
+            <Link
+              href={buildLanguageSwitchHref(link.locale)}
+              prefetch={false}
+              lang={link.locale}
+              hrefLang={link.locale}
+              aria-label={link.text}
+              title={link.text}
+              aria-current={isActive ? 'true' : undefined}
+              className={cn(
+                'flex items-center rounded-sm p-0.5 hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',
+                isActive && 'ring-2 ring-primary'
+              )}
+            >
+              <Version3FlagGlyph country={link.country} />
+            </Link>
+          </li>
+        );
+      })}
+    </ul>
+  );
+};
+
 const Version3UtilityLink = ({
   text,
   href,
@@ -831,18 +1039,18 @@ const HeaderSTVersion3View = (props: HeaderSTViewProps) => {
 
   const searchControl = params.showSearchBox ? (
     <HeaderPreviewSearch
-      searchLink={fields?.SearchLink}
+      searchLink={VERSION3_SEARCH_RESULTS_LINK}
       appearance="contained"
       className="min-w-0"
     />
   ) : (
     <ContentSdkLink
-      field={fields?.SearchLink}
+      field={VERSION3_SEARCH_RESULTS_LINK}
       prefetch={false}
       className="flex items-center gap-2 px-2 py-2 text-sm text-foreground hover:text-primary"
     >
       <Search className="h-4 w-4 shrink-0" strokeWidth={2} aria-hidden />
-      <span>{fields?.SearchLink?.value?.text || 'Search'}</span>
+      <span>{VERSION3_SEARCH_RESULTS_LINK.value?.text || 'Search'}</span>
     </ContentSdkLink>
   );
 
@@ -927,6 +1135,9 @@ const HeaderSTVersion3View = (props: HeaderSTViewProps) => {
               ) : null}
 
               <ul className="flex shrink-0 list-none flex-row items-center gap-2 p-0">
+                <li className="flex items-center">
+                  <Version3LanguageSwitcher />
+                </li>
                 <li className="flex items-center">{searchControl}</li>
                 {!hideCart ? (
                   <li>
