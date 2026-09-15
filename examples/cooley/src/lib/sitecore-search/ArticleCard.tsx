@@ -34,6 +34,11 @@ const ArticleItemCard = ({ className = '', article }: ArticleItemCardProps) => {
         />
       </div>
       <div className="relative m-4 flex-col justify-between">
+        {typeof article.type === 'string' && article.type && (
+          <div className="absolute top-0 right-0 rounded-md border border-transparent bg-gray-700 px-2.5 py-0.5 text-xs font-semibold text-white">
+            {article.type}
+          </div>
+        )}
         <Link
           className="focus:outline-indigo-500"
           href={article.url}
@@ -50,15 +55,12 @@ const ArticleItemCard = ({ className = '', article }: ArticleItemCardProps) => {
           }
         >
           <span aria-hidden="true" className="absolute inset-0"></span>
-          <ArticleCard.Title className="mt-4 h-[100px] overflow-hidden text-base font-bold">
+          <ArticleCard.Title className="text-primary mt-4 h-[100px] overflow-hidden text-base font-bold">
             {article.name || article.title}
           </ArticleCard.Title>
         </Link>
-        <ArticleCard.Subtitle className="mt-3 flex text-sm text-gray-600 dark:text-gray-200">
-          {/* {article.type} */}
-          <div className="right-0 text-sm font-medium text-blue-600 hover:text-blue-800">
-            Read More →
-          </div>
+        <ArticleCard.Subtitle className="mt-3 flex text-sm text-gray-900">
+          <div className="right-0 text-sm font-medium text-gray-900">Read More →</div>
         </ArticleCard.Subtitle>
       </div>
     </ArticleCard.Root>

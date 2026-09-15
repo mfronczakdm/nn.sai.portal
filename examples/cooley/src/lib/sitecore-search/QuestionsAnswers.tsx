@@ -13,9 +13,9 @@ type Question = {
 
 const MainQuestionComponent = ({ answer, question }: Question) => {
   return (
-    <div className="mb-6 border-b border-gray-200 p-3 dark:text-gray-100">
-      <h4 className="text-lg font-bold">{question}</h4>
-      <p className="mt-2">{answer}</p>
+    <div className="mb-6 border-b border-gray-200 p-3 text-gray-900">
+      <h4 className="text-lg font-bold text-gray-900">{question}</h4>
+      <p className="mt-2 text-gray-900">{answer}</p>
     </div>
   );
 };
@@ -26,10 +26,10 @@ type RelatedQuestionsProps = {
 
 const RelatedQuestionsComponent = ({ relatedQuestions = [] }: RelatedQuestionsProps) => {
   return (
-    <div className="space-y-4 dark:text-gray-100">
+    <div className="space-y-4 text-gray-900">
       {relatedQuestions.length > 0 && (
         <Accordion className="pb-4" type="multiple">
-          <h4 className="text-md mb-4 font-bold">People also ask ...</h4>
+          <h4 className="mb-4 text-base font-bold text-gray-900">People also ask ...</h4>
           {relatedQuestions.map(({ answer, question }, index) => (
             <Item
               className="w-full cursor-pointer border-b border-gray-400 py-4 dark:border-b-gray-200"
@@ -37,12 +37,12 @@ const RelatedQuestionsComponent = ({ relatedQuestions = [] }: RelatedQuestionsPr
               key={index}
             >
               <Header>
-                <Trigger className="text-bold flex w-full justify-between gap-x-2 text-left text-sm">
-                  <span className="font-semibold">{question}</span>
-                  <ChevronDownIcon height={20} width={20} />
+                <Trigger className="flex w-full justify-between gap-x-2 text-left text-sm font-semibold text-gray-900">
+                  <span className="font-semibold text-gray-900">{question}</span>
+                  <ChevronDownIcon className="shrink-0 text-gray-900" height={20} width={20} />
                 </Trigger>
               </Header>
-              <Content className="pt-5 text-sm font-light">{answer}</Content>
+              <Content className="pt-5 text-sm font-normal text-gray-900">{answer}</Content>
             </Item>
           ))}
         </Accordion>
@@ -83,7 +83,7 @@ export const QuestionsAnswersComponent = ({
   return (
     <div>
       {((answer && question) || relatedQuestionsResponse.length > 0) && (
-        <div className="mb-8 rounded-lg border border-gray-200 bg-white p-6 shadow-lg">
+        <div className="mb-8 rounded-lg border border-gray-200 bg-white p-6 text-gray-900 shadow-lg">
           {answer && question && <MainQuestionComponent answer={answer} question={question} />}
           {relatedQuestionsResponse.length > 0 && (
             <RelatedQuestionsComponent relatedQuestions={relatedQuestionsResponse} />
