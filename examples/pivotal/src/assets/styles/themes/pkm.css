@@ -1,0 +1,33 @@
+/**
+ * Theme: pkm
+ * Skin key / data-theme: pkm
+ * Activate via Sitecore Site definition Skin field (mirrored in src/lib/theme/site-skins.ts).
+ */
+
+@import './pkm-tokens.css';
+
+/* Legacy portal component tokens — bridge Progressive PKM semantic tokens to existing UI classes. */
+[data-theme='pkm'] {
+  --color-card: var(--color-background);
+  --color-card-foreground: var(--color-foreground);
+  --color-popover: var(--color-background);
+  --color-popover-foreground: var(--color-foreground);
+  --color-border: var(--color-gray-300);
+  --color-input: var(--color-gray-300);
+  --color-ring: var(--color-primary);
+  --color-dark: var(--color-secondary);
+  --color-dark-foreground: var(--color-secondary-foreground);
+  --color-dark-hover: var(--color-secondary-hover);
+  --color-light: var(--color-steel-100);
+  --color-light-hover: var(--color-secondary-background-active);
+  --color-light-foreground: var(--color-foreground);
+  --color-overlay: rgb(10 51 96 / 0.45);
+}
+
+[data-theme='pkm'] .bg-primary {
+  color: var(--color-primary-foreground);
+}
+
+[data-theme='pkm'] .bg-secondary {
+  color: var(--color-secondary-foreground);
+}

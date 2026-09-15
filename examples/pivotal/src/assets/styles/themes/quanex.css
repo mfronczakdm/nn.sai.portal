@@ -1,0 +1,76 @@
+/**
+ * Theme: quanex
+ * Skin key / data-theme: quanex
+ * Source: https://www.quanex.com/ (screenshot + Playwright extraction)
+ * Activate via Sitecore Site definition Skin field (mirrored in src/lib/theme/site-skins.ts).
+ *
+ * Primary green from live footer computed style: rgb(2, 114, 35) → #027223.
+ * Square geometry (0 radius) matches brand UI. Extra tokens below the standard set.
+ */
+
+[data-theme='quanex'] {
+  --background-image-gradient: linear-gradient(180deg, #039a2f 0%, #027223 100%);
+  --background-image-gradient-secondary: linear-gradient(90deg, #54565a 0%, #027223 50%, #039a2f 100%);
+
+  --color-background: #ffffff;
+  --color-foreground: #1a1a1a;
+  --color-card: #ffffff;
+  --color-card-foreground: #1a1a1a;
+  --color-popover: #ffffff;
+  --color-popover-foreground: #1a1a1a;
+
+  --color-primary: #027223;
+  --color-primary-foreground: #ffffff;
+  --color-primary-hover: #015f1d;
+
+  --color-secondary: #f4f4f4;
+  --color-secondary-foreground: #1a1a1a;
+  --color-secondary-hover: #e8e8e8;
+
+  --color-muted: #f4f4f4;
+  --color-muted-foreground: #54565a;
+
+  --color-accent: #039a2f;
+  --color-accent-foreground: #ffffff;
+
+  --color-destructive: #dc2626;
+  --color-destructive-hover: #b91c1c;
+  --color-destructive-foreground: #ffffff;
+
+  --color-border: #d4d4d4;
+  --color-input: #d4d4d4;
+  --color-ring: #027223;
+
+  --color-tertiary: #f4f4f4;
+  --color-tertiary-foreground: #1a1a1a;
+  --color-tertiary-hover: #e8e8e8;
+
+  --color-dark: #027223;
+  --color-dark-foreground: #ffffff;
+  --color-dark-hover: #015f1d;
+
+  --color-light: #fafafa;
+  --color-light-hover: #f4f4f4;
+  --color-light-foreground: #1a1a1a;
+
+  --color-overlay: rgb(2 114 35 / 0.45);
+
+  /* Quanex extras — industrial / architectural geometry */
+  --border-radius-default: 0;
+  --border-radius-sm: 0;
+  --border-radius-md: 0;
+  --border-radius-lg: 0;
+  --radius: 0;
+  --color-header-background: #ffffff;
+  --color-header-foreground: #1a1a1a;
+  --color-footer-background: #027223;
+  --color-footer-foreground: #ffffff;
+}
+
+[data-theme='quanex'] .bg-primary {
+  color: var(--color-primary-foreground);
+}
+
+[data-theme='quanex'] .bg-dark {
+  color: var(--color-dark-foreground);
+}

@@ -1,0 +1,72 @@
+/**
+ * Standard tokens — checklist for every theme.
+ *
+ * Copy into `[data-theme='<key>'] { … }` and replace values.
+ * Themes MAY add extra tokens after this set (scales, brand-specific surfaces).
+ *
+ * Applied via: Sitecore Site definition field Skin = <key>
+ *              → <html data-theme="<key>">
+ *
+ * Full list (TypeScript): src/lib/theme/standard-tokens.ts
+ */
+
+/*
+[data-theme='example'] {
+  // Gradients (optional but common)
+  --background-image-gradient: linear-gradient(180deg, #accent 0%, #primary 100%);
+  --background-image-gradient-secondary: linear-gradient(90deg, #secondary 0%, #primary 50%, #accent 100%);
+
+  // Surfaces
+  --color-background: #ffffff;
+  --color-foreground: #111111;
+  --color-card: #ffffff;
+  --color-card-foreground: #111111;
+  --color-popover: #ffffff;
+  --color-popover-foreground: #111111;
+
+  // Brand
+  --color-primary: #0055aa;
+  --color-primary-foreground: #ffffff;
+  --color-primary-hover: #004488;
+  --color-secondary: #f4f4f5;
+  --color-secondary-foreground: #111111;
+  --color-secondary-hover: #e4e4e7;
+  --color-muted: #f4f4f5;
+  --color-muted-foreground: #71717a;
+  --color-accent: #e11d48;
+  --color-accent-foreground: #ffffff;
+
+  // Status / chrome
+  --color-destructive: #dc2626;
+  --color-destructive-hover: #b91c1c;
+  --color-destructive-foreground: #ffffff;
+  --color-border: #e4e4e7;
+  --color-input: #e4e4e7;
+  --color-ring: #0055aa;
+
+  // Portal legacy aliases (keep for existing components)
+  --color-tertiary: #f4f4f5;
+  --color-tertiary-foreground: #111111;
+  --color-tertiary-hover: #e4e4e7;
+  --color-dark: #f4f4f5;
+  --color-dark-foreground: #111111;
+  --color-dark-hover: #e4e4e7;
+  --color-light: #fafafa;
+  --color-light-hover: #f4f4f5;
+  --color-light-foreground: #111111;
+  --color-overlay: rgb(0 85 170 / 0.45);
+}
+
+// If primary is used as a dark band (footer/hero), force readable text:
+[data-theme='example'] .bg-primary {
+  color: var(--color-primary-foreground);
+}
+
+// Typography (also in fonts.css):
+html[data-theme='example'] {
+  --font-body: var(--font-…), 'Body Font', ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-…), 'Heading Font', ui-sans-serif, system-ui, sans-serif;
+  --font-accent: var(--font-…), 'Heading Font', ui-sans-serif, system-ui, sans-serif;
+  --font-weight-heading: 700;
+}
+*/

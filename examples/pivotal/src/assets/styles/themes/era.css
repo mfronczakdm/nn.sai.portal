@@ -1,0 +1,82 @@
+/**
+ * Theme: era
+ * Skin key / data-theme: era
+ * Source: https://www.eraeverywhere.com/ (screenshot + Playwright extraction)
+ * Activate via Sitecore Site definition Skin field (mirrored in src/lib/theme/site-skins.ts).
+ *
+ * Primary CTA / link color from live computed styles: rgb(225, 38, 22) → #e12616.
+ * Body text #454545. Proprietary BlissMedium headings → Montserrat substitute.
+ */
+
+[data-theme='era'] {
+  --background-image-gradient: linear-gradient(180deg, #e12616 0%, #333333 100%);
+  --background-image-gradient-secondary: linear-gradient(90deg, #333333 0%, #e12616 50%, #333333 100%);
+
+  --color-background: #ffffff;
+  --color-foreground: #454545;
+  --color-card: #ffffff;
+  --color-card-foreground: #454545;
+  --color-popover: #ffffff;
+  --color-popover-foreground: #454545;
+
+  --color-primary: #e12616;
+  --color-primary-foreground: #ffffff;
+  --color-primary-hover: #c21f15;
+
+  --color-secondary: #f4f4f4;
+  --color-secondary-foreground: #333333;
+  --color-secondary-hover: #e8e8e8;
+
+  --color-muted: #f4f4f4;
+  --color-muted-foreground: #6b6b6b;
+
+  --color-accent: #333333;
+  --color-accent-foreground: #ffffff;
+
+  --color-destructive: #b91c1c;
+  --color-destructive-hover: #991b1b;
+  --color-destructive-foreground: #ffffff;
+
+  --color-border: #d4d4d4;
+  --color-input: #d4d4d4;
+  --color-ring: #e12616;
+
+  --color-tertiary: #f4f4f4;
+  --color-tertiary-foreground: #333333;
+  --color-tertiary-hover: #e8e8e8;
+
+  --color-dark: #333333;
+  --color-dark-foreground: #ffffff;
+  --color-dark-hover: #1f1f1f;
+
+  --color-light: #fafafa;
+  --color-light-hover: #f4f4f4;
+  --color-light-foreground: #454545;
+
+  --color-overlay: rgb(225 38 22 / 0.4);
+
+  /* ERA extras */
+  --border-radius-default: 0;
+  --border-radius-sm: 0;
+  --border-radius-md: 0;
+  --border-radius-lg: 0;
+  --radius: 0;
+  --color-header-background: #ffffff;
+  --color-header-foreground: #333333;
+  --color-footer-background: #f4f4f4;
+  --color-footer-foreground: #454545;
+  --color-link: #e12616;
+}
+
+[data-theme='era'] .bg-primary {
+  color: var(--color-primary-foreground);
+}
+
+[data-theme='era'] .bg-dark,
+[data-theme='era'] .bg-accent {
+  color: var(--color-dark-foreground);
+}
+
+[data-theme='era'] a:not([class]) {
+  color: var(--color-link);
+}

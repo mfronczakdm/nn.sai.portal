@@ -1,0 +1,185 @@
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+
+import { createComponentProps } from '@/__tests__/test-utils/testHelpers';
+import { mockPageEditing } from '@/__tests__/test-utils/mockPage';
+
+import type {
+  PortalPageDetailFields,
+  PortalPageDetailProps,
+} from '@/components/portal-page-detail/portal-page-detail.props';
+
+function portalDetailProps(partial: Partial<PortalPageDetailProps>): PortalPageDetailProps {
+  return {
+    ...createComponentProps({}),
+    fields: {},
+    ...partial,
+  } as PortalPageDetailProps;
+}
+
+jest.mock('next/link', () => ({
+  __esModule: true,
+  default: ({
+    href,
+    children,
+    className,
+  }: {
+    href: string;
+    children: React.ReactNode;
+    className?: string;
+    prefetch?: boolean;
+  }) => (
+    <a href={href} className={className}>
+      {children}
+    </a>
+  ),
+}));
+
+jest.mock('lucide-react', () => {
+  const Icon = () => null;
+  return new Proxy(
+    {},
+    {
+      get: () => Icon,
+    },
+  );
+});
+
+jest.mock('@sitecore-content-sdk/nextjs', () => ({
+  useSitecore: jest.fn(() => ({
+    page: {
+      mode: {
+        isEditing: false,
+        isNormal: true,
+        isPreview: false,
+        name: 'normal',
+        designLibrary: { isVariantGeneration: false },
+        isDesignLibrary: false,
+      },
+      layout: { sitecore: { context: {}, route: null } },
+      locale: 'en',
+    },
+  })),
+  Text: ({
+    field,
+    tag: Tag = 'span',
+    className,
+  }: {
+    field?: { value?: string };
+    tag?: React.ElementType;
+    className?: string;
+  }) => {
+    if (!field?.value?.trim()) return null;
+    return React.createElement(Tag, { className }, field.value);
+  },
+  RichText: ({ field, className }: { field?: { value?: string }; className?: string }) => {
+    if (!field?.value?.trim()) return null;
+    return React.createElement('div', {
+      className,
+      dangerouslySetInnerHTML: { __html: field.value },
+    });
+  },
+}));
+
+import { Default as PortalPageDetail } from '@/components/portal-page-detail/PortalPageDetail';
+
+const baseFields = {
+  title: { value: 'Orders', editable: false },
+  subtitle: { value: 'Recent activity', editable: false },
+  body: {
+    value: '<p>Demo <strong>HTML</strong> body.</p>',
+    editable: false,
+  },
+};
+
+describe('PortalPageDetail', () => {
+  it('renders title, subtitle, and HTML body from flat fields', () => {
+    render(<PortalPageDetail {...portalDetailProps({ fields: baseFields })} />);
+
+    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Orders');
+    expect(screen.getByText('Recent activity')).toBeInTheDocument();
+    const body = document.querySelector('.portal-page-detail__body');
+    expect(body?.innerHTML).toContain('Demo');
+    expect(body?.innerHTML).toContain('<strong>HTML</strong>');
+  });
+
+  it('renders portal hub navigation with root-relative /portal links', () => {
+    render(<PortalPageDetail {...portalDetailProps({ fields: baseFields })} />);
+
+    expect(screen.getByText('Back to Portal')).toBeInTheDocument();
+    expect(screen.getByLabelText('breadcrumb')).toBeInTheDocument();
+
+    const portalLinks = screen.getAllByRole('link', { name: 'Portal' });
+    expect(portalLinks).toHaveLength(1);
+    expect(portalLinks[0]).toHaveAttribute('href', '/portal');
+
+    expect(screen.getByRole('link', { name: 'Back to Portal' })).toHaveAttribute(
+      'href',
+      '/portal',
+    );
+
+    expect(screen.getAllByText('Orders').length).toBeGreaterThanOrEqual(1);
+  });
+
+  it('still renders portal navigation when no field values and not editing', () => {
+    const { container } = render(<PortalPageDetail {...portalDetailProps({ fields: {} })} />);
+
+    const article = container.querySelector('[data-component="portal-page-detail"]');
+    expect(article).toBeInTheDocument();
+    expect(article?.querySelector('h1')).toBeNull();
+    expect(screen.getByText('Back to Portal')).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'Back to Portal' })).toHaveAttribute(
+      'href',
+      '/portal',
+    );
+  });
+});
+
+describe('PortalPageDetail (editing)', () => {
+  const defaultPage = {
+    page: {
+      mode: {
+        isEditing: false,
+        isNormal: true,
+        isPreview: false,
+        name: 'normal' as const,
+        designLibrary: { isVariantGeneration: false },
+        isDesignLibrary: false,
+      },
+      layout: { sitecore: { context: {}, route: null } },
+      locale: 'en',
+    },
+  };
+
+  beforeEach(() => {
+    const sdk = jest.requireMock('@sitecore-content-sdk/nextjs') as {
+      useSitecore: jest.Mock;
+    };
+    sdk.useSitecore.mockReturnValue({ page: mockPageEditing });
+  });
+
+  afterEach(() => {
+    const sdk = jest.requireMock('@sitecore-content-sdk/nextjs') as {
+      useSitecore: jest.Mock;
+    };
+    sdk.useSitecore.mockReturnValue(defaultPage);
+  });
+
+  it('still renders field chrome and navigation when values are empty', () => {
+    render(
+      <PortalPageDetail
+        {...portalDetailProps({
+          fields: {
+            title: { value: '', editable: true },
+            subtitle: { value: '', editable: true },
+            body: { value: '', editable: true },
+          } as PortalPageDetailFields,
+        })}
+      />,
+    );
+
+    expect(document.querySelector('[data-component="portal-page-detail"]')).toBeInTheDocument();
+    expect(screen.getByText('Back to Portal')).toBeInTheDocument();
+    expect(screen.getByText('Current page')).toBeInTheDocument();
+  });
+});

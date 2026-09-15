@@ -1,0 +1,857 @@
+'use client';
+
+import { useMemo, useState } from 'react';
+import {
+  Text as ContentSdkText,
+  RichText as ContentSdkRichText,
+  NextImage as ContentSdkImage,
+  Image as ContentSdkEditableImage,
+  useSitecore,
+} from '@sitecore-content-sdk/nextjs';
+import { ChevronRight } from 'lucide-react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from 'shadcd/components/ui/carousel';
+import { TrackedCtaLink } from '@/components/content-sdk/TrackedCtaLink';
+import { IGQLImageField, IGQLLinkField, IGQLRichTextField, IGQLTextField } from 'types/igql';
+import { cn } from '@/lib/utils';
+import { NoDataFallback } from '@/utils/NoDataFallback';
+
+interface Fields {
+  data: {
+    datasource: {
+      title?: IGQLTextField;
+      description?: IGQLRichTextField;
+      backgroundImage?: IGQLImageField;
+      children: {
+        results: SimplePromoFields[];
+      };
+    };
+  };
+}
+
+interface SimplePromoFields {
+  id: string;
+  heading: IGQLTextField;
+  description: IGQLRichTextField;
+  slug?: IGQLTextField;
+  Slug?: IGQLTextField;
+  image: IGQLImageField;
+  link: IGQLLinkField;
+}
+
+type MultiPromoProps = {
+  params: { [key: string]: string };
+  fields: Fields;
+};
+
+type PromoItemProps = SimplePromoFields & {
+  isHorizontal?: boolean;
+};
+
+const PromoItem = ({ isHorizontal, ...promo }: PromoItemProps) => {
+  const { image, heading, description, link } = promo ?? {};
+
+  return (
+    <div className={`grid gap-8 ${isHorizontal ? 'lg:grid-cols-[1fr_2fr]' : ''}`}>
+      <ContentSdkImage
+        field={image?.jsonValue}
+        className="w-full h-full aspect-square object-cover shadow-2xl"
+      />
+      <div>
+        <h3 className="text-xl lg:text-2xl mb-2">
+          <ContentSdkText field={heading?.jsonValue} />
+        </h3>
+        <p className="lg:text-lg mb-2">
+          <ContentSdkRichText field={description?.jsonValue} />
+        </p>
+        <TrackedCtaLink field={link?.jsonValue} className="btn btn-ghost" />
+      </div>
+    </div>
+  );
+};
+
+/** Default-variant card: McKinsey-style hover (white surface, dark text, blue chevron). */
+const DefaultPromoCard = ({ promo }: { promo: SimplePromoFields }) => {
+  const { image, heading, description, link } = promo ?? {};
+  const linkField = link?.jsonValue;
+
+  const cardClassName = cn(
+    'group flex h-full flex-col p-5 no-underline transition-colors duration-300',
+    // White hover surface always uses dark type (McKinsey-style), independent of theme foreground
+    'hover:bg-white hover:text-neutral-950'
+  );
+
+  const content = (
+    <>
+      <ContentSdkImage
+        field={image?.jsonValue}
+        className="mb-5 aspect-[4/3] w-full object-cover"
+      />
+      <h3 className="mb-3 flex items-center gap-1 text-xl font-semibold lg:text-2xl">
+        <ContentSdkText field={heading?.jsonValue} />
+        <ChevronRight
+          aria-hidden
+          className="size-5 shrink-0 transition-colors duration-300 group-hover:text-primary"
+        />
+      </h3>
+      <div className="text-sm leading-relaxed lg:text-base">
+        <ContentSdkRichText field={description?.jsonValue} />
+      </div>
+    </>
+  );
+
+  if (linkField) {
+    return (
+      <TrackedCtaLink field={linkField} className={cardClassName}>
+        {content}
+      </TrackedCtaLink>
+    );
+  }
+
+  return <div className={cardClassName}>{content}</div>;
+};
+
+const parentBasedGridClasses =
+  'grid lg:[.multipromo-2-3_&]:grid-cols-[2fr_3fr] lg:[.multipromo-3-2_&]:grid-cols-[3fr_2fr] lg:grid-cols-[1fr_1fr] gap-14';
+const parentBasedGridItemClasses =
+  '[.multipromo-centered_&]:items-center [.bg-gradient_&]:text-white items-start';
+
+const getPromoSlugField = (promo: SimplePromoFields) =>
+  promo.slug?.jsonValue ?? promo.Slug?.jsonValue;
+
+const VERSION1_CAROUSEL_THRESHOLD = 3;
+
+/** Sitecore checkbox rendering parameters often arrive as 1 / true / yes / on. */
+const isCheckboxParamEnabled = (value: string | undefined): boolean => {
+  if (value == null || typeof value !== 'string') return false;
+  const v = value.trim().toLowerCase();
+  return v === '1' || v === 'true' || v === 'yes' || v === 'on';
+};
+
+const isShowBackgroundImage = (params: MultiPromoProps['params'] | undefined): boolean => {
+  if (!params) return false;
+  for (const [key, value] of Object.entries(params)) {
+    const normalized = key.replace(/[\s_-]/g, '').toLowerCase();
+    if (normalized === 'showbackgroundimage' && isCheckboxParamEnabled(value)) {
+      return true;
+    }
+  }
+  return false;
+};
+
+export type TopTabsImagePosition = 'top' | 'left' | 'right';
+
+const normalizeParamKey = (key: string): string => key.replace(/[\s_-]/g, '').toLowerCase();
+
+/**
+ * Reads the ImagePosition rendering parameter (Droplist).
+ * Empty / unknown values keep the historical image-on-top layout so other sites stay unchanged.
+ */
+export const resolveTopTabsImagePosition = (
+  params: MultiPromoProps['params'] | undefined
+): TopTabsImagePosition => {
+  if (!params) return 'top';
+  for (const [key, value] of Object.entries(params)) {
+    if (normalizeParamKey(key) !== 'imageposition') continue;
+    const normalizedValue = String(value ?? '')
+      .replace(/[\s_-]/g, '')
+      .toLowerCase();
+    if (normalizedValue === 'imageright' || normalizedValue === 'right') return 'right';
+    if (normalizedValue === 'imageleft' || normalizedValue === 'left') return 'left';
+    if (normalizedValue === 'imagetop' || normalizedValue === 'top') return 'top';
+  }
+  return 'top';
+};
+
+export const Default = (props: MultiPromoProps) => {
+  const datasource = useMemo(
+    () => props.fields?.data?.datasource,
+    [props.fields?.data?.datasource]
+  );
+
+  const promos = useMemo(
+    () => datasource?.children?.results?.filter(Boolean) ?? [],
+    [datasource?.children?.results]
+  );
+
+  if (props.fields) {
+    return (
+      <section className={`relative ${props.params?.styles || ''}`} data-class-change>
+        <div className="container mx-auto px-4 py-16">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="mb-6 text-2xl lg:text-5xl">
+              <ContentSdkText field={datasource?.title?.jsonValue} />
+            </h2>
+            <div className="text-lg">
+              <ContentSdkRichText field={datasource?.description?.jsonValue} />
+            </div>
+          </div>
+
+          {promos.length > 0 && (
+            <div className="relative mt-12 px-0 sm:px-12">
+              <Carousel
+                opts={{ align: 'start', loop: false }}
+                className="w-full"
+                data-testid="multi-promo-carousel"
+              >
+                <CarouselContent className="-ml-4">
+                  {promos.map((promo) => (
+                    <CarouselItem
+                      key={promo.id}
+                      className="basis-full pl-4 sm:basis-1/2 lg:basis-1/3"
+                      data-testid="multi-promo-carousel-item"
+                    >
+                      <DefaultPromoCard promo={promo} />
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious
+                  className="disabled:hidden left-0 h-10 w-10 border-0 bg-secondary text-secondary-foreground hover:bg-secondary-hover sm:left-2"
+                  data-testid="multi-promo-carousel-prev"
+                />
+                <CarouselNext
+                  className="disabled:hidden right-0 h-10 w-10 border-0 bg-secondary text-secondary-foreground hover:bg-secondary-hover sm:right-2"
+                  data-testid="multi-promo-carousel-next"
+                />
+              </Carousel>
+            </div>
+          )}
+        </div>
+      </section>
+    );
+  }
+  return <NoDataFallback componentName="MultiPromo" />;
+};
+
+export const Stacked = (props: MultiPromoProps) => {
+  const datasource = useMemo(
+    () => props.fields?.data?.datasource,
+    [props.fields?.data?.datasource]
+  );
+
+  if (props.fields) {
+    return (
+      <section
+        className={`relative ${props.params?.styles || ''} overflow-hidden`}
+        data-class-change
+      >
+        <span className="absolute top-1/3 left-1/3 [.multipromo-3-2_&]:-left-1/3 w-screen h-64 bg-primary opacity-50 blur-[400px] -rotate-15 [.multipromo-3-2_&]:rotate-15 z-0"></span>
+        <div className="relative container mx-auto px-4 py-16 z-10">
+          <div className={`${parentBasedGridClasses}`}>
+            <div className="lg:[.multipromo-3-2_&]:col-start-1 lg:[.multipromo-2-3_&]:col-start-2 lg:col-start-2 [.multipromo-2-3_&]:text-right">
+              <h2 className="mb-6 text-2xl lg:text-5xl">
+                <ContentSdkText field={datasource?.title?.jsonValue} />
+              </h2>
+              <div className="text-lg">
+                <ContentSdkRichText field={datasource?.description?.jsonValue} />
+              </div>
+            </div>
+          </div>
+          <div className={`${parentBasedGridClasses} ${parentBasedGridItemClasses} mt-30`}>
+            {datasource?.children?.results?.filter(Boolean).map((promo) => {
+              return (
+                <div
+                  key={promo?.id}
+                  className="lg:odd:-mt-8 lg:[.multipromo-3-2_&]:even:-mt-8 lg:[.multipromo-3-2_&]:odd:mt-0"
+                >
+                  <PromoItem {...promo} />
+                </div>
+              );
+            }) || null}
+          </div>
+        </div>
+      </section>
+    );
+  }
+  return <NoDataFallback componentName="MultiPromo" />;
+};
+
+export const SingleColumn = (props: MultiPromoProps) => {
+  const datasource = useMemo(
+    () => props.fields?.data?.datasource,
+    [props.fields?.data?.datasource]
+  );
+
+  if (props.fields) {
+    return (
+      <section className={`relative ${props.params?.styles || ''}`} data-class-change>
+        <div className="container mx-auto px-4 py-16">
+          <div className="max-w-2xl mb-16">
+            <h2 className="mb-6 text-2xl lg:text-5xl">
+              <ContentSdkText field={datasource?.title?.jsonValue} />
+            </h2>
+            <div className="text-lg">
+              <ContentSdkRichText field={datasource?.description?.jsonValue} />
+            </div>
+          </div>
+          <div className="grid gap-14">
+            {datasource?.children?.results?.filter(Boolean).map((promo) => {
+              return <PromoItem key={promo?.id} {...promo} isHorizontal />;
+            }) || null}
+          </div>
+        </div>
+      </section>
+    );
+  }
+  return <NoDataFallback componentName="MultiPromo" />;
+};
+
+const SideTabsPromoPanel = ({
+  promo,
+  tabId,
+  panelId,
+  isEditing,
+}: {
+  promo: SimplePromoFields;
+  tabId: string;
+  panelId: string;
+  isEditing: boolean;
+}) => {
+  const { image, heading, description, link } = promo ?? {};
+  const headingField = heading?.jsonValue;
+  const descriptionField = description?.jsonValue;
+  const imageField = image?.jsonValue;
+  const linkField = link?.jsonValue;
+
+  return (
+    <>
+      <div className="relative min-h-[280px] overflow-hidden bg-background sm:min-h-[360px] lg:min-h-[420px]">
+        {(imageField?.value?.src || isEditing) && imageField && (
+          <ContentSdkEditableImage
+            field={imageField}
+            className="h-full min-h-[280px] w-full object-cover object-center sm:min-h-[360px] lg:min-h-[420px]"
+          />
+        )}
+      </div>
+
+      <div
+        id={panelId}
+        role="tabpanel"
+        aria-labelledby={tabId}
+        className="bg-primary text-primary-foreground relative flex min-h-[280px] flex-col justify-center px-6 py-8 sm:min-h-[360px] sm:px-10 lg:min-h-[420px] lg:px-12"
+      >
+        {(headingField?.value || isEditing) && headingField && (
+          <h3 className="text-accent font-heading mb-4 text-pretty text-2xl leading-tight tracking-tight sm:text-3xl lg:text-4xl">
+            <ContentSdkText field={headingField} />
+          </h3>
+        )}
+        {(descriptionField?.value || isEditing) && descriptionField && (
+          <div className="font-body mb-6 max-w-prose text-base leading-relaxed text-white/95 sm:text-lg">
+            <ContentSdkRichText field={descriptionField} />
+          </div>
+        )}
+        {(linkField?.value?.href || isEditing) && linkField && (
+          <TrackedCtaLink
+            field={linkField}
+            className="font-body inline-flex w-fit items-center border border-white px-6 py-2.5 text-sm font-semibold uppercase tracking-wide text-white transition-colors hover:bg-white/10"
+          />
+        )}
+      </div>
+    </>
+  );
+};
+
+export const SideTabs = (props: MultiPromoProps) => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const { page } = useSitecore();
+  const isEditing = page.mode.isEditing;
+
+  const promos = useMemo(
+    () => props.fields?.data?.datasource?.children?.results?.filter(Boolean) ?? [],
+    [props.fields?.data?.datasource?.children?.results]
+  );
+
+  if (props.fields) {
+    return (
+      <section
+        className={cn('multi-promo-side-tabs relative w-full', props.params?.styles || '')}
+        data-class-change
+      >
+        <div className="container mx-auto px-4 py-8 lg:py-12">
+          <div className="border-border overflow-hidden rounded-none border shadow-sm lg:grid lg:grid-cols-[minmax(0,20fr)_minmax(0,3fr)]">
+            <div className="min-w-0">
+              {promos.map((promo, index) => {
+                const isActive = index === activeIndex;
+
+                return (
+                  <div
+                    key={promo.id}
+                    data-promo-panel
+                    data-active={isActive}
+                    hidden={!isActive}
+                    className="grid grid-cols-1 lg:grid-cols-[minmax(0,11fr)_minmax(0,9fr)] lg:items-stretch"
+                  >
+                    <SideTabsPromoPanel
+                      promo={promo}
+                      tabId={`multi-promo-side-tab-${promo.id}`}
+                      panelId={`multi-promo-side-tab-panel-${promo.id}`}
+                      isEditing={isEditing}
+                    />
+                  </div>
+                );
+              })}
+            </div>
+
+            <div
+              className="border-border flex flex-col border-t lg:border-t-0 lg:border-l"
+              role="tablist"
+              aria-label="Promotions"
+            >
+              {promos.map((promo, index) => {
+                const isActive = index === activeIndex;
+                const tabLabel = getPromoSlugField(promo);
+
+                return (
+                  <button
+                    key={promo.id}
+                    type="button"
+                    role="tab"
+                    aria-selected={isActive}
+                    aria-controls={`multi-promo-side-tab-panel-${promo.id}`}
+                    id={`multi-promo-side-tab-${promo.id}`}
+                    onClick={() => setActiveIndex(index)}
+                    className={cn(
+                      'font-body relative flex min-h-[4.5rem] flex-1 items-center border-b border-border px-4 py-3 text-left text-sm font-semibold leading-snug transition-colors last:border-b-0 sm:px-5 sm:text-base',
+                      isActive
+                        ? 'bg-accent text-primary z-10'
+                        : 'bg-background text-primary hover:bg-muted/40'
+                    )}
+                  >
+                    {isActive && (
+                      <span
+                        aria-hidden="true"
+                        className="border-r-accent absolute left-0 top-1/2 hidden h-0 w-0 -translate-x-full -translate-y-1/2 border-y-[0.75rem] border-r-[0.75rem] border-y-transparent lg:block"
+                      />
+                    )}
+                    {tabLabel ? (
+                      <ContentSdkText field={tabLabel} />
+                    ) : (
+                      <span>{`Promotion ${index + 1}`}</span>
+                    )}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  return <NoDataFallback componentName="MultiPromo" />;
+};
+
+const TopTabsPromoPanel = ({
+  promo,
+  tabId,
+  panelId,
+  isEditing,
+  showImage = true,
+  imagePosition = 'top',
+}: {
+  promo: SimplePromoFields;
+  tabId: string;
+  panelId: string;
+  isEditing: boolean;
+  showImage?: boolean;
+  imagePosition?: TopTabsImagePosition;
+}) => {
+  const { image, heading, description, link } = promo ?? {};
+  const headingField = heading?.jsonValue;
+  const descriptionField = description?.jsonValue;
+  const imageField = image?.jsonValue;
+  const linkField = link?.jsonValue;
+  const isSideBySide = showImage && (imagePosition === 'left' || imagePosition === 'right');
+  const showImageBlock = Boolean(
+    showImage && (imageField?.value?.src || isEditing) && imageField
+  );
+
+  return (
+    <div
+      id={panelId}
+      role="tabpanel"
+      aria-labelledby={tabId}
+      data-image-position={showImage ? imagePosition : undefined}
+      className={cn(
+        'bg-background px-6 py-8 sm:px-10 sm:py-10 lg:px-12 lg:py-12',
+        isSideBySide && 'grid gap-8 lg:grid-cols-2 lg:items-center'
+      )}
+    >
+      {showImageBlock && imageField && (
+        <div
+          data-promo-image
+          className={cn(
+            'overflow-hidden',
+            !isSideBySide && 'mb-8',
+            imagePosition === 'right' && 'lg:order-2',
+            imagePosition === 'left' && 'lg:order-1'
+          )}
+        >
+          <ContentSdkEditableImage
+            field={imageField}
+            className={cn(
+              'h-auto w-full object-cover object-center',
+              isSideBySide ? 'max-h-[420px]' : 'max-h-[320px]'
+            )}
+          />
+        </div>
+      )}
+      <div
+        className={cn(
+          imagePosition === 'right' && 'lg:order-1',
+          imagePosition === 'left' && 'lg:order-2'
+        )}
+      >
+        {(headingField?.value || isEditing) && headingField && (
+          <h3 className="font-heading text-primary mb-6 text-pretty text-2xl leading-tight tracking-tight sm:text-3xl lg:text-4xl">
+            <ContentSdkText field={headingField} />
+          </h3>
+        )}
+        {(descriptionField?.value || isEditing) && descriptionField && (
+          <div className="font-body text-foreground max-w-prose text-base leading-relaxed sm:text-lg [&_p+p]:mt-4 [&_p]:mb-0 [&_strong]:font-semibold">
+            <ContentSdkRichText field={descriptionField} />
+          </div>
+        )}
+        {(linkField?.value?.href || isEditing) && linkField && (
+          <div className="mt-8">
+            <TrackedCtaLink
+              field={linkField}
+              className="font-body inline-flex w-fit items-center bg-primary px-6 py-2.5 text-sm font-semibold uppercase tracking-wide text-primary-foreground transition-colors hover:bg-primary-hover"
+            />
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+const TopTabsLayout = ({
+  props,
+  showImage,
+  layoutClass,
+}: {
+  props: MultiPromoProps;
+  showImage: boolean;
+  layoutClass: string;
+}) => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const { page } = useSitecore();
+  const isEditing = page.mode.isEditing;
+
+  const promos = useMemo(
+    () => props.fields?.data?.datasource?.children?.results?.filter(Boolean) ?? [],
+    [props.fields?.data?.datasource?.children?.results]
+  );
+  const imagePosition = resolveTopTabsImagePosition(props.params);
+
+  if (props.fields) {
+    return (
+      <section
+        className={cn(layoutClass, 'relative w-full', props.params?.styles || '')}
+        data-class-change
+        data-image-position={showImage ? imagePosition : undefined}
+      >
+        <div className="container mx-auto px-4 py-8 lg:py-12">
+          <div className="border-border overflow-hidden rounded-none border shadow-sm">
+            <div
+              className="border-border flex flex-wrap border-b"
+              role="tablist"
+              aria-label="Promotions"
+            >
+              {promos.map((promo, index) => {
+                const isActive = index === activeIndex;
+                const tabLabel = getPromoSlugField(promo);
+
+                return (
+                  <button
+                    key={promo.id}
+                    type="button"
+                    role="tab"
+                    aria-selected={isActive}
+                    aria-controls={`multi-promo-top-tab-panel-${promo.id}`}
+                    id={`multi-promo-top-tab-${promo.id}`}
+                    onClick={() => setActiveIndex(index)}
+                    className={cn(
+                      'font-body relative flex min-h-[4.5rem] flex-1 items-center justify-center border-r border-border px-4 py-4 text-center text-xs font-bold uppercase leading-snug tracking-wide transition-colors last:border-r-0 sm:min-h-[5rem] sm:px-6 sm:text-sm',
+                      isActive
+                        ? 'bg-primary text-primary-foreground z-10 border-r-primary'
+                        : 'bg-background text-primary hover:bg-muted/40'
+                    )}
+                  >
+                    {tabLabel ? (
+                      <ContentSdkText field={tabLabel} />
+                    ) : (
+                      <span>{`Promotion ${index + 1}`}</span>
+                    )}
+                    {isActive && (
+                      <span
+                        data-tab-caret
+                        aria-hidden="true"
+                        className="border-t-primary absolute bottom-0 left-1/2 h-0 w-0 -translate-x-1/2 translate-y-full border-x-[0.65rem] border-t-[0.65rem] border-x-transparent"
+                      />
+                    )}
+                  </button>
+                );
+              })}
+            </div>
+
+            <div className="min-w-0">
+              {promos.map((promo, index) => {
+                const isActive = index === activeIndex;
+
+                return (
+                  <div
+                    key={promo.id}
+                    data-promo-panel
+                    data-active={isActive}
+                    hidden={!isActive}
+                  >
+                    <TopTabsPromoPanel
+                      promo={promo}
+                      tabId={`multi-promo-top-tab-${promo.id}`}
+                      panelId={`multi-promo-top-tab-panel-${promo.id}`}
+                      isEditing={isEditing}
+                      showImage={showImage}
+                      imagePosition={imagePosition}
+                    />
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  return <NoDataFallback componentName="MultiPromo" />;
+};
+
+export const TopTabs = (props: MultiPromoProps) =>
+  TopTabsLayout({ props, showImage: true, layoutClass: 'multi-promo-top-tabs' });
+
+export const TopTabsNoImage = (props: MultiPromoProps) =>
+  TopTabsLayout({ props, showImage: false, layoutClass: 'multi-promo-top-tabs-no-image' });
+
+const Version1PromoCard = ({
+  promo,
+  isEditing,
+}: {
+  promo: SimplePromoFields;
+  isEditing: boolean;
+}) => {
+  const { image, heading, description, link } = promo ?? {};
+  const headingField = heading?.jsonValue;
+  const descriptionField = description?.jsonValue;
+  const imageField = image?.jsonValue;
+  const linkField = link?.jsonValue;
+
+  return (
+    <article className="flex h-full flex-col" data-testid="multi-promo-v1-card">
+      {(imageField?.value?.src || isEditing) && imageField && (
+        <ContentSdkImage
+          field={imageField}
+          className="mb-5 aspect-[16/10] w-full object-cover"
+        />
+      )}
+      {(headingField?.value || isEditing) && headingField && (
+        <h3 className="font-heading text-foreground mb-3 text-pretty text-xl font-semibold leading-snug tracking-tight lg:text-2xl">
+          <ContentSdkText field={headingField} />
+        </h3>
+      )}
+      {(descriptionField?.value || isEditing) && descriptionField && (
+        <div className="font-body text-foreground mb-4 text-sm leading-relaxed lg:text-base">
+          <ContentSdkRichText field={descriptionField} />
+        </div>
+      )}
+      {(linkField?.value?.href || isEditing) && linkField && (
+        <TrackedCtaLink
+          field={linkField}
+          className="mt-auto inline-flex w-fit text-sm font-semibold text-primary hover:underline"
+        />
+      )}
+    </article>
+  );
+};
+
+export const Version1 = (props: MultiPromoProps) => {
+  const { page } = useSitecore();
+  const isEditing = Boolean(page?.mode?.isEditing);
+  const { data } = props.fields || {};
+  const { datasource } = data || {};
+  const { title, backgroundImage, children } = datasource || {};
+  const titleField = title?.jsonValue;
+  const portraitField = backgroundImage?.jsonValue;
+  const promos = children?.results?.filter(Boolean) ?? [];
+  const showBackgroundImage = isShowBackgroundImage(props.params);
+  const showPortrait =
+    showBackgroundImage && Boolean(portraitField) && Boolean(portraitField?.value?.src || isEditing);
+  const useCarousel = promos.length > VERSION1_CAROUSEL_THRESHOLD;
+
+  if (!props.fields) {
+    return <NoDataFallback componentName="MultiPromo" />;
+  }
+
+  return (
+    <section
+      className={cn('multi-promo-version1 relative overflow-hidden bg-background', props.params?.styles || '')}
+      data-class-change
+      data-testid="multi-promo-version1"
+    >
+      <div aria-hidden className="absolute inset-x-0 top-0 z-0 h-[18rem] bg-primary lg:h-[22rem]" />
+
+      {showPortrait && portraitField && (
+        <>
+          <div
+            className="absolute inset-y-0 right-0 z-0 hidden w-[min(40%,36rem)] lg:block"
+            data-testid="multi-promo-v1-portrait"
+          >
+            <ContentSdkImage
+              field={portraitField}
+              className="h-full w-full object-cover object-[center_20%]"
+            />
+          </div>
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -top-[35%] z-[1] hidden h-[170%] w-[min(70%,52rem)] rounded-full bg-background lg:block"
+            style={{ right: '16%' }}
+          />
+        </>
+      )}
+
+      <div className="relative z-10 container mx-auto px-4 pb-16 pt-10 lg:px-8 lg:pb-20 lg:pt-14">
+        <div className={cn(showPortrait && 'lg:max-w-[70%]')}>
+          {(titleField?.value || isEditing) && titleField && (
+            <h2 className="font-heading mb-10 max-w-xl text-pretty text-3xl leading-tight tracking-tight text-white lg:mb-14 lg:max-w-2xl lg:text-5xl">
+              <ContentSdkText field={titleField} />
+            </h2>
+          )}
+
+          {promos.length > 0 &&
+            (useCarousel ? (
+              <div className="relative px-0 sm:px-12">
+                <Carousel
+                  opts={{ align: 'start', loop: false }}
+                  className="w-full"
+                  data-testid="multi-promo-v1-carousel"
+                >
+                  <CarouselContent className="-ml-6">
+                    {promos.map((promo) => (
+                      <CarouselItem
+                        key={promo.id}
+                        className="basis-full pl-6 sm:basis-1/2 lg:basis-1/3"
+                        data-testid="multi-promo-v1-carousel-item"
+                      >
+                        <Version1PromoCard promo={promo} isEditing={isEditing} />
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <CarouselPrevious
+                    className="left-0 h-10 w-10 border-0 bg-secondary text-secondary-foreground hover:bg-secondary-hover sm:left-2"
+                    data-testid="multi-promo-v1-carousel-prev"
+                  />
+                  <CarouselNext
+                    className="right-0 h-10 w-10 border-0 bg-secondary text-secondary-foreground hover:bg-secondary-hover sm:right-2"
+                    data-testid="multi-promo-v1-carousel-next"
+                  />
+                </Carousel>
+              </div>
+            ) : (
+              <div
+                className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
+                data-testid="multi-promo-v1-grid"
+              >
+                {promos.map((promo) => (
+                  <Version1PromoCard key={promo.id} promo={promo} isEditing={isEditing} />
+                ))}
+              </div>
+            ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const Version2PromoCard = ({
+  promo,
+  isEditing,
+}: {
+  promo: SimplePromoFields;
+  isEditing: boolean;
+}) => {
+  const { image, heading, description, link } = promo ?? {};
+  const headingField = heading?.jsonValue;
+  const descriptionField = description?.jsonValue;
+  const imageField = image?.jsonValue;
+  const linkField = link?.jsonValue;
+
+  return (
+    <article
+      className="flex h-full flex-col bg-background text-center"
+      data-testid="multi-promo-v2-card"
+    >
+      {(imageField?.value?.src || isEditing) && imageField && (
+        <ContentSdkImage field={imageField} className="mb-6 aspect-[16/10] w-full object-cover" />
+      )}
+      {(headingField?.value || isEditing) && headingField && (
+        <h3
+          className="mb-3 px-4 text-xl font-semibold leading-snug tracking-tight text-primary lg:text-2xl"
+          style={{ fontFamily: 'var(--brand-heading-font)' }}
+        >
+          <ContentSdkText field={headingField} />
+        </h3>
+      )}
+      {(descriptionField?.value || isEditing) && descriptionField && (
+        <div className="mb-6 px-6 text-sm leading-relaxed text-muted-foreground lg:text-base">
+          <ContentSdkRichText field={descriptionField} />
+        </div>
+      )}
+      {(linkField?.value?.href || isEditing) && linkField && (
+        <div className="mt-auto flex justify-center px-4 pb-2">
+          <TrackedCtaLink
+            field={linkField}
+            className="inline-flex items-center bg-primary px-8 py-2.5 text-sm font-semibold uppercase tracking-wider text-primary-foreground transition-colors hover:bg-primary-hover"
+          />
+        </div>
+      )}
+    </article>
+  );
+};
+
+/* Version2 — Amkor: equal white/navy columns, centered copy, navy READ MORE */
+export const Version2 = (props: MultiPromoProps) => {
+  const { page } = useSitecore();
+  const isEditing = Boolean(page?.mode?.isEditing);
+  const datasource = props.fields?.data?.datasource;
+  const promos = datasource?.children?.results?.filter(Boolean) ?? [];
+
+  if (!props.fields) {
+    return <NoDataFallback componentName="MultiPromo" />;
+  }
+
+  return (
+    <section
+      className={cn('multi-promo-version2 relative bg-background py-12', props.params?.styles || '')}
+      data-class-change
+      data-testid="multi-promo-version2"
+    >
+      <div className="container mx-auto px-4 lg:px-8">
+        {(datasource?.title?.jsonValue?.value || isEditing) && datasource?.title?.jsonValue && (
+          <h2 className="mb-10 text-center text-2xl font-semibold text-primary lg:text-4xl">
+            <ContentSdkText field={datasource.title.jsonValue} />
+          </h2>
+        )}
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-8">
+          {promos.map((promo) => (
+            <Version2PromoCard key={promo.id} promo={promo} isEditing={isEditing} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};

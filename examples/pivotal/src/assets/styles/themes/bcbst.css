@@ -1,0 +1,17 @@
+/**
+ * Theme: bcbst (default)
+ * Base tokens live in src/assets/styles/globals.css @theme.
+ * This file adds the BCBS-specific primary palette overrides.
+ */
+
+/* BCBS primary palette overrides on top of @theme defaults. */
+html[data-theme='bcbst'] {
+  --color-primary: #328ac9;
+  --color-primary-foreground: #ffffff;
+  --color-primary-hover: #2b78b3;
+  --color-secondary: #e3eef6;
+  --color-secondary-foreground: #133454;
+  --color-secondary-hover: #d2e4f2;
+  --color-accent: #328ac9;
+  --color-accent-foreground: #ffffff;
+}

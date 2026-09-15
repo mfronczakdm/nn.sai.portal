@@ -1,0 +1,84 @@
+/**
+ * Theme: dfsupply
+ * Skin key / data-theme: dfsupply
+ * Source: https://dfsupply.com/ (screenshot + Playwright extraction)
+ * Activate via Sitecore Site definition Skin field (mirrored in src/lib/theme/site-skins.ts).
+ *
+ * Mustard gold accent for headings/CTAs (#D4A017). Dark slate navy footer/chrome (#2D3E4E).
+ * Clean sans-serif (Roboto headings, Open Sans body). Square CTAs match live site.
+ */
+
+[data-theme='dfsupply'] {
+  --background-image-gradient: linear-gradient(180deg, #d4a017 0%, #2d3e4e 100%);
+  --background-image-gradient-secondary: linear-gradient(90deg, #2d3e4e 0%, #d4a017 50%, #2d3e4e 100%);
+
+  --color-background: #ffffff;
+  --color-foreground: #333333;
+  --color-card: #ffffff;
+  --color-card-foreground: #333333;
+  --color-popover: #ffffff;
+  --color-popover-foreground: #333333;
+
+  --color-primary: #d4a017;
+  --color-primary-foreground: #ffffff;
+  --color-primary-hover: #b88914;
+
+  --color-secondary: #f5f5f5;
+  --color-secondary-foreground: #333333;
+  --color-secondary-hover: #ebebeb;
+
+  --color-muted: #f5f5f5;
+  --color-muted-foreground: #6b7280;
+
+  --color-accent: #2d3e4e;
+  --color-accent-foreground: #ffffff;
+
+  --color-destructive: #dc2626;
+  --color-destructive-hover: #b91c1c;
+  --color-destructive-foreground: #ffffff;
+
+  --color-border: #d4d4d4;
+  --color-input: #d4d4d4;
+  --color-ring: #d4a017;
+
+  --color-tertiary: #eef0f2;
+  --color-tertiary-foreground: #333333;
+  --color-tertiary-hover: #e2e5e9;
+
+  --color-dark: #2d3e4e;
+  --color-dark-foreground: #ffffff;
+  --color-dark-hover: #243240;
+
+  --color-light: #fafafa;
+  --color-light-hover: #f5f5f5;
+  --color-light-foreground: #333333;
+
+  --color-overlay: rgb(45 62 78 / 0.45);
+
+  /* DF Supply extras */
+  --border-radius-default: 0;
+  --border-radius-sm: 0;
+  --border-radius-md: 0;
+  --border-radius-lg: 0;
+  --radius: 0;
+  --color-header-background: #ffffff;
+  --color-header-foreground: #333333;
+  --color-footer-background: #2d3e4e;
+  --color-footer-foreground: #ffffff;
+  --color-link: #d4a017;
+  --color-section-heading: #d4a017;
+  --color-cta-band: #5a6978;
+}
+
+[data-theme='dfsupply'] .bg-primary {
+  color: var(--color-primary-foreground);
+}
+
+[data-theme='dfsupply'] .bg-dark,
+[data-theme='dfsupply'] .bg-accent {
+  color: var(--color-dark-foreground);
+}
+
+[data-theme='dfsupply'] a:not([class]) {
+  color: var(--color-link);
+}

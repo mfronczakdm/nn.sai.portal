@@ -1,0 +1,62 @@
+/**
+ * Theme: pillsburylaw
+ * Skin key / data-theme: pillsburylaw
+ * Activate via Sitecore Site definition Skin field (mirrored in src/lib/theme/site-skins.ts).
+ */
+
+/*
+ * Pillsbury Law — McKinsey-inspired dark theme.
+ * Deep navy surfaces, white type, luminous sky-blue accents/links
+ * (readable on navy; CTAs still use solid primary fills).
+ * Source: https://www.mckinsey.com/ (screenshot + brand research).
+ */
+[data-theme='pillsburylaw'] {
+  --background-image-gradient: linear-gradient(180deg, #0032a0 0%, #051c2c 100%);
+  --background-image-gradient-secondary: linear-gradient(90deg, #051c2c 0%, #0032a0 50%, #5eb1ff 100%);
+  --color-background: #051c2c;
+  --color-foreground: #ffffff;
+  --color-card: #0a2a3c;
+  --color-card-foreground: #ffffff;
+  --color-popover: #0a2a3c;
+  --color-popover-foreground: #ffffff;
+  /* Luminous blue for text links / short titles on navy (was #0055ff — low contrast). */
+  --color-primary: #5eb1ff;
+  --color-primary-foreground: #051c2c;
+  --color-primary-hover: #7ec2ff;
+  --color-secondary: #0a2a3c;
+  --color-secondary-foreground: #ffffff;
+  --color-secondary-hover: #071f2d;
+  --color-muted: #0d3347;
+  --color-muted-foreground: #b8c9d8;
+  --color-accent: #7ec2ff;
+  --color-accent-foreground: #051c2c;
+  --color-destructive: #dc2626;
+  --color-destructive-hover: #b91c1c;
+  --color-destructive-foreground: #ffffff;
+  --color-border: #1a4055;
+  --color-input: #1a4055;
+  --color-ring: #5eb1ff;
+  --color-tertiary-foreground: #ffffff;
+  --color-tertiary-hover: #071f2d;
+  --color-tertiary: #0a2a3c;
+  --color-dark-foreground: #ffffff;
+  --color-dark-hover: #051018;
+  --color-dark: #030f18;
+  --color-light: #f0f0f0;
+  --color-light-hover: #e4e4e4;
+  --color-light-foreground: #051c2c;
+  --color-overlay: rgb(5 28 44 / 0.55);
+}
+
+[data-theme='pillsburylaw'] .bg-primary {
+  background-color: #0055ff;
+  color: #ffffff;
+}
+
+[data-theme='pillsburylaw'] .bg-secondary {
+  color: var(--color-secondary-foreground);
+}
+
+[data-theme='pillsburylaw'] .bg-dark {
+  color: var(--color-dark-foreground);
+}

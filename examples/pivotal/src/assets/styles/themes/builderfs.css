@@ -1,0 +1,46 @@
+/**
+ * Theme: builderfs
+ * Skin key / data-theme: builderfs
+ * Activate via Sitecore Site definition Skin field (mirrored in src/lib/theme/site-skins.ts).
+ */
+
+[data-theme='builderfs'] {
+  --background-image-gradient: linear-gradient(180deg, #ed1d24 0%, #292670 100%);
+  --background-image-gradient-secondary: linear-gradient(90deg, #4a4687 0%, #292670 50%, #ed1d24 100%);
+  --color-background: #ffffff;
+  --color-foreground: #292670;
+  --color-card: #ffffff;
+  --color-card-foreground: #292670;
+  --color-popover: #ffffff;
+  --color-popover-foreground: #292670;
+  --color-primary: #292670;
+  --color-primary-foreground: #ffffff;
+  --color-primary-hover: #1f1d52;
+  --color-secondary: #f4f4f7;
+  --color-secondary-foreground: #292670;
+  --color-secondary-hover: #e8e8ef;
+  --color-muted: #f4f4f7;
+  --color-muted-foreground: #5c5a7a;
+  --color-accent: #ed1d24;
+  --color-accent-foreground: #ffffff;
+  --color-destructive: #c41e25;
+  --color-destructive-hover: #a0181e;
+  --color-destructive-foreground: #ffffff;
+  --color-border: #d9d8e4;
+  --color-input: #d9d8e4;
+  --color-ring: #292670;
+  --color-tertiary-foreground: #292670;
+  --color-tertiary-hover: #e8e8ef;
+  --color-tertiary: #f4f4f7;
+  --color-dark-foreground: #292670;
+  --color-dark-hover: #e8e8ef;
+  --color-dark: #f4f4f7;
+  --color-light: #fafafc;
+  --color-light-hover: #f4f4f7;
+  --color-light-foreground: #292670;
+  --color-overlay: rgb(41 38 112 / 0.45);
+}
+
+[data-theme='builderfs'] .bg-primary {
+  color: var(--color-primary-foreground);
+}

@@ -1,0 +1,1207 @@
+'use client';
+
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  Link as ContentSdkLink,
+  NextImage as ContentSdkImage,
+  LinkField,
+  ImageField,
+  AppPlaceholder,
+} from '@sitecore-content-sdk/nextjs';
+import Link from 'next/link';
+import { useEffect, useId, useRef, useState } from 'react';
+import { Bookmark, ChevronDown, Search } from 'lucide-react';
+import { MiniCart } from './non-sitecore/MiniCart';
+import { HeaderPreviewSearch } from './non-sitecore/HeaderPreviewSearch';
+import { ComponentProps } from 'lib/component-props';
+import { MobileMenuWrapper } from './MobileMenuWrapper';
+import { MegaMenuCascadeProvider } from './MegaMenuCascade';
+import { HeaderSTAuthControls, useHeaderSTNavigationVisibility } from './HeaderSTAuthControls';
+import { cn } from '@/lib/utils';
+import { usePathname, useSearchParams } from 'next/navigation';
+import {
+  DEFAULT_LOCALE,
+  JAPANESE_LOCALE,
+  KOREAN_LOCALE,
+  SIMPLIFIED_CHINESE_LOCALE,
+  COLOMBIAN_SPANISH_LOCALE,
+  buildLanguageSwitchPathname,
+  getLocaleFromPathname,
+  isAtlantaApparelSiteName,
+  resolveAtlantaApparelLanguageOptions,
+} from '@/lib/locale';
+
+type ComponentMap = typeof import('.sitecore/component-map').default;
+
+let cachedComponentMap: ComponentMap | undefined;
+
+function getComponentMap(): ComponentMap {
+  if (!cachedComponentMap) {
+    // Defer loading the map until render time to avoid a circular import with HeaderST exports.
+    // eslint-disable-next-line @typescript-eslint/no-require-imports -- break HeaderST <-> component-map cycle
+    cachedComponentMap = require('.sitecore/component-map').default as ComponentMap;
+  }
+  return cachedComponentMap;
+}
+interface Fields {
+  Logo: ImageField;
+  SupportLink: LinkField;
+  SearchLink: LinkField;
+  CartLink: LinkField;
+  LoginLink?: LinkField;
+}
+
+type HeaderSTProps = ComponentProps & {
+  params: { [key: string]: string };
+  fields: Fields;
+};
+
+type HeaderSTViewProps = HeaderSTProps & {
+  requireAuthForNav: boolean;
+};
+
+/** Top header row sits on light bg-background; secondary-foreground is white in PKM theme. */
+const navLinkClass =
+  'block p-4 font-[family-name:var(--font-body)] text-foreground font-normal hover:text-primary';
+
+const LOGIN_REQUIRED_VARIANT_ID = '197f5333-48ff-42cf-8357-b49796219679';
+
+function isTruthyParam(value: string | undefined): boolean {
+  if (value == null || typeof value !== 'string') return false;
+  const v = value.trim().toLowerCase();
+  return v === '1' || v === 'true' || v === 'yes';
+}
+
+/** Headless variant can surface as params.FieldNames (name or variant definition GUID). */
+function isLoginRequiredVariant(props: HeaderSTProps): boolean {
+  const fieldNames =
+    props.params?.FieldNames ??
+    (props.rendering as { params?: { FieldNames?: string } } | undefined)?.params?.FieldNames;
+  if (fieldNames == null || typeof fieldNames !== 'string') {
+    return false;
+  }
+  const normalized = fieldNames.replace(/[{}]/g, '').trim().toLowerCase();
+  return normalized === 'loginrequired' || normalized === LOGIN_REQUIRED_VARIANT_ID;
+}
+
+function resolveRequireAuthForNav(props: HeaderSTProps, fromLoginRequiredExport: boolean): boolean {
+  if (fromLoginRequiredExport) {
+    return true;
+  }
+  return (
+    isLoginRequiredVariant(props) ||
+    isTruthyParam(props.params?.RequireAuthForNav) ||
+    isTruthyParam(props.params?.requireAuthForNav)
+  );
+}
+/** Sitecore checkbox / string params for rendering parameter ReverseTheme */
+function isReverseThemeParam(value: string | undefined): boolean {
+  if (value == null || typeof value !== 'string') return false;
+  const v = value.trim().toLowerCase();
+  return v === '1' || v === 'true' || v === 'yes' || v === 'reversetheme';
+}
+
+const HeaderSTView = (props: HeaderSTViewProps) => {
+  const { fields, params, requireAuthForNav } = props;
+  const isReverseTheme = isReverseThemeParam(params?.ReverseTheme);
+  const showNavigation = useHeaderSTNavigationVisibility(requireAuthForNav);
+  const componentMap = getComponentMap();
+
+  return (
+    <section
+      className={cn(
+        // relative: SearchBox/MiniCart panels use lg:absolute and must span this full-width header
+        'relative sticky top-0 z-30 w-full min-w-0 border-b border-border/30 bg-background shadow-sm',
+        params?.styles
+      )}
+      data-class-change
+    >
+      <div
+        className="flex w-full min-w-0 flex-col [.partial-editing-mode_&]:flex-col-reverse"
+        role="navigation"
+        aria-label="Site header"
+      >
+        {/* Row 1: full-bleed background; content constrained to max width */}
+        <div className="w-full min-w-0">
+          <div className="mx-auto flex w-full max-w-[100rem] items-center justify-between gap-4 px-4 sm:px-6 lg:gap-8 lg:px-8">
+            <Link
+              href="/"
+              className="relative z-10 flex shrink-0 grow-0 items-center justify-center self-stretch px-1 py-2 sm:px-2 lg:px-3 lg:py-3"
+              prefetch={false}
+            >
+              <ContentSdkImage
+                field={props.fields?.Logo}
+                className="h-14 w-auto max-w-[min(100%,300px)] object-contain sm:h-16 sm:max-w-[min(100%,380px)] lg:h-20 lg:max-w-[min(100%,460px)]"
+              />
+            </Link>
+
+            <ul className="flex min-h-[3.5rem] list-none flex-row items-center justify-end gap-0 p-0 lg:min-h-[4.5rem]">
+              <li className="hidden lg:block">
+                <ContentSdkLink
+                  field={fields?.SupportLink}
+                  prefetch={false}
+                  className={navLinkClass}
+                />
+              </li>
+              <li className="mr-auto flex min-w-0 flex-1 justify-end lg:mr-0 lg:justify-center lg:px-4">
+                {params.showSearchBox ? (
+                  <HeaderPreviewSearch searchLink={fields?.SearchLink} />
+                ) : (
+                  <ContentSdkLink
+                    field={fields?.SearchLink}
+                    prefetch={false}
+                    className={navLinkClass}
+                  />
+                )}
+              </li>
+              <HeaderSTAuthControls
+                loginLink={fields?.LoginLink}
+                postLogoutRedirect={params?.postLogoutRedirect}
+              />
+              {showNavigation ? (
+                <MobileMenuWrapper>
+                  <div className="flex h-full w-full flex-col">
+                    <div className="flex flex-1 items-center justify-center">
+                      <ul className="flex w-full flex-col bg-background text-center">
+                        <AppPlaceholder
+                          name={`header-navigation-${params?.DynamicPlaceholderId}`}
+                          rendering={props.rendering}
+                          page={props.page}
+                          componentMap={componentMap}
+                        />
+                      </ul>
+                    </div>
+                    <div className="w-full">
+                      <hr className="w-full border-border" />
+                      <ul className="text-center">
+                        <li>
+                          <ContentSdkLink
+                            field={fields?.SupportLink}
+                            prefetch={false}
+                            className={navLinkClass}
+                          />
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </MobileMenuWrapper>
+              ) : null}
+              {!isTruthyParam(params?.HideCart) ? (
+                <li>
+                  {params.showMiniCart ? (
+                    <MiniCart cartLink={fields?.CartLink} />
+                  ) : (
+                    <ContentSdkLink
+                      field={fields?.CartLink}
+                      prefetch={false}
+                      className="block p-4 text-foreground hover:text-primary"
+                    >
+                      <FontAwesomeIcon icon={faShoppingCart} width={24} height={24} />
+                    </ContentSdkLink>
+                  )}
+                </li>
+              ) : null}
+            </ul>
+          </div>
+        </div>
+
+        {/* Row 2: full-bleed bar (e.g. dark reverse theme); nav content aligned with row 1 */}
+        {showNavigation ? (
+          <div
+            className={cn(
+              'hidden w-full min-w-0 border-t border-border/30 lg:block',
+              isReverseTheme ? 'bg-primary' : 'bg-transparent'
+            )}
+            data-header-st-nav-row={isReverseTheme ? 'reverse' : undefined}
+          >
+            <div className="mx-auto w-full max-w-[100rem] px-4 sm:px-6 lg:px-8">
+              <ul
+                className={cn(
+                  'm-0 flex list-none flex-row items-center justify-start gap-0 p-0 text-left [.partial-editing-mode_&]:!flex-col',
+                  'min-h-0 py-1 lg:min-h-[3rem] lg:py-2',
+                  isReverseTheme &&
+                    'text-primary-foreground [&>li>a]:!text-primary-foreground [&>li>a:hover]:opacity-90'
+                )}
+              >
+                <AppPlaceholder
+                  name={`header-navigation-${params?.DynamicPlaceholderId}`}
+                  rendering={props.rendering}
+                  page={props.page}
+                  componentMap={componentMap}
+                />
+              </ul>
+            </div>
+          </div>
+        ) : null}
+      </div>
+    </section>
+  );
+};
+
+export const Default = (props: HeaderSTProps) => (
+  <HeaderSTView {...props} requireAuthForNav={resolveRequireAuthForNav(props, false)} />
+);
+
+export const LoginRequired = (props: HeaderSTProps) => (
+  <HeaderSTView {...props} requireAuthForNav={resolveRequireAuthForNav(props, true)} />
+);
+
+const version1UtilityLinkClass =
+  'block whitespace-nowrap px-2.5 py-1.5 font-[family-name:var(--font-body)] text-[0.6875rem] font-normal tracking-[0.14em] text-[color:var(--color-header-foreground,var(--color-background))] hover:opacity-80';
+
+const version1LangClass =
+  'inline-flex h-full items-center px-3 font-[family-name:var(--font-body)] text-[0.6875rem] font-normal tracking-[0.12em] text-[color:var(--color-header-foreground,var(--color-background))] hover:opacity-80';
+
+const version1SearchClass =
+  'w-full min-w-0 bg-transparent py-2 text-left text-[0.8125rem] font-normal uppercase tracking-[0.14em] text-[color:var(--color-header-muted,var(--color-muted-foreground))] hover:text-[color:var(--color-header-foreground,var(--color-background))]';
+
+/* HeaderST's datasource exposes one SupportLink and the template is shared with the other sites,
+   so Amkor's utility + language row stays in code for this demo variant.
+   Locale codes are the Sitecore language names — they become the URL segment. */
+const version1LanguageLinks = [
+  { text: 'English', locale: DEFAULT_LOCALE },
+  { text: '한국어', locale: KOREAN_LOCALE },
+  { text: '日本語', locale: JAPANESE_LOCALE },
+  { text: '简体中文', locale: SIMPLIFIED_CHINESE_LOCALE },
+] as const;
+
+const version1UtilityLinks = [
+  { text: 'Document Library', href: '/about-us/customer-center/document-library' },
+  { text: 'Factory Certs', href: '/quality#certifications' },
+  { text: 'Investors', href: 'https://ir.amkor.com/' },
+  { text: 'Cloud Services', href: 'https://cloudservices.amkor.com/' },
+  { text: 'Careers', href: '/about-us/careers' },
+  { text: 'Contact Us', href: '/about-us/contact-us' },
+] as const;
+
+const version1UtilityLabels = new Set(version1UtilityLinks.map((link) => link.text.toLowerCase()));
+
+const Version1HardcodedLink = ({
+  text,
+  href,
+  className,
+  role,
+}: {
+  text: string;
+  href: string;
+  className: string;
+  role?: string;
+}) => {
+  if (/^https?:\/\//i.test(href)) {
+    return (
+      <a href={href} className={className} target="_blank" rel="noopener noreferrer" role={role}>
+        {text}
+      </a>
+    );
+  }
+
+  return (
+    <Link href={href} prefetch={false} className={className} role={role}>
+      {text}
+    </Link>
+  );
+};
+
+type Version2LocationLink = {
+  text: string;
+  href: string;
+};
+
+type Version2LocationMenu = {
+  label: string;
+  items: readonly Version2LocationLink[];
+};
+
+/* HeaderST's datasource has no location-menu fields and the template is shared, so ANDMORE
+   city pull-downs stay in code for Version2 only. Destinations match the live sister sites. */
+const version2LocationMenus: readonly Version2LocationMenu[] = [
+  {
+    label: 'ATLANTA',
+    items: [
+      { text: 'AmericasMart', href: 'https://www.americasmart.com/' },
+      { text: 'Atlanta Market', href: 'https://www.atlantamarket.com/' },
+      { text: 'Atlanta Apparel', href: '/' },
+      { text: 'Casual Market Atlanta', href: 'https://www.casualmarketatlanta.com/' },
+      { text: 'ADAC', href: 'https://adacatlanta.com/' },
+    ],
+  },
+  {
+    label: 'LAS VEGAS',
+    items: [
+      { text: 'Las Vegas Market', href: 'https://www.lasvegasmarket.com/' },
+      { text: 'Las Vegas Apparel', href: 'https://www.atlanta-apparel.com/Markets/Las-Vegas-Apparel' },
+    ],
+  },
+  {
+    label: 'HIGH POINT',
+    items: [
+      { text: 'ANDMORE at High Point Market', href: 'https://www.andmorehighpointmarket.com/' },
+      { text: 'Shoppe Object', href: 'https://www.shoppeobject.com/' },
+    ],
+  },
+  {
+    label: 'NEW YORK',
+    items: [{ text: 'Shoppe Object', href: 'https://www.shoppeobject.com/' }],
+  },
+];
+
+const version2MarketPlanLink = { text: 'Market Plan', href: '/visit/plan-your-market' } as const;
+
+const version2LanguageTriggerClass =
+  'inline-flex items-center gap-1 whitespace-nowrap px-2 py-1 font-[family-name:var(--font-body)] text-xs font-medium text-background hover:opacity-80';
+
+const version2LanguageItemClass =
+  'block whitespace-nowrap px-3 py-2 font-[family-name:var(--font-body)] text-xs font-medium text-foreground hover:bg-muted';
+
+function getPageSiteName(page: HeaderSTViewProps['page']): string | undefined {
+  return (
+    (page as { siteName?: string } | undefined)?.siteName ||
+    (page?.layout?.sitecore?.context as { site?: { name?: string } } | undefined)?.site?.name
+  );
+}
+
+function getPageLanguageCodes(page: HeaderSTViewProps['page']): string[] {
+  const context = page?.layout?.sitecore?.context as
+    | { languages?: unknown; site?: { languages?: unknown } }
+    | undefined;
+  const raw = context?.languages ?? context?.site?.languages;
+  if (!Array.isArray(raw)) {
+    return [];
+  }
+
+  return raw
+    .map((item) => {
+      if (typeof item === 'string') {
+        return item;
+      }
+      if (item && typeof item === 'object') {
+        const record = item as { name?: string; iso?: string };
+        return record.name || record.iso || '';
+      }
+      return '';
+    })
+    .filter(Boolean);
+}
+
+const version2LocationTriggerClass =
+  'inline-flex items-center gap-0.5 whitespace-nowrap px-1.5 py-1 font-[family-name:var(--font-body)] text-[0.625rem] font-bold uppercase tracking-[0.12em] text-background hover:opacity-80 xl:gap-1 xl:px-2 xl:text-[0.6875rem] xl:tracking-[0.14em]';
+
+const version2LocationItemClass =
+  'block whitespace-nowrap px-3 py-2 font-[family-name:var(--font-body)] text-xs font-medium text-foreground hover:bg-muted';
+
+const Version2LocationDropdown = ({ menu }: { menu: Version2LocationMenu }) => {
+  const [open, setOpen] = useState(false);
+  const rootRef = useRef<HTMLLIElement>(null);
+  const menuId = useId();
+
+  useEffect(() => {
+    if (!open) {
+      return;
+    }
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setOpen(false);
+      }
+    };
+    const handlePointerDown = (event: PointerEvent) => {
+      if (!rootRef.current?.contains(event.target as Node)) {
+        setOpen(false);
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('pointerdown', handlePointerDown);
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('pointerdown', handlePointerDown);
+    };
+  }, [open]);
+
+  return (
+    <li
+      ref={rootRef}
+      className="relative"
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+    >
+      <button
+        type="button"
+        className={version2LocationTriggerClass}
+        aria-expanded={open}
+        aria-haspopup="menu"
+        aria-controls={menuId}
+        onClick={() => setOpen((current) => !current)}
+      >
+        {menu.label}
+        <ChevronDown className="h-3 w-3" aria-hidden />
+      </button>
+      {open ? (
+        <ul
+          id={menuId}
+          role="menu"
+          aria-label={menu.label}
+          className="absolute left-0 top-full z-50 min-w-[14rem] border border-border bg-background py-1 text-foreground shadow-lg"
+        >
+          {menu.items.map((item) => (
+            <li key={item.text} role="none">
+              <Version1HardcodedLink
+                text={item.text}
+                href={item.href}
+                className={version2LocationItemClass}
+                role="menuitem"
+              />
+            </li>
+          ))}
+        </ul>
+      ) : null}
+    </li>
+  );
+};
+
+/**
+ * Language switching for Version1. Keeps the visitor on the current page and preserves the
+ * `site` query parameter that local multisite development relies on.
+ */
+function useLanguageSwitcher() {
+  const pathname = usePathname() || '/';
+  const searchParams = useSearchParams();
+  const activeLocale = getLocaleFromPathname(pathname) ?? DEFAULT_LOCALE;
+  const query = searchParams?.toString();
+
+  return {
+    activeLocale,
+    buildLanguageSwitchHref: (locale: string) => {
+      const target = buildLanguageSwitchPathname(pathname, locale);
+      return query ? `${target}?${query}` : target;
+    },
+  };
+}
+
+const Version2LanguageDropdown = ({
+  languages,
+}: {
+  languages: readonly { text: string; locale: string }[];
+}) => {
+  const [open, setOpen] = useState(false);
+  const rootRef = useRef<HTMLLIElement>(null);
+  const menuId = useId();
+  const { activeLocale, buildLanguageSwitchHref } = useLanguageSwitcher();
+  const current =
+    languages.find((language) => language.locale === activeLocale) ?? languages[0];
+
+  useEffect(() => {
+    if (!open) {
+      return;
+    }
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setOpen(false);
+      }
+    };
+    const handlePointerDown = (event: PointerEvent) => {
+      if (!rootRef.current?.contains(event.target as Node)) {
+        setOpen(false);
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('pointerdown', handlePointerDown);
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('pointerdown', handlePointerDown);
+    };
+  }, [open]);
+
+  if (!current) {
+    return null;
+  }
+
+  return (
+    <li
+      ref={rootRef}
+      className="relative"
+      data-header-st-language-switcher
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+    >
+      <button
+        type="button"
+        className={version2LanguageTriggerClass}
+        aria-expanded={open}
+        aria-haspopup="menu"
+        aria-controls={menuId}
+        aria-label="Language"
+        onClick={() => setOpen((currentOpen) => !currentOpen)}
+      >
+        {current.text}
+        <ChevronDown className="h-3 w-3" aria-hidden />
+      </button>
+      {open ? (
+        <ul
+          id={menuId}
+          role="menu"
+          aria-label="Language"
+          className="absolute right-0 top-full z-50 min-w-[10rem] border border-border bg-background py-1 text-foreground shadow-lg"
+        >
+          {languages.map((language) => {
+            const isActive = language.locale === activeLocale;
+            return (
+              <li key={language.locale} role="none">
+                <Link
+                  href={buildLanguageSwitchHref(language.locale)}
+                  prefetch={false}
+                  role="menuitem"
+                  lang={language.locale}
+                  hrefLang={language.locale}
+                  aria-current={isActive ? 'true' : undefined}
+                  className={cn(version2LanguageItemClass, isActive && 'bg-muted')}
+                >
+                  {language.text}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      ) : null}
+    </li>
+  );
+};
+
+/* Version1 — inverted two-row header: langs + utilities on top, MENU + search + logo-right below. */
+const HeaderSTVersion1View = (props: HeaderSTViewProps) => {
+  const { fields, params, requireAuthForNav } = props;
+  const showNavigation = useHeaderSTNavigationVisibility(requireAuthForNav);
+  const componentMap = getComponentMap();
+  const hideCart = isTruthyParam(params?.HideCart);
+  const supportLinkText = String(fields?.SupportLink?.value?.text ?? '').trim();
+  const showSupportLink =
+    supportLinkText.length > 0 && !version1UtilityLabels.has(supportLinkText.toLowerCase());
+  const { activeLocale, buildLanguageSwitchHref } = useLanguageSwitcher();
+
+  return (
+    <section
+      className={cn(
+        'relative sticky top-0 z-30 w-full min-w-0 text-[color:var(--color-header-foreground,var(--color-background))] shadow-sm',
+        params?.styles
+      )}
+      data-class-change
+      data-header-st-layout="version1"
+    >
+      <div className="flex w-full min-w-0 flex-col" role="navigation" aria-label="Site header">
+        <div
+          data-header-st-row="utility"
+          className="relative z-[60] w-full min-w-0 bg-[var(--color-header-utility,var(--color-muted-foreground))]"
+        >
+          <div className="flex w-full items-stretch justify-between gap-3 px-3 sm:px-4">
+            <ul
+              data-header-st-langs
+              className="m-0 flex min-h-8 list-none flex-row items-stretch gap-0 p-0"
+              aria-label="Language"
+            >
+              {version1LanguageLinks.map((link) => {
+                const isActive = link.locale === activeLocale;
+                return (
+                  <li
+                    key={link.locale}
+                    className={cn(
+                      'flex items-stretch',
+                      isActive &&
+                        'bg-[var(--color-header-lang-active,color-mix(in_srgb,var(--color-foreground)_75%,black))]'
+                    )}
+                  >
+                    <Link
+                      href={buildLanguageSwitchHref(link.locale)}
+                      prefetch={false}
+                      className={version1LangClass}
+                      lang={link.locale}
+                      hrefLang={link.locale}
+                      aria-current={isActive ? 'true' : undefined}
+                    >
+                      {link.text}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+            <ul className="m-0 flex list-none flex-row flex-wrap items-center justify-end gap-0 p-0">
+              {version1UtilityLinks.map((link) => (
+                <li key={link.text}>
+                  <Version1HardcodedLink
+                    text={link.text}
+                    href={link.href}
+                    className={version1UtilityLinkClass}
+                  />
+                </li>
+              ))}
+              {showSupportLink ? (
+                <li className="hidden lg:block">
+                  <ContentSdkLink
+                    field={fields?.SupportLink}
+                    prefetch={false}
+                    className={version1UtilityLinkClass}
+                  />
+                </li>
+              ) : null}
+              <HeaderSTAuthControls
+                loginLink={fields?.LoginLink}
+                postLogoutRedirect={params?.postLogoutRedirect}
+                linkClassName="px-2.5 py-1.5 text-[0.6875rem] tracking-[0.14em] text-[color:var(--color-header-foreground,var(--color-background))] hover:opacity-80"
+              />
+              {!hideCart ? (
+                <li>
+                  {params.showMiniCart ? (
+                    <MiniCart cartLink={fields?.CartLink} />
+                  ) : (
+                    <ContentSdkLink
+                      field={fields?.CartLink}
+                      prefetch={false}
+                      className="block p-2 text-[color:var(--color-header-foreground,var(--color-background))] hover:opacity-80"
+                    >
+                      <FontAwesomeIcon icon={faShoppingCart} width={20} height={20} />
+                    </ContentSdkLink>
+                  )}
+                </li>
+              ) : null}
+            </ul>
+          </div>
+        </div>
+
+        <div
+          data-header-st-row="main"
+          className="relative z-[60] w-full min-w-0 bg-[var(--color-header-background,var(--color-foreground))]"
+        >
+          <ul className="flex w-full list-none items-stretch p-0">
+            {showNavigation ? (
+              <MobileMenuWrapper
+                alwaysVisible
+                label="MENU"
+                darkPanel
+                className="bg-[var(--color-header-menu,var(--color-foreground))]"
+                buttonClassName="h-full gap-2.5 px-5 py-0 text-[color:var(--color-header-foreground,var(--color-background))] hover:opacity-90"
+                labelClassName="inline text-[0.8125rem] font-bold tracking-[0.16em]"
+                panelClassName="top-[6.25rem] h-[calc(100vh-6.25rem)]"
+              >
+                <MegaMenuCascadeProvider enabled>
+                  <AppPlaceholder
+                    name={`header-navigation-${params?.DynamicPlaceholderId}`}
+                    rendering={props.rendering}
+                    page={props.page}
+                    componentMap={componentMap}
+                  />
+                </MegaMenuCascadeProvider>
+              </MobileMenuWrapper>
+            ) : null}
+
+            <li className="flex min-w-0 flex-1 items-center px-3 sm:px-4">
+              {params.showSearchBox ? (
+                <HeaderPreviewSearch
+                  searchLink={fields?.SearchLink}
+                  appearance="bar"
+                  className={version1SearchClass}
+                />
+              ) : (
+                <ContentSdkLink
+                  field={fields?.SearchLink}
+                  prefetch={false}
+                  className={cn(version1SearchClass, 'block after:content-["..."]')}
+                />
+              )}
+            </li>
+
+            <li className="flex shrink-0 items-center self-stretch bg-transparent">
+              <Link
+                href="/"
+                data-header-st-logo
+                className="relative z-10 flex items-center justify-center bg-transparent px-3 py-2 sm:px-4"
+                prefetch={false}
+              >
+                <ContentSdkImage
+                  field={props.fields?.Logo}
+                  className="h-9 w-auto max-w-[min(100%,200px)] bg-transparent object-contain object-right sm:h-10 sm:max-w-[min(100%,240px)]"
+                />
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export const Version1 = (props: HeaderSTProps) => (
+  <HeaderSTVersion1View {...props} requireAuthForNav={resolveRequireAuthForNav(props, false)} />
+);
+
+const version2NavLinkClass =
+  'block px-3 py-2 font-[family-name:var(--font-body)] text-sm font-semibold text-foreground hover:text-primary';
+
+/* Version2 — dark utility row; white main row with logo left, inline nav, search icon.
+   When ReverseTheme is on the main row also goes dark to match sites like Atlanta Apparel. */
+const HeaderSTVersion2View = (props: HeaderSTViewProps) => {
+  const { fields, params, requireAuthForNav } = props;
+  const showNavigation = useHeaderSTNavigationVisibility(requireAuthForNav);
+  const componentMap = getComponentMap();
+  const hideCart = isTruthyParam(params?.HideCart);
+  const isReverse = isReverseThemeParam(params?.ReverseTheme);
+  const searchParams = useSearchParams();
+  const showLanguageSelector =
+    isAtlantaApparelSiteName(getPageSiteName(props.page)) ||
+    isAtlantaApparelSiteName(searchParams?.get('site')) ||
+    isAtlantaApparelSiteName(searchParams?.get('sc_site'));
+  const languageOptions = showLanguageSelector
+    ? resolveAtlantaApparelLanguageOptions(getPageLanguageCodes(props.page))
+    : [];
+
+  const searchControl = params.showSearchBox ? (
+    <HeaderPreviewSearch searchLink={fields?.SearchLink} className="min-w-0" />
+  ) : (
+    <ContentSdkLink
+      field={fields?.SearchLink}
+      prefetch={false}
+      className={cn(
+        'flex h-9 w-9 items-center justify-center rounded-sm',
+        isReverse
+          ? 'text-background hover:text-background/70'
+          : 'bg-muted text-foreground hover:bg-muted/80'
+      )}
+    >
+      <Search className="h-5 w-5" strokeWidth={2} aria-hidden />
+      <span className="sr-only">{fields?.SearchLink?.value?.text || 'Search'}</span>
+    </ContentSdkLink>
+  );
+
+  return (
+    <section
+      className={cn(
+        'relative sticky top-0 z-30 w-full min-w-0 border-b border-border/30 shadow-sm',
+        isReverse ? 'bg-foreground' : 'bg-background',
+        params?.styles
+      )}
+      data-class-change
+      data-header-st-layout="version2"
+    >
+      <div className="flex w-full min-w-0 flex-col" role="navigation" aria-label="Site header">
+        {/* Utility row — always dark; city menus left, Register / Sign In / cart / language right */}
+        <div className="w-full min-w-0 bg-foreground text-background">
+          <div className="mx-auto flex w-full max-w-[100rem] items-center justify-between gap-2 px-4 py-1.5 sm:px-6 lg:gap-3 lg:px-5 xl:px-8">
+            <ul
+              data-header-st-locations
+              className="m-0 flex min-w-0 list-none flex-row flex-wrap items-center gap-0 p-0 sm:gap-1"
+              aria-label="ANDMORE locations"
+            >
+              {version2LocationMenus.map((menu) => (
+                <Version2LocationDropdown key={menu.label} menu={menu} />
+              ))}
+            </ul>
+            <ul className="flex list-none flex-row items-center justify-end gap-2 p-0">
+              <li className="hidden sm:block">
+                <Link
+                  href={version2MarketPlanLink.href}
+                  prefetch={false}
+                  className="inline-flex items-center gap-1.5 px-2 py-1 font-[family-name:var(--font-body)] text-xs font-medium text-background hover:opacity-80"
+                >
+                  <Bookmark className="h-3.5 w-3.5" aria-hidden />
+                  {version2MarketPlanLink.text}
+                </Link>
+              </li>
+              <li className="hidden lg:block">
+                <ContentSdkLink
+                  field={fields?.SupportLink}
+                  prefetch={false}
+                  className="inline-flex items-center rounded-full border border-background/80 bg-transparent px-4 py-1 text-xs font-semibold text-background hover:bg-background hover:text-foreground"
+                />
+              </li>
+              <HeaderSTAuthControls
+                loginLink={fields?.LoginLink}
+                postLogoutRedirect={params?.postLogoutRedirect}
+                linkAppearance="text"
+                linkClassName="px-2 py-1 text-sm font-medium text-background hover:text-background/80 hover:opacity-100"
+              />
+              {!hideCart ? (
+                <li>
+                  {params.showMiniCart ? (
+                    <MiniCart cartLink={fields?.CartLink} />
+                  ) : (
+                    <ContentSdkLink
+                      field={fields?.CartLink}
+                      prefetch={false}
+                      className="block p-2 text-background hover:opacity-80"
+                    >
+                      <FontAwesomeIcon icon={faShoppingCart} width={20} height={20} />
+                    </ContentSdkLink>
+                  )}
+                </li>
+              ) : null}
+              {showLanguageSelector ? <Version2LanguageDropdown languages={languageOptions} /> : null}
+            </ul>
+          </div>
+        </div>
+
+        {/* Main row — dark when ReverseTheme is on */}
+        <div className={cn('w-full min-w-0', isReverse ? 'bg-foreground' : 'bg-background')}>
+          <div className="mx-auto flex w-full max-w-[100rem] items-center gap-3 px-4 py-2.5 sm:px-6 lg:gap-3 lg:px-5 xl:gap-8 xl:px-8">
+            <Link
+              href="/"
+              className="relative z-10 flex shrink-0 items-center self-stretch"
+              prefetch={false}
+            >
+              <ContentSdkImage
+                field={props.fields?.Logo}
+                className="h-10 w-auto max-w-[min(100%,220px)] object-contain object-left sm:h-11 sm:max-w-[min(100%,280px)] lg:h-9 lg:max-w-[min(100%,168px)] xl:h-12 xl:max-w-[min(100%,280px)]"
+              />
+            </Link>
+
+            {showNavigation ? (
+              <ul
+                data-header-st-nav="primary"
+                className={cn(
+                  'm-0 hidden min-w-0 flex-1 list-none flex-row flex-nowrap items-center justify-end gap-0 overflow-visible p-0 text-left lg:flex',
+                  '[&>li]:w-auto [&>li]:max-w-none [&>li]:shrink-0 [&>li]:grow-0 [&>li]:basis-auto',
+                  '[&>li>a]:whitespace-nowrap [&>li>span]:whitespace-nowrap [&>li>button]:whitespace-nowrap',
+                  '[&>li>a]:px-2 [&>li>a]:py-2 [&>li>a]:text-[0.8125rem] xl:[&>li>a]:px-3 xl:[&>li>a]:text-sm',
+                  '[&>li>span]:px-2 [&>li>span]:py-2 [&>li>span]:text-[0.8125rem] xl:[&>li>span]:px-3 xl:[&>li>span]:text-sm',
+                  '[&>li>button]:px-2 [&>li>button]:py-2 [&>li>button]:text-[0.8125rem] xl:[&>li>button]:px-3 xl:[&>li>button]:text-sm',
+                  '[.partial-editing-mode_&]:!flex [.partial-editing-mode_&]:!flex-col'
+                )}
+              >
+                <AppPlaceholder
+                  name={`header-navigation-${params?.DynamicPlaceholderId}`}
+                  rendering={props.rendering}
+                  page={props.page}
+                  componentMap={componentMap}
+                />
+              </ul>
+            ) : (
+              <div className="hidden min-w-0 flex-1 lg:block" />
+            )}
+
+            <ul className="ml-auto flex list-none flex-row items-center gap-2 p-0 lg:ml-0">
+              <li>{searchControl}</li>
+              {showNavigation ? (
+                <MobileMenuWrapper panelClassName="top-[6.75rem] h-[calc(100vh-6.75rem)]">
+                  <div className="flex h-full w-full flex-col">
+                    <div className="flex flex-1 items-center justify-center">
+                      <ul className="flex w-full flex-col bg-background text-center">
+                        <AppPlaceholder
+                          name={`header-navigation-${params?.DynamicPlaceholderId}`}
+                          rendering={props.rendering}
+                          page={props.page}
+                          componentMap={componentMap}
+                        />
+                      </ul>
+                    </div>
+                    <div className="w-full">
+                      <hr className="w-full border-border" />
+                      <ul className="text-center">
+                        <li>
+                          <ContentSdkLink
+                            field={fields?.SupportLink}
+                            prefetch={false}
+                            className={version2NavLinkClass}
+                          />
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </MobileMenuWrapper>
+              ) : null}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export const Version2 = (props: HeaderSTProps) => (
+  <HeaderSTVersion2View {...props} requireAuthForNav={resolveRequireAuthForNav(props, false)} />
+);
+
+const version3UtilityLinkClass =
+  'block whitespace-nowrap px-1.5 py-0.5 font-[family-name:var(--font-body)] text-[0.6875rem] font-medium text-primary hover:underline xl:px-2 xl:py-1 xl:text-xs';
+
+const version3NavLinkClass =
+  'block px-3 py-1.5 font-[family-name:var(--font-body)] text-sm font-semibold text-foreground hover:text-primary';
+
+/* HeaderST's datasource exposes one SupportLink and the template is shared with the other sites,
+   so LCMC's five utility links stay in code for this demo variant. Order matches the live header. */
+const version3UtilityLinks = [
+  { text: 'Notice of Non-Discrimination', href: '/notice-of-non-discrimination' },
+  { text: 'Careers', href: 'https://careers.lcmchealth.org/us/en/' },
+  { text: 'Patient Portal/Pay my Bill', href: '/for-patients/patient-portal' },
+  { text: 'For Providers', href: '/for-providers' },
+  { text: 'Contact Us', href: '/contact-us' },
+] as const;
+
+const version3UtilityLabels = new Set(version3UtilityLinks.map((link) => link.text.toLowerCase()));
+
+/**
+ * Version3 SearchLink was reused as a utility slot (Contact Us). Search always
+ * goes to the Search Results page so Enter never follows that utility href.
+ */
+const VERSION3_SEARCH_RESULTS_LINK: LinkField = {
+  value: {
+    href: '/Search-Results',
+    text: 'Search',
+    linktype: 'internal',
+  },
+};
+
+const version3LanguageLinks = [
+  { text: 'English', locale: DEFAULT_LOCALE, country: 'US' as const },
+  { text: 'Español', locale: COLOMBIAN_SPANISH_LOCALE, country: 'ES' as const },
+];
+
+const Version3FlagGlyph = ({ country }: { country: 'US' | 'ES' }) =>
+  country === 'US' ? (
+    <svg viewBox="0 0 19 10" className="h-4 w-[1.52rem] rounded-[2px]" aria-hidden>
+      <rect width="19" height="10" fill="#b22234" />
+      <path
+        fill="#fff"
+        d="M0 .77h19v.77H0zm0 1.54h19v.77H0zm0 1.54h19v.77H0zm0 1.54h19v.77H0zm0 1.54h19v.77H0zm0 1.54h19v.77H0z"
+      />
+      <rect width="7.6" height="5.38" fill="#3c3b6e" />
+    </svg>
+  ) : (
+    <svg viewBox="0 0 6 4" className="h-4 w-[1.52rem] rounded-[2px]" aria-hidden>
+      <rect width="6" height="4" fill="#c60b1e" />
+      <rect y="1" width="6" height="2" fill="#ffc400" />
+    </svg>
+  );
+
+const Version3LanguageSwitcher = () => {
+  const { activeLocale, buildLanguageSwitchHref } = useLanguageSwitcher();
+
+  return (
+    <ul
+      data-header-st-langs="version3"
+      className="m-0 flex list-none flex-row items-center gap-1 p-0"
+      aria-label="Language"
+    >
+      {version3LanguageLinks.map((link) => {
+        const isActive = link.locale === activeLocale;
+        return (
+          <li key={link.locale}>
+            <Link
+              href={buildLanguageSwitchHref(link.locale)}
+              prefetch={false}
+              lang={link.locale}
+              hrefLang={link.locale}
+              aria-label={link.text}
+              title={link.text}
+              aria-current={isActive ? 'true' : undefined}
+              className={cn(
+                'flex items-center rounded-sm p-0.5 hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',
+                isActive && 'ring-2 ring-primary'
+              )}
+            >
+              <Version3FlagGlyph country={link.country} />
+            </Link>
+          </li>
+        );
+      })}
+    </ul>
+  );
+};
+
+const Version3UtilityLink = ({
+  text,
+  href,
+  className,
+}: {
+  text: string;
+  href: string;
+  className: string;
+}) =>
+  /^https?:\/\//i.test(href) ? (
+    <a href={href} className={className} target="_blank" rel="noopener noreferrer">
+      {text}
+    </a>
+  ) : (
+    <Link href={href} prefetch={false} className={className}>
+      {text}
+    </Link>
+  );
+
+/* Version3 — single white bar; logo left; two stacked nav rows; muted search bar right. */
+const HeaderSTVersion3View = (props: HeaderSTViewProps) => {
+  const { fields, params, requireAuthForNav } = props;
+  const showNavigation = useHeaderSTNavigationVisibility(requireAuthForNav);
+  const componentMap = getComponentMap();
+  const hideCart = isTruthyParam(params?.HideCart);
+  const isReverseTheme = isReverseThemeParam(params?.ReverseTheme);
+  const supportLinkText = String(fields?.SupportLink?.value?.text ?? '').trim();
+  const showSupportLink =
+    supportLinkText.length > 0 && !version3UtilityLabels.has(supportLinkText.toLowerCase());
+
+  const searchControl = params.showSearchBox ? (
+    <HeaderPreviewSearch
+      searchLink={VERSION3_SEARCH_RESULTS_LINK}
+      appearance="contained"
+      className="min-w-0"
+    />
+  ) : (
+    <ContentSdkLink
+      field={VERSION3_SEARCH_RESULTS_LINK}
+      prefetch={false}
+      className="flex items-center gap-2 px-2 py-2 text-sm text-foreground hover:text-primary"
+    >
+      <Search className="h-4 w-4 shrink-0" strokeWidth={2} aria-hidden />
+      <span>{VERSION3_SEARCH_RESULTS_LINK.value?.text || 'Search'}</span>
+    </ContentSdkLink>
+  );
+
+  return (
+    <section
+      className={cn(
+        'relative sticky top-0 z-30 w-full min-w-0 border-b border-border/30 bg-background shadow-sm',
+        params?.styles
+      )}
+      data-class-change
+      data-header-st-layout="version3"
+    >
+      <div className="flex w-full min-w-0 flex-col" role="navigation" aria-label="Site header">
+        <div className="w-full min-w-0 bg-background">
+          <div className="mx-auto flex w-full max-w-[100rem] items-center gap-3 px-4 py-3 sm:px-6 lg:gap-3 lg:px-6 xl:gap-6 xl:px-8">
+            <Link
+              href="/"
+              className="relative z-10 flex shrink-0 items-center self-stretch"
+              prefetch={false}
+            >
+              <ContentSdkImage
+                field={props.fields?.Logo}
+                className="h-11 w-auto max-w-[min(100%,220px)] object-contain object-left sm:h-12 sm:max-w-[min(100%,280px)] lg:h-11 lg:max-w-[min(100%,190px)] xl:h-14 xl:max-w-[min(100%,320px)]"
+              />
+            </Link>
+
+            <div className="flex min-w-0 flex-1 items-center gap-2 xl:gap-6">
+              {showNavigation ? (
+                <div className="hidden min-w-0 flex-1 flex-col items-end justify-center gap-1 lg:flex">
+                  <ul className="m-0 flex list-none flex-row flex-wrap items-center justify-end gap-x-1 gap-y-0.5 p-0">
+                    {version3UtilityLinks.map((link) => (
+                      <li key={link.text}>
+                        <Version3UtilityLink
+                          text={link.text}
+                          href={link.href}
+                          className={version3UtilityLinkClass}
+                        />
+                      </li>
+                    ))}
+                    {showSupportLink ? (
+                      <li>
+                        <ContentSdkLink
+                          field={fields?.SupportLink}
+                          prefetch={false}
+                          className={version3UtilityLinkClass}
+                        />
+                      </li>
+                    ) : null}
+                    <HeaderSTAuthControls
+                      loginLink={fields?.LoginLink}
+                      postLogoutRedirect={params?.postLogoutRedirect}
+                      linkAppearance="text"
+                      className="hidden lg:block"
+                      linkClassName="p-0 text-xs font-medium text-primary hover:underline hover:opacity-100"
+                    />
+                  </ul>
+                  <ul
+                    data-header-st-nav="primary"
+                    className={cn(
+                      'm-0 flex w-full min-w-0 list-none flex-row flex-nowrap items-center justify-end gap-1 overflow-visible p-0 text-left',
+                      // Size L1 items to their labels. Sitecore GridParameters (col-12) otherwise
+                      // stretch each MegaMenuItem to 100% of this column and the nowrap row
+                      // overflows left under the logo (z-10), hiding the first items.
+                      '[&>li]:w-auto [&>li]:max-w-none [&>li]:shrink-0 [&>li]:grow-0 [&>li]:basis-auto',
+                      '[&>li>a]:whitespace-nowrap [&>li>span]:whitespace-nowrap [&>li>button]:whitespace-nowrap',
+                      '[&>li>a]:px-2 [&>li>a]:py-2 [&>li>a]:text-[0.8125rem] xl:[&>li>a]:px-3 xl:[&>li>a]:text-sm',
+                      '[&>li>span]:px-2 [&>li>span]:py-2 [&>li>span]:text-[0.8125rem] xl:[&>li>span]:px-3 xl:[&>li>span]:text-sm',
+                      '[&>li>button]:px-2 [&>li>button]:py-2 [&>li>button]:text-[0.8125rem] xl:[&>li>button]:px-3 xl:[&>li>button]:text-sm',
+                      '[.partial-editing-mode_&]:!flex-col',
+                      isReverseTheme &&
+                        'rounded-md bg-primary px-2 text-primary-foreground [&>li>a]:!text-primary-foreground [&>li>a:hover]:opacity-90'
+                    )}
+                  >
+                    <AppPlaceholder
+                      name={`header-navigation-${params?.DynamicPlaceholderId}`}
+                      rendering={props.rendering}
+                      page={props.page}
+                      componentMap={componentMap}
+                    />
+                  </ul>
+                </div>
+              ) : null}
+
+              <ul className="flex shrink-0 list-none flex-row items-center gap-2 p-0">
+                <li className="flex items-center">
+                  <Version3LanguageSwitcher />
+                </li>
+                <li className="flex items-center">{searchControl}</li>
+                {!hideCart ? (
+                  <li>
+                    {params.showMiniCart ? (
+                      <MiniCart cartLink={fields?.CartLink} />
+                    ) : (
+                      <ContentSdkLink
+                        field={fields?.CartLink}
+                        prefetch={false}
+                        className="block p-2 text-foreground hover:text-primary"
+                      >
+                        <FontAwesomeIcon icon={faShoppingCart} width={20} height={20} />
+                      </ContentSdkLink>
+                    )}
+                  </li>
+                ) : null}
+                {showNavigation ? (
+                  <MobileMenuWrapper panelClassName="top-[5.5rem] h-[calc(100vh-5.5rem)]">
+                    <div className="flex h-full w-full flex-col">
+                      <div className="flex flex-1 items-center justify-center">
+                        <ul className="flex w-full flex-col bg-background text-center">
+                          <AppPlaceholder
+                            name={`header-navigation-${params?.DynamicPlaceholderId}`}
+                            rendering={props.rendering}
+                            page={props.page}
+                            componentMap={componentMap}
+                          />
+                        </ul>
+                      </div>
+                      <div className="w-full">
+                        <hr className="w-full border-border" />
+                        <ul className="text-center">
+                          {version3UtilityLinks.map((link) => (
+                            <li key={link.text}>
+                              <Version3UtilityLink
+                                text={link.text}
+                                href={link.href}
+                                className={version3NavLinkClass}
+                              />
+                            </li>
+                          ))}
+                          {showSupportLink ? (
+                            <li>
+                              <ContentSdkLink
+                                field={fields?.SupportLink}
+                                prefetch={false}
+                                className={version3NavLinkClass}
+                              />
+                            </li>
+                          ) : null}
+                        </ul>
+                      </div>
+                    </div>
+                  </MobileMenuWrapper>
+                ) : null}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export const Version3 = (props: HeaderSTProps) => (
+  <HeaderSTVersion3View {...props} requireAuthForNav={resolveRequireAuthForNav(props, false)} />
+);

@@ -1,0 +1,328 @@
+/**
+ * Theme typography stacks.
+ * Font files loaded in src/app/layout.tsx (next/font).
+ */
+
+/*
+ * Per-theme typography (<html data-theme> from Sitecore Skin / site-skins map).
+ * Unlayered `html[data-theme]` overrides `@layer base` html defaults.
+ */
+html[data-theme='dwyeromega'] {
+  --font-body: var(--font-source-sans-3), 'Source Sans 3', ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-barlow-condensed), 'Barlow Condensed', ui-sans-serif, system-ui,
+    sans-serif;
+  --font-accent: var(--font-barlow-condensed), 'Barlow Condensed', ui-sans-serif, system-ui,
+    sans-serif;
+  --font-weight-heading: 700;
+}
+
+/* bldr.com: Open Sans body / nav; Roboto Condensed for industrial display type & buttons */
+html[data-theme='builderfs'] {
+  --font-body: var(--font-open-sans), 'Open Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-roboto-condensed), 'Roboto Condensed', ui-sans-serif, system-ui,
+    sans-serif;
+  --font-accent: var(--font-roboto-condensed), 'Roboto Condensed', ui-sans-serif, system-ui,
+    sans-serif;
+  --font-weight-heading: 700;
+}
+
+html[data-theme='builderfs'] :where(h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6) {
+  letter-spacing: 0.03em;
+}
+
+html[data-theme='builderfs'] .btn.btn-primary {
+  background-color: var(--color-accent);
+  color: var(--color-accent-foreground);
+  border-radius: 0;
+}
+
+html[data-theme='builderfs'] .btn.btn-primary:hover {
+  background-color: var(--color-destructive-hover);
+  color: var(--color-accent-foreground);
+}
+
+/* rocklandtrust.com: Montserrat display headings, Open Sans body (Google Fonts substitutes for the brand type). */
+html[data-theme='rockland'] {
+  --font-body: var(--font-open-sans), 'Open Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-montserrat), 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+  --font-accent: var(--font-montserrat), 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+  --font-weight-heading: 700;
+}
+
+/* Progressive PKM: Source Sans 3 substitutes for proprietary 96 Sans (trustworthy, friendly, readable). */
+html[data-theme='pkm'] {
+  --font-body: var(--font-source-sans-3), 'Source Sans 3', ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-source-sans-3), 'Source Sans 3', ui-sans-serif, system-ui, sans-serif;
+  --font-accent: var(--font-source-sans-3), 'Source Sans 3', ui-sans-serif, system-ui, sans-serif;
+  --font-weight-heading: 700;
+}
+
+/* Pillsbury Law — modern BigLaw digital: Montserrat headings + Open Sans body (most common legal-web pairing, sans-first). */
+html[data-theme='pillsburylaw'] {
+  --font-body: var(--font-open-sans), 'Open Sans', Helvetica, Arial, ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-montserrat), 'Montserrat', Helvetica, Arial, ui-sans-serif, system-ui, sans-serif;
+  --font-accent: var(--font-montserrat), 'Montserrat', Helvetica, Arial, ui-sans-serif, system-ui, sans-serif;
+  --font-weight-heading: 600;
+  color: var(--color-foreground);
+  background-color: var(--color-background);
+}
+
+html[data-theme='pillsburylaw'] body {
+  color: var(--color-foreground);
+  background-color: var(--color-background);
+}
+
+/* Solid primary CTAs stay vivid on navy; text uses luminous --color-primary from theme tokens. */
+html[data-theme='pillsburylaw'] .btn.btn-primary {
+  background-color: #0055ff;
+  color: #ffffff;
+  border-radius: 0;
+}
+
+html[data-theme='pillsburylaw'] .btn.btn-primary:hover {
+  background-color: #0044cc;
+  color: #ffffff;
+}
+
+html[data-theme='pillsburylaw'] .bg-primary {
+  background-color: #0055ff;
+  color: #ffffff;
+}
+
+html[data-theme='pillsburylaw'] .bg-primary:hover,
+html[data-theme='pillsburylaw'] .hover\:bg-primary-hover:hover {
+  background-color: #0044cc;
+  color: #ffffff;
+}
+
+/* quanex.com: Roboto body, Roboto Condensed display (uppercase section titles). */
+html[data-theme='quanex'] {
+  --font-body: var(--font-roboto), 'Roboto', Arial, Helvetica, ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-roboto-condensed), 'Roboto Condensed', Arial, Helvetica, ui-sans-serif,
+    system-ui, sans-serif;
+  --font-accent: var(--font-roboto-condensed), 'Roboto Condensed', Arial, Helvetica, ui-sans-serif,
+    system-ui, sans-serif;
+  --font-weight-heading: 700;
+}
+
+html[data-theme='quanex'] :where(h1, .h1, h2, .h2) {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+html[data-theme='quanex'] .btn.btn-primary {
+  border-radius: 0;
+}
+
+html[data-theme='quanex'] .btn.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  color: var(--color-primary-foreground);
+}
+
+/* amesburytruth.com: Inter everywhere; square CTAs; green primary / navy chrome. */
+html[data-theme='amesburytruth'] {
+  --font-body: var(--font-inter), 'Inter', Helvetica, Arial, ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-inter), 'Inter', Helvetica, Arial, ui-sans-serif, system-ui, sans-serif;
+  --font-accent: var(--font-inter), 'Inter', Helvetica, Arial, ui-sans-serif, system-ui, sans-serif;
+  --font-weight-heading: 600;
+}
+
+html[data-theme='amesburytruth'] .btn.btn-primary {
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+html[data-theme='amesburytruth'] .btn.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  color: var(--color-primary-foreground);
+}
+
+/* eraeverywhere.com: Helvetica Neue body → Inter; BlissMedium headings → Montserrat. */
+html[data-theme='era'] {
+  --font-body: var(--font-inter), 'Inter', 'Helvetica Neue', Helvetica, Arial, ui-sans-serif,
+    system-ui, sans-serif;
+  --font-heading: var(--font-montserrat), 'Montserrat', 'Helvetica Neue', Helvetica, Arial,
+    ui-sans-serif, system-ui, sans-serif;
+  --font-accent: var(--font-montserrat), 'Montserrat', 'Helvetica Neue', Helvetica, Arial,
+    ui-sans-serif, system-ui, sans-serif;
+  --font-weight-heading: 600;
+}
+
+html[data-theme='era'] .btn.btn-primary {
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+html[data-theme='era'] .btn.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  color: var(--color-primary-foreground);
+}
+
+/* dfsupply.com: Open Sans body, Roboto headings (uppercase section titles, gold CTAs). */
+html[data-theme='dfsupply'] {
+  --font-body: var(--font-open-sans), 'Open Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-roboto), 'Roboto', ui-sans-serif, system-ui, sans-serif;
+  --font-accent: var(--font-roboto), 'Roboto', ui-sans-serif, system-ui, sans-serif;
+  --font-weight-heading: 700;
+}
+
+html[data-theme='dfsupply'] :where(h1, .h1, h2, .h2, h3, .h3) {
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+html[data-theme='dfsupply'] .btn.btn-primary {
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+html[data-theme='dfsupply'] .btn.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  color: var(--color-primary-foreground);
+}
+
+/* amkor.com: Open Sans everywhere; navy chrome + vibrant blue CTAs; square buttons. */
+html[data-theme='amkor'] {
+  --font-body: var(--font-open-sans), 'Open Sans', Arial, Helvetica, ui-sans-serif, system-ui,
+    sans-serif;
+  --font-heading: var(--font-open-sans), 'Open Sans', Arial, Helvetica, ui-sans-serif, system-ui,
+    sans-serif;
+  --font-accent: var(--font-open-sans), 'Open Sans', Arial, Helvetica, ui-sans-serif, system-ui,
+    sans-serif;
+  --font-weight-heading: 600;
+}
+
+html[data-theme='amkor'] .btn {
+  border-radius: 0;
+}
+
+html[data-theme='amkor'] .btn.btn-primary {
+  background-color: var(--color-accent);
+  color: var(--color-accent-foreground);
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-weight: 700;
+}
+
+html[data-theme='amkor'] .btn.btn-primary:hover {
+  background-color: var(--color-accent-hover);
+  color: var(--color-accent-foreground);
+}
+
+/* Live amkor.com default .button: white square, navy/violet label — used as secondary / ghost CTA. */
+html[data-theme='amkor'] .btn.btn-secondary {
+  background-color: #ffffff;
+  color: var(--color-primary);
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-weight: 700;
+}
+
+html[data-theme='amkor'] .btn.btn-secondary:hover {
+  background-color: #e8e8e8;
+  color: var(--color-primary);
+}
+
+html[data-theme='amkor'] .btn.btn-outline {
+  border-radius: 0;
+}
+
+/* americasmart.com: Avenir → Montserrat headings + Open Sans body; uppercase display; square CTAs. */
+html[data-theme='americasmart'] {
+  --font-body: var(--font-open-sans), 'Open Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-montserrat), 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+  --font-accent: var(--font-montserrat), 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+  --font-weight-heading: 700;
+}
+
+html[data-theme='americasmart'] :where(h1, .h1, h2, .h2, h3, .h3) {
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+html[data-theme='americasmart'] .btn.btn-primary {
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+html[data-theme='americasmart'] .btn.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  color: var(--color-primary-foreground);
+}
+
+/* atlanta-apparel.com: Centra Andmore (proprietary) → Montserrat; uppercase display headings; sharp CTAs. */
+html[data-theme='atlanta-apparel'] {
+  --font-body: var(--font-montserrat), 'Montserrat', Helvetica, Arial, ui-sans-serif, system-ui,
+    sans-serif;
+  --font-heading: var(--font-montserrat), 'Montserrat', Helvetica, Arial, ui-sans-serif, system-ui,
+    sans-serif;
+  --font-accent: var(--font-montserrat), 'Montserrat', Helvetica, Arial, ui-sans-serif, system-ui,
+    sans-serif;
+  --font-weight-heading: 700;
+}
+
+html[data-theme='atlanta-apparel'] :where(h1, .h1, h2, .h2, h3, .h3) {
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+html[data-theme='atlanta-apparel'] .btn,
+html[data-theme='atlanta-apparel'] .btn.btn-primary,
+html[data-theme='atlanta-apparel'] .btn.btn-secondary,
+html[data-theme='atlanta-apparel'] .btn.btn-outline,
+html[data-theme='atlanta-apparel'] .btn.btn-ghost,
+html[data-theme='atlanta-apparel'] .hero-st-version1 .btn {
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+html[data-theme='atlanta-apparel'] .btn.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  color: var(--color-primary-foreground);
+}
+
+html[data-theme='atlanta-apparel'] .btn.btn-secondary,
+html[data-theme='atlanta-apparel'] .hero-st-version1 .btn.btn-secondary {
+  background-color: transparent;
+  color: var(--color-foreground);
+  border: 1px solid var(--color-foreground);
+}
+
+/* lcmchealth.org: Jubilat display → Zilla Slab; Gilroy/Arial body → Open Sans; green rounded CTAs. */
+html[data-theme='lcmc'] {
+  --font-body: var(--font-open-sans), 'Open Sans', Arial, Helvetica, ui-sans-serif, system-ui,
+    sans-serif;
+  --font-heading: var(--font-zilla-slab), 'Zilla Slab', Georgia, 'Times New Roman', serif;
+  --font-accent: var(--font-open-sans), 'Open Sans', Arial, Helvetica, ui-sans-serif, system-ui,
+    sans-serif;
+  --font-weight-heading: 500;
+}
+
+html[data-theme='lcmc'] .btn.btn-primary {
+  background-color: var(--color-accent);
+  color: var(--color-accent-foreground);
+}
+
+html[data-theme='lcmc'] .btn.btn-primary:hover {
+  background-color: var(--color-accent-hover);
+  color: var(--color-accent-foreground);
+}
+
+/* Shared .btn-secondary uses text-secondary-foreground (white on LCMC) on bg-light. */
+html[data-theme='lcmc'] .btn.btn-secondary {
+  background-color: #ffffff;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+
+html[data-theme='lcmc'] .btn.btn-secondary:hover {
+  background-color: var(--color-muted);
+  color: var(--color-primary);
+}

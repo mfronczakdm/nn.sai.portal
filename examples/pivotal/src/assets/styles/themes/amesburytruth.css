@@ -1,0 +1,86 @@
+/**
+ * Theme: amesburytruth
+ * Skin key / data-theme: amesburytruth
+ * Source: https://www.amesburytruth.com/ (screenshot + Playwright + at-custom/bootstrap tokens)
+ * Activate via Sitecore Site definition Skin field (mirrored in src/lib/theme/site-skins.ts).
+ *
+ * Official site CSS variables:
+ *   --bs-atblue:  #002c73
+ *   --bs-atgreen: #4b8b2a
+ *   --bs-atgray:  #717074
+ *
+ * Primary = green (hero / WHERE TO BUY / card CTAs).
+ * Dark / accent navy = chrome, footer, secondary brand surfaces.
+ */
+
+[data-theme='amesburytruth'] {
+  --background-image-gradient: linear-gradient(180deg, #4b8b2a 0%, #002c73 100%);
+  --background-image-gradient-secondary: linear-gradient(135deg, #4b8b2a 0%, #002c73 100%);
+
+  --color-background: #ffffff;
+  --color-foreground: #55595c;
+  --color-card: #ffffff;
+  --color-card-foreground: #55595c;
+  --color-popover: #ffffff;
+  --color-popover-foreground: #55595c;
+
+  --color-primary: #4b8b2a;
+  --color-primary-foreground: #ffffff;
+  --color-primary-hover: #3f7624;
+
+  --color-secondary: #f6f6f6;
+  --color-secondary-foreground: #002c73;
+  --color-secondary-hover: #ebebeb;
+
+  --color-muted: #f1f1f1;
+  --color-muted-foreground: #717074;
+
+  --color-accent: #002c73;
+  --color-accent-foreground: #ffffff;
+
+  --color-destructive: #dc2626;
+  --color-destructive-hover: #b91c1c;
+  --color-destructive-foreground: #ffffff;
+
+  --color-border: #d4d4d4;
+  --color-input: #d4d4d4;
+  --color-ring: #4b8b2a;
+
+  --color-tertiary: #f6f6f6;
+  --color-tertiary-foreground: #002c73;
+  --color-tertiary-hover: #ebebeb;
+
+  --color-dark: #002c73;
+  --color-dark-foreground: #ffffff;
+  --color-dark-hover: #00225a;
+
+  --color-light: #fafafa;
+  --color-light-hover: #f1f1f1;
+  --color-light-foreground: #55595c;
+
+  --color-overlay: rgb(0 44 115 / 0.45);
+
+  /* AmesburyTruth extras */
+  --border-radius-default: 0;
+  --border-radius-sm: 0;
+  --border-radius-md: 0;
+  --border-radius-lg: 0;
+  --radius: 0;
+  --color-header-background: #ffffff;
+  --color-header-foreground: #55595c;
+  --color-footer-background: #002c73;
+  --color-footer-foreground: #ffffff;
+  --color-utility-bar: #002c73;
+  --bs-atblue: #002c73;
+  --bs-atgreen: #4b8b2a;
+  --bs-atgray: #717074;
+}
+
+[data-theme='amesburytruth'] .bg-primary {
+  color: var(--color-primary-foreground);
+}
+
+[data-theme='amesburytruth'] .bg-dark,
+[data-theme='amesburytruth'] .bg-accent {
+  color: var(--color-dark-foreground);
+}

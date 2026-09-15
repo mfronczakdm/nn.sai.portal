@@ -1,0 +1,47 @@
+/**
+ * Theme: dwyeromega
+ * Skin key / data-theme: dwyeromega
+ * Activate via Sitecore Site definition Skin field (mirrored in src/lib/theme/site-skins.ts).
+ */
+
+[data-theme='dwyeromega'] {
+  --background-image-gradient: linear-gradient(180deg, #da2a2b 0%, #2a2b67 100%);
+  --background-image-gradient-secondary: linear-gradient(90deg, #75787b 0%, #2a2b67 50%, #da2a2b 100%);
+  --color-background: #ffffff;
+  --color-foreground: #75787b;
+  --color-card: #ffffff;
+  --color-card-foreground: #75787b;
+  --color-popover: #ffffff;
+  --color-popover-foreground: #75787b;
+  --color-primary: #2a2b67;
+  --color-primary-foreground: #ffffff;
+  --color-primary-hover: #1f204f;
+  --color-secondary: #f1f5f9;
+  --color-secondary-foreground: #75787b;
+  --color-secondary-hover: #e2e8f0;
+  --color-muted: #f1f5f9;
+  --color-muted-foreground: #8b8e91;
+  --color-accent: #da2a2b;
+  --color-accent-foreground: #ffffff;
+  --color-destructive: #dc2626;
+  --color-destructive-hover: #b91c1c;
+  --color-destructive-foreground: #ffffff;
+  --color-border: #cbd5e1;
+  --color-input: #cbd5e1;
+  --color-ring: #2a2b67;
+  --color-tertiary-foreground: #75787b;
+  --color-tertiary-hover: #e2e8f0;
+  --color-tertiary: #f1f5f9;
+  --color-dark-foreground: #75787b;
+  --color-dark-hover: #e2e8f0;
+  --color-dark: #f1f5f9;
+  --color-light: #f8fafc;
+  --color-light-hover: #f1f5f9;
+  --color-light-foreground: #75787b;
+  --color-overlay: rgb(42 43 103 / 0.45);
+}
+
+/* On primary (e.g. footer) surfaces, headings inherit body foreground — force light text for contrast. */
+[data-theme='dwyeromega'] .bg-primary {
+  color: var(--color-primary-foreground);
+}

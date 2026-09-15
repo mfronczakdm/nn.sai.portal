@@ -1,0 +1,29 @@
+/**
+ * Theme: rockland
+ * Skin key / data-theme: rockland
+ * Activate via Sitecore Site definition Skin field (mirrored in src/lib/theme/site-skins.ts).
+ */
+
+@import './rockland-tokens.css';
+
+/* Legacy portal component tokens — bridge semantic Rockland tokens to existing UI classes. */
+[data-theme='rockland'] {
+  --color-card: var(--color-background);
+  --color-card-foreground: var(--color-foreground);
+  --color-popover: var(--color-background);
+  --color-popover-foreground: var(--color-foreground);
+  --color-border: var(--color-gray-200);
+  --color-input: var(--color-gray-200);
+  --color-ring: var(--color-primary);
+  --color-dark: var(--color-secondary-background);
+  --color-dark-foreground: var(--color-foreground);
+  --color-dark-hover: var(--color-secondary-background-active);
+  --color-light: var(--color-primary-background);
+  --color-light-hover: var(--color-primary-background-active);
+  --color-light-foreground: var(--color-foreground);
+  --color-overlay: var(--color-blackAlpha-500);
+}
+
+[data-theme='rockland'] .bg-primary {
+  color: var(--color-primary-foreground);
+}
