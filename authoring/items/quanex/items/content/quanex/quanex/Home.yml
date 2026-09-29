@@ -1,0 +1,119 @@
+﻿---
+ID: "e6276198-3fc7-4d8b-bd14-8669b1701536"
+Parent: "89b37a7b-093c-4a68-957b-9a85710eb444"
+Template: "d8715f80-7ca6-460f-bfc6-60c70451d736"
+Path: /sitecore/content/quanex/quanex/Home
+BranchID: "45cf9f42-b3ac-4412-aab9-f8441c7e448e"
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{900A21E2-539D-4F30-B505-503B95CE6512}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "994f0520-9b7b-4a88-b7da-3fa8c95941a8"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{F558BEC9-C602-4D7A-B9A1-D0411C946EA4}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{D69598C9-4FFE-4DA0-8B8D-93A63077BA5B}"
+              p:before="*"
+              s:id="{7A1D9A21-B8D7-42F9-9B0B-92ABF8D1974F}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;BackgroundImage&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=7"
+              s:ph="headless-main" />
+            <r
+              uid="{93AB431A-CA06-43AA-A4BB-2E5C3111859C}"
+              p:after="r[@uid='{D69598C9-4FFE-4DA0-8B8D-93A63077BA5B}']"
+              s:ds="259a5850-f67b-4709-a869-792013b01972"
+              s:id="{80E42F34-7012-491E-9E5E-8D2B241CDEFF}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B2E63CE77-914A-417B-918C-B774F3DE6008%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=8"
+              s:ph="/headless-main/container-7" />
+            <r
+              uid="{8AD37998-8D25-4FD4-A985-7B9CA88A7C2E}"
+              p:after="r[@uid='{93AB431A-CA06-43AA-A4BB-2E5C3111859C}']"
+              s:ds="e3fbda31-8f0e-430d-8765-4f5e73dc788b"
+              s:id="{4A6F68B9-709B-4AA8-9444-B695EFDC7180}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B4B537818-0983-46BB-A8CC-BC34E14866C2%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=10"
+              s:ph="/headless-main/container-7" />
+            <r
+              uid="{74141206-DD80-4DC2-B2F4-488D118FFE4F}"
+              p:after="*[1=2]"
+              s:ds="463803a5-b839-4208-8a59-15d51b1ac4c0"
+              s:id="{D806DDF7-39A7-4A6D-8E0A-D138BC53845D}"
+              s:par="FieldNames=%7B4405E5F9-3260-4110-9A1A-B058A50DEEAC%7D&amp;numColumns&amp;CSSStyles&amp;DynamicPlaceholderId=9"
+              s:ph="/headless-main/container-7" />
+          </d>
+        </r>
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Premium audio equipment and speakers designed for audiophiles. Experience exceptional sound quality with SYNCs heritage collection.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260811T151816Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Quanex
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: "Quanex delivers innovative extruded, hardware, and custom solutions that help manufacturers build more energy-efficient, durable, and sustainable buildings worldwide."
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Quanex
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "65408499-25bc-49d0-a2ff-b2fdd798aafc"
+      Hint: ogImage
+      Value: |
+        <image src="https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg" alt="Quanex" />
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Quanex
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "1e87ab2a-8211-42ef-9247-c70a48f9b6ab"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Premium audio equipment and speakers designed for audiophiles. Experience exceptional sound quality with SYNCs heritage collection.
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Quanex
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260820T183659Z
+    - ID: "e7f8a9b0-c1d2-4e3f-8a9b-0c1d2e3f4a5b"
+      Hint: metadataAuthor
+      Value: Sitecore
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Quanex | Components That Power Something Bigger
+    - ID: "f6fcc0b6-31b2-49cd-8a66-4ba282a8ad24"
+      Hint: metadataKeywords
+      Value: SYNC, audio equipment, speakers, headphones, premium sound, audiophile

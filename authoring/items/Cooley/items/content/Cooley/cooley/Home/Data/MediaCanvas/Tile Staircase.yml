@@ -1,0 +1,31 @@
+﻿---
+ID: "4fe17200-63b9-4231-aeef-df2da8b51b56"
+Parent: "415e1109-92a4-4f99-9816-ead3075c4e28"
+Template: "9e9a4a47-08ec-44ca-ab32-d0c6e88d8792"
+Path: /sitecore/content/Cooley/cooley/Home/Data/MediaCanvas/Tile Staircase
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260814T210724Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "7baed6f7-9c5f-488b-a9cf-fbd8f4fde109"
+    - ID: "ab1661e6-df8c-47fc-8d4e-bc88f42948ba"
+      Hint: Video
+      Value: |
+        <link text="Sample loop" linktype="external" url="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" anchor="" target="" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260814T210724Z
+    - ID: "f7987410-0bd9-4947-a43f-ae883dd17b7a"
+      Hint: Image
+      Value: |
+        <image src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800&h=800&fit=crop" alt="Modern architectural staircase" />

@@ -1,0 +1,59 @@
+﻿---
+ID: "80e42f34-7012-491e-9e5e-8d2b241cdeff"
+Parent: "503dc531-8a44-4b41-8e9d-b6f4c6e8ac2b"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Project/quanex/Banners/HeroCarousel
+SharedFields:
+- ID: "037fe404-dd19-4bf7-8e30-4dadf68b27b0"
+  Hint: componentName
+  Value: HeroCarousel
+- ID: "17bb046a-a32a-41b3-8315-81217947611b"
+  Hint: ComponentQuery
+  Value: |
+    query HeroCarousel($datasource: String!, $language: String!) { datasource: item(path: $datasource, language: $language) { contactLink: field(name: "ContactLink") { jsonValue } children { results { id slideName: field(name: "SlideName") { jsonValue } description: field(name: "Description") { jsonValue } summary: field(name: "Summary") { jsonValue } image: field(name: "Image") { jsonValue } backgroundImage: field(name: "BackgroundImage") { jsonValue } link: field(name: "Link") { jsonValue } isIntroSlide: field(name: "IsIntroSlide") { jsonValue } imageOnLeft: field(name: "ImageOnLeft") { jsonValue } } } } }
+- ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
+  Hint: Datasource Template
+  Value: /sitecore/templates/Project/quanex/Components/Banners/HeroCarousel
+- ID: "a77e8568-1ab3-44f1-a664-b7c37ec7810d"
+  Hint: Parameters Template
+  Value: "{1559CEB9-7624-46E8-B92A-978AAC842A83}"
+- ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
+  Hint: Datasource Location
+  Value: "query:$site/*[@@name='Data']/*[@@templatename='HeroCarousel Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='HeroCarousel Folder']"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "5d79738e-d7fd-4794-8fbd-58ca4053a2f4"
+- ID: "dec8d2d5-e3cf-48b6-a653-8e69e2716641"
+  Hint: __Security
+  Value: |
+    au|sitecore\testuser2@sitecore.info|pd|-item:read|pe|-item:read|
+Languages:
+- Language: en
+  Fields:
+  - ID: "30e85e5d-e00a-4864-b358-7624d511deb4"
+    Hint: __Unversioned revision
+    Value: "d31bcf83-c00f-4dd4-9a4f-affdcf1baf4b"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260813T130809Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "62f8519a-120a-4d57-87e2-f45c3412e07d"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260818T000339Z

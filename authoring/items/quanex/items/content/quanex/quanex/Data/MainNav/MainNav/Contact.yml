@@ -1,0 +1,26 @@
+﻿---
+ID: "391d1264-7806-45b6-938c-f2bbdd8239d8"
+Parent: "8af2c42c-ffd3-4c21-a2a5-18e4449b01b3"
+Template: "9b802da1-fa85-4a77-b169-4151aa0c38ce"
+Path: /sitecore/content/quanex/quanex/Data/MainNav/MainNav/Contact
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260814T125224Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "22aece94-7718-4ce7-954f-9dec0da9f445"
+    - ID: "9b2c8287-da9c-474b-abb1-7869e223f768"
+      Hint: LinkText
+      Value: Contact
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260814T125225Z

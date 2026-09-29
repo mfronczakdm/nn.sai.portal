@@ -1,0 +1,194 @@
+﻿---
+ID: "d74bd42a-fd7f-4de9-9d51-f229d51bb24d"
+Parent: "f57baa07-a8bc-4859-b1db-96e0153c4d23"
+Template: "274fc64e-530f-457e-bd04-8b195df94646"
+Path: /sitecore/content/quanex/quanex/Home/Products/Residential/Security Screens
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: "{7629F514-E156-4543-ADC6-051453441B33}"
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{53A44BBB-A5DF-4DF8-A0E8-D3EA193EAEC1}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "dcbb1f1d-32c4-4fb6-a940-b17283ef42da"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "1753f07e-8cae-4f63-a34a-d7141d7acfaf"
+      Hint: image
+      Value: |
+        <image src="https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg" alt="Security Screens" />
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Quanex security screen solutions help protect homes while maintaining airflow and visibility.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260811T180752Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Security Screens
+    - ID: "3e073cf8-6b11-4c50-aad1-897861963db2"
+      Hint: Detail
+      Value: |
+        <p>Quanex security screen solutions help protect homes while maintaining airflow and visibility.</p><p><a href="https://www.quanex.com/product/residential/">Learn more on Quanex.com</a></p>
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Residential security screen solutions
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Security Screens
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Security Screens | Quanex
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5728fff0-d97b-4f7f-a83c-44c2e1c38ce8"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Residential security screen solutions from Quanex.
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Security Screens
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Akv1r1Hmcm16AN61y5QanpMca0RChHPy
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260812T125247Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Security Screens
+  - Version: 2
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "1753f07e-8cae-4f63-a34a-d7141d7acfaf"
+      Hint: image
+      Value: |
+        <image src="https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg" alt="Security Screens" />
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Quanex security screen solutions help protect homes while maintaining airflow and visibility.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260813T193724Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Security Screens
+    - ID: "3e073cf8-6b11-4c50-aad1-897861963db2"
+      Hint: Detail
+      Value: |
+        <p>Quanex security screen solutions help protect homes while maintaining airflow and visibility.</p><p><a href="https://www.quanex.com/product/residential/">Learn more on Quanex.com</a></p>
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Residential security screen solutions
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Security Screens
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Security Screens | Quanex
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "339162e7-f0e3-45e6-b7b5-61c95bc8e3c2"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Residential security screen solutions from Quanex.
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Security Screens
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\WIt5EKonMo343Fqq8begbLVKlCgYPAIX
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260813T193724Z
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260814T100138Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Security Screens
+  - Version: 3
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "1753f07e-8cae-4f63-a34a-d7141d7acfaf"
+      Hint: image
+      Value: |
+        <image src="https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg" alt="Security Screens" />
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Quanex security screen solutions help protect homes while maintaining airflow and visibility.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260814T120317Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Security Screens
+    - ID: "3e073cf8-6b11-4c50-aad1-897861963db2"
+      Hint: Detail
+      Value: |
+        <p>Quanex security screen solutions help protect homes while maintaining airflow and visibility.</p><p><a href="https://www.quanex.com/product/residential/">Learn more on Quanex.com</a></p>
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Quanex security screens help protect residential openings while preserving ventilation, daylight, and architectural style.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Residential security screen solutions
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Security Screens
+    - ID: "65408499-25bc-49d0-a2ff-b2fdd798aafc"
+      Hint: ogImage
+      Value: |
+        <image src="https://www.quanex.com/wp-content/uploads/2023/06/petScreen_image.jpg" alt="Quanex Security Screens" />
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Security Screens | Quanex
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "77a83e32-0c45-4830-be62-8db86f8e644e"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Residential security screen solutions from Quanex.
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Security Screens
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\WIt5EKonMo343Fqq8begbLVKlCgYPAIX
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260814T120317Z
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260814T121335Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Security Screens | Quanex

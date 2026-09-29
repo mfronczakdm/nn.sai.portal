@@ -1,0 +1,231 @@
+﻿---
+ID: "cbaca160-3aa6-4d5d-b3cd-63d64110db48"
+Parent: "c8263ff3-ef46-4529-992b-c8eb5c57dbc8"
+Template: "b08ec32b-f183-474b-93f7-07512168dd6e"
+Path: "/sitecore/content/pillsbury/blg/Home/Insights/Blogs/PFAS-Observer"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{6C59AE29-D0A1-4B77-9305-0ABAB21D5FE5}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{A0849996-F15D-412C-BF8C-554C3F50DED0}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "63c37e9f-dfae-4254-8f04-80865463e188"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260804T170843Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: PFAS Observer
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: PFAS Observer
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "39552b00-e1cf-4170-8e13-560913cf3b92"
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: PFAS Observer
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\WIt5EKonMo343Fqq8begbLVKlCgYPAIX
+    - ID: "d2ff0fcf-f6f9-48c6-9efb-db569452b8dc"
+      Hint: Detail
+      Value: <p>PFAS Observer blog.</p>
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260804T180328Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: "PFAS-Observer"
+  - Version: 2
+    Fields:
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: "PFAS Observer tracks forever-chemical regulation, litigation, remediation, and compliance developments affecting manufacturers, water systems, and property owners."
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260804T193132Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: PFAS Observer
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: PFAS litigation and regulatory updates from Pillsbury environmental lawyers.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: PFAS litigation, regulation, and compliance
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: PFAS Observer | Pillsbury Law Blog
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: PFAS Observer Blog | Pillsbury Law
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f361d6f4-c1f3-4324-9930-0cccf265114f"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: PFAS regulation, litigation, and compliance analysis from Pillsbury’s PFAS Observer blog.
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: PFAS Observer
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\WIt5EKonMo343Fqq8begbLVKlCgYPAIX
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260804T193132Z
+    - ID: "d2ff0fcf-f6f9-48c6-9efb-db569452b8dc"
+      Hint: Detail
+      Value: "<p>PFAS Observer monitors the rapidly evolving law of per- and polyfluoroalkyl substances. Pillsbury environmental and litigation lawyers analyze federal and state regulation, EPA actions, cleanup standards, product liability and mass tort trends, and transactional diligence issues tied to PFAS risk.</p><p>The blog is a resource for companies, utilities, insurers, and investors who need a clear view of how PFAS liabilities and compliance obligations are changing.</p>"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260804T202549Z
+    - ID: "e7f8a9b0-c1d2-4e3f-8a9b-0c1d2e3f4a5b"
+      Hint: metadataAuthor
+      Value: Pillsbury Winthrop Shaw Pittman LLP
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: PFAS Observer | Pillsbury Law Blog
+    - ID: "f6fcc0b6-31b2-49cd-8a66-4ba282a8ad24"
+      Hint: metadataKeywords
+      Value: PFAS, forever chemicals, environmental law, EPA, litigation, remediation, Pillsbury
+  - Version: 3
+    Fields:
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: "PFAS Observer tracks forever-chemical regulation, litigation, remediation, and compliance developments affecting manufacturers, water systems, and property owners."
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260805T122330Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: PFAS Observer
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "46ab8141-8b68-4775-9397-d9cfd62c4dce"
+      Hint: image
+      Value: |
+        <image src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=1200&h=750&q=80" alt="Natural waterfall landscape for environmental law" width="1200" height="750" />
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: PFAS litigation and regulatory updates from Pillsbury environmental lawyers.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: PFAS litigation, regulation, and compliance
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: PFAS Observer | Pillsbury Law Blog
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: PFAS Observer Blog | Pillsbury Law
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "eee4782a-dace-4578-8e79-f2955a256cbc"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: PFAS regulation, litigation, and compliance analysis from Pillsbury’s PFAS Observer blog.
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: PFAS Observer
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260805T122330Z
+    - ID: "d2ff0fcf-f6f9-48c6-9efb-db569452b8dc"
+      Hint: Detail
+      Value: "<p>PFAS Observer monitors the rapidly evolving law of per- and polyfluoroalkyl substances. Pillsbury environmental and litigation lawyers analyze federal and state regulation, EPA actions, cleanup standards, product liability and mass tort trends, and transactional diligence issues tied to PFAS risk.</p><p>The blog is a resource for companies, utilities, insurers, and investors who need a clear view of how PFAS liabilities and compliance obligations are changing.</p>"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260822T010546Z
+    - ID: "e7f8a9b0-c1d2-4e3f-8a9b-0c1d2e3f4a5b"
+      Hint: metadataAuthor
+      Value: Pillsbury Winthrop Shaw Pittman LLP
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: PFAS Observer | Pillsbury Law Blog
+    - ID: "f6fcc0b6-31b2-49cd-8a66-4ba282a8ad24"
+      Hint: metadataKeywords
+      Value: PFAS, forever chemicals, environmental law, EPA, litigation, remediation, Pillsbury
+  - Version: 4
+    Fields:
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: "PFAS Observer tracks forever-chemical regulation, litigation, remediation, and compliance developments affecting manufacturers, water systems, and property owners."
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260822T014516Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: PFAS Observer
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{C55B483C-EA7F-4E76-A066-985F7D9396CA}"
+    - ID: "46ab8141-8b68-4775-9397-d9cfd62c4dce"
+      Hint: image
+      Value: |
+        <image src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=1200&h=750&q=80" alt="Natural waterfall landscape for environmental law" width="1200" height="750" />
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: PFAS litigation and regulatory updates from Pillsbury environmental lawyers.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: PFAS litigation, regulation, and compliance
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: PFAS Observer | Pillsbury Law Blog
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: PFAS Observer Blog | Pillsbury Law
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "e019e84d-e502-4094-84d9-1b9fc63d92c7"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: PFAS regulation, litigation, and compliance analysis from Pillsbury’s PFAS Observer blog.
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: PFAS Observer
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260822T014516Z
+    - ID: "d2ff0fcf-f6f9-48c6-9efb-db569452b8dc"
+      Hint: Detail
+      Value: "<p>PFAS Observer monitors the rapidly evolving law of per- and polyfluoroalkyl substances. Pillsbury environmental and litigation lawyers analyze federal and state regulation, EPA actions, cleanup standards, product liability and mass tort trends, and transactional diligence issues tied to PFAS risk.</p><p>The blog is a resource for companies, utilities, insurers, and investors who need a clear view of how PFAS liabilities and compliance obligations are changing.</p>"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260822T014517Z
+    - ID: "e7f8a9b0-c1d2-4e3f-8a9b-0c1d2e3f4a5b"
+      Hint: metadataAuthor
+      Value: Pillsbury Winthrop Shaw Pittman LLP
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: PFAS Observer | Pillsbury Law Blog
+    - ID: "f6fcc0b6-31b2-49cd-8a66-4ba282a8ad24"
+      Hint: metadataKeywords
+      Value: PFAS, forever chemicals, environmental law, EPA, litigation, remediation, Pillsbury

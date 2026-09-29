@@ -1,0 +1,37 @@
+﻿---
+ID: "f39a4bf0-a513-4964-a340-54ce743dca96"
+Parent: "c59a1054-dedc-41f5-9641-8842a26e026c"
+Template: "73e57eaa-b54a-41e1-b689-bf7dae9155ad"
+Path: /sitecore/content/progressive/pkm/Home/Questions and Answers/Coverage Eligibility/Rental reimbursement eligibility
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{9A5B6810-A73A-4EEE-AC50-2D9FC0791DAB}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260729T192633Z
+    - ID: "2d71e32d-e990-46b3-8ca1-58cd89743d5e"
+      Hint: Question
+      Value: "When is rental reimbursement available on a Progressive claim?"
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Rental reimbursement eligibility
+    - ID: "4f8dc72e-1548-471c-9f3e-a13e944e4321"
+      Hint: Answer
+      Value: Check whether Progressive rental reimbursement or transportation expense coverage is on the policy and whether the claim type qualifies. Explain daily and maximum limits from the Progressive policy. Do not authorize rental beyond Progressive guidelines without documented approval from a supervisor or SME.
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4c433e5c-488c-4ba1-917f-1fa4702c7966"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260729T192634Z

@@ -1,0 +1,101 @@
+﻿---
+ID: "00d00a96-05d8-4e5f-8607-2c0ff0ebfcb5"
+Parent: "af9aa2c3-9cf1-49c4-9a8f-5211530f2fff"
+Template: "0a93f003-2ef3-4a66-9fb6-95c10b95532b"
+Path: /sitecore/content/amkor/amkor/Data/Location Searches/An unrivaled global footprint/Factory P3 P4
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "11022184-1d76-4d54-ba17-6f68d511afae"
+      Hint: Name
+      Value: P3 P4 Binan Laguna Factory
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260829T155755Z
+    - ID: "2caca007-a43f-4b62-b8ca-cb48fec72576"
+      Hint: State
+      Value: Philippines
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "554b1ddd-6a2a-4e0e-b4ba-7898f6c03dc6"
+      Hint: Type
+      Value: Factories
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "361ba41d-fb35-4d04-b895-1f3796748672"
+    - ID: "9c275841-cbb3-4b7e-81c7-9111a5ce2fdd"
+      Hint: GEO
+      Value: 14.2924,121.0778
+    - ID: "a72e5257-2698-414c-9416-83d2a100665d"
+      Hint: Street Address
+      Value: 119 North Science Avenue Laguna Technopark
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260829T155756Z
+    - ID: "efe82275-714a-4ee5-ab29-577ceddc29ba"
+      Hint: City
+      Value: Binan Laguna
+    - ID: "fa091d7b-c69b-4946-90fc-eac2cfae439b"
+      Hint: ZIP
+      Value: 4024
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "11022184-1d76-4d54-ba17-6f68d511afae"
+      Hint: Name
+      Value: P3 P4 Binan Laguna Factory
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260829T155755Z
+    - ID: "2caca007-a43f-4b62-b8ca-cb48fec72576"
+      Hint: State
+      Value: フィリピン
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "554b1ddd-6a2a-4e0e-b4ba-7898f6c03dc6"
+      Hint: Type
+      Value: Factories
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "71277444-e4ee-4397-974c-6bc7e024cfab"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9c275841-cbb3-4b7e-81c7-9111a5ce2fdd"
+      Hint: GEO
+      Value: 14.2924,121.0778
+    - ID: "a72e5257-2698-414c-9416-83d2a100665d"
+      Hint: Street Address
+      Value: 119 North Science Avenue Laguna Technopark
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260831T030436Z
+    - ID: "efe82275-714a-4ee5-ab29-577ceddc29ba"
+      Hint: City
+      Value: ビニャン、ラグナ
+    - ID: "fa091d7b-c69b-4946-90fc-eac2cfae439b"
+      Hint: ZIP
+      Value: 4024

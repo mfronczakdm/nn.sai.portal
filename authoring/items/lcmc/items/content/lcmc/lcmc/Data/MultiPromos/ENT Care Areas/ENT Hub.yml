@@ -1,0 +1,163 @@
+﻿---
+ID: "208ad050-2819-4a2f-84a6-9ce2fb719886"
+Parent: "9f750d63-f9fe-463d-b16d-9ba31a397e3b"
+Template: "f94c8c17-70e8-4d8b-9d35-d0465c0e0945"
+Path: /sitecore/content/lcmc/lcmc/Data/MultiPromos/ENT Care Areas/ENT Hub
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "02945c9c-9e0b-432e-bca3-e97b47cd4644"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0db3add4-6eaa-427e-ba1b-7578aff36055"
+      Hint: Slug
+      Value: help that throat
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260910T163104Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{12FFAC4C-565F-4C9A-B63E-7F77E96B4D1F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "54a924ec-8e98-4597-b9c2-d616dd66cc7c"
+      Hint: description
+      Value: <p>Full ENT / otolaryngology care at West Jefferson Medical Center — sinus, hearing, and throat.</p>
+    - ID: "5c33f772-5806-4ad8-a236-730f1b299531"
+      Hint: heading
+      Value: Ears, Nose and Throat Care
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "7eca61ae-f0c1-49e6-b131-686ab895a1dc"
+      Hint: image
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/d8f9fd46273a42e1839d066b4b356e15?v=b0998978" dam-id="mmhvtEx-Q-2DHKouk21MHw" width="585" height="300" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/87199/thumbnail" alt="ENT care at West Jefferson" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "92915497-02d4-4d0e-8237-7aefeae7fbd8"
+    - ID: "8ec6e4b8-3a38-4115-a892-38051924f3f1"
+      Hint: link
+      Value: |
+        <link text="Explore ENT care" linktype="internal" id="{66B44E6A-6D2F-4B01-BB8A-A26E4E3EC29C}" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T164459Z
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0db3add4-6eaa-427e-ba1b-7578aff36055"
+      Hint: Slug
+      Value: ayuda para la garganta
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260910T163104Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{12FFAC4C-565F-4C9A-B63E-7F77E96B4D1F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "54a924ec-8e98-4597-b9c2-d616dd66cc7c"
+      Hint: description
+      Value: "<p>Atención integral de otorrinolaringología en West Jefferson Medical Center: sinusitis, audición y garganta.</p>"
+    - ID: "5c33f772-5806-4ad8-a236-730f1b299531"
+      Hint: heading
+      Value: Atención de oídos, nariz y garganta
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "7eca61ae-f0c1-49e6-b131-686ab895a1dc"
+      Hint: image
+      Value: |
+        <image height="300" dam-content-type="Image" alt="Atención de otorrinolaringología en West Jefferson" width="585" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/87199/thumbnail" dam-id="mmhvtEx-Q-2DHKouk21MHw" src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/d8f9fd46273a42e1839d066b4b356e15?v=b0998978" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4aed307b-c76b-4aef-985e-a6c66576d643"
+    - ID: "8ec6e4b8-3a38-4115-a892-38051924f3f1"
+      Hint: link
+      Value: |
+        <link id="{66B44E6A-6D2F-4B01-BB8A-A26E4E3EC29C}" linktype="internal" text="Explora la atención de otorrinolaringología" />
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T200830Z
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0db3add4-6eaa-427e-ba1b-7578aff36055"
+      Hint: Slug
+      Value: de l’aide pour la gorge
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260910T163104Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{12FFAC4C-565F-4C9A-B63E-7F77E96B4D1F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "54a924ec-8e98-4597-b9c2-d616dd66cc7c"
+      Hint: description
+      Value: <p>Soins ORL complets au West Jefferson Medical Center — sinus, audition et gorge.</p>
+    - ID: "5c33f772-5806-4ad8-a236-730f1b299531"
+      Hint: heading
+      Value: Soins des oreilles, du nez et de la gorge
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "7eca61ae-f0c1-49e6-b131-686ab895a1dc"
+      Hint: image
+      Value: |
+        <image height="300" dam-content-type="Image" alt="Soins ORL à West Jefferson" width="585" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/87199/thumbnail" dam-id="mmhvtEx-Q-2DHKouk21MHw" src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/d8f9fd46273a42e1839d066b4b356e15?v=b0998978" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "49c8dfb9-f093-4c4d-82f0-a9fe0d3f946f"
+    - ID: "8ec6e4b8-3a38-4115-a892-38051924f3f1"
+      Hint: link
+      Value: |
+        <link id="{66B44E6A-6D2F-4B01-BB8A-A26E4E3EC29C}" linktype="internal" text="Explorer les soins ORL" />
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201652Z

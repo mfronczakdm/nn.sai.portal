@@ -1,0 +1,477 @@
+﻿---
+ID: "244d564f-91dc-4cce-8ae7-b074bfb26ea3"
+Parent: "194f8944-6400-40dd-bdcb-931686a42643"
+Template: "d77937ac-bae4-4eb0-8d7e-69ec09d5bbfc"
+Path: /sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center
+SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{5944F724-0620-4D9F-9317-AB0B80D9D094}"
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{D8C86C61-A1FA-4AAA-B49C-E5B5FC155809}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "b82b80d7-d298-4763-a988-d8850c17ad25"
+- ID: "dec8d2d5-e3cf-48b6-a653-8e69e2716641"
+  Hint: __Security
+  Value: |
+    ar|sitecore\lcmc|pd|+item:delete|+item:write|+item:read|+item:rename|+item:create|pe|+item:delete|+item:write|+item:read|+item:rename|+item:create|
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{69396BD6-1194-4FEF-B02D-C6F85498E691}"
+              p:before="*"
+              s:ds="de41eeee-dbfb-4fac-a53a-a8009c62dc73"
+              s:id="{8792FF9C-9B69-4F56-A0CD-B5EC8F2647BD}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BABF5A3BE-288B-41E3-BD06-C168CBEFEE7B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=11"
+              s:ph="headless-main">
+              <rls>
+                <ruleset
+                  s:pet="true">
+                  <rule
+                    uid="{08A9B15C-B7EF-4214-A6D2-1691155DCE9F}"
+                    s:name="2a4abe556f314daa81dd83194aca058e">
+                    <conditions>
+                      <condition
+                        uid="A1EA18C165024030B479816023D84A36"
+                        s:id="{8E7426A4-12ED-4C44-8625-E7191860E726}"
+                        s:VariantName="2a4abe556f314daa81dd83194aca058e" />
+                    </conditions>
+                    <actions>
+                      <action
+                        uid="{074D64F1-C511-470C-8E52-4D89F56B3AC9}"
+                        s:id="{0F3C6BEC-E56B-4875-93D7-2846A75881D2}"
+                        s:DataSource="f98b52dc-1f15-4344-b00f-92574bdc43cd" />
+                    </actions>
+                  </rule>
+                  <rule
+                    uid="{00000000-0000-0000-0000-000000000000}"
+                    s:name="Default">
+                    <conditions>
+                      <condition
+                        uid="BE035C3D9127439EBA5AB642472973AF"
+                        s:id="{4888ABBB-F17D-4485-B14B-842413F88732}" />
+                    </conditions>
+                  </rule>
+                </ruleset>
+              </rls>
+            </r>
+            <r
+              uid="{5AD56BD4-C8C7-493A-A4E0-A19A6884AC1D}"
+              p:after="r[@uid='{69396BD6-1194-4FEF-B02D-C6F85498E691}']"
+              s:ds="50125835-5f4f-47b5-8c27-a512fe0ac68b"
+              s:id="{FD183076-E346-49B5-A3F1-22D2E45B4A63}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B887E7D57-2E6D-43FC-B8E4-BB62C7A7FC04%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=13"
+              s:ph="headless-main">
+              <rls>
+                <ruleset
+                  s:pet="true">
+                  <rule
+                    uid="{32043DB4-F325-4B60-95E9-86B3EF31DA30}"
+                    s:name="2a4abe556f314daa81dd83194aca058e">
+                    <conditions>
+                      <condition
+                        uid="235E163CE216402FB91191A0E88B44EC"
+                        s:id="{8E7426A4-12ED-4C44-8625-E7191860E726}"
+                        s:VariantName="2a4abe556f314daa81dd83194aca058e" />
+                    </conditions>
+                    <actions>
+                      <action
+                        uid="{DAC64F91-2620-4F5C-BA11-D42925F4632F}"
+                        s:id="{0F3C6BEC-E56B-4875-93D7-2846A75881D2}"
+                        s:DataSource="44954917-b4a7-47cc-ac79-6fea2f74b9fc" />
+                      <action
+                        uid="{5D7D432C-328D-4328-977B-EDE5D3BAF9BF}"
+                        s:id="{7B578B65-BD2F-4C7C-9A24-DAE3E98B4F23}"
+                        s:RenderingItem="1745bcf4-cd31-4182-a3df-8874e979dd60" />
+                      <action
+                        uid="{4BA3CF14-AA96-444B-B07D-29D12D6A2E7E}"
+                        s:id="{525C7B5A-8FD2-4B99-89F6-4F3F6D23BB02}"
+                        s:Parameters="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BD52359D1-1D40-48C8-A9FF-EBA5B4BF044E%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId" />
+                    </actions>
+                  </rule>
+                  <rule
+                    uid="{00000000-0000-0000-0000-000000000000}"
+                    s:name="Default">
+                    <conditions>
+                      <condition
+                        uid="0768A6EE105541379938A5FF972CD027"
+                        s:id="{4888ABBB-F17D-4485-B14B-842413F88732}" />
+                    </conditions>
+                  </rule>
+                </ruleset>
+              </rls>
+            </r>
+            <r
+              uid="{C91BE7C3-1FFA-4BB0-BAB7-62D258F20CF2}"
+              p:after="r[@uid='{5AD56BD4-C8C7-493A-A4E0-A19A6884AC1D}']"
+              s:ds="11b54f52-3323-4e32-a1b8-c9907fc2306e"
+              s:id="{916AD4EA-646B-4F69-BA9D-594CEA0D59C7}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B0300047F-2551-477C-BC66-9C4A04A8ED1C%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=7"
+              s:ph="headless-main" />
+            <r
+              uid="{53372E4B-169A-4DF3-A553-FC470D270E62}"
+              p:after="r[@uid='{C91BE7C3-1FFA-4BB0-BAB7-62D258F20CF2}']"
+              s:ds="0431ac51-1cab-4847-a42e-55394cf96273"
+              s:id="{1745BCF4-CD31-4182-A3DF-8874E979DD60}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B8377494A-9D18-4441-A41C-74FA098BE65E%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=9"
+              s:ph="headless-main" />
+            <r
+              uid="{43EF5500-4548-47E6-B509-EBA6EF6BC461}"
+              p:after="r[@uid='{53372E4B-169A-4DF3-A553-FC470D270E62}']"
+              s:ds="local:/Data/ListingBlock-News"
+              s:id="{B644D425-E162-45A9-A59E-FCFE3F14B90D}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BBE564551-7FEC-417D-B9F0-4DE8F676B5B1%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=10"
+              s:ph="headless-main" />
+            <r
+              uid="{57D942A3-CC66-4119-9291-590998219122}"
+              p:after="*[1=2]"
+              s:ds="local:/Data/MultiPromo"
+              s:id="{D806DDF7-39A7-4A6D-8E0A-D138BC53845D}"
+              s:par="ShowBackgroundImage&amp;FieldNames=%7B53094257-4E18-40AD-AC8B-8F70BACC45F5%7D&amp;numColumns&amp;CSSStyles&amp;DynamicPlaceholderId=12"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: West Jefferson Medical Center in Marrero is LCMC Health's Westbank hospital, offering emergency, specialty, maternity, and neighborhood clinic care.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T211231Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: West Jefferson
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: 
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: "Full-service hospital care on the Westbank of Jefferson Parish."
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: "The Westbank's full-service community hospital"
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: West Jefferson Medical Center
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: West Jefferson Medical Center | LCMC Health
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c23a1049-9dee-4250-9802-cb4cbeecde73"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: "West Jefferson Medical Center in Marrero is the Westbank's full-service LCMC Health hospital. Find services, providers, and campus information."
+    - ID: "9d32260e-215d-4eff-80de-6d469daadbc4"
+      Hint: image
+      Value: |
+        <image src="https://www.lcmchealth.org/assets/LCMC-Social-Share.jpg" alt="West Jefferson Medical Center" />
+    - ID: "a8a1dfcb-7dd5-4413-8789-db24a95e439f"
+      Hint: Detail
+      Value: |
+        <h2>Care for the Westbank, close to home</h2><p>West Jefferson Medical Center is a 324-bed not-for-profit hospital on Medical Center Boulevard in Marrero. For more than 60 years it has been the regional hospital for Jefferson, Orleans, Plaquemines, and St. Charles Parish communities on the Westbank.</p><p>Patients come here for emergency care, heart and vascular treatment, cancer services, maternity care at The Family Birth Place, orthopedics, imaging, and a full range of hospital specialties. Neighborhood primary care clinics extend that same LCMC Health team into Algiers, Harvey, Gretna, and Terrytown.</p><h3>Visit and connect</h3><ul><li><strong>Address:</strong> 1101 Medical Center Blvd., Marrero, LA 70072</li><li><strong>Main phone:</strong> 504-347-5511</li><li><strong>Emergency department:</strong> open 24 hours a day</li></ul><p><a href="/West-Jefferson-Medical-Center/Our-Services">Explore hospital services</a> &nbsp;|&nbsp; <a href="/Find-a-Provider">Find a provider</a> &nbsp;|&nbsp; <a href="/Our-Locations/West-Jefferson-Medical-Center">Hospital location and campus details</a></p>
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: West Jefferson Medical Center
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T102304Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: West Jefferson Medical Center
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{30017D35-293C-42B2-906C-EE37E02BFA0C}"
+              s:ds=""
+              s:id="{B1136CF1-94BE-468C-B78D-9BE212AF5428}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Dark Imge&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: West Jefferson Medical Center en Marrero es el hospital de LCMC Health en la Ribera Oeste, que ofrece atención de urgencias, especialidades, maternidad y clínicas vecinales.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T211231Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: West Jefferson
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: 
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Atención hospitalaria de servicio completo en la Ribera Oeste de la parroquia de Jefferson.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: El hospital comunitario de servicio completo de la Ribera Oeste
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: West Jefferson Medical Center
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: West Jefferson Medical Center | LCMC Health
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f2a91f5e-709a-420c-8b89-013aa4d2fb2b"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: West Jefferson Medical Center en Marrero es el hospital de servicio completo de LCMC Health en la Ribera Oeste. Encuentre servicios, proveedores e información del campus.
+    - ID: "9d32260e-215d-4eff-80de-6d469daadbc4"
+      Hint: image
+      Value: |
+        <image src="https://www.lcmchealth.org/assets/LCMC-Social-Share.jpg" alt="West Jefferson Medical Center" />
+    - ID: "a8a1dfcb-7dd5-4413-8789-db24a95e439f"
+      Hint: Detail
+      Value: |
+        <h2>Atención para la Ribera Oeste, cerca de casa</h2><p>West Jefferson Medical Center es un hospital sin ánimo de lucro de 324 camas ubicado en Medical Center Boulevard en Marrero. Durante más de 60 años ha sido el hospital regional para las comunidades de las parroquias de Jefferson, Orleans, Plaquemines y St. Charles en la Ribera Oeste.</p><p>Los pacientes vienen aquí para recibir atención de urgencias, tratamiento cardiovascular, servicios oncológicos, atención de maternidad en The Family Birth Place, ortopedia, diagnóstico por imágenes y una gama completa de especialidades hospitalarias. Las clínicas vecinales de atención primaria extienden ese mismo equipo de LCMC Health a Algiers, Harvey, Gretna y Terrytown.</p><h3>Visite y conéctese</h3><ul><li><strong>Dirección:</strong> 1101 Medical Center Blvd., Marrero, LA 70072</li><li><strong>Teléfono principal:</strong> 504-347-5511</li><li><strong>Departamento de urgencias:</strong> abierto las 24 horas del día</li></ul><p><a href="/West-Jefferson-Medical-Center/Our-Services">Explore los servicios del hospital</a> &nbsp;|&nbsp; <a href="/Find-a-Provider">Encuentre un proveedor</a> &nbsp;|&nbsp; <a href="/Our-Locations/West-Jefferson-Medical-Center">Ubicación del hospital y detalles del campus</a></p>
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: West Jefferson Medical Center
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T162413Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: West Jefferson Medical Center
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{69396BD6-1194-4FEF-B02D-C6F85498E691}"
+              p:before="*"
+              s:ds="de41eeee-dbfb-4fac-a53a-a8009c62dc73"
+              s:id="{8792FF9C-9B69-4F56-A0CD-B5EC8F2647BD}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BABF5A3BE-288B-41E3-BD06-C168CBEFEE7B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=11"
+              s:ph="headless-main">
+              <rls>
+                <ruleset
+                  s:pet="true">
+                  <rule
+                    uid="{08A9B15C-B7EF-4214-A6D2-1691155DCE9F}"
+                    s:name="2a4abe556f314daa81dd83194aca058e">
+                    <conditions>
+                      <condition
+                        uid="A1EA18C165024030B479816023D84A36"
+                        s:id="{8E7426A4-12ED-4C44-8625-E7191860E726}"
+                        s:VariantName="2a4abe556f314daa81dd83194aca058e" />
+                    </conditions>
+                    <actions>
+                      <action
+                        uid="{074D64F1-C511-470C-8E52-4D89F56B3AC9}"
+                        s:id="{0F3C6BEC-E56B-4875-93D7-2846A75881D2}"
+                        s:DataSource="f98b52dc-1f15-4344-b00f-92574bdc43cd" />
+                    </actions>
+                  </rule>
+                  <rule
+                    uid="{00000000-0000-0000-0000-000000000000}"
+                    s:name="Default">
+                    <conditions>
+                      <condition
+                        uid="BE035C3D9127439EBA5AB642472973AF"
+                        s:id="{4888ABBB-F17D-4485-B14B-842413F88732}" />
+                    </conditions>
+                  </rule>
+                </ruleset>
+              </rls>
+            </r>
+            <r
+              uid="{5AD56BD4-C8C7-493A-A4E0-A19A6884AC1D}"
+              p:after="r[@uid='{69396BD6-1194-4FEF-B02D-C6F85498E691}']"
+              s:ds="50125835-5f4f-47b5-8c27-a512fe0ac68b"
+              s:id="{FD183076-E346-49B5-A3F1-22D2E45B4A63}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B887E7D57-2E6D-43FC-B8E4-BB62C7A7FC04%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=13"
+              s:ph="headless-main">
+              <rls>
+                <ruleset
+                  s:pet="true">
+                  <rule
+                    uid="{32043DB4-F325-4B60-95E9-86B3EF31DA30}"
+                    s:name="2a4abe556f314daa81dd83194aca058e">
+                    <conditions>
+                      <condition
+                        uid="235E163CE216402FB91191A0E88B44EC"
+                        s:id="{8E7426A4-12ED-4C44-8625-E7191860E726}"
+                        s:VariantName="2a4abe556f314daa81dd83194aca058e" />
+                    </conditions>
+                    <actions>
+                      <action
+                        uid="{DAC64F91-2620-4F5C-BA11-D42925F4632F}"
+                        s:id="{0F3C6BEC-E56B-4875-93D7-2846A75881D2}"
+                        s:DataSource="44954917-b4a7-47cc-ac79-6fea2f74b9fc" />
+                      <action
+                        uid="{5D7D432C-328D-4328-977B-EDE5D3BAF9BF}"
+                        s:id="{7B578B65-BD2F-4C7C-9A24-DAE3E98B4F23}"
+                        s:RenderingItem="1745bcf4-cd31-4182-a3df-8874e979dd60" />
+                      <action
+                        uid="{4BA3CF14-AA96-444B-B07D-29D12D6A2E7E}"
+                        s:id="{525C7B5A-8FD2-4B99-89F6-4F3F6D23BB02}"
+                        s:Parameters="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BD52359D1-1D40-48C8-A9FF-EBA5B4BF044E%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId" />
+                    </actions>
+                  </rule>
+                  <rule
+                    uid="{00000000-0000-0000-0000-000000000000}"
+                    s:name="Default">
+                    <conditions>
+                      <condition
+                        uid="0768A6EE105541379938A5FF972CD027"
+                        s:id="{4888ABBB-F17D-4485-B14B-842413F88732}" />
+                    </conditions>
+                  </rule>
+                </ruleset>
+              </rls>
+            </r>
+            <r
+              uid="{C91BE7C3-1FFA-4BB0-BAB7-62D258F20CF2}"
+              p:after="r[@uid='{5AD56BD4-C8C7-493A-A4E0-A19A6884AC1D}']"
+              s:ds="11b54f52-3323-4e32-a1b8-c9907fc2306e"
+              s:id="{916AD4EA-646B-4F69-BA9D-594CEA0D59C7}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B0300047F-2551-477C-BC66-9C4A04A8ED1C%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=7"
+              s:ph="headless-main" />
+            <r
+              uid="{53372E4B-169A-4DF3-A553-FC470D270E62}"
+              p:after="r[@uid='{C91BE7C3-1FFA-4BB0-BAB7-62D258F20CF2}']"
+              s:ds="0431ac51-1cab-4847-a42e-55394cf96273"
+              s:id="{1745BCF4-CD31-4182-A3DF-8874E979DD60}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B8377494A-9D18-4441-A41C-74FA098BE65E%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=9"
+              s:ph="headless-main" />
+            <r
+              uid="{43EF5500-4548-47E6-B509-EBA6EF6BC461}"
+              p:after="r[@uid='{53372E4B-169A-4DF3-A553-FC470D270E62}']"
+              s:ds="local:/Data/ListingBlock-News"
+              s:id="{B644D425-E162-45A9-A59E-FCFE3F14B90D}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BBE564551-7FEC-417D-B9F0-4DE8F676B5B1%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=10"
+              s:ph="headless-main" />
+            <r
+              uid="{57D942A3-CC66-4119-9291-590998219122}"
+              p:after="*[1=2]"
+              s:ds="local:/Data/MultiPromo"
+              s:id="{D806DDF7-39A7-4A6D-8E0A-D138BC53845D}"
+              s:par="ShowBackgroundImage&amp;FieldNames=%7B53094257-4E18-40AD-AC8B-8F70BACC45F5%7D&amp;numColumns&amp;CSSStyles&amp;DynamicPlaceholderId=12"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: "West Jefferson Medical Center à Marrero est l’hôpital de la Rive-Ouest de LCMC Health, offrant des soins d’urgence, spécialisés, de maternité et en clinique de quartier."
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T211231Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: West Jefferson
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: 
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: "Des soins hospitaliers complets sur la Rive-Ouest de la paroisse de Jefferson."
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: "L’hôpital communautaire de services complets de la Rive-Ouest"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: West Jefferson Medical Center
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: West Jefferson Medical Center | LCMC Health
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f957da3a-e9e7-406c-ad81-4ec0ce5c5a3b"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: "West Jefferson Medical Center à Marrero est l’hôpital de services complets de LCMC Health sur la Rive-Ouest. Trouvez les services, les médecins et l’information sur le campus."
+    - ID: "9d32260e-215d-4eff-80de-6d469daadbc4"
+      Hint: image
+      Value: |
+        <image src="https://www.lcmchealth.org/assets/LCMC-Social-Share.jpg" alt="West Jefferson Medical Center" />
+    - ID: "a8a1dfcb-7dd5-4413-8789-db24a95e439f"
+      Hint: Detail
+      Value: |
+        <h2>Des soins pour la Rive-Ouest, près de chez vous</h2><p>West Jefferson Medical Center est un hôpital sans but lucratif de 324 lits situé sur Medical Center Boulevard à Marrero. Depuis plus de 60 ans, il est l’hôpital régional des communautés des paroisses de Jefferson, Orléans, Plaquemines et St. Charles sur la Rive-Ouest.</p><p>Les patients viennent ici pour les soins d’urgence, les traitements cardiaques et vasculaires, les services de cancérologie, les soins de maternité à The Family Birth Place, l’orthopédie, l’imagerie et une gamme complète de spécialités hospitalières. Les cliniques de soins primaires de quartier offrent cette même équipe de LCMC Health à Algiers, Harvey, Gretna et Terrytown.</p><h3>Visiter et communiquer</h3><ul><li><strong>Adresse :</strong> 1101 Medical Center Blvd., Marrero, LA 70072</li><li><strong>Téléphone principal :</strong> 504-347-5511</li><li><strong>Service d’urgence :</strong> ouvert 24 heures sur 24</li></ul><p><a href="/West-Jefferson-Medical-Center/Our-Services">Découvrir les services hospitaliers</a> &nbsp;|&nbsp; <a href="/Find-a-Provider">Trouver un médecin</a> &nbsp;|&nbsp; <a href="/Our-Locations/West-Jefferson-Medical-Center">Emplacement de l’hôpital et détails du campus</a></p>
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: West Jefferson Medical Center
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201041Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: West Jefferson Medical Center

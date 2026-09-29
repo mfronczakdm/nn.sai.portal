@@ -1,0 +1,196 @@
+﻿---
+ID: "a9462101-6d26-4cc4-81a3-bec6f036fd93"
+Parent: "11b54f52-3323-4e32-a1b8-c9907fc2306e"
+Template: "3d6d2e42-d566-4a98-abf3-f1487bc2e603"
+Path: /sitecore/content/lcmc/lcmc/Data/Icon Link Bars/West Jefferson Quick Links/Our Locations
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04853561-5122-4fcc-9b42-3dcde0ad89c7"
+      Hint: ItemTitle
+      Value: Our Locations
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T015808Z
+    - ID: "297d260c-0217-448b-84a3-bd3eea64f3c1"
+      Hint: ItemLink
+      Value: |
+        <link text="Our Locations" anchor="" linktype="external" class="" title="" target="" querystring="" url="https://www.lcmchealth.org/locations/" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2a8a83f1-4f2c-484d-979c-fb9d2eb98179"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T210321Z
+    - ID: "e3cf5175-9f19-478a-89fb-0a627b6a2d1e"
+      Hint: ItemImage
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/6661f7f6c1244d97a900d000a54dcdba?v=ffde40f9" dam-id="3aLYMPwsRKW__jAxRwOelg" width="46" height="46" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/87066/thumbnail" />
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04853561-5122-4fcc-9b42-3dcde0ad89c7"
+      Hint: ItemTitle
+      Value: Nuestras sedes
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T015808Z
+    - ID: "297d260c-0217-448b-84a3-bd3eea64f3c1"
+      Hint: ItemLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="Nuestras sedes" url="https://www.lcmchealth.org/locations/" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "dfae116f-370f-43ef-aeda-a839a2d06f8c"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T163025Z
+  - Version: 2
+    Fields:
+    - ID: "04853561-5122-4fcc-9b42-3dcde0ad89c7"
+      Hint: ItemTitle
+      Value: Nuestras ubicaciones
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260909T232004Z
+    - ID: "297d260c-0217-448b-84a3-bd3eea64f3c1"
+      Hint: ItemLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="Nuestras ubicaciones" url="https://www.lcmchealth.org/locations/" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "94b6f850-3014-42dd-abb1-b83b961782d6"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260909T232004Z
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T232009Z
+    - ID: "e3cf5175-9f19-478a-89fb-0a627b6a2d1e"
+      Hint: ItemImage
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/6661f7f6c1244d97a900d000a54dcdba?v=ffde40f9" dam-id="3aLYMPwsRKW__jAxRwOelg" width="46" height="46" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/87066/thumbnail" />
+  - Version: 3
+    Fields:
+    - ID: "04853561-5122-4fcc-9b42-3dcde0ad89c7"
+      Hint: ItemTitle
+      Value: Nuestras ubicaciones
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T015808Z
+    - ID: "297d260c-0217-448b-84a3-bd3eea64f3c1"
+      Hint: ItemLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="Nuestras ubicaciones" url="https://www.lcmchealth.org/locations/" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "652af5a2-9b58-44ca-9fab-76cab544a817"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T234808Z
+    - ID: "e3cf5175-9f19-478a-89fb-0a627b6a2d1e"
+      Hint: ItemImage
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/6661f7f6c1244d97a900d000a54dcdba?v=ffde40f9" dam-id="3aLYMPwsRKW__jAxRwOelg" width="46" height="46" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/87066/thumbnail" />
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04853561-5122-4fcc-9b42-3dcde0ad89c7"
+      Hint: ItemTitle
+      Value: Nos emplacements
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T015808Z
+    - ID: "297d260c-0217-448b-84a3-bd3eea64f3c1"
+      Hint: ItemLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="Nos emplacements" url="https://www.lcmchealth.org/locations/" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "823dc799-76c7-4f25-b2f3-a89e5c91a5b9"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201635Z
+    - ID: "e3cf5175-9f19-478a-89fb-0a627b6a2d1e"
+      Hint: ItemImage
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/6661f7f6c1244d97a900d000a54dcdba?v=ffde40f9" dam-id="3aLYMPwsRKW__jAxRwOelg" width="46" height="46" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/87066/thumbnail" />

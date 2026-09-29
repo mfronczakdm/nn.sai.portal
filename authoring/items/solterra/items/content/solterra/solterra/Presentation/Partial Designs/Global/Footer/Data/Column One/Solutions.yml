@@ -1,0 +1,49 @@
+﻿---
+ID: "48a31671-1578-4e35-b522-4c815040a5bd"
+Parent: "a96dc519-628b-4543-8717-f8ebe719a6f7"
+Template: "cfd30fc4-07fa-471e-9f85-3a1bf425c718"
+Path: /sitecore/content/solterra/solterra/Presentation/Partial Designs/Global/Footer/Data/Column One/Solutions
+BranchID: "ed920ceb-2272-432a-829e-4610b6b94945"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "ea0163e4-f6e5-46c8-8472-e32d89a31e4b"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{10EDF1A6-FEB1-4119-BDE7-5313521D093D}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260430T182359Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "8fa7a504-39f3-45f7-814d-2af193a6c33d"
+    - ID: "969b132e-3dc2-4526-8f8d-61e3ea742df6"
+      Hint: link
+      Value: |
+        <link class="" id="{DB9E9495-9A38-482A-BBD5-D5C71FA216C4}" querystring="" anchor="" target="" title="" linktype="internal" text="Solutions" url="" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260430T182514Z

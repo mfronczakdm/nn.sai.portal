@@ -1,0 +1,77 @@
+﻿---
+ID: "f1d608e3-73ef-4388-b051-de553446c3fb"
+Parent: "e94fc8b8-faf1-47ef-8985-b2b39bd102d1"
+Template: "75ba19ed-046a-48f7-a214-1ccb30341785"
+Path: "/sitecore/content/Cooley/cooley/Home/People/David-Peinsipp"
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{095058F8-727E-4DFF-919F-E682DE64B7FE}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "027aaf74-a23d-4f1d-a338-378dd796eb7b"
+      Hint: Summary
+      Value: San Francisco | Capital Markets, Emerging Companies
+    - ID: "2302c70d-5f7e-4c92-ba54-52ac669e295a"
+      Hint: Phone
+      Value: +1 415 693 2177
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260814T211949Z
+    - ID: "2fbe8cff-9382-4f34-a13d-a3eae26add65"
+      Hint: PreferredName
+      Value: David
+    - ID: "651e4b9d-b1e1-4094-a64a-d1b9641ab48c"
+      Hint: Publications
+      Value: |
+        {6C4BACD6-6685-421B-9490-6917CD2768A2}
+        {E695CB4A-BE9A-4AD4-B543-B4C44096DE28}
+    - ID: "6cf9e6dc-c127-4b03-854f-a074e892d5bd"
+      Hint: FullName
+      Value: David Peinsipp
+    - ID: "6f5de62a-0295-4a9c-8cbe-90c1a59f483d"
+      Hint: SeoTitle
+      Value: David Peinsipp | Partner | Cooley
+    - ID: "78843463-efe2-448f-a30d-b6e7e2aab380"
+      Hint: Office
+      Value: "{2D6F0567-1786-443E-A44F-0A172A958101}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "94cb6cb8-5577-40bb-b27a-0c6b791dc58d"
+    - ID: "9fe86ca5-05e1-4a44-a119-fcf675e32f02"
+      Hint: Biography
+      Value: "<p>David is co-chair of Cooley's global capital markets group. He practices general business and corporate law, representing both emerging and public companies in capital markets transactions, SEC reporting and compliance, and corporate governance. He routinely represents issuers and investment banks in IPOs, follow-on offerings, 144A offerings, PIPEs and deSPACs.</p>"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "bbd10213-83c1-468c-8788-5c2a67cf85a0"
+      Hint: Email
+      Value: dpeinsipp@cooley.com
+    - ID: "c54be241-aff8-4630-b46c-01aae94f8b9e"
+      Hint: SeoDescription
+      Value: "David Peinsipp is co-chair of Cooley's global capital markets group in San Francisco."
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260817T101019Z
+    - ID: "e398045d-4cbb-458a-bb3c-84c9c79ef136"
+      Hint: SpeakingEngagements
+      Value: |
+        {AFC00F60-6318-4ADF-BFD6-11EF7EDEB285}
+        {E1579DCE-2777-4677-AE76-56012DFF33DA}
+    - ID: "f3c9bb15-bb46-4ec0-9d31-0300245e6acd"
+      Hint: JobTitle
+      Value: Partner
+    - ID: "f632d418-ab07-4f1d-a0fb-15d4fb9fd92c"
+      Hint: Headshot
+      Value: |
+        <Image src="https://www.cooley.com/-/media/cooley/bio-images/headshots/peinsipp-david-12197-bw.jpg" alt="David Peinsipp" />
+    - ID: "f968ea1a-5e81-4417-822e-e5217ae61323"
+      Hint: PracticeAreas
+      Value: |
+        {2545FF1B-DD2D-4F66-856C-6AE97575FC52}
+        {24FCFB51-57A1-49D0-B064-4D369A923871}

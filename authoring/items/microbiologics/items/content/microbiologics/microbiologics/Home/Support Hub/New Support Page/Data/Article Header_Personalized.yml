@@ -1,0 +1,64 @@
+﻿---
+ID: "91c1382b-0335-4296-bac0-dfed6dde04fd"
+Parent: "2eef4640-b444-4b74-ae21-4d43bd792446"
+Template: "0906b950-0047-4b98-93e1-cca545685259"
+Path: /sitecore/content/microbiologics/microbiologics/Home/Support Hub/New Support Page/Data/Article Header_Personalized
+BranchID: "38d2c7d0-73ab-48eb-89e0-843193823da5"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "3c8e5b8b-ee78-426e-982d-949f251ce0ec"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{36483C93-59E5-4B91-9330-0524319F90F6}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260617T115624Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\nick.robinett@sitecore.com
+    - ID: "74450b29-7ed3-4288-aa64-47fced8e06f2"
+      Hint: imageRequired
+      Value: |
+        <Image src="https://mrfbasech.sitecoresandbox.cloud/api/public/content/a7f0d65b3d7b4526931cd8a1cc616592?v=742a9d27" dam-id="bmo1ZuwlSSmUq3IlGxC-xw" width="1395" height="353" alt="national-cancer-institute-L7en7Lb-Ovc-unsplash.jpg" dam-content-type="Image" thumbnailsrc="https://mrfbasech.sitecoresandbox.cloud/api/gateway/94648/thumbnail" />
+    - ID: "75aa702f-5fe3-47ab-8d77-78eb2c37cc7a"
+      Hint: eyebrowOptional
+      Value: Microbiology 
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "1c9ab0ad-d4b0-4f56-b307-f9ef634c0ab6"
+    - ID: "a61ff6e0-3066-43f5-88fd-0dc5f08bb2d8"
+      Hint: summary
+      Value: |
+        Growth Promotion Testing (GPT) is a routine and essential part of microbiological quality control for sterile and non-sterile pharmaceutical laboratories. When media qualification practices are aligned with day-to-day testing practices, they support consistent performance, clear scientific rationale, and confident audit discussions.
+        
+        This overview highlights commonly applied GPT practices grounded in USP guidance and established microbiological principles, with practical context to help laboratories qualify media in a way that is both effective in routine use and easy to defend during inspection.
+    - ID: "b8181ab2-57f4-44cf-94b4-ee7a44e90984"
+      Hint: cta
+      Value: "Advancing Life-Saving Therapies"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\nick.robinett@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260617T161028Z

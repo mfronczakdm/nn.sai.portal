@@ -1,0 +1,204 @@
+﻿---
+ID: "9f405048-091f-4255-b9a6-dab29583b25c"
+Parent: "7a74408e-b1f1-4b41-b189-c80d340cf88c"
+Template: "d77937ac-bae4-4eb0-8d7e-69ec09d5bbfc"
+Path: /sitecore/content/lcmc/lcmc/Home/About Us/Family ties
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{BB2D77EA-C29C-4287-93D9-35ADC026192B}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "72cd7072-c1db-4d9e-b971-d4e560f66675"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Read stories celebrating families and generations of caregivers working across LCMC Health.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T013738Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Family ties
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: 
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: When work family is actually family.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: When work family is family
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Family ties
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Family ties | LCMC Health
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "21ab4fe2-4cc0-402d-8983-d87a03b9dfe4"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Family stories from LCMC Health team members.
+    - ID: "9d32260e-215d-4eff-80de-6d469daadbc4"
+      Hint: image
+      Value: |
+        <image src="https://www.lcmchealth.org/assets/LCMC-Social-Share.jpg" alt="Family ties" />
+    - ID: "a8a1dfcb-7dd5-4413-8789-db24a95e439f"
+      Hint: Detail
+      Value: |
+        <h2>Family ties</h2><p>LCMC Health team members share what it is like when their work family is also their own family.</p><p>The stories feature employees whose mothers work across LCMC Health and celebrate the relationships that connect generations of caregivers.</p><p><a href="https://www.lcmchealth.org/about-us/family-ties/">Read the family stories</a></p>
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Family ties
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260825T120948Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Family ties
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Lea historias que celebran a las familias y generaciones de cuidadores que trabajan en LCMC Health.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T013738Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Lazos familiares
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: 
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Cuando la familia del trabajo en realidad es familia.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Cuando la familia del trabajo es familia
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Lazos familiares
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Lazos familiares | LCMC Health
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a1f625ce-b08a-4e56-84ad-6c3f98b50fba"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Historias familiares de miembros del equipo de LCMC Health.
+    - ID: "9d32260e-215d-4eff-80de-6d469daadbc4"
+      Hint: image
+      Value: |
+        <image alt="Lazos familiares" src="https://www.lcmchealth.org/assets/LCMC-Social-Share.jpg" />
+    - ID: "a8a1dfcb-7dd5-4413-8789-db24a95e439f"
+      Hint: Detail
+      Value: |
+        <h2>Lazos familiares</h2><p>Los miembros del equipo de LCMC Health comparten cómo es cuando su familia del trabajo también es su propia familia.</p><p>Las historias presentan a empleados cuyas madres trabajan en LCMC Health y celebran las relaciones que conectan generaciones de cuidadores.</p><p><a href="https://www.lcmchealth.org/about-us/family-ties/">Lea las historias familiares</a></p>
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Lazos familiares
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T162455Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Lazos familiares
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Lisez des histoires qui célèbrent les familles et les générations de soignants qui travaillent au sein de LCMC Health.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T013738Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Liens familiaux
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: 
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Quand la famille au travail est vraiment la famille.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Quand la famille au travail, c’est la famille
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Liens familiaux
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Liens familiaux | LCMC Health
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "afb5d29b-ddc5-4f3d-8282-ec14f81e96ab"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Histoires de famille racontées par des membres de l’équipe de LCMC Health.
+    - ID: "9d32260e-215d-4eff-80de-6d469daadbc4"
+      Hint: image
+      Value: |
+        <image alt="Liens familiaux" src="https://www.lcmchealth.org/assets/LCMC-Social-Share.jpg" />
+    - ID: "a8a1dfcb-7dd5-4413-8789-db24a95e439f"
+      Hint: Detail
+      Value: |
+        <h2>Liens familiaux</h2><p>Les membres de l’équipe de LCMC Health partagent ce que c’est quand leur famille au travail est aussi leur propre famille.</p><p>Ces histoires mettent en lumière des employés dont les mères travaillent au sein de LCMC Health et célèbrent les liens qui unissent des générations de soignants.</p><p><a href="https://www.lcmchealth.org/about-us/family-ties/">Lire les histoires de famille</a></p>
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Liens familiaux
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201120Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Liens familiaux

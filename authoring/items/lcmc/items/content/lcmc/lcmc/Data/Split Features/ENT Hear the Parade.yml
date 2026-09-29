@@ -1,0 +1,159 @@
+﻿---
+ID: "44954917-b4a7-47cc-ac79-6fea2f74b9fc"
+Parent: "23fffc7a-4d86-4004-8d56-b99795dd32fb"
+Template: "70780390-a3eb-478d-b5de-062ba3c9e897"
+Path: /sitecore/content/lcmc/lcmc/Data/Split Features/ENT Hear the Parade
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "1e2b9b0c-18e0-44d4-bd70-6c21307b2a5c"
+      Hint: SectionTitle
+      Value: Hear the music. Breathe the parade.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260909T230359Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "72123495-4fec-4349-ad32-c811fb59239d"
+      Hint: SecondaryLink
+      Value: |
+        <link text="Explore ENT care" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{66B44E6A-6D2F-4B01-BB8A-A26E4E3EC29C}" />
+    - ID: "76acf4ae-4743-4e04-8150-ad9fcb505011"
+      Hint: EyebrowText
+      Value: West Jefferson ENT
+    - ID: "7c4e343a-1394-4002-a9c9-79d019670ce5"
+      Hint: PrimaryLink
+      Value: |
+        <link text="Book an ENT visit" anchor="" linktype="internal" class="" title="" target="" querystring="visit=sick-visit&amp;specialty=ENT&amp;location=West Jefferson Medical Center&amp;provider=Gabrielle Moreau" id="{96B478C7-15AA-47E2-9457-722E6BCC9D92}" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "be12d4bd-54fc-46c7-b48b-8a0db4cfe2af"
+    - ID: "9bcfa365-c779-4e5b-b029-abee39f389be"
+      Hint: Description
+      Value: <p>Greater New Orleans is loud in the best way — brass bands, festivals, and Gulf humidity that can leave sinuses and ears struggling to keep up. ENT specialists at West Jefferson Medical Center treat sinus, hearing, and throat concerns so you can stay in the crowd, not the waiting room.</p>
+    - ID: "a22f9921-5ac5-40d3-a3a5-49bb1ae7292d"
+      Hint: FeatureImage
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/d8f9fd46273a42e1839d066b4b356e15?v=b0998978" dam-id="mmhvtEx-Q-2DHKouk21MHw" width="585" height="300" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/87199/thumbnail" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T231449Z
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "1e2b9b0c-18e0-44d4-bd70-6c21307b2a5c"
+      Hint: SectionTitle
+      Value: Escucha la música. Respira el desfile.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260909T230359Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "72123495-4fec-4349-ad32-c811fb59239d"
+      Hint: SecondaryLink
+      Value: |
+        <link class="" id="{66B44E6A-6D2F-4B01-BB8A-A26E4E3EC29C}" querystring="" anchor="" target="" title="" linktype="internal" text="Explora la atención de otorrinolaringología" />
+    - ID: "76acf4ae-4743-4e04-8150-ad9fcb505011"
+      Hint: EyebrowText
+      Value: West Jefferson ENT
+    - ID: "7c4e343a-1394-4002-a9c9-79d019670ce5"
+      Hint: PrimaryLink
+      Value: |
+        <link class="" id="{96B478C7-15AA-47E2-9457-722E6BCC9D92}" querystring="visit=sick-visit&amp;specialty=ENT&amp;location=West Jefferson Medical Center&amp;provider=Gabrielle Moreau" anchor="" target="" title="" linktype="internal" text="Agenda una cita de otorrinolaringología" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a4d9b068-6370-43db-96ac-7b6f38d0239a"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9bcfa365-c779-4e5b-b029-abee39f389be"
+      Hint: Description
+      Value: "<p>El área metropolitana de Nueva Orleans suena fuerte de la mejor manera: bandas de música, festivales y la humedad del Golfo que puede hacer que los senos paranasales y los oídos tengan dificultades para seguir el ritmo. Los especialistas en otorrinolaringología de West Jefferson Medical Center tratan problemas de sinusitis, audición y garganta para que puedas seguir en la multitud, no en la sala de espera.</p>"
+    - ID: "a22f9921-5ac5-40d3-a3a5-49bb1ae7292d"
+      Hint: FeatureImage
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/d8f9fd46273a42e1839d066b4b356e15?v=b0998978" dam-id="mmhvtEx-Q-2DHKouk21MHw" width="585" height="300" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/87199/thumbnail" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T234054Z
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "1e2b9b0c-18e0-44d4-bd70-6c21307b2a5c"
+      Hint: SectionTitle
+      Value: Entendez la musique. Respirez la parade.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260909T230359Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "72123495-4fec-4349-ad32-c811fb59239d"
+      Hint: SecondaryLink
+      Value: |
+        <link class="" id="{66B44E6A-6D2F-4B01-BB8A-A26E4E3EC29C}" querystring="" anchor="" target="" title="" linktype="internal" text="Découvrir les soins ORL" />
+    - ID: "76acf4ae-4743-4e04-8150-ad9fcb505011"
+      Hint: EyebrowText
+      Value: ORL de West Jefferson
+    - ID: "7c4e343a-1394-4002-a9c9-79d019670ce5"
+      Hint: PrimaryLink
+      Value: |
+        <link class="" id="{96B478C7-15AA-47E2-9457-722E6BCC9D92}" querystring="visit=sick-visit&amp;specialty=ENT&amp;location=West Jefferson Medical Center&amp;provider=Gabrielle Moreau" anchor="" target="" title="" linktype="internal" text="Prendre un rendez-vous en ORL" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "1090fb2e-48c5-407c-9dfe-cac05a914859"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9bcfa365-c779-4e5b-b029-abee39f389be"
+      Hint: Description
+      Value: <p>Le Grand New Orleans résonne des plus beaux sons — fanfares, festivals et humidité du golfe qui peuvent mettre les sinus et les oreilles à rude épreuve. Les spécialistes ORL du West Jefferson Medical Center traitent les problèmes de sinus, d’audition et de gorge afin que vous restiez dans la foule, pas dans la salle d’attente.</p>
+    - ID: "a22f9921-5ac5-40d3-a3a5-49bb1ae7292d"
+      Hint: FeatureImage
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/d8f9fd46273a42e1839d066b4b356e15?v=b0998978" dam-id="mmhvtEx-Q-2DHKouk21MHw" width="585" height="300" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/87199/thumbnail" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201357Z

@@ -1,0 +1,23 @@
+﻿---
+ID: "fa2c6030-3f01-4859-b6b4-db1ad772b9f4"
+Parent: "51224eb9-4e9b-486a-9a40-4fc0689e1fd0"
+Template: "e7dda8f5-e1cc-4568-87cb-0362cae6c449"
+Path: /sitecore/content/Cooley/cooley/Data/NewsListing
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260817T000142Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "175ba786-0c0c-4f5b-8c5c-9816b2644b99"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260817T000142Z

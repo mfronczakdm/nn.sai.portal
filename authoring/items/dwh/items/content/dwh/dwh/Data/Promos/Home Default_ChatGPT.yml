@@ -1,0 +1,105 @@
+﻿---
+ID: "074b97eb-c494-445f-8e53-68edafaf3d87"
+Parent: "d7f525b1-5e39-4f07-8a0d-1d94bbd82b72"
+Template: "dfed4457-d760-457a-bec1-c0dccdc44381"
+Path: /sitecore/content/dwh/dwh/Data/Promos/Home Default_ChatGPT
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "1f66862d-a5e3-405f-8e3e-b787b4c39b12"
+      Hint: PromoText2
+      Value: |
+        <div class="ck-content"><p>Explore expertly designed floor plans built with our exclusive LifeDesign℠ principles, featuring optimal sight lines, thoughtful layouts, and abundant natural light for your ideal lifestyle. Act now to secure first access to our new communities and take advantage of tailored builder incentives. Schedule your appointment today to find your dream home!</p></div>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260609T131708Z
+    - ID: "28079f3a-896b-4273-be5f-59d0ebb7cd7d"
+      Hint: PromoText
+      Value: |
+        <div class="ck-content"><p>Schedule a Tour and Begin Your Journey Today</p></div>
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "e4cb45e4-b8d1-4264-adaa-1597b618df32"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\nick.robinett@sitecore.com
+    - ID: "c6e604c3-5371-4e67-83df-a09a5ea66249"
+      Hint: PromoText3
+      Value: |
+        <div class="ck-content"><p>lorem ipsum</p></div>
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260625T140655Z
+    - ID: "ef24bed2-46ab-4d53-ad1a-1019935a4e89"
+      Hint: PromoLink
+      Value: |
+        <link linktype="internal" id="9d0ae394-aa94-435e-915c-53508e34ea2b" anchor="" querystring="" target="" class="" text="Schedule Your Tour" title=""/>
+    - ID: "f94b9858-c439-4291-863b-757b536c8b65"
+      Hint: PromoIcon
+      Value: |
+        <Image src="https://mrfbasech.sitecoresandbox.cloud/api/public/content/94678-HomepagePromoCTAs-1100x740?v=731c668a" dam-id="s47E5H31RxyTuYrkAGHaGA" width="1100" height="740" alt="4e3a55b0-dd57-420b-8cd1-be6ef5d40ddc.jpg" dam-content-type="Image" thumbnailsrc="https://mrfbasech.sitecoresandbox.cloud/api/gateway/94678/thumbnail" />
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "1f66862d-a5e3-405f-8e3e-b787b4c39b12"
+      Hint: PromoText2
+      Value: |
+        <div class="ck-content"><p>Découvrez des plans d'étage conçus avec nos principes exclusifs LifeDesign℠ qui équilibrent les lignes de vue, l'emplacement des pièces et les fenêtres pour améliorer la vie quotidienne de votre famille. Inscrivez-vous à notre liste d'intérêt VIP pour avoir un accès prioritaire aux nouvelles communautés et aux incitatifs exclusifs du constructeur.</p></div>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260609T131708Z
+    - ID: "28079f3a-896b-4273-be5f-59d0ebb7cd7d"
+      Hint: PromoText
+      Value: |
+        <div class="ck-content"><p>Commencez à construire votre rêve aujourd'hui</p></div>
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "7f9040c9-0478-42a4-b337-2bdaaf631343"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\nick.robinett@sitecore.com
+    - ID: "c6e604c3-5371-4e67-83df-a09a5ea66249"
+      Hint: PromoText3
+      Value: |
+        <div class="ck-content"><p>lorem ipsum</p></div>
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260625T140243Z
+    - ID: "ef24bed2-46ab-4d53-ad1a-1019935a4e89"
+      Hint: PromoLink
+      Value: |
+        <link linktype="internal" id="9d0ae394-aa94-435e-915c-53508e34ea2b" anchor="" querystring="" target="" class="" text="" title=""/>
+    - ID: "f94b9858-c439-4291-863b-757b536c8b65"
+      Hint: PromoIcon
+      Value: |
+        <Image src="https://mrfbasech.sitecoresandbox.cloud/api/public/content/7077e0a81d654f52bd346bd381a3d39f?v=d62fe4a1" dam-id="RlmYRzBiQWKF5_ixLTGHTQ" width="1100" height="637" alt="imgi_29_ec9a4f6a-1513-4f21-bfaf-c964335741e2.jpg" dam-content-type="Image" thumbnailsrc="https://mrfbasech.sitecoresandbox.cloud/api/gateway/93199/thumbnail" />

@@ -1,0 +1,61 @@
+﻿---
+ID: "5a773124-14e2-4a98-ac0b-48f9023f23e3"
+Parent: "077df4ed-df76-4e15-bd53-23afd81827e1"
+Template: "e1f2a3b4-c5d6-4e7f-8a9b-0c1d2e3f4a5b"
+Path: /sitecore/content/pillsbury/pillsburylaw/Data/AI Config/FAQ/VIP Access
+BranchID: "f8a9b0c1-d2e3-4f4a-5b6c-7d8e9f0a1b2c"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 100
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{3CA30A4F-3E7E-4A73-917D-4CD50EF89EB5}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "eb0eba72-039f-4ad8-82be-e3781da6b914"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{B6C7D8E9-F0A1-4B2C-3D4E-5F6A7B8C9D0E}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260804T103300Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "85bb4e1f-f16a-4b63-97e2-ded324136639"
+    - ID: "a3b4c5d6-e7f8-4a9b-0c1d-2e3f4a5b6c7d"
+      Hint: question
+      Value: "What is SYNC VIP access and how do I get 10% off?"
+    - ID: "b4c5d6e7-f8a9-4b0c-1d2e-3f4a5b6c7d8e"
+      Hint: answer
+      Value: Get VIP access by signing up on our website. You'll receive 10% off your first purchase at Sync.com, plus early access to product launches, exclusive sales, and curated news. Submit your email in the VIP section on the homepage to join.
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260804T103310Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: AI

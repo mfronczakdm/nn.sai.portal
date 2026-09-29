@@ -1,0 +1,258 @@
+﻿---
+ID: "289f3863-a653-433e-9225-23ddf433bd55"
+Parent: "2c56b473-70ee-4a89-bdd5-cfed2a5fcdd8"
+Template: "d77937ac-bae4-4eb0-8d7e-69ec09d5bbfc"
+Path: /sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/Hyperbaric
+SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{917B09BA-1495-4EE0-9E1C-36AA268CB54B}"
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{925A4D59-1640-4B2A-8E3E-38F5E4294E71}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "221c7628-eb55-401e-aa62-1a746c7f6a11"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{39466A06-F547-4AF0-B6C5-2BE4DC3B271F}"
+              s:ds=""
+              s:id="{B1136CF1-94BE-468C-B78D-9BE212AF5428}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Dark Imge&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: West Jefferson offers hyperbaric oxygen therapy as part of wound and specialty care for selected conditions that benefit from increased oxygen delivery.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T211345Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Hyperbaric
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Hyperbaric oxygen therapy on the Westbank.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Hyperbaric oxygen therapy at West Jefferson
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Hyperbaric
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Hyperbaric Medicine | West Jefferson Medical Center
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "be0b3cb0-ab48-4efd-927b-f23c894cf3f8"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Hyperbaric oxygen therapy at West Jefferson Medical Center in Marrero.
+    - ID: "9d32260e-215d-4eff-80de-6d469daadbc4"
+      Hint: image
+      Value: |
+        <image src="https://www.lcmchealth.org/assets/LCMC-Social-Share.jpg" alt="Hyperbaric medicine at West Jefferson" />
+    - ID: "a8a1dfcb-7dd5-4413-8789-db24a95e439f"
+      Hint: Detail
+      Value: "<h2>Hyperbaric oxygen therapy</h2><p>Hyperbaric medicine at West Jefferson Medical Center supports patients whose wounds or other conditions may improve with high-concentration oxygen in a controlled chamber setting. The service is often coordinated with wound care so patients have a single hospital team managing dressing, infection control, and oxygen therapy.</p><p>Your physician determines whether hyperbaric treatment is appropriate. To discuss a referral, call the hospital at <strong>504-347-5511</strong> or ask your wound care provider.</p>"
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Hyperbaric Medicine
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Akv1r1Hmcm16AN61y5QanpMca0RChHPy
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T001747Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Hyperbaric Medicine | West Jefferson
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{39466A06-F547-4AF0-B6C5-2BE4DC3B271F}"
+              s:ds=""
+              s:id="{B1136CF1-94BE-468C-B78D-9BE212AF5428}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Dark Imge&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: West Jefferson ofrece oxigenoterapia hiperbárica como parte del cuidado de heridas y la atención especializada para afecciones seleccionadas que se benefician de una mayor administración de oxígeno.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T211345Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Hiperbárica
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Oxigenoterapia hiperbárica en la Ribera Oeste.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Oxigenoterapia hiperbárica en West Jefferson
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Hiperbárica
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Medicina hiperbárica | West Jefferson Medical Center
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "1a8e086a-68ea-4891-aa43-d8c2fc0f9d72"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Oxigenoterapia hiperbárica en West Jefferson Medical Center en Marrero.
+    - ID: "9d32260e-215d-4eff-80de-6d469daadbc4"
+      Hint: image
+      Value: |
+        <image alt="Medicina hiperbárica en West Jefferson" src="https://www.lcmchealth.org/assets/LCMC-Social-Share.jpg" />
+    - ID: "a8a1dfcb-7dd5-4413-8789-db24a95e439f"
+      Hint: Detail
+      Value: "<h2>Oxigenoterapia hiperbárica</h2><p>La medicina hiperbárica en West Jefferson Medical Center apoya a pacientes cuyas heridas u otras afecciones pueden mejorar con oxígeno de alta concentración en un entorno de cámara controlada. El servicio suele coordinarse con el cuidado de heridas para que los pacientes tengan un solo equipo hospitalario que gestione los apósitos, el control de infecciones y la oxigenoterapia.</p><p>Su médico determina si el tratamiento hiperbárico es apropiado. Para hablar sobre una remisión, llame al hospital al <strong>504-347-5511</strong> o consulte a su proveedor de cuidado de heridas.</p>"
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Medicina hiperbárica
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T162957Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Medicina hiperbárica | West Jefferson
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{39466A06-F547-4AF0-B6C5-2BE4DC3B271F}"
+              s:ds=""
+              s:id="{B1136CF1-94BE-468C-B78D-9BE212AF5428}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Dark Imge&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: West Jefferson offre l’oxygénothérapie hyperbare dans le cadre des soins des plaies et des soins spécialisés pour certaines affections qui bénéficient d’un apport accru en oxygène.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T211345Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Hyperbare
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Oxygénothérapie hyperbare sur la rive ouest.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Oxygénothérapie hyperbare à West Jefferson
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Hyperbare
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Médecine hyperbare | Centre médical West Jefferson
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a750932b-6802-49d5-8f77-e911e15a60fc"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Oxygénothérapie hyperbare au Centre médical West Jefferson à Marrero.
+    - ID: "9d32260e-215d-4eff-80de-6d469daadbc4"
+      Hint: image
+      Value: |
+        <image alt="Médecine hyperbare à West Jefferson" src="https://www.lcmchealth.org/assets/LCMC-Social-Share.jpg" />
+    - ID: "a8a1dfcb-7dd5-4413-8789-db24a95e439f"
+      Hint: Detail
+      Value: "<h2>Oxygénothérapie hyperbare</h2><p>La médecine hyperbare au Centre médical West Jefferson soutient les patients dont les plaies ou d’autres problèmes de santé pourraient s’améliorer grâce à de l’oxygène à forte concentration dans une chambre contrôlée. Le service est souvent coordonné avec les soins des plaies afin que les patients aient une seule équipe hospitalière pour gérer les pansements, le contrôle des infections et l’oxygénothérapie.</p><p>Votre médecin détermine si le traitement hyperbare vous convient. Pour discuter d’une demande d’orientation, appelez l’hôpital au <strong>504-347-5511</strong> ou parlez-en à votre professionnel des soins des plaies.</p>"
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Médecine hyperbare
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201607Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Médecine hyperbare | West Jefferson

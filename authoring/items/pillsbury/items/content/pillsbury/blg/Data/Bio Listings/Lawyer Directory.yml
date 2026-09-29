@@ -1,0 +1,72 @@
+﻿---
+ID: "4cd55390-4f6e-4649-8b97-3ccc9175774c"
+Parent: "b300eea1-de47-48dc-ae64-9c27a9da5b3a"
+Template: "247f4201-fb4e-4b8b-821e-f94af16709f1"
+Path: /sitecore/content/pillsbury/blg/Data/Bio Listings/Lawyer Directory
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{6C59AE29-D0A1-4B77-9305-0ABAB21D5FE5}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "3f0180d9-a5a4-4740-89db-1f03eae396a9"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260804T200003Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{C55B483C-EA7F-4E76-A066-985F7D9396CA}"
+    - ID: "6d7d203f-a179-446a-9b05-9d2b6850165f"
+      Hint: Title
+      Value: Our Lawyers
+    - ID: "82c601dd-590c-4554-a704-e87f16294082"
+      Hint: Intro
+      Value: <p>Search our attorney directory by name, practice area, or office.</p>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2abc5a6e-80ea-4d21-b56f-b4f75fd5d2fb"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260822T014639Z
+    - ID: "eefc79b9-8d34-447a-bda2-7ee988828070"
+      Hint: BiosRoot
+      Value: "{B3DFDC46-22E0-4F87-8CC5-2B635AFC2242}"
+  - Version: 2
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260822T015657Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{C55B483C-EA7F-4E76-A066-985F7D9396CA}"
+    - ID: "6d7d203f-a179-446a-9b05-9d2b6850165f"
+      Hint: Title
+      Value: Our People
+    - ID: "82c601dd-590c-4554-a704-e87f16294082"
+      Hint: Intro
+      Value: <p>Search BLG lawyers by name, practice area, or Canadian office — Calgary, Montréal, Ottawa, Toronto, and Vancouver.</p>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ac65e152-dc7a-4eb4-9a8f-9a4b01736eb4"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260822T015657Z
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260822T015658Z
+    - ID: "eefc79b9-8d34-447a-bda2-7ee988828070"
+      Hint: BiosRoot
+      Value: "{B3DFDC46-22E0-4F87-8CC5-2B635AFC2242}"

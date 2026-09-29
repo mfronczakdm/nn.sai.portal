@@ -1,0 +1,211 @@
+﻿---
+ID: "a78834ad-819f-4b87-b6f6-3632bb709ddd"
+Parent: "91cd7e60-04c3-4dfd-863b-b4adfbce3e61"
+Template: "3d6d2e42-d566-4a98-abf3-f1487bc2e603"
+Path: /sitecore/content/lcmc/lcmc/Data/Icon Link Bars/LCMC Quick Links/For Patients
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04853561-5122-4fcc-9b42-3dcde0ad89c7"
+      Hint: ItemTitle
+      Value: For Patients
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T015811Z
+    - ID: "297d260c-0217-448b-84a3-bd3eea64f3c1"
+      Hint: ItemLink
+      Value: |
+        <link linktype="internal" id="96b478c715aa47e29457722e6bcc9d92" anchor="" querystring="" target="" class="" text="Make an Appointment" title=""/>
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "3a3a5a62-f27c-46a5-9961-8a3ef63e0664"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T210344Z
+    - ID: "e3cf5175-9f19-478a-89fb-0a627b6a2d1e"
+      Hint: ItemImage
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/7d9b9ae1f9684025845c6509c4d4ea1d?v=218002f2" dam-id="kWTNm-RlRcK98G96wyYCBw" width="46" height="46" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/87072/thumbnail" />
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04853561-5122-4fcc-9b42-3dcde0ad89c7"
+      Hint: ItemTitle
+      Value: Para pacientes
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T015811Z
+    - ID: "297d260c-0217-448b-84a3-bd3eea64f3c1"
+      Hint: ItemLink
+      Value: |
+        <link class="" querystring="" id="96b478c715aa47e29457722e6bcc9d92" anchor="" target="" title="" linktype="internal" text="Agendar una cita" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "42bcb747-9c59-4540-a198-911c020ccfc2"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T163025Z
+  - Version: 2
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04853561-5122-4fcc-9b42-3dcde0ad89c7"
+      Hint: ItemTitle
+      Value: Para pacientes
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260909T232004Z
+    - ID: "297d260c-0217-448b-84a3-bd3eea64f3c1"
+      Hint: ItemLink
+      Value: |
+        <link class="" querystring="" id="96b478c715aa47e29457722e6bcc9d92" anchor="" target="" title="" linktype="internal" text="Pedir una cita" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b91b30de-b40a-4758-a07e-914f88d60e73"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260909T232004Z
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T232009Z
+    - ID: "e3cf5175-9f19-478a-89fb-0a627b6a2d1e"
+      Hint: ItemImage
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/7d9b9ae1f9684025845c6509c4d4ea1d?v=218002f2" dam-id="kWTNm-RlRcK98G96wyYCBw" width="46" height="46" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/87072/thumbnail" />
+  - Version: 3
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04853561-5122-4fcc-9b42-3dcde0ad89c7"
+      Hint: ItemTitle
+      Value: Para pacientes
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T015811Z
+    - ID: "297d260c-0217-448b-84a3-bd3eea64f3c1"
+      Hint: ItemLink
+      Value: |
+        <link class="" querystring="" id="96b478c715aa47e29457722e6bcc9d92" anchor="" target="" title="" linktype="internal" text="Programar una cita" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "833ebe89-13e1-4739-a46a-de83873e5970"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T234808Z
+    - ID: "e3cf5175-9f19-478a-89fb-0a627b6a2d1e"
+      Hint: ItemImage
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/7d9b9ae1f9684025845c6509c4d4ea1d?v=218002f2" dam-id="kWTNm-RlRcK98G96wyYCBw" width="46" height="46" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/87072/thumbnail" />
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04853561-5122-4fcc-9b42-3dcde0ad89c7"
+      Hint: ItemTitle
+      Value: Pour les patients
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T015811Z
+    - ID: "297d260c-0217-448b-84a3-bd3eea64f3c1"
+      Hint: ItemLink
+      Value: |
+        <link class="" querystring="" id="96b478c715aa47e29457722e6bcc9d92" anchor="" target="" title="" linktype="internal" text="Prendre rendez-vous" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "fef2d14d-12ae-4597-8d96-b831d201455d"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201635Z
+    - ID: "e3cf5175-9f19-478a-89fb-0a627b6a2d1e"
+      Hint: ItemImage
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/7d9b9ae1f9684025845c6509c4d4ea1d?v=218002f2" dam-id="kWTNm-RlRcK98G96wyYCBw" width="46" height="46" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/87072/thumbnail" />

@@ -1,0 +1,27 @@
+﻿---
+ID: "259a5850-f67b-4709-a869-792013b01972"
+Parent: "9dea8ca4-0cf8-44f4-ace6-e993d632581a"
+Template: "ed997a6b-feca-4349-a58d-72535e7fefff"
+Path: /sitecore/content/quanex/quanex/Data/HeroCarousels/Homepage Hero
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260813T130843Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "7077181e-6750-44ac-b1d4-82fe4730e21c"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260813T130843Z
+    - ID: "f94f50d4-7756-4dd8-a4ca-21f057242f56"
+      Hint: ContactLink
+      Value: |
+        <link text="CONTACT US" linktype="internal" id="{56EA6322-F923-44F1-B0AF-2A10F9B46C04}" />

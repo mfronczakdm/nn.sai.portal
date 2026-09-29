@@ -1,0 +1,100 @@
+﻿---
+ID: "5f162e0b-f5be-4cc3-a300-ba106ed06f40"
+Parent: "5c85cea9-9426-4cce-9cf4-807983e5578e"
+Template: "f94c8c17-70e8-4d8b-9d35-d0465c0e0945"
+Path: /sitecore/content/lcmc/lcmc/Data/MultiPromos/Care at West Jefferson/ENT at West Jefferson
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "233f3f0d-f3fc-40cb-9d76-8efe6d202890"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260910T163141Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{12FFAC4C-565F-4C9A-B63E-7F77E96B4D1F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "54a924ec-8e98-4597-b9c2-d616dd66cc7c"
+      Hint: description
+      Value: <p>Campus ENT programs for sinus, ear, and throat care in Marrero.</p>
+    - ID: "5c33f772-5806-4ad8-a236-730f1b299531"
+      Hint: heading
+      Value: ENT at West Jefferson
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "7eca61ae-f0c1-49e6-b131-686ab895a1dc"
+      Hint: image
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/d8f9fd46273a42e1839d066b4b356e15?v=b0998978" dam-id="mmhvtEx-Q-2DHKouk21MHw" width="585" height="300" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/87199/thumbnail" alt="ENT at West Jefferson" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "840f0009-ab82-4220-8953-5687f62cb324"
+    - ID: "8ec6e4b8-3a38-4115-a892-38051924f3f1"
+      Hint: link
+      Value: |
+        <link text="Explore ENT" linktype="internal" id="{66B44E6A-6D2F-4B01-BB8A-A26E4E3EC29C}" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T163141Z
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260910T163141Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{12FFAC4C-565F-4C9A-B63E-7F77E96B4D1F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "54a924ec-8e98-4597-b9c2-d616dd66cc7c"
+      Hint: description
+      Value: <p>Programmes ORL du campus pour les soins des sinus, des oreilles et de la gorge à Marrero.</p>
+    - ID: "5c33f772-5806-4ad8-a236-730f1b299531"
+      Hint: heading
+      Value: ORL à West Jefferson
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "7eca61ae-f0c1-49e6-b131-686ab895a1dc"
+      Hint: image
+      Value: |
+        <image height="300" dam-content-type="Image" alt="ORL à West Jefferson" width="585" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/87199/thumbnail" dam-id="mmhvtEx-Q-2DHKouk21MHw" src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/d8f9fd46273a42e1839d066b4b356e15?v=b0998978" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "81887296-8f73-409e-afd2-598945d67cf6"
+    - ID: "8ec6e4b8-3a38-4115-a892-38051924f3f1"
+      Hint: link
+      Value: |
+        <link id="{66B44E6A-6D2F-4B01-BB8A-A26E4E3EC29C}" linktype="internal" text="Explorer l’ORL" />
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201646Z

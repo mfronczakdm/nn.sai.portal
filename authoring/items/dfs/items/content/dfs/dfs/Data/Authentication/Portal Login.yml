@@ -1,0 +1,84 @@
+﻿---
+ID: "efeac18b-d47c-41ac-b207-5525cd230634"
+Parent: "06974976-9d8f-4b2c-82e5-dedcdfda45ee"
+Template: "c83b63cf-8864-4ac8-bba6-51689ecaba9b"
+Path: /sitecore/content/dfs/dfs/Data/Authentication/Portal Login
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: 
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{DED08E94-0DC5-4F5B-AAD7-E1C956691D61}" />
+- ID: "ca9b9f52-4fb0-4f87-a79f-24dea62cda65"
+  Hint: __Default workflow
+  Value: 
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "841bbe4a-3fe5-4094-9271-56bc50da8d8c"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "00489df2-39f3-4071-9c94-68e1b4a93f79"
+      Hint: loginFailedMessage
+      Value: Invalid email or password. Please try again.
+    - ID: "06d19ed9-d636-4b58-88f1-d45696a7b910"
+      Hint: resetPasswordPath
+      Value: "/reset-password"
+    - ID: "15fdc17e-d21a-40d4-8101-c06ef797b37c"
+      Hint: logo
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/cfd4e1691cf647f5ad549082387c974c?v=fabca575" dam-id="Gu9Djhs2QOGBb9TnyTNEsg" width="115" height="116" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/84371/thumbnail" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260819T181427Z
+    - ID: "39145d70-68a5-451a-b927-a0770476e878"
+      Hint: logoutButtonText
+      Value: mark.fronczak@sitecore.com
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: 
+    - ID: "402e9faf-46be-422a-bb8d-a75114c91c98"
+      Hint: loginButtonText
+      Value: 
+    - ID: "79567b03-bcd0-4b04-bffc-1cb9ffa1a658"
+      Hint: postLoginRedirect
+      Value: |
+        <link text="Portal" anchor="" linktype="internal" class="" title="" target="_blank" querystring="" id="{95F5703D-61B3-42B0-B683-CE1DB32369C8}" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "31edeb61-28ef-4511-b13b-2ca4c540cda4"
+    - ID: "9b054522-3b7a-462b-9763-44ffdc0635ec"
+      Hint: title
+      Value: Sign in
+    - ID: "aae77518-1399-4f96-82ef-72ccf01a797d"
+      Hint: forgotPasswordLinkText
+      Value: "Forgot password?"
+    - ID: "b0d8750d-8c6f-4479-9933-08d624839259"
+      Hint: userNameLabel
+      Value: Email
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "bc0da429-c7c9-453c-81a9-b8f24dd50a19"
+      Hint: subtitle
+      Value: Enter your credentials to access the portal
+    - ID: "c941d204-a9ba-401b-8f28-a20b535c54e1"
+      Hint: forgotPasswordLabel
+      Value: Reset password on dedicated page
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260819T233009Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Portal Login
+    - ID: "faf8911a-f308-4366-a778-057c55ab62ee"
+      Hint: passwordLabel
+      Value: Password

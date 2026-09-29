@@ -1,0 +1,72 @@
+﻿---
+ID: "854f8e12-dfc2-4033-bdad-9bfe7d88bb7b"
+Parent: "a872ea14-b49f-41d2-8db8-17294a12e6a6"
+Template: "69728677-52e5-4482-a415-94f0222799b8"
+Path: "/sitecore/content/andmore/atlanta-apparel/Home/Exhibit/Exhibit at Atlanta Apparel/First Finds"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: 
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{35B99943-C86F-4CDB-831B-E7C1DACA8F63}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "485b31f9-b696-4822-b4ec-0753cb1d0870"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "18ab03d1-c9ae-4f00-815d-220fcb2d80e5"
+      Hint: image
+      Value: |
+        <image src="https://www.atlanta-apparel.com/-/media/Atlanta-Apparel/Fashion-Gallery/ELLE9097_Resized.jpg?h=400&amp;iar=0&amp;w=700&amp;hash=03F08062862C050AF2F712F6CB700F10" alt="First Finds exhibitor opportunities" />
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Position your brand among richly merchandised First Finds product neighborhoods and connect with qualified retailers.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T013659Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: First Finds
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: 
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Where promising brands find new opportunities.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Where promising brands find new opportunities.
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: First Finds at Atlanta Apparel
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: First Finds Exhibits at Atlanta Apparel
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ade0ab1b-4469-4ee7-97b1-999bd911278e"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Position your brand in First Finds and connect with qualified retailers.
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: First Finds at Atlanta Apparel
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260825T115152Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: First Finds at Atlanta Apparel
+    - ID: "f79467fb-89e8-478b-8ac7-5b37b53c1c0c"
+      Hint: Detail
+      Value: |
+        <p>First Finds is where promising brands find new opportunities. Richly merchandised across diverse floors in Building 3, First Finds gives buyers a simplified way to discover emerging temporary brands alongside established favorites.</p><p><a href="https://www.atlanta-apparel.com/Exhibit/Atlanta-Apparel/First-Finds">Explore First Finds exhibiting opportunities</a></p>

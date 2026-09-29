@@ -1,0 +1,56 @@
+﻿---
+ID: "92303b63-c083-43fa-b600-f346ba8e65f0"
+Parent: "25395b5d-0baa-4c3a-a704-458470bacfca"
+Template: "25cf32e0-c2d1-4e72-8cb9-fdeb000be0d7"
+Path: /sitecore/content/Cooley/cooley/Home/Media and Insight/Events/Venture Term Sheets Webinar
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{E789447A-5C32-4E27-BE80-5E4EC70A116D}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "cf7aa9ef-1a0b-4a5f-b50f-4ca0a2c835d8"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: "Live walk-through of current venture term-sheet points."
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260816T235343Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Venture Term Sheets Webinar
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5395a82a-b44f-4665-8f28-2d55c748219a"
+    - ID: "8cff1548-edb9-4e39-836b-23f86ed55248"
+      Hint: image
+      Value: |
+        <image mediaid="" src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=80" alt="Team reviewing term sheet documents" />
+    - ID: "93f130f9-b079-4d7d-b7af-ac85cd31bffd"
+      Hint: Detail
+      Value: "<h2>Webinar: Reading today’s venture term sheets</h2><p>Walk-through of liquidation preferences, pay-to-play, and governance terms founders and investors are negotiating now.</p><h3>Agenda</h3><ul><li>Valuation and preference stacks</li><li>Protective provisions and board seats</li><li>Founder-friendly vs. investor-friendly points</li></ul>"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\WIt5EKonMo343Fqq8begbLVKlCgYPAIX
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260817T000546Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Venture Term Sheets Webinar

@@ -1,0 +1,106 @@
+﻿---
+ID: "579361f2-1f19-4aa7-9647-ad5a3353e02e"
+Parent: "67471114-7cd2-4099-9331-cccf8e61d20f"
+Template: "95a6d332-c755-45d8-921a-6b1f2a3675cd"
+Path: /sitecore/content/lcmc/lcmc/Data/LcmcAppointmentSchedulers/Patient Appointments/Sick visit
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0460e082-9902-4a2e-9c72-c618bc1f77c4"
+      Hint: VisitDescription
+      Value: Your child is sick. For example, your child has a cold, fever, sore throat, ear pain or other illness.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260902T182033Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "e970eb9c-e9c9-4802-9df3-e6c1d8354541"
+    - ID: "8f9fc998-74e8-450e-9e22-a1883bc3cf28"
+      Hint: VisitKey
+      Value: "sick-visit"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260902T182034Z
+    - ID: "e4f064f2-f59b-4e15-abf2-11a998810fdf"
+      Hint: VisitTitle
+      Value: Sick visit
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0460e082-9902-4a2e-9c72-c618bc1f77c4"
+      Hint: VisitDescription
+      Value: Su hijo está enfermo. Por ejemplo, su hijo tiene un resfriado, fiebre, dolor de garganta, dolor de oído u otra enfermedad.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260902T182033Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f6b7ae1d-ba89-4be3-a28d-4aa0bd73ebdf"
+    - ID: "8f9fc998-74e8-450e-9e22-a1883bc3cf28"
+      Hint: VisitKey
+      Value: "visita-por-enfermedad"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T163030Z
+    - ID: "e4f064f2-f59b-4e15-abf2-11a998810fdf"
+      Hint: VisitTitle
+      Value: Visita por enfermedad
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0460e082-9902-4a2e-9c72-c618bc1f77c4"
+      Hint: VisitDescription
+      Value: Votre enfant est malade. Par exemple, il a un rhume, de la fièvre, mal à la gorge, mal à l’oreille ou une autre maladie.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260902T182033Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5e6132de-8781-4da6-8098-ef2c34539f08"
+    - ID: "8f9fc998-74e8-450e-9e22-a1883bc3cf28"
+      Hint: VisitKey
+      Value: "sick-visit"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201640Z
+    - ID: "e4f064f2-f59b-4e15-abf2-11a998810fdf"
+      Hint: VisitTitle
+      Value: Consultation pour maladie

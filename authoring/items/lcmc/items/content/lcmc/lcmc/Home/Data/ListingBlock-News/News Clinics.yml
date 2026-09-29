@@ -1,0 +1,245 @@
+﻿---
+ID: "3d291da5-4970-4fe4-a3d5-0356072353f8"
+Parent: "9e825574-f15d-45b1-ad50-29be168cc52b"
+Template: "13c565fe-09c3-4994-8b5a-580da061be0c"
+Path: "/sitecore/content/lcmc/lcmc/Home/Data/ListingBlock-News/News Clinics"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0bed7c19-045c-4702-8f2e-4ba6219951a7"
+      Hint: ItemSummary
+      Value: <p>New neighborhood clinics bring primary care closer to families across Greater New Orleans.</p>
+    - ID: "18691602-fac5-4db1-b600-f2c00b31cc1e"
+      Hint: ItemTitle
+      Value: LCMC Health expands community clinics
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T020111Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "67c74492-4daf-40dc-bcb9-7bb8ef6cb8c5"
+      Hint: ItemImage
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/75af69d03e1344598e9ffd2bc3e9f9f0?v=0b567455" dam-id="pICLwq0RQP66-X2vJ4M7ug" width="1440" height="960" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/85452/thumbnail" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a65d5e29-4603-4ecf-910f-3e16f8957462"
+    - ID: "b940d47f-05d1-404d-844e-c3eb1146c521"
+      Hint: ItemDate
+      Value: August 12, 2026
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T161537Z
+    - ID: "da6bd2f3-3f33-4807-aabe-81732653d5ca"
+      Hint: ItemLink
+      Value: |
+        <link text="Read the full story" anchor="" linktype="external" class="" title="" target="" querystring="" url="https://www.lcmchealth.org/news/" />
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0bed7c19-045c-4702-8f2e-4ba6219951a7"
+      Hint: ItemSummary
+      Value: <p>Las nuevas clínicas de barrio acercan la atención primaria a las familias de toda el área metropolitana de Nueva Orleans.</p>
+    - ID: "18691602-fac5-4db1-b600-f2c00b31cc1e"
+      Hint: ItemTitle
+      Value: LCMC Health expande clínicas comunitarias
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T020111Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "67c74492-4daf-40dc-bcb9-7bb8ef6cb8c5"
+      Hint: ItemImage
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/75af69d03e1344598e9ffd2bc3e9f9f0?v=0b567455" dam-id="pICLwq0RQP66-X2vJ4M7ug" width="1440" height="960" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/85452/thumbnail" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5d47f17e-eb2d-4929-8da8-e493f51816c5"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "b940d47f-05d1-404d-844e-c3eb1146c521"
+      Hint: ItemDate
+      Value: 12 de agosto de 2026
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T162842Z
+    - ID: "da6bd2f3-3f33-4807-aabe-81732653d5ca"
+      Hint: ItemLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="Leer historia" url="https://www.lcmchealth.org/news/" />
+  - Version: 2
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0bed7c19-045c-4702-8f2e-4ba6219951a7"
+      Hint: ItemSummary
+      Value: <p>Nuevas clínicas de barrio acercan la atención primaria a las familias de toda el área metropolitana de Nueva Orleans.</p>
+    - ID: "18691602-fac5-4db1-b600-f2c00b31cc1e"
+      Hint: ItemTitle
+      Value: LCMC Health amplía clínicas comunitarias
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260909T232005Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "67c74492-4daf-40dc-bcb9-7bb8ef6cb8c5"
+      Hint: ItemImage
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/75af69d03e1344598e9ffd2bc3e9f9f0?v=0b567455" dam-id="pICLwq0RQP66-X2vJ4M7ug" width="1440" height="960" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/85452/thumbnail" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "7f5bd741-ea77-486d-b8d2-f9ae2aac627d"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "b940d47f-05d1-404d-844e-c3eb1146c521"
+      Hint: ItemDate
+      Value: 12 de agosto de 2026
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260909T232005Z
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T232010Z
+    - ID: "da6bd2f3-3f33-4807-aabe-81732653d5ca"
+      Hint: ItemLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="Leer la historia" url="https://www.lcmchealth.org/news/" />
+  - Version: 3
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0bed7c19-045c-4702-8f2e-4ba6219951a7"
+      Hint: ItemSummary
+      Value: <p>Las nuevas clínicas de barrio acercan la atención primaria a las familias de toda el área metropolitana de Nueva Orleans.</p>
+    - ID: "18691602-fac5-4db1-b600-f2c00b31cc1e"
+      Hint: ItemTitle
+      Value: LCMC Health amplía las clínicas comunitarias
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T020111Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "67c74492-4daf-40dc-bcb9-7bb8ef6cb8c5"
+      Hint: ItemImage
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/75af69d03e1344598e9ffd2bc3e9f9f0?v=0b567455" dam-id="pICLwq0RQP66-X2vJ4M7ug" width="1440" height="960" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/85452/thumbnail" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "9d8efa3d-e202-444c-9c31-2c2fbd07170e"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "b940d47f-05d1-404d-844e-c3eb1146c521"
+      Hint: ItemDate
+      Value: 12 de agosto de 2026
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T234808Z
+    - ID: "da6bd2f3-3f33-4807-aabe-81732653d5ca"
+      Hint: ItemLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="Leer la historia" url="https://www.lcmchealth.org/news/" />
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0bed7c19-045c-4702-8f2e-4ba6219951a7"
+      Hint: ItemSummary
+      Value: <p>De nouvelles cliniques de quartier rapprochent les soins de première ligne des familles du Grand New Orleans.</p>
+    - ID: "18691602-fac5-4db1-b600-f2c00b31cc1e"
+      Hint: ItemTitle
+      Value: LCMC Health élargit l’accès aux cliniques communautaires
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T020111Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "67c74492-4daf-40dc-bcb9-7bb8ef6cb8c5"
+      Hint: ItemImage
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/75af69d03e1344598e9ffd2bc3e9f9f0?v=0b567455" dam-id="pICLwq0RQP66-X2vJ4M7ug" width="1440" height="960" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/85452/thumbnail" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "9f3430c6-997e-428f-b7be-ce6bb8c0daa6"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "b940d47f-05d1-404d-844e-c3eb1146c521"
+      Hint: ItemDate
+      Value: 12 août 2026
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201434Z
+    - ID: "da6bd2f3-3f33-4807-aabe-81732653d5ca"
+      Hint: ItemLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="Lire l’article complet" url="https://www.lcmchealth.org/news/" />

@@ -1,0 +1,49 @@
+﻿---
+ID: "70ab51d4-18e3-406e-b162-5a4823362bea"
+Parent: "e543f358-afac-453d-94c9-27e8cbc145a8"
+Template: "dfed4457-d760-457a-bec1-c0dccdc44381"
+Path: /sitecore/content/rockland/rockland/Data/Promos/Loan divider Content
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "1f66862d-a5e3-405f-8e3e-b787b4c39b12"
+      Hint: PromoText2
+      Value: 
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260804T114520Z
+    - ID: "28079f3a-896b-4273-be5f-59d0ebb7cd7d"
+      Hint: PromoText
+      Value: |
+        <div class="ck-content"><h5>Home Equity Line of Credit<br />featured</h5><h5>6.240% APR</h5></div>
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "76d8cc77-6943-42aa-a9d8-d7748557f320"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "c6e604c3-5371-4e67-83df-a09a5ea66249"
+      Hint: PromoText3
+      Value: |
+        <div class="ck-content"><p>Featured Rate</p></div>
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260804T145300Z
+    - ID: "f94b9858-c439-4291-863b-757b536c8b65"
+      Hint: PromoIcon
+      Value: |
+        <Image src="https://mrfbasech.sitecoresandbox.cloud/api/public/content/95566-HomepagePromoCTAs-1100x740?v=577cf824" dam-id="2rWtiptYRZKh1fEW3eKsaw" width="1100" height="740" dam-content-type="Image" thumbnailsrc="https://mrfbasech.sitecoresandbox.cloud/api/gateway/95566/thumbnail" />

@@ -1,0 +1,201 @@
+﻿---
+ID: "29f43e74-d4eb-414e-a4ca-093c0a994526"
+Parent: "eea0ed34-3690-4aa3-a74a-8dde71f19632"
+Template: "d77937ac-bae4-4eb0-8d7e-69ec09d5bbfc"
+Path: /sitecore/content/lcmc/lcmc/Home/Our Services/Neuroscience Institute at LCMC Health/Caregiver Resources
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{670F2697-55CD-4AB0-8409-073EE4D5B613}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "24f707b7-8351-45c2-a820-4b1b23118783"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Find practical information for caregivers supporting someone with a neurological condition.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T014026Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Caregiver Resources
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: 
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Guidance and support for caregivers.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Support for families and care partners
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Caregiver Resources
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Caregiver Resources | LCMC Health
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f96c0940-d3eb-4270-aa23-0bf267277892"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Resources for caregivers of stroke survivors.
+    - ID: "9d32260e-215d-4eff-80de-6d469daadbc4"
+      Hint: image
+      Value: |
+        <image src="https://www.lcmchealth.org/assets/LCMC-Social-Share.jpg" alt="Caregiver Resources" />
+    - ID: "a8a1dfcb-7dd5-4413-8789-db24a95e439f"
+      Hint: Detail
+      Value: <h2>Caregiver resources</h2><p>Caregivers play an important role for people living with neurological conditions and navigating treatment.</p><p>LCMC Health connects families with information that can help them prepare, communicate with care teams, and support a loved one through changing needs.</p>
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Caregiver Resources
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260825T121215Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Caregiver Resources
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Encuentre información práctica para cuidadores que apoyan a alguien con una afección neurológica.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T014026Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Recursos para cuidadores
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: 
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Orientación y apoyo para cuidadores.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Apoyo para familias y compañeros de cuidado
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Recursos para cuidadores
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Recursos para cuidadores | LCMC Health
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "00b4b284-9e57-4da2-9d5d-a7dbca385e11"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Recursos para cuidadores de sobrevivientes de accidentes cerebrovasculares.
+    - ID: "9d32260e-215d-4eff-80de-6d469daadbc4"
+      Hint: image
+      Value: |
+        <image alt="Recursos para cuidadores" src="https://www.lcmchealth.org/assets/LCMC-Social-Share.jpg" />
+    - ID: "a8a1dfcb-7dd5-4413-8789-db24a95e439f"
+      Hint: Detail
+      Value: <h2>Recursos para cuidadores</h2><p>Los cuidadores desempeñan un papel importante para las personas que viven con afecciones neurológicas y en la navegación del tratamiento.</p><p>LCMC Health conecta a las familias con información que puede ayudarles a prepararse, comunicarse con los equipos de atención y apoyar a un ser querido a través de necesidades cambiantes.</p>
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Recursos para cuidadores
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T162930Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Recursos para cuidadores
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Trouvez des renseignements pratiques pour les proches aidants qui soutiennent une personne atteinte d’un trouble neurologique.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T014026Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Ressources pour les proches aidants
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: 
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Conseils et soutien pour les proches aidants.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Soutien pour les familles et les proches aidants
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Ressources pour les proches aidants
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Ressources pour les proches aidants | LCMC Health
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5bb66cc5-b720-486e-b93a-0d4a7423eb94"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Ressources pour les proches aidants de survivants d’un AVC.
+    - ID: "9d32260e-215d-4eff-80de-6d469daadbc4"
+      Hint: image
+      Value: |
+        <image alt="Ressources pour les proches aidants" src="https://www.lcmchealth.org/assets/LCMC-Social-Share.jpg" />
+    - ID: "a8a1dfcb-7dd5-4413-8789-db24a95e439f"
+      Hint: Detail
+      Value: <h2>Ressources pour les proches aidants</h2><p>Les proches aidants jouent un rôle important auprès des personnes vivant avec des troubles neurologiques et suivant un traitement.</p><p>LCMC Health met les familles en contact avec des renseignements utiles pour les aider à se préparer, à communiquer avec les équipes de soins et à soutenir un être cher à mesure que ses besoins changent.</p>
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Ressources pour les proches aidants
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201533Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Ressources pour les proches aidants

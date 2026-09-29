@@ -1,0 +1,204 @@
+﻿---
+ID: "56886cd0-df8d-4c4a-bb8c-c34fda9fd7ce"
+Parent: "7a74408e-b1f1-4b41-b189-c80d340cf88c"
+Template: "d77937ac-bae4-4eb0-8d7e-69ec09d5bbfc"
+Path: /sitecore/content/lcmc/lcmc/Home/About Us/Community Involvement
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{CABB5B2D-B6A8-476E-9DF1-CC37641B0EA5}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "28051339-c3b0-4840-86de-8c5293716353"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Explore LCMC Health partnerships and events supporting wellness across greater New Orleans.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T013723Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Community Involvement
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: 
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Healthcare with heart in New Orleans neighborhoods.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Rooted in New Orleans communities
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Community Involvement
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Community Involvement | LCMC Health
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "51eabef9-6abc-4c5f-a31c-6c44aa5e3865"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: See how LCMC Health participates in the New Orleans community.
+    - ID: "9d32260e-215d-4eff-80de-6d469daadbc4"
+      Hint: image
+      Value: |
+        <image src="https://www.lcmchealth.org/assets/LCMC-Social-Share.jpg" alt="Community involvement" />
+    - ID: "a8a1dfcb-7dd5-4413-8789-db24a95e439f"
+      Hint: Detail
+      Value: |
+        <h2>Community involvement</h2><p>LCMC Health provides healthcare with heart in neighborhoods throughout the greater New Orleans area.</p><p>The health system also takes part in cultural celebrations, partnerships, and local events that support wellness and reflect the character of the communities it serves.</p><p><a href="https://www.lcmchealth.org/about-us/community-involvement/">See LCMC Health in the community</a></p>
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Community Involvement
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260825T120947Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Community Involvement
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Explore las alianzas y eventos de LCMC Health que apoyan el bienestar en toda el área metropolitana de Nueva Orleans.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T013723Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Participación comunitaria
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: 
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Atención médica con corazón en los vecindarios de Nueva Orleans.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Con raíces en las comunidades de Nueva Orleans
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Participación comunitaria
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Participación comunitaria | LCMC Health
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "e80428d9-7579-4ed3-aed2-e19441766b0a"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Vea cómo LCMC Health participa en la comunidad de Nueva Orleans.
+    - ID: "9d32260e-215d-4eff-80de-6d469daadbc4"
+      Hint: image
+      Value: |
+        <image alt="Participación comunitaria" src="https://www.lcmchealth.org/assets/LCMC-Social-Share.jpg" />
+    - ID: "a8a1dfcb-7dd5-4413-8789-db24a95e439f"
+      Hint: Detail
+      Value: |
+        <h2>Participación comunitaria</h2><p>LCMC Health brinda atención médica con corazón en los vecindarios de toda el área metropolitana de Nueva Orleans.</p><p>El sistema de salud también participa en celebraciones culturales, alianzas y eventos locales que promueven el bienestar y reflejan el carácter de las comunidades a las que sirve.</p><p><a href="https://www.lcmchealth.org/about-us/community-involvement/">Vea a LCMC Health en la comunidad</a></p>
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Participación comunitaria
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T162443Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Participación comunitaria
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: "Découvrez les partenariats et événements de LCMC Health qui soutiennent le mieux-être dans la grande région de La Nouvelle-Orléans."
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T013723Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Engagement communautaire
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: 
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: "Des soins de santé empreints de cœur dans les quartiers de La Nouvelle-Orléans."
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: "Enraciné dans les communautés de La Nouvelle-Orléans"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Engagement communautaire
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Engagement communautaire | LCMC Health
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "87ad1dc4-d847-450b-aef7-abbacf6616f1"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: "Découvrez comment LCMC Health participe à la communauté de La Nouvelle-Orléans."
+    - ID: "9d32260e-215d-4eff-80de-6d469daadbc4"
+      Hint: image
+      Value: |
+        <image alt="Engagement communautaire" src="https://www.lcmchealth.org/assets/LCMC-Social-Share.jpg" />
+    - ID: "a8a1dfcb-7dd5-4413-8789-db24a95e439f"
+      Hint: Detail
+      Value: |
+        <h2>Engagement communautaire</h2><p>LCMC Health offre des soins de santé empreints de cœur dans les quartiers de la grande région de La Nouvelle-Orléans.</p><p>Le système de santé participe aussi à des célébrations culturelles, à des partenariats et à des événements locaux qui soutiennent le mieux-être et reflètent le caractère des communautés qu’il sert.</p><p><a href="https://www.lcmchealth.org/about-us/community-involvement/">Découvrez LCMC Health dans la communauté</a></p>
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Engagement communautaire
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201120Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Engagement communautaire

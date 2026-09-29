@@ -1,0 +1,148 @@
+﻿---
+ID: "74789e69-47d3-463d-aeac-cea3f20a5647"
+Parent: "13c422fb-8991-4468-b996-be73a904c23e"
+Template: "dd974469-0ef7-479d-8e2b-f61c09e0c4db"
+Path: /sitecore/content/lcmc/lcmc/Data/Physicians/Tanya Ricard MD
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1499b7e7-bfd9-4192-bf06-67bf1a9fd65f"
+      Hint: PhysicianDetailPage
+      Value: "{32E5DA95-CEF8-4FD8-B31C-58C21E5077B1}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T003741Z
+    - ID: "3c71e7a2-30b6-4199-847b-808de57253ff"
+      Hint: PhysicianBio
+      Value: "<p>Dr. Ricard sees walk-in patients at Marrero Urgent Care and connects Westbank families with West Jefferson when follow-up is needed.</p>"
+    - ID: "53091afb-0d3f-4b5b-a945-9555d8cf59d7"
+      Hint: PhysicianPhone
+      Value: "504-301-2825"
+    - ID: "66ea9126-0717-40dc-9bbf-0e726397ef3d"
+      Hint: ServingLocations
+      Value: "{EBC36A98-6CF2-477A-827A-7BEFEB2FE5A8}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "427a0dd7-b5fa-41ba-9d78-6917f223941d"
+    - ID: "994c5b31-453a-473a-bbe9-dc87f28ce361"
+      Hint: LanguagesSpoken
+      Value: English, Spanish
+    - ID: "ba01a187-99bb-480e-bac0-225160cec41d"
+      Hint: PhysicianFullName
+      Value: Tanya Ricard
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d4c17411-0fcd-44a2-af62-a97801b89b46"
+      Hint: Specialty
+      Value: Urgent Care
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T121401Z
+    - ID: "e633a16f-0854-4684-b841-b4742c322099"
+      Hint: Credentials
+      Value: MD
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1499b7e7-bfd9-4192-bf06-67bf1a9fd65f"
+      Hint: PhysicianDetailPage
+      Value: "{32E5DA95-CEF8-4FD8-B31C-58C21E5077B1}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T003741Z
+    - ID: "3c71e7a2-30b6-4199-847b-808de57253ff"
+      Hint: PhysicianBio
+      Value: <p>La Dra. Ricard atiende pacientes sin cita previa en Marrero Urgent Care y conecta a las familias de Westbank con West Jefferson cuando se necesita seguimiento.</p>
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "53091afb-0d3f-4b5b-a945-9555d8cf59d7"
+      Hint: PhysicianPhone
+      Value: "504-301-2825"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "66ea9126-0717-40dc-9bbf-0e726397ef3d"
+      Hint: ServingLocations
+      Value: "{EBC36A98-6CF2-477A-827A-7BEFEB2FE5A8}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2f28a46a-dc13-428f-99e6-92bc0fc642ce"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "ba01a187-99bb-480e-bac0-225160cec41d"
+      Hint: PhysicianFullName
+      Value: Tanya Ricard
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d4c17411-0fcd-44a2-af62-a97801b89b46"
+      Hint: Specialty
+      Value: Atención de urgencias
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T162722Z
+    - ID: "e633a16f-0854-4684-b841-b4742c322099"
+      Hint: Credentials
+      Value: MD
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1499b7e7-bfd9-4192-bf06-67bf1a9fd65f"
+      Hint: PhysicianDetailPage
+      Value: "{32E5DA95-CEF8-4FD8-B31C-58C21E5077B1}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T003741Z
+    - ID: "3c71e7a2-30b6-4199-847b-808de57253ff"
+      Hint: PhysicianBio
+      Value: "<p>La Dr Ricard reçoit les patients sans rendez-vous au centre de soins urgents de Marrero et aide les familles de la rive ouest à obtenir un suivi à West Jefferson au besoin.</p>"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "53091afb-0d3f-4b5b-a945-9555d8cf59d7"
+      Hint: PhysicianPhone
+      Value: "504-301-2825"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "66ea9126-0717-40dc-9bbf-0e726397ef3d"
+      Hint: ServingLocations
+      Value: "{EBC36A98-6CF2-477A-827A-7BEFEB2FE5A8}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "338ded46-fd70-475e-ae1d-72ca4f4108ce"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "994c5b31-453a-473a-bbe9-dc87f28ce361"
+      Hint: LanguagesSpoken
+      Value: anglais, espagnol
+    - ID: "ba01a187-99bb-480e-bac0-225160cec41d"
+      Hint: PhysicianFullName
+      Value: Tanya Ricard
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d4c17411-0fcd-44a2-af62-a97801b89b46"
+      Hint: Specialty
+      Value: Soins urgents
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201345Z
+    - ID: "e633a16f-0854-4684-b841-b4742c322099"
+      Hint: Credentials
+      Value: M.D.

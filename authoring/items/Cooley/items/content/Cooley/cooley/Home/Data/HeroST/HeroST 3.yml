@@ -1,0 +1,66 @@
+﻿---
+ID: "2533f691-7c66-49c1-8055-f92b623c9fcd"
+Parent: "8ff930cf-347c-4ba1-aa2b-ae464d8e7a9b"
+Template: "c241957a-b7cc-4bdd-962f-bf8652ed595c"
+Path: /sitecore/content/Cooley/cooley/Home/Data/HeroST/HeroST 3
+BranchID: "890b7b74-9fac-4848-a3a6-ac14313f0684"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "9a8519a3-61c0-472b-9baf-4d8896451946"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{4FA6301D-27B2-47D8-9E36-08DC4D4CC627}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260814T195638Z
+    - ID: "2d9c3674-1ac3-4f41-9806-1cd1d57b1a8f"
+      Hint: Link2
+      Value: 
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "65a20063-e768-4f8f-9f12-3197e3b500ef"
+      Hint: Image1
+      Value: |
+        <image mediaid="e5cb88ec-3bd1-4efa-ba83-919e75106a26" />
+    - ID: "83ea62a2-9b61-481e-9917-0914be85f124"
+      Hint: Title
+      Value: "ATL TRAP SOUNDS: CITY SERIES"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b8a5edf6-d0b4-48de-a6f1-fd41f612789b"
+    - ID: "a580050c-e1c7-4d49-a8ad-4862efbc43d5"
+      Hint: Link1
+      Value: |
+        <link text="Criminal Records x Sync details" linktype="external" url="/Speakers" anchor="" target="" />
+    - ID: "b0d63558-b173-45c0-8169-d2b89270f939"
+      Hint: Eyebrow
+      Value: CRIMINAL RECORDS X SYNC
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260814T195923Z
+    - ID: "ed7e710b-3811-4fcf-a154-836bd33fac65"
+      Hint: Image2
+      Value: |
+        <image mediaid="{875CD263-10C9-4D28-9285-7022A4802CE7}" />

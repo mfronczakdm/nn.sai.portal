@@ -1,0 +1,41 @@
+﻿---
+ID: "279cdf81-5da3-4c0c-804a-ea01a9da78fe"
+Parent: "0b495f06-2b7a-4c80-ba10-57a841b6ddb2"
+Template: "bdf6c974-e68c-46a2-a0a9-d382fd0927eb"
+Path: "/sitecore/content/progressive/pkm/Home/Shared Content/08-RegulatoryAndCompliance/StateSpecific/FL/KB-HO-1002-WindHail-FL"
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{23B23ED8-A8EB-4826-B58C-E9AB2AD2D63F}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "21b8d6f1-4294-46a5-98fd-38df0ce8aae0"
+      Hint: SourceDocumentLOB
+      Value: "{331E5703-41A4-4592-B744-14A83C4CFAAE}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260731T141333Z
+    - ID: "76e0c665-5c4d-4d03-ae66-a5f3d12978ba"
+      Hint: Content
+      Value: "<p>In Florida wind and hail estimating, confirm whether a hurricane or windstorm deductible applies on the Progressive declarations before discussing net payment. Follow Florida matching and cosmetic-damage guidance in the estimate notes so the scope stands up to appraisal or regulatory review.</p>"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "bbf9b32d-f077-4ad5-a0fe-07f7032a8337"
+    - ID: "94ce9d2b-aa0c-488f-943a-d2e582eb50bc"
+      Hint: SourceDocumentPerils
+      Value: "{F27BF167-E841-4254-A84B-2F72EC78167F}"
+    - ID: "a8f6d033-4e9e-4598-be5e-da2456c41b9f"
+      Hint: sourceDocumentLink
+      Value: |
+        <link text="Homeowners Wind and Hail - Storm Damage Handling" linktype="internal" class="" title="" target="" querystring="" id="{02878C46-F3A7-4034-A056-9CEBBF9BCA11}" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\emqWsGLKzRiKgWenEsIKMqdxvXhiQ4cT
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260802T143427Z

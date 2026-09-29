@@ -1,0 +1,186 @@
+﻿---
+ID: "171f0456-7006-49e8-98b8-0f5d77734a50"
+Parent: "50125835-5f4f-47b5-8c27-a512fe0ac68b"
+Template: "8a768ef4-de41-4e4a-b7b4-0d3665ab0407"
+Path: /sitecore/content/lcmc/lcmc/Data/Link Columns Bands/West Jefferson Hospital/West Jefferson
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0679966f-f9bf-4352-909f-a207d9809425"
+      Hint: ItemLink
+      Value: |
+        <link linktype="external" url="https://www.lcmchealth.org/west-jefferson/" text="Emergency Care" anchor="" querystring=""/>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T015844Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8a85f328-4312-42be-8e89-fe9d25e99684"
+      Hint: ItemTitle
+      Value: West Jefferson Medical Center
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "30a46dae-d2c1-4ba0-8881-8fc8a8308c6c"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T101852Z
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0679966f-f9bf-4352-909f-a207d9809425"
+      Hint: ItemLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="Centro Médico West Jefferson" url="https://www.lcmchealth.org/west-jefferson/" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T015844Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8a85f328-4312-42be-8e89-fe9d25e99684"
+      Hint: ItemTitle
+      Value: Centro Médico West Jefferson
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "093cf402-e038-4a68-916d-2fc2c9432e77"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T163030Z
+  - Version: 2
+    Fields:
+    - ID: "0679966f-f9bf-4352-909f-a207d9809425"
+      Hint: ItemLink
+      Value: |
+        <link text="West Jefferson Medical Center" anchor="" linktype="external" class="" title="" target="" querystring="" url="https://www.lcmchealth.org/west-jefferson/" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260909T232003Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8a85f328-4312-42be-8e89-fe9d25e99684"
+      Hint: ItemTitle
+      Value: West Jefferson Medical Center
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "bf0d86b5-e901-4794-b26a-e806f2a5183c"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260909T232003Z
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T232009Z
+  - Version: 3
+    Fields:
+    - ID: "0679966f-f9bf-4352-909f-a207d9809425"
+      Hint: ItemLink
+      Value: |
+        <link text="West Jefferson Medical Center" anchor="" linktype="external" class="" title="" target="" querystring="" url="https://www.lcmchealth.org/west-jefferson/" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T015844Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8a85f328-4312-42be-8e89-fe9d25e99684"
+      Hint: ItemTitle
+      Value: West Jefferson Medical Center
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "25a02d6f-41a9-43f3-ba10-8fa4d4b5abfa"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T234808Z
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0679966f-f9bf-4352-909f-a207d9809425"
+      Hint: ItemLink
+      Value: |
+        <link querystring="" anchor="" linktype="external" text="Soins d’urgence" url="https://www.lcmchealth.org/west-jefferson/" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T015844Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8a85f328-4312-42be-8e89-fe9d25e99684"
+      Hint: ItemTitle
+      Value: West Jefferson Medical Center
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a0da4734-ff55-4107-a4a1-a62f06f339ab"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201646Z

@@ -1,0 +1,78 @@
+﻿---
+ID: "6bf07061-15f8-4009-97c6-060ff3520f48"
+Parent: "25cf32e0-c2d1-4e72-8cb9-fdeb000be0d7"
+Template: "25cf32e0-c2d1-4e72-8cb9-fdeb000be0d7"
+Path: /sitecore/templates/Project/Cooley/Services Page/__Standard Values
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Applications/32x32/window_edit.png
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {45C500E0-48FA-42EA-8C7F-23D18EE7952E}
+    {1EE81A42-1B9B-4E7C-809F-73C3636F013E}
+    {5BCFB465-F3E9-438E-8A77-A767044F8945}
+    {871410F7-3175-4B51-B256-8B3A9C417D28}
+    {D20EC93A-E60B-4E98-9716-06AE6B71923C}
+    {DF2F80C3-1BEA-41D0-AF8E-8A2890EF9597}
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "b3e62f10-edbd-4401-91c6-da74580935be"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{A11F36A8-78B9-4240-A79B-90729118D22B}"
+              p:before="*"
+              s:ds=""
+              s:id="{B1136CF1-94BE-468C-B78D-9BE212AF5428}"
+              s:par="GridParameters&amp;FieldNames=%7BB3E74B84-A755-4AFD-94F8-2779E44DF1AD%7D&amp;Dark Imge&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Summary Description
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260509T145825Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Short Title
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Subtitle
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: $name
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "7476986e-4f78-4abd-89c7-012fe4ee73d6"
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Header Title
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260814T203703Z

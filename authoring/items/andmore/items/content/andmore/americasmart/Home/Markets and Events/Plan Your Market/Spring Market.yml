@@ -1,0 +1,204 @@
+﻿---
+ID: "30908533-8d5a-4012-bf24-0d0b4bd2e3bb"
+Parent: "86682b20-b1c6-49ee-b062-efa64ea70320"
+Template: "69728677-52e5-4482-a415-94f0222799b8"
+Path: /sitecore/content/andmore/americasmart/Home/Markets and Events/Plan Your Market/Spring Market
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{6D2E6A63-A060-4E6B-9433-36D15E7D4BA7}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "453e176f-8ff7-45be-9f46-6924fb227757"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "18ab03d1-c9ae-4f00-815d-220fcb2d80e5"
+      Hint: image
+      Value: |
+        <image src="https://www.americasmart.com/-/jssmedia/AmericasMart/Events/Events.png?h=523&amp;iar=0&amp;w=1300&amp;hash=BB996327CDF731A0656AF36C48EE9DC3" alt="Spring Market at AmericasMart" />
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Spring Market offers hundreds of permanent showrooms, a more intimate buying pace and access to gift, home and lifestyle products.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T013404Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Spring Market
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: 
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: "A focused mid-season sourcing opportunity at AmericasMart."
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: "A focused mid-season sourcing opportunity at AmericasMart."
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Spring Market
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Spring Market | AmericasMart
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ff8cbd79-93cf-48f5-8396-42a19c6d1cab"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: "Explore Spring Market, a focused mid-season sourcing opportunity at AmericasMart."
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Spring Market
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260825T114828Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Spring Market | AmericasMart
+    - ID: "f79467fb-89e8-478b-8ac7-5b37b53c1c0c"
+      Hint: Detail
+      Value: |
+        <h2>Business Is in Full Bloom</h2><p>Spring Market at AmericasMart is a mid-season sourcing opportunity designed for focused buying and meaningful connections. Explore hundreds of permanent showrooms across Buildings 1, 2 and 3 while finalizing early-year purchasing and seasonal assortments.</p><p><a href="https://www.americasmart.com/Markets/Spring-Market">Explore Spring Market</a></p>
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "18ab03d1-c9ae-4f00-815d-220fcb2d80e5"
+      Hint: image
+      Value: |
+        <image alt="Spring Market en AmericasMart" src="https://www.americasmart.com/-/jssmedia/AmericasMart/Events/Events.png?h=523&amp;iar=0&amp;w=1300&amp;hash=BB996327CDF731A0656AF36C48EE9DC3" />
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Spring Market ofrece cientos de salas de exhibición permanentes, un ritmo de compra más íntimo y acceso a productos de regalo, hogar y estilo de vida.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T013404Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Spring Market
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: 
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Una oportunidad enfocada de abastecimiento de mitad de temporada en AmericasMart.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Una oportunidad enfocada de abastecimiento de mitad de temporada en AmericasMart.
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Spring Market
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Spring Market | AmericasMart
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "62c753aa-b892-45e6-98b6-2ca102659d41"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Explore Spring Market, una oportunidad enfocada de abastecimiento de mitad de temporada en AmericasMart.
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Spring Market
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260904T105302Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Spring Market | AmericasMart
+    - ID: "f79467fb-89e8-478b-8ac7-5b37b53c1c0c"
+      Hint: Detail
+      Value: |
+        <h2>Los negocios están en plena floración</h2><p>Spring Market en AmericasMart es una oportunidad de abastecimiento de mitad de temporada diseñada para compras enfocadas y conexiones significativas. Explore cientos de salas de exhibición permanentes en los edificios 1, 2 y 3 mientras finaliza las compras de inicios de año y los surtidos de temporada.</p><p><a href="https://www.americasmart.com/Markets/Spring-Market">Explorar Spring Market</a></p>
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "18ab03d1-c9ae-4f00-815d-220fcb2d80e5"
+      Hint: image
+      Value: |
+        <image alt="AmericasMartのSpring Market" src="https://www.americasmart.com/-/jssmedia/AmericasMart/Events/Events.png?h=523&amp;iar=0&amp;w=1300&amp;hash=BB996327CDF731A0656AF36C48EE9DC3" />
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Spring Marketでは、数百の常設ショールーム、より親密な買い付けペース、そしてギフト、ホーム、ライフスタイル製品へのアクセスを提供します。
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T013404Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Spring Market
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: 
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: AmericasMartでの、集中的なシーズン中盤の調達機会。
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: AmericasMartでの、集中的なシーズン中盤の調達機会。
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Spring Market
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Spring Market | AmericasMart
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4254cebf-2516-4d15-b3ec-525f94da7075"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: AmericasMartでの集中的なシーズン中盤の調達機会、Spring Marketをご覧ください。
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Spring Market
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260904T105329Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Spring Market | AmericasMart
+    - ID: "f79467fb-89e8-478b-8ac7-5b37b53c1c0c"
+      Hint: Detail
+      Value: |
+        <h2>ビジネスが満開に</h2><p>AmericasMartのSpring Marketは、集中的な買い付けと有意義なつながりのために設計されたシーズン中盤の調達機会です。年間初旬の仕入れや季節商品の品揃えを固めながら、1号館、2号館、3号館にわたる数百の常設ショールームをご覧ください。</p><p><a href="https://www.americasmart.com/Markets/Spring-Market">Spring Marketを見る</a></p>

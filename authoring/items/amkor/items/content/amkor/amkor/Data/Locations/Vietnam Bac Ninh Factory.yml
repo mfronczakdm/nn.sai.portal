@@ -1,0 +1,95 @@
+﻿---
+ID: "c3c9bf4d-dc08-4e5e-a1eb-0d862ebf9731"
+Parent: "f9dc4191-96ba-4e83-b6bc-601af41ed499"
+Template: "0a93f003-2ef3-4a66-9fb6-95c10b95532b"
+Path: /sitecore/content/amkor/amkor/Data/Locations/Vietnam Bac Ninh Factory
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "11022184-1d76-4d54-ba17-6f68d511afae"
+      Hint: Name
+      Value: Vietnam Bac Ninh Factory
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260829T155718Z
+    - ID: "2caca007-a43f-4b62-b8ca-cb48fec72576"
+      Hint: State
+      Value: Vietnam
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "554b1ddd-6a2a-4e0e-b4ba-7898f6c03dc6"
+      Hint: Type
+      Value: Factories
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a063e210-0db2-4a4a-8912-1f6f4851388a"
+    - ID: "9c275841-cbb3-4b7e-81c7-9111a5ce2fdd"
+      Hint: GEO
+      Value: 21.1860,106.0500
+    - ID: "a72e5257-2698-414c-9416-83d2a100665d"
+      Hint: Street Address
+      Value: "Lot No. CN5B Yen Phong II-C Industrial Park"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260829T155718Z
+    - ID: "efe82275-714a-4ee5-ab29-577ceddc29ba"
+      Hint: City
+      Value: Bac Ninh
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "11022184-1d76-4d54-ba17-6f68d511afae"
+      Hint: Name
+      Value: ベトナム・バクニン工場
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260829T155718Z
+    - ID: "2caca007-a43f-4b62-b8ca-cb48fec72576"
+      Hint: State
+      Value: ベトナム
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "554b1ddd-6a2a-4e0e-b4ba-7898f6c03dc6"
+      Hint: Type
+      Value: Factories
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "82aafada-ba8f-4787-8b6f-0bb8d31fc051"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9c275841-cbb3-4b7e-81c7-9111a5ce2fdd"
+      Hint: GEO
+      Value: 21.1860,106.0500
+    - ID: "a72e5257-2698-414c-9416-83d2a100665d"
+      Hint: Street Address
+      Value: "イエンフォンII-C工業団地 CN5B区画"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260831T030244Z
+    - ID: "efe82275-714a-4ee5-ab29-577ceddc29ba"
+      Hint: City
+      Value: バクニン

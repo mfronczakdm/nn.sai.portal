@@ -1,0 +1,51 @@
+﻿---
+ID: "88d43837-24ca-45a7-9171-fead8ae89702"
+Parent: "04d318b2-b62f-4ce1-84a0-0e76ffe702fe"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Project/progressive/VariantContent
+SharedFields:
+- ID: "037fe404-dd19-4bf7-8e30-4dadf68b27b0"
+  Hint: componentName
+  Value: VariantContent
+- ID: "17bb046a-a32a-41b3-8315-81217947611b"
+  Hint: ComponentQuery
+  Value: |
+    query VariantContent($datasource: String!, $language: String!) { datasource: item(path: $datasource, language: $language) { sharedContent: field(name: "sharedContent") { ... on MultilistField { targetItems { id name path content: field(name: "Content") { jsonValue } } } } } }
+- ID: "a77e8568-1ab3-44f1-a664-b7c37ec7810d"
+  Hint: Parameters Template
+  Value: "{4E808F52-2632-4701-A08D-5976E22CCE5A}"
+- ID: "c7b72114-3f04-45a0-ba43-3856a9c9feb3"
+  Hint: FieldEditorFields
+  Value: sharedContent
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "dba22e06-b965-4b88-a92f-37ac36699c53"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260802T150344Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "56e4618a-f3f2-4cb5-b69a-8a45de578902"
+      Hint: Description
+      Value: "Displays Knowledge Article sharedContent (KnowledgeChunks) grouped by Shared Content section folder. Context-only — expands sharedContent Treelist via ComponentQuery."
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "6b9b36e1-3222-4cc6-a900-2cd8ec783551"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260802T150344Z

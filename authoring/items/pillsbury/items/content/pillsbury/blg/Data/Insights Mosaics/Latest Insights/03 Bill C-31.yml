@@ -1,0 +1,50 @@
+﻿---
+ID: "7c8363be-f040-419e-bad3-46ce9abec294"
+Parent: "4b6a0b73-c27a-4fc9-8664-8ef6ad49c9c1"
+Template: "9bc41c3c-113d-412c-a039-e0057f014f78"
+Path: "/sitecore/content/pillsbury/blg/Data/Insights Mosaics/Latest Insights/03 Bill C-31"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{6C59AE29-D0A1-4B77-9305-0ABAB21D5FE5}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "83e18a47-5454-4a64-8845-1f0166361b6d"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "1cad9cac-af51-491d-975e-99d306ee1473"
+      Hint: TileLink
+      Value: |
+        <link text="Bill C-31" linktype="external" url="https://www.blg.com/en/insights/2026/07/bill-c-31-proposes-major-defence-production-act-changes-affecting-canadian-defence-procurement" anchor="" target="" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260822T024059Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{C55B483C-EA7F-4E76-A066-985F7D9396CA}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "887e9b3e-823b-4b5d-824d-10bf72c73394"
+    - ID: "9f685b28-89bc-4df5-a949-45b5b2984e18"
+      Hint: TileImage
+      Value: |
+        <image mediaid="4532b599-0a62-4764-b334-c414a081ab83" />
+    - ID: "b1dff298-c49d-4ca5-9a5d-3ef32d0c6dbf"
+      Hint: TileNumber
+      Value: 03
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260822T130139Z
+    - ID: "f579c2e4-2112-41cb-af38-200169948bb0"
+      Hint: TileTitle
+      Value: "Bill C-31 proposes major Defence Production Act changes affecting Canadian defence procurement"

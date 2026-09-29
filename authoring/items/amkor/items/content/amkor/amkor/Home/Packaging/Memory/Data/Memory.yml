@@ -1,0 +1,230 @@
+﻿---
+ID: "d8a72228-2829-4fd4-9079-c19d6c433837"
+Parent: "10d1604f-39bc-4127-934f-8cc2a7d77bb3"
+Template: "c241957a-b7cc-4bdd-962f-bf8652ed595c"
+Path: /sitecore/content/amkor/amkor/Home/Packaging/Memory/Data/Memory
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "a19867d8-6471-44ab-9cef-feb2c729e448"
+Languages:
+- Language: "ar-EG"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260901T134023Z
+    - ID: "2d9c3674-1ac3-4f41-9806-1cd1d57b1a8f"
+      Hint: Link2
+      Value: |
+        <link anchor="" linktype="external" text="كيفية الطلب" url="https://www.sitecore.com" />
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{12FFAC4C-565F-4C9A-B63E-7F77E96B4D1F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "65a20063-e768-4f8f-9f12-3197e3b500ef"
+      Hint: Image1
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/85600-HomepagePromoCTAs-1100x740?v=7ec493e6" dam-id="1lP-yGS9TNuMH2qBFbiY_g" width="1100" height="740" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/85600/thumbnail" />
+    - ID: "83ea62a2-9b61-481e-9917-0914be85f124"
+      Hint: Title
+      Value: الذاكرة
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5414f551-139f-4e9b-8931-322edcecb1b8"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "a580050c-e1c7-4d49-a8ad-4862efbc43d5"
+      Hint: Link1
+      Value: |
+        <link anchor="" linktype="external" text="اعرف المزيد" url="https://sitecore.ai" />
+    - ID: "b0d63558-b173-45c0-8169-d2b89270f939"
+      Hint: Eyebrow
+      Value: دمج الذاكرة والتخزين في حزمة واحدة  
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260902T144159Z
+    - ID: "ed7e710b-3811-4fcf-a154-836bd33fac65"
+      Hint: Image2
+      Value: |
+        <image mediaid="{713E91F4-9A6A-46BD-AA5E-F8960D15F1C3}" />
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260901T134023Z
+    - ID: "2d9c3674-1ac3-4f41-9806-1cd1d57b1a8f"
+      Hint: Link2
+      Value: |
+        <link linktype="external" url="https://www.sitecore.com" text="How to order" anchor=""/>
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "65a20063-e768-4f8f-9f12-3197e3b500ef"
+      Hint: Image1
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/85600-HomepagePromoCTAs-1100x740?v=7ec493e6" dam-id="1lP-yGS9TNuMH2qBFbiY_g" width="1100" height="740" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/85600/thumbnail" />
+    - ID: "83ea62a2-9b61-481e-9917-0914be85f124"
+      Hint: Title
+      Value: Memory
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4af4fdd0-d18e-4601-b661-7627fbfb8372"
+    - ID: "a580050c-e1c7-4d49-a8ad-4862efbc43d5"
+      Hint: Link1
+      Value: |
+        <link linktype="external" url="https://sitecore.ai" text="Learn More" anchor=""/>
+    - ID: "b0d63558-b173-45c0-8169-d2b89270f939"
+      Hint: Eyebrow
+      Value: Integrating memory and storage in a single package  
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260902T125414Z
+- Language: "ko-KR"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260901T134023Z
+    - ID: "2d9c3674-1ac3-4f41-9806-1cd1d57b1a8f"
+      Hint: Link2
+      Value: |
+        <link anchor="" linktype="external" text="주문 방법" url="https://www.sitecore.com" />
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{12FFAC4C-565F-4C9A-B63E-7F77E96B4D1F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "65a20063-e768-4f8f-9f12-3197e3b500ef"
+      Hint: Image1
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/85600-HomepagePromoCTAs-1100x740?v=7ec493e6" dam-id="1lP-yGS9TNuMH2qBFbiY_g" width="1100" height="740" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/85600/thumbnail" />
+    - ID: "83ea62a2-9b61-481e-9917-0914be85f124"
+      Hint: Title
+      Value: 메모리
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a842ba80-5e82-464e-9e8b-ea0ea45efb39"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "a580050c-e1c7-4d49-a8ad-4862efbc43d5"
+      Hint: Link1
+      Value: |
+        <link anchor="" linktype="external" text="자세히 보기" url="https://sitecore.ai" />
+    - ID: "b0d63558-b173-45c0-8169-d2b89270f939"
+      Hint: Eyebrow
+      Value: 메모리와 스토리지를 단일 패키지에 통합
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260902T144159Z
+    - ID: "ed7e710b-3811-4fcf-a154-836bd33fac65"
+      Hint: Image2
+      Value: |
+        <image mediaid="{713E91F4-9A6A-46BD-AA5E-F8960D15F1C3}" />
+- Language: "zh-CN"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260901T134023Z
+    - ID: "2d9c3674-1ac3-4f41-9806-1cd1d57b1a8f"
+      Hint: Link2
+      Value: |
+        <link anchor="" linktype="external" text="如何订购" url="https://www.sitecore.com" />
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{12FFAC4C-565F-4C9A-B63E-7F77E96B4D1F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "65a20063-e768-4f8f-9f12-3197e3b500ef"
+      Hint: Image1
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/85600-HomepagePromoCTAs-1100x740?v=7ec493e6" dam-id="1lP-yGS9TNuMH2qBFbiY_g" width="1100" height="740" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/85600/thumbnail" />
+    - ID: "83ea62a2-9b61-481e-9917-0914be85f124"
+      Hint: Title
+      Value: 存储器
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "136ae041-8069-416a-b5f6-8fb5c6ba791e"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "a580050c-e1c7-4d49-a8ad-4862efbc43d5"
+      Hint: Link1
+      Value: |
+        <link anchor="" linktype="external" text="了解更多" url="https://sitecore.ai" />
+    - ID: "b0d63558-b173-45c0-8169-d2b89270f939"
+      Hint: Eyebrow
+      Value: 将内存与存储集成于单一封装中  
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260902T144200Z
+    - ID: "ed7e710b-3811-4fcf-a154-836bd33fac65"
+      Hint: Image2
+      Value: |
+        <image mediaid="{713E91F4-9A6A-46BD-AA5E-F8960D15F1C3}" />

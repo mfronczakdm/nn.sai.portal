@@ -1,0 +1,148 @@
+﻿---
+ID: "010e3311-06a7-4904-afd0-202fd565a796"
+Parent: "13c422fb-8991-4468-b996-be73a904c23e"
+Template: "dd974469-0ef7-479d-8e2b-f61c09e0c4db"
+Path: /sitecore/content/lcmc/lcmc/Data/Physicians/Dominic Lirette MD
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1499b7e7-bfd9-4192-bf06-67bf1a9fd65f"
+      Hint: PhysicianDetailPage
+      Value: "{B31263CB-7374-46AF-A728-B474AA98388D}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260909T000748Z
+    - ID: "3c71e7a2-30b6-4199-847b-808de57253ff"
+      Hint: PhysicianBio
+      Value: "<p>Dr. Lirette is a board-certified ENT surgeon at West Jefferson Medical Center, focusing on sinus, hearing, and throat care for Marrero and Westbank families.</p>"
+    - ID: "53091afb-0d3f-4b5b-a945-9555d8cf59d7"
+      Hint: PhysicianPhone
+      Value: "504-503-4000"
+    - ID: "66ea9126-0717-40dc-9bbf-0e726397ef3d"
+      Hint: ServingLocations
+      Value: "{35C77454-5FB8-460D-BC12-299F7B31DE5A}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "10fc6a48-c22a-4a27-8b0e-cf6fa61fcd63"
+    - ID: "994c5b31-453a-473a-bbe9-dc87f28ce361"
+      Hint: LanguagesSpoken
+      Value: English, Spanish, French
+    - ID: "ba01a187-99bb-480e-bac0-225160cec41d"
+      Hint: PhysicianFullName
+      Value: Dominic Lirette
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d4c17411-0fcd-44a2-af62-a97801b89b46"
+      Hint: Specialty
+      Value: ENT
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T195008Z
+    - ID: "e633a16f-0854-4684-b841-b4742c322099"
+      Hint: Credentials
+      Value: MD
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1499b7e7-bfd9-4192-bf06-67bf1a9fd65f"
+      Hint: PhysicianDetailPage
+      Value: "{B31263CB-7374-46AF-A728-B474AA98388D}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260909T000748Z
+    - ID: "3c71e7a2-30b6-4199-847b-808de57253ff"
+      Hint: PhysicianBio
+      Value: <p>El Dr. Lirette es un cirujano otorrinolaringólogo certificado por la junta en West Jefferson Medical Center, enfocado en la atención de senos paranasales, audición y garganta para las familias de Marrero y Westbank.</p>
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "53091afb-0d3f-4b5b-a945-9555d8cf59d7"
+      Hint: PhysicianPhone
+      Value: "504-349-6420"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "66ea9126-0717-40dc-9bbf-0e726397ef3d"
+      Hint: ServingLocations
+      Value: "{35C77454-5FB8-460D-BC12-299F7B31DE5A}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d5786de1-d3a1-4ba6-89c5-aec51e6a0e0c"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "ba01a187-99bb-480e-bac0-225160cec41d"
+      Hint: PhysicianFullName
+      Value: Dominic Lirette
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d4c17411-0fcd-44a2-af62-a97801b89b46"
+      Hint: Specialty
+      Value: Otorrinolaringología
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T162710Z
+    - ID: "e633a16f-0854-4684-b841-b4742c322099"
+      Hint: Credentials
+      Value: Médico
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1499b7e7-bfd9-4192-bf06-67bf1a9fd65f"
+      Hint: PhysicianDetailPage
+      Value: "{B31263CB-7374-46AF-A728-B474AA98388D}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260909T000748Z
+    - ID: "3c71e7a2-30b6-4199-847b-808de57253ff"
+      Hint: PhysicianBio
+      Value: "<p>Le Dr Lirette est un chirurgien ORL certifié par le conseil d’administration au West Jefferson Medical Center. Il se consacre aux soins des sinus, de l’audition et de la gorge pour les familles de Marrero et de la Rive-Ouest.</p>"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "53091afb-0d3f-4b5b-a945-9555d8cf59d7"
+      Hint: PhysicianPhone
+      Value: "504-503-4000"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "66ea9126-0717-40dc-9bbf-0e726397ef3d"
+      Hint: ServingLocations
+      Value: "{35C77454-5FB8-460D-BC12-299F7B31DE5A}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "7d1281f7-3b62-4199-88c3-3c9e5a0b9bfd"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "994c5b31-453a-473a-bbe9-dc87f28ce361"
+      Hint: LanguagesSpoken
+      Value: Anglais, espagnol, français
+    - ID: "ba01a187-99bb-480e-bac0-225160cec41d"
+      Hint: PhysicianFullName
+      Value: Dominic Lirette
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d4c17411-0fcd-44a2-af62-a97801b89b46"
+      Hint: Specialty
+      Value: ORL
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201338Z
+    - ID: "e633a16f-0854-4684-b841-b4742c322099"
+      Hint: Credentials
+      Value: M.D.

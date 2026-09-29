@@ -1,0 +1,213 @@
+﻿---
+ID: "f4f4b8b7-38c9-4990-9934-9a55a96cc425"
+Parent: "6f39ec02-daa7-4fed-9e65-e31a9daf37f1"
+Template: "b2b918c3-acda-433f-a11b-718466493aec"
+Path: /sitecore/content/amkor/amkor/Home/About Us/Careers/Korea
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{C7F7CF04-56CC-401A-9272-8E396698E6B8}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "a31b9df5-82ce-4170-99e3-17aa070e4e82"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Explore careers at Amkor Korea, home to advanced package and test services and Amkor's R&D Center.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T013314Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Korea
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{FCA998C5-0CC3-4F91-94D8-0A4E6CAECE88}"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Explore semiconductor careers with Amkor Technology in Korea.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: R&D, engineering and technology careers with Amkor Korea.
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Careers – Korea
+    - ID: "75eee468-e1a7-4c63-a2d3-43a4956cf1dc"
+      Hint: image
+      Value: |
+        <image src="https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg" alt="Amkor careers in Korea" />
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Amkor Careers – Korea
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "94bf887c-10d9-42ce-8777-0f906871f734"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Explore semiconductor careers with Amkor Technology in Korea.
+    - ID: "9c0f3bfa-27d9-4c2f-b589-6f67beaf207b"
+      Hint: Detail
+      Value: |
+        <h2>Careers – Korea</h2><p>Amkor Technology Korea provides advanced package and test services and is home to Amkor's R&amp;D Center.</p><p><a href="https://amkor.com/careers/korea/">Explore careers in Korea</a></p>
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Careers – Korea
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260829T204908Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Amkor Careers – Korea
+  - Version: 2
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+            l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
+            <r
+              uid="{1A2B3C4D-0107-4000-8000-000000000107}"
+              s:ds=""
+              s:id="{B1136CF1-94BE-468C-B78D-9BE212AF5428}"
+              s:par="DynamicPlaceholderId=1&amp;FieldNames=%7bAA41D913-0CFD-44C6-92E7-52C3D1D99599%7d"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Explore careers at Amkor Korea, home to advanced package and test services and Amkor's R&D Center.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260831T133854Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Korea
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Explore semiconductor careers with Amkor Technology in Korea.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: R&D, engineering and technology careers with Amkor Korea.
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Careers – Korea
+    - ID: "75eee468-e1a7-4c63-a2d3-43a4956cf1dc"
+      Hint: image
+      Value: |
+        <image src="https://images.unsplash.com/photo-1506816561089-5cc37b3aa9b0?w=1200&amp;q=80" alt="Seoul skyline, South Korea" />
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Amkor Careers – Korea
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "68493aaa-2469-45fa-bf60-7a7aab84a0bc"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Explore semiconductor careers with Amkor Technology in Korea.
+    - ID: "9c0f3bfa-27d9-4c2f-b589-6f67beaf207b"
+      Hint: Detail
+      Value: |
+        <h2>Careers – Korea</h2><p>Amkor Technology Korea provides advanced package and test services and is home to Amkor's R&amp;D Center.</p><p><a href="https://amkor.com/careers/korea/">Explore careers in Korea</a></p>
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Careers – Korea
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\WIt5EKonMo343Fqq8begbLVKlCgYPAIX
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260831T133854Z
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260831T211953Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Amkor Careers – Korea
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: 高度なパッケージングおよびテストサービスと Amkor の研究開発センターの拠点である Amkor Korea の採用情報をご覧ください。
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T013314Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: 韓国
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{FCA998C5-0CC3-4F91-94D8-0A4E6CAECE88}"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: 韓国の Amkor Technology で半導体分野の採用情報をご覧ください。
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Amkor Korea における研究開発、エンジニアリング、技術職の採用情報。
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: 採用情報 – 韓国
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "75eee468-e1a7-4c63-a2d3-43a4956cf1dc"
+      Hint: image
+      Value: |
+        <image alt="Amkor 韓国の採用情報" src="https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg" />
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Amkor 採用情報 – 韓国
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "0f04b6b8-16ef-47fe-b04d-694e9dc21018"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: 韓国の Amkor Technology で半導体分野の採用情報をご覧ください。
+    - ID: "9c0f3bfa-27d9-4c2f-b589-6f67beaf207b"
+      Hint: Detail
+      Value: |
+        <h2>採用情報 – 韓国</h2><p>Amkor Technology Korea は、高度なパッケージングおよびテストサービスを提供し、Amkor の研究開発センターの拠点でもあります。</p><p><a href="https://amkor.com/careers/korea/">韓国での採用情報を見る</a></p>
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: 採用情報 – 韓国
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260831T030328Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Amkor 採用情報 – 韓国

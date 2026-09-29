@@ -1,0 +1,93 @@
+﻿---
+ID: "e7175389-4b71-480d-9cef-35239ed73cc8"
+Parent: "a23c1b52-054b-42c6-8b58-16df3fd11244"
+Template: "537cad02-fa7d-4fce-989e-246844a833a1"
+Path: "/sitecore/content/builders-firstsourse/builderfs/Home/Resources/Insights and Trends Blog/Prefab and Modular Construction The Next Growth Wave"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{A5BFB00B-E829-4097-B433-EDC0B8EC67FA}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "ef1cc4f4-82ef-4a56-9cf2-7f9f94361406"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1c5dc4c1-21cd-405b-873b-5a82e1c0dd31"
+      Hint: ArticleBody
+      Value: "<p>Prefabricated and modular construction methods have steadily gained ground over the past decade, and recent labor and material cost pressures are accelerating adoption even further. Rather than a passing trend, off-site construction is becoming a core strategy for many builders.</p><p>Factory-built wall panels, roof trusses, and floor systems allow for tighter quality control and faster on-site assembly compared to traditional stick-built methods. This can shave weeks off a project timeline, a meaningful advantage in markets where speed to close matters.</p><p>Modular construction takes this a step further, with entire rooms or units built and finished in a controlled factory environment before being transported and assembled on-site. This approach is particularly well-suited to production builders working across multiple similar floor plans, where repeatability drives efficiency.</p><p>Adoption isn't without challenges — transportation logistics, upfront capital investment in factory capacity, and design constraints all require careful planning. But for builders willing to invest, prefab and modular methods offer a path to more predictable schedules, reduced weather delays, and improved cost control.</p>"
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Prefabrication and modular construction are moving from niche to mainstream. Here's what's fueling the shift and what it means for builders.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260708T170247Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Prefab Construction
+    - ID: "2fcae033-cf44-4b77-b8ad-91f41b56cb1c"
+      Hint: pageDisplayDate
+      Value: "2026-07-08"
+    - ID: "3633f963-7d65-4567-844c-d837e8821546"
+      Hint: noFollow
+      Value: False
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{57CC7DCE-E6B1-4564-9581-0E5850B8BDF2}"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: "Why more builders are moving production off-site."
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: "Why more builders are moving production off-site"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\johannes.zijlstra@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: "Prefab and Modular Construction: The Next Growth Wave"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\johannes.zijlstra@sitecore.com
+    - ID: "67aec10e-8df5-4214-b4e2-f5aea1af19b2"
+      Hint: noIndex
+      Value: False
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: "Prefab and Modular Construction: The Next Growth Wave"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ed2acedb-8ff3-44a5-847f-db21db2b561e"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: An overview of why prefabrication and modular construction are accelerating in the homebuilding industry.
+    - ID: "afd3e865-f6ac-4485-95f2-cae591dd8f0a"
+      Hint: pageReadTime
+      Value: 5 min read
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: "Prefab and Modular Construction: The Next Growth Wave"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\johannes.zijlstra@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260708T170248Z
+    - ID: "e7f8a9b0-c1d2-4e3f-8a9b-0c1d2e3f4a5b"
+      Hint: metadataAuthor
+      Value: Builders FirstSource Editorial Team
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: "Prefab and Modular Construction: The Next Growth Wave"
+    - ID: "f6fcc0b6-31b2-49cd-8a66-4ba282a8ad24"
+      Hint: metadataKeywords
+      Value: "prefabrication, modular construction, off-site construction, building efficiency, construction trends"

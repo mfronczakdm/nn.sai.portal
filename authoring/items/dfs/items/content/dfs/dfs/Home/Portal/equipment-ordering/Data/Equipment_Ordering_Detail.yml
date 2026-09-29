@@ -1,0 +1,41 @@
+﻿---
+ID: "7c455b86-4660-4c15-8f77-2ec0d55c8289"
+Parent: "46ed4dd8-7bd8-4562-ba58-23c043ad4d51"
+Template: "0bb540d0-731b-4f71-8c0e-d99e26562cd2"
+Path: "/sitecore/content/dfs/dfs/Home/Portal/equipment-ordering/Data/Equipment_Ordering_Detail"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260819T214927Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c0b7bce-7da1-4cec-a7aa-3d28179fe94b"
+      Hint: title
+      Value: Equipment Ordering
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "0f8534df-a972-477b-83a5-d19792d1b522"
+    - ID: "b0125af5-1538-4b18-9a93-2e8f5781bc2c"
+      Hint: body
+      Value: |
+        <div class="mx-auto w-full max-w-6xl space-y-8"><div class="rounded-2xl border border-border bg-card p-6 shadow-sm"><h2 class="text-lg font-semibold text-foreground">Quick order categories</h2><div class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4"><a href="#" class="rounded-xl border border-border bg-background p-4 transition hover:border-primary/40 hover:shadow-sm"><p class="font-semibold text-foreground">Kitchen equipment</p><p class="mt-1 text-sm text-muted-foreground">Ovens, fryers, prep lines</p></a><a href="#" class="rounded-xl border border-border bg-background p-4 transition hover:border-primary/40 hover:shadow-sm"><p class="font-semibold text-foreground">Smallwares</p><p class="mt-1 text-sm text-muted-foreground">Pans, utensils, storage</p></a><a href="#" class="rounded-xl border border-border bg-background p-4 transition hover:border-primary/40 hover:shadow-sm"><p class="font-semibold text-foreground">Replacement parts</p><p class="mt-1 text-sm text-muted-foreground">Filters, gaskets, motors</p></a><a href="#" class="rounded-xl border border-border bg-background p-4 transition hover:border-primary/40 hover:shadow-sm"><p class="font-semibold text-foreground">Facility supplies</p><p class="mt-1 text-sm text-muted-foreground">Cleaning, safety, signage</p></a></div></div><div class="grid gap-4 sm:grid-cols-3"><div class="rounded-2xl border border-border bg-card p-5 shadow-sm"><p class="text-xs font-medium uppercase tracking-wide text-muted-foreground">Open quotes</p><p class="mt-1 text-3xl font-semibold text-foreground">3</p></div><div class="rounded-2xl border border-border bg-card p-5 shadow-sm"><p class="text-xs font-medium uppercase tracking-wide text-muted-foreground">Avg. lead time</p><p class="mt-1 text-3xl font-semibold text-foreground">5–7 days</p></div><div class="rounded-2xl border border-border bg-card p-5 shadow-sm"><p class="text-xs font-medium uppercase tracking-wide text-muted-foreground">Approved vendors</p><p class="mt-1 text-3xl font-semibold text-foreground">24</p></div></div><section class="rounded-2xl border border-border bg-card p-6 shadow-sm"><h2 class="text-lg font-semibold text-foreground">Recently ordered items</h2><div class="mt-4 overflow-hidden rounded-xl border border-border"><table class="w-full text-left text-sm"><thead class="bg-muted/50 text-xs uppercase tracking-wide text-muted-foreground"><tr><th class="px-4 py-3">Item</th><th class="px-4 py-3">Location</th><th class="px-4 py-3">Status</th><th class="px-4 py-3">ETA</th></tr></thead><tbody class="divide-y divide-border bg-background"><tr><td class="px-4 py-3 font-medium text-foreground">Commercial convection oven</td><td class="px-4 py-3 text-muted-foreground">Store #1042</td><td class="px-4 py-3"><span class="rounded-full bg-primary/10 px-2 py-0.5 text-xs font-medium text-primary">Processing</span></td><td class="px-4 py-3 text-muted-foreground">Aug 28</td></tr><tr><td class="px-4 py-3 font-medium text-foreground">Stainless prep table (72")</td><td class="px-4 py-3 text-muted-foreground">Store #1187</td><td class="px-4 py-3"><span class="rounded-full bg-muted px-2 py-0.5 text-xs font-medium text-muted-foreground">Shipped</span></td><td class="px-4 py-3 text-muted-foreground">Aug 22</td></tr><tr><td class="px-4 py-3 font-medium text-foreground">Grease trap filter kit</td><td class="px-4 py-3 text-muted-foreground">Store #1042</td><td class="px-4 py-3"><span class="rounded-full bg-muted px-2 py-0.5 text-xs font-medium text-muted-foreground">Delivered</span></td><td class="px-4 py-3 text-muted-foreground">Aug 15</td></tr></tbody></table></div></section><div class="flex flex-wrap gap-3"><a href="#" class="inline-flex items-center rounded-xl bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm">Browse full catalog</a><a href="#" class="inline-flex items-center rounded-xl border border-border bg-background px-5 py-2.5 text-sm font-semibold text-foreground">Request custom quote</a></div></div>
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "cc7d3a62-3796-41d8-af32-b4408a0749f9"
+      Hint: subtitle
+      Value: "Order kitchen equipment, smallwares, and replacement parts with location-specific pricing and delivery."
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260819T214927Z

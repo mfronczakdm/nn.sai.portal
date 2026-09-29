@@ -1,0 +1,258 @@
+﻿---
+ID: "3f790db9-d631-452d-b0fc-81038a84120c"
+Parent: "2c56b473-70ee-4a89-bdd5-cfed2a5fcdd8"
+Template: "d77937ac-bae4-4eb0-8d7e-69ec09d5bbfc"
+Path: /sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/Emergency Care
+SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{917B09BA-1495-4EE0-9E1C-36AA268CB54B}"
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{238B3C61-6693-47AA-8EB0-838917199875}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "876bd0a5-f6fd-4f6c-ac1b-396990d1992f"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{D33AE7B5-FAC7-4E63-8A74-7AA6C2D43A43}"
+              s:ds=""
+              s:id="{B1136CF1-94BE-468C-B78D-9BE212AF5428}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Dark Imge&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: West Jefferson’s emergency department is open 24/7 for children, adults, and seniors, with Fast Track hours and phone updates during an ER visit.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T211333Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Emergency Care
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: "Round-the-clock emergency care on the Westbank."
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: 24/7 emergency department in Marrero
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Emergency Care
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Emergency Care | West Jefferson Medical Center
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "950acd09-1568-4067-9332-387531b445ee"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: 24/7 emergency department at West Jefferson Medical Center in Marrero.
+    - ID: "9d32260e-215d-4eff-80de-6d469daadbc4"
+      Hint: image
+      Value: |
+        <image src="https://www.lcmchealth.org/assets/LCMC-Social-Share.jpg" alt="Emergency Care at West Jefferson" />
+    - ID: "a8a1dfcb-7dd5-4413-8789-db24a95e439f"
+      Hint: Detail
+      Value: "<h2>When every minute matters</h2><p>The West Jefferson Medical Center Emergency Department is open 24 hours a day for serious illness and injury. Board-certified emergency physicians treat children, adults, and seniors, including dedicated spaces that support geriatric emergency care.</p><p>Fast Track is available 11:00 a.m.–11:00 p.m. daily for lower-acuity needs. During a visit, patients can receive real-time updates on their phone so they know what comes next in the ER.</p><p><strong>Address:</strong> 1101 Medical Center Blvd., Marrero, LA 70072<br/><strong>Main hospital:</strong> 504-347-5511<br/>For life-threatening emergencies, call 911.</p>"
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Emergency Care
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Akv1r1Hmcm16AN61y5QanpMca0RChHPy
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T001747Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Emergency Care | West Jefferson
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{D33AE7B5-FAC7-4E63-8A74-7AA6C2D43A43}"
+              s:ds=""
+              s:id="{B1136CF1-94BE-468C-B78D-9BE212AF5428}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Dark Imge&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: El departamento de emergencias de West Jefferson está abierto 24/7 para niños, adultos y adultos mayores, con horario de Fast Track y actualizaciones por teléfono durante una visita a emergencias.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T211333Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Atención de Emergencias
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Atención de emergencias las 24 horas en la Westbank.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Departamento de emergencias 24/7 en Marrero
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Atención de Emergencias
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Atención de Emergencias | West Jefferson Medical Center
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "041f9e1a-dac0-4beb-82d9-515189e8c789"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Departamento de emergencias 24/7 en West Jefferson Medical Center en Marrero.
+    - ID: "9d32260e-215d-4eff-80de-6d469daadbc4"
+      Hint: image
+      Value: |
+        <image alt="Atención de Emergencias en West Jefferson" src="https://www.lcmchealth.org/assets/LCMC-Social-Share.jpg" />
+    - ID: "a8a1dfcb-7dd5-4413-8789-db24a95e439f"
+      Hint: Detail
+      Value: "<h2>Cuando cada minuto cuenta</h2><p>El Departamento de Emergencias del West Jefferson Medical Center está abierto las 24 horas del día para enfermedades y lesiones graves. Médicos de emergencias certificados por la junta atienden a niños, adultos y adultos mayores, incluidas áreas dedicadas que apoyan la atención geriátrica de emergencia.</p><p>Fast Track está disponible de 11:00 a. m. a 11:00 p. m. todos los días para necesidades de menor gravedad. Durante una visita, los pacientes pueden recibir actualizaciones en tiempo real en su teléfono para saber qué sigue en la sala de emergencias.</p><p><strong>Dirección:</strong> 1101 Medical Center Blvd., Marrero, LA 70072<br/><strong>Hospital principal:</strong> 504-347-5511<br/>Para emergencias que ponen en riesgo la vida, llame al 911.</p>"
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Atención de Emergencias
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T162957Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Atención de Emergencias | West Jefferson
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{D33AE7B5-FAC7-4E63-8A74-7AA6C2D43A43}"
+              s:ds=""
+              s:id="{B1136CF1-94BE-468C-B78D-9BE212AF5428}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Dark Imge&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Le service d’urgence de West Jefferson est ouvert 24 h sur 24, 7 j sur 7 pour les enfants, les adultes et les aînés, avec les heures de service Fast Track et des mises à jour par téléphone pendant une visite à l’urgence.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T211333Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Soins d’urgence
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Soins d’urgence en tout temps sur la Westbank.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Service d’urgence 24 h sur 24, 7 j sur 7 à Marrero
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Soins d’urgence
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Soins d’urgence | West Jefferson Medical Center
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b740adb1-2f1b-4073-ac77-c81c395f07bd"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Service d’urgence 24 h sur 24, 7 j sur 7 au West Jefferson Medical Center à Marrero.
+    - ID: "9d32260e-215d-4eff-80de-6d469daadbc4"
+      Hint: image
+      Value: |
+        <image alt="Soins d’urgence au West Jefferson" src="https://www.lcmchealth.org/assets/LCMC-Social-Share.jpg" />
+    - ID: "a8a1dfcb-7dd5-4413-8789-db24a95e439f"
+      Hint: Detail
+      Value: "<h2>Quand chaque minute compte</h2><p>Le service d’urgence du West Jefferson Medical Center est ouvert 24 heures sur 24 pour les maladies et blessures graves. Des médecins urgentologues certifiés traitent les enfants, les adultes et les aînés, y compris dans des espaces dédiés qui soutiennent les soins d’urgence gériatriques.</p><p>Le service Fast Track est offert tous les jours de 11 h à 23 h pour les besoins moins urgents. Pendant la visite, les patients peuvent recevoir des mises à jour en temps réel sur leur téléphone pour savoir ce qui les attend ensuite à l’urgence.</p><p><strong>Adresse :</strong> 1101 Medical Center Blvd., Marrero, LA 70072<br/><strong>Hôpital principal :</strong> 504-347-5511<br/>En cas d’urgence mettant la vie en danger, composez le 911.</p>"
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Soins d’urgence
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201607Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Soins d’urgence | West Jefferson

@@ -1,0 +1,55 @@
+﻿---
+ID: "53e21ca2-ba94-4a60-ada4-7d3f09289da2"
+Parent: "1f114e3b-7d36-4f1e-a57b-a681a18bbc5f"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Project/Cooley/Media/MediaCanvas
+SharedFields:
+- ID: "037fe404-dd19-4bf7-8e30-4dadf68b27b0"
+  Hint: componentName
+  Value: MediaCanvas
+- ID: "17bb046a-a32a-41b3-8315-81217947611b"
+  Hint: ComponentQuery
+  Value: |
+    query MediaCanvas($datasource: String!, $language: String!) { datasource: item(path: $datasource, language: $language) { title: field(name: "Title") { jsonValue } subtitle: field(name: "Subtitle") { jsonValue } cta: field(name: "Cta") { jsonValue } pauseVideoLabel: field(name: "PauseVideoLabel") { jsonValue } playVideoLabel: field(name: "PlayVideoLabel") { jsonValue } children { results { id image: field(name: "Image") { jsonValue } video: field(name: "Video") { jsonValue } tagline: field(name: "Tagline") { jsonValue } } } } }
+- ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
+  Hint: Datasource Template
+  Value: /sitecore/templates/Project/Cooley/Components/Media/MediaCanvas
+- ID: "a77e8568-1ab3-44f1-a664-b7c37ec7810d"
+  Hint: Parameters Template
+  Value: "{B66082AC-E0F1-41C5-AE94-7A627D99D980}"
+- ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
+  Hint: Datasource Location
+  Value: "query:$site/*[@@name='Data']/*[@@templatename='MediaCanvas Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='MediaCanvas Folder']"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "c167bfad-bfc7-431c-a6c1-0f3039ac9643"
+Languages:
+- Language: en
+  Fields:
+  - ID: "30e85e5d-e00a-4864-b358-7624d511deb4"
+    Hint: __Unversioned revision
+    Value: "97546932-36ba-4342-b561-932be3974929"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260814T210433Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ea139142-aa9b-47f5-8d32-0e39a726c093"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260814T210505Z

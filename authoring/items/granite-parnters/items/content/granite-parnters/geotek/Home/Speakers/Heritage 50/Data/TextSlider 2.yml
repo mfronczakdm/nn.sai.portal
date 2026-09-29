@@ -1,0 +1,48 @@
+﻿---
+ID: "339e399c-c372-4931-a19a-14f271766269"
+Parent: "462a364d-0bc6-47fa-a4d2-a97ec20ff44a"
+Template: "bf764c63-df4b-460f-bf87-b4f16733a4fd"
+Path: "/sitecore/content/granite-parnters/geotek/Home/Speakers/Heritage 50/Data/TextSlider 2"
+BranchID: "9660ff60-8e47-4efc-b22d-bac3fd04c8d7"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "cb4baa73-6f08-4e7c-b931-ce9423df4aeb"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{EB31474F-08EC-40FD-9D3C-D77B375518E7}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260617T114731Z
+    - ID: "2b15fe27-4f2c-460c-b332-a52ea0a446a5"
+      Hint: Text
+      Value: In the music
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c58290e5-35e9-4e48-8f68-995840cd5874"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260617T114949Z

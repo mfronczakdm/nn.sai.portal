@@ -1,0 +1,152 @@
+﻿---
+ID: "e3ddc8af-c6f9-4600-8365-a37af8ab4758"
+Parent: "fa947897-7340-4066-a011-42b5a8eaab98"
+Template: "7629f514-e156-4543-adc6-051453441b33"
+Path: /sitecore/content/quanex/quanex/Home/Products/Extruded Solutions/Mikron 7200 Sound Control System
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{4097F3FA-2955-4C06-8B58-EFBCD83F2549}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "6ab8edfb-c005-42a8-94a3-72dda0f7fbbe"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0169dfce-89a4-4941-821a-ab1266a1de4a"
+      Hint: CategoryLabel
+      Value: Commercial Window Profiles
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: 
+    - ID: "17cbe776-d3b6-4203-a37c-30a46022bae6"
+      Hint: SpecSheetLink
+      Value: |
+        <link text="Print a Spec Sheet" linktype="external" url="https://www.quanex.com/product/extruded-solutions/" anchor="" target="_blank" />
+    - ID: "190e4142-e8b7-4d47-bcf7-b6bac38ce753"
+      Hint: TechnicalData
+      Value: "<ul><li>Extruded vinyl/PVC multi-chamber profiles</li><li>Sound-control focused frame geometry</li><li>Compatible with high-performance IG units</li><li>Commercial window and door framing applications</li><li>Designed for structural and weather performance</li></ul>"
+    - ID: "211d45c2-39f7-430f-8c81-14d8ba310a0f"
+      Hint: ImageUrl
+      Value: "https://www.quanex.com/wp-content/uploads/2022/07/Mikron-7200-Sound-Control-System_ProductImage_605x380.jpg"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260813T193647Z
+    - ID: "2c9cc36e-d30c-49c1-93dc-21a353045c54"
+      Hint: StylesAvailable
+      Value: <ul><li>Fixed and operable commercial window styles</li><li>Entry and specialty door framing options</li><li>Multiple sightline and depth configurations</li><li>Finish and color options for commercial projects</li></ul>
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "4e90c3b8-4bd8-4034-87e0-9e824460f7e5"
+      Hint: ImageSecondary
+      Value: 
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Mikron 7200 Sound Control System
+    - ID: "77b62e2b-2f05-418e-bb41-2903feb32e39"
+      Hint: Description
+      Value: "<p>The Mikron 7200 Sound Control System is an extruded vinyl/PVC window and door framing platform engineered for demanding acoustic and thermal performance in commercial applications.</p><p>Its multi-chamber profile design and seal interfaces help architects and fabricators deliver quieter interiors without sacrificing structural integrity or energy efficiency.</p>"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d456b0a7-a8af-4124-a8c5-21c4775d677f"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260814T121954Z
+    - ID: "dbd19eed-f27a-4850-9a43-512eb6176c14"
+      Hint: Benefits
+      Value: |
+        <ul><li>Helps reduce exterior noise transmission into occupied spaces</li><li>Durable extruded profiles for long service life</li><li>Supports energy-efficient commercial fenestration</li><li>Part of Quanex Extruded Solutions portfolio</li></ul><p><a href="https://www.quanex.com/product/extruded-solutions/">View extruded solutions</a></p>
+  - Version: 2
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0169dfce-89a4-4941-821a-ab1266a1de4a"
+      Hint: CategoryLabel
+      Value: Commercial Window Profiles
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: 
+    - ID: "17cbe776-d3b6-4203-a37c-30a46022bae6"
+      Hint: SpecSheetLink
+      Value: |
+        <link text="Print a Spec Sheet" linktype="external" url="https://www.quanex.com/product/extruded-solutions/" anchor="" target="_blank" />
+    - ID: "190e4142-e8b7-4d47-bcf7-b6bac38ce753"
+      Hint: TechnicalData
+      Value: "<ul><li>Extruded vinyl/PVC multi-chamber profiles</li><li>Sound-control focused frame geometry</li><li>Compatible with high-performance IG units</li><li>Commercial window and door framing applications</li><li>Designed for structural and weather performance</li></ul>"
+    - ID: "211d45c2-39f7-430f-8c81-14d8ba310a0f"
+      Hint: ImageUrl
+      Value: "https://www.quanex.com/wp-content/uploads/2022/07/Mikron-7200-Sound-Control-System_ProductImage_605x380.jpg"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260814T120401Z
+    - ID: "2c9cc36e-d30c-49c1-93dc-21a353045c54"
+      Hint: StylesAvailable
+      Value: <ul><li>Fixed and operable commercial window styles</li><li>Entry and specialty door framing options</li><li>Multiple sightline and depth configurations</li><li>Finish and color options for commercial projects</li></ul>
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Mikron 7200 is an extruded vinyl window and door framing platform engineered for demanding acoustic and thermal performance in commercial applications.
+    - ID: "4e90c3b8-4bd8-4034-87e0-9e824460f7e5"
+      Hint: ImageSecondary
+      Value: 
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Mikron 7200 Sound Control System
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "65408499-25bc-49d0-a2ff-b2fdd798aafc"
+      Hint: ogImage
+      Value: |
+        <image src="https://www.quanex.com/wp-content/uploads/2022/07/Mikron-7200-Sound-Control-System_ProductImage_605x380.jpg" alt="Mikron 7200 Sound Control System" />
+    - ID: "77b62e2b-2f05-418e-bb41-2903feb32e39"
+      Hint: Description
+      Value: "<p>The Mikron 7200 Sound Control System is an extruded vinyl/PVC window and door framing platform engineered for demanding acoustic and thermal performance in commercial applications.</p><p>Its multi-chamber profile design and seal interfaces help architects and fabricators deliver quieter interiors without sacrificing structural integrity or energy efficiency.</p>"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "910abc08-ed7e-4438-a19d-427cc570659b"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c5b02812-deb7-4b51-8a68-8019a44f0db3"
+      Hint: ProductSKU
+      Value: "QNX-M7200-SC"
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260814T120401Z
+    - ID: "ca94ec7f-2908-4e34-a9e5-f8ec8dd7a91d"
+      Hint: ProductID
+      Value: "QNX-M7200"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260814T145443Z
+    - ID: "dbd19eed-f27a-4850-9a43-512eb6176c14"
+      Hint: Benefits
+      Value: |
+        <ul><li>Helps reduce exterior noise transmission into occupied spaces</li><li>Durable extruded profiles for long service life</li><li>Supports energy-efficient commercial fenestration</li><li>Part of Quanex Extruded Solutions portfolio</li></ul><p><a href="https://www.quanex.com/product/extruded-solutions/">View extruded solutions</a></p>
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Mikron 7200 Sound Control System | Quanex
+    - ID: "f2fa4f60-bfec-4b8a-858c-f5ae25df459b"
+      Hint: ProductName
+      Value: Mikron 7200 Sound Control System

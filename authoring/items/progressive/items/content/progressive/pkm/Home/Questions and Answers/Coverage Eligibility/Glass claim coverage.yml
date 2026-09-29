@@ -1,0 +1,37 @@
+﻿---
+ID: "6e0b2179-4112-45a3-b98a-fc678aa3c05c"
+Parent: "c59a1054-dedc-41f5-9641-8842a26e026c"
+Template: "73e57eaa-b54a-41e1-b689-bf7dae9155ad"
+Path: /sitecore/content/progressive/pkm/Home/Questions and Answers/Coverage Eligibility/Glass claim coverage
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{9F068CD0-C12A-4C12-A637-6D0584248570}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260729T192632Z
+    - ID: "2d71e32d-e990-46b3-8ca1-58cd89743d5e"
+      Hint: Question
+      Value: "How do Progressive claims advisors handle glass claim coverage questions?"
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Glass claim coverage
+    - ID: "4f8dc72e-1548-471c-9f3e-a13e944e4321"
+      Hint: Answer
+      Value: "Confirm whether comprehensive or glass-specific Progressive coverage applies, note any glass deductible, and follow Progressive glass repair/replacement procedures. Verify loss date and policy status first. Direct customers to approved Progressive glass vendors when required by process."
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a8118ffa-3452-4770-adc6-0acd7dc00c1e"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260729T192633Z

@@ -1,0 +1,44 @@
+﻿---
+ID: "bf4da50f-bde6-45eb-bbef-3e140cd7507b"
+Parent: "c55cfb7b-5e92-4bee-933f-c62fcfd95b3b"
+Template: "c55cfb7b-5e92-4bee-933f-c62fcfd95b3b"
+Path: "/sitecore/templates/Project/new-quanex/Audio Product Page/__Standard Values"
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {5D927E67-A3D1-4D2E-BD82-7BA5F60C5ADE}
+    {C55CFB7B-5E92-4BEE-933F-C62FCFD95B3B}
+    {AB0B82DC-C72E-4C00-904A-F49000CA0398}
+    {30035F54-03FD-41B5-9806-1A994D7AF88B}
+    {715E0710-5F12-4228-B56C-FC6D49A47D18}
+    {6EC23354-D69A-419A-85B8-C9A50A2FBA60}
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "2518a657-ef1f-4616-8232-f452ea73264b"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260818T142811Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "9169ac9f-469d-480a-97cf-0fda5964f897"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260818T142814Z

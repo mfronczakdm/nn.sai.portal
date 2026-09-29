@@ -1,0 +1,265 @@
+﻿---
+ID: "0431ac51-1cab-4847-a42e-55394cf96273"
+Parent: "23fffc7a-4d86-4004-8d56-b99795dd32fb"
+Template: "70780390-a3eb-478d-b5de-062ba3c9e897"
+Path: /sitecore/content/lcmc/lcmc/Data/Split Features/LCMC Neighborhood Care
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "1e2b9b0c-18e0-44d4-bd70-6c21307b2a5c"
+      Hint: SectionTitle
+      Value: Care that starts in your neighborhood
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T015813Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "72123495-4fec-4349-ad32-c811fb59239d"
+      Hint: SecondaryLink
+      Value: |
+        <link text="Find a location" anchor="" linktype="external" class="" title="" target="" querystring="" url="https://www.lcmchealth.org/locations/" />
+    - ID: "76acf4ae-4743-4e04-8150-ad9fcb505011"
+      Hint: EyebrowText
+      Value: Our Community
+    - ID: "7c4e343a-1394-4002-a9c9-79d019670ce5"
+      Hint: PrimaryLink
+      Value: |
+        <link text="Explore our services" anchor="" linktype="external" class="" title="" target="" querystring="" url="https://www.lcmchealth.org/our-services/" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "6c9cac22-bf28-47a6-b51b-74464976842d"
+    - ID: "9bcfa365-c779-4e5b-b029-abee39f389be"
+      Hint: Description
+      Value: "<p>From primary care to specialty services, LCMC Health brings hospital-quality care closer to home. Explore programs designed for patients and families across Greater New Orleans.</p>"
+    - ID: "a22f9921-5ac5-40d3-a3a5-49bb1ae7292d"
+      Hint: FeatureImage
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/3d4d68b26ffd4896b3ea6acbd8eb3868?v=5128ffbf" dam-id="qC2Y_ZnlT2irFpi1iTa-nQ" width="750" height="650" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/85448/thumbnail" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260826T021636Z
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "1e2b9b0c-18e0-44d4-bd70-6c21307b2a5c"
+      Hint: SectionTitle
+      Value: Atención que comienza en su vecindario
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T015813Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "72123495-4fec-4349-ad32-c811fb59239d"
+      Hint: SecondaryLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="Encuentre una ubicación" url="https://www.lcmchealth.org/locations/" />
+    - ID: "76acf4ae-4743-4e04-8150-ad9fcb505011"
+      Hint: EyebrowText
+      Value: Nuestra comunidad
+    - ID: "7c4e343a-1394-4002-a9c9-79d019670ce5"
+      Hint: PrimaryLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="Explore nuestros servicios" url="https://www.lcmchealth.org/our-services/" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "9a4f4f1e-45a8-4f9f-9469-1fb17616cab2"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9bcfa365-c779-4e5b-b029-abee39f389be"
+      Hint: Description
+      Value: <p>Desde atención primaria hasta servicios especializados, LCMC Health acerca atención de calidad hospitalaria a su comunidad. Explore programas diseñados para pacientes y familias en el área metropolitana de Nueva Orleans.</p>
+    - ID: "a22f9921-5ac5-40d3-a3a5-49bb1ae7292d"
+      Hint: FeatureImage
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/3d4d68b26ffd4896b3ea6acbd8eb3868?v=5128ffbf" dam-id="qC2Y_ZnlT2irFpi1iTa-nQ" width="750" height="650" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/85448/thumbnail" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T162729Z
+  - Version: 2
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "1e2b9b0c-18e0-44d4-bd70-6c21307b2a5c"
+      Hint: SectionTitle
+      Value: Atención que comienza en tu vecindario
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260909T232004Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "72123495-4fec-4349-ad32-c811fb59239d"
+      Hint: SecondaryLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="Encuentra una ubicación" url="https://www.lcmchealth.org/locations/" />
+    - ID: "76acf4ae-4743-4e04-8150-ad9fcb505011"
+      Hint: EyebrowText
+      Value: Nuestra comunidad
+    - ID: "7c4e343a-1394-4002-a9c9-79d019670ce5"
+      Hint: PrimaryLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="Explora nuestros servicios" url="https://www.lcmchealth.org/our-services/" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "77ebdadb-ca0f-4c23-88f4-26e23d12b1ce"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9bcfa365-c779-4e5b-b029-abee39f389be"
+      Hint: Description
+      Value: <p>Desde atención primaria hasta servicios especializados, LCMC Health acerca atención con calidad hospitalaria a tu hogar. Explora programas diseñados para pacientes y familias de toda el área metropolitana de Nueva Orleans.</p>
+    - ID: "a22f9921-5ac5-40d3-a3a5-49bb1ae7292d"
+      Hint: FeatureImage
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/3d4d68b26ffd4896b3ea6acbd8eb3868?v=5128ffbf" dam-id="qC2Y_ZnlT2irFpi1iTa-nQ" width="750" height="650" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/85448/thumbnail" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260909T232004Z
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T232009Z
+  - Version: 3
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "1e2b9b0c-18e0-44d4-bd70-6c21307b2a5c"
+      Hint: SectionTitle
+      Value: Atención que comienza en tu vecindario
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T015813Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "72123495-4fec-4349-ad32-c811fb59239d"
+      Hint: SecondaryLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="Encuentra una ubicación" url="https://www.lcmchealth.org/locations/" />
+    - ID: "76acf4ae-4743-4e04-8150-ad9fcb505011"
+      Hint: EyebrowText
+      Value: Nuestra comunidad
+    - ID: "7c4e343a-1394-4002-a9c9-79d019670ce5"
+      Hint: PrimaryLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="Explora nuestros servicios" url="https://www.lcmchealth.org/our-services/" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "bd216ad2-a2c6-4d50-9df3-90a8e8017390"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9bcfa365-c779-4e5b-b029-abee39f389be"
+      Hint: Description
+      Value: <p>Desde atención primaria hasta servicios especializados, LCMC Health acerca atención con calidad hospitalaria a tu hogar. Explora programas diseñados para pacientes y familias de todo el Gran Nueva Orleans.</p>
+    - ID: "a22f9921-5ac5-40d3-a3a5-49bb1ae7292d"
+      Hint: FeatureImage
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/3d4d68b26ffd4896b3ea6acbd8eb3868?v=5128ffbf" dam-id="qC2Y_ZnlT2irFpi1iTa-nQ" width="750" height="650" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/85448/thumbnail" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T234808Z
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "1e2b9b0c-18e0-44d4-bd70-6c21307b2a5c"
+      Hint: SectionTitle
+      Value: Des soins qui commencent dans votre quartier
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T015813Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "72123495-4fec-4349-ad32-c811fb59239d"
+      Hint: SecondaryLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="Trouver un établissement" url="https://www.lcmchealth.org/locations/" />
+    - ID: "76acf4ae-4743-4e04-8150-ad9fcb505011"
+      Hint: EyebrowText
+      Value: Notre communauté
+    - ID: "7c4e343a-1394-4002-a9c9-79d019670ce5"
+      Hint: PrimaryLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="Découvrir nos services" url="https://www.lcmchealth.org/our-services/" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ddb71ff3-57b0-4f3d-abec-41eb65b3b23d"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9bcfa365-c779-4e5b-b029-abee39f389be"
+      Hint: Description
+      Value: <p>Des soins primaires aux services spécialisés, LCMC Health offre des soins de qualité hospitalière plus près de chez vous. Découvrez des programmes conçus pour les patients et les familles du Grand New Orleans.</p>
+    - ID: "a22f9921-5ac5-40d3-a3a5-49bb1ae7292d"
+      Hint: FeatureImage
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/3d4d68b26ffd4896b3ea6acbd8eb3868?v=5128ffbf" dam-id="qC2Y_ZnlT2irFpi1iTa-nQ" width="750" height="650" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/85448/thumbnail" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201357Z

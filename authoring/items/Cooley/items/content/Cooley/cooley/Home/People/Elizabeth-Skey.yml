@@ -1,0 +1,67 @@
+﻿---
+ID: "646e9ca0-4974-437d-beb3-058dcd7819fb"
+Parent: "e94fc8b8-faf1-47ef-8985-b2b39bd102d1"
+Template: "75ba19ed-046a-48f7-a214-1ccb30341785"
+Path: "/sitecore/content/Cooley/cooley/Home/People/Elizabeth-Skey"
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{ADED1A34-2DB3-470B-941F-865B801E5E2B}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "027aaf74-a23d-4f1d-a338-378dd796eb7b"
+      Hint: Summary
+      Value: Palo Alto | Securities Litigation + Enforcement, White Collar Defense
+    - ID: "2302c70d-5f7e-4c92-ba54-52ac669e295a"
+      Hint: Phone
+      Value: +1 650 843 5908
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260814T212005Z
+    - ID: "2fbe8cff-9382-4f34-a13d-a3eae26add65"
+      Hint: PreferredName
+      Value: Elizabeth
+    - ID: "6cf9e6dc-c127-4b03-854f-a074e892d5bd"
+      Hint: FullName
+      Value: Elizabeth Skey
+    - ID: "6f5de62a-0295-4a9c-8cbe-90c1a59f483d"
+      Hint: SeoTitle
+      Value: Elizabeth Skey | Partner | Cooley
+    - ID: "78843463-efe2-448f-a30d-b6e7e2aab380"
+      Hint: Office
+      Value: "{DC232E23-EA83-420F-9875-BC6D75EE28E3}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "22e3762d-0069-4ac8-810a-8ae2d44f8e9e"
+    - ID: "9fe86ca5-05e1-4a44-a119-fcf675e32f02"
+      Hint: Biography
+      Value: "<p>Elizabeth has extensive experience with high-stakes internal and government investigations, white collar defense, and complex securities and commercial litigation. She represents companies and their boards, audit committees, special committees, executives and financial institutions in investigations by the SEC, the US Department of Justice, and other governmental agencies.</p>"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "bbd10213-83c1-468c-8788-5c2a67cf85a0"
+      Hint: Email
+      Value: eskey@cooley.com
+    - ID: "c54be241-aff8-4630-b46c-01aae94f8b9e"
+      Hint: SeoDescription
+      Value: Elizabeth Skey is a Partner in Cooley's Palo Alto office focusing on investigations and securities litigation.
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260817T025642Z
+    - ID: "f3c9bb15-bb46-4ec0-9d31-0300245e6acd"
+      Hint: JobTitle
+      Value: Partner
+    - ID: "f632d418-ab07-4f1d-a0fb-15d4fb9fd92c"
+      Hint: Headshot
+      Value: |
+        <Image src="https://www.cooley.com/-/media/cooley/bio-images/headshots/skey-elizabeth-23173-bw.jpg" alt="Elizabeth Skey" />
+    - ID: "f968ea1a-5e81-4417-822e-e5217ae61323"
+      Hint: PracticeAreas
+      Value: |
+        {18E05EED-F2B6-4A03-9445-6049F1470DB2}
+        {DE969065-A7E8-474C-911A-5F3FD5E96C28}

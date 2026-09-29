@@ -1,0 +1,44 @@
+﻿---
+ID: "69f3074a-ac8c-407e-b9ff-3bd55f1fb742"
+Parent: "18c6fa8b-57d4-4b0b-b4a7-b9e57843720c"
+Template: "bdf6c974-e68c-46a2-a0a9-d382fd0927eb"
+Path: "/sitecore/content/progressive/pkm/Home/Shared Content/07-ClaimsTimelines/StateSpecific/FL/KB-AU-1001-FNOL-FL"
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{029091DE-E3F2-4C3B-93FF-ED5A36F92159}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "359013c8-8c82-47da-ae7a-c004d599056b"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "21b8d6f1-4294-46a5-98fd-38df0ce8aae0"
+      Hint: SourceDocumentLOB
+      Value: "{0944EAEA-5558-443F-A68D-482773EA2153}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260731T141317Z
+    - ID: "76e0c665-5c4d-4d03-ae66-a5f3d12978ba"
+      Hint: Content
+      Value: "<p>In Florida, complete Personal Auto FNOL the same calendar day whenever the loss is reported before Progressive late-day cutoff, and note the report time in Eastern Time. If a Florida Traffic Crash Report is pending, schedule the follow-up within 24 hours and do not delay assignment for that document alone.</p>"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "75ac5359-e230-4f0e-a405-26087f86a7a9"
+    - ID: "94ce9d2b-aa0c-488f-943a-d2e582eb50bc"
+      Hint: SourceDocumentPerils
+      Value: "{152FCA3B-0726-49A3-8D73-447F35E1F334}"
+    - ID: "a8f6d033-4e9e-4598-be5e-da2456c41b9f"
+      Hint: sourceDocumentLink
+      Value: |
+        <link text="Personal Auto FNOL - First Notice of Loss Intake" linktype="internal" class="" title="" target="" querystring="" id="{8134326F-FF16-4B77-8D34-9EDB10353DA1}" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\emqWsGLKzRiKgWenEsIKMqdxvXhiQ4cT
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260802T143425Z

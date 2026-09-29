@@ -1,0 +1,55 @@
+﻿---
+ID: "903bee64-4e35-4956-bbe2-29f492ab247f"
+Parent: "fa756449-d20c-4cc7-9697-2e480e18b3a8"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Project/pillsbury/Lawyers/CareerListing
+SharedFields:
+- ID: "037fe404-dd19-4bf7-8e30-4dadf68b27b0"
+  Hint: componentName
+  Value: CareerListing
+- ID: "17bb046a-a32a-41b3-8315-81217947611b"
+  Hint: ComponentQuery
+  Value: |
+    query CareerListing($datasource: String!, $language: String!) { datasource: item(path: $datasource, language: $language) { title: field(name: "Title") { jsonValue } intro: field(name: "Intro") { jsonValue } emptyResultsText: field(name: "EmptyResultsText") { jsonValue } showFilters: field(name: "ShowFilters") { jsonValue } careersRoot: field(name: "CareersRoot") { ... on LookupField { targetItem { id children(first: 50) { results { id name url { path } pageHeaderTitle: field(name: "pageHeaderTitle") { jsonValue } pageShortTitle: field(name: "pageShortTitle") { jsonValue } pageSubtitle: field(name: "pageSubtitle") { jsonValue } pageSummary: field(name: "pageSummary") { jsonValue } pageTitle: field(name: "pageTitle") { jsonValue } } } } } } } }
+- ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
+  Hint: Datasource Template
+  Value: /sitecore/templates/Project/pillsbury/Components/Lawyers/CareerListing
+- ID: "a77e8568-1ab3-44f1-a664-b7c37ec7810d"
+  Hint: Parameters Template
+  Value: "{85C48EF5-B368-4098-81BA-B4F13EF0D75D}"
+- ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
+  Hint: Datasource Location
+  Value: "query:$site/*[@@name='Data']/*[@@templatename='CareerListing Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='CareerListing Folder']"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "20b7c29e-a5ee-4176-bc27-d162202ed404"
+Languages:
+- Language: en
+  Fields:
+  - ID: "30e85e5d-e00a-4864-b358-7624d511deb4"
+    Hint: __Unversioned revision
+    Value: "5fbd6098-3a1d-4239-b1fe-d555314ca5a0"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260806T165229Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "e8df4701-308c-45ff-9dfb-cf8817453934"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260806T165246Z

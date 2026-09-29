@@ -1,0 +1,55 @@
+﻿---
+ID: "4a6f68b9-709b-4aa8-9444-b695efdc7180"
+Parent: "60f00535-9bb1-42ec-8458-8e0e3369e394"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Project/quanex/Products/ProductCarousel
+SharedFields:
+- ID: "037fe404-dd19-4bf7-8e30-4dadf68b27b0"
+  Hint: componentName
+  Value: ProductCarousel
+- ID: "17bb046a-a32a-41b3-8315-81217947611b"
+  Hint: ComponentQuery
+  Value: |
+    query ProductCarousel($datasource: String!, $language: String!) { datasource: item(path: $datasource, language: $language) { title: field(name: "Title") { jsonValue } backgroundImageUrl: field(name: "BackgroundImageUrl") { jsonValue } ctaLabel: field(name: "CtaLabel") { jsonValue } showOptionsHint: field(name: "ShowOptionsHint") { jsonValue } products: field(name: "Products") { ... on MultilistField { targetItems { id name path url { path } productName: field(name: "ProductName") { jsonValue } productId: field(name: "ProductID") { jsonValue } productSku: field(name: "ProductSKU") { jsonValue } pageTitle: field(name: "pageTitle") { jsonValue } pageHeaderTitle: field(name: "pageHeaderTitle") { jsonValue } categoryLabel: field(name: "CategoryLabel") { jsonValue } description: field(name: "Description") { jsonValue } imageUrl: field(name: "ImageUrl") { jsonValue } imageSecondaryUrl: field(name: "ImageSecondaryUrl") { jsonValue } specSheetLink: field(name: "SpecSheetLink") { jsonValue } } } } } }
+- ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
+  Hint: Datasource Template
+  Value: /sitecore/templates/Project/quanex/Components/Products/ProductCarousel
+- ID: "a77e8568-1ab3-44f1-a664-b7c37ec7810d"
+  Hint: Parameters Template
+  Value: "{BFDA8791-D822-4A6B-BC8A-56A5B3CE504B}"
+- ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
+  Hint: Datasource Location
+  Value: "query:$site/*[@@name='Data']/*[@@templatename='ProductCarousel Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='ProductCarousel Folder']"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "49f1bc86-1fbd-48ff-a53d-ed4474355a49"
+Languages:
+- Language: en
+  Fields:
+  - ID: "30e85e5d-e00a-4864-b358-7624d511deb4"
+    Hint: __Unversioned revision
+    Value: "d120a8f2-0213-41f6-8cef-3c7610f7da7a"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260813T211510Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "00349c99-485b-48e6-b17a-9499c05b6867"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260814T145527Z

@@ -1,0 +1,84 @@
+﻿---
+ID: "2f0f278c-7d2e-482c-9bd1-f6c9fb04c911"
+Parent: "42f8929a-83cd-48fe-92f0-8aac46e6cc62"
+Template: "42f8929a-83cd-48fe-92f0-8aac46e6cc62"
+Path: /sitecore/templates/Project/progressive/Knowledge Article/__Standard Values
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {53005D40-452D-471C-9731-99BE9D88DAA5}
+    {4294069F-91A1-4580-BDC5-F9549839AF5C}
+    {CB0AF92A-6D99-46E9-9E83-3FCC77A0F8DA}
+    {BF2C0857-3CF1-450A-A5C2-EDA853552051}
+    {4F821895-059B-4860-9583-2981911ECF3E}
+    {D1DEC580-83CA-4700-8EA4-4DBB35D6E0C4}
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: 
+- ID: "ca9b9f52-4fb0-4f87-a79f-24dea62cda65"
+  Hint: __Default workflow
+  Value: "{FA097F7E-ECE4-489E-842D-63AE8A7FCDD2}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "7e2bab60-f34d-408d-938a-f76be510c3cf"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}" />
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{717E1701-1FF6-418A-A8F1-35443B43B403}"
+              s:id="{F44005E1-CCBB-4B27-9598-5EF43FB60A46}"
+              s:par="GridParameters&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+              s:ph="" />
+          </d>
+        </r>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260728T150659Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: 
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "76c3fa76-04cb-4142-9756-6fcb96442bf4"
+      Hint: "KB-ID"
+      Value: $name
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "dd9cbb84-4498-4d2e-a50b-8b724620561b"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260802T135432Z
+    - ID: "fc43bd45-b665-4895-a9e5-6d9a34ea7835"
+      Hint: Title
+      Value: Knowledge Article Title

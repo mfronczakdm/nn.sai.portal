@@ -1,0 +1,204 @@
+﻿---
+ID: "adb1080d-ad26-471a-ba65-c13fe8c90596"
+Parent: "993b7a60-7b2c-43fc-bddc-2872624bca20"
+Template: "69728677-52e5-4482-a415-94f0222799b8"
+Path: /sitecore/content/andmore/americasmart/Home/About/Contact Us
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{E934C768-718D-4128-B80E-1A6C2D94DB63}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "0135ba93-a5b4-4872-9e1f-fb2948ef7fa2"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "18ab03d1-c9ae-4f00-815d-220fcb2d80e5"
+      Hint: image
+      Value: |
+        <image src="https://www.americasmart.com/-/jssmedia/AmericasMart/Events/Events.png?h=523&amp;iar=0&amp;w=1300&amp;hash=BB996327CDF731A0656AF36C48EE9DC3" alt="Contact AmericasMart" />
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Find contacts for registration, buyer assistance, leasing, logistics, hotels, media and general AmericasMart questions.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T013357Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Contact Us
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: 
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Connect with the right AmericasMart team.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Connect with the right AmericasMart team.
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Contact AmericasMart
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Contact Us | AmericasMart
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d390c56b-b0f1-46f6-9f12-33e114b38e6c"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Contact AmericasMart teams for registration, leasing, logistics and support.
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Contact AmericasMart
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260825T115004Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Contact AmericasMart
+    - ID: "f79467fb-89e8-478b-8ac7-5b37b53c1c0c"
+      Hint: Detail
+      Value: |
+        <h2>Contact AmericasMart</h2><p>AmericasMart provides dedicated contacts for registration, buyer assistance, showroom and tradeshow leasing, logistics, hotel reservations and media inquiries. The campus is located at 240 Peachtree Street NW, Atlanta, Georgia 30303.</p><p><a href="https://www.americasmart.com/About/Contact-Us">View contact options</a></p>
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "18ab03d1-c9ae-4f00-815d-220fcb2d80e5"
+      Hint: image
+      Value: |
+        <image alt="Contactar a AmericasMart" src="https://www.americasmart.com/-/jssmedia/AmericasMart/Events/Events.png?h=523&amp;iar=0&amp;w=1300&amp;hash=BB996327CDF731A0656AF36C48EE9DC3" />
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Encuentre contactos para registro, asistencia a compradores, arrendamiento, logística, hoteles, medios y consultas generales de AmericasMart.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T013357Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Contáctenos
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: 
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Conéctese con el equipo adecuado de AmericasMart.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Conéctese con el equipo adecuado de AmericasMart.
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Contactar a AmericasMart
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Contáctenos | AmericasMart
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b9fc89b5-4be9-4501-9c4e-8d72dcefac44"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Contacte a los equipos de AmericasMart para registro, arrendamiento, logística y soporte.
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Contactar a AmericasMart
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260904T105133Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Contactar a AmericasMart
+    - ID: "f79467fb-89e8-478b-8ac7-5b37b53c1c0c"
+      Hint: Detail
+      Value: |
+        <h2>Contactar a AmericasMart</h2><p>AmericasMart ofrece contactos dedicados para registro, asistencia a compradores, arrendamiento de showrooms y ferias comerciales, logística, reservas de hotel y consultas de medios. El campus está ubicado en 240 Peachtree Street NW, Atlanta, Georgia 30303.</p><p><a href="https://www.americasmart.com/About/Contact-Us">Ver opciones de contacto</a></p>
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "18ab03d1-c9ae-4f00-815d-220fcb2d80e5"
+      Hint: image
+      Value: |
+        <image alt="AmericasMartへのお問い合わせ" src="https://www.americasmart.com/-/jssmedia/AmericasMart/Events/Events.png?h=523&amp;iar=0&amp;w=1300&amp;hash=BB996327CDF731A0656AF36C48EE9DC3" />
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: 登録、バイヤーサポート、リース、物流、ホテル、メディア、AmericasMartに関する一般的なお問い合わせ先をご確認ください。
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T013357Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: お問い合わせ
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: 
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: 適切なAmericasMartチームにお問い合わせください。
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: 適切なAmericasMartチームにお問い合わせください。
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: AmericasMartへのお問い合わせ
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: お問い合わせ | AmericasMart
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "59eefb9b-67d6-4519-9cfb-53e29dd8afe9"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: 登録、リース、物流、サポートについてはAmericasMartの各チームまでお問い合わせください。
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: AmericasMartへのお問い合わせ
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260904T105159Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: AmericasMartへのお問い合わせ
+    - ID: "f79467fb-89e8-478b-8ac7-5b37b53c1c0c"
+      Hint: Detail
+      Value: |
+        <h2>AmericasMartへのお問い合わせ</h2><p>AmericasMartでは、登録、バイヤーサポート、ショールームおよび展示会のリース、物流、ホテル予約、メディアに関するお問い合わせ向けに専用の連絡先をご用意しています。キャンパス所在地は、240 Peachtree Street NW, Atlanta, Georgia 30303です。</p><p><a href="https://www.americasmart.com/About/Contact-Us">お問い合わせ先を見る</a></p>

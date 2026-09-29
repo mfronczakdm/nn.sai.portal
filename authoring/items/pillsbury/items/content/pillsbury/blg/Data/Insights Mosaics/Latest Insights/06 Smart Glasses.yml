@@ -1,0 +1,53 @@
+﻿---
+ID: "95ae7edf-6729-409f-92f7-44b58d5b92ed"
+Parent: "4b6a0b73-c27a-4fc9-8664-8ef6ad49c9c1"
+Template: "9bc41c3c-113d-412c-a039-e0057f014f78"
+Path: /sitecore/content/pillsbury/blg/Data/Insights Mosaics/Latest Insights/06 Smart Glasses
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{6C59AE29-D0A1-4B77-9305-0ABAB21D5FE5}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "c4d791c7-6f3b-419c-909b-47ef0e0ee5e8"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "1cad9cac-af51-491d-975e-99d306ee1473"
+      Hint: TileLink
+      Value: |
+        <link text="Smart glasses" linktype="external" url="https://www.blg.com/en/insights/2026/01/heads-up-innovation-head-on-compliance-for-canadian-hr-and-legal" anchor="" target="" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260822T024106Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{C55B483C-EA7F-4E76-A066-985F7D9396CA}"
+    - ID: "679bd5e8-b69f-479a-917b-58c2f4f5a26c"
+      Hint: AccentColor
+      Value: green
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "7681257d-8c66-4601-ac7f-a1e5e5bafc91"
+    - ID: "9f685b28-89bc-4df5-a949-45b5b2984e18"
+      Hint: TileImage
+      Value: |
+        <image mediaid="c0fc4780-35ed-4c07-88b5-7f4c9e11cdad" />
+    - ID: "b1dff298-c49d-4ca5-9a5d-3ef32d0c6dbf"
+      Hint: TileNumber
+      Value: 06
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260822T130208Z
+    - ID: "f579c2e4-2112-41cb-af38-200169948bb0"
+      Hint: TileTitle
+      Value: "Smart glasses at work: Heads-up innovation, head-on compliance for Canadian HR & legal"

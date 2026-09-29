@@ -1,0 +1,37 @@
+﻿---
+ID: "ee102685-b904-4e68-8b9e-63fbd9ea901b"
+Parent: "d8ed1c5b-c8bf-4e50-86ed-8cac617048e1"
+Template: "73e57eaa-b54a-41e1-b689-bf7dae9155ad"
+Path: /sitecore/content/progressive/pkm/Home/Questions and Answers/Documentation/Medical records requests/StateSpecific/TX/Medical records requests
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{1C4A96E1-13E0-453D-A2A6-2405A0074AB3}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260731T012529Z
+    - ID: "2d71e32d-e990-46b3-8ca1-58cd89743d5e"
+      Hint: Question
+      Value: "How do Progressive Texas claims advisors request medical or repair records?"
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Medical records requests
+    - ID: "4f8dc72e-1548-471c-9f3e-a13e944e4321"
+      Hint: Answer
+      Value: "Request medical or repair records using Progressive-approved authorizations and forms when the claim type requires them. Track outstanding requests as pending information so TX DOI prompt-payment clocks are not delayed, including storm-related injury claims. Never store or share medical data outside Progressive privacy rules."
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "98953e9e-07d9-4072-a748-85edd39730ec"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260731T012530Z

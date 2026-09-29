@@ -1,0 +1,37 @@
+﻿---
+ID: "f7445773-408f-4a99-913b-b875121b6e50"
+Parent: "a90c9cf1-2669-408a-85ec-b4bd4cadf79d"
+Template: "73e57eaa-b54a-41e1-b689-bf7dae9155ad"
+Path: /sitecore/content/progressive/pkm/Home/Questions and Answers/Claim Status/What open claims means/StateSpecific/TX/What open claims means
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{B4EF4835-6948-4ED9-A8F2-BD7BC0C99C0A}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260731T012521Z
+    - ID: "2d71e32d-e990-46b3-8ca1-58cd89743d5e"
+      Hint: Question
+      Value: "What does an open Progressive claim status mean for Texas claims advisors?"
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: What open claims means
+    - ID: "4f8dc72e-1548-471c-9f3e-a13e944e4321"
+      Hint: Answer
+      Value: "Open means the Progressive claim is active and still requires work such as investigation, estimate, payment, or customer follow-up. In Texas, review next action and aging against TX DOI prompt-payment timelines, especially on storm-related claims. Keep customers informed using Progressive-approved status language."
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5b50d6ba-bddd-4b72-ae1e-89ebecb7fe36"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260731T012522Z

@@ -1,0 +1,204 @@
+﻿---
+ID: "119a49d7-54e9-470f-af8f-5a2d5a449da0"
+Parent: "f9c2e930-e904-413b-b445-851376888cad"
+Template: "69728677-52e5-4482-a415-94f0222799b8"
+Path: /sitecore/content/andmore/americasmart/Home/Exhibit/Advertising
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{789D2B2B-CDEB-4D38-9687-CBD05C20C994}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "84514a47-4fa3-499c-906e-e3e7ae97339d"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "18ab03d1-c9ae-4f00-815d-220fcb2d80e5"
+      Hint: image
+      Value: |
+        <image src="https://www.americasmart.com/-/jssmedia/AmericasMart/Events/Events.png?h=523&amp;iar=0&amp;w=1300&amp;hash=BB996327CDF731A0656AF36C48EE9DC3" alt="Advertising opportunities at AmericasMart" />
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: AmericasMart offers onsite displays, sponsorships, digital ads, email campaigns and showroom resources for a range of budgets.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T013355Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Advertising
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: 
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Reach buyers before, during and after Market.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Reach buyers before, during and after Market.
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Advertising
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Advertising | AmericasMart
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2172175d-cadb-46e9-bd1f-e660d23e86f2"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Explore onsite and digital advertising opportunities at AmericasMart.
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Advertising
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260825T115004Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Advertising | AmericasMart
+    - ID: "f79467fb-89e8-478b-8ac7-5b37b53c1c0c"
+      Hint: Detail
+      Value: |
+        <h2>Build Brand Awareness</h2><p>Reach prospective buyers before, during and after Market with integrated advertising options. Opportunities include campus sponsorships, window and lobby displays, banner advertising, targeted email campaigns and free digital showroom tools.</p><p><a href="https://www.americasmart.com/Exhibit/Advertising">Explore advertising opportunities</a></p>
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "18ab03d1-c9ae-4f00-815d-220fcb2d80e5"
+      Hint: image
+      Value: |
+        <image alt="Oportunidades publicitarias en AmericasMart" src="https://www.americasmart.com/-/jssmedia/AmericasMart/Events/Events.png?h=523&amp;iar=0&amp;w=1300&amp;hash=BB996327CDF731A0656AF36C48EE9DC3" />
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: AmericasMart ofrece exhibiciones en sitio, patrocinios, anuncios digitales, campañas de correo electrónico y recursos para showrooms para distintos presupuestos.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T013355Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Publicidad
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: 
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Llegue a compradores antes, durante y después del Market.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Llegue a compradores antes, durante y después del Market.
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Publicidad
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Publicidad | AmericasMart
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "8f599872-ef02-4490-8d6a-889eb54e725f"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Explore las oportunidades de publicidad en sitio y digital en AmericasMart.
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Publicidad
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260904T105144Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Publicidad | AmericasMart
+    - ID: "f79467fb-89e8-478b-8ac7-5b37b53c1c0c"
+      Hint: Detail
+      Value: |
+        <h2>Aumente el reconocimiento de marca</h2><p>Llegue a compradores potenciales antes, durante y después del Market con opciones publicitarias integradas. Las oportunidades incluyen patrocinios del campus, exhibiciones en ventanas y lobby, publicidad en banners, campañas de correo electrónico segmentadas y herramientas digitales gratuitas para showrooms.</p><p><a href="https://www.americasmart.com/Exhibit/Advertising">Explore las oportunidades publicitarias</a></p>
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "18ab03d1-c9ae-4f00-815d-220fcb2d80e5"
+      Hint: image
+      Value: |
+        <image alt="AmericasMartの広告掲載機会" src="https://www.americasmart.com/-/jssmedia/AmericasMart/Events/Events.png?h=523&amp;iar=0&amp;w=1300&amp;hash=BB996327CDF731A0656AF36C48EE9DC3" />
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: AmericasMartでは、さまざまな予算に対応する館内ディスプレイ、スポンサーシップ、デジタル広告、Eメールキャンペーン、ショールーム向けリソースを提供しています。
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T013355Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: 広告
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: 
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Marketの前・開催中・終了後にバイヤーへリーチ。
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Marketの前・開催中・終了後にバイヤーへリーチ。
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: 広告
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: 広告 | AmericasMart
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "911ff639-5d77-4064-88c2-c3fcd495f45b"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: AmericasMartの館内およびデジタル広告掲載の機会をご覧ください。
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: 広告
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260904T105210Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: 広告 | AmericasMart
+    - ID: "f79467fb-89e8-478b-8ac7-5b37b53c1c0c"
+      Hint: Detail
+      Value: |
+        <h2>ブランド認知を高める</h2><p>統合型の広告オプションを活用して、Marketの前・開催中・終了後に見込みバイヤーへリーチしましょう。キャンパススポンサーシップ、ウィンドウやロビーのディスプレイ、バナー広告、ターゲットを絞ったEメールキャンペーン、無料のデジタルショールームツールなどの機会をご用意しています。</p><p><a href="https://www.americasmart.com/Exhibit/Advertising">広告掲載の機会を見る</a></p>

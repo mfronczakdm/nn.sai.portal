@@ -1,0 +1,135 @@
+﻿---
+ID: "f57baa07-a8bc-4859-b1db-96e0153c4d23"
+Parent: "c8a3f7b0-e2c4-4d27-aa20-d4018e333b38"
+Template: "274fc64e-530f-457e-bd04-8b195df94646"
+Path: /sitecore/content/quanex/quanex/Home/Products/Residential
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{82506163-3278-45BE-98BC-6DBEC689D570}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "36863961-5aa2-4612-9814-ecb1b9b6e3db"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "1753f07e-8cae-4f63-a34a-d7141d7acfaf"
+      Hint: image
+      Value: |
+        <image src="https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg" alt="Residential" />
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Quanex is dedicated to delivering the residential products you need to improve performance, sustainability and aesthetics.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260811T180603Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Residential
+    - ID: "3e073cf8-6b11-4c50-aad1-897861963db2"
+      Hint: Detail
+      Value: |
+        <p>Quanex is dedicated to delivering the residential products you need to improve performance, sustainability and aesthetics.</p><p><a href="https://www.quanex.com/product/residential/">Learn more on Quanex.com</a></p>
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Products to improve performance, sustainability and aesthetics
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Residential
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Residential | Quanex
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ea94e73e-6eea-4904-99fc-b8f3a54383b4"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Quanex is dedicated to delivering the residential products you need to improve performance, sustainability and aesthetics.
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Residential
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\WIt5EKonMo343Fqq8begbLVKlCgYPAIX
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260812T130251Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Residential
+  - Version: 2
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "1753f07e-8cae-4f63-a34a-d7141d7acfaf"
+      Hint: image
+      Value: |
+        <image src="https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg" alt="Residential" />
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Quanex is dedicated to delivering the residential products you need to improve performance, sustainability and aesthetics.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260814T120240Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Residential
+    - ID: "3e073cf8-6b11-4c50-aad1-897861963db2"
+      Hint: Detail
+      Value: |
+        <p>Quanex is dedicated to delivering the residential products you need to improve performance, sustainability and aesthetics.</p><p><a href="https://www.quanex.com/product/residential/">Learn more on Quanex.com</a></p>
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Quanex residential components help window, door, and cabinet manufacturers improve performance, sustainability, and aesthetics.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Products to improve performance, sustainability and aesthetics
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Residential
+    - ID: "65408499-25bc-49d0-a2ff-b2fdd798aafc"
+      Hint: ogImage
+      Value: |
+        <image src="https://www.quanex.com/wp-content/uploads/2022/09/mikron8500.jpg" alt="Quanex Residential Products" />
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Residential | Quanex
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "de7b987e-b666-4a91-9726-2027956c56be"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Quanex is dedicated to delivering the residential products you need to improve performance, sustainability and aesthetics.
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Residential
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\WIt5EKonMo343Fqq8begbLVKlCgYPAIX
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260814T120240Z
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260814T121335Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Residential Products | Quanex

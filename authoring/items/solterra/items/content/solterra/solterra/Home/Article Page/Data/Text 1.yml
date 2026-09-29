@@ -1,0 +1,49 @@
+﻿---
+ID: "b71ea85e-75f1-4072-98a4-85409faa48ba"
+Parent: "00718dba-11ee-4006-bd17-5211d18b8335"
+Template: "58041043-7bea-44f0-b1b8-08e4ea7054f4"
+Path: /sitecore/content/solterra/solterra/Home/Article Page/Data/Text 1
+BranchID: "97509128-1b31-4a5b-9c07-d4c94b611d24"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "71da8670-52bd-4f0a-947b-75ac0b3642fc"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{CF220BB9-BD45-4A98-9EA2-9EB33DA71799}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260430T182350Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8b57dadd-0825-4f5d-9c32-187c0af7e1fd"
+      Hint: text
+      Value: |
+        <div class="ck-content"><h5>At Solterra &amp; Co., we believe that beauty should be as responsible as it is indulgent. In a world where conscious consumerism is more than just a trend, we are redefining what it means to experience luxury—without compromise.</h5><p>For too long, the beauty industry has forced consumers to choose between high-performance products and ethical responsibility. We’re here to change that. Our approach to beauty and wellness is rooted in innovation, sustainability, and the belief that luxury should enhance both your well-being and the world around you. Through meticulous craftsmanship and forward-thinking formulations, we’re setting a new standard for what modern beauty can—and should—be.</p><p>We understand that true luxury isn’t about abundance—it’s about thoughtful craftsmanship. Every ingredient we use is carefully selected, not only for its efficacy but also for its environmental impact. We source responsibly, prioritizing fair-trade, organic, and renewable resources, ensuring that our products nurture both your skin and the ecosystems from which they originate.</p><h3>Join the Revolution</h3><p>We invite you to experience a new era of beauty and wellness—one where every choice you make is a step toward a more sustainable, luxurious future. Because at Solterra &amp; Co., elegance isn’t just about appearance—it’s about purpose.&nbsp;<br />Harnessing the power of the sun through solar energy represents a significant stride towards a cleaner, more sustainable future. As we explore and invest in this remarkable technology, we move closer to a world where our energy needs are met without compromising the health of our planet.&nbsp;<br />Solar energy is not just a technological advancement; it is a beacon of hope for a greener, more sustainable world.</p></div>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "608c6572-66db-46ca-b72a-13fc6a15c96c"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260430T182457Z

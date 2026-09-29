@@ -1,0 +1,165 @@
+﻿---
+ID: "8c046a38-ba3e-45ef-bd2d-39e5773ff1e9"
+Parent: "b3dfdc46-22e0-4f87-8cc5-2b635afc2242"
+Template: "d9ed4a26-1b44-4f52-9eae-61e1eb193671"
+Path: "/sitecore/content/pillsbury/blg/Home/Lawyers/Bios/Ryan-R-Adelsperger"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{6C59AE29-D0A1-4B77-9305-0ABAB21D5FE5}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{7E28332B-D3CA-4089-BC62-BE0494FBEECF}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "a041e849-9f79-4b51-be0d-48b9022c4aad"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{5BB456C7-5990-4C64-9D80-846F3927250E}"
+              s:ds=""
+              s:id="{560AB1F6-8C48-4449-9E72-F29C39BA750D}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B111402C4-3C22-4400-B2DE-2B6D31F268D9%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "19b27df3-a169-420a-a648-7d766ff1ce33"
+      Hint: FullName
+      Value: Frank Arnone
+    - ID: "1bcd45b4-983e-4549-a1f0-8c69ed67e2ad"
+      Hint: PreferredName
+      Value: Frank
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260804T195334Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{C55B483C-EA7F-4E76-A066-985F7D9396CA}"
+    - ID: "4e0e2a6d-de8f-4156-ab56-e0ad0a7824fa"
+      Hint: Office
+      Value: "{07F89600-C9D9-44C0-895C-2F7CD6A3FC1E}"
+    - ID: "7abdd52d-64a7-443b-bc39-4a20cb7dee8e"
+      Hint: Headshot
+      Value: |
+        <image src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&h=800&q=80" alt="Ryan R. Adelsperger" width="800" height="800" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "91583c47-a84e-4069-922e-4ddad94fed1e"
+    - ID: "a3aae655-77a7-4ec0-85ba-d1ddc3a4d34f"
+      Hint: SeoTitle
+      Value: Frank Arnone | Commercial Real Estate Group Toronto | BLG
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d628b04c-71e1-416d-bfb6-ec073f1dba6e"
+      Hint: SeoDescription
+      Value: Frank Arnone is a Partner in Commercial Real Estate at BLG in Toronto.
+    - ID: "d83bbbee-b5ff-4713-aa0e-9e59fdc7563f"
+      Hint: Email
+      Value: farnone@blg.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260822T014255Z
+    - ID: "dc46c43e-781c-4388-b53f-a1d8a083f2d9"
+      Hint: PracticeAreas
+      Value: "{883C14DD-E300-409B-A6CA-2B5D46716CF6}"
+    - ID: "df24e0b6-c373-4add-b339-034c64452a38"
+      Hint: Summary
+      Value: Partner specializing in commercial real estate — institutional investment, financing, major developments and leases.
+    - ID: "dfcaa3d1-e572-4289-9111-2324afa8ee5f"
+      Hint: JobTitle
+      Value: Partner
+    - ID: "e653befc-026a-4333-8b42-13d7ca3bf88a"
+      Hint: BarAdmissions
+      Value: "{64064E8A-29F9-4DBB-98CB-362404CD1973}"
+    - ID: "e854dce0-3a20-40db-b32e-9e223e599310"
+      Hint: Biography
+      Value: <p>Frank Arnone is a partner who specializes in commercial real estate — advising on institutional investment and financing transactions, major project developments and leases, including ownership and development structuring through joint ventures, limited partnerships, REITs and other structures.</p><p>Leading Canadian and international real estate owners, investors and developers trust Frank’s business acumen, as do many large Canadian pension funds and institutional investors. He has acted for the City of Toronto in the Toronto waterfront revitalization project.</p>
+    - ID: "f9f1c6c2-6a9e-4f91-8b8c-084feab583db"
+      Hint: Phone
+      Value: +1.416.367.6000
+  - Version: 2
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{5BB456C7-5990-4C64-9D80-846F3927250E}"
+              s:ds=""
+              s:id="{560AB1F6-8C48-4449-9E72-F29C39BA750D}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B111402C4-3C22-4400-B2DE-2B6D31F268D9%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "19b27df3-a169-420a-a648-7d766ff1ce33"
+      Hint: FullName
+      Value: Frank Arnone
+    - ID: "1bcd45b4-983e-4549-a1f0-8c69ed67e2ad"
+      Hint: PreferredName
+      Value: Frank
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260822T022844Z
+    - ID: "4e0e2a6d-de8f-4156-ab56-e0ad0a7824fa"
+      Hint: Office
+      Value: "{07F89600-C9D9-44C0-895C-2F7CD6A3FC1E}"
+    - ID: "7abdd52d-64a7-443b-bc39-4a20cb7dee8e"
+      Hint: Headshot
+      Value: |
+        <image src="https://www.blg.com/-/media/bios/img_toronto/frank_arnone.png" alt="Frank Arnone" width="800" height="800" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ce974028-8222-4cc5-b622-827f035b1df1"
+    - ID: "a3aae655-77a7-4ec0-85ba-d1ddc3a4d34f"
+      Hint: SeoTitle
+      Value: Frank Arnone | Commercial Real Estate Group Toronto | BLG
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260822T022844Z
+    - ID: "d628b04c-71e1-416d-bfb6-ec073f1dba6e"
+      Hint: SeoDescription
+      Value: Frank Arnone is a Partner in Commercial Real Estate at BLG in Toronto.
+    - ID: "d83bbbee-b5ff-4713-aa0e-9e59fdc7563f"
+      Hint: Email
+      Value: farnone@blg.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260822T022845Z
+    - ID: "dc46c43e-781c-4388-b53f-a1d8a083f2d9"
+      Hint: PracticeAreas
+      Value: "{883C14DD-E300-409B-A6CA-2B5D46716CF6}"
+    - ID: "df24e0b6-c373-4add-b339-034c64452a38"
+      Hint: Summary
+      Value: Partner specializing in commercial real estate — institutional investment, financing, major developments and leases.
+    - ID: "dfcaa3d1-e572-4289-9111-2324afa8ee5f"
+      Hint: JobTitle
+      Value: Partner
+    - ID: "e653befc-026a-4333-8b42-13d7ca3bf88a"
+      Hint: BarAdmissions
+      Value: "{64064E8A-29F9-4DBB-98CB-362404CD1973}"
+    - ID: "e854dce0-3a20-40db-b32e-9e223e599310"
+      Hint: Biography
+      Value: <p>Frank Arnone is a partner who specializes in commercial real estate — advising on institutional investment and financing transactions, major project developments and leases, including ownership and development structuring through joint ventures, limited partnerships, REITs and other structures.</p><p>Leading Canadian and international real estate owners, investors and developers trust Frank’s business acumen, as do many large Canadian pension funds and institutional investors. He has acted for the City of Toronto in the Toronto waterfront revitalization project.</p>
+    - ID: "f9f1c6c2-6a9e-4f91-8b8c-084feab583db"
+      Hint: Phone
+      Value: +1.416.367.6000

@@ -1,0 +1,158 @@
+﻿---
+ID: "fd4ca406-d7c2-46fe-8196-e6d09098dc0b"
+Parent: "47dbf199-fb3b-4b43-9d50-f12d65441315"
+Template: "7629f514-e156-4543-adc6-051453441b33"
+Path: /sitecore/content/quanex/quanex/Home/Products/Weatherseals/Threshold and Sweep Systems
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{DEEBA0D9-10B9-41BE-BDAA-51EE902953AA}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "311f6160-61f1-480a-a397-773e05d30d8d"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0169dfce-89a4-4941-821a-ab1266a1de4a"
+      Hint: CategoryLabel
+      Value: Fenestration Components
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: 
+    - ID: "17cbe776-d3b6-4203-a37c-30a46022bae6"
+      Hint: SpecSheetLink
+      Value: |
+        <link text="Print a Spec Sheet" linktype="external" url="https://www.quanex.com/product/weatherseals/" anchor="" target="_blank" />
+    - ID: "190e4142-e8b7-4d47-bcf7-b6bac38ce753"
+      Hint: TechnicalData
+      Value: <ul><li>Adjustable and fixed threshold assemblies</li><li>Door sweep and bottom seal options</li><li>Designed for vinyl, wood, and composite doors</li><li>Weather and traffic durability considerations</li><li>Compatible with Quanex seal portfolios</li></ul>
+    - ID: "211d45c2-39f7-430f-8c81-14d8ba310a0f"
+      Hint: ImageUrl
+      Value: "https://www.quanex.com/wp-content/uploads/2022/07/5Y-High-Performance-Thresholds_ProductImage_605x380.jpg"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260813T193704Z
+    - ID: "2c9cc36e-d30c-49c1-93dc-21a353045c54"
+      Hint: StylesAvailable
+      Value: "<ul><li>Residential entry thresholds</li><li>Patio and sliding door sweeps</li><li>Commercial high-traffic thresholds</li><li>Replacement and OEM seal kits</li></ul>"
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "4e90c3b8-4bd8-4034-87e0-9e824460f7e5"
+      Hint: ImageSecondary
+      Value: |
+        <image src="https://www.quanex.com/wp-content/uploads/2022/07/Door-Seals_ProductImage_605x380.jpg" alt="Door sweep seals" />
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Threshold and Sweep Systems
+    - ID: "77b62e2b-2f05-418e-bb41-2903feb32e39"
+      Hint: Description
+      Value: "<p>Quanex threshold and sweep systems help seal the bottom of doors against air, water, and debris while supporting smooth door operation in residential and commercial openings.</p><p>These components pair with weatherseals and extruded profiles to complete high-performing entry and patio door assemblies.</p>"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5e20edb7-ae8f-4086-90de-52b38bc0596c"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d004b569-75aa-446d-8e28-e6d0df434626"
+      Hint: ImageSecondaryUrl
+      Value: "https://www.quanex.com/wp-content/uploads/2022/07/Door-Seals_ProductImage_605x380.jpg"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260814T121954Z
+    - ID: "dbd19eed-f27a-4850-9a43-512eb6176c14"
+      Hint: Benefits
+      Value: "<ul><li>Helps stop drafts and water intrusion at the door sill</li><li>Supports accessibility and operation requirements</li><li>Completes fenestration sealing strategy</li><li>OEM-ready component packaging</li></ul>"
+  - Version: 2
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0169dfce-89a4-4941-821a-ab1266a1de4a"
+      Hint: CategoryLabel
+      Value: Fenestration Components
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: 
+    - ID: "17cbe776-d3b6-4203-a37c-30a46022bae6"
+      Hint: SpecSheetLink
+      Value: |
+        <link text="Print a Spec Sheet" linktype="external" url="https://www.quanex.com/product/weatherseals/" anchor="" target="_blank" />
+    - ID: "190e4142-e8b7-4d47-bcf7-b6bac38ce753"
+      Hint: TechnicalData
+      Value: <ul><li>Adjustable and fixed threshold assemblies</li><li>Door sweep and bottom seal options</li><li>Designed for vinyl, wood, and composite doors</li><li>Weather and traffic durability considerations</li><li>Compatible with Quanex seal portfolios</li></ul>
+    - ID: "211d45c2-39f7-430f-8c81-14d8ba310a0f"
+      Hint: ImageUrl
+      Value: "https://www.quanex.com/wp-content/uploads/2022/07/5Y-High-Performance-Thresholds_ProductImage_605x380.jpg"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260814T120355Z
+    - ID: "2c9cc36e-d30c-49c1-93dc-21a353045c54"
+      Hint: StylesAvailable
+      Value: "<ul><li>Residential entry thresholds</li><li>Patio and sliding door sweeps</li><li>Commercial high-traffic thresholds</li><li>Replacement and OEM seal kits</li></ul>"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Quanex threshold and sweep systems help seal the bottom of doors against air, water, and debris while supporting smooth door operation.
+    - ID: "4e90c3b8-4bd8-4034-87e0-9e824460f7e5"
+      Hint: ImageSecondary
+      Value: |
+        <image src="https://www.quanex.com/wp-content/uploads/2022/07/Door-Seals_ProductImage_605x380.jpg" alt="Door sweep seals" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Threshold and Sweep Systems
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "65408499-25bc-49d0-a2ff-b2fdd798aafc"
+      Hint: ogImage
+      Value: |
+        <image src="https://www.quanex.com/wp-content/uploads/2022/07/5Y-High-Performance-Thresholds_ProductImage_605x380.jpg" alt="Threshold and Sweep Systems" />
+    - ID: "77b62e2b-2f05-418e-bb41-2903feb32e39"
+      Hint: Description
+      Value: "<p>Quanex threshold and sweep systems help seal the bottom of doors against air, water, and debris while supporting smooth door operation in residential and commercial openings.</p><p>These components pair with weatherseals and extruded profiles to complete high-performing entry and patio door assemblies.</p>"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "af54d0f6-b864-4832-9814-4a3b53da123a"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c5b02812-deb7-4b51-8a68-8019a44f0db3"
+      Hint: ProductSKU
+      Value: "QNX-TH-5Y"
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260814T120355Z
+    - ID: "ca94ec7f-2908-4e34-a9e5-f8ec8dd7a91d"
+      Hint: ProductID
+      Value: "QNX-TH"
+    - ID: "d004b569-75aa-446d-8e28-e6d0df434626"
+      Hint: ImageSecondaryUrl
+      Value: "https://www.quanex.com/wp-content/uploads/2022/07/Door-Seals_ProductImage_605x380.jpg"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260814T145447Z
+    - ID: "dbd19eed-f27a-4850-9a43-512eb6176c14"
+      Hint: Benefits
+      Value: "<ul><li>Helps stop drafts and water intrusion at the door sill</li><li>Supports accessibility and operation requirements</li><li>Completes fenestration sealing strategy</li><li>OEM-ready component packaging</li></ul>"
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Threshold and Sweep Systems | Quanex
+    - ID: "f2fa4f60-bfec-4b8a-858c-f5ae25df459b"
+      Hint: ProductName
+      Value: Threshold and Sweep Systems

@@ -1,0 +1,33 @@
+﻿---
+ID: "381e782f-5322-4805-b959-628fe3616878"
+Parent: "af2b13d6-8185-4859-bb5b-36847e98a0f3"
+Template: "8a50e1d2-45bd-4d9b-a8ec-bed3fdc37c92"
+Path: "/sitecore/content/andmore/atlanta-apparel/Data/Media Canvases/Wholesale Marketplace"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260901T203735Z
+    - ID: "2d570e69-46f3-4b8e-aa5c-8dc30cb4bf91"
+      Hint: CanvasSubtitle
+      Value: for gift, decor, lifestyle and apparel industries.
+    - ID: "40771b55-b2cc-4bfe-b58b-5ca2274fc9fb"
+      Hint: CanvasTitle
+      Value: THE WHOLESALE MARKETPLACE
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b2889526-55a3-41d0-bf04-e7f54a14d9bb"
+    - ID: "ac9d779f-a67a-499d-83c4-50cd9741604b"
+      Hint: PrimaryLink
+      Value: |
+        <link text="ATTEND A MARKET" linktype="internal" url="/Markets-and-Events" anchor="" target="" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260901T203736Z

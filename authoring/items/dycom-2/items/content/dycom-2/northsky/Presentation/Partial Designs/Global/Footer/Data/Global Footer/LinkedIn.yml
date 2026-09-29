@@ -1,0 +1,53 @@
+﻿---
+ID: "7e1169fa-8d01-4250-894a-62f3e0ef5fef"
+Parent: "63e79fef-3d2b-4b63-b239-f100f85eea66"
+Template: "f24978e9-cab5-4a7f-a836-d423ff20b830"
+Path: "/sitecore/content/dycom-2/northsky/Presentation/Partial Designs/Global/Footer/Data/Global Footer/LinkedIn"
+BranchID: "ed920ceb-2272-432a-829e-4610b6b94945"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "e65b26f6-f3f1-4aa6-95b6-388af8686cc6"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{691316C2-D002-42B6-95A9-D0517B922EFF}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260525T184010Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2da020e0-e131-44e2-b578-b7f3b0dde55d"
+    - ID: "9eb14315-948f-4ada-b8e9-029f42c6fdca"
+      Hint: link
+      Value: |
+        <link linktype="external" url="https://www.linkedin.com/company/sitecore" anchor="" target="" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260525T184132Z
+    - ID: "e11f29f8-4940-4273-962a-5c598a9dc6bf"
+      Hint: socialIcon
+      Value: |
+        <image mediaid="{5B4DA1B5-9DB5-44AF-9076-4EA195E5DAD1}" alt="LinkedIn Icon"/>

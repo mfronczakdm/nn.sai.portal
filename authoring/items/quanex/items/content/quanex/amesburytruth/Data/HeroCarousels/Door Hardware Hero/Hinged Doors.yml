@@ -1,0 +1,41 @@
+﻿---
+ID: "653d0759-3914-41fe-98d1-96b0fb1733bd"
+Parent: "c9527ab6-658f-4c47-aa58-3b0c6cb86a6a"
+Template: "8ef3fb89-fd2f-48b9-a8ce-20f387e0ab0a"
+Path: /sitecore/content/quanex/amesburytruth/Data/HeroCarousels/Door Hardware Hero/Hinged Doors
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1c6ed158-edf5-4a99-9352-eab4a1943e03"
+      Hint: Link
+      Value: |
+        <link text="EXPLORE HINGED" linktype="internal" id="{D04D9943-2CED-4FB8-A300-97B1C83A0895}" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260813T190629Z
+    - ID: "48932c54-8c74-4029-ba15-1b8af19fe457"
+      Hint: Description
+      Value: "Handle sets, hinges, locks and Tru-Lock solutions engineered for residential and commercial hinged doors."
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d5064410-9e15-4987-bc5f-9c59145cef3b"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c2442485-2c9e-47d6-85e8-509877a1d977"
+      Hint: Image
+      Value: |
+        <image src="https://www.amesburytruth.com/img/fb-post.png" alt="AmesburyTruth hinged door hardware" />
+    - ID: "c8463a04-9fc1-4d12-b4c6-b4448f0cb298"
+      Hint: SlideName
+      Value: HINGED DOOR SYSTEMS
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260813T190629Z
+    - ID: "e64b5a37-be27-4001-9380-27bbb40fe1bc"
+      Hint: BackgroundImage
+      Value: |
+        <image src="https://www.amesburytruth.com/img/fb-post.png" alt="Hinged door backdrop" />

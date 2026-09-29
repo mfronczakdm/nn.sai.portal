@@ -1,0 +1,44 @@
+﻿---
+ID: "35e18643-b9c6-473d-80ae-f2e910d5a562"
+Parent: "faac946d-966a-4c05-a95d-3ea40f40513d"
+Template: "149b23b5-b7c2-434e-826f-171aa7700ba5"
+Path: /sitecore/content/quanex/amesburytruth/Data/ProductCarousels/AmesburyTruth Highlights
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260813T211526Z
+    - ID: "3aa5ab24-0c0c-4cdb-94e7-f5e106c51d2e"
+      Hint: Title
+      Value: AmesburyTruth Highlights
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "db575e2b-a9c8-4f8c-994c-13241b4ce859"
+    - ID: "bace846d-7eab-49b6-9961-9b82a2f9c9bd"
+      Hint: BackgroundImageUrl
+      Value: "https://www.quanex.com/wp-content/uploads/2022/07/window-hardware-hero.jpg"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "cb418ccb-edaa-4d6c-8a28-0d62cd901331"
+      Hint: Products
+      Value: |
+        {46A0D438-64A3-444B-AFF3-0DC4F96F7C93}
+        {8975098D-C541-48D9-A3BD-9BF69CBBA739}
+        {FA06DC63-6D5F-410B-92F9-F13F8CFFFAF5}
+        {4A22EEAB-C2F3-4EDE-85F4-38AEA2A9AC59}
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260813T212805Z

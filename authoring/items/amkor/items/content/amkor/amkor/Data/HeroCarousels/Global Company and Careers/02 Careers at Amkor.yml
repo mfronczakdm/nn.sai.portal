@@ -1,0 +1,91 @@
+﻿---
+ID: "32f217b3-7e89-4fc2-abd3-fddeac699ca9"
+Parent: "2b77f24d-9a72-4566-b75e-954a98f85221"
+Template: "8ef3fb89-fd2f-48b9-a8ce-20f387e0ab0a"
+Path: /sitecore/content/amkor/amkor/Data/HeroCarousels/Global Company and Careers/02 Careers at Amkor
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0938c532-f9ba-4658-b361-a96061553a4c"
+      Hint: Summary
+      Value: Global Careers
+    - ID: "1c6ed158-edf5-4a99-9352-eab4a1943e03"
+      Hint: Link
+      Value: |
+        <link linktype="internal" id="6f39ec02-daa7-4fed-9e65-e31a9daf37f1" anchor="" querystring="" target="" class="" text="EXPLORE CAREERS" title=""/>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260829T154645Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{FCA998C5-0CC3-4F91-94D8-0A4E6CAECE88}"
+    - ID: "48932c54-8c74-4029-ba15-1b8af19fe457"
+      Hint: Description
+      Value: Explore career opportunities around the world and take the next step toward joining our team.
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "6d95a930-0c46-4ca3-a3eb-b26830cd2433"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c2442485-2c9e-47d6-85e8-509877a1d977"
+      Hint: Image
+      Value: |
+        <Image src="https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2026/07/Amkor-Flag-in-Desert-Content-Tile.png" width="370" height="230" alt="Careers at Amkor Technology" />
+    - ID: "c8463a04-9fc1-4d12-b4c6-b4448f0cb298"
+      Hint: SlideName
+      Value: "Want to Work at Amkor?"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260829T204732Z
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0938c532-f9ba-4658-b361-a96061553a4c"
+      Hint: Summary
+      Value: グローバルキャリア
+    - ID: "1c6ed158-edf5-4a99-9352-eab4a1943e03"
+      Hint: Link
+      Value: |
+        <link class="" querystring="" id="6f39ec02-daa7-4fed-9e65-e31a9daf37f1" anchor="" target="" title="" linktype="internal" text="採用情報を見る" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260829T154645Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{FCA998C5-0CC3-4F91-94D8-0A4E6CAECE88}"
+    - ID: "48932c54-8c74-4029-ba15-1b8af19fe457"
+      Hint: Description
+      Value: 世界中のキャリア機会を探し、私たちのチームに加わる次の一歩を踏み出しましょう。
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "11f680ba-2f6b-46b2-8b4e-c27d3e78205c"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c2442485-2c9e-47d6-85e8-509877a1d977"
+      Hint: Image
+      Value: |
+        <image height="230" alt="Amkor Technologyでのキャリア" width="370" src="https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2026/07/Amkor-Flag-in-Desert-Content-Tile.png" />
+    - ID: "c8463a04-9fc1-4d12-b4c6-b4448f0cb298"
+      Hint: SlideName
+      Value: Amkorで働きませんか？
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260831T030421Z

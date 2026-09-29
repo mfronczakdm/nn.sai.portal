@@ -1,0 +1,26 @@
+﻿---
+ID: "24916c11-1a35-4ff3-87e7-4a17cd118a18"
+Parent: "8c49fe0f-0876-4065-b872-6a257f2ef321"
+Template: "9fbf9b82-4ef9-4932-b7aa-80d71ffd9a81"
+Path: /sitecore/content/pillsbury/blg/Home/Data/Latest_Insights
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260822T024231Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "30a19f8d-f6c1-4e81-b313-782bc59a94ea"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260822T024231Z
+    - ID: "ef25abd4-b6fa-4b25-b00d-fdc5076e24b7"
+      Hint: SectionTitle
+      Value: Latest_Insights

@@ -1,0 +1,164 @@
+﻿---
+ID: "c8a4af67-7a18-4962-be84-4b2e7876787e"
+Parent: "69a414f6-9e12-48d6-92c1-215609517a83"
+Template: "274fc64e-530f-457e-bd04-8b195df94646"
+Path: /sitecore/content/quanex/era/Home/Weatherseals
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{DC7EA428-CBBC-4701-9FEA-26FCBCA1A808}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "1815cb78-b5f0-489a-9eff-bdfec54d9937"
+- ID: "dec8d2d5-e3cf-48b6-a653-8e69e2716641"
+  Hint: __Security
+  Value: |
+    ar|sitecore\Era Author|pd|+item:read|-item:write|pe|+item:read|-item:write|
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "1753f07e-8cae-4f63-a34a-d7141d7acfaf"
+      Hint: image
+      Value: |
+        <image src="https://www.eraeverywhere.com/media/wysiwyg/ERA_Everywhere_Banner.jpg" alt="Weatherseals" />
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: ERA weatherseals and sealing products for windows and doors.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260811T225352Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Weatherseals
+    - ID: "3e073cf8-6b11-4c50-aad1-897861963db2"
+      Hint: Detail
+      Value: |
+        <p>ERA weatherseals and sealing products for windows and doors.</p><p><a href="https://www.eraeverywhere.com/">Learn more on ERA Everywhere</a></p>
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Weatherseals and sealing solutions from ERA.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Weatherseals and sealing solutions from ERA.
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Weatherseals
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Weatherseals | ERA Everywhere
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "e83fed31-8c91-4c32-83fe-73e70eac36e0"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: ERA weatherseals and sealing products for windows and doors.
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Weatherseals
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260821T115508Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Weatherseals | ERA Everywhere
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{A11F36A8-78B9-4240-A79B-90729118D22B}"
+              p:before="*"
+              s:ds=""
+              s:id="{B1136CF1-94BE-468C-B78D-9BE212AF5428}"
+              s:par="GridParameters&amp;FieldNames=%7BB3E74B84-A755-4AFD-94F8-2779E44DF1AD%7D&amp;Dark Imge&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "1753f07e-8cae-4f63-a34a-d7141d7acfaf"
+      Hint: image
+      Value: |
+        <image alt="Coupe-froid" src="https://www.eraeverywhere.com/media/wysiwyg/ERA_Everywhere_Banner.jpg" />
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: "Produits d'étanchéité et coupe-froid ERA pour fenêtres et portes."
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260811T225352Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: "Coupe-froid"
+    - ID: "3e073cf8-6b11-4c50-aad1-897861963db2"
+      Hint: Detail
+      Value: |
+        <p>Produits d'étanchéité et coupe-froid ERA pour fenêtres et portes.</p><p><a href="https://www.eraeverywhere.com/">En savoir plus sur ERA Everywhere</a></p>
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: "Solutions d'étanchéité et coupe-froid de ERA."
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: "Solutions d'étanchéité et coupe-froid de ERA."
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: "Coupe-froid"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: "Coupe-froid | ERA Everywhere"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "bc7f8e71-0581-4e7c-89a1-1c2cf5154e1c"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: "Produits d'étanchéité et coupe-froid ERA pour fenêtres et portes."
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: "Coupe-froid"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260818T134505Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: "Coupe-froid | ERA Everywhere"

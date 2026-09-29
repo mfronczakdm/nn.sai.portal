@@ -1,0 +1,108 @@
+﻿---
+ID: "a8ca264b-9681-4aca-b75a-60928a1a23f6"
+Parent: "309e3f75-6454-4fa1-8875-8b24f9adb5e7"
+Template: "3d6d2e42-d566-4a98-abf3-f1487bc2e603"
+Path: /sitecore/content/andmore/americasmart/Data/Icon Link Bars/AmericasMart Categories/Home Decor
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04853561-5122-4fcc-9b42-3dcde0ad89c7"
+      Hint: ItemTitle
+      Value: Home
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T020038Z
+    - ID: "297d260c-0217-448b-84a3-bd3eea64f3c1"
+      Hint: ItemLink
+      Value: |
+        <link text="Home" anchor="" linktype="external" class="" title="" target="" querystring="" url="https://www.americasmart.com/" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "bb1335df-d15a-400f-832a-aa00cf9588e6"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260825T020038Z
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04853561-5122-4fcc-9b42-3dcde0ad89c7"
+      Hint: ItemTitle
+      Value: Inicio
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T020038Z
+    - ID: "297d260c-0217-448b-84a3-bd3eea64f3c1"
+      Hint: ItemLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="Inicio" url="https://www.americasmart.com/" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "e21c252e-4902-4b04-b9b2-3c5ef981a3d2"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260904T105323Z
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04853561-5122-4fcc-9b42-3dcde0ad89c7"
+      Hint: ItemTitle
+      Value: ホーム
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T020038Z
+    - ID: "297d260c-0217-448b-84a3-bd3eea64f3c1"
+      Hint: ItemLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="ホーム" url="https://www.americasmart.com/" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a5b37fd0-db99-446d-9075-cf6517f23828"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260904T105350Z

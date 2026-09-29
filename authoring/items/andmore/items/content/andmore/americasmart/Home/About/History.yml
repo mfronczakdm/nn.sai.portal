@@ -1,0 +1,204 @@
+﻿---
+ID: "49418265-8562-4234-9527-62893b448377"
+Parent: "993b7a60-7b2c-43fc-bddc-2872624bca20"
+Template: "69728677-52e5-4482-a415-94f0222799b8"
+Path: /sitecore/content/andmore/americasmart/Home/About/History
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{FB1BB96C-A4B3-4DF6-AC6E-585322B76384}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "156c5edd-31f6-4b73-b0f4-940bb9a890ec"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "18ab03d1-c9ae-4f00-815d-220fcb2d80e5"
+      Hint: image
+      Value: |
+        <image src="https://www.americasmart.com/-/jssmedia/AmericasMart/Events/Events.png?h=523&amp;iar=0&amp;w=1300&amp;hash=BB996327CDF731A0656AF36C48EE9DC3" alt="AmericasMart history" />
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: "Founded by architect and developer John C. Portman Jr. in 1957, AmericasMart grew into a connected three-building marketplace."
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T013356Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: History
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: 
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: More than six decades of wholesale commerce in Atlanta.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: More than six decades of wholesale commerce in Atlanta.
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: AmericasMart History
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: AmericasMart History
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "0239c590-d0e0-4d1d-a136-634704cbb496"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Explore the history of AmericasMart from 1957 to today's ANDMORE marketplace.
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: A Legacy of Excellence
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260825T115004Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: AmericasMart History
+    - ID: "f79467fb-89e8-478b-8ac7-5b37b53c1c0c"
+      Hint: Detail
+      Value: |
+        <h2>A Legacy of Excellence</h2><p>Founded in 1957 by architect and developer John C. Portman Jr., AmericasMart began as The Atlanta Merchandise Mart. Building 1 opened in 1961 and became the foundation of today's integrated three-building campus. In 2018, AmericasMart merged with International Market Centers, now ANDMORE.</p><p><a href="https://www.americasmart.com/About/History">Explore AmericasMart history</a></p>
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "18ab03d1-c9ae-4f00-815d-220fcb2d80e5"
+      Hint: image
+      Value: |
+        <image alt="Historia de AmericasMart" src="https://www.americasmart.com/-/jssmedia/AmericasMart/Events/Events.png?h=523&amp;iar=0&amp;w=1300&amp;hash=BB996327CDF731A0656AF36C48EE9DC3" />
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Fundado por el arquitecto y desarrollador John C. Portman Jr. en 1957, AmericasMart creció hasta convertirse en un mercado conectado de tres edificios.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T013356Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Historia
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: 
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Más de seis décadas de comercio mayorista en Atlanta.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Más de seis décadas de comercio mayorista en Atlanta.
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Historia de AmericasMart
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Historia de AmericasMart
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "751480eb-6c70-4ab5-b819-1138eefbe48d"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Explora la historia de AmericasMart desde 1957 hasta el mercado actual de ANDMORE.
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Un legado de excelencia
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260904T105133Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Historia de AmericasMart
+    - ID: "f79467fb-89e8-478b-8ac7-5b37b53c1c0c"
+      Hint: Detail
+      Value: |
+        <h2>Un legado de excelencia</h2><p>Fundado en 1957 por el arquitecto y desarrollador John C. Portman Jr., AmericasMart comenzó como The Atlanta Merchandise Mart. El Edificio 1 abrió en 1961 y se convirtió en la base del campus integrado de tres edificios de hoy. En 2018, AmericasMart se fusionó con International Market Centers, ahora ANDMORE.</p><p><a href="https://www.americasmart.com/About/History">Explora la historia de AmericasMart</a></p>
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "18ab03d1-c9ae-4f00-815d-220fcb2d80e5"
+      Hint: image
+      Value: |
+        <image alt="AmericasMartの歴史" src="https://www.americasmart.com/-/jssmedia/AmericasMart/Events/Events.png?h=523&amp;iar=0&amp;w=1300&amp;hash=BB996327CDF731A0656AF36C48EE9DC3" />
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: 1957年に建築家・デベロッパーのJohn C. Portman Jr.によって創設されたAmericasMartは、つながる3棟のマーケットプレイスへと成長しました。
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T013356Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: 歴史
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: 
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: アトランタにおける60年以上にわたる卸売商取引の歴史。
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: アトランタにおける60年以上にわたる卸売商取引の歴史。
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: AmericasMartの歴史
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: AmericasMartの歴史
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "56326e65-ff71-4bee-95f1-566cb34f61f0"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: 1957年から現在のANDMOREマーケットプレイスに至るまでのAmericasMartの歴史をご覧ください。
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: 卓越のレガシー
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260904T105159Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: AmericasMartの歴史
+    - ID: "f79467fb-89e8-478b-8ac7-5b37b53c1c0c"
+      Hint: Detail
+      Value: |
+        <h2>卓越のレガシー</h2><p>1957年に建築家・デベロッパーのJohn C. Portman Jr.によって創設されたAmericasMartは、当初The Atlanta Merchandise Martとして始まりました。1961年にBuilding 1が開業し、現在の3棟が一体となったキャンパスの礎となりました。2018年、AmericasMartはInternational Market Centers（現ANDMORE）と統合しました。</p><p><a href="https://www.americasmart.com/About/History">AmericasMartの歴史を見る</a></p>

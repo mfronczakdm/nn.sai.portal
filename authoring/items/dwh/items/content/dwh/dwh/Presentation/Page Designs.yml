@@ -1,0 +1,73 @@
+﻿---
+ID: "0392ae0f-3cda-41bb-a895-771e05ddccc4"
+Parent: "52915353-b505-4623-b572-ca9e51926c66"
+Template: "cc50fe22-f76b-4845-a9b3-ae918a3a4946"
+Path: /sitecore/content/dwh/dwh/Presentation/Page Designs
+BranchID: "45cf9f42-b3ac-4412-aab9-f8441c7e448e"
+SharedFields:
+- ID: "ba1f60d6-3deb-40cc-bb61-eec772279ee1"
+  Hint: TemplatesMapping
+  Value: "%7b3DD267C6-3939-439C-9202-33CCC2D6F300%7d%3d%257BD9F5319E-74F4-4DEB-8CD1-BA27A8782FA9%257D%26%7b0B5EE0D1-462E-4DCA-B507-5D12BE392368%7d%3d%257BD9F5319E-74F4-4DEB-8CD1-BA27A8782FA9%257D%26%7b8F5B2202-4BEA-4014-9479-513753144765%7d%3d%257BD83D7A8B-66EF-4F37-8C08-F85722CE16AD%257D%26%7b4F0A8BA1-39D6-4EC4-A96F-643CAB9CA9E8%7d%3d%257BD9F5319E-74F4-4DEB-8CD1-BA27A8782FA9%257D%26%7bA0293A8C-D81B-4572-A220-9A3B7D0CA161%7d%3d%257BD9F5319E-74F4-4DEB-8CD1-BA27A8782FA9%257D%26%7b26D9E650-E829-4189-BFFC-8B7D77F9B79E%7d%3d%257BD9F5319E-74F4-4DEB-8CD1-BA27A8782FA9%257D%26%7bD631B10B-2281-4011-A5D1-429F30F0AE9F%7d%3d%257BD9F5319E-74F4-4DEB-8CD1-BA27A8782FA9%257D"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "a2e00ecf-f3ab-4aef-9503-40c0505fb8e7"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{2EA756FA-AED6-4599-83B7-36FEFE229B31}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260608T142234Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f1bd1f82-5da5-4cb9-bca0-7ceda5b360c1"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260608T142647Z
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260608T142234Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "817d72ee-5880-4b1a-be8d-ed2a13e0c73f"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260609T183127Z

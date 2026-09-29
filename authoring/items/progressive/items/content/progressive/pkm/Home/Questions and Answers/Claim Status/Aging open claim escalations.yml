@@ -1,0 +1,37 @@
+﻿---
+ID: "72d5bd79-7178-4afe-9d10-fb9bcde34b35"
+Parent: "1c8aa83d-a901-49b1-9003-b78c91fbbe02"
+Template: "73e57eaa-b54a-41e1-b689-bf7dae9155ad"
+Path: /sitecore/content/progressive/pkm/Home/Questions and Answers/Claim Status/Aging open claim escalations
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{9149DFB9-4358-4C64-AB11-88CC1A652EAA}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260729T192648Z
+    - ID: "2d71e32d-e990-46b3-8ca1-58cd89743d5e"
+      Hint: Question
+      Value: "When should Progressive claims advisors escalate an aging open claim?"
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Aging open claim escalations
+    - ID: "4f8dc72e-1548-471c-9f3e-a13e944e4321"
+      Hint: Answer
+      Value: Escalate when Progressive aging thresholds are exceeded, the next action is blocked, or customer commitments are at risk. Provide a concise summary of status, blockers, and requested help. Follow Progressive escalation contacts for claims operations and involve an SME when coverage or liability is complex.
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "93c07fff-d6f8-444c-99cd-5d80873a4f98"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260729T192649Z

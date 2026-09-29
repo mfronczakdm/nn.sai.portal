@@ -1,0 +1,101 @@
+﻿---
+ID: "ccbeff7f-7b01-43a1-98f7-d3d41f68d947"
+Parent: "d7f525b1-5e39-4f07-8a0d-1d94bbd82b72"
+Template: "dfed4457-d760-457a-bec1-c0dccdc44381"
+Path: /sitecore/content/dwh/dwh/Data/Promos/Empty Nesters
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "1f66862d-a5e3-405f-8e3e-b787b4c39b12"
+      Hint: PromoText2
+      Value: |
+        <div class="ck-content"><p>From spacious estates for growing families to sleek designs for empty nesters—find your perfect fit with upgraded amenities and community perks.</p></div>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260609T165512Z
+    - ID: "28079f3a-896b-4273-be5f-59d0ebb7cd7d"
+      Hint: PromoText
+      Value: Level Up Your Lifestyle
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "599b3d6d-a8da-4c3c-85c4-c85ed802a4be"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c6e604c3-5371-4e67-83df-a09a5ea66249"
+      Hint: PromoText3
+      Value: From spacious estates for growing families to sleek designs for empty nesters&mdash;find your perfect fit with upgraded amenities and community perks.
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260609T165826Z
+    - ID: "ef24bed2-46ab-4d53-ad1a-1019935a4e89"
+      Hint: PromoLink
+      Value: |
+        <link linktype="internal" id="413a0ca5-da0e-42f1-beea-2f5464c0dd31" anchor="" querystring="" target="" class="" text="" title=""/>
+    - ID: "f94b9858-c439-4291-863b-757b536c8b65"
+      Hint: PromoIcon
+      Value: |
+        <Image src="https://mrfbasech.sitecoresandbox.cloud/api/public/content/12d8b0fa7f6348a18bd8d277d1dc360f?v=d714add8" dam-id="Ca_DVdZGQayLXnBJmW1xdA" width="1100" height="733" alt="imgi_16_2b69b42f-7a77-4ee2-a5ea-455482d162bf.jpg" dam-content-type="Image" thumbnailsrc="https://mrfbasech.sitecoresandbox.cloud/api/gateway/92386/thumbnail" />
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "1f66862d-a5e3-405f-8e3e-b787b4c39b12"
+      Hint: PromoText2
+      Value: |
+        <div class="ck-content"><p>Des propriétés spacieuses pour les familles en pleine croissance aux designs élégants pour les retraités—trouvez votre ajustement parfait avec des commodités améliorées et des avantages communautaires.</p></div>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260609T165512Z
+    - ID: "28079f3a-896b-4273-be5f-59d0ebb7cd7d"
+      Hint: PromoText
+      Value: Améliorez votre style de vie
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a5aeea61-4ed4-45c4-af74-26d1cc09e106"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c6e604c3-5371-4e67-83df-a09a5ea66249"
+      Hint: PromoText3
+      Value: Des propriétés spacieuses pour les familles en pleine croissance aux designs élégants pour les retraités&mdash;trouvez votre ajustement parfait avec des commodités améliorées et des avantages communautaires.
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260609T183225Z
+    - ID: "ef24bed2-46ab-4d53-ad1a-1019935a4e89"
+      Hint: PromoLink
+      Value: |
+        <link linktype="internal" id="413a0ca5-da0e-42f1-beea-2f5464c0dd31" anchor="" querystring="" target="" class="" text="" title=""/>
+    - ID: "f94b9858-c439-4291-863b-757b536c8b65"
+      Hint: PromoIcon
+      Value: |
+        <Image src="https://mrfbasech.sitecoresandbox.cloud/api/public/content/12d8b0fa7f6348a18bd8d277d1dc360f?v=d714add8" dam-id="Ca_DVdZGQayLXnBJmW1xdA" width="1100" height="733" alt="imgi_16_2b69b42f-7a77-4ee2-a5ea-455482d162bf.jpg" dam-content-type="Image" thumbnailsrc="https://mrfbasech.sitecoresandbox.cloud/api/gateway/92386/thumbnail" />

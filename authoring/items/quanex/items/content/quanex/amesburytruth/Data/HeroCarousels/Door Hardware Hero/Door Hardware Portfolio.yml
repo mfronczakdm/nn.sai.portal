@@ -1,0 +1,41 @@
+﻿---
+ID: "498ca8be-a1a0-44fb-a071-14b51cc6994e"
+Parent: "c9527ab6-658f-4c47-aa58-3b0c6cb86a6a"
+Template: "8ef3fb89-fd2f-48b9-a8ce-20f387e0ab0a"
+Path: /sitecore/content/quanex/amesburytruth/Data/HeroCarousels/Door Hardware Hero/Door Hardware Portfolio
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1c6ed158-edf5-4a99-9352-eab4a1943e03"
+      Hint: Link
+      Value: |
+        <link text="VIEW ALL DOOR HARDWARE" linktype="internal" id="{1E363D0F-E485-489B-B358-3DE8D735B25A}" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260813T190631Z
+    - ID: "48932c54-8c74-4029-ba15-1b8af19fe457"
+      Hint: Description
+      Value: "From standard components to custom-engineered solutions — one partner for your full door hardware bill of materials."
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "7e375f3f-d0fa-40af-8599-9702835dd0f3"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c2442485-2c9e-47d6-85e8-509877a1d977"
+      Hint: Image
+      Value: |
+        <image src="https://www.amesburytruth.com/img/fb-post.png" alt="AmesburyTruth door hardware portfolio" />
+    - ID: "c8463a04-9fc1-4d12-b4c6-b4448f0cb298"
+      Hint: SlideName
+      Value: DOOR HARDWARE PORTFOLIO
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260813T190632Z
+    - ID: "e64b5a37-be27-4001-9380-27bbb40fe1bc"
+      Hint: BackgroundImage
+      Value: |
+        <image src="https://www.amesburytruth.com/img/fb-post.png" alt="Door hardware portfolio backdrop" />

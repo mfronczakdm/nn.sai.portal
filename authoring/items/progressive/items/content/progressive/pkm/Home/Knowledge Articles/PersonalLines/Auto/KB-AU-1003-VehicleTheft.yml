@@ -1,0 +1,273 @@
+﻿---
+ID: "dd437660-8828-4608-9b1d-06c6b0e73559"
+Parent: "b0789647-4b73-4e34-b6a7-fa3e98f6c2cd"
+Template: "42f8929a-83cd-48fe-92f0-8aac46e6cc62"
+Path: "/sitecore/content/progressive/pkm/Home/Knowledge Articles/PersonalLines/Auto/KB-AU-1003-VehicleTheft"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{FA097F7E-ECE4-489E-842D-63AE8A7FCDD2}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{B5A6E591-D215-4037-BBD2-14523A4EAED0}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "d8f01c4c-f15b-4757-9152-0814e112555b"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: 
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{ED810A1E-6F9E-4741-AFF7-12132C7B4B51}"
+              p:after="r[@uid='{717E1701-1FF6-418A-A8F1-35443B43B403}']"
+              s:id="{F44005E1-CCBB-4B27-9598-5EF43FB60A46}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB6A72F2A-15BE-4113-B40F-0305459DC374%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=2"
+              s:ph="headless-main" />
+            <r
+              uid="{465D5B12-53FD-4000-929B-D53D5FB1D0BF}"
+              p:after="*[1=2]"
+              s:ds=""
+              s:id="{88D43837-24CA-45A7-9171-FEAD8AE89702}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B5E0CEF20-DC70-4922-A183-E6ADB987AF60%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=3"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "1a6c4003-b700-4ff6-9a1e-b0b809a20c52"
+      Hint: Standard Site Inspection Rules
+      Value: "<ul><li>If unrecovered: verify police entry and wait Progressive theft waiting period before total-loss settlement per guidelines</li><li>If recovered: inspect for collision damage, stripped parts, ignition damage, and interior vandalism</li><li>Document odometer, VIN plates, and airbag status</li><li>Separate theft-related damage from pre-existing damage</li></ul>"
+    - ID: "1cf7f3e5-7109-4726-aca1-76bf779f1f95"
+      Hint: Peril type
+      Value: "{152FCA3B-0726-49A3-8D73-447F35E1F334}"
+    - ID: "1d2229f9-6c8b-4828-97c0-ade6f1a125d0"
+      Hint: TotalRatings
+      Value: 32
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: "Progressive Claims Advisor playbook for stolen vehicle FNOL, police coordination, recovery inspection, and total-loss settlement."
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260802T132719Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Auto Vehicle Theft
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{325A5D47-D4EB-4876-B759-0E18E2D9DCED}"
+    - ID: "480bb6b8-0914-4d2c-a73e-c5b28b8693e0"
+      Hint: Intake Triggers
+      Value: "<p>Use this theft workflow when:</p><ul><li>Policyholder reports vehicle stolen, attempted theft, or theft of wheels/catalytic converter with comprehensive coverage</li><li>Police recover a Progressive-insured vehicle and notify the insured or Progressive</li><li>Prior theft FNOL needs update because the vehicle was recovered damaged or stripped</li><li>Keys / fobs were stolen and vehicle is missing (evaluate theft vs mysterious disappearance facts carefully)</li></ul>"
+    - ID: "4d1faace-7b0f-4ec7-94b8-9ae80e0a9bce"
+      Hint: Common Scenarios
+      Value: "<ul><li><strong>Stolen from apartment lot overnight:</strong> police report, comprehensive deductible, rental waiting period</li><li><strong>Recovered stripped for parts:</strong> total-loss evaluation; document missing components</li><li><strong>Catalytic converter cut:</strong> comprehensive; undercarriage photos; repair vs replace converter</li><li><strong>Valet took vehicle and it disappeared:</strong> facts may be conversion / voluntary parting — escalate coverage</li><li><strong>Teen took keys without permission:</strong> may not be theft by third party — supervisor/coverage path</li></ul>"
+    - ID: "4ed4709d-3dc8-4d81-bc4b-b44be7d21c45"
+      Hint: LastRated
+      Value: 20260719T113000Z
+    - ID: "4f91e6ca-b571-41f9-bc35-4e7e89c590de"
+      Hint: Baseline Reserve Guidelines
+      Value: "<ul><li>Unrecovered: reserve toward ACV / total-loss band after coverage confirmation</li><li>Recovered repairable: PD reserve from estimate; include storage/tow</li><li>Contents / aftermarket: reserve only for covered personal effects per Progressive auto forms</li><li>Update when recovery status changes</li></ul>"
+    - ID: "568439dd-7959-4317-ac05-4aca4fe37a7a"
+      Hint: AverageRating
+      Value: 4.00
+    - ID: "5897e9d3-8204-4ed7-9f6a-ceb4891c3182"
+      Hint: PositiveCount
+      Value: 36
+    - ID: "5b49b775-a3f5-41cd-bd78-90fae97f1fd6"
+      Hint: Core Triage Questions
+      Value: "<ol><li>When and where was the vehicle last seen? When discovered missing?</li><li>Police report filed? Agency, case number, and detective contact?</li><li>Were keys, fobs, and title in the insured’s possession?</li><li>Any GPS / Progressive telematics / OnStar-style locator active?</li><li>Loan/lease payoff needed? Lienholder name?</li><li>Personal property / aftermarket equipment in the vehicle?</li><li>Any prior damage, salvage history, or recent sale listing?</li><li>Suspects, roommates, ex-partners, or valet/parking attendants involved?</li></ol>"
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Personal Auto Vehicle Theft — Recovery and Total Loss
+    - ID: "6be9cd31-e34e-4bed-880a-a218075a5b0d"
+      Hint: General Payment Triggers
+      Value: "<ul><li>Total-loss settlement after Progressive valuation, lienholder requirements, and theft waiting period</li><li>Repair payments after recovery inspection and agreed estimate</li><li>Rental payments when rental coverage applies and theft waiting rules are satisfied</li><li>Owner retention / salvage only per Progressive total-loss procedures</li></ul>"
+    - ID: "71d4c96f-1e34-4f86-8ba5-e7a24a873933"
+      Hint: NegativeCount
+      Value: 4
+    - ID: "76c3fa76-04cb-4142-9756-6fcb96442bf4"
+      Hint: "KB-ID"
+      Value: "KB-AU-1003"
+    - ID: "8147ab19-7525-4ef0-a878-3e3f0a3157ac"
+      Hint: LOB
+      Value: "{0944EAEA-5558-443F-A68D-482773EA2153}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "59aeceb6-43b0-4f86-8e25-837912cdbf1b"
+    - ID: "ae3f508c-c043-4863-899c-986ad4b75bd5"
+      Hint: Photo Video Standards
+      Value: "<ul><li>Recovered vehicle: four corners, ignition area, missing parts close-ups</li><li>Police recovery yard location and unit condition on recovery day</li><li>Key/fob inventory photos when relevant</li><li>Catalytic converter undercarriage photos for converter-only theft</li></ul>"
+    - ID: "b3f4a945-e28b-4a1c-81c7-857555b83127"
+      Hint: General Escalation Rules
+      Value: "<ul><li><strong>Friendly fraud / insured involvement suspected:</strong> SIU referral</li><li><strong>Keys surrendered / voluntary parting:</strong> coverage SME — may not be theft under Progressive forms</li><li><strong>Recovered burned or heavily stripped:</strong> total-loss desk + possible SIU</li><li><strong>Catalytic converter theft wave / VIN cloning indicators:</strong> document thoroughly; SIU as needed</li></ul>"
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Personal Auto Vehicle Theft
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\WIt5EKonMo343Fqq8begbLVKlCgYPAIX
+    - ID: "c09aaa65-03f7-41a9-ba56-69b018e89ccc"
+      Hint: General Mitigation
+      Value: "<ul><li>Advise insured to continue police follow-up and freeze related accounts if PII was in the vehicle</li><li>Explain rental reimbursement timing for Progressive comprehensive theft (waiting periods may apply)</li><li>Authorize tow from recovery yard to Progressive inspection or salvage path when appropriate</li><li>Do not release Progressive settlement until ownership/lien and theft waiting requirements are met</li></ul>"
+    - ID: "cc6e82f0-6942-4103-8d12-c8742b54a7a1"
+      Hint: Purpose
+      Value: "<p>Standardize Progressive handling of <strong>Personal Auto comprehensive theft</strong> claims from FNOL through recovery or total-loss settlement.</p><ul><li>Confirm comprehensive theft coverage and correct deductible</li><li>Coordinate police reporting and recovery notifications</li><li>Inspect recovered units for damage, stripping, and prior damage disputes</li></ul>"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260802T180113Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: "KB-AU-1003-VehicleTheft"
+    - ID: "ef17e08a-c9dd-47e0-adf2-9232c87aaa7f"
+      Hint: RatingsSum
+      Value: 128
+    - ID: "fc43bd45-b665-4895-a9e5-6d9a34ea7835"
+      Hint: Title
+      Value: Personal Auto Vehicle Theft — Recovery and Total Loss
+  - Version: 2
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{ED810A1E-6F9E-4741-AFF7-12132C7B4B51}"
+              p:after="r[@uid='{717E1701-1FF6-418A-A8F1-35443B43B403}']"
+              s:id="{F44005E1-CCBB-4B27-9598-5EF43FB60A46}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB6A72F2A-15BE-4113-B40F-0305459DC374%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=2"
+              s:ph="headless-main" />
+            <r
+              uid="{465D5B12-53FD-4000-929B-D53D5FB1D0BF}"
+              p:after="*[1=2]"
+              s:ds=""
+              s:id="{88D43837-24CA-45A7-9171-FEAD8AE89702}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B5E0CEF20-DC70-4922-A183-E6ADB987AF60%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=3"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "1a6c4003-b700-4ff6-9a1e-b0b809a20c52"
+      Hint: Standard Site Inspection Rules
+      Value: "<ul><li>If unrecovered: verify police entry and wait Progressive theft waiting period before total-loss settlement per guidelines</li><li>If recovered: inspect for collision damage, stripped parts, ignition damage, and interior vandalism</li><li>Document odometer, VIN plates, and airbag status</li><li>Separate theft-related damage from pre-existing damage</li></ul>"
+    - ID: "1cf7f3e5-7109-4726-aca1-76bf779f1f95"
+      Hint: Peril type
+      Value: "{152FCA3B-0726-49A3-8D73-447F35E1F334}"
+    - ID: "1d2229f9-6c8b-4828-97c0-ade6f1a125d0"
+      Hint: TotalRatings
+      Value: 32
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: "Progressive Claims Advisor playbook for stolen vehicle FNOL, police coordination, recovery inspection, and total-loss settlement."
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260803T035628Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Auto Vehicle Theft
+    - ID: "29d334fb-0f6f-41fa-98ea-a6f30222129f"
+      Hint: sharedContent
+      Value: |
+        {0EAA07D5-22E1-4485-B2A7-26F3571E919B}
+        {37873D76-7824-4BE7-BD51-19A4623E2A43}
+        {36E49CA4-85AC-4B3A-84FF-89E4A2771BE3}
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{325A5D47-D4EB-4876-B759-0E18E2D9DCED}"
+    - ID: "480bb6b8-0914-4d2c-a73e-c5b28b8693e0"
+      Hint: Intake Triggers
+      Value: |
+        <div class="ck-content"><p>Use this theft workflow when:</p><ul><li>Policyholder reports vehicle stolen, attempted theft, or theft of wheels/catalytic converter with comprehensive coverage</li><li>Police recover a Progressive-insured vehicle and notify the insured or Progressive.</li><li>Prior theft FNOL needs update because the vehicle was recovered damaged or stripped</li><li>Keys / fobs were stolen and vehicle is missing (evaluate theft vs mysterious disappearance facts carefully)</li></ul></div>
+    - ID: "4d1faace-7b0f-4ec7-94b8-9ae80e0a9bce"
+      Hint: Common Scenarios
+      Value: "<ul><li><strong>Stolen from apartment lot overnight:</strong> police report, comprehensive deductible, rental waiting period</li><li><strong>Recovered stripped for parts:</strong> total-loss evaluation; document missing components</li><li><strong>Catalytic converter cut:</strong> comprehensive; undercarriage photos; repair vs replace converter</li><li><strong>Valet took vehicle and it disappeared:</strong> facts may be conversion / voluntary parting — escalate coverage</li><li><strong>Teen took keys without permission:</strong> may not be theft by third party — supervisor/coverage path</li></ul>"
+    - ID: "4ed4709d-3dc8-4d81-bc4b-b44be7d21c45"
+      Hint: LastRated
+      Value: 20260719T113000Z
+    - ID: "4f91e6ca-b571-41f9-bc35-4e7e89c590de"
+      Hint: Baseline Reserve Guidelines
+      Value: "<ul><li>Unrecovered: reserve toward ACV / total-loss band after coverage confirmation</li><li>Recovered repairable: PD reserve from estimate; include storage/tow</li><li>Contents / aftermarket: reserve only for covered personal effects per Progressive auto forms</li><li>Update when recovery status changes</li></ul>"
+    - ID: "568439dd-7959-4317-ac05-4aca4fe37a7a"
+      Hint: AverageRating
+      Value: 4.00
+    - ID: "5897e9d3-8204-4ed7-9f6a-ceb4891c3182"
+      Hint: PositiveCount
+      Value: 36
+    - ID: "5b49b775-a3f5-41cd-bd78-90fae97f1fd6"
+      Hint: Core Triage Questions
+      Value: |
+        <div class="ck-content"><ol><li>When and where was the vehicle last seen? When discovered missing?</li><li>Police report filed? Agency, case number, and detective contact?</li><li>Were keys, fobs, and title in the insured’s possession?</li><li>Any GPS / Progressive telematics / OnStar-style locator active?</li><li>Loan/lease payoff needed? Lienholder name?</li><li>Personal property / aftermarket equipment in the vehicle</li><li>Any prior damage, salvage history, or recent sale listing?</li><li>Suspects, roommates, ex-partners, or valet/parking attendants involved?</li></ol></div>
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Personal Auto Vehicle Theft — Recovery and Total Loss
+    - ID: "6be9cd31-e34e-4bed-880a-a218075a5b0d"
+      Hint: General Payment Triggers
+      Value: "<ul><li>Total-loss settlement after Progressive valuation, lienholder requirements, and theft waiting period</li><li>Repair payments after recovery inspection and agreed estimate</li><li>Rental payments when rental coverage applies and theft waiting rules are satisfied</li><li>Owner retention / salvage only per Progressive total-loss procedures</li></ul>"
+    - ID: "71d4c96f-1e34-4f86-8ba5-e7a24a873933"
+      Hint: NegativeCount
+      Value: 4
+    - ID: "76c3fa76-04cb-4142-9756-6fcb96442bf4"
+      Hint: "KB-ID"
+      Value: "KB-AU-1003"
+    - ID: "8147ab19-7525-4ef0-a878-3e3f0a3157ac"
+      Hint: LOB
+      Value: "{0944EAEA-5558-443F-A68D-482773EA2153}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "0fbbbb36-e000-4c7c-a091-1b966ca7957d"
+    - ID: "ae3f508c-c043-4863-899c-986ad4b75bd5"
+      Hint: Photo Video Standards
+      Value: "<ul><li>Recovered vehicle: four corners, ignition area, missing parts close-ups</li><li>Police recovery yard location and unit condition on recovery day</li><li>Key/fob inventory photos when relevant</li><li>Catalytic converter undercarriage photos for converter-only theft</li></ul>"
+    - ID: "b3f4a945-e28b-4a1c-81c7-857555b83127"
+      Hint: General Escalation Rules
+      Value: "<ul><li><strong>Friendly fraud / insured involvement suspected:</strong> SIU referral</li><li><strong>Keys surrendered / voluntary parting:</strong> coverage SME — may not be theft under Progressive forms</li><li><strong>Recovered burned or heavily stripped:</strong> total-loss desk + possible SIU</li><li><strong>Catalytic converter theft wave / VIN cloning indicators:</strong> document thoroughly; SIU as needed</li></ul>"
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Personal Auto Vehicle Theft
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c09aaa65-03f7-41a9-ba56-69b018e89ccc"
+      Hint: General Mitigation
+      Value: "<ul><li>Advise insured to continue police follow-up and freeze related accounts if PII was in the vehicle</li><li>Explain rental reimbursement timing for Progressive comprehensive theft (waiting periods may apply)</li><li>Authorize tow from recovery yard to Progressive inspection or salvage path when appropriate</li><li>Do not release Progressive settlement until ownership/lien and theft waiting requirements are met</li></ul>"
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260803T035628Z
+    - ID: "cc6e82f0-6942-4103-8d12-c8742b54a7a1"
+      Hint: Purpose
+      Value: |
+        <div class="ck-content"><p>Standardize Progressive handling of <strong>Personal Auto comprehensive theft</strong> claims from FNOL through recovery or total-loss settlement.</p><ul><li>Confirm comprehensive theft coverage and correct deductible </li><li>Coordinate police reporting and recovery notifications</li><li>Inspect recovered units for damage, stripping, and prior damage disputes</li></ul></div>
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260804T163502Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: "KB-AU-1003-VehicleTheft"
+    - ID: "ef17e08a-c9dd-47e0-adf2-9232c87aaa7f"
+      Hint: RatingsSum
+      Value: 128
+    - ID: "f98518c7-9e12-404f-93a9-8ffdc223a290"
+      Hint: AccessControl
+      Value: "{B9158C27-9A75-4EB6-AAB4-9CDE64EF63A3}"
+    - ID: "fc43bd45-b665-4895-a9e5-6d9a34ea7835"
+      Hint: Title
+      Value: Personal Auto Vehicle Theft — Recovery and Total Loss

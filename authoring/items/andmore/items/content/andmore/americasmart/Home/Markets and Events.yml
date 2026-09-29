@@ -1,0 +1,204 @@
+﻿---
+ID: "c115fd2a-f431-4121-9592-865b87145921"
+Parent: "3bd35058-a302-42fe-98a6-7eca10407de2"
+Template: "69728677-52e5-4482-a415-94f0222799b8"
+Path: /sitecore/content/andmore/americasmart/Home/Markets and Events
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{53C14E9A-433F-45C1-9EEF-80DA261792EF}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "a0a99d7d-86df-4574-a600-b902de862355"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "18ab03d1-c9ae-4f00-815d-220fcb2d80e5"
+      Hint: image
+      Value: |
+        <image src="https://www.americasmart.com/-/jssmedia/AmericasMart/Events/Events.png?h=523&amp;iar=0&amp;w=1300&amp;hash=BB996327CDF731A0656AF36C48EE9DC3" alt="Markets and events at AmericasMart" />
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: "AmericasMart offers annual shows and year-round sourcing for buyers and sellers across gift, lifestyle, home décor and apparel."
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T013325Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Markets & Events
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: 
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Find the AmericasMart show that fits your business.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Find the AmericasMart show that fits your business.
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Markets & Events
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Markets & Events | AmericasMart
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c3bf5c57-7acf-42dc-8b8f-1b7d86a285f9"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: "Explore AmericasMart markets, shows and year-round sourcing opportunities."
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Markets & Events
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260825T114828Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Markets & Events | AmericasMart
+    - ID: "f79467fb-89e8-478b-8ac7-5b37b53c1c0c"
+      Hint: Detail
+      Value: |
+        <h2>Find a Show for You</h2><p>With annual shows and year-round options in one convenient location, AmericasMart connects buyers and sellers across the gift, lifestyle, home décor and apparel spectrum.</p><p><a href="https://www.americasmart.com/Markets">Explore AmericasMart markets</a></p>
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "18ab03d1-c9ae-4f00-815d-220fcb2d80e5"
+      Hint: image
+      Value: |
+        <image alt="Mercados y eventos en AmericasMart" src="https://www.americasmart.com/-/jssmedia/AmericasMart/Events/Events.png?h=523&amp;iar=0&amp;w=1300&amp;hash=BB996327CDF731A0656AF36C48EE9DC3" />
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: AmericasMart ofrece ferias anuales y abastecimiento durante todo el año para compradores y vendedores en los sectores de regalos, estilo de vida, decoración del hogar y ropa.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T013325Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Mercados y eventos
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: 
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Encuentre la feria de AmericasMart que se adapte a su negocio.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Encuentre la feria de AmericasMart que se adapte a su negocio.
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Mercados y eventos
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Mercados y eventos | AmericasMart
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "8db62ead-d4bc-42df-a08c-3e506943dd66"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Explore los mercados, ferias y oportunidades de abastecimiento durante todo el año de AmericasMart.
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Mercados y eventos
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260904T105109Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Mercados y eventos | AmericasMart
+    - ID: "f79467fb-89e8-478b-8ac7-5b37b53c1c0c"
+      Hint: Detail
+      Value: |
+        <h2>Encuentre una feria para usted</h2><p>Con ferias anuales y opciones disponibles durante todo el año en una ubicación conveniente, AmericasMart conecta a compradores y vendedores en los sectores de regalos, estilo de vida, decoración del hogar y ropa.</p><p><a href="https://www.americasmart.com/Markets">Explore los mercados de AmericasMart</a></p>
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "18ab03d1-c9ae-4f00-815d-220fcb2d80e5"
+      Hint: image
+      Value: |
+        <image alt="AmericasMartのマーケットとイベント" src="https://www.americasmart.com/-/jssmedia/AmericasMart/Events/Events.png?h=523&amp;iar=0&amp;w=1300&amp;hash=BB996327CDF731A0656AF36C48EE9DC3" />
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: AmericasMartは、ギフト、ライフスタイル、ホームデコ、アパレル分野のバイヤーとセラーに向けて、年次ショーと通年の仕入れ機会を提供しています。
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T013325Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: マーケット＆イベント
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: 
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: あなたのビジネスに合ったAmericasMartのショーを見つけましょう。
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: あなたのビジネスに合ったAmericasMartのショーを見つけましょう。
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: マーケット＆イベント
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: マーケット＆イベント | AmericasMart
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c267e81c-edab-49f4-b079-a4e7ca67ed68"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: AmericasMartのマーケット、ショー、通年の仕入れ機会をご覧ください。
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: マーケット＆イベント
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260904T105135Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: マーケット＆イベント | AmericasMart
+    - ID: "f79467fb-89e8-478b-8ac7-5b37b53c1c0c"
+      Hint: Detail
+      Value: |
+        <h2>あなたに合ったショーを見つける</h2><p>アメリカズマートでは、年次ショーや通年のオプションを1か所で提供し、ギフト、ライフスタイル、ホームデコ、アパレル分野全体でバイヤーとセラーをつなぎます。</p><p><a href="https://www.americasmart.com/Markets">AmericasMartのマーケットを見る</a></p>

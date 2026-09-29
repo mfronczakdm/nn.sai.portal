@@ -1,0 +1,79 @@
+﻿---
+ID: "2e64aa56-683b-442d-929d-ee2f71446367"
+Parent: "c2da7e5c-9012-4103-828b-b163e60ffdf8"
+Template: "5d927e67-a3d1-4d2e-bd82-7ba5f60c5ade"
+Path: "/sitecore/content/new-quanex/quanex-alternators/Home/Articles/Article 2"
+BranchID: "97509128-1b31-4a5b-9c07-d4c94b611d24"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{13B018E5-314D-4F0B-831A-D7BF79921CC3}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "f1a80194-467b-468a-87df-c0c3fd0cafc6"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{3BB25302-A6E6-4098-83FC-C24CF78CD748}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: |
+        Lorem Ipsum Dolor Sur AmerLorem Ipsum Dolor Sur AmerLorem Ipsum Dolor Sur Amer
+        Lorem Ipsum Dolor Sur AmerLorem Ipsum Dolor Sur AmerLorem Ipsum Dolor Sur Amer
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260818T142708Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Article 2
+    - ID: "288c11f5-7457-4e7f-880a-a76a98a0e296"
+      Hint: taxAuthor
+      Value: "{321F0377-72F9-4EA5-A03D-094FDBB4D7E0}"
+    - ID: "2fcae033-cf44-4b77-b8ad-91f41b56cb1c"
+      Hint: pageDisplayDate
+      Value: 20250407T000000Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Article 2
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Article 2
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "434f9009-391c-4d5c-a5d8-32943e43845a"
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Article 2
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260818T142906Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Article 2
+    - ID: "efbce7e8-6d4e-49e2-9b48-a9ab9a1e6fd7"
+      Hint: pageThumbnail
+      Value: |
+        <image mediaid="745f2952-91d5-44eb-9f9c-cafe306b0b76" />

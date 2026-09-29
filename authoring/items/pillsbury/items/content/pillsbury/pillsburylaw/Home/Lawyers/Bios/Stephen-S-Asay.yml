@@ -1,0 +1,86 @@
+﻿---
+ID: "a65b716c-c64e-4f83-ac29-5ba7fad8b503"
+Parent: "5dad4c5c-84cd-471a-80ef-c805570be79a"
+Template: "d9ed4a26-1b44-4f52-9eae-61e1eb193671"
+Path: "/sitecore/content/pillsbury/pillsburylaw/Home/Lawyers/Bios/Stephen-S-Asay"
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{8D30ACFF-ACC4-441F-8B56-57D86334BC67}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "8f46bdf4-05c6-4d05-9177-758f134c42da"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{17FC69ED-BE29-4E4F-9C31-2DB705ED1600}"
+              s:ds=""
+              s:id="{560AB1F6-8C48-4449-9E72-F29C39BA750D}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BDE212001-1A78-4E22-BE53-C148AC5AEC64%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "19b27df3-a169-420a-a648-7d766ff1ce33"
+      Hint: FullName
+      Value: Stephen S. Asay
+    - ID: "1bcd45b4-983e-4549-a1f0-8c69ed67e2ad"
+      Hint: PreferredName
+      Value: Stephen
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260804T195415Z
+    - ID: "4e0e2a6d-de8f-4156-ab56-e0ad0a7824fa"
+      Hint: Office
+      Value: "{9B787EA8-77C2-405B-A6AD-5C41B8A60D97}"
+    - ID: "7abdd52d-64a7-443b-bc39-4a20cb7dee8e"
+      Hint: Headshot
+      Value: |
+        <image src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&h=800&q=80" alt="Stephen S. Asay" width="800" height="800" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "fee08207-e48f-4d79-bec7-abb45eef84b4"
+    - ID: "a3aae655-77a7-4ec0-85ba-d1ddc3a4d34f"
+      Hint: SeoTitle
+      Value: Stephen S. Asay | Partner | Insurance Recovery | Pillsbury
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d628b04c-71e1-416d-bfb6-ec073f1dba6e"
+      Hint: SeoDescription
+      Value: Stephen S. Asay is a Partner in Insurance Recovery & Advisory based in Washington, DC.
+    - ID: "d83bbbee-b5ff-4713-aa0e-9e59fdc7563f"
+      Hint: Email
+      Value: stephen.asay@pillsburylaw.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260805T125736Z
+    - ID: "dc46c43e-781c-4388-b53f-a1d8a083f2d9"
+      Hint: PracticeAreas
+      Value: "{D9FA92A2-B0CC-4736-8C90-26E2BA1C1195}"
+    - ID: "df24e0b6-c373-4add-b339-034c64452a38"
+      Hint: Summary
+      Value: Advises on risk management and complex insurance coverage and construction litigation.
+    - ID: "dfcaa3d1-e572-4289-9111-2324afa8ee5f"
+      Hint: JobTitle
+      Value: Partner
+    - ID: "e854dce0-3a20-40db-b32e-9e223e599310"
+      Hint: Biography
+      Value: <p>Stephen Asay advises clients on proactive risk management strategies and the resolution of complex commercial litigation involving insurance coverage and construction claims.</p>
+    - ID: "f9f1c6c2-6a9e-4f91-8b8c-084feab583db"
+      Hint: Phone
+      Value: +1.202.663.8711

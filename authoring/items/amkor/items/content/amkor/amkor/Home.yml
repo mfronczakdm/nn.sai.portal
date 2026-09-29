@@ -1,0 +1,463 @@
+﻿---
+ID: "bb13bf5a-b102-4fe8-b410-63e3da7aa448"
+Parent: "458424dd-0359-442b-bd70-7900aa1206f2"
+Template: "b6dafb99-cb07-4927-83ea-56f5a0631a0e"
+Path: /sitecore/content/amkor/amkor/Home
+BranchID: "45cf9f42-b3ac-4412-aab9-f8441c7e448e"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{31CE83C7-50C8-4E9B-B0CB-F9DACED5F7DF}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "1011deb1-c60b-4658-b3a5-4ff2bc0a941a"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{F558BEC9-C602-4D7A-B9A1-D0411C946EA4}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{78169A76-C838-432B-80D0-E567762B3FEB}"
+              p:before="*"
+              s:ds="b787e258-83fd-48bc-a176-895168f37bcc"
+              s:id="{80E42F34-7012-491E-9E5E-8D2B241CDEFF}"
+              s:par="FieldNames=%7B170E394D-F359-42A4-AFF3-0A98589B8A7E%7D&amp;RenderingIdentifier&amp;Styles&amp;CSSStyles&amp;GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=11"
+              s:ph="headless-main" />
+            <r
+              uid="{62BB7770-4C48-4439-87BD-2A46C29B34C6}"
+              p:after="r[@uid='{78169A76-C838-432B-80D0-E567762B3FEB}']"
+              s:ds="af9aa2c3-9cf1-49c4-9a8f-5211530f2fff"
+              s:id="{09F20AFE-ABD8-4A55-839F-F16CBCBDB7C9}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BDB0994AC-24C7-4070-A248-03173C3B7148%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=13"
+              s:ph="headless-main" />
+            <r
+              uid="{26C297FE-2ED1-471D-AEF8-60C36C242D33}"
+              p:after="r[@uid='{62BB7770-4C48-4439-87BD-2A46C29B34C6}']"
+              s:ds="2111c5e5-39f0-4d48-a512-26685a5cde1e"
+              s:id="{D806DDF7-39A7-4A6D-8E0A-D138BC53845D}"
+              s:par="FieldNames=%7B23889C65-EB97-472E-A801-CDE626B6D661%7D&amp;numColumns&amp;CSSStyles&amp;DynamicPlaceholderId=10&amp;ShowBackgroundImage=0"
+              s:ph="headless-main" />
+            <r
+              uid="{D5F670E4-6E38-41BE-9C60-78CD8B5D1617}"
+              p:after="r[@uid='{26C297FE-2ED1-471D-AEF8-60C36C242D33}']"
+              s:ds="local:/Data/IconLinkBar"
+              s:id="{916AD4EA-646B-4F69-BA9D-594CEA0D59C7}"
+              s:par="FieldNames=%7B9F25CF08-0D5F-4265-ADF0-9F372F14205B%7D&amp;RenderingIdentifier&amp;Styles&amp;CSSStyles&amp;GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=7"
+              s:ph="headless-main" />
+            <r
+              uid="{449261EE-3D53-428E-A7AF-884BF18F169B}"
+              p:after="r[@uid='{D5F670E4-6E38-41BE-9C60-78CD8B5D1617}']"
+              s:ds="e6ba41e4-6316-4dab-9724-c8ae3be23509"
+              s:id="{29419ABC-5E18-40B5-A113-26D89297D1A5}"
+              s:par="FieldNames=%7BABF5E41E-6968-4B86-B729-C14CEA65805A%7D&amp;RenderingIdentifier&amp;Styles&amp;CSSStyles&amp;GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=12"
+              s:ph="headless-main" />
+            <r
+              uid="{A93A28D1-0A31-467F-8CBE-0337D470E76B}"
+              p:after="r[@uid='{449261EE-3D53-428E-A7AF-884BF18F169B}']"
+              s:ds="3e822fa8-edb4-4c7a-9fbb-9ce52ae2e63e"
+              s:id="{29419ABC-5E18-40B5-A113-26D89297D1A5}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B65096C78-D7D2-45BC-A6B9-83F3843F7F5F%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=14"
+              s:ph="headless-main" />
+            <r
+              uid="{F61D3881-9CCA-434F-8E64-C9F78B2C4A10}"
+              p:after="*[1=2]"
+              s:ds="464a51c6-4046-404d-92de-16167789e5cb"
+              s:id="{29419ABC-5E18-40B5-A113-26D89297D1A5}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B514C76FF-DF40-4874-8864-D89D97B4CE5F%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=15"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Premium audio equipment and speakers designed for audiophiles. Experience exceptional sound quality with SYNCs heritage collection.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260824T120407Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: SYNC
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{FCA998C5-0CC3-4F91-94D8-0A4E6CAECE88}"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Premium audio equipment and speakers designed for audiophiles. Experience exceptional sound quality with SYNCs heritage collection.
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: SYNC
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "65408499-25bc-49d0-a2ff-b2fdd798aafc"
+      Hint: ogImage
+      Value: |
+        <image mediaid="{5977A6A5-D5D4-45BD-ADD5-0E7E629162FD}" />
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: SYNC
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d03bf90f-9c68-44a1-b8cd-bc8fc24f91df"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Premium audio equipment and speakers designed for audiophiles. Experience exceptional sound quality with SYNCs heritage collection.
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: SYNC
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260830T211555Z
+    - ID: "e7f8a9b0-c1d2-4e3f-8a9b-0c1d2e3f4a5b"
+      Hint: metadataAuthor
+      Value: Sitecore
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: SYNC
+    - ID: "f6fcc0b6-31b2-49cd-8a66-4ba282a8ad24"
+      Hint: metadataKeywords
+      Value: SYNC, audio equipment, speakers, headphones, premium sound, audiophile
+  - Version: 2
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{78169A76-C838-432B-80D0-E567762B3FEB}"
+              p:before="*"
+              s:ds="b787e258-83fd-48bc-a176-895168f37bcc"
+              s:id="{80E42F34-7012-491E-9E5E-8D2B241CDEFF}"
+              s:par="FieldNames=%7B170E394D-F359-42A4-AFF3-0A98589B8A7E%7D&amp;RenderingIdentifier&amp;Styles&amp;CSSStyles&amp;GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=11"
+              s:ph="headless-main">
+              <rls>
+                <ruleset
+                  s:pet="true">
+                  <rule
+                    uid="{F9981630-5215-47DB-AD86-735B9D888E53}"
+                    s:name="e30a55315d8245768d5fc78779819fc6">
+                    <conditions>
+                      <condition
+                        uid="F626851DA38347ABA490D4DA1C387B66"
+                        s:id="{8E7426A4-12ED-4C44-8625-E7191860E726}"
+                        s:VariantName="e30a55315d8245768d5fc78779819fc6" />
+                    </conditions>
+                    <actions>
+                      <action
+                        uid="{E0846B64-6CBB-40D7-B906-C3E1AB05FF3F}"
+                        s:id="{0F3C6BEC-E56B-4875-93D7-2846A75881D2}"
+                        s:DataSource="eb291c8e-1aa0-4bc2-9357-ea872f420560" />
+                    </actions>
+                  </rule>
+                  <rule
+                    uid="{00000000-0000-0000-0000-000000000000}"
+                    s:name="Default">
+                    <conditions>
+                      <condition
+                        uid="F5A396C99AC943368570BEEE25180A6A"
+                        s:id="{4888ABBB-F17D-4485-B14B-842413F88732}" />
+                    </conditions>
+                  </rule>
+                </ruleset>
+              </rls>
+            </r>
+            <r
+              uid="{62BB7770-4C48-4439-87BD-2A46C29B34C6}"
+              p:after="r[@uid='{78169A76-C838-432B-80D0-E567762B3FEB}']"
+              s:ds="af9aa2c3-9cf1-49c4-9a8f-5211530f2fff"
+              s:id="{09F20AFE-ABD8-4A55-839F-F16CBCBDB7C9}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BDB0994AC-24C7-4070-A248-03173C3B7148%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=13"
+              s:ph="headless-main" />
+            <r
+              uid="{26C297FE-2ED1-471D-AEF8-60C36C242D33}"
+              p:after="r[@uid='{62BB7770-4C48-4439-87BD-2A46C29B34C6}']"
+              s:ds="2111c5e5-39f0-4d48-a512-26685a5cde1e"
+              s:id="{D806DDF7-39A7-4A6D-8E0A-D138BC53845D}"
+              s:par="FieldNames=%7B23889C65-EB97-472E-A801-CDE626B6D661%7D&amp;numColumns&amp;CSSStyles&amp;DynamicPlaceholderId=10&amp;ShowBackgroundImage=0"
+              s:ph="headless-main">
+              <rls>
+                <ruleset
+                  s:pet="true">
+                  <rule
+                    uid="{B1382FED-98FC-48F1-98D0-754F985E67C8}"
+                    s:name="e30a55315d8245768d5fc78779819fc6">
+                    <conditions>
+                      <condition
+                        uid="BB1E9D2FC2FD4BCD95C792758731278C"
+                        s:id="{8E7426A4-12ED-4C44-8625-E7191860E726}"
+                        s:VariantName="e30a55315d8245768d5fc78779819fc6" />
+                    </conditions>
+                    <actions>
+                      <action
+                        uid="{A32AE4BC-5FF3-463B-A77C-AE5EFBCC2EAA}"
+                        s:id="{0F3C6BEC-E56B-4875-93D7-2846A75881D2}"
+                        s:DataSource="52e41a3a-f8a4-4471-b35c-a4c0a1e41fb5" />
+                    </actions>
+                  </rule>
+                  <rule
+                    uid="{00000000-0000-0000-0000-000000000000}"
+                    s:name="Default">
+                    <conditions>
+                      <condition
+                        uid="B7917738BEBD446A8525CA52DE19E555"
+                        s:id="{4888ABBB-F17D-4485-B14B-842413F88732}" />
+                    </conditions>
+                  </rule>
+                </ruleset>
+              </rls>
+            </r>
+            <r
+              uid="{D5F670E4-6E38-41BE-9C60-78CD8B5D1617}"
+              p:after="r[@uid='{26C297FE-2ED1-471D-AEF8-60C36C242D33}']"
+              s:ds="local:/Data/IconLinkBar"
+              s:id="{916AD4EA-646B-4F69-BA9D-594CEA0D59C7}"
+              s:par="FieldNames=%7B9F25CF08-0D5F-4265-ADF0-9F372F14205B%7D&amp;RenderingIdentifier&amp;Styles&amp;CSSStyles&amp;GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=7"
+              s:ph="headless-main" />
+            <r
+              uid="{449261EE-3D53-428E-A7AF-884BF18F169B}"
+              p:after="r[@uid='{D5F670E4-6E38-41BE-9C60-78CD8B5D1617}']"
+              s:ds="e6ba41e4-6316-4dab-9724-c8ae3be23509"
+              s:id="{29419ABC-5E18-40B5-A113-26D89297D1A5}"
+              s:par="FieldNames=%7BABF5E41E-6968-4B86-B729-C14CEA65805A%7D&amp;RenderingIdentifier&amp;Styles&amp;CSSStyles&amp;GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=12"
+              s:ph="headless-main" />
+            <r
+              uid="{A93A28D1-0A31-467F-8CBE-0337D470E76B}"
+              p:after="r[@uid='{449261EE-3D53-428E-A7AF-884BF18F169B}']"
+              s:ds="3e822fa8-edb4-4c7a-9fbb-9ce52ae2e63e"
+              s:id="{29419ABC-5E18-40B5-A113-26D89297D1A5}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B65096C78-D7D2-45BC-A6B9-83F3843F7F5F%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=14"
+              s:ph="headless-main" />
+            <r
+              uid="{F61D3881-9CCA-434F-8E64-C9F78B2C4A10}"
+              p:after="*[1=2]"
+              s:ds="464a51c6-4046-404d-92de-16167789e5cb"
+              s:id="{29419ABC-5E18-40B5-A113-26D89297D1A5}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B514C76FF-DF40-4874-8864-D89D97B4CE5F%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=15"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Premium audio equipment and speakers designed for audiophiles. Experience exceptional sound quality with SYNCs heritage collection.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260831T184229Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Amkor
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Premium audio equipment and speakers designed for audiophiles. Experience exceptional sound quality with SYNCs heritage collection.
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Amkor
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "65408499-25bc-49d0-a2ff-b2fdd798aafc"
+      Hint: ogImage
+      Value: |
+        <image mediaid="{5977A6A5-D5D4-45BD-ADD5-0E7E629162FD}" />
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Amkor
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "71c0a3c7-f84e-42a9-8c78-08dcd70b1349"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Premium audio equipment and speakers designed for audiophiles. Experience exceptional sound quality with SYNCs heritage collection.
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Amkor
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260831T184229Z
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260902T103306Z
+    - ID: "e7f8a9b0-c1d2-4e3f-8a9b-0c1d2e3f4a5b"
+      Hint: metadataAuthor
+      Value: Sitecore
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Amkor
+    - ID: "f6fcc0b6-31b2-49cd-8a66-4ba282a8ad24"
+      Hint: metadataKeywords
+      Value: SYNC, audio equipment, speakers, headphones, premium sound, audiophile
+- Language: "ja-JP"
+  Fields:
+  - ID: "30e85e5d-e00a-4864-b358-7624d511deb4"
+    Hint: __Unversioned revision
+    Value: "7acd513e-31bc-4a64-99e7-bb69cec67412"
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: ホーム
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{78169A76-C838-432B-80D0-E567762B3FEB}"
+              p:before="*"
+              s:ds="b787e258-83fd-48bc-a176-895168f37bcc"
+              s:id="{80E42F34-7012-491E-9E5E-8D2B241CDEFF}"
+              s:par="FieldNames=%7B170E394D-F359-42A4-AFF3-0A98589B8A7E%7D&amp;RenderingIdentifier&amp;Styles&amp;CSSStyles&amp;GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=11"
+              s:ph="headless-main" />
+            <r
+              uid="{62BB7770-4C48-4439-87BD-2A46C29B34C6}"
+              p:after="r[@uid='{78169A76-C838-432B-80D0-E567762B3FEB}']"
+              s:ds="af9aa2c3-9cf1-49c4-9a8f-5211530f2fff"
+              s:id="{09F20AFE-ABD8-4A55-839F-F16CBCBDB7C9}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BDB0994AC-24C7-4070-A248-03173C3B7148%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=13"
+              s:ph="headless-main" />
+            <r
+              uid="{26C297FE-2ED1-471D-AEF8-60C36C242D33}"
+              p:after="r[@uid='{62BB7770-4C48-4439-87BD-2A46C29B34C6}']"
+              s:ds="2111c5e5-39f0-4d48-a512-26685a5cde1e"
+              s:id="{D806DDF7-39A7-4A6D-8E0A-D138BC53845D}"
+              s:par="FieldNames=%7B23889C65-EB97-472E-A801-CDE626B6D661%7D&amp;numColumns&amp;CSSStyles&amp;DynamicPlaceholderId=10&amp;ShowBackgroundImage=0"
+              s:ph="headless-main" />
+            <r
+              uid="{D5F670E4-6E38-41BE-9C60-78CD8B5D1617}"
+              p:after="r[@uid='{26C297FE-2ED1-471D-AEF8-60C36C242D33}']"
+              s:ds="local:/Data/IconLinkBar"
+              s:id="{916AD4EA-646B-4F69-BA9D-594CEA0D59C7}"
+              s:par="FieldNames=%7B9F25CF08-0D5F-4265-ADF0-9F372F14205B%7D&amp;RenderingIdentifier&amp;Styles&amp;CSSStyles&amp;GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=7"
+              s:ph="headless-main" />
+            <r
+              uid="{449261EE-3D53-428E-A7AF-884BF18F169B}"
+              p:after="r[@uid='{D5F670E4-6E38-41BE-9C60-78CD8B5D1617}']"
+              s:ds="e6ba41e4-6316-4dab-9724-c8ae3be23509"
+              s:id="{29419ABC-5E18-40B5-A113-26D89297D1A5}"
+              s:par="FieldNames=%7BABF5E41E-6968-4B86-B729-C14CEA65805A%7D&amp;RenderingIdentifier&amp;Styles&amp;CSSStyles&amp;GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=12"
+              s:ph="headless-main" />
+            <r
+              uid="{A93A28D1-0A31-467F-8CBE-0337D470E76B}"
+              p:after="r[@uid='{449261EE-3D53-428E-A7AF-884BF18F169B}']"
+              s:ds="3e822fa8-edb4-4c7a-9fbb-9ce52ae2e63e"
+              s:id="{29419ABC-5E18-40B5-A113-26D89297D1A5}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B65096C78-D7D2-45BC-A6B9-83F3843F7F5F%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=14"
+              s:ph="headless-main" />
+            <r
+              uid="{F61D3881-9CCA-434F-8E64-C9F78B2C4A10}"
+              p:after="*[1=2]"
+              s:ds="464a51c6-4046-404d-92de-16167789e5cb"
+              s:id="{29419ABC-5E18-40B5-A113-26D89297D1A5}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B514C76FF-DF40-4874-8864-D89D97B4CE5F%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=15"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: オーディオ愛好家のために設計されたプレミアムオーディオ機器とスピーカー。SYNCのヘリテージコレクションで卓越した音質を体験してください。
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260824T120407Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: SYNC
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{FCA998C5-0CC3-4F91-94D8-0A4E6CAECE88}"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: オーディオ愛好家のために設計されたプレミアムオーディオ機器とスピーカー。SYNCのヘリテージコレクションで卓越した音質を体験してください.
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: SYNC
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "65408499-25bc-49d0-a2ff-b2fdd798aafc"
+      Hint: ogImage
+      Value: |
+        <image mediaid="{5977A6A5-D5D4-45BD-ADD5-0E7E629162FD}" alt="ヘッドホンを着けた女性" />
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: SYNC
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a48aaad1-ee19-49ce-a1b5-376dc06c2e03"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: オーディオ愛好家のために設計されたプレミアムオーディオ機器とスピーカー。SYNCのヘリテージコレクションで卓越した音質を体験してください。
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: SYNC
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260831T030118Z
+    - ID: "e7f8a9b0-c1d2-4e3f-8a9b-0c1d2e3f4a5b"
+      Hint: metadataAuthor
+      Value: Sitecore
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: SYNC
+    - ID: "f6fcc0b6-31b2-49cd-8a66-4ba282a8ad24"
+      Hint: metadataKeywords
+      Value: SYNC, オーディオ機器, スピーカー, ヘッドホン, プレミアムサウンド, オーディオ愛好家

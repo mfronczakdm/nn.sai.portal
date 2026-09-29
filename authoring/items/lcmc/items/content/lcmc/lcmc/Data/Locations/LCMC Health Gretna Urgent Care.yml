@@ -1,0 +1,238 @@
+﻿---
+ID: "f1e5353c-a2b7-47f0-9570-85b8fd6d9fed"
+Parent: "76041887-6e16-4844-ad13-366bc2e32265"
+Template: "1be17bb8-084f-4fba-a33f-8568e92f5b45"
+Path: /sitecore/content/lcmc/lcmc/Data/Locations/LCMC Health Gretna Urgent Care
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0cbd1feb-1e88-4b8f-974e-40a39d92b678"
+      Hint: VisitorInfo
+      Value: <p>No appointment required. Bring a photo ID and insurance card when possible.</p>
+    - ID: "1a4b9586-ee63-4f6b-aa77-fe5fa10b298d"
+      Hint: ParkingInfo
+      Value: Free parking is available in the Belle Chasse Highway lot.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T003645Z
+    - ID: "2c7fc5d0-8c5e-4947-96ed-5b9a8c1a6553"
+      Hint: LandingPage
+      Value: "{2F519DB5-833E-4540-93D6-25E1A2382071}"
+    - ID: "3bd52b62-4c4c-414b-badb-7b22a8302c2b"
+      Hint: HoursText
+      Value: "Walk-in hours typically 8 a.m. to 8 p.m. daily. Confirm current hours before you visit."
+    - ID: "5b761c6e-2119-4e9f-88ad-2ca564ac098e"
+      Hint: LocationTitle
+      Value: LCMC Health Gretna Urgent Care
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c9cc84d0-dd11-498e-9fde-4da945f131ed"
+    - ID: "949f2600-c710-4b8f-9c6a-45287b4b177a"
+      Hint: State
+      Value: LA
+    - ID: "a527f3e4-3842-44e6-8e33-4e4d4b07cb4c"
+      Hint: StreetAddress
+      Value: "2600 Belle Chasse Hwy., Suite B-2"
+    - ID: "b71a3795-49f5-4073-8783-6e811d20e7cd"
+      Hint: PhoneNumber
+      Value: "504-349-6747"
+    - ID: "b8865cad-75b2-44be-a7fc-81898a04ce1d"
+      Hint: LocationType
+      Value: Urgent Care
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c0d058ff-7eee-4fb6-8b01-50fcafcec82a"
+      Hint: OfferedServices
+      Value: |
+        {B69F3F30-2DFD-4668-ACED-3CEE2B15273D}
+        {2C7094F3-7E17-4A5F-8E1F-68830FDC81B6}
+    - ID: "ce0500e1-7c8b-4845-b54c-909c049e7f63"
+      Hint: PostalCode
+      Value: 70056
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260908T003759Z
+    - ID: "de83b497-49bc-41da-9b5f-3d04437dd153"
+      Hint: Latitude
+      Value: 29.9026
+    - ID: "e9488a30-c918-403c-bbaa-11feba2dfcb1"
+      Hint: LocationShortName
+      Value: Gretna Urgent Care
+    - ID: "ee630347-777d-47f6-8df9-c27c904a7903"
+      Hint: City
+      Value: Gretna
+    - ID: "f565cf13-09f9-4fbe-943e-1551fa1f6056"
+      Hint: LocationDescription
+      Value: "<p>Westbank walk-in urgent care for illnesses and injuries that need prompt attention but are not emergencies.</p>"
+    - ID: "fa6567c5-386f-4030-b03e-9cef3568cb4f"
+      Hint: LocationPhysicians
+      Value: "{3248558F-44BA-478E-97FE-80E84A000603}"
+    - ID: "facb5aff-7d1d-4234-88d6-50de5299d83f"
+      Hint: Longitude
+      Value: "-90.0302"
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0cbd1feb-1e88-4b8f-974e-40a39d92b678"
+      Hint: VisitorInfo
+      Value: <p>No se requiere cita previa. Trae una identificación con foto y tu tarjeta del seguro cuando sea posible.</p>
+    - ID: "1a4b9586-ee63-4f6b-aa77-fe5fa10b298d"
+      Hint: ParkingInfo
+      Value: Hay estacionamiento gratuito disponible en el lote de Belle Chasse Highway.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T003645Z
+    - ID: "2c7fc5d0-8c5e-4947-96ed-5b9a8c1a6553"
+      Hint: LandingPage
+      Value: "{2F519DB5-833E-4540-93D6-25E1A2382071}"
+    - ID: "3bd52b62-4c4c-414b-badb-7b22a8302c2b"
+      Hint: HoursText
+      Value: "Horario de atención sin cita previa: normalmente de 8 a. m. a 8 p. m., todos los días. Confirma el horario actual antes de visitarnos."
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5b761c6e-2119-4e9f-88ad-2ca564ac098e"
+      Hint: LocationTitle
+      Value: LCMC Health Atención de Urgencias Gretna
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "1ead45ad-57f7-44a5-b13a-93cde64116f1"
+    - ID: "949f2600-c710-4b8f-9c6a-45287b4b177a"
+      Hint: State
+      Value: LA
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "a527f3e4-3842-44e6-8e33-4e4d4b07cb4c"
+      Hint: StreetAddress
+      Value: "2600 Belle Chasse Hwy., Suite B-2"
+    - ID: "b71a3795-49f5-4073-8783-6e811d20e7cd"
+      Hint: PhoneNumber
+      Value: "504-349-6747"
+    - ID: "b8865cad-75b2-44be-a7fc-81898a04ce1d"
+      Hint: LocationType
+      Value: Atención de Urgencias
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c0d058ff-7eee-4fb6-8b01-50fcafcec82a"
+      Hint: OfferedServices
+      Value: |
+        {B69F3F30-2DFD-4668-ACED-3CEE2B15273D}
+        {2C7094F3-7E17-4A5F-8E1F-68830FDC81B6}
+    - ID: "ce0500e1-7c8b-4845-b54c-909c049e7f63"
+      Hint: PostalCode
+      Value: 70056
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T162655Z
+    - ID: "de83b497-49bc-41da-9b5f-3d04437dd153"
+      Hint: Latitude
+      Value: 29.9026
+    - ID: "e9488a30-c918-403c-bbaa-11feba2dfcb1"
+      Hint: LocationShortName
+      Value: Atención de Urgencias Gretna
+    - ID: "ee630347-777d-47f6-8df9-c27c904a7903"
+      Hint: City
+      Value: Gretna
+    - ID: "f565cf13-09f9-4fbe-943e-1551fa1f6056"
+      Hint: LocationDescription
+      Value: <p>Atención de urgencias sin cita previa en Westbank para enfermedades y lesiones que necesitan atención rápida, pero no son emergencias.</p>
+    - ID: "fa6567c5-386f-4030-b03e-9cef3568cb4f"
+      Hint: LocationPhysicians
+      Value: "{3248558F-44BA-478E-97FE-80E84A000603}"
+    - ID: "facb5aff-7d1d-4234-88d6-50de5299d83f"
+      Hint: Longitude
+      Value: "-90.0302"
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0cbd1feb-1e88-4b8f-974e-40a39d92b678"
+      Hint: VisitorInfo
+      Value: "<p>Aucun rendez-vous requis. Apportez une pièce d’identité avec photo et votre carte d’assurance, si possible.</p>"
+    - ID: "1a4b9586-ee63-4f6b-aa77-fe5fa10b298d"
+      Hint: ParkingInfo
+      Value: Stationnement gratuit disponible dans le stationnement de Belle Chasse Highway.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T003645Z
+    - ID: "2c7fc5d0-8c5e-4947-96ed-5b9a8c1a6553"
+      Hint: LandingPage
+      Value: "{2F519DB5-833E-4540-93D6-25E1A2382071}"
+    - ID: "3bd52b62-4c4c-414b-badb-7b22a8302c2b"
+      Hint: HoursText
+      Value: "Heures d’accueil sans rendez-vous habituellement de 8 h à 20 h, tous les jours. Veuillez confirmer les heures en vigueur avant votre visite."
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5b761c6e-2119-4e9f-88ad-2ca564ac098e"
+      Hint: LocationTitle
+      Value: Soins urgents LCMC Health Gretna
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "0e4b68ba-0081-48c7-b5c3-ed583eb49eab"
+    - ID: "949f2600-c710-4b8f-9c6a-45287b4b177a"
+      Hint: State
+      Value: LA
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "a527f3e4-3842-44e6-8e33-4e4d4b07cb4c"
+      Hint: StreetAddress
+      Value: "2600 Belle Chasse Hwy., Suite B-2"
+    - ID: "b71a3795-49f5-4073-8783-6e811d20e7cd"
+      Hint: PhoneNumber
+      Value: "504-349-6747"
+    - ID: "b8865cad-75b2-44be-a7fc-81898a04ce1d"
+      Hint: LocationType
+      Value: Soins urgents
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c0d058ff-7eee-4fb6-8b01-50fcafcec82a"
+      Hint: OfferedServices
+      Value: |
+        {B69F3F30-2DFD-4668-ACED-3CEE2B15273D}
+        {2C7094F3-7E17-4A5F-8E1F-68830FDC81B6}
+    - ID: "ce0500e1-7c8b-4845-b54c-909c049e7f63"
+      Hint: PostalCode
+      Value: 70056
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201315Z
+    - ID: "de83b497-49bc-41da-9b5f-3d04437dd153"
+      Hint: Latitude
+      Value: 29.9026
+    - ID: "e9488a30-c918-403c-bbaa-11feba2dfcb1"
+      Hint: LocationShortName
+      Value: Soins urgents Gretna
+    - ID: "ee630347-777d-47f6-8df9-c27c904a7903"
+      Hint: City
+      Value: Gretna
+    - ID: "f565cf13-09f9-4fbe-943e-1551fa1f6056"
+      Hint: LocationDescription
+      Value: "<p>Centre de soins urgents sans rendez-vous sur la rive ouest pour les maladies et les blessures qui nécessitent une attention rapide, mais qui ne sont pas des urgences.</p>"
+    - ID: "fa6567c5-386f-4030-b03e-9cef3568cb4f"
+      Hint: LocationPhysicians
+      Value: "{3248558F-44BA-478E-97FE-80E84A000603}"
+    - ID: "facb5aff-7d1d-4234-88d6-50de5299d83f"
+      Hint: Longitude
+      Value: "-90.0302"

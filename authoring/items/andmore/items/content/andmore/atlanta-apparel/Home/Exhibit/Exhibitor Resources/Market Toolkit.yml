@@ -1,0 +1,72 @@
+﻿---
+ID: "0ab4f9e5-3622-4c14-9720-c76f393900b1"
+Parent: "ac5d1237-f108-4061-a0e6-51014079fa65"
+Template: "69728677-52e5-4482-a415-94f0222799b8"
+Path: "/sitecore/content/andmore/atlanta-apparel/Home/Exhibit/Exhibitor Resources/Market Toolkit"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: 
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{945D7ABC-B370-41E9-B74C-407580DA7EA3}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "e9f604aa-bea7-400f-b5f2-cebb524cde21"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "18ab03d1-c9ae-4f00-815d-220fcb2d80e5"
+      Hint: image
+      Value: |
+        <image src="https://www.atlanta-apparel.com/-/media/Atlanta-Apparel/Fashion-Gallery/Videos2.png?h=400&amp;iar=0&amp;w=700&amp;hash=B2455DDEC2B731844429000DE879554D" alt="Atlanta Apparel market toolkit" />
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Use the Exhibitor Portal to update your Digital Showroom, manage lines, register staff and access market tools.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T013704Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Market Toolkit
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: 
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Promote your presence and manage your Digital Showroom.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Promote your presence and manage your Digital Showroom.
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Market Toolkit
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Market Toolkit | Atlanta Apparel
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b2805df3-e1f0-4551-ab89-a178045ae6d6"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Manage your Digital Showroom, lines, staff and market tools.
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Market Toolkit
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260825T115209Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Market Toolkit
+    - ID: "f79467fb-89e8-478b-8ac7-5b37b53c1c0c"
+      Hint: Detail
+      Value: |
+        <p>Use the Exhibitor Portal to manage your Digital Showroom, add lines and products, register staff, access important documents, make payments and order services. Keep your lines searchable and easier for buyers to source.</p><p><a href="https://www.atlanta-apparel.com/Exhibit/Resources/Market-Toolkit">Open the official Market Toolkit</a></p>

@@ -1,0 +1,45 @@
+﻿---
+ID: "476d9474-b092-4f4d-b45e-fe1b25771b8f"
+Parent: "6d0a0f2f-bf24-4fa4-9562-00b59dd05063"
+Template: "84dbe64b-0fed-4125-a971-725c0155c321"
+Path: /sitecore/content/progressive/pkm/Home/Shared Content
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: 
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 150
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "786be396-275f-481f-b7c7-158b2cc2c114"
+- ID: "dec8d2d5-e3cf-48b6-a653-8e69e2716641"
+  Hint: __Security
+  Value: |
+    ar|sitecore\PKM Content Author|pd|-item:create|+item:write|-item:delete|+item:read|-bucket:makebucket|-item:rename|-bucket:unmake|-item:admin|pe|-item:create|+item:write|-item:delete|+item:read|-bucket:makebucket|-item:rename|-bucket:unmake|-item:admin|au|sitecore\testuser1@sitecore.info|pd|+item:delete|+item:write|+item:read|^*|+item:rename|+item:create|pe|+item:delete|+item:write|+item:read|^*|+item:rename|+item:create|
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260731T010347Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d7d7236d-34c8-4a74-b02e-46a5f3e6d35e"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260805T114604Z

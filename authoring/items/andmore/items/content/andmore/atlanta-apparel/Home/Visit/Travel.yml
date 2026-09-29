@@ -1,0 +1,75 @@
+﻿---
+ID: "ce7211a9-145a-43a8-b574-33eba316e79e"
+Parent: "f6caece4-c4c6-466a-9d9f-170d90294ce0"
+Template: "69728677-52e5-4482-a415-94f0222799b8"
+Path: "/sitecore/content/andmore/atlanta-apparel/Home/Visit/Travel"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: 
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 700
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{F4C95BCE-8D95-4266-82C0-AE6A7E90E6A7}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "a65db1a1-f992-4b92-9b95-0f16fccac2e3"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "18ab03d1-c9ae-4f00-815d-220fcb2d80e5"
+      Hint: image
+      Value: |
+        <image src="https://www.atlanta-apparel.com/-/media/Atlanta-Apparel/Fashion-Gallery/ELLE9097_Resized.jpg?h=400&amp;iar=0&amp;w=700&amp;hash=03F08062862C050AF2F712F6CB700F10" alt="Travel to Atlanta Apparel" />
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Find official hotel savings, directions, parking and air travel resources for Atlanta Apparel.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T013538Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Travel
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: 
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Plan your stay and trip to AmericasMart.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Plan your stay and trip to AmericasMart.
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Travel
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Travel | Atlanta Apparel
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "46ca1833-3ecd-466b-af72-ae2dbeffd7ce"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Find hotels, directions, parking and air travel resources for Atlanta Apparel.
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Travel
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260903T231643Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Travel
+    - ID: "f79467fb-89e8-478b-8ac7-5b37b53c1c0c"
+      Hint: Detail
+      Value: |
+        <p>Plan your stay for Atlanta Apparel with exclusive hotel discounts through onPeak, the official housing partner, plus directions, parking and travel resources for the AmericasMart campus.</p><p><a href="https://www.atlanta-apparel.com/Attend/Travel">Plan your travel</a></p>

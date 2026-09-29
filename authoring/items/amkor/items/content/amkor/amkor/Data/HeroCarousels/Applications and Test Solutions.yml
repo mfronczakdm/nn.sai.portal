@@ -1,0 +1,65 @@
+﻿---
+ID: "eb291c8e-1aa0-4bc2-9357-ea872f420560"
+Parent: "e8544567-48b8-46ad-b8db-b7107fa9af9c"
+Template: "ed997a6b-feca-4349-a58d-72535e7fefff"
+Path: /sitecore/content/amkor/amkor/Data/HeroCarousels/Applications and Test Solutions
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260829T154203Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{FCA998C5-0CC3-4F91-94D8-0A4E6CAECE88}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "cd48ce82-97b0-4d6a-a9fa-97b2572a5d74"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260829T204905Z
+    - ID: "f94f50d4-7756-4dd8-a4ca-21f057242f56"
+      Hint: ContactLink
+      Value: |
+        <link linktype="internal" id="df23610e-a0c4-4e95-a316-ab794cff927f" anchor="" querystring="" target="" class="" text="Contact Us" title=""/>
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260829T154203Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{FCA998C5-0CC3-4F91-94D8-0A4E6CAECE88}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "3e8e3e34-826e-44e1-a390-9c29eabc3ba5"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260831T030227Z
+    - ID: "f94f50d4-7756-4dd8-a4ca-21f057242f56"
+      Hint: ContactLink
+      Value: |
+        <link class="" querystring="" id="df23610e-a0c4-4e95-a316-ab794cff927f" anchor="" target="" title="" linktype="internal" text="お問い合わせ" />

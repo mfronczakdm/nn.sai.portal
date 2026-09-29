@@ -1,0 +1,89 @@
+﻿---
+ID: "eea7d658-373f-4066-b2f0-5557d2103dda"
+Parent: "8e4ccaf5-bb55-4da0-a4bb-f993e69426e2"
+Template: "149b23b5-b7c2-434e-826f-171aa7700ba5"
+Path: /sitecore/content/quanex/era/Data/ProductCarousels/Casement Window Hardware
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260818T104442Z
+    - ID: "3aa5ab24-0c0c-4cdb-94e7-f5e106c51d2e"
+      Hint: Title
+      Value: Casement Window Hardware
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5fc3806d-7b4b-4cb7-ae4f-0795005e8b72"
+    - ID: "8d3eece7-48d3-4f23-8de7-1ab8bd74acd1"
+      Hint: ShowOptionsHint
+      Value: 1
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "cb418ccb-edaa-4d6c-8a28-0d62cd901331"
+      Hint: Products
+      Value: |
+        {0F898B80-ED16-46D0-91D4-B6F26D474E34}
+        {F2475D1A-E5F1-4355-817C-FD83AB87989E}
+        {CEBEA933-44CD-4B53-BDCD-C1777FB52F21}
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260818T104442Z
+    - ID: "fdc10f8a-7df8-492c-94f4-fe1cbe80b1e7"
+      Hint: CtaLabel
+      Value: More Information
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260818T104442Z
+    - ID: "3aa5ab24-0c0c-4cdb-94e7-f5e106c51d2e"
+      Hint: Title
+      Value: Quincaillerie de fenêtre à battants
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5b167f02-2be2-45da-8902-dbd9cde095e2"
+    - ID: "8d3eece7-48d3-4f23-8de7-1ab8bd74acd1"
+      Hint: ShowOptionsHint
+      Value: 1
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "cb418ccb-edaa-4d6c-8a28-0d62cd901331"
+      Hint: Products
+      Value: |
+        {0F898B80-ED16-46D0-91D4-B6F26D474E34}
+        {F2475D1A-E5F1-4355-817C-FD83AB87989E}
+        {CEBEA933-44CD-4B53-BDCD-C1777FB52F21}
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260818T134619Z
+    - ID: "fdc10f8a-7df8-492c-94f4-fe1cbe80b1e7"
+      Hint: CtaLabel
+      Value: Plus d'informations

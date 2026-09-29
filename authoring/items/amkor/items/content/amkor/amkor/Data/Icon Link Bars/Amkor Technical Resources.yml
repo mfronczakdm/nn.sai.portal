@@ -1,0 +1,71 @@
+﻿---
+ID: "39a9f2b6-00a9-4b32-8bfe-8ad1091ca4e2"
+Parent: "e9a7d2f7-de3f-4be3-9a25-b46d464a4015"
+Template: "5ad908da-deb0-4b6f-8a3d-00fdfc802915"
+Path: /sitecore/content/amkor/amkor/Data/Icon Link Bars/Amkor Technical Resources
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T015859Z
+    - ID: "47315939-1bcc-4e7c-89b3-faefe71dc758"
+      Hint: SectionTitle
+      Value: Technical Resources
+    - ID: "75c8149d-5f65-46ac-866c-a46478932724"
+      Hint: SectionDescription
+      Value: Search packaging, test, and reliability resources.
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a1d0b9b7-6593-402d-bf48-fa04a82f745d"
+    - ID: "aa8be91d-05f2-4c3f-82b6-f59aab8594bb"
+      Hint: SearchLink
+      Value: |
+        <link text="Search resources" anchor="" linktype="external" class="" title="" target="" querystring="" url="https://amkor.com/" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260825T015859Z
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T015859Z
+    - ID: "47315939-1bcc-4e7c-89b3-faefe71dc758"
+      Hint: SectionTitle
+      Value: 技術リソース
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "75c8149d-5f65-46ac-866c-a46478932724"
+      Hint: SectionDescription
+      Value: パッケージング、テスト、信頼性に関するリソースを検索します。
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c923440a-f8b3-413d-b8ba-044e2c3ec93f"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "aa8be91d-05f2-4c3f-82b6-f59aab8594bb"
+      Hint: SearchLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="リソースを検索" url="https://amkor.com/" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260831T030227Z

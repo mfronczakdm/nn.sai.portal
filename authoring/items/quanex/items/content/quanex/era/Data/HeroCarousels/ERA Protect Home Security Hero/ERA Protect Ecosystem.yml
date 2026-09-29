@@ -1,0 +1,87 @@
+﻿---
+ID: "10da67ad-66a5-4870-abc1-e03323937c11"
+Parent: "6aeec8b7-010b-440a-bd5d-5f444389cf0e"
+Template: "8ef3fb89-fd2f-48b9-a8ce-20f387e0ab0a"
+Path: /sitecore/content/quanex/era/Data/HeroCarousels/ERA Protect Home Security Hero/ERA Protect Ecosystem
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1c6ed158-edf5-4a99-9352-eab4a1943e03"
+      Hint: Link
+      Value: |
+        <link text="EXPLORE ERA PROTECT" linktype="internal" id="{A2D84554-5738-47DF-8F98-256A5CA3738A}" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260813T190558Z
+    - ID: "48932c54-8c74-4029-ba15-1b8af19fe457"
+      Hint: Description
+      Value: One system, one smartphone app and a suite of devices that keep homes secure around the clock.
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5ce900ed-3ebc-4ec6-8d3b-1fbb32367399"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c2442485-2c9e-47d6-85e8-509877a1d977"
+      Hint: Image
+      Value: |
+        <image src="https://www.eraeverywhere.com/media/wysiwyg/ERA_Everywhere_Banner.jpg" alt="ERA Protect ecosystem" />
+    - ID: "c8463a04-9fc1-4d12-b4c6-b4448f0cb298"
+      Hint: SlideName
+      Value: ERA PROTECT ECOSYSTEM
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260813T190559Z
+    - ID: "e64b5a37-be27-4001-9380-27bbb40fe1bc"
+      Hint: BackgroundImage
+      Value: |
+        <image src="https://www.eraeverywhere.com/media/wysiwyg/ERA_Everywhere_Banner.jpg" alt="Smart home security backdrop" />
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1c6ed158-edf5-4a99-9352-eab4a1943e03"
+      Hint: Link
+      Value: |
+        <link id="{A2D84554-5738-47DF-8F98-256A5CA3738A}" linktype="internal" text="EXPLORER ERA PROTECT" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260813T190558Z
+    - ID: "48932c54-8c74-4029-ba15-1b8af19fe457"
+      Hint: Description
+      Value: Un système, une application pour smartphone et une gamme d'appareils qui assurent la sécurité des maisons 24 heures sur 24.
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "0277223b-d62f-42f9-8620-d2acabe025d3"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c2442485-2c9e-47d6-85e8-509877a1d977"
+      Hint: Image
+      Value: |
+        <image alt="Écosystème ERA Protect" src="https://www.eraeverywhere.com/media/wysiwyg/ERA_Everywhere_Banner.jpg" />
+    - ID: "c8463a04-9fc1-4d12-b4c6-b4448f0cb298"
+      Hint: SlideName
+      Value: ÉCOSYSTÈME ERA PROTECT
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260818T134804Z
+    - ID: "e64b5a37-be27-4001-9380-27bbb40fe1bc"
+      Hint: BackgroundImage
+      Value: |
+        <image alt="Toile de fond de sécurité intelligente pour la maison" src="https://www.eraeverywhere.com/media/wysiwyg/ERA_Everywhere_Banner.jpg" />

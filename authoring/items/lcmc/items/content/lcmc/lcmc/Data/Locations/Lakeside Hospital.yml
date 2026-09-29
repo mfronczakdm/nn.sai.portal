@@ -1,0 +1,259 @@
+﻿---
+ID: "c6a3cdb7-8708-4c60-861b-009b7fb9e786"
+Parent: "76041887-6e16-4844-ad13-366bc2e32265"
+Template: "1be17bb8-084f-4fba-a33f-8568e92f5b45"
+Path: /sitecore/content/lcmc/lcmc/Data/Locations/Lakeside Hospital
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0cbd1feb-1e88-4b8f-974e-40a39d92b678"
+      Hint: VisitorInfo
+      Value: <p>Visitors should enter through the main lobby. Confirm current visiting hours with the nursing unit.</p>
+    - ID: "1a4b9586-ee63-4f6b-aa77-fe5fa10b298d"
+      Hint: ParkingInfo
+      Value: Free surface parking is available on the Lakeside campus near the main entrance.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T003619Z
+    - ID: "2c7fc5d0-8c5e-4947-96ed-5b9a8c1a6553"
+      Hint: LandingPage
+      Value: "{3A19DAC6-9E88-416D-AEB9-B677B796A2F8}"
+    - ID: "3bd52b62-4c4c-414b-badb-7b22a8302c2b"
+      Hint: HoursText
+      Value: Hospital open 24 hours. Emergency department open 24/7.
+    - ID: "5b761c6e-2119-4e9f-88ad-2ca564ac098e"
+      Hint: LocationTitle
+      Value: Lakeside Hospital
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "e5f0dbd0-2349-4800-96d3-6e97058445cf"
+    - ID: "949f2600-c710-4b8f-9c6a-45287b4b177a"
+      Hint: State
+      Value: LA
+    - ID: "a527f3e4-3842-44e6-8e33-4e4d4b07cb4c"
+      Hint: StreetAddress
+      Value: "4700 S. I-10 Service Rd. W"
+    - ID: "b71a3795-49f5-4073-8783-6e811d20e7cd"
+      Hint: PhoneNumber
+      Value: "504-780-8282"
+    - ID: "b8865cad-75b2-44be-a7fc-81898a04ce1d"
+      Hint: LocationType
+      Value: Hospital
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "bc5eb2b3-2e35-42b6-a006-49a269250e79"
+      Hint: HasEmergencyDepartment
+      Value: 1
+    - ID: "c0d058ff-7eee-4fb6-8b01-50fcafcec82a"
+      Hint: OfferedServices
+      Value: |
+        {21FB8DB6-1732-4A44-8BEC-E39C52C1961A}
+        {D2B7F3AD-6DF9-4B0D-AB3B-58AD3669DB5B}
+        {2C7094F3-7E17-4A5F-8E1F-68830FDC81B6}
+        {EF79ADEF-3A78-4992-B297-04B3447C9CF4}
+    - ID: "ce0500e1-7c8b-4845-b54c-909c049e7f63"
+      Hint: PostalCode
+      Value: 70001
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260908T003754Z
+    - ID: "de83b497-49bc-41da-9b5f-3d04437dd153"
+      Hint: Latitude
+      Value: 30.0008
+    - ID: "e9488a30-c918-403c-bbaa-11feba2dfcb1"
+      Hint: LocationShortName
+      Value: Lakeside
+    - ID: "ee630347-777d-47f6-8df9-c27c904a7903"
+      Hint: City
+      Value: Metairie
+    - ID: "f565cf13-09f9-4fbe-943e-1551fa1f6056"
+      Hint: LocationDescription
+      Value: <p>Lakeside Hospital provides hospital care in Metairie as part of the LCMC Health nonprofit system.</p>
+    - ID: "fa6567c5-386f-4030-b03e-9cef3568cb4f"
+      Hint: LocationPhysicians
+      Value: |
+        {B257CB21-E4C2-44BA-8C70-28D893D45C97}
+        {EED3B2C7-4DEF-4F96-B129-46E86DF0559D}
+    - ID: "facb5aff-7d1d-4234-88d6-50de5299d83f"
+      Hint: Longitude
+      Value: "-90.1689"
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0cbd1feb-1e88-4b8f-974e-40a39d92b678"
+      Hint: VisitorInfo
+      Value: <p>Los visitantes deben ingresar por el lobby principal. Confirme los horarios de visita vigentes con la unidad de enfermería.</p>
+    - ID: "1a4b9586-ee63-4f6b-aa77-fe5fa10b298d"
+      Hint: ParkingInfo
+      Value: Hay parqueadero en superficie gratuito disponible en el campus de Lakeside, cerca de la entrada principal.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T003619Z
+    - ID: "2c7fc5d0-8c5e-4947-96ed-5b9a8c1a6553"
+      Hint: LandingPage
+      Value: "{3A19DAC6-9E88-416D-AEB9-B677B796A2F8}"
+    - ID: "3bd52b62-4c4c-414b-badb-7b22a8302c2b"
+      Hint: HoursText
+      Value: Hospital abierto las 24 horas. Departamento de emergencias abierto 24/7.
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5b761c6e-2119-4e9f-88ad-2ca564ac098e"
+      Hint: LocationTitle
+      Value: Hospital Lakeside
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "3d08844a-8e71-4779-8db4-854d6b10d480"
+    - ID: "949f2600-c710-4b8f-9c6a-45287b4b177a"
+      Hint: State
+      Value: LA
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "a527f3e4-3842-44e6-8e33-4e4d4b07cb4c"
+      Hint: StreetAddress
+      Value: "4700 S. I-10 Service Rd. W"
+    - ID: "b71a3795-49f5-4073-8783-6e811d20e7cd"
+      Hint: PhoneNumber
+      Value: "504-780-8282"
+    - ID: "b8865cad-75b2-44be-a7fc-81898a04ce1d"
+      Hint: LocationType
+      Value: Hospital
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "bc5eb2b3-2e35-42b6-a006-49a269250e79"
+      Hint: HasEmergencyDepartment
+      Value: 1
+    - ID: "c0d058ff-7eee-4fb6-8b01-50fcafcec82a"
+      Hint: OfferedServices
+      Value: |
+        {21FB8DB6-1732-4A44-8BEC-E39C52C1961A}
+        {D2B7F3AD-6DF9-4B0D-AB3B-58AD3669DB5B}
+        {2C7094F3-7E17-4A5F-8E1F-68830FDC81B6}
+        {EF79ADEF-3A78-4992-B297-04B3447C9CF4}
+    - ID: "ce0500e1-7c8b-4845-b54c-909c049e7f63"
+      Hint: PostalCode
+      Value: 70001
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T162654Z
+    - ID: "de83b497-49bc-41da-9b5f-3d04437dd153"
+      Hint: Latitude
+      Value: 30.0008
+    - ID: "e9488a30-c918-403c-bbaa-11feba2dfcb1"
+      Hint: LocationShortName
+      Value: Lakeside
+    - ID: "ee630347-777d-47f6-8df9-c27c904a7903"
+      Hint: City
+      Value: Metairie
+    - ID: "f565cf13-09f9-4fbe-943e-1551fa1f6056"
+      Hint: LocationDescription
+      Value: <p>Hospital Lakeside brinda atención hospitalaria en Metairie como parte del sistema sin ánimo de lucro LCMC Health.</p>
+    - ID: "fa6567c5-386f-4030-b03e-9cef3568cb4f"
+      Hint: LocationPhysicians
+      Value: |
+        {B257CB21-E4C2-44BA-8C70-28D893D45C97}
+        {EED3B2C7-4DEF-4F96-B129-46E86DF0559D}
+    - ID: "facb5aff-7d1d-4234-88d6-50de5299d83f"
+      Hint: Longitude
+      Value: "-90.1689"
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0cbd1feb-1e88-4b8f-974e-40a39d92b678"
+      Hint: VisitorInfo
+      Value: <p>Les visiteurs doivent entrer par le hall principal. Veuillez confirmer les heures de visite actuelles auprès de l’unité de soins.</p>
+    - ID: "1a4b9586-ee63-4f6b-aa77-fe5fa10b298d"
+      Hint: ParkingInfo
+      Value: Stationnement gratuit en surface offert sur le campus de Lakeside près de l’entrée principale.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T003619Z
+    - ID: "2c7fc5d0-8c5e-4947-96ed-5b9a8c1a6553"
+      Hint: LandingPage
+      Value: "{3A19DAC6-9E88-416D-AEB9-B677B796A2F8}"
+    - ID: "3bd52b62-4c4c-414b-badb-7b22a8302c2b"
+      Hint: HoursText
+      Value: Hôpital ouvert 24 heures sur 24. Service d’urgence ouvert 24 h/24, 7 j/7.
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5b761c6e-2119-4e9f-88ad-2ca564ac098e"
+      Hint: LocationTitle
+      Value: Hôpital Lakeside
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "11ee949f-8217-4313-84bc-c9cdfe5914d5"
+    - ID: "949f2600-c710-4b8f-9c6a-45287b4b177a"
+      Hint: State
+      Value: LA
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "a527f3e4-3842-44e6-8e33-4e4d4b07cb4c"
+      Hint: StreetAddress
+      Value: "4700 S. I-10 Service Rd. W"
+    - ID: "b71a3795-49f5-4073-8783-6e811d20e7cd"
+      Hint: PhoneNumber
+      Value: "504-780-8282"
+    - ID: "b8865cad-75b2-44be-a7fc-81898a04ce1d"
+      Hint: LocationType
+      Value: Hôpital
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "bc5eb2b3-2e35-42b6-a006-49a269250e79"
+      Hint: HasEmergencyDepartment
+      Value: 1
+    - ID: "c0d058ff-7eee-4fb6-8b01-50fcafcec82a"
+      Hint: OfferedServices
+      Value: |
+        {21FB8DB6-1732-4A44-8BEC-E39C52C1961A}
+        {D2B7F3AD-6DF9-4B0D-AB3B-58AD3669DB5B}
+        {2C7094F3-7E17-4A5F-8E1F-68830FDC81B6}
+        {EF79ADEF-3A78-4992-B297-04B3447C9CF4}
+    - ID: "ce0500e1-7c8b-4845-b54c-909c049e7f63"
+      Hint: PostalCode
+      Value: 70001
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201314Z
+    - ID: "de83b497-49bc-41da-9b5f-3d04437dd153"
+      Hint: Latitude
+      Value: 30.0008
+    - ID: "e9488a30-c918-403c-bbaa-11feba2dfcb1"
+      Hint: LocationShortName
+      Value: Lakeside
+    - ID: "ee630347-777d-47f6-8df9-c27c904a7903"
+      Hint: City
+      Value: Metairie
+    - ID: "f565cf13-09f9-4fbe-943e-1551fa1f6056"
+      Hint: LocationDescription
+      Value: <p>L’hôpital Lakeside offre des soins hospitaliers à Metairie dans le cadre du réseau sans but lucratif LCMC Health.</p>
+    - ID: "fa6567c5-386f-4030-b03e-9cef3568cb4f"
+      Hint: LocationPhysicians
+      Value: |
+        {B257CB21-E4C2-44BA-8C70-28D893D45C97}
+        {EED3B2C7-4DEF-4F96-B129-46E86DF0559D}
+    - ID: "facb5aff-7d1d-4234-88d6-50de5299d83f"
+      Hint: Longitude
+      Value: "-90.1689"

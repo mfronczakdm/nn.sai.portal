@@ -1,0 +1,37 @@
+﻿---
+ID: "864b645d-073d-438b-ba00-d295fb8ba70c"
+Parent: "aee914ad-afd5-442a-9e5d-f087e3de6752"
+Template: "73e57eaa-b54a-41e1-b689-bf7dae9155ad"
+Path: /sitecore/content/progressive/pkm/Home/Questions and Answers/Claim Intake/Incomplete FNOL handling
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{3B58568C-D989-43EB-9A42-987CE3401731}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260729T192621Z
+    - ID: "2d71e32d-e990-46b3-8ca1-58cd89743d5e"
+      Hint: Question
+      Value: "What should Progressive claims advisors do if FNOL information is incomplete?"
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Incomplete FNOL handling
+    - ID: "4f8dc72e-1548-471c-9f3e-a13e944e4321"
+      Hint: Answer
+      Value: "Save the incomplete FNOL with a clear missing-information list and set the claim or intake status to pending information when allowed. Contact the reporter using Progressive follow-up SLAs and document each attempt. Do not advance coverage decisions until critical missing fields are obtained or formally waived by a supervisor or SME."
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f0f32e59-70ea-493c-8df9-8980cffef3d7"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260729T210607Z

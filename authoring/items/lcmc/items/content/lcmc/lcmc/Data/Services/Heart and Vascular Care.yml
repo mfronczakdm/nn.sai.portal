@@ -1,0 +1,130 @@
+﻿---
+ID: "872d3fa1-dbc7-4abf-9544-5a668c0d08b1"
+Parent: "d9cb7792-ee41-4a8f-a1f8-729d90b4e527"
+Template: "4540c3ad-240b-4d59-bd8b-f2a34d1edc79"
+Path: /sitecore/content/lcmc/lcmc/Data/Services/Heart and Vascular Care
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "195a3eb9-2014-4ade-9528-46016044c588"
+      Hint: ServiceTitle
+      Value: Heart and Vascular Care
+    - ID: "249f0edb-a3f4-4f20-a0b6-e389bdbe8547"
+      Hint: ServiceDetail
+      Value: "<p>Heart and vascular teams diagnose and treat coronary disease, heart failure, arrhythmia, and vascular conditions.</p><p>Patients can access cath lab, imaging, and specialty follow-up at East Jefferson, Lakeview, Touro, West Jefferson, and University Medical Center.</p>"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T003550Z
+    - ID: "36f9cc2a-c286-48dc-8161-cbc3300f8601"
+      Hint: OfferedAtLocations
+      Value: |
+        {EFEAC293-2BF4-4516-873D-4EAC1F998474}
+        {C5D069A3-C8BB-40FE-89BE-D7F9D5C9614F}
+        {063FFD1D-6681-4DFC-8A7A-504EA903090F}
+        {E8F05084-0214-424F-B1D4-B5B562499F5C}
+        {35C77454-5FB8-460D-BC12-299F7B31DE5A}
+    - ID: "4491d77b-da17-4a4d-8480-8a09826476a5"
+      Hint: ServiceShortDescription
+      Value: Cardiology, vascular, and cardiac catheterization services for patients across the LCMC Health system.
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5d63236a-7881-4fb5-b847-f356e43994ca"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260908T003814Z
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "195a3eb9-2014-4ade-9528-46016044c588"
+      Hint: ServiceTitle
+      Value: Atención del corazón y vascular
+    - ID: "249f0edb-a3f4-4f20-a0b6-e389bdbe8547"
+      Hint: ServiceDetail
+      Value: <p>Los equipos de corazón y vascular diagnostican y tratan la enfermedad coronaria, la insuficiencia cardíaca, las arritmias y las afecciones vasculares.</p><p>Los pacientes pueden acceder al laboratorio de cateterismo, imágenes y seguimiento especializado en East Jefferson, Lakeview, Touro, West Jefferson y University Medical Center.</p>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T003550Z
+    - ID: "36f9cc2a-c286-48dc-8161-cbc3300f8601"
+      Hint: OfferedAtLocations
+      Value: |
+        {EFEAC293-2BF4-4516-873D-4EAC1F998474}
+        {C5D069A3-C8BB-40FE-89BE-D7F9D5C9614F}
+        {063FFD1D-6681-4DFC-8A7A-504EA903090F}
+        {E8F05084-0214-424F-B1D4-B5B562499F5C}
+        {35C77454-5FB8-460D-BC12-299F7B31DE5A}
+    - ID: "4491d77b-da17-4a4d-8480-8a09826476a5"
+      Hint: ServiceShortDescription
+      Value: Servicios de cardiología, vasculares y de cateterismo cardíaco para pacientes de todo el sistema de salud LCMC Health.
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2d985f35-f461-4380-a35e-75e0778ed84c"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T162723Z
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "195a3eb9-2014-4ade-9528-46016044c588"
+      Hint: ServiceTitle
+      Value: Soins du cœur et des vaisseaux
+    - ID: "249f0edb-a3f4-4f20-a0b6-e389bdbe8547"
+      Hint: ServiceDetail
+      Value: <p>Les équipes de soins du cœur et des vaisseaux diagnostiquent et traitent la maladie coronarienne, l’insuffisance cardiaque, les arythmies et les maladies vasculaires.</p><p>Les patients peuvent avoir accès au laboratoire de cathétérisme, à l’imagerie et au suivi spécialisé à East Jefferson, Lakeview, Touro, West Jefferson et University Medical Center.</p>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T003550Z
+    - ID: "36f9cc2a-c286-48dc-8161-cbc3300f8601"
+      Hint: OfferedAtLocations
+      Value: |
+        {EFEAC293-2BF4-4516-873D-4EAC1F998474}
+        {C5D069A3-C8BB-40FE-89BE-D7F9D5C9614F}
+        {063FFD1D-6681-4DFC-8A7A-504EA903090F}
+        {E8F05084-0214-424F-B1D4-B5B562499F5C}
+        {35C77454-5FB8-460D-BC12-299F7B31DE5A}
+    - ID: "4491d77b-da17-4a4d-8480-8a09826476a5"
+      Hint: ServiceShortDescription
+      Value: Services de cardiologie, de soins vasculaires et de cathétérisme cardiaque pour les patients de tout le réseau LCMC Health.
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4a196d92-1d88-45ef-b6ed-b2ee90ea0323"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201350Z

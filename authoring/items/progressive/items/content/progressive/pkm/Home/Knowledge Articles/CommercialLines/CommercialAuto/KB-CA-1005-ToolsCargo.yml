@@ -1,0 +1,260 @@
+﻿---
+ID: "3e173cfe-f7a6-4cce-9d44-64b3ea20da76"
+Parent: "1a0b2134-7ec9-4896-b9e2-64530610df08"
+Template: "42f8929a-83cd-48fe-92f0-8aac46e6cc62"
+Path: "/sitecore/content/progressive/pkm/Home/Knowledge Articles/CommercialLines/CommercialAuto/KB-CA-1005-ToolsCargo"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{FA097F7E-ECE4-489E-842D-63AE8A7FCDD2}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{6C26C6AA-F416-43F0-9D26-0A7198E0B451}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "606204e1-7c66-452a-a07e-6ebb405dc2b1"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: 
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{DFF7FEAF-03A2-4C3C-A42E-4741276E5CF5}"
+              p:after="r[@uid='{717E1701-1FF6-418A-A8F1-35443B43B403}']"
+              s:id="{F44005E1-CCBB-4B27-9598-5EF43FB60A46}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB6A72F2A-15BE-4113-B40F-0305459DC374%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=2"
+              s:ph="headless-main" />
+            <r
+              uid="{23474D27-CE19-4180-AC76-2CBCC4B60B0D}"
+              p:after="*[1=2]"
+              s:ds=""
+              s:id="{88D43837-24CA-45A7-9171-FEAD8AE89702}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B5E0CEF20-DC70-4922-A183-E6ADB987AF60%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=3"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "1a6c4003-b700-4ff6-9a1e-b0b809a20c52"
+      Hint: Standard Site Inspection Rules
+      Value: <ul><li>Photograph cargo area before cleanup when safe</li><li>List major tool brands/models and serials when possible</li><li>Do not dispose of salvageable goods without Progressive guidance</li></ul>
+    - ID: "1d2229f9-6c8b-4828-97c0-ade6f1a125d0"
+      Hint: TotalRatings
+      Value: 15
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Separate Progressive commercial auto physical damage from tools, equipment, and cargo claims after a vehicle accident.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260802T134926Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Tools & Cargo After Collision
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{325A5D47-D4EB-4876-B759-0E18E2D9DCED}"
+    - ID: "480bb6b8-0914-4d2c-a73e-c5b28b8693e0"
+      Hint: Intake Triggers
+      Value: "<p>Use when:</p><ul><li>Collision or overturn damages tools, racks, or cargo in a Progressive commercial unit</li><li>Insured claims laptop kits, power tools, or customer goods were destroyed in the vehicle</li><li>Box truck contents shift and crush stock after hard braking / impact</li></ul>"
+    - ID: "4d1faace-7b0f-4ec7-94b8-9ae80e0a9bce"
+      Hint: Common Scenarios
+      Value: "<ul><li><strong>Service van rear-ended; tool chests crushed:</strong> check inland marine / BPP</li><li><strong>Customer appliances damaged in box truck:</strong> bailee/cargo analysis</li><li><strong>Ladder rack torn off in low bridge strike:</strong> attached equipment vs auto PD</li><li><strong>Refrigerated food spoiled after delay:</strong> spoilage endorsements / BI adjacent issues</li></ul>"
+    - ID: "4ed4709d-3dc8-4d81-bc4b-b44be7d21c45"
+      Hint: LastRated
+      Value: 20260718T083000Z
+    - ID: "4f91e6ca-b571-41f9-bc35-4e7e89c590de"
+      Hint: Baseline Reserve Guidelines
+      Value: <ul><li>Auto PD for vehicle only until other coverages confirmed</li><li>Separate contents/cargo reserve on the correct Progressive coverage track</li></ul>
+    - ID: "568439dd-7959-4317-ac05-4aca4fe37a7a"
+      Hint: AverageRating
+      Value: 3.40
+    - ID: "5897e9d3-8204-4ed7-9f6a-ceb4891c3182"
+      Hint: PositiveCount
+      Value: 12
+    - ID: "5b49b775-a3f5-41cd-bd78-90fae97f1fd6"
+      Hint: Core Triage Questions
+      Value: "<ol><li>What Progressive policies apply (auto only vs auto + inland marine / BPP / cargo)?</li><li>Were items permanently attached (ladder rack) vs loose tools vs customer cargo?</li><li>Who owned the goods (insured vs customer)?</li><li>Bill of lading / work order / inventory available?</li><li>Any refrigeration / time-sensitive stock?</li></ol>"
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Commercial Auto — Tools, Equipment, and Cargo After Collision
+    - ID: "6be9cd31-e34e-4bed-880a-a218075a5b0d"
+      Hint: General Payment Triggers
+      Value: <ul><li>Vehicle repairs per commercial auto PD rules</li><li>Tools/cargo only after correct Progressive form, inventory, and valuation</li></ul>
+    - ID: "71d4c96f-1e34-4f86-8ba5-e7a24a873933"
+      Hint: NegativeCount
+      Value: 6
+    - ID: "76c3fa76-04cb-4142-9756-6fcb96442bf4"
+      Hint: "KB-ID"
+      Value: "KB-CA-1005"
+    - ID: "8147ab19-7525-4ef0-a878-3e3f0a3157ac"
+      Hint: LOB
+      Value: "{E799A026-FF03-4588-8607-16222D811A4C}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "016233f4-2aa7-470a-828b-079f34d4d466"
+    - ID: "ae3f508c-c043-4863-899c-986ad4b75bd5"
+      Hint: Photo Video Standards
+      Value: "<ul><li>Cargo compartment overview and damaged goods close-ups</li><li>Racks, boxes, and securement failure points</li><li>Vehicle exterior impact related to content damage</li></ul>"
+    - ID: "b3f4a945-e28b-4a1c-81c7-857555b83127"
+      Hint: General Escalation Rules
+      Value: "<ul><li><strong>Customer cargo / bailee exposure:</strong> coverage SME</li><li><strong>High-value tools without schedule:</strong> verify inland marine</li><li><strong>Potential subrogation against third party:</strong> preserve evidence</li></ul>"
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Tools, Equipment, and Cargo
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\WIt5EKonMo343Fqq8begbLVKlCgYPAIX
+    - ID: "c09aaa65-03f7-41a9-ba56-69b018e89ccc"
+      Hint: General Mitigation
+      Value: <ul><li>Secure remaining tools/cargo against further theft or weather</li><li>Explain which Progressive coverage parts may apply; do not promise auto PD will cover loose tools</li></ul>
+    - ID: "cc6e82f0-6942-4103-8d12-c8742b54a7a1"
+      Hint: Purpose
+      Value: "<p>Help Progressive Claims Advisors correctly separate <strong>commercial auto PD</strong> from <strong>tools, equipment, and cargo</strong> damaged in or on a Progressive-scheduled vehicle.</p><ul><li>Avoid paying cargo/tools under auto PD without the right Progressive coverage</li><li>Document inventories early</li><li>Coordinate inland marine / BPP / cargo forms when present</li></ul>"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260802T180113Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: "KB-CA-1005-ToolsCargo"
+    - ID: "ef17e08a-c9dd-47e0-adf2-9232c87aaa7f"
+      Hint: RatingsSum
+      Value: 51
+    - ID: "fc43bd45-b665-4895-a9e5-6d9a34ea7835"
+      Hint: Title
+      Value: Commercial Auto — Tools, Equipment, and Cargo After Collision
+  - Version: 2
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{DFF7FEAF-03A2-4C3C-A42E-4741276E5CF5}"
+              p:after="r[@uid='{717E1701-1FF6-418A-A8F1-35443B43B403}']"
+              s:id="{F44005E1-CCBB-4B27-9598-5EF43FB60A46}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB6A72F2A-15BE-4113-B40F-0305459DC374%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=2"
+              s:ph="headless-main" />
+            <r
+              uid="{23474D27-CE19-4180-AC76-2CBCC4B60B0D}"
+              p:after="*[1=2]"
+              s:id="{88D43837-24CA-45A7-9171-FEAD8AE89702}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B5E0CEF20-DC70-4922-A183-E6ADB987AF60%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=3"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "1a6c4003-b700-4ff6-9a1e-b0b809a20c52"
+      Hint: Standard Site Inspection Rules
+      Value: <ul><li>Photograph cargo area before cleanup when safe</li><li>List major tool brands/models and serials when possible</li><li>Do not dispose of salvageable goods without Progressive guidance</li></ul>
+    - ID: "1d2229f9-6c8b-4828-97c0-ade6f1a125d0"
+      Hint: TotalRatings
+      Value: 15
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Separate Progressive commercial auto physical damage from tools, equipment, and cargo claims after a vehicle accident.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260803T035643Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Tools & Cargo After Collision
+    - ID: "29d334fb-0f6f-41fa-98ea-a6f30222129f"
+      Hint: sharedContent
+      Value: |
+        {D30D20B0-7C58-49EF-8589-61146C3CBA2C}
+        {F87BAD38-FCE8-46A0-B49C-7411CA972045}
+        {D4DC35F2-2CB7-4D87-9525-C3020BDF8BB9}
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{325A5D47-D4EB-4876-B759-0E18E2D9DCED}"
+    - ID: "480bb6b8-0914-4d2c-a73e-c5b28b8693e0"
+      Hint: Intake Triggers
+      Value: "<p>Use when:</p><ul><li>Collision or overturn damages tools, racks, or cargo in a Progressive commercial unit</li><li>Insured claims laptop kits, power tools, or customer goods were destroyed in the vehicle</li><li>Box truck contents shift and crush stock after hard braking / impact</li></ul>"
+    - ID: "4d1faace-7b0f-4ec7-94b8-9ae80e0a9bce"
+      Hint: Common Scenarios
+      Value: "<ul><li><strong>Service van rear-ended; tool chests crushed:</strong> check inland marine / BPP</li><li><strong>Customer appliances damaged in box truck:</strong> bailee/cargo analysis</li><li><strong>Ladder rack torn off in low bridge strike:</strong> attached equipment vs auto PD</li><li><strong>Refrigerated food spoiled after delay:</strong> spoilage endorsements / BI adjacent issues</li></ul>"
+    - ID: "4ed4709d-3dc8-4d81-bc4b-b44be7d21c45"
+      Hint: LastRated
+      Value: 20260718T083000Z
+    - ID: "4f91e6ca-b571-41f9-bc35-4e7e89c590de"
+      Hint: Baseline Reserve Guidelines
+      Value: <ul><li>Auto PD for vehicle only until other coverages confirmed</li><li>Separate contents/cargo reserve on the correct Progressive coverage track</li></ul>
+    - ID: "568439dd-7959-4317-ac05-4aca4fe37a7a"
+      Hint: AverageRating
+      Value: 3.40
+    - ID: "5897e9d3-8204-4ed7-9f6a-ceb4891c3182"
+      Hint: PositiveCount
+      Value: 12
+    - ID: "5b49b775-a3f5-41cd-bd78-90fae97f1fd6"
+      Hint: Core Triage Questions
+      Value: "<ol><li>What Progressive policies apply (auto only vs auto + inland marine / BPP / cargo)?</li><li>Were items permanently attached (ladder rack) vs loose tools vs customer cargo?</li><li>Who owned the goods (insured vs customer)?</li><li>Bill of lading / work order / inventory available?</li><li>Any refrigeration / time-sensitive stock?</li></ol>"
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Commercial Auto — Tools, Equipment, and Cargo After Collision
+    - ID: "6be9cd31-e34e-4bed-880a-a218075a5b0d"
+      Hint: General Payment Triggers
+      Value: <ul><li>Vehicle repairs per commercial auto PD rules</li><li>Tools/cargo only after correct Progressive form, inventory, and valuation</li></ul>
+    - ID: "71d4c96f-1e34-4f86-8ba5-e7a24a873933"
+      Hint: NegativeCount
+      Value: 6
+    - ID: "76c3fa76-04cb-4142-9756-6fcb96442bf4"
+      Hint: "KB-ID"
+      Value: "KB-CA-1005"
+    - ID: "8147ab19-7525-4ef0-a878-3e3f0a3157ac"
+      Hint: LOB
+      Value: "{E799A026-FF03-4588-8607-16222D811A4C}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "3e9983ef-f9ce-42d7-aaf7-9be95da12326"
+    - ID: "ae3f508c-c043-4863-899c-986ad4b75bd5"
+      Hint: Photo Video Standards
+      Value: "<ul><li>Cargo compartment overview and damaged goods close-ups</li><li>Racks, boxes, and securement failure points</li><li>Vehicle exterior impact related to content damage</li></ul>"
+    - ID: "b3f4a945-e28b-4a1c-81c7-857555b83127"
+      Hint: General Escalation Rules
+      Value: "<ul><li><strong>Customer cargo / bailee exposure:</strong> coverage SME</li><li><strong>High-value tools without schedule:</strong> verify inland marine</li><li><strong>Potential subrogation against third party:</strong> preserve evidence</li></ul>"
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Tools, Equipment, and Cargo
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c09aaa65-03f7-41a9-ba56-69b018e89ccc"
+      Hint: General Mitigation
+      Value: <ul><li>Secure remaining tools/cargo against further theft or weather</li><li>Explain which Progressive coverage parts may apply; do not promise auto PD will cover loose tools</li></ul>
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260803T035643Z
+    - ID: "cc6e82f0-6942-4103-8d12-c8742b54a7a1"
+      Hint: Purpose
+      Value: "<p>Help Progressive Claims Advisors correctly separate <strong>commercial auto PD</strong> from <strong>tools, equipment, and cargo</strong> damaged in or on a Progressive-scheduled vehicle.</p><ul><li>Avoid paying cargo/tools under auto PD without the right Progressive coverage</li><li>Document inventories early</li><li>Coordinate inland marine / BPP / cargo forms when present</li></ul>"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260803T173256Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: "KB-CA-1005-ToolsCargo"
+    - ID: "ef17e08a-c9dd-47e0-adf2-9232c87aaa7f"
+      Hint: RatingsSum
+      Value: 51
+    - ID: "fc43bd45-b665-4895-a9e5-6d9a34ea7835"
+      Hint: Title
+      Value: Commercial Auto — Tools, Equipment, and Cargo After Collision

@@ -1,0 +1,38 @@
+﻿---
+ID: "3d353949-cbbb-4922-b56b-84f1b538b991"
+Parent: "0b495f06-2b7a-4c80-ba10-57a841b6ddb2"
+Template: "bdf6c974-e68c-46a2-a0a9-d382fd0927eb"
+Path: "/sitecore/content/progressive/pkm/Home/Shared Content/08-RegulatoryAndCompliance/StateSpecific/FL/KB-AU-1002-CoverageDetermination-FL"
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{7B388710-DF1A-49C7-95B5-57C68D86C441}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "21b8d6f1-4294-46a5-98fd-38df0ce8aae0"
+      Hint: SourceDocumentLOB
+      Value: "{0944EAEA-5558-443F-A68D-482773EA2153}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260731T141331Z
+    - ID: "76e0c665-5c4d-4d03-ae66-a5f3d12978ba"
+      Hint: Content
+      Value: "<p>For Florida Personal Auto coverage decisions, document PIP/MedPay applicability and the correct deductible before promising payment or rental. Use Progressive coverage letter protocols for reservations of rights or denials—do not improvise Florida-specific denial language at the desk.</p>"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a5c7d393-81a8-440f-9dc0-acccc229df8b"
+    - ID: "a8f6d033-4e9e-4598-be5e-da2456c41b9f"
+      Hint: sourceDocumentLink
+      Value: |
+        <link text="Personal Auto Coverage Determination" linktype="internal" class="" title="" target="" querystring="" id="{BC70A3A2-56ED-4798-AC9F-A28B7531A205}" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\emqWsGLKzRiKgWenEsIKMqdxvXhiQ4cT
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260802T143427Z

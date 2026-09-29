@@ -1,0 +1,55 @@
+﻿---
+ID: "7f2370a7-b62a-4101-b05c-890c32b6376c"
+Parent: "765a049e-ecf9-4abb-94c2-7da8ce16742a"
+Template: "0a93f003-2ef3-4a66-9fb6-95c10b95532b"
+Path: /sitecore/content/dycom/dycom/Data/Locations/Pauley Construction LLC
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "11022184-1d76-4d54-ba17-6f68d511afae"
+      Hint: Name
+      Value: Pauley Construction, LLC
+    - ID: "1f0ebaa3-03a2-4e2d-8313-8782713a130f"
+      Hint: Subsidiary Name
+      Value: Operating company sample
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260519T161019Z
+    - ID: "2caca007-a43f-4b62-b8ca-cb48fec72576"
+      Hint: State
+      Value: AZ
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "554b1ddd-6a2a-4e0e-b4ba-7898f6c03dc6"
+      Hint: Type
+      Value: Company
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "bfca85c5-eca9-4192-b26d-c41a35e60298"
+    - ID: "9c275841-cbb3-4b7e-81c7-9111a5ce2fdd"
+      Hint: GEO
+      Value: "33.6803,-112.1060"
+    - ID: "a72e5257-2698-414c-9416-83d2a100665d"
+      Hint: Street Address
+      Value: 2021 West Melinda Lane
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260519T161019Z
+    - ID: "efe82275-714a-4ee5-ab29-577ceddc29ba"
+      Hint: City
+      Value: Phoenix
+    - ID: "fa091d7b-c69b-4946-90fc-eac2cfae439b"
+      Hint: ZIP
+      Value: 85027

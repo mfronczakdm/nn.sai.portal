@@ -1,0 +1,271 @@
+﻿---
+ID: "13da39ad-0778-4beb-beca-421106229da0"
+Parent: "cdc93682-3ac4-4922-bfd6-f75905ad3289"
+Template: "42f8929a-83cd-48fe-92f0-8aac46e6cc62"
+Path: "/sitecore/content/progressive/pkm/Home/Knowledge Articles/PersonalLines/Homeowners/KB-HO-1003-KitchenFireSmoke"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{FA097F7E-ECE4-489E-842D-63AE8A7FCDD2}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{4D4014EE-AC25-42BA-A865-FB23FE9A84B8}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "0cc4c7a8-3adb-4b61-b819-b4993dea145f"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: 
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{39FDF6A1-84FD-4CEC-A98A-3EB57266060D}"
+              p:after="r[@uid='{717E1701-1FF6-418A-A8F1-35443B43B403}']"
+              s:id="{F44005E1-CCBB-4B27-9598-5EF43FB60A46}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB6A72F2A-15BE-4113-B40F-0305459DC374%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=2"
+              s:ph="headless-main" />
+            <r
+              uid="{686F4DA8-7BD7-49E8-9AE2-0269BA1F2DB7}"
+              p:after="*[1=2]"
+              s:ds=""
+              s:id="{88D43837-24CA-45A7-9171-FEAD8AE89702}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B5E0CEF20-DC70-4922-A183-E6ADB987AF60%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=3"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "1a6c4003-b700-4ff6-9a1e-b0b809a20c52"
+      Hint: Standard Site Inspection Rules
+      Value: <ul><li>Document point of origin (range, oven, microwave niche) without disturbing evidence if cause is disputed</li><li>Map smoke/soot migration room by room and into HVAC returns</li><li>Inventory damaged soft goods, pantry stock, and appliances</li><li>Check for water damage from extinguishment</li><li>Separate grease film / cooking residue from sudden fire soot when evaluating maintenance vs loss</li></ul>
+    - ID: "1cf7f3e5-7109-4726-aca1-76bf779f1f95"
+      Hint: Peril type
+      Value: |
+        {389A8AD2-4BD8-4260-8059-761BC507FEB1}
+        {3DEA691C-C20E-41AD-A6C7-AD0630E4541B}
+    - ID: "1d2229f9-6c8b-4828-97c0-ade6f1a125d0"
+      Hint: TotalRatings
+      Value: 40
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Progressive Personal Home guidance for cooking fires, grease fires, and smoke migration through the dwelling.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260802T132719Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Kitchen Fire & Smoke
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{325A5D47-D4EB-4876-B759-0E18E2D9DCED}"
+    - ID: "480bb6b8-0914-4d2c-a73e-c5b28b8693e0"
+      Hint: Intake Triggers
+      Value: "<p>Use this kitchen fire / smoke workflow when:</p><ul><li>Insured reports a cooking fire, grease fire, oven/stovetop fire, or toaster/appliance fire</li><li>Smoke or soot migrated beyond the kitchen to HVAC, bedrooms, or contents</li><li>Fire department responded to a residential cooking incident at a Progressive HO risk</li><li>Prior kitchen fire claim needs reopening for odor, soft goods, or hidden soot discovery</li></ul>"
+    - ID: "4d1faace-7b0f-4ec7-94b8-9ae80e0a9bce"
+      Hint: Common Scenarios
+      Value: "<ul><li><strong>Unattended frying pan grease fire:</strong> localized cabinets + range; possible hood/duct cleaning</li><li><strong>Oven fire with heavy smoke throughout house:</strong> pack-out soft goods; HVAC cleaning</li><li><strong>Microwave fire contained to appliance:</strong> limited scope; confirm no hidden cavity burn</li><li><strong>Condo unit cooking fire affecting hallway:</strong> coordinate association; document Progressive unit boundaries</li><li><strong>Candle left near curtains near kitchen:</strong> verify cause; not always “cooking” — still fire peril</li></ul>"
+    - ID: "4ed4709d-3dc8-4d81-bc4b-b44be7d21c45"
+      Hint: LastRated
+      Value: 20260726T093000Z
+    - ID: "4f91e6ca-b571-41f9-bc35-4e7e89c590de"
+      Hint: Baseline Reserve Guidelines
+      Value: "<ul><li>Kitchen rebuild band (cabinets, appliances, finishes) plus smoke migration rooms</li><li>Contents / soft goods reserve when pack-out is likely</li><li>ALE reserve when displacement or loss of kitchen use is expected</li><li>Revisit after moisture/soot assessment and estimate</li></ul>"
+    - ID: "568439dd-7959-4317-ac05-4aca4fe37a7a"
+      Hint: AverageRating
+      Value: 4.50
+    - ID: "5897e9d3-8204-4ed7-9f6a-ceb4891c3182"
+      Hint: PositiveCount
+      Value: 45
+    - ID: "5b49b775-a3f5-41cd-bd78-90fae97f1fd6"
+      Hint: Core Triage Questions
+      Value: "<ol><li>Is the fire fully extinguished? Any smoldering or electrical hazards remaining?</li><li>Fire department on scene / report number?</li><li>Anyone injured from smoke inhalation or burns?</li><li>What ignited (grease, packaging, wiring, candle nearby)?</li><li>Extent: cabinets only, open flame to structure, or smoke throughout?</li><li>Is the home safe to occupy overnight?</li><li>Any renters / HO-6 / condo association involvement?</li><li>Recent renovations or unpermitted kitchen work?</li></ol>"
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Homeowners Kitchen Fire and Smoke Damage
+    - ID: "6be9cd31-e34e-4bed-880a-a218075a5b0d"
+      Hint: General Payment Triggers
+      Value: <ul><li>Mitigation / cleaning invoices after coverage and reasonableness review</li><li>Dwelling repairs after agreed scope and Progressive HO deductible</li><li>Contents after inventory (ACV/RCV per Progressive policy)</li><li>ALE with documentation of additional living expenses</li></ul>
+    - ID: "71d4c96f-1e34-4f86-8ba5-e7a24a873933"
+      Hint: NegativeCount
+      Value: 5
+    - ID: "76c3fa76-04cb-4142-9756-6fcb96442bf4"
+      Hint: "KB-ID"
+      Value: "KB-HO-1003"
+    - ID: "8147ab19-7525-4ef0-a878-3e3f0a3157ac"
+      Hint: LOB
+      Value: "{331E5703-41A4-4592-B744-14A83C4CFAAE}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "1f34544c-df64-46eb-81d9-d674dfb1d4c9"
+    - ID: "ae3f508c-c043-4863-899c-986ad4b75bd5"
+      Hint: Photo Video Standards
+      Value: "<ul><li>Stovetop/oven origin close-ups and wider kitchen elevations</li><li>Cabinet interiors, range hood, and ceiling above cooking area</li><li>Smoke lines in hallways and HVAC vents</li><li>Contents requiring pack-out (clothing, upholstery)</li><li>Fire department overhaul / water residue when present</li></ul>"
+    - ID: "b3f4a945-e28b-4a1c-81c7-857555b83127"
+      Hint: General Escalation Rules
+      Value: "<ul><li><strong>Structural involvement / attic migration / multi-unit spread:</strong> field priority + large-loss as needed</li><li><strong>Injuries or fatalities:</strong> Progressive severity path</li><li><strong>Arson / intentional act indicators:</strong> SIU</li><li><strong>Condo / HOA master policy interaction:</strong> confirm Progressive unit-owner vs association responsibilities</li><li><strong>High ALE / full pack-out:</strong> large-loss desk</li></ul>"
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Homeowners Kitchen Fire and Smoke
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\WIt5EKonMo343Fqq8begbLVKlCgYPAIX
+    - ID: "c09aaa65-03f7-41a9-ba56-69b018e89ccc"
+      Hint: General Mitigation
+      Value: "<ul><li>Authorize emergency board-up / temporary utilities only if needed for safety</li><li>Start soot/smoke cleaning and pack-out through Progressive-approved vendors when coverage is indicated</li><li>Advise discarding porous food products exposed to heavy smoke per health guidance</li><li>Explain ALE / loss of use if cooking facilities or air quality make the home unusable</li></ul>"
+    - ID: "cc6e82f0-6942-4103-8d12-c8742b54a7a1"
+      Hint: Purpose
+      Value: "<p>Guide Progressive Claims Advisors through <strong>Personal Home kitchen fire and smoke</strong> claims from FNOL through mitigation and contents handling.</p><ul><li>Prioritize life safety and utility shutoffs</li><li>Document flame vs smoke-only damage accurately</li><li>Address ALE when the kitchen or dwelling is not safely occupiable</li></ul>"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260802T180114Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: "KB-HO-1003-KitchenFireSmoke"
+    - ID: "ef17e08a-c9dd-47e0-adf2-9232c87aaa7f"
+      Hint: RatingsSum
+      Value: 180
+    - ID: "fc43bd45-b665-4895-a9e5-6d9a34ea7835"
+      Hint: Title
+      Value: Homeowners Kitchen Fire and Smoke Damage
+  - Version: 2
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{39FDF6A1-84FD-4CEC-A98A-3EB57266060D}"
+              p:after="r[@uid='{717E1701-1FF6-418A-A8F1-35443B43B403}']"
+              s:id="{F44005E1-CCBB-4B27-9598-5EF43FB60A46}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB6A72F2A-15BE-4113-B40F-0305459DC374%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=2"
+              s:ph="headless-main" />
+            <r
+              uid="{686F4DA8-7BD7-49E8-9AE2-0269BA1F2DB7}"
+              p:after="*[1=2]"
+              s:ds=""
+              s:id="{88D43837-24CA-45A7-9171-FEAD8AE89702}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B5E0CEF20-DC70-4922-A183-E6ADB987AF60%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=3"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "1a6c4003-b700-4ff6-9a1e-b0b809a20c52"
+      Hint: Standard Site Inspection Rules
+      Value: <ul><li>Document point of origin (range, oven, microwave niche) without disturbing evidence if cause is disputed</li><li>Map smoke/soot migration room by room and into HVAC returns</li><li>Inventory damaged soft goods, pantry stock, and appliances</li><li>Check for water damage from extinguishment</li><li>Separate grease film / cooking residue from sudden fire soot when evaluating maintenance vs loss</li></ul>
+    - ID: "1cf7f3e5-7109-4726-aca1-76bf779f1f95"
+      Hint: Peril type
+      Value: |
+        {389A8AD2-4BD8-4260-8059-761BC507FEB1}
+        {3DEA691C-C20E-41AD-A6C7-AD0630E4541B}
+    - ID: "1d2229f9-6c8b-4828-97c0-ade6f1a125d0"
+      Hint: TotalRatings
+      Value: 40
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Progressive Personal Home guidance for cooking fires, grease fires, and smoke migration through the dwelling.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260803T035631Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Kitchen Fire & Smoke
+    - ID: "29d334fb-0f6f-41fa-98ea-a6f30222129f"
+      Hint: sharedContent
+      Value: |
+        {5735AD7B-B13B-4458-A616-0D6835FA557B}
+        {A30AA489-35CE-4FC8-97CE-3818CE27B53C}
+        {6B85AFDF-058B-42F5-98F6-77F1EE948DE3}
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{325A5D47-D4EB-4876-B759-0E18E2D9DCED}"
+    - ID: "480bb6b8-0914-4d2c-a73e-c5b28b8693e0"
+      Hint: Intake Triggers
+      Value: "<p>Use this kitchen fire / smoke workflow when:</p><ul><li>Insured reports a cooking fire, grease fire, oven/stovetop fire, or toaster/appliance fire</li><li>Smoke or soot migrated beyond the kitchen to HVAC, bedrooms, or contents</li><li>Fire department responded to a residential cooking incident at a Progressive HO risk</li><li>Prior kitchen fire claim needs reopening for odor, soft goods, or hidden soot discovery</li></ul>"
+    - ID: "4d1faace-7b0f-4ec7-94b8-9ae80e0a9bce"
+      Hint: Common Scenarios
+      Value: "<ul><li><strong>Unattended frying pan grease fire:</strong> localized cabinets + range; possible hood/duct cleaning</li><li><strong>Oven fire with heavy smoke throughout house:</strong> pack-out soft goods; HVAC cleaning</li><li><strong>Microwave fire contained to appliance:</strong> limited scope; confirm no hidden cavity burn</li><li><strong>Condo unit cooking fire affecting hallway:</strong> coordinate association; document Progressive unit boundaries</li><li><strong>Candle left near curtains near kitchen:</strong> verify cause; not always “cooking” — still fire peril</li></ul>"
+    - ID: "4ed4709d-3dc8-4d81-bc4b-b44be7d21c45"
+      Hint: LastRated
+      Value: 20260726T093000Z
+    - ID: "4f91e6ca-b571-41f9-bc35-4e7e89c590de"
+      Hint: Baseline Reserve Guidelines
+      Value: "<ul><li>Kitchen rebuild band (cabinets, appliances, finishes) plus smoke migration rooms</li><li>Contents / soft goods reserve when pack-out is likely</li><li>ALE reserve when displacement or loss of kitchen use is expected</li><li>Revisit after moisture/soot assessment and estimate</li></ul>"
+    - ID: "568439dd-7959-4317-ac05-4aca4fe37a7a"
+      Hint: AverageRating
+      Value: 4.50
+    - ID: "5897e9d3-8204-4ed7-9f6a-ceb4891c3182"
+      Hint: PositiveCount
+      Value: 45
+    - ID: "5b49b775-a3f5-41cd-bd78-90fae97f1fd6"
+      Hint: Core Triage Questions
+      Value: "<ol><li>Is the fire fully extinguished? Any smoldering or electrical hazards remaining?</li><li>Fire department on scene / report number?</li><li>Anyone injured from smoke inhalation or burns?</li><li>What ignited (grease, packaging, wiring, candle nearby)?</li><li>Extent: cabinets only, open flame to structure, or smoke throughout?</li><li>Is the home safe to occupy overnight?</li><li>Any renters / HO-6 / condo association involvement?</li><li>Recent renovations or unpermitted kitchen work?</li></ol>"
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Homeowners Kitchen Fire and Smoke Damage
+    - ID: "6be9cd31-e34e-4bed-880a-a218075a5b0d"
+      Hint: General Payment Triggers
+      Value: <ul><li>Mitigation / cleaning invoices after coverage and reasonableness review</li><li>Dwelling repairs after agreed scope and Progressive HO deductible</li><li>Contents after inventory (ACV/RCV per Progressive policy)</li><li>ALE with documentation of additional living expenses</li></ul>
+    - ID: "71d4c96f-1e34-4f86-8ba5-e7a24a873933"
+      Hint: NegativeCount
+      Value: 5
+    - ID: "76c3fa76-04cb-4142-9756-6fcb96442bf4"
+      Hint: "KB-ID"
+      Value: "KB-HO-1003"
+    - ID: "8147ab19-7525-4ef0-a878-3e3f0a3157ac"
+      Hint: LOB
+      Value: "{331E5703-41A4-4592-B744-14A83C4CFAAE}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "e2b9caef-4879-4efe-95b3-8a2ca7d6cec3"
+    - ID: "ae3f508c-c043-4863-899c-986ad4b75bd5"
+      Hint: Photo Video Standards
+      Value: "<ul><li>Stovetop/oven origin close-ups and wider kitchen elevations</li><li>Cabinet interiors, range hood, and ceiling above cooking area</li><li>Smoke lines in hallways and HVAC vents</li><li>Contents requiring pack-out (clothing, upholstery)</li><li>Fire department overhaul / water residue when present</li></ul>"
+    - ID: "b3f4a945-e28b-4a1c-81c7-857555b83127"
+      Hint: General Escalation Rules
+      Value: "<ul><li><strong>Structural involvement / attic migration / multi-unit spread:</strong> field priority + large-loss as needed</li><li><strong>Injuries or fatalities:</strong> Progressive severity path</li><li><strong>Arson / intentional act indicators:</strong> SIU</li><li><strong>Condo / HOA master policy interaction:</strong> confirm Progressive unit-owner vs association responsibilities</li><li><strong>High ALE / full pack-out:</strong> large-loss desk</li></ul>"
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Homeowners Kitchen Fire and Smoke
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\WIt5EKonMo343Fqq8begbLVKlCgYPAIX
+    - ID: "c09aaa65-03f7-41a9-ba56-69b018e89ccc"
+      Hint: General Mitigation
+      Value: "<ul><li>Authorize emergency board-up / temporary utilities only if needed for safety</li><li>Start soot/smoke cleaning and pack-out through Progressive-approved vendors when coverage is indicated</li><li>Advise discarding porous food products exposed to heavy smoke per health guidance</li><li>Explain ALE / loss of use if cooking facilities or air quality make the home unusable</li></ul>"
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260803T035631Z
+    - ID: "cc6e82f0-6942-4103-8d12-c8742b54a7a1"
+      Hint: Purpose
+      Value: "<p>Guide Progressive Claims Advisors through <strong>Personal Home kitchen fire and smoke</strong> claims from FNOL through mitigation and contents handling.</p><ul><li>Prioritize life safety and utility shutoffs</li><li>Document flame vs smoke-only damage accurately</li><li>Address ALE when the kitchen or dwelling is not safely occupiable</li></ul>"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260803T040803Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: "KB-HO-1003-KitchenFireSmoke"
+    - ID: "ef17e08a-c9dd-47e0-adf2-9232c87aaa7f"
+      Hint: RatingsSum
+      Value: 180
+    - ID: "fc43bd45-b665-4895-a9e5-6d9a34ea7835"
+      Hint: Title
+      Value: Homeowners Kitchen Fire and Smoke Damage

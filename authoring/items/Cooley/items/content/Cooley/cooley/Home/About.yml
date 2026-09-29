@@ -1,0 +1,167 @@
+﻿---
+ID: "1fbf29a1-4bdc-43c8-a2d6-8b5b6db33e30"
+Parent: "e17c24e2-6bc8-4415-8745-484d0dbbf8d0"
+Template: "25cf32e0-c2d1-4e72-8cb9-fdeb000be0d7"
+Path: /sitecore/content/Cooley/cooley/Home/About
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{C4E15691-3518-4979-A3DB-AEBFB5CC2399}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "788cab4e-c00b-4cb6-80e6-211896bc71f7"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Cooley is a global law firm with a heritage in advising growth companies, investors, and public companies in technology, life sciences, and related industries.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260814T205645Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: About
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: A global law firm built for innovators.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: A global law firm built for innovators.
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: About Cooley | Cooley LLP
+    - ID: "65408499-25bc-49d0-a2ff-b2fdd798aafc"
+      Hint: ogImage
+      Value: |
+        <image mediaid="" src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=1600&q=80" alt="Office building" />
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: About Cooley | Cooley LLP
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4cfd16bc-13d5-4c65-bd0b-c13438a6aada"
+    - ID: "8cff1548-edb9-4e39-836b-23f86ed55248"
+      Hint: image
+      Value: |
+        <image mediaid="" src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=1600&q=80" alt="Modern office building exterior" />
+    - ID: "93f130f9-b079-4d7d-b7af-ac85cd31bffd"
+      Hint: Detail
+      Value: <h2>Who we are</h2><p>Cooley LLP is a global law firm known for representing companies that invent, scale, and lead. From our roots in Northern California, we have grown into offices across the United States, Europe, and Asia while keeping a culture that prizes collaboration and practical judgment.</p><p>We counsel emerging companies and the investors who back them, as well as mature public companies navigating transactions, regulation, intellectual property, and disputes.</p><h3>Explore</h3><ul><li>Geographies and offices</li><li>Firm timeline</li><li>Giving and pro bono</li><li>Alumni network</li></ul>
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: "Learn about Cooley LLP, a global law firm for technology, life sciences, and growth-company clients."
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: About
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\WIt5EKonMo343Fqq8begbLVKlCgYPAIX
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260815T104854Z
+    - ID: "e7f8a9b0-c1d2-4e3f-8a9b-0c1d2e3f4a5b"
+      Hint: metadataAuthor
+      Value: Cooley LLP
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: About Cooley | Cooley LLP
+    - ID: "efbce7e8-6d4e-49e2-9b48-a9ab9a1e6fd7"
+      Hint: pageThumbnail
+      Value: 
+    - ID: "f6fcc0b6-31b2-49cd-8a66-4ba282a8ad24"
+      Hint: metadataKeywords
+      Value: Cooley, about, law firm, offices, history
+  - Version: 2
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Cooley is a global law firm with a heritage in advising growth companies, investors, and public companies in technology, life sciences, and related industries.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260817T032155Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: About
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: A global law firm built for innovators.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: A global law firm built for innovators.
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\andrew.vieau@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: About Cooley | Cooley LLP
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\andrew.vieau@sitecore.com
+    - ID: "65408499-25bc-49d0-a2ff-b2fdd798aafc"
+      Hint: ogImage
+      Value: |
+        <image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/f0ed5892951743ce84dff716e556416e?v=ec7ccea3" dam-id="Ani-OlkWQtyfehRbjhjMIw" width="1200" height="675" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/83658/thumbnail" alt="Lawyers in a room with one standing wearing suits" />
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: About Cooley | Cooley LLP
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ae20bf18-fafd-4cb0-a282-86e45c7a58f6"
+    - ID: "8cff1548-edb9-4e39-836b-23f86ed55248"
+      Hint: image
+      Value: |
+        <image mediaid="" src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=1600&q=80" alt="Modern office building exterior" />
+    - ID: "93f130f9-b079-4d7d-b7af-ac85cd31bffd"
+      Hint: Detail
+      Value: <h2>Who we are</h2><p>Cooley LLP is a global law firm known for representing companies that invent, scale, and lead. From our roots in Northern California, we have grown into offices across the United States, Europe, and Asia while keeping a culture that prizes collaboration and practical judgment.</p><p>We counsel emerging companies and the investors who back them, as well as mature public companies navigating transactions, regulation, intellectual property, and disputes.</p><h3>Explore</h3><ul><li>Geographies and offices</li><li>Firm timeline</li><li>Giving and pro bono</li><li>Alumni network</li></ul>
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: "Learn about Cooley LLP, a global law firm for technology, life sciences, and growth-company clients."
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: About
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\andrew.vieau@sitecore.com
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260817T032155Z
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260817T032624Z
+    - ID: "e7f8a9b0-c1d2-4e3f-8a9b-0c1d2e3f4a5b"
+      Hint: metadataAuthor
+      Value: Cooley LLP
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: About Cooley | Cooley LLP
+    - ID: "efbce7e8-6d4e-49e2-9b48-a9ab9a1e6fd7"
+      Hint: pageThumbnail
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/f0ed5892951743ce84dff716e556416e?v=ec7ccea3" dam-id="Ani-OlkWQtyfehRbjhjMIw" width="1200" height="675" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/83658/thumbnail" />
+    - ID: "f6fcc0b6-31b2-49cd-8a66-4ba282a8ad24"
+      Hint: metadataKeywords
+      Value: Cooley, about, law firm, offices, history

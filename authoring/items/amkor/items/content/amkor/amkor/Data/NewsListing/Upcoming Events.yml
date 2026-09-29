@@ -1,0 +1,230 @@
+﻿---
+ID: "3e822fa8-edb4-4c7a-9fbb-9ce52ae2e63e"
+Parent: "960ae89a-45f2-4d7b-b9fc-ebabde0f6ac7"
+Template: "de22037d-099b-40fd-895e-af11c08fd8ee"
+Path: /sitecore/content/amkor/amkor/Data/NewsListing/Upcoming Events
+Languages:
+- Language: "ar-EG"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260830T210926Z
+    - ID: "4ca382af-be31-48d5-a714-7c7173d3b002"
+      Hint: CtaLink
+      Value: |
+        <link class="" id="{931ADD10-6857-451F-ABF5-A9D14B1F1757}" querystring="" target="" title="" linktype="internal" text="عرض جميع الفعاليات" />
+    - ID: "4e9732bd-2457-4d98-8bdd-cf44082c4304"
+      Hint: Eyebrow
+      Value: فعاليات Amkor
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "6a5bad2f-6a55-4c92-b63e-c6990e2242d1"
+      Hint: Title
+      Value: الفعاليات القادمة
+    - ID: "7cffb21e-1450-4fc5-96b1-4bf1b8390dc7"
+      Hint: CtaText
+      Value: عرض جميع الفعاليات
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "cd377214-3adf-4dbe-bde4-4da9484a79bc"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c351fb98-4e20-4598-844f-90497bc78e7d"
+      Hint: FeaturedItems
+      Value: |
+        {7066F5BE-B478-43BB-BC5E-8CCCBCA8A321}
+        {BCE8B541-B9B0-4732-9055-1F2D6328794C}
+        {FD3B8E2A-D77F-4F95-9A33-1377EDE6E7B4}
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260902T144200Z
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260830T210926Z
+    - ID: "4ca382af-be31-48d5-a714-7c7173d3b002"
+      Hint: CtaLink
+      Value: |
+        <link text="View All Events" linktype="internal" class="" title="" target="" querystring="" id="{931ADD10-6857-451F-ABF5-A9D14B1F1757}" />
+    - ID: "4e9732bd-2457-4d98-8bdd-cf44082c4304"
+      Hint: Eyebrow
+      Value: amkor events
+    - ID: "6a5bad2f-6a55-4c92-b63e-c6990e2242d1"
+      Hint: Title
+      Value: Upcoming Events
+    - ID: "7cffb21e-1450-4fc5-96b1-4bf1b8390dc7"
+      Hint: CtaText
+      Value: View All Events
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "de593d8a-01e0-4398-8e0b-c3bda6af3798"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c351fb98-4e20-4598-844f-90497bc78e7d"
+      Hint: FeaturedItems
+      Value: |
+        {7066F5BE-B478-43BB-BC5E-8CCCBCA8A321}
+        {BCE8B541-B9B0-4732-9055-1F2D6328794C}
+        {FD3B8E2A-D77F-4F95-9A33-1377EDE6E7B4}
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260830T210926Z
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260830T210926Z
+    - ID: "4ca382af-be31-48d5-a714-7c7173d3b002"
+      Hint: CtaLink
+      Value: |
+        <link class="" id="{931ADD10-6857-451F-ABF5-A9D14B1F1757}" querystring="" target="" title="" linktype="internal" text="すべてのイベントを見る" />
+    - ID: "4e9732bd-2457-4d98-8bdd-cf44082c4304"
+      Hint: Eyebrow
+      Value: アムコーイベント
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "6a5bad2f-6a55-4c92-b63e-c6990e2242d1"
+      Hint: Title
+      Value: 今後のイベント
+    - ID: "7cffb21e-1450-4fc5-96b1-4bf1b8390dc7"
+      Hint: CtaText
+      Value: すべてのイベントを見る
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "1514957c-1274-4873-bf97-92219f9aa18c"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c351fb98-4e20-4598-844f-90497bc78e7d"
+      Hint: FeaturedItems
+      Value: |
+        {7066F5BE-B478-43BB-BC5E-8CCCBCA8A321}
+        {BCE8B541-B9B0-4732-9055-1F2D6328794C}
+        {FD3B8E2A-D77F-4F95-9A33-1377EDE6E7B4}
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260831T030249Z
+- Language: "ko-KR"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260830T210926Z
+    - ID: "4ca382af-be31-48d5-a714-7c7173d3b002"
+      Hint: CtaLink
+      Value: |
+        <link class="" id="{931ADD10-6857-451F-ABF5-A9D14B1F1757}" querystring="" target="" title="" linktype="internal" text="모든 이벤트 보기" />
+    - ID: "4e9732bd-2457-4d98-8bdd-cf44082c4304"
+      Hint: Eyebrow
+      Value: Amkor 이벤트
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "6a5bad2f-6a55-4c92-b63e-c6990e2242d1"
+      Hint: Title
+      Value: 예정된 이벤트
+    - ID: "7cffb21e-1450-4fc5-96b1-4bf1b8390dc7"
+      Hint: CtaText
+      Value: 모든 이벤트 보기
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "893fafcb-768b-43d7-bc87-6a40ddb184fe"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c351fb98-4e20-4598-844f-90497bc78e7d"
+      Hint: FeaturedItems
+      Value: |
+        {7066F5BE-B478-43BB-BC5E-8CCCBCA8A321}
+        {BCE8B541-B9B0-4732-9055-1F2D6328794C}
+        {FD3B8E2A-D77F-4F95-9A33-1377EDE6E7B4}
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260902T144200Z
+- Language: "zh-CN"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260830T210926Z
+    - ID: "4ca382af-be31-48d5-a714-7c7173d3b002"
+      Hint: CtaLink
+      Value: |
+        <link class="" id="{931ADD10-6857-451F-ABF5-A9D14B1F1757}" querystring="" target="" title="" linktype="internal" text="查看所有活动" />
+    - ID: "4e9732bd-2457-4d98-8bdd-cf44082c4304"
+      Hint: Eyebrow
+      Value: 安靠活动
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "6a5bad2f-6a55-4c92-b63e-c6990e2242d1"
+      Hint: Title
+      Value: 即将举行的活动
+    - ID: "7cffb21e-1450-4fc5-96b1-4bf1b8390dc7"
+      Hint: CtaText
+      Value: 查看所有活动
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ff4de71a-c3e3-4c15-96a2-dd807ab97d45"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c351fb98-4e20-4598-844f-90497bc78e7d"
+      Hint: FeaturedItems
+      Value: |
+        {7066F5BE-B478-43BB-BC5E-8CCCBCA8A321}
+        {BCE8B541-B9B0-4732-9055-1F2D6328794C}
+        {FD3B8E2A-D77F-4F95-9A33-1377EDE6E7B4}
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260902T144201Z

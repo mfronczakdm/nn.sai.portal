@@ -1,0 +1,152 @@
+﻿---
+ID: "847a5329-808a-44f2-a876-4e1a835fc0e7"
+Parent: "fa947897-7340-4066-a011-42b5a8eaab98"
+Template: "7629f514-e156-4543-adc6-051453441b33"
+Path: /sitecore/content/quanex/quanex/Home/Products/Extruded Solutions/Commercial Vinyl Door Systems
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{00EC0A1C-404B-4C5F-B3C4-0327B9F89060}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "49076021-9f9e-4695-b5ae-c166b4f2a6f6"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0169dfce-89a4-4941-821a-ab1266a1de4a"
+      Hint: CategoryLabel
+      Value: Commercial Door Profiles
+    - ID: "17cbe776-d3b6-4203-a37c-30a46022bae6"
+      Hint: SpecSheetLink
+      Value: |
+        <link text="Print a Spec Sheet" linktype="external" url="https://www.quanex.com/product/extruded-solutions/" anchor="" target="_blank" />
+    - ID: "190e4142-e8b7-4d47-bcf7-b6bac38ce753"
+      Hint: TechnicalData
+      Value: "<ul><li>Extruded PVC commercial door framing</li><li>Seal and threshold integration pockets</li><li>Hardware-ready reinforcing chambers</li><li>Weather and impact-resistant construction options</li><li>Compatible with Quanex weatherseal components</li></ul>"
+    - ID: "211d45c2-39f7-430f-8c81-14d8ba310a0f"
+      Hint: ImageUrl
+      Value: "https://www.quanex.com/wp-content/uploads/2022/07/Mikron-AW-Rated-Door-System-C3-11300_ProductImage_605x380.jpg"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260813T193650Z
+    - ID: "2c9cc36e-d30c-49c1-93dc-21a353045c54"
+      Hint: StylesAvailable
+      Value: "<ul><li>Commercial entry door frames</li><li>Side-lite and transom companions</li><li>Specialty and institutional door styles</li><li>Finish options for high-traffic openings</li></ul>"
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "4e90c3b8-4bd8-4034-87e0-9e824460f7e5"
+      Hint: ImageSecondary
+      Value: |
+        <image src="https://www.quanex.com/wp-content/uploads/2022/07/Quanex-5400-Sliding-Patio-Door-System_ProductImage_605x380.jpg" alt="Commercial vinyl patio door system" />
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Commercial Vinyl Door Systems
+    - ID: "77b62e2b-2f05-418e-bb41-2903feb32e39"
+      Hint: Description
+      Value: "<p>Quanex commercial vinyl door systems provide extruded PVC framing solutions for entry and specialty door applications that demand weather performance and long-term durability.</p><p>Profiles are engineered to integrate seals, thresholds, and hardware while supporting modern commercial design requirements.</p>"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ba8b40df-e8e8-4a85-9947-1b3a5628f57e"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d004b569-75aa-446d-8e28-e6d0df434626"
+      Hint: ImageSecondaryUrl
+      Value: "https://www.quanex.com/wp-content/uploads/2022/07/Quanex-5400-Sliding-Patio-Door-System_ProductImage_605x380.jpg"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260814T121954Z
+    - ID: "dbd19eed-f27a-4850-9a43-512eb6176c14"
+      Hint: Benefits
+      Value: <ul><li>Durable framing for demanding commercial openings</li><li>Supports energy and weather performance goals</li><li>Designed for fabricator and installer efficiency</li><li>Complements Quanex fenestration component portfolio</li></ul>
+  - Version: 2
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0169dfce-89a4-4941-821a-ab1266a1de4a"
+      Hint: CategoryLabel
+      Value: Commercial Door Profiles
+    - ID: "17cbe776-d3b6-4203-a37c-30a46022bae6"
+      Hint: SpecSheetLink
+      Value: |
+        <link text="Print a Spec Sheet" linktype="external" url="https://www.quanex.com/product/extruded-solutions/" anchor="" target="_blank" />
+    - ID: "190e4142-e8b7-4d47-bcf7-b6bac38ce753"
+      Hint: TechnicalData
+      Value: "<ul><li>Extruded PVC commercial door framing</li><li>Seal and threshold integration pockets</li><li>Hardware-ready reinforcing chambers</li><li>Weather and impact-resistant construction options</li><li>Compatible with Quanex weatherseal components</li></ul>"
+    - ID: "211d45c2-39f7-430f-8c81-14d8ba310a0f"
+      Hint: ImageUrl
+      Value: "https://www.quanex.com/wp-content/uploads/2022/07/Mikron-AW-Rated-Door-System-C3-11300_ProductImage_605x380.jpg"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260814T120400Z
+    - ID: "2c9cc36e-d30c-49c1-93dc-21a353045c54"
+      Hint: StylesAvailable
+      Value: "<ul><li>Commercial entry door frames</li><li>Side-lite and transom companions</li><li>Specialty and institutional door styles</li><li>Finish options for high-traffic openings</li></ul>"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Quanex commercial vinyl door systems provide extruded PVC framing for entry and specialty doors that demand weather performance and durability.
+    - ID: "4e90c3b8-4bd8-4034-87e0-9e824460f7e5"
+      Hint: ImageSecondary
+      Value: |
+        <image src="https://www.quanex.com/wp-content/uploads/2022/07/Quanex-5400-Sliding-Patio-Door-System_ProductImage_605x380.jpg" alt="Commercial vinyl patio door system" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Commercial Vinyl Door Systems
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "65408499-25bc-49d0-a2ff-b2fdd798aafc"
+      Hint: ogImage
+      Value: |
+        <image src="https://www.quanex.com/wp-content/uploads/2022/07/Mikron-AW-Rated-Door-System-C3-11300_ProductImage_605x380.jpg" alt="Commercial Vinyl Door Systems" />
+    - ID: "77b62e2b-2f05-418e-bb41-2903feb32e39"
+      Hint: Description
+      Value: "<p>Quanex commercial vinyl door systems provide extruded PVC framing solutions for entry and specialty door applications that demand weather performance and long-term durability.</p><p>Profiles are engineered to integrate seals, thresholds, and hardware while supporting modern commercial design requirements.</p>"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "484262fd-0b68-4fff-adf8-a1c3ac0413a7"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c5b02812-deb7-4b51-8a68-8019a44f0db3"
+      Hint: ProductSKU
+      Value: "QNX-CVD-AW"
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260814T120400Z
+    - ID: "ca94ec7f-2908-4e34-a9e5-f8ec8dd7a91d"
+      Hint: ProductID
+      Value: "QNX-CVD"
+    - ID: "d004b569-75aa-446d-8e28-e6d0df434626"
+      Hint: ImageSecondaryUrl
+      Value: "https://www.quanex.com/wp-content/uploads/2022/07/Quanex-5400-Sliding-Patio-Door-System_ProductImage_605x380.jpg"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260814T145445Z
+    - ID: "dbd19eed-f27a-4850-9a43-512eb6176c14"
+      Hint: Benefits
+      Value: <ul><li>Durable framing for demanding commercial openings</li><li>Supports energy and weather performance goals</li><li>Designed for fabricator and installer efficiency</li><li>Complements Quanex fenestration component portfolio</li></ul>
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Commercial Vinyl Door Systems | Quanex
+    - ID: "f2fa4f60-bfec-4b8a-858c-f5ae25df459b"
+      Hint: ProductName
+      Value: Commercial Vinyl Door Systems

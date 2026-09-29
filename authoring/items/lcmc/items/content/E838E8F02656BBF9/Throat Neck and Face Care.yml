@@ -1,0 +1,216 @@
+﻿---
+ID: "fdeec078-e398-4ce2-91e3-2d0bda4ec30e"
+Parent: "66b44e6a-6d2f-4b01-bb8a-a26e4e3ec29c"
+Template: "d77937ac-bae4-4eb0-8d7e-69ec09d5bbfc"
+Path: /sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/Ears Nose and Throat Care/Throat Neck and Face Care
+SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{5944F724-0620-4D9F-9317-AB0B80D9D094}"
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{927CD657-E735-4CE5-8ADF-6B1E4CE55FE7}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "0abf8081-31fe-4e54-b43a-cbb7cdf473b7"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: "West Jefferson ENT specialists treat throat, neck, and face conditions including sleep apnea, thyroid disease, and head and neck cancer. Call 504-934-8550 to schedule."
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260909T171100Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Throat, Neck, and Face Care
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Throat, thyroid, sleep apnea, and neck cancer care on the Westbank.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: From sore throats to neck cancer, we're here for you
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Throat, Neck, and Face Care
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Throat, Neck, and Face Care | West Jefferson Medical Center
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d60af9c5-89a8-4655-8f4d-b56ea1025e8f"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: "Throat, neck, and face ENT care at West Jefferson Medical Center in Marrero, including thyroid surgery, sleep apnea, and head and neck cancer care. Call 504-934-8550."
+    - ID: "9d32260e-215d-4eff-80de-6d469daadbc4"
+      Hint: image
+      Value: |
+        <image src="https://www.lcmchealth.org/assets/LCMC-Social-Share.jpg" alt="Throat, neck, and face care at West Jefferson Medical Center" />
+    - ID: "a8a1dfcb-7dd5-4413-8789-db24a95e439f"
+      Hint: Detail
+      Value: |
+        <h2>From sore throats to neck cancer, we're here for you</h2><p>Some of the best parts of being a Louisianan involve eating gumbo, singing during Mardi Gras, and cheering on the Saints. But sore throats and complex swallowing disorders can make it hard to enjoy the finer parts of NOLA living.</p><p>The ear, nose, and throat (ENT) specialists at West Jefferson Medical Center can help you get to the bottom of your problems. We’re experts in everything from hoarseness to tonsillitis to head and neck cancer. We provide compassionate, personalized care tailored to your unique needs.</p><p>We offer these and many other services:</p><ul><li>Head and neck cancer care</li><li>Neck dissection</li><li>Salivary gland care</li><li>Sleep apnea Inspire therapy</li><li>Sleep apnea surgery</li><li>Throat care</li><li>Thyroid and parathyroid surgical care</li><li>Thyroidectomy</li><li>Voice care</li></ul><h3>Why choose West Jefferson Medical Center's ENT Clinic?</h3><ul><li><strong>Experienced specialists</strong> — skilled ENT specialists with years of experience diagnosing and treating throat, neck, and face conditions.</li><li><strong>State-of-the-art facilities</strong> — the latest technologies and medical advancements for precise diagnoses and treatments.</li><li><strong>Patient-centered approach</strong> — personalized care plans to meet your specific needs.</li><li><strong>Comprehensive services</strong> — medical treatment, surgical intervention, and related care in one clinic.</li><li><strong>Compassionate care</strong> — support throughout your journey to recovery.</li></ul><h3>How to make an appointment</h3><p>Call the West Jefferson ENT clinic at <strong>504-934-8550</strong> to schedule, or <a href="/Find-a-Provider">find an otolaryngologist in the LCMC Health provider directory</a>.</p><p><strong>West Jefferson Medical Center Ear, Nose &amp; Throat</strong><br/>1111 Medical Center Blvd., Suite N-707<br/>Marrero, LA 70072<br/>Phone: 504-934-8550</p>
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Throat, Neck, and Face Care
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Akv1r1Hmcm16AN61y5QanpMca0RChHPy
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T192710Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Throat, Neck, and Face Care at West Jefferson
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: "Los especialistas ENT de West Jefferson tratan afecciones de garganta, cuello y rostro, incluida la apnea del sueño, la enfermedad de la tiroides y el cáncer de cabeza y cuello. Llame al 504-934-8550 para programar una cita."
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260909T171100Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Atención de garganta, cuello y rostro
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Atención para garganta, tiroides, apnea del sueño y cáncer de cuello en la ribera oeste.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Desde dolores de garganta hasta cáncer de cuello, estamos aquí para usted
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Atención de garganta, cuello y rostro
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Atención de garganta, cuello y rostro | West Jefferson Medical Center
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "7191e14f-1aeb-43f8-af60-fecbe13d7aca"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: "Atención ENT de garganta, cuello y rostro en West Jefferson Medical Center en Marrero, incluida cirugía de tiroides, apnea del sueño y atención para cáncer de cabeza y cuello. Llame al 504-934-8550."
+    - ID: "9d32260e-215d-4eff-80de-6d469daadbc4"
+      Hint: image
+      Value: |
+        <image alt="Atención de garganta, cuello y rostro en West Jefferson Medical Center" src="https://www.lcmchealth.org/assets/LCMC-Social-Share.jpg" />
+    - ID: "a8a1dfcb-7dd5-4413-8789-db24a95e439f"
+      Hint: Detail
+      Value: |
+        <h2>Desde dolores de garganta hasta cáncer de cuello, estamos aquí para usted</h2><p>Algunas de las mejores partes de ser de Luisiana incluyen comer gumbo, cantar durante Mardi Gras y alentar a los Saints. Pero los dolores de garganta y los trastornos complejos de la deglución pueden hacer que sea difícil disfrutar de los mejores momentos de la vida en Nueva Orleans.</p><p>Los especialistas en oído, nariz y garganta (ENT) de West Jefferson Medical Center pueden ayudarle a encontrar la causa de sus problemas. Somos expertos en todo, desde ronquera y amigdalitis hasta cáncer de cabeza y cuello. Brindamos atención compasiva y personalizada, adaptada a sus necesidades únicas.</p><p>Ofrecemos estos y muchos otros servicios:</p><ul><li>Atención para cáncer de cabeza y cuello</li><li>Disección de cuello</li><li>Atención de glándulas salivales</li><li>Terapia Inspire para la apnea del sueño</li><li>Cirugía para la apnea del sueño</li><li>Atención de garganta</li><li>Atención quirúrgica de tiroides y paratiroides</li><li>Tiroidectomía</li><li>Atención de la voz</li></ul><h3>¿Por qué elegir la Clínica ENT de West Jefferson Medical Center?</h3><ul><li><strong>Especialistas con experiencia</strong> — especialistas en ENT con años de experiencia en el diagnóstico y tratamiento de afecciones de garganta, cuello y rostro.</li><li><strong>Instalaciones de última generación</strong> — las tecnologías más recientes y avances médicos para diagnósticos y tratamientos precisos.</li><li><strong>Enfoque centrado en el paciente</strong> — planes de atención personalizados para satisfacer sus necesidades específicas.</li><li><strong>Servicios integrales</strong> — tratamiento médico, intervención quirúrgica y atención relacionada en una sola clínica.</li><li><strong>Atención compasiva</strong> — apoyo durante todo su proceso de recuperación.</li></ul><h3>Cómo programar una cita</h3><p>Llame a la clínica ENT de West Jefferson al <strong>504-934-8550</strong> para programar su cita, o <a href="/Find-a-Provider">encuentre un otorrinolaringólogo en el directorio de proveedores de LCMC Health</a>.</p><p><strong>West Jefferson Medical Center Ear, Nose &amp; Throat</strong><br/>1111 Medical Center Blvd., Suite N-707<br/>Marrero, LA 70072<br/>Teléfono: 504-934-8550</p>
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Atención de garganta, cuello y rostro
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T234054Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Atención de garganta, cuello y rostro en West Jefferson
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: "Les spécialistes ORL de West Jefferson traitent les problèmes de gorge, du cou et du visage, y compris l’apnée du sommeil, les maladies de la thyroïde et le cancer de la tête et du cou. Appelez au 504-934-8550 pour prendre rendez-vous."
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260909T171100Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Soins de la gorge, du cou et du visage
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Soins pour la gorge, la thyroïde, l’apnée du sommeil et le cancer du cou sur la rive ouest.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Des maux de gorge au cancer du cou, nous sommes là pour vous
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Soins de la gorge, du cou et du visage
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Soins de la gorge, du cou et du visage | West Jefferson Medical Center
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a62c9458-fef2-4e28-b2a5-d6f7740d2a3d"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: "Soins ORL de la gorge, du cou et du visage au West Jefferson Medical Center à Marrero, y compris la chirurgie de la thyroïde, l’apnée du sommeil et les soins pour le cancer de la tête et du cou. Appelez au 504-934-8550."
+    - ID: "9d32260e-215d-4eff-80de-6d469daadbc4"
+      Hint: image
+      Value: |
+        <image alt="Soins de la gorge, du cou et du visage au West Jefferson Medical Center" src="https://www.lcmchealth.org/assets/LCMC-Social-Share.jpg" />
+    - ID: "a8a1dfcb-7dd5-4413-8789-db24a95e439f"
+      Hint: Detail
+      Value: |
+        <h2>Des maux de gorge au cancer du cou, nous sommes là pour vous</h2><p>Parmi les plus beaux plaisirs de la vie en Louisiane, il y a manger du gumbo, chanter pendant le Mardi Gras et encourager les Saints. Mais les maux de gorge et les troubles complexes de la déglutition peuvent rendre plus difficile de profiter des bons moments de la vie à La Nouvelle-Orléans.</p><p>Les spécialistes en ORL (oreille, nez et gorge) du West Jefferson Medical Center peuvent vous aider à trouver la cause de vos problèmes. Nous traitons tout, de l’enrouement à l’amygdalite, jusqu’au cancer de la tête et du cou. Nous offrons des soins attentionnés et personnalisés, adaptés à vos besoins.</p><p>Nous offrons ces services, et bien d’autres :</p><ul><li>Soins pour le cancer de la tête et du cou</li><li>Curage cervical</li><li>Soins des glandes salivaires</li><li>Thérapie Inspire pour l’apnée du sommeil</li><li>Chirurgie de l’apnée du sommeil</li><li>Soins de la gorge</li><li>Soins chirurgicaux de la thyroïde et des glandes parathyroïdes</li><li>Thyroïdectomie</li><li>Soins de la voix</li></ul><h3>Pourquoi choisir la clinique ORL du West Jefferson Medical Center?</h3><ul><li><strong>Spécialistes expérimentés</strong> — des spécialistes ORL chevronnés qui diagnostiquent et traitent les problèmes de la gorge, du cou et du visage.</li><li><strong>Installations à la fine pointe</strong> — les plus récentes technologies et avancées médicales pour des diagnostics et traitements précis.</li><li><strong>Approche centrée sur la personne</strong> — des plans de soins personnalisés selon vos besoins.</li><li><strong>Services complets</strong> — traitement médical, intervention chirurgicale et soins connexes réunis dans une seule clinique.</li><li><strong>Soins attentionnés</strong> — un accompagnement tout au long de votre rétablissement.</li></ul><h3>Comment prendre rendez-vous</h3><p>Appelez la clinique ORL de West Jefferson au <strong>504-934-8550</strong> pour prendre rendez-vous, ou <a href="/Find-a-Provider">trouvez un oto-rhino-laryngologiste dans le répertoire des fournisseurs de LCMC Health</a>.</p><p><strong>West Jefferson Medical Center Ear, Nose &amp; Throat</strong><br/>1111 Medical Center Blvd., Suite N-707<br/>Marrero, LA 70072<br/>Téléphone : 504-934-8550</p>
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Soins de la gorge, du cou et du visage
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201827Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Soins de la gorge, du cou et du visage à West Jefferson

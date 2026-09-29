@@ -1,0 +1,231 @@
+﻿---
+ID: "1522c36c-dab1-4844-8aa9-7b33c1e949c6"
+Parent: "c8263ff3-ef46-4529-992b-c8eb5c57dbc8"
+Template: "b08ec32b-f183-474b-93f7-07512168dd6e"
+Path: /sitecore/content/pillsbury/blg/Home/Insights/Blogs/Gravel2Gavel
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{6C59AE29-D0A1-4B77-9305-0ABAB21D5FE5}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{61B5AA66-BEFC-4DB9-A44B-2D50CE069B1A}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "4ae61b12-5b98-40d2-a0f2-79718f5a73f6"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260804T170837Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Gravel2Gavel
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Gravel2Gavel
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b0490310-2086-413f-9a00-8b15bf43bb40"
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Gravel2Gavel
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\WIt5EKonMo343Fqq8begbLVKlCgYPAIX
+    - ID: "d2ff0fcf-f6f9-48c6-9efb-db569452b8dc"
+      Hint: Detail
+      Value: <p>Gravel2Gavel blog.</p>
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260804T180328Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Gravel2Gavel
+  - Version: 2
+    Fields:
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Gravel2Gavel covers energy transition, oil and gas, power, infrastructure, and environmental developments shaping projects and investments.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260804T193116Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Gravel2Gavel
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Energy and infrastructure legal insights from Pillsbury’s Gravel2Gavel blog.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Energy, infrastructure, and natural resources law
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Gravel2Gavel | Pillsbury Energy & Infrastructure Blog
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Gravel2Gavel Energy Blog | Pillsbury Law
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "72b6ba94-ad21-41ff-8847-588c5c219953"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Energy, infrastructure, and natural resources legal analysis from Pillsbury’s Gravel2Gavel blog.
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Gravel2Gavel
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\WIt5EKonMo343Fqq8begbLVKlCgYPAIX
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260804T193116Z
+    - ID: "d2ff0fcf-f6f9-48c6-9efb-db569452b8dc"
+      Hint: Detail
+      Value: <p>Gravel2Gavel is Pillsbury’s energy and infrastructure blog. Lawyers across the firm write on oil and gas, power markets, renewables, project development, permitting, and the regulatory frameworks that move—or stall—major capital projects.</p><p>From energy transition policy to commercial contracting and dispute trends, Gravel2Gavel connects legal developments to the realities of building, financing, and operating energy and infrastructure assets.</p>
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260804T202549Z
+    - ID: "e7f8a9b0-c1d2-4e3f-8a9b-0c1d2e3f4a5b"
+      Hint: metadataAuthor
+      Value: Pillsbury Winthrop Shaw Pittman LLP
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Gravel2Gavel | Pillsbury Energy & Infrastructure Blog
+    - ID: "f6fcc0b6-31b2-49cd-8a66-4ba282a8ad24"
+      Hint: metadataKeywords
+      Value: energy law, infrastructure, oil and gas, renewables, project development, Pillsbury, Gravel2Gavel
+  - Version: 3
+    Fields:
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Gravel2Gavel covers energy transition, oil and gas, power, infrastructure, and environmental developments shaping projects and investments.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260805T122327Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Gravel2Gavel
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "46ab8141-8b68-4775-9397-d9cfd62c4dce"
+      Hint: image
+      Value: |
+        <image src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1200&h=750&q=80" alt="Wind turbines and renewable energy infrastructure" width="1200" height="750" />
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Energy and infrastructure legal insights from Pillsbury’s Gravel2Gavel blog.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Energy, infrastructure, and natural resources law
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Gravel2Gavel | Pillsbury Energy & Infrastructure Blog
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Gravel2Gavel Energy Blog | Pillsbury Law
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "82941a10-d48b-4398-a4e7-a76fd30556cc"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Energy, infrastructure, and natural resources legal analysis from Pillsbury’s Gravel2Gavel blog.
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Gravel2Gavel
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260805T122327Z
+    - ID: "d2ff0fcf-f6f9-48c6-9efb-db569452b8dc"
+      Hint: Detail
+      Value: <p>Gravel2Gavel is Pillsbury’s energy and infrastructure blog. Lawyers across the firm write on oil and gas, power markets, renewables, project development, permitting, and the regulatory frameworks that move—or stall—major capital projects.</p><p>From energy transition policy to commercial contracting and dispute trends, Gravel2Gavel connects legal developments to the realities of building, financing, and operating energy and infrastructure assets.</p>
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260822T010546Z
+    - ID: "e7f8a9b0-c1d2-4e3f-8a9b-0c1d2e3f4a5b"
+      Hint: metadataAuthor
+      Value: Pillsbury Winthrop Shaw Pittman LLP
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Gravel2Gavel | Pillsbury Energy & Infrastructure Blog
+    - ID: "f6fcc0b6-31b2-49cd-8a66-4ba282a8ad24"
+      Hint: metadataKeywords
+      Value: energy law, infrastructure, oil and gas, renewables, project development, Pillsbury, Gravel2Gavel
+  - Version: 4
+    Fields:
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Gravel2Gavel covers energy transition, oil and gas, power, infrastructure, and environmental developments shaping projects and investments.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260822T014514Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Gravel2Gavel
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{C55B483C-EA7F-4E76-A066-985F7D9396CA}"
+    - ID: "46ab8141-8b68-4775-9397-d9cfd62c4dce"
+      Hint: image
+      Value: |
+        <image src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1200&h=750&q=80" alt="Wind turbines and renewable energy infrastructure" width="1200" height="750" />
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Energy and infrastructure legal insights from Pillsbury’s Gravel2Gavel blog.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Energy, infrastructure, and natural resources law
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Gravel2Gavel | Pillsbury Energy & Infrastructure Blog
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Gravel2Gavel Energy Blog | Pillsbury Law
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5078c77f-f56f-47a7-89bd-8ba9685f516e"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Energy, infrastructure, and natural resources legal analysis from Pillsbury’s Gravel2Gavel blog.
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Gravel2Gavel
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260822T014514Z
+    - ID: "d2ff0fcf-f6f9-48c6-9efb-db569452b8dc"
+      Hint: Detail
+      Value: <p>Gravel2Gavel is Pillsbury’s energy and infrastructure blog. Lawyers across the firm write on oil and gas, power markets, renewables, project development, permitting, and the regulatory frameworks that move—or stall—major capital projects.</p><p>From energy transition policy to commercial contracting and dispute trends, Gravel2Gavel connects legal developments to the realities of building, financing, and operating energy and infrastructure assets.</p>
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260822T014514Z
+    - ID: "e7f8a9b0-c1d2-4e3f-8a9b-0c1d2e3f4a5b"
+      Hint: metadataAuthor
+      Value: Pillsbury Winthrop Shaw Pittman LLP
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Gravel2Gavel | Pillsbury Energy & Infrastructure Blog
+    - ID: "f6fcc0b6-31b2-49cd-8a66-4ba282a8ad24"
+      Hint: metadataKeywords
+      Value: energy law, infrastructure, oil and gas, renewables, project development, Pillsbury, Gravel2Gavel

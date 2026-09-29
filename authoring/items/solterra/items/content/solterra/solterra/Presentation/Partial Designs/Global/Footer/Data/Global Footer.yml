@@ -1,0 +1,71 @@
+﻿---
+ID: "d98fac71-f106-4498-81ea-b499013fa703"
+Parent: "4f26e1e1-b09f-42dd-8062-42f5720cc911"
+Template: "407d4269-db05-473b-90ed-b0d96574ba76"
+Path: /sitecore/content/solterra/solterra/Presentation/Partial Designs/Global/Footer/Data/Global Footer
+BranchID: "ed920ceb-2272-432a-829e-4610b6b94945"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 400
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "6e0c8068-9599-4f19-9fe1-377f59ae961e"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{04A0EA89-ADD9-4CAE-8A68-25206C7AD96F}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1a6354fb-e81d-4152-93d3-92fb79207821"
+      Hint: footerSocialLinks
+      Value: |
+        {6A8E42D4-ED9B-488A-B03F-F07086A391BD}
+        {BA09DE53-5EB9-4345-A63E-43BBB884C94F}
+        {F35E1584-54FB-4D32-A3C2-66E3E145D7AF}
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260430T182401Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "409a02fd-b023-472b-9f9c-772f59adebda"
+      Hint: footerLogo
+      Value: |
+        <image mediaid="{0101754B-3FA9-4D44-8C7A-92E5F72E68C2}" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8c72b9c8-5c50-4170-8539-6b7a2a546c7d"
+      Hint: footerPromoDescription
+      Value: "Stay in the loop with our newsletter, where we deliver bite-sized insights into the latest beauty solutions."
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "7999b1e8-1f21-48aa-8884-df9bda1d0eab"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c3bcd054-cd5d-4231-88d0-1c38dbe2be33"
+      Hint: footerPromoTitle
+      Value: Your Source for Solterra & Co. Company Updates
+    - ID: "d03f6255-b87d-4205-b10d-f3c1ee56aa14"
+      Hint: footerCopyright
+      Value: © 2025 Soltera & Co. All rights reserved.
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260430T182515Z
+    - ID: "f87ec34b-1d58-4cb9-bed9-2c7aa450cdb5"
+      Hint: footerPromoLink
+      Value: |
+        <link class="" querystring="" id="{3E89E8B6-C698-4D5D-A26A-79F62B500224}" anchor="" target="" title="" linktype="internal" text="Sign Up" url="" />

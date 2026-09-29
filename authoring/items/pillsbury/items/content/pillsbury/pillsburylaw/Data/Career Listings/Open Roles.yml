@@ -1,0 +1,32 @@
+﻿---
+ID: "84550224-646b-4c7f-8b07-7c2f92f90faa"
+Parent: "4420dc07-d433-4ab8-b916-155d91735575"
+Template: "4efc4068-14a6-4b66-81de-2dfaf1559137"
+Path: /sitecore/content/pillsbury/pillsburylaw/Data/Career Listings/Open Roles
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "03d8f0db-0a51-40f0-a21a-f2a3d1c86e91"
+      Hint: Intro
+      Value: <p>Search open roles by keyword, track, or location. Find associate, summer, lateral, and business professional opportunities across our offices.</p>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260806T165246Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "8c5c0888-8321-4f95-aa2a-eb6ba825eb00"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d80c4398-4e0d-4693-bb24-ce24ed194199"
+      Hint: CareersRoot
+      Value: "{C30AB91F-550F-4452-8725-5BCCAF1B674B}"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260806T165247Z
+    - ID: "fbd93418-91d8-4eb1-91f3-aeb90c27bced"
+      Hint: Title
+      Value: Open Roles

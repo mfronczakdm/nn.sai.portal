@@ -1,0 +1,189 @@
+﻿---
+ID: "0f6d11cb-204b-4f27-94fb-fd46c5716d25"
+Parent: "0284e480-e14c-4a3e-ae47-caf505c93347"
+Template: "13c565fe-09c3-4994-8b5a-580da061be0c"
+Path: /sitecore/content/lcmc/lcmc/Data/Listing Blocks/LCMC News and Events/Event Womens Health
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0bed7c19-045c-4702-8f2e-4ba6219951a7"
+      Hint: ItemSummary
+      Value: "<p>A half-day program covering prevention, wellness, and the latest treatments.</p>"
+    - ID: "18691602-fac5-4db1-b600-f2c00b31cc1e"
+      Hint: ItemTitle
+      Value: Women's health symposium
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T015851Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "67c74492-4daf-40dc-bcb9-7bb8ef6cb8c5"
+      Hint: ItemImage
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/d8f9fd46273a42e1839d066b4b356e15?v=b0998978" dam-id="mmhvtEx-Q-2DHKouk21MHw" width="585" height="300" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/87199/thumbnail" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "04d9dddb-44d6-4bb5-8c33-0c3335537b22"
+    - ID: "b940d47f-05d1-404d-844e-c3eb1146c521"
+      Hint: ItemDate
+      Value: October 3, 2026
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T164934Z
+    - ID: "da6bd2f3-3f33-4807-aabe-81732653d5ca"
+      Hint: ItemLink
+      Value: |
+        <link text="Register" anchor="" linktype="external" class="" title="" target="" querystring="" url="https://www.lcmchealth.org/events/" />
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0bed7c19-045c-4702-8f2e-4ba6219951a7"
+      Hint: ItemSummary
+      Value: <p>Un programa de media jornada sobre prevención, bienestar y los tratamientos más recientes.</p>
+    - ID: "18691602-fac5-4db1-b600-f2c00b31cc1e"
+      Hint: ItemTitle
+      Value: Simposio de salud de la mujer
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T015851Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "10d77736-524b-4f6d-b98b-2d9370343ea1"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "b940d47f-05d1-404d-844e-c3eb1146c521"
+      Hint: ItemDate
+      Value: 3 de octubre de 2026
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T163031Z
+    - ID: "da6bd2f3-3f33-4807-aabe-81732653d5ca"
+      Hint: ItemLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="Regístrate" url="https://www.lcmchealth.org/events/" />
+  - Version: 2
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0bed7c19-045c-4702-8f2e-4ba6219951a7"
+      Hint: ItemSummary
+      Value: <p>Un programa de medio día sobre prevención, bienestar y los tratamientos más recientes.</p>
+    - ID: "18691602-fac5-4db1-b600-f2c00b31cc1e"
+      Hint: ItemTitle
+      Value: Simposio de salud para la mujer
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260910T200825Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "67c74492-4daf-40dc-bcb9-7bb8ef6cb8c5"
+      Hint: ItemImage
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/d8f9fd46273a42e1839d066b4b356e15?v=b0998978" dam-id="mmhvtEx-Q-2DHKouk21MHw" width="585" height="300" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/87199/thumbnail" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "9e65f545-db0f-4909-b264-9991b38aa74b"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "b940d47f-05d1-404d-844e-c3eb1146c521"
+      Hint: ItemDate
+      Value: 3 de octubre de 2026
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260910T200825Z
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T200831Z
+    - ID: "da6bd2f3-3f33-4807-aabe-81732653d5ca"
+      Hint: ItemLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="Inscribirse" url="https://www.lcmchealth.org/events/" />
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0bed7c19-045c-4702-8f2e-4ba6219951a7"
+      Hint: ItemSummary
+      Value: "<p>Un programme d’une demi-journée sur la prévention, le mieux-être et les plus récents traitements.</p>"
+    - ID: "18691602-fac5-4db1-b600-f2c00b31cc1e"
+      Hint: ItemTitle
+      Value: Symposium sur la santé des femmes
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T015851Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "67c74492-4daf-40dc-bcb9-7bb8ef6cb8c5"
+      Hint: ItemImage
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/d8f9fd46273a42e1839d066b4b356e15?v=b0998978" dam-id="mmhvtEx-Q-2DHKouk21MHw" width="585" height="300" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/87199/thumbnail" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "79d404f5-7b0d-4d58-9a22-30d8b00b7790"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "b940d47f-05d1-404d-844e-c3eb1146c521"
+      Hint: ItemDate
+      Value: 3 octobre 2026
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201646Z
+    - ID: "da6bd2f3-3f33-4807-aabe-81732653d5ca"
+      Hint: ItemLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="S’inscrire" url="https://www.lcmchealth.org/events/" />

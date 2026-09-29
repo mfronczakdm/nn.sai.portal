@@ -1,0 +1,37 @@
+﻿---
+ID: "2948eebc-5092-4567-b2fa-acfebb060fc2"
+Parent: "97231ad4-1f97-4c08-9e92-03bd95f6d5a5"
+Template: "73e57eaa-b54a-41e1-b689-bf7dae9155ad"
+Path: /sitecore/content/progressive/pkm/Home/Questions and Answers/Documentation/Authenticating documents
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{7D69C670-5E0F-4810-A87B-C967CB01B923}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260729T192657Z
+    - ID: "2d71e32d-e990-46b3-8ca1-58cd89743d5e"
+      Hint: Question
+      Value: "How should Progressive claims advisors authenticate submitted claim documents?"
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Authenticating documents
+    - ID: "4f8dc72e-1548-471c-9f3e-a13e944e4321"
+      Hint: Answer
+      Value: Check Progressive authentication rules for signs of alteration, inconsistent metadata, or mismatched identifiers. Compare documents to known Progressive policy and claim data. Escalate suspected fraud indicators immediately through Progressive fraud channels.
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "faedb7c0-471f-4b59-b97a-c941cc998bfa"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260729T192658Z

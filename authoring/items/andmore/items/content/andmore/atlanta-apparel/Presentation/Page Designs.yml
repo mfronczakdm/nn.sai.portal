@@ -1,0 +1,45 @@
+﻿---
+ID: "e6940ac8-056c-412a-852d-8dde7f530f87"
+Parent: "e2c344a8-e648-4be7-a112-dbe16866e574"
+Template: "9589113e-dae2-42a2-b06d-f8066e2a02c3"
+Path: "/sitecore/content/andmore/atlanta-apparel/Presentation/Page Designs"
+BranchID: "45cf9f42-b3ac-4412-aab9-f8441c7e448e"
+SharedFields:
+- ID: "ba1f60d6-3deb-40cc-bb61-eec772279ee1"
+  Hint: TemplatesMapping
+  Value: "%7b3CF0AD59-CDEC-4589-9A67-59BD496D0AC3%7d%3d%257BF3F40B62-B26E-4F02-BF8D-87498A37C750%257D%26%7b092670B2-6812-4D9C-B7EF-6266CAD2BD9D%7d%3d%257BF3F40B62-B26E-4F02-BF8D-87498A37C750%257D%26%7b7B62B7D3-369A-4A78-8A85-B1DC82318ED5%7d%3d%257BB018AC53-69A6-4F8B-8EDD-44912FE40749%257D%26%7bFBEF829B-19E8-4686-A445-023CEB9ACF2B%7d%3d%257BF3F40B62-B26E-4F02-BF8D-87498A37C750%257D%26%7b9949D5A5-DD38-43B0-964E-3E41DDDE4A64%7d%3d%257BF3F40B62-B26E-4F02-BF8D-87498A37C750%257D%26%7b55913A3F-0350-4708-8360-EDD64B93ACCF%7d%3d%257BF3F40B62-B26E-4F02-BF8D-87498A37C750%257D%26%7b49095075-639B-45F2-8AA3-8EB17339CBC7%7d%3d%257BF3F40B62-B26E-4F02-BF8D-87498A37C750%257D%26%7b69728677-52E5-4482-A415-94F0222799B8%7d%3d%257BF3F40B62-B26E-4F02-BF8D-87498A37C750%257D%26%7b6CCF3409-0A26-4069-92EC-2099DAE63088%7d%3d%257BF3F40B62-B26E-4F02-BF8D-87498A37C750%257D"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "e6e80fdb-ecc8-477a-ba7c-72faf4386897"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{2EA756FA-AED6-4599-83B7-36FEFE229B31}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260824T120158Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5aebbbca-08d3-4bb0-a806-f2135a1d2293"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260903T155127Z

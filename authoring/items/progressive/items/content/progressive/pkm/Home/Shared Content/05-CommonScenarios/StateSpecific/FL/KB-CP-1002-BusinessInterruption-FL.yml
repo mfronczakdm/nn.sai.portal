@@ -1,0 +1,41 @@
+﻿---
+ID: "8d287006-2331-4103-89cd-d49fbe4c27ad"
+Parent: "681c3225-f42e-4708-9b09-dee191926f9e"
+Template: "bdf6c974-e68c-46a2-a0a9-d382fd0927eb"
+Path: "/sitecore/content/progressive/pkm/Home/Shared Content/05-CommonScenarios/StateSpecific/FL/KB-CP-1002-BusinessInterruption-FL"
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{C88099D7-DBAF-49A2-9057-95A35EF04E12}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "21b8d6f1-4294-46a5-98fd-38df0ce8aae0"
+      Hint: SourceDocumentLOB
+      Value: "{E799A026-FF03-4588-8607-16222D811A4C}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260803T035525Z
+    - ID: "76e0c665-5c4d-4d03-ae66-a5f3d12978ba"
+      Hint: Content
+      Value: "<p>In Florida, confirm a Progressive covered cause of loss before discussing BI advances, and gather Progressive period-of-restoration facts (stop date / expected reopen) on the first advisor contact.</p>"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "85e43cd9-02d9-4556-aad2-fabad079df27"
+    - ID: "94ce9d2b-aa0c-488f-943a-d2e582eb50bc"
+      Hint: SourceDocumentPerils
+      Value: "{5DDEBC5C-5867-430F-A157-6D6485D11006}"
+    - ID: "a8f6d033-4e9e-4598-be5e-da2456c41b9f"
+      Hint: sourceDocumentLink
+      Value: |
+        <link text="Commercial Property Business Interruption — After a Covered Loss" linktype="internal" class="" title="" target="" querystring="" id="{FC8F587F-0354-452B-AE90-E8FEE418C90B}" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260803T035526Z

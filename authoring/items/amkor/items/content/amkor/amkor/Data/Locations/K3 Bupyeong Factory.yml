@@ -1,0 +1,101 @@
+﻿---
+ID: "15378de3-fef5-41a1-9286-c3122fe9696e"
+Parent: "f9dc4191-96ba-4e83-b6bc-601af41ed499"
+Template: "0a93f003-2ef3-4a66-9fb6-95c10b95532b"
+Path: /sitecore/content/amkor/amkor/Data/Locations/K3 Bupyeong Factory
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "11022184-1d76-4d54-ba17-6f68d511afae"
+      Hint: Name
+      Value: K3 Bupyeong Factory
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260829T155705Z
+    - ID: "2caca007-a43f-4b62-b8ca-cb48fec72576"
+      Hint: State
+      Value: Korea
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "554b1ddd-6a2a-4e0e-b4ba-7898f6c03dc6"
+      Hint: Type
+      Value: Factories
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "e2f84ea4-cca0-4dc3-bc3b-e1160c28b4ca"
+    - ID: "9c275841-cbb3-4b7e-81c7-9111a5ce2fdd"
+      Hint: GEO
+      Value: 37.5088,126.7260
+    - ID: "a72e5257-2698-414c-9416-83d2a100665d"
+      Hint: Street Address
+      Value: "110 Anaji-ro Gyeyang-gu"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260829T155705Z
+    - ID: "efe82275-714a-4ee5-ab29-577ceddc29ba"
+      Hint: City
+      Value: Incheon
+    - ID: "fa091d7b-c69b-4946-90fc-eac2cfae439b"
+      Hint: ZIP
+      Value: 21107
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "11022184-1d76-4d54-ba17-6f68d511afae"
+      Hint: Name
+      Value: K3 富平工場
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260829T155705Z
+    - ID: "2caca007-a43f-4b62-b8ca-cb48fec72576"
+      Hint: State
+      Value: 韓国
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "554b1ddd-6a2a-4e0e-b4ba-7898f6c03dc6"
+      Hint: Type
+      Value: Factories
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f7882391-5645-48e5-b66d-1ab744cbe83d"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9c275841-cbb3-4b7e-81c7-9111a5ce2fdd"
+      Hint: GEO
+      Value: 37.5088,126.7260
+    - ID: "a72e5257-2698-414c-9416-83d2a100665d"
+      Hint: Street Address
+      Value: 仁川広域市桂陽区アナジ路110
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260831T030238Z
+    - ID: "efe82275-714a-4ee5-ab29-577ceddc29ba"
+      Hint: City
+      Value: 仁川
+    - ID: "fa091d7b-c69b-4946-90fc-eac2cfae439b"
+      Hint: ZIP
+      Value: 21107

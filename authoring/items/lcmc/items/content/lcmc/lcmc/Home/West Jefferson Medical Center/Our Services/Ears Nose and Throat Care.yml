@@ -1,0 +1,275 @@
+﻿---
+ID: "66b44e6a-6d2f-4b01-bb8a-a26e4e3ec29c"
+Parent: "2c56b473-70ee-4a89-bdd5-cfed2a5fcdd8"
+Template: "d77937ac-bae4-4eb0-8d7e-69ec09d5bbfc"
+Path: /sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/Ears Nose and Throat Care
+SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{5944F724-0620-4D9F-9317-AB0B80D9D094}"
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{374DD448-F86E-4778-864B-3809BA008B0B}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "babd7b7e-5858-4bdf-9420-9ee842c5e368"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{EA6EAADA-5250-4F75-A41D-11A82FC46786}"
+              p:before="*"
+              s:ds="40033320-2e3a-40c1-89b3-fd98f165e677"
+              s:id="{7943A20A-669D-4921-81EE-F4EC7F2E78A3}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;ImageLayout&amp;FieldNames=%7B47A07212-D874-4077-BC67-C82B71B23AB7%7D&amp;Dark Imge&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=2"
+              s:ph="headless-main" />
+            <r
+              uid="{599DDA4D-3502-48F8-9AEE-24D3CC97C241}"
+              p:after="*[1=2]"
+              s:id="{B1136CF1-94BE-468C-B78D-9BE212AF5428}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Dark Imge&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: "West Jefferson ENT specialists treat sinus disease, hearing loss, sleep apnea, thyroid conditions, and head and neck concerns for patients of all ages. Call 504-934-8550 to schedule."
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T211320Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: ENT Care
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: 
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Otolaryngology for sinus, hearing, sleep apnea, and thyroid care on the Westbank.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Otolaryngology at West Jefferson Medical Center
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Ears, Nose & Throat Care
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Ears, Nose & Throat Care | West Jefferson Medical Center
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f56a5b95-0942-49ef-8626-98c8356d7632"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: "ENT and otolaryngology at West Jefferson Medical Center in Marrero. Conditions, treatments, clinic address, and appointment line 504-934-8550."
+    - ID: "9d32260e-215d-4eff-80de-6d469daadbc4"
+      Hint: image
+      Value: |
+        <image src="https://www.lcmchealth.org/assets/LCMC-Social-Share.jpg" alt="Ears, Nose and Throat Care at West Jefferson" />
+    - ID: "a8a1dfcb-7dd5-4413-8789-db24a95e439f"
+      Hint: Detail
+      Value: |
+        <h2>Otolaryngology on the Westbank</h2><p>The Department of Otolaryngology — Head and Neck Surgery at West Jefferson Medical Center cares for ear, nose, and throat conditions across the lifespan. Patients come here for recurring infections, nasal blockage, voice and swallowing problems, sleep apnea, facial injury, and thyroid or parathyroid disease.</p><p>Whether the need is an acute illness, a chronic sinus condition, or evaluation of a neck mass, the ENT team works to diagnose the cause and match treatment to each patient’s goals — from medical management to in-office procedures and surgery when it is the better option.</p><h3>How to make an appointment</h3><p>Call the West Jefferson ENT clinic at <strong>504-934-8550</strong> to schedule, or <a href="/Find-a-Provider">find an otolaryngologist in the LCMC Health provider directory</a>.</p><p><strong>West Jefferson Medical Center Ear, Nose &amp; Throat</strong><br/>1111 Medical Center Blvd., Suite N-707<br/>Marrero, LA 70072<br/>Phone: 504-934-8550</p><h3>Conditions we treat</h3><p>Common reasons patients are referred to ENT at West Jefferson include:</p><ul><li>Recurring ear infections, hearing loss, tinnitus, and balance concerns</li><li>Chronic sinusitis, nasal polyps, allergic rhinitis, and nasal obstruction</li><li>Tonsillitis, snoring, obstructive sleep apnea, and voice or swallowing difficulty</li><li>Thyroid nodules and tumors, parathyroid disease, and neck masses</li><li>Facial injury and selected cosmetic or reconstructive needs of the face and eyelids</li></ul><h3>Treatments and procedures</h3><p>Care plans start with a focused exam and, when needed, in-office endoscopy or imaging. Medical therapy is used whenever it can control symptoms. When procedures are appropriate, the team offers a range of ear, nose, throat, and neck operations, including:</p><h4>Ear</h4><p>Evaluation and treatment for infection, hearing, and related ear conditions, coordinated with audiology when testing is part of the workup.</p><h4>Nose</h4><p>Medical and surgical options for sinus disease, polyps, and nasal obstruction, aimed at restoring breathing and reducing repeat infections.</p><h4>Throat</h4><p>Care for tonsil and adenoid disease, snoring and sleep apnea, and voice or swallowing disorders, including procedures when conservative care is not enough.</p><h4>Neck and face</h4><ul><li>Thyroidectomy and parathyroidectomy</li><li>Neck dissection and thyroglossal duct excision</li><li>Hyoid suspension for selected sleep-related airway problems</li><li>Blepharoplasty and therapeutic Botox when clinically indicated</li></ul><h3>What to expect</h3><p>Bring a list of medications, prior imaging or sleep studies, and questions about recovery time. If surgery is recommended, your surgeon will review benefits, risks, and after-care before you decide. For hospital campus parking and visitor hours, see <a href="/West-Jefferson-Medical-Center/Patients-and-Visitors">Patients &amp; Visitors</a>.</p><p>This page is the ENT demo surface: update the intro, appointment phone, or treatment list in Pages to show authors how hospital specialty content is maintained.</p>
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Ears, Nose & Throat Care
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T171823Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Ears, Nose & Throat Care at West Jefferson
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{599DDA4D-3502-48F8-9AEE-24D3CC97C241}"
+              s:ds=""
+              s:id="{B1136CF1-94BE-468C-B78D-9BE212AF5428}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Dark Imge&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: "Los especialistas en ORL de West Jefferson tratan enfermedad sinusal, pérdida de audición, apnea del sueño, afecciones tiroideas y problemas de cabeza y cuello en pacientes de todas las edades. Llame al 504-934-8550 para programar."
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T211320Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Atención ORL
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: 
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Otorrinolaringología para atención de sinusitis, audición, apnea del sueño y tiroides en Westbank.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Otorrinolaringología en West Jefferson Medical Center
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Atención de oído, nariz y garganta
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Atención de oído, nariz y garganta | West Jefferson Medical Center
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "764d9215-e021-4f42-8d67-7fe196ff721c"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: "ORL y otorrinolaringología en West Jefferson Medical Center en Marrero. Afecciones, tratamientos, dirección de la clínica y línea de citas 504-934-8550."
+    - ID: "9d32260e-215d-4eff-80de-6d469daadbc4"
+      Hint: image
+      Value: |
+        <image alt="Atención de oído, nariz y garganta en West Jefferson" src="https://www.lcmchealth.org/assets/LCMC-Social-Share.jpg" />
+    - ID: "a8a1dfcb-7dd5-4413-8789-db24a95e439f"
+      Hint: Detail
+      Value: |
+        <h2>Otorrinolaringología en Westbank</h2><p>El Departamento de Otorrinolaringología — Cirugía de Cabeza y Cuello de West Jefferson Medical Center atiende afecciones del oído, la nariz y la garganta en todas las etapas de la vida. Los pacientes acuden aquí por infecciones recurrentes, obstrucción nasal, problemas de la voz y la deglución, apnea del sueño, lesiones faciales y enfermedades de la tiroides o las paratiroides.</p><p>Ya sea por una enfermedad aguda, una afección sinusal crónica o la evaluación de una masa en el cuello, el equipo de ORL trabaja para diagnosticar la causa y adaptar el tratamiento a los objetivos de cada paciente, desde manejo médico hasta procedimientos en el consultorio y cirugía cuando es la mejor opción.</p><h3>Cómo programar una cita</h3><p>Llame a la clínica de ORL de West Jefferson al <strong>504-934-8550</strong> para programar, o <a href="/Find-a-Provider">encuentre un otorrinolaringólogo en el directorio de proveedores de LCMC Health</a>.</p><p><strong>West Jefferson Medical Center Ear, Nose &amp; Throat</strong><br/>1111 Medical Center Blvd., Suite N-707<br/>Marrero, LA 70072<br/>Teléfono: 504-934-8550</p><h3>Afecciones que tratamos</h3><p>Las razones más comunes por las que los pacientes son remitidos a ORL en West Jefferson incluyen:</p><ul><li>Infecciones recurrentes del oído, pérdida de audición, tinnitus y problemas de equilibrio</li><li>Sinusitis crónica, pólipos nasales, rinitis alérgica y obstrucción nasal</li><li>Amigdalitis, ronquidos, apnea obstructiva del sueño y dificultad para la voz o la deglución</li><li>Nódulos y tumores tiroideos, enfermedad de las paratiroides y masas en el cuello</li><li>Lesiones faciales y necesidades seleccionadas de tipo cosmético o reconstructivo de la cara y los párpados</li></ul><h3>Tratamientos y procedimientos</h3><p>Los planes de atención comienzan con un examen dirigido y, cuando es necesario, endoscopia o imágenes en el consultorio. Se usa tratamiento médico siempre que pueda controlar los síntomas. Cuando los procedimientos son apropiados, el equipo ofrece una variedad de operaciones de oído, nariz, garganta y cuello, entre ellas:</p><h4>Oído</h4><p>Evaluación y tratamiento de infecciones, audición y otras afecciones relacionadas con el oído, en coordinación con audiología cuando las pruebas hacen parte del estudio.</p><h4>Nariz</h4><p>Opciones médicas y quirúrgicas para enfermedad sinusal, pólipos y obstrucción nasal, con el objetivo de restaurar la respiración y reducir infecciones repetidas.</p><h4>Garganta</h4><p>Atención para enfermedades de amígdalas y adenoides, ronquidos y apnea del sueño, y trastornos de la voz o la deglución, incluidos procedimientos cuando la atención conservadora no es suficiente.</p><h4>Cuello y cara</h4><ul><li>Tiroidectomía y paratiroidectomía</li><li>Disección de cuello y escisión del conducto tirogloso</li><li>Suspensión hioidea para problemas seleccionados de la vía aérea relacionados con el sueño</li><li>Blefaroplastia y Botox terapéutico cuando está clínicamente indicado</li></ul><h3>Qué puede esperar</h3><p>Traiga una lista de medicamentos, imágenes previas o estudios del sueño, y preguntas sobre el tiempo de recuperación. Si se recomienda cirugía, su cirujano revisará los beneficios, los riesgos y los cuidados posteriores antes de que usted decida. Para conocer el parqueadero del campus hospitalario y los horarios de visita, consulte <a href="/West-Jefferson-Medical-Center/Patients-and-Visitors">Patients &amp; Visitors</a>.</p><p>Esta página es la superficie de demostración de ORL: actualice la introducción, el teléfono de citas o la lista de tratamientos en Pages para mostrar a los autores cómo se mantiene el contenido de especialidades hospitalarias.</p>
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Atención de oído, nariz y garganta
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T162957Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Atención de oído, nariz y garganta en West Jefferson
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{EA6EAADA-5250-4F75-A41D-11A82FC46786}"
+              p:before="*"
+              s:ds="40033320-2e3a-40c1-89b3-fd98f165e677"
+              s:id="{7943A20A-669D-4921-81EE-F4EC7F2E78A3}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;ImageLayout&amp;FieldNames=%7B47A07212-D874-4077-BC67-C82B71B23AB7%7D&amp;Dark Imge&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=2"
+              s:ph="headless-main" />
+            <r
+              uid="{599DDA4D-3502-48F8-9AEE-24D3CC97C241}"
+              p:after="*[1=2]"
+              s:id="{B1136CF1-94BE-468C-B78D-9BE212AF5428}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Dark Imge&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: "Les spécialistes ORL de West Jefferson traitent les maladies des sinus, la perte auditive, l’apnée du sommeil, les troubles de la thyroïde, ainsi que les affections de la tête et du cou chez les patients de tous âges. Appelez au 504-934-8550 pour prendre rendez-vous."
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T211320Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Soins ORL
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: 
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: "Oto-rhino-laryngologie pour les sinus, l’audition, l’apnée du sommeil et les soins de la thyroïde sur la rive ouest."
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: "Oto-rhino-laryngologie au West Jefferson Medical Center"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Soins des oreilles, du nez et de la gorge
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Soins des oreilles, du nez et de la gorge | West Jefferson Medical Center
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d9397a30-6049-478c-8c6a-f739062e93cf"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: "ORL et oto-rhino-laryngologie au West Jefferson Medical Center à Marrero. Affections, traitements, adresse de la clinique et ligne de rendez-vous au 504-934-8550."
+    - ID: "9d32260e-215d-4eff-80de-6d469daadbc4"
+      Hint: image
+      Value: |
+        <image alt="Soins des oreilles, du nez et de la gorge à West Jefferson" src="https://www.lcmchealth.org/assets/LCMC-Social-Share.jpg" />
+    - ID: "a8a1dfcb-7dd5-4413-8789-db24a95e439f"
+      Hint: Detail
+      Value: |
+        <h2>Oto-rhino-laryngologie sur la rive ouest</h2><p>Le service d’oto-rhino-laryngologie — chirurgie cervico-faciale du West Jefferson Medical Center prend en charge les affections de l’oreille, du nez et de la gorge à tous les âges de la vie. Les patients consultent ici pour des infections récurrentes, une obstruction nasale, des troubles de la voix et de la déglutition, l’apnée du sommeil, des blessures au visage, ou une maladie de la thyroïde ou des parathyroïdes.</p><p>Qu’il s’agisse d’une maladie aiguë, d’une sinusite chronique ou de l’évaluation d’une masse au cou, l’équipe ORL s’efforce de poser un diagnostic précis et d’adapter le traitement aux objectifs de chaque patient — de la prise en charge médicale aux interventions au cabinet et à la chirurgie lorsque c’est la meilleure option.</p><h3>Comment prendre rendez-vous</h3><p>Appelez la clinique ORL de West Jefferson au <strong>504-934-8550</strong> pour prendre rendez-vous, ou <a href="/Find-a-Provider">trouvez un oto-rhino-laryngologiste dans le répertoire des fournisseurs de LCMC Health</a>.</p><p><strong>West Jefferson Medical Center Ear, Nose &amp; Throat</strong><br/>1111 Medical Center Blvd., Suite N-707<br/>Marrero, LA 70072<br/>Téléphone : 504-934-8550</p><h3>Affections que nous traitons</h3><p>Voici quelques motifs fréquents d’orientation vers le service ORL à West Jefferson :</p><ul><li>Infections de l’oreille récurrentes, perte auditive, acouphènes et troubles de l’équilibre</li><li>Sinusite chronique, polypes nasaux, rhinite allergique et obstruction nasale</li><li>Amygdalite, ronflement, apnée obstructive du sommeil, et troubles de la voix ou de la déglutition</li><li>Nodules et tumeurs de la thyroïde, maladie des parathyroïdes et masses au cou</li><li>Blessures au visage et certains besoins esthétiques ou reconstructeurs du visage et des paupières</li></ul><h3>Traitements et interventions</h3><p>Les plans de soins commencent par un examen ciblé et, au besoin, une endoscopie au cabinet ou une imagerie. Un traitement médical est utilisé chaque fois qu’il permet de contrôler les symptômes. Lorsque des interventions sont appropriées, l’équipe offre une gamme d’opérations de l’oreille, du nez, de la gorge et du cou, y compris :</p><h4>Oreille</h4><p>Évaluation et traitement des infections, de l’audition et d’autres affections de l’oreille, en coordination avec l’audiologie lorsque des tests font partie de l’évaluation.</p><h4>Nez</h4><p>Options médicales et chirurgicales pour les maladies des sinus, les polypes et l’obstruction nasale, visant à rétablir la respiration et à réduire les infections répétées.</p><h4>Gorge</h4><p>Soins pour les maladies des amygdales et des adénoïdes, le ronflement et l’apnée du sommeil, ainsi que les troubles de la voix ou de la déglutition, y compris des interventions lorsque les soins conservateurs ne suffisent pas.</p><h4>Cou et visage</h4><ul><li>Thyroïdectomie et parathyroïdectomie</li><li>Curage ganglionnaire cervical et exérèse du canal thyréoglosse</li><li>Suspension de l’os hyoïde pour certains problèmes des voies respiratoires liés au sommeil</li><li>Blépharoplastie et Botox thérapeutique lorsque cela est indiqué sur le plan clinique</li></ul><h3>À quoi s’attendre</h3><p>Apportez une liste de vos médicaments, toute imagerie antérieure ou étude du sommeil, ainsi que vos questions sur le temps de rétablissement. Si une chirurgie est recommandée, votre chirurgien passera en revue les avantages, les risques et les soins après l’intervention avant que vous preniez votre décision. Pour le stationnement sur le campus hospitalier et les heures de visite, consultez <a href="/West-Jefferson-Medical-Center/Patients-and-Visitors">Patients &amp; Visitors</a>.</p><p>Cette page est la surface de démonstration ORL : mettez à jour l’introduction, le numéro de téléphone pour les rendez-vous ou la liste des traitements dans Pages pour montrer aux auteurs comment le contenu des spécialités hospitalières est maintenu.</p>
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Soins des oreilles, du nez et de la gorge
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201607Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Soins des oreilles, du nez et de la gorge à West Jefferson

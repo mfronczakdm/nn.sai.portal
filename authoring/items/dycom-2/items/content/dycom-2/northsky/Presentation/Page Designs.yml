@@ -1,0 +1,45 @@
+﻿---
+ID: "460cba45-0abc-4b98-9cf3-cc0041135425"
+Parent: "dfdbc845-66f4-4f60-a09b-8ea7452217fe"
+Template: "cddfb825-c550-446a-8388-2c6f40ae83ac"
+Path: "/sitecore/content/dycom-2/northsky/Presentation/Page Designs"
+BranchID: "45cf9f42-b3ac-4412-aab9-f8441c7e448e"
+SharedFields:
+- ID: "ba1f60d6-3deb-40cc-bb61-eec772279ee1"
+  Hint: TemplatesMapping
+  Value: "%7bB6FEF2D5-260E-4D37-8211-0512308D339A%7d%3d%257B262D1D73-D033-4231-BCAB-BBC789D3935D%257D%26%7b3A20D0F9-B329-47F6-BE41-2F2CAA49414F%7d%3d%257B262D1D73-D033-4231-BCAB-BBC789D3935D%257D%26%7bA6FE6DE6-8228-44FD-B93A-9332DB480977%7d%26%7b60A71531-0942-4639-8B00-EFE282FBB18D%7d%3d%257B262D1D73-D033-4231-BCAB-BBC789D3935D%257D%26%7bDBAA4675-CCB7-4D69-8A18-C40B837A39F3%7d%3d%257B262D1D73-D033-4231-BCAB-BBC789D3935D%257D%26%7bAE317BBA-C29E-481B-8D60-D519DD367A37%7d%3d%257B262D1D73-D033-4231-BCAB-BBC789D3935D%257D%26%7bA4507192-1281-4D6A-AB89-51F2AB59836C%7d%3d%257B262D1D73-D033-4231-BCAB-BBC789D3935D%257D"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "3b52770d-adf1-4056-b00d-8caea93df101"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{2EA756FA-AED6-4599-83B7-36FEFE229B31}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260525T183755Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "9107e8c1-a4b0-4413-8d2e-fcaa7fb9e3b3"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260525T184130Z

@@ -1,0 +1,134 @@
+﻿---
+ID: "d8da1d4e-4d7c-478a-8ec4-a987f77f403a"
+Parent: "c890d6d5-5911-4140-96ed-301f22200df6"
+Template: "f6a7b8c9-d0e1-4f5a-3b4c-5d6e7f8a9b0c"
+Path: "/sitecore/content/lcmc/lcmc/Data/AI Config/Services/Multi-Locale Content Delivery"
+BranchID: "f8a9b0c1-d2e3-4f4a-5b6c-7d8e9f0a1b2c"
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 300
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "2245de5e-2ed4-4ccc-a7d8-b674c90975f8"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{A5B6C7D8-E9F0-4A1B-2C3D-4E5F6A7B8C9D}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T010430Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "04eb2f67-bf4c-4005-9068-327348c3bfb6"
+    - ID: "b8c9d0e1-f2a3-4b5c-5d6e-7f8a9b0c1d2e"
+      Hint: name
+      Value: "Multi-Locale Content Delivery"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c9d0e1f2-a3b4-4c5d-6e7f-8a9b0c1d2e3f"
+      Hint: description
+      Value: Deliver localized content in multiple languages (English and Canadian English) with automatic locale detection.
+    - ID: "d0e1f2a3-b4c5-4d6e-7f8a-9b0c1d2e3f4a"
+      Hint: category
+      Value: Localization
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260825T010440Z
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T010430Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "953c8e3c-64a5-4f60-b4ae-138f37085333"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "b8c9d0e1-f2a3-4b5c-5d6e-7f8a9b0c1d2e"
+      Hint: name
+      Value: Entrega de contenido multirregional
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c9d0e1f2-a3b4-4c5d-6e7f-8a9b0c1d2e3f"
+      Hint: description
+      Value: Ofrece contenido localizado en varios idiomas (inglés y inglés canadiense) con detección automática de configuración regional.
+    - ID: "d0e1f2a3-b4c5-4d6e-7f8a-9b0c1d2e3f4a"
+      Hint: category
+      Value: Localización
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T163019Z
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T010430Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5f018b15-1fe5-48f3-b9cf-5617a158184f"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "b8c9d0e1-f2a3-4b5c-5d6e-7f8a9b0c1d2e"
+      Hint: name
+      Value: Diffusion de contenu multirégional
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c9d0e1f2-a3b4-4c5d-6e7f-8a9b0c1d2e3f"
+      Hint: description
+      Value: Offrez du contenu localisé en plusieurs langues (anglais et anglais canadien) avec détection automatique des paramètres régionaux.
+    - ID: "d0e1f2a3-b4c5-4d6e-7f8a-9b0c1d2e3f4a"
+      Hint: category
+      Value: Localisation
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201624Z

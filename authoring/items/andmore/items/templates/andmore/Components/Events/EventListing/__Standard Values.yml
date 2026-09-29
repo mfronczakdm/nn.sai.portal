@@ -1,0 +1,49 @@
+﻿---
+ID: "44f9e6d5-10c2-4bce-a49d-b9773b78f3d6"
+Parent: "67ad4631-f2bd-4f8e-8539-dfaa4ebea596"
+Template: "67ad4631-f2bd-4f8e-8539-dfaa4ebea596"
+Path: /sitecore/templates/Project/andmore/Components/Events/EventListing/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260901T204808Z
+    - ID: "34aaae53-b693-4908-91ea-4675ac9ecd06"
+      Hint: MoreInfoLabel
+      Value: More Info
+    - ID: "52140c22-1ffd-4248-9b15-74fb33df371e"
+      Hint: SearchPlaceholder
+      Value: Search
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "60cfbece-606d-403f-aeaa-203256dc53fc"
+      Hint: EmptyResultsText
+      Value: No events match your filters.
+    - ID: "8acb127a-1594-448f-aba8-7d3e9a0a08ac"
+      Hint: EventTypeLabel
+      Value: Event Type
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c3a24862-90e5-46f6-bd1e-b35052c79498"
+    - ID: "a1d44340-bb4c-40a7-befa-2fe87431106f"
+      Hint: ClearCalendarLabel
+      Value: CLEAR CALENDAR SELECTION
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260901T204921Z
+    - ID: "ef2078f6-2d78-4ff7-8c50-2052282ca40d"
+      Hint: EventsRoot
+      Value: "{47CEA21C-AEC1-4775-93BC-7F5D5B92DFAF}"

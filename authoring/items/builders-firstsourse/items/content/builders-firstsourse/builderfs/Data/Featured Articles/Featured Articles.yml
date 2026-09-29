@@ -1,0 +1,112 @@
+﻿---
+ID: "c0e48299-c316-46c6-8388-1bb229322138"
+Parent: "d6c645d8-ad05-489a-8ec1-5c8c989e2f1d"
+Template: "705c014a-ced4-409a-89b7-09350cc98116"
+Path: "/sitecore/content/builders-firstsourse/builderfs/Data/Featured Articles/Featured Articles"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "3ef88626-3b11-455b-9aea-42295491d00b"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260512T203231Z
+    - ID: "341d70c8-1429-41de-99f7-015714658bf8"
+      Hint: linkOptional
+      Value: |
+        <link linktype="external" url="https://sitecore.ai" text="Browse All" anchor=""/>
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "4d116c64-41a2-4c2b-857a-c268c13b8a72"
+      Hint: descriptionOptional
+      Value: You may find interesting
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "56689e04-c512-4625-9d9d-95f77b424d9c"
+      Hint: featuredContent
+      Value: |
+        {6875ADFC-2AB6-447C-BB06-F9B263C7CFE9}
+        {BBB61F08-C352-462F-9DE4-3E5333A166AD}
+        {EF834703-6DFC-49B0-97ED-D2392B8597E7}
+        {39012FCA-6504-49EF-AC22-21384D0B0BD3}
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "cafabe1d-0fe8-4856-aa53-ac512b66d5a6"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Akv1r1Hmcm16AN61y5QanpMca0RChHPy
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260901T125507Z
+    - ID: "f173626a-12e7-4c9a-97ca-9866fd814c86"
+      Hint: titleOptional
+      Value: Most Relevant Articles
+- Language: "nl-NL"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260512T203231Z
+    - ID: "341d70c8-1429-41de-99f7-015714658bf8"
+      Hint: linkOptional
+      Value: |
+        <link anchor="" linktype="external" text="Alles bekijken" url="https://sitecore.ai" />
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "4d116c64-41a2-4c2b-857a-c268c13b8a72"
+      Hint: descriptionOptional
+      Value: Je vindt dit misschien interessant
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "56689e04-c512-4625-9d9d-95f77b424d9c"
+      Hint: featuredContent
+      Value: |
+        {6875ADFC-2AB6-447C-BB06-F9B263C7CFE9}
+        {BBB61F08-C352-462F-9DE4-3E5333A166AD}
+        {EF834703-6DFC-49B0-97ED-D2392B8597E7}
+        {39012FCA-6504-49EF-AC22-21384D0B0BD3}
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "9f5a0e95-515b-49c2-8d92-225684552c5e"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Akv1r1Hmcm16AN61y5QanpMca0RChHPy
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260812T094414Z
+    - ID: "f173626a-12e7-4c9a-97ca-9866fd814c86"
+      Hint: titleOptional
+      Value: Meest relevante artikelen

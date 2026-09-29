@@ -1,0 +1,78 @@
+﻿---
+ID: "9f15f9fb-313d-4032-a286-b8fa0d4cbea1"
+Parent: "29c5d42c-588f-4111-a269-a6f9017e657f"
+Template: "e25ef1fb-e92b-46a1-bad9-f40ec9f84ac9"
+Path: /sitecore/content/pillsbury/blg/Data/MediaCanvas/Homepage Hero
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{6C59AE29-D0A1-4B77-9305-0ABAB21D5FE5}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "69d2534c-7353-4247-a38b-3f6466d88d64"
+Languages:
+- Language: "bg-BG"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1e375238-c1c9-4c9d-a9fd-ad2315ba3e2d"
+      Hint: Cta
+      Value: |
+        <link id="{D5F8CA0F-7175-4057-87A6-ACEE935B5EEB}" anchor="" title="Търсене" linktype="internal" text="Търсене" url="/Search Results" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260822T023522Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "56043c21-c103-4440-adee-0bb8ccc65062"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "a9ac2e79-3af4-459c-a235-014c5271144e"
+      Hint: PauseVideoLabel
+      Value: Пауза на видеото
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\amy.iannaccone@sitecore.com
+    - ID: "cdf59735-2a15-4b7f-a03b-b830dc75eaa4"
+      Hint: PlayVideoLabel
+      Value: Пускане на видеото
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260827T153812Z
+    - ID: "f25e8fcc-552e-421f-9143-a1c2f5f5c5e4"
+      Hint: Title
+      Value: "С какво можем да ви помогнем?"
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1e375238-c1c9-4c9d-a9fd-ad2315ba3e2d"
+      Hint: Cta
+      Value: |
+        <link text="Search" linktype="internal" id="{D5F8CA0F-7175-4057-87A6-ACEE935B5EEB}" anchor="" url="/Search Results" title="Search" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260822T023522Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{C55B483C-EA7F-4E76-A066-985F7D9396CA}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "86b520a2-9db1-429f-92c6-fe6cc3ee5afd"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260822T023522Z

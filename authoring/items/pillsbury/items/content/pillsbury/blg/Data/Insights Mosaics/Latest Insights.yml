@@ -1,0 +1,75 @@
+﻿---
+ID: "4b6a0b73-c27a-4fc9-8664-8ef6ad49c9c1"
+Parent: "23ac03a5-c0b9-4f30-a158-b1eec9ea886a"
+Template: "9fbf9b82-4ef9-4932-b7aa-80d71ffd9a81"
+Path: /sitecore/content/pillsbury/blg/Data/Insights Mosaics/Latest Insights
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{6C59AE29-D0A1-4B77-9305-0ABAB21D5FE5}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "49b8a9e0-25b3-4805-8ce3-422cc2e2f96a"
+Languages:
+- Language: "bg-BG"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260822T024048Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "dcbb9812-10af-4fb6-8a3c-af38aaa1d19d"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\amy.iannaccone@sitecore.com
+    - ID: "ccd5f1bd-b6f8-4874-b06e-555b3590a0cf"
+      Hint: ViewAllLink
+      Value: |
+        <link anchor="" target="" linktype="external" text="Вижте всички анализи" url="https://www.blg.com/en/insights" />
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260827T153812Z
+    - ID: "ef25abd4-b6fa-4b25-b00d-fdc5076e24b7"
+      Hint: SectionTitle
+      Value: Последни анализи
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260822T024048Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{C55B483C-EA7F-4E76-A066-985F7D9396CA}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "fd523c5d-3474-4e98-9b70-0129c3cc6d95"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "ccd5f1bd-b6f8-4874-b06e-555b3590a0cf"
+      Hint: ViewAllLink
+      Value: |
+        <link text="View All Insights" linktype="external" url="https://www.blg.com/en/insights" anchor="" target="" />
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260822T024049Z
+    - ID: "ef25abd4-b6fa-4b25-b00d-fdc5076e24b7"
+      Hint: SectionTitle
+      Value: Latest Insights

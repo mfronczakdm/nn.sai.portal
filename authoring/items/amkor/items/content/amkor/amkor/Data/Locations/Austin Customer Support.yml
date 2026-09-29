@@ -1,0 +1,101 @@
+﻿---
+ID: "69fd9508-67ec-44a1-9d6c-16a49a2beb9f"
+Parent: "f9dc4191-96ba-4e83-b6bc-601af41ed499"
+Template: "0a93f003-2ef3-4a66-9fb6-95c10b95532b"
+Path: /sitecore/content/amkor/amkor/Data/Locations/Austin Customer Support
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "11022184-1d76-4d54-ba17-6f68d511afae"
+      Hint: Name
+      Value: Austin Customer Support
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260829T155649Z
+    - ID: "2caca007-a43f-4b62-b8ca-cb48fec72576"
+      Hint: State
+      Value: TX
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "554b1ddd-6a2a-4e0e-b4ba-7898f6c03dc6"
+      Hint: Type
+      Value: Customer Support Centers
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "43a40a25-c88b-4b9a-8b0c-e1bc4d4ee8a0"
+    - ID: "9c275841-cbb3-4b7e-81c7-9111a5ce2fdd"
+      Hint: GEO
+      Value: "30.3831,-97.7341"
+    - ID: "a72e5257-2698-414c-9416-83d2a100665d"
+      Hint: Street Address
+      Value: 8140 N. Mopac Expressway Building 3 Suite 240
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260829T155649Z
+    - ID: "efe82275-714a-4ee5-ab29-577ceddc29ba"
+      Hint: City
+      Value: Austin
+    - ID: "fa091d7b-c69b-4946-90fc-eac2cfae439b"
+      Hint: ZIP
+      Value: 78759
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "11022184-1d76-4d54-ba17-6f68d511afae"
+      Hint: Name
+      Value: オースティン カスタマーサポート
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260829T155649Z
+    - ID: "2caca007-a43f-4b62-b8ca-cb48fec72576"
+      Hint: State
+      Value: テキサス州
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "554b1ddd-6a2a-4e0e-b4ba-7898f6c03dc6"
+      Hint: Type
+      Value: Customer Support Centers
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4f0ff0b3-488e-4f4d-9dc6-f6743a6da678"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9c275841-cbb3-4b7e-81c7-9111a5ce2fdd"
+      Hint: GEO
+      Value: "30.3831,-97.7341"
+    - ID: "a72e5257-2698-414c-9416-83d2a100665d"
+      Hint: Street Address
+      Value: 8140 N. Mopac Expressway Building 3 Suite 240
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260831T030232Z
+    - ID: "efe82275-714a-4ee5-ab29-577ceddc29ba"
+      Hint: City
+      Value: オースティン
+    - ID: "fa091d7b-c69b-4946-90fc-eac2cfae439b"
+      Hint: ZIP
+      Value: 78759

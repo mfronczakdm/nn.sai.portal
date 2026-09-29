@@ -1,0 +1,61 @@
+﻿---
+ID: "bcde3d25-36ee-4652-a8fb-0996d966a343"
+Parent: "6ccf3409-0a26-4069-92ec-2099dae63088"
+Template: "6ccf3409-0a26-4069-92ec-2099dae63088"
+Path: /sitecore/templates/Project/andmore/Event Page/__Standard Values
+SharedFields:
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "0cef035f-aa91-46d6-9952-59015f1c50f9"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}" />
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{4B2EFDDD-D46E-4A50-8EB2-8DD44B145ED4}"
+              s:id="{CDB363AE-7A5E-4C9E-83FB-A35C21EA8206}"
+              s:par="GridParameters&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260901T204808Z
+    - ID: "522c25da-db65-4cdc-90c5-29637621cb83"
+      Hint: BackLinkText
+      Value: All Events
+    - ID: "761fc30d-946c-4b17-9297-5a55eb4a56d0"
+      Hint: AddToCalendarLabel
+      Value: Add to Calendar
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b243e2f6-b01a-4364-a90d-a8894280f949"
+    - ID: "a4838a5a-71fb-4317-a6c5-b3b753501d82"
+      Hint: DetailsHeading
+      Value: Details
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "cfea61d0-052c-4776-8934-ecfe8251f671"
+      Hint: EventTimezone
+      Value: EST
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260903T231901Z

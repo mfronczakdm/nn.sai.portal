@@ -1,0 +1,267 @@
+﻿---
+ID: "65ed85fb-5915-4e87-b7bb-f46cd2c254f4"
+Parent: "dbd3e687-c2dc-49b5-a51d-4b6c462d9be7"
+Template: "42f8929a-83cd-48fe-92f0-8aac46e6cc62"
+Path: "/sitecore/content/progressive/pkm/Home/Knowledge Articles/CommercialLines/CommercialProperty/KB-CP-1004-WindHail"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{FA097F7E-ECE4-489E-842D-63AE8A7FCDD2}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{9188A17B-CDFE-4C9A-AF9B-5F0609399988}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "7ede84e7-9083-447d-a157-ff0af12808db"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: 
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{DBF9DE09-D179-42E2-9C52-D893CDC87AB7}"
+              p:after="r[@uid='{717E1701-1FF6-418A-A8F1-35443B43B403}']"
+              s:id="{F44005E1-CCBB-4B27-9598-5EF43FB60A46}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB6A72F2A-15BE-4113-B40F-0305459DC374%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=2"
+              s:ph="headless-main" />
+            <r
+              uid="{32567D63-464A-49CD-9827-C8A9DB15616F}"
+              p:after="*[1=2]"
+              s:ds=""
+              s:id="{88D43837-24CA-45A7-9171-FEAD8AE89702}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B5E0CEF20-DC70-4922-A183-E6ADB987AF60%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=3"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "1a6c4003-b700-4ff6-9a1e-b0b809a20c52"
+      Hint: Standard Site Inspection Rules
+      Value: <ul><li>Inspect elevations, flashings, penetrations, and soft metals</li><li>Test areas for hail bruise patterns on applicable surfaces</li><li>Photograph interior stains tied to exterior openings</li></ul>
+    - ID: "1cf7f3e5-7109-4726-aca1-76bf779f1f95"
+      Hint: Peril type
+      Value: "{F27BF167-E841-4254-A84B-2F72EC78167F}"
+    - ID: "1d2229f9-6c8b-4828-97c0-ade6f1a125d0"
+      Hint: TotalRatings
+      Value: 44
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: "Progressive commercial property wind/hail claims for roofs, cladding, and interior water follow-through."
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260802T135002Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Commercial Wind & Hail
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{325A5D47-D4EB-4876-B759-0E18E2D9DCED}"
+    - ID: "480bb6b8-0914-4d2c-a73e-c5b28b8693e0"
+      Hint: Intake Triggers
+      Value: "<p>Use when:</p><ul><li>Insured reports commercial roof, metal panel, or signage damage after wind/hail</li><li>Interior leaks follow a storm-created opening</li><li>CAT codes apply to the loss date/location</li><li>Public adjuster submits a commercial storm claim</li></ul>"
+    - ID: "4d1faace-7b0f-4ec7-94b8-9ae80e0a9bce"
+      Hint: Common Scenarios
+      Value: "<ul><li><strong>Hail on metal warehouse roof:</strong> cosmetic vs functional damage language</li><li><strong>Wind-peeled TPO with interior drip:</strong> tarp + exterior + interior scopes</li><li><strong>Destroyed monument sign only:</strong> other structures / outdoor property rules</li><li><strong>Skylight hail break:</strong> opening + interior stock protection</li></ul>"
+    - ID: "4ed4709d-3dc8-4d81-bc4b-b44be7d21c45"
+      Hint: LastRated
+      Value: 20260726T120000Z
+    - ID: "4f91e6ca-b571-41f9-bc35-4e7e89c590de"
+      Hint: Baseline Reserve Guidelines
+      Value: <ul><li>Roof squares / panel counts by construction</li><li>Include tarp and interior water early when leaks reported</li><li>Reassess after inspection — CAT reserves are often preliminary</li></ul>
+    - ID: "568439dd-7959-4317-ac05-4aca4fe37a7a"
+      Hint: AverageRating
+      Value: 4.00
+    - ID: "5897e9d3-8204-4ed7-9f6a-ceb4891c3182"
+      Hint: PositiveCount
+      Value: 47
+    - ID: "5b49b775-a3f5-41cd-bd78-90fae97f1fd6"
+      Hint: Core Triage Questions
+      Value: "<ol><li>Storm date and discovery date?</li><li>Roof type (TPO, metal, built-up, shingle) and age?</li><li>Interior leaks? Which areas?</li><li>Any temporary tarp already installed?</li><li>Wind/hail deductible on Progressive declarations?</li><li>Multiple buildings / locations in footprint?</li></ol>"
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Commercial Property Wind and Hail — Roof and Exterior
+    - ID: "6be9cd31-e34e-4bed-880a-a218075a5b0d"
+      Hint: General Payment Triggers
+      Value: <ul><li>Emergency tarp after reasonableness review</li><li>Repairs after agreed estimate and correct Progressive wind/hail deductible</li></ul>
+    - ID: "71d4c96f-1e34-4f86-8ba5-e7a24a873933"
+      Hint: NegativeCount
+      Value: 9
+    - ID: "76c3fa76-04cb-4142-9756-6fcb96442bf4"
+      Hint: "KB-ID"
+      Value: "KB-CP-1004"
+    - ID: "8147ab19-7525-4ef0-a878-3e3f0a3157ac"
+      Hint: LOB
+      Value: "{E799A026-FF03-4588-8607-16222D811A4C}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4b8f2347-96cf-4b79-9d62-0a50c744c38c"
+    - ID: "ae3f508c-c043-4863-899c-986ad4b75bd5"
+      Hint: Photo Video Standards
+      Value: "<ul><li>All roof areas accessible/safe; close-ups of damaged membrane/panels</li><li>Hail evidence on HVAC fins, gutters, skylights</li><li>Interior water tied to openings</li></ul>"
+    - ID: "b3f4a945-e28b-4a1c-81c7-857555b83127"
+      Hint: General Escalation Rules
+      Value: "<ul><li><strong>Unsafe roof / partial collapse:</strong> emergency services + field priority</li><li><strong>Matching / full roof replacement disputes:</strong> Progressive estimating guidelines + supervisor</li><li><strong>Represented / PA:</strong> represented handling</li></ul>"
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Commercial Wind & Hail
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\WIt5EKonMo343Fqq8begbLVKlCgYPAIX
+    - ID: "c09aaa65-03f7-41a9-ba56-69b018e89ccc"
+      Hint: General Mitigation
+      Value: "<ul><li>Authorize emergency tarp/board-up to prevent further interior damage</li><li>Start interior drying when water intrusion is present</li></ul>"
+    - ID: "cc6e82f0-6942-4103-8d12-c8742b54a7a1"
+      Hint: Purpose
+      Value: "<p>Standardize Progressive handling of <strong>commercial wind and hail</strong> damage to roofs, walls, and related interior water intrusion.</p><ul><li>Separate storm damage from wear-and-tear</li><li>Manage CAT volume without skipping documentation</li><li>Coordinate interior drying when openings exist</li></ul>"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260802T180113Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: "KB-CP-1004-WindHail"
+    - ID: "ef17e08a-c9dd-47e0-adf2-9232c87aaa7f"
+      Hint: RatingsSum
+      Value: 176
+    - ID: "fc43bd45-b665-4895-a9e5-6d9a34ea7835"
+      Hint: Title
+      Value: Commercial Property Wind and Hail — Roof and Exterior
+  - Version: 2
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{DBF9DE09-D179-42E2-9C52-D893CDC87AB7}"
+              p:after="r[@uid='{717E1701-1FF6-418A-A8F1-35443B43B403}']"
+              s:id="{F44005E1-CCBB-4B27-9598-5EF43FB60A46}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB6A72F2A-15BE-4113-B40F-0305459DC374%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=2"
+              s:ph="headless-main" />
+            <r
+              uid="{32567D63-464A-49CD-9827-C8A9DB15616F}"
+              p:after="*[1=2]"
+              s:ds=""
+              s:id="{88D43837-24CA-45A7-9171-FEAD8AE89702}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B5E0CEF20-DC70-4922-A183-E6ADB987AF60%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=3"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "1a6c4003-b700-4ff6-9a1e-b0b809a20c52"
+      Hint: Standard Site Inspection Rules
+      Value: <ul><li>Inspect elevations, flashings, penetrations, and soft metals</li><li>Test areas for hail bruise patterns on applicable surfaces</li><li>Photograph interior stains tied to exterior openings</li></ul>
+    - ID: "1cf7f3e5-7109-4726-aca1-76bf779f1f95"
+      Hint: Peril type
+      Value: "{F27BF167-E841-4254-A84B-2F72EC78167F}"
+    - ID: "1d2229f9-6c8b-4828-97c0-ade6f1a125d0"
+      Hint: TotalRatings
+      Value: 44
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: "Progressive commercial property wind/hail claims for roofs, cladding, and interior water follow-through."
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260803T035651Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Commercial Wind & Hail
+    - ID: "29d334fb-0f6f-41fa-98ea-a6f30222129f"
+      Hint: sharedContent
+      Value: |
+        {ADC5055B-9485-42A7-9990-E98338F533A7}
+        {8020818E-66A8-45F7-83AA-3B90B22F3852}
+        {892FCE98-6035-4409-836F-4595A4176E49}
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{325A5D47-D4EB-4876-B759-0E18E2D9DCED}"
+    - ID: "480bb6b8-0914-4d2c-a73e-c5b28b8693e0"
+      Hint: Intake Triggers
+      Value: "<p>Use when:</p><ul><li>Insured reports commercial roof, metal panel, or signage damage after wind/hail</li><li>Interior leaks follow a storm-created opening</li><li>CAT codes apply to the loss date/location</li><li>Public adjuster submits a commercial storm claim</li></ul>"
+    - ID: "4d1faace-7b0f-4ec7-94b8-9ae80e0a9bce"
+      Hint: Common Scenarios
+      Value: "<ul><li><strong>Hail on metal warehouse roof:</strong> cosmetic vs functional damage language</li><li><strong>Wind-peeled TPO with interior drip:</strong> tarp + exterior + interior scopes</li><li><strong>Destroyed monument sign only:</strong> other structures / outdoor property rules</li><li><strong>Skylight hail break:</strong> opening + interior stock protection</li></ul>"
+    - ID: "4ed4709d-3dc8-4d81-bc4b-b44be7d21c45"
+      Hint: LastRated
+      Value: 20260726T120000Z
+    - ID: "4f91e6ca-b571-41f9-bc35-4e7e89c590de"
+      Hint: Baseline Reserve Guidelines
+      Value: <ul><li>Roof squares / panel counts by construction</li><li>Include tarp and interior water early when leaks reported</li><li>Reassess after inspection — CAT reserves are often preliminary</li></ul>
+    - ID: "568439dd-7959-4317-ac05-4aca4fe37a7a"
+      Hint: AverageRating
+      Value: 4.00
+    - ID: "5897e9d3-8204-4ed7-9f6a-ceb4891c3182"
+      Hint: PositiveCount
+      Value: 47
+    - ID: "5b49b775-a3f5-41cd-bd78-90fae97f1fd6"
+      Hint: Core Triage Questions
+      Value: "<ol><li>Storm date and discovery date?</li><li>Roof type (TPO, metal, built-up, shingle) and age?</li><li>Interior leaks? Which areas?</li><li>Any temporary tarp already installed?</li><li>Wind/hail deductible on Progressive declarations?</li><li>Multiple buildings / locations in footprint?</li></ol>"
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Commercial Property Wind and Hail — Roof and Exterior
+    - ID: "6be9cd31-e34e-4bed-880a-a218075a5b0d"
+      Hint: General Payment Triggers
+      Value: <ul><li>Emergency tarp after reasonableness review</li><li>Repairs after agreed estimate and correct Progressive wind/hail deductible</li></ul>
+    - ID: "71d4c96f-1e34-4f86-8ba5-e7a24a873933"
+      Hint: NegativeCount
+      Value: 9
+    - ID: "76c3fa76-04cb-4142-9756-6fcb96442bf4"
+      Hint: "KB-ID"
+      Value: "KB-CP-1004"
+    - ID: "8147ab19-7525-4ef0-a878-3e3f0a3157ac"
+      Hint: LOB
+      Value: "{E799A026-FF03-4588-8607-16222D811A4C}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "7300b014-cc4d-4fc8-9db3-8cc7f23e2876"
+    - ID: "ae3f508c-c043-4863-899c-986ad4b75bd5"
+      Hint: Photo Video Standards
+      Value: "<ul><li>All roof areas accessible/safe; close-ups of damaged membrane/panels</li><li>Hail evidence on HVAC fins, gutters, skylights</li><li>Interior water tied to openings</li></ul>"
+    - ID: "b3f4a945-e28b-4a1c-81c7-857555b83127"
+      Hint: General Escalation Rules
+      Value: "<ul><li><strong>Unsafe roof / partial collapse:</strong> emergency services + field priority</li><li><strong>Matching / full roof replacement disputes:</strong> Progressive estimating guidelines + supervisor</li><li><strong>Represented / PA:</strong> represented handling</li></ul>"
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Commercial Wind & Hail
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\WIt5EKonMo343Fqq8begbLVKlCgYPAIX
+    - ID: "c09aaa65-03f7-41a9-ba56-69b018e89ccc"
+      Hint: General Mitigation
+      Value: "<ul><li>Authorize emergency tarp/board-up to prevent further interior damage</li><li>Start interior drying when water intrusion is present</li></ul>"
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260803T035651Z
+    - ID: "cc6e82f0-6942-4103-8d12-c8742b54a7a1"
+      Hint: Purpose
+      Value: "<p>Standardize Progressive handling of <strong>commercial wind and hail</strong> damage to roofs, walls, and related interior water intrusion.</p><ul><li>Separate storm damage from wear-and-tear</li><li>Manage CAT volume without skipping documentation</li><li>Coordinate interior drying when openings exist</li></ul>"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260803T040803Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: "KB-CP-1004-WindHail"
+    - ID: "ef17e08a-c9dd-47e0-adf2-9232c87aaa7f"
+      Hint: RatingsSum
+      Value: 176
+    - ID: "fc43bd45-b665-4895-a9e5-6d9a34ea7835"
+      Hint: Title
+      Value: Commercial Property Wind and Hail — Roof and Exterior

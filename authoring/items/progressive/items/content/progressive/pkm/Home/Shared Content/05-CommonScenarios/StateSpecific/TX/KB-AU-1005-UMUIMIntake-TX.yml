@@ -1,0 +1,38 @@
+﻿---
+ID: "6e9d0789-9ecc-4445-995a-e60b35f03fe6"
+Parent: "df8e06b0-3c44-46d9-b27d-de8f8f83debd"
+Template: "bdf6c974-e68c-46a2-a0a9-d382fd0927eb"
+Path: "/sitecore/content/progressive/pkm/Home/Shared Content/05-CommonScenarios/StateSpecific/TX/KB-AU-1005-UMUIMIntake-TX"
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{53198595-3832-4705-8AA9-332B4F18B08D}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "21b8d6f1-4294-46a5-98fd-38df0ce8aae0"
+      Hint: SourceDocumentLOB
+      Value: "{0944EAEA-5558-443F-A68D-482773EA2153}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260803T035354Z
+    - ID: "76e0c665-5c4d-4d03-ae66-a5f3d12978ba"
+      Hint: Content
+      Value: "<p>In Texas, document Progressive UM/UIM elections and any at-fault carrier claim number on underinsured intakes. Escalate Progressive coverage SME when Texas rejection or stacking questions could change Progressive first-party options.</p>"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "8725b92b-1443-4c3a-849b-d839096dc93a"
+    - ID: "a8f6d033-4e9e-4598-be5e-da2456c41b9f"
+      Hint: sourceDocumentLink
+      Value: |
+        <link text="Personal Auto Uninsured and Underinsured Motorist Intake" linktype="internal" class="" title="" target="" querystring="" id="{533E1C5F-A219-491D-BA13-F9EB069E3753}" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260803T035355Z

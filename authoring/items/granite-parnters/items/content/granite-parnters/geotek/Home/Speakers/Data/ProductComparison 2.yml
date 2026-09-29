@@ -1,0 +1,54 @@
+﻿---
+ID: "4756d4c8-66e3-405d-8715-ecc1d905cede"
+Parent: "3c98a1b8-ae4f-4f0e-8a58-7094d8ae1b51"
+Template: "6589a92d-1e47-457d-8cc1-d37d5868b89d"
+Path: "/sitecore/content/granite-parnters/geotek/Home/Speakers/Data/ProductComparison 2"
+BranchID: "9660ff60-8e47-4efc-b22d-bac3fd04c8d7"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "16cad6cc-9723-4ea9-a16d-22f149488d8d"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{4D1ECFFC-463E-44AC-B1A0-EE51D1027913}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "00c102cf-9cbd-47da-a91f-918e59ab2e73"
+      Hint: Title
+      Value: Explore the lineup
+    - ID: "0258696b-45ce-4a68-9a9d-1eda3a543f54"
+      Hint: Products
+      Value: |
+        {3B3A5E12-1320-4073-B8C8-B3DFC83FC71F}
+        {2FAB4E35-5B58-435F-9EE1-41B7869B812F}
+        {4A81762C-0A1C-4FA6-9F15-E39786057676}
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260617T114718Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "107d8a42-54b4-492c-8e39-e25e1453e09e"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260617T114944Z

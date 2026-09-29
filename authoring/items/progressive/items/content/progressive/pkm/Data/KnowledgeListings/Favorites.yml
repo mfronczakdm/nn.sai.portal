@@ -1,0 +1,35 @@
+﻿---
+ID: "327adb8f-9dd7-4aac-ac25-33db5a4b9dc0"
+Parent: "c5fbc3d5-7031-4bda-bbcb-1b6b8d19bb4a"
+Template: "3ac1b045-ae12-46df-b605-3356993ac628"
+Path: /sitecore/content/progressive/pkm/Data/KnowledgeListings/Favorites
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "1b4a0bae-f9f2-40f4-ad8a-88b1fab16794"
+      Hint: Title
+      Value: Recently Updated
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260802T165901Z
+    - ID: "590dfe91-0fa6-4a14-a75d-8c26e1808ddc"
+      Hint: ListingMode
+      Value: Recently Updated
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "52d045dc-cad6-4f91-96a0-62a12b888831"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260803T142052Z
+    - ID: "db380942-7210-4461-b33a-0f9bc0fd0644"
+      Hint: MaxItems
+      Value: 6

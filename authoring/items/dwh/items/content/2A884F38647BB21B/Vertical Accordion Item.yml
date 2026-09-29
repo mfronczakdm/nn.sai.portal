@@ -1,0 +1,48 @@
+﻿---
+ID: "12f53147-9061-400c-b779-5ff1a398b00e"
+Parent: "2c50d1de-dfdf-4b01-a10b-abf310719d67"
+Template: "e64d342f-e5aa-4233-88c4-58ccd451a7d3"
+Path: /sitecore/content/dwh/dwh/Home/Home Buying Help/Buying/Celebrate with us another 50 years/Data/Vertical/Vertical Accordion Item
+BranchID: "6bab7d2c-cdb0-413d-bb2e-5470ee068685"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "1100e34d-9e19-4005-a8fc-a48b8fc70ce5"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{C830B3FF-E1C8-4F68-B1C2-9BA2BD0BB0E7}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260609T184158Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{12FFAC4C-565F-4C9A-B63E-7F77E96B4D1F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "6ef0efde-7773-4786-af78-860ff2f4eeac"
+      Hint: titleRequired
+      Value: Vertical Accordion Item
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ead9aff5-5212-4b3a-8cad-3f24d1848a89"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260609T184158Z

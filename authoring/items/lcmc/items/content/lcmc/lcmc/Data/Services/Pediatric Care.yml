@@ -1,0 +1,115 @@
+﻿---
+ID: "beea85bd-08b1-40e3-aad6-7600a802f71f"
+Parent: "d9cb7792-ee41-4a8f-a1f8-729d90b4e527"
+Template: "4540c3ad-240b-4d59-bd8b-f2a34d1edc79"
+Path: /sitecore/content/lcmc/lcmc/Data/Services/Pediatric Care
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "195a3eb9-2014-4ade-9528-46016044c588"
+      Hint: ServiceTitle
+      Value: Pediatric Care
+    - ID: "249f0edb-a3f4-4f20-a0b6-e389bdbe8547"
+      Hint: ServiceDetail
+      Value: <p>Pediatric care covers wellness, complex chronic conditions, surgery, and emergency services designed for children.</p><p>Manning Family Children's is the system's dedicated pediatric hospital, with satellite clinics across Louisiana.</p>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T003600Z
+    - ID: "36f9cc2a-c286-48dc-8161-cbc3300f8601"
+      Hint: OfferedAtLocations
+      Value: "{6B468248-C9D1-4DD0-9E8D-44B477FDB96C}"
+    - ID: "4491d77b-da17-4a4d-8480-8a09826476a5"
+      Hint: ServiceShortDescription
+      Value: Specialty and hospital care for infants, children, and adolescents through Manning Family Children's.
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "9bda1b44-5a93-4fcf-bd9b-48eb658f7629"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260908T003823Z
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "195a3eb9-2014-4ade-9528-46016044c588"
+      Hint: ServiceTitle
+      Value: Atención pediátrica
+    - ID: "249f0edb-a3f4-4f20-a0b6-e389bdbe8547"
+      Hint: ServiceDetail
+      Value: <p>La atención pediátrica abarca bienestar, afecciones crónicas complejas, cirugía y servicios de emergencia diseñados para niños.</p><p>Manning Family Children's es el hospital pediátrico dedicado del sistema, con clínicas satélite en toda Luisiana.</p>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T003600Z
+    - ID: "36f9cc2a-c286-48dc-8161-cbc3300f8601"
+      Hint: OfferedAtLocations
+      Value: "{6B468248-C9D1-4DD0-9E8D-44B477FDB96C}"
+    - ID: "4491d77b-da17-4a4d-8480-8a09826476a5"
+      Hint: ServiceShortDescription
+      Value: Atención especializada y hospitalaria para bebés, niños y adolescentes a través de Manning Family Children's.
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5f0c7c27-6c09-4c77-8774-5542ea1c28a5"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T162729Z
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "195a3eb9-2014-4ade-9528-46016044c588"
+      Hint: ServiceTitle
+      Value: Soins pédiatriques
+    - ID: "249f0edb-a3f4-4f20-a0b6-e389bdbe8547"
+      Hint: ServiceDetail
+      Value: <p>Les soins pédiatriques comprennent les bilans de santé, la prise en charge de maladies chroniques complexes, la chirurgie et les services d’urgence conçus pour les enfants.</p><p>Manning Family Children's est l’hôpital pédiatrique dédié du système, avec des cliniques satellites partout en Louisiane.</p>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T003600Z
+    - ID: "36f9cc2a-c286-48dc-8161-cbc3300f8601"
+      Hint: OfferedAtLocations
+      Value: "{6B468248-C9D1-4DD0-9E8D-44B477FDB96C}"
+    - ID: "4491d77b-da17-4a4d-8480-8a09826476a5"
+      Hint: ServiceShortDescription
+      Value: Soins spécialisés et hospitaliers pour les nourrissons, les enfants et les adolescents par l’entremise de Manning Family Children's.
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "110c5637-8a37-4795-a53c-7297c30f9dac"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201351Z

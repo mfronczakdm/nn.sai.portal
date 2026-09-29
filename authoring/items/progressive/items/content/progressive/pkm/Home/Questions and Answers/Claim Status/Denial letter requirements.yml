@@ -1,0 +1,37 @@
+﻿---
+ID: "8e1eba0b-d3f6-4f44-a85a-bfb638ad207d"
+Parent: "1c8aa83d-a901-49b1-9003-b78c91fbbe02"
+Template: "73e57eaa-b54a-41e1-b689-bf7dae9155ad"
+Path: /sitecore/content/progressive/pkm/Home/Questions and Answers/Claim Status/Denial letter requirements
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{FA2A237E-6DED-4984-A977-DAC156B44102}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260729T192645Z
+    - ID: "2d71e32d-e990-46b3-8ca1-58cd89743d5e"
+      Hint: Question
+      Value: "What is required before Progressive issues a claim denial?"
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Denial letter requirements
+    - ID: "4f8dc72e-1548-471c-9f3e-a13e944e4321"
+      Hint: Answer
+      Value: Confirm coverage analysis is documented, required Progressive denial language is used, and supervisory or SME review is complete when required. Do not give informal verbal denials without following Progressive denial procedures. Retain supporting documentation in the claim file.
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "350ce6c8-8ec9-4674-a1a9-a4973b75a9ed"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260729T192646Z

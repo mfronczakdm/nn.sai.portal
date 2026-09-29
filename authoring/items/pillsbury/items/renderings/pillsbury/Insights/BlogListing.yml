@@ -1,0 +1,58 @@
+﻿---
+ID: "8278f36c-8492-4641-a401-9c19aa69d08a"
+Parent: "53eafa3f-2a59-41fd-a4d9-02be5bbd583c"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Project/pillsbury/Insights/BlogListing
+SharedFields:
+- ID: "037fe404-dd19-4bf7-8e30-4dadf68b27b0"
+  Hint: componentName
+  Value: BlogListing
+- ID: "17bb046a-a32a-41b3-8315-81217947611b"
+  Hint: ComponentQuery
+  Value: |
+    query BlogListing($datasource: String!, $language: String!) { datasource: item(path: $datasource, language: $language) { title: field(name: "Title") { jsonValue } intro: field(name: "Intro") { jsonValue } emptyResultsText: field(name: "EmptyResultsText") { jsonValue } showFilters: field(name: "ShowFilters") { jsonValue } filterFacets: field(name: "FilterFacets") { jsonValue } filterFacetLabel: field(name: "FilterFacetLabel") { jsonValue } searchPlaceholder: field(name: "SearchPlaceholder") { jsonValue } blogsRoot: field(name: "BlogsRoot") { ... on LookupField { targetItem { id children(first: 100) { results { id name displayName url { path } detail: field(name: "Detail") { jsonValue } image: field(name: "image") { jsonValue value } } } } } } } }
+- ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
+  Hint: Datasource Template
+  Value: /sitecore/templates/Project/pillsbury/Components/Insights/BlogListing
+- ID: "a77e8568-1ab3-44f1-a664-b7c37ec7810d"
+  Hint: Parameters Template
+  Value: "{997C10E5-BDE4-47B5-B178-AD6DCBCB5C08}"
+- ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
+  Hint: Datasource Location
+  Value: "query:$site/*[@@name='Data']/*[@@templatename='BlogListing Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='BlogListing Folder']"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "f5fe1931-a8f4-4ef9-8a76-91d2c27f9209"
+Languages:
+- Language: en
+  Fields:
+  - ID: "30e85e5d-e00a-4864-b358-7624d511deb4"
+    Hint: __Unversioned revision
+    Value: "6688cb64-5748-4032-964d-947cea29933a"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260805T105201Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{FCA998C5-0CC3-4F91-94D8-0A4E6CAECE88}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "9db82a90-6d29-44b3-86d9-0ea43f4258ea"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260831T182727Z

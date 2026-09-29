@@ -1,0 +1,38 @@
+﻿---
+ID: "6ad0e3d8-c879-4927-a4c1-a4c0531b0979"
+Parent: "563af5ab-69fb-4ac5-9c7b-b7b621a4ff03"
+Template: "49c111d0-6867-4798-a724-1f103166e6e9"
+Path: /sitecore/content/microbiologics/microbiologics/Presentation/Headless Variants/ArticleHeader
+SharedFields:
+- ID: "087c0553-9162-41f5-98d3-87eb0d80edbb"
+  Hint: Compatible Renderings
+  Value: "{DD6C6E80-1458-4276-B753-001691C8841C}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "d4c060a9-96a3-4650-8a3f-889a64ee30b2"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260616T105454Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "22fe2150-a75f-4d41-a0b2-fc83d6cefa08"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260616T105539Z

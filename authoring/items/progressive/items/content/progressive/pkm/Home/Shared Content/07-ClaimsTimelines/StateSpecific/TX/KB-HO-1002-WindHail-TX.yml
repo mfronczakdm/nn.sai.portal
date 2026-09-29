@@ -1,0 +1,41 @@
+﻿---
+ID: "e2c6e203-5211-4651-a970-1d76ac7f22fc"
+Parent: "2760a34f-a0c0-401d-bd49-29a3b40f4d80"
+Template: "bdf6c974-e68c-46a2-a0a9-d382fd0927eb"
+Path: "/sitecore/content/progressive/pkm/Home/Shared Content/07-ClaimsTimelines/StateSpecific/TX/KB-HO-1002-WindHail-TX"
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{619297E1-2C72-49A9-9D47-9A58E930F1D8}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "21b8d6f1-4294-46a5-98fd-38df0ce8aae0"
+      Hint: SourceDocumentLOB
+      Value: "{331E5703-41A4-4592-B744-14A83C4CFAAE}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260731T141327Z
+    - ID: "76e0c665-5c4d-4d03-ae66-a5f3d12978ba"
+      Hint: Content
+      Value: "<p>For Texas wind and hail claims, authorize emergency tarp the same day when interior leaks are reported, and aim for exterior inspection within Progressive CAT or hail-event service levels. Update the insured with the next inspection window if storm volume delays field capacity.</p>"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "3ef26b85-f603-437b-98e7-791a4bb72a17"
+    - ID: "94ce9d2b-aa0c-488f-943a-d2e582eb50bc"
+      Hint: SourceDocumentPerils
+      Value: "{F27BF167-E841-4254-A84B-2F72EC78167F}"
+    - ID: "a8f6d033-4e9e-4598-be5e-da2456c41b9f"
+      Hint: sourceDocumentLink
+      Value: |
+        <link text="Homeowners Wind and Hail - Storm Damage Handling" linktype="internal" class="" title="" target="" querystring="" id="{02878C46-F3A7-4034-A056-9CEBBF9BCA11}" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\emqWsGLKzRiKgWenEsIKMqdxvXhiQ4cT
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260802T143427Z

@@ -1,0 +1,53 @@
+﻿---
+ID: "de7cba87-0635-42d9-8af0-c225cfd082f0"
+Parent: "a0df52e6-7045-456f-8373-101da7a33a0f"
+Template: "dfed4457-d760-457a-bec1-c0dccdc44381"
+Path: /sitecore/content/rockland/rockland/Data/Promos/Current Rates/Current Rates
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "1f66862d-a5e3-405f-8e3e-b787b4c39b12"
+      Hint: PromoText2
+      Value: |
+        <div class="ck-content"><p>Home Equity Line of Credit<br />featured<br /><br />6.240% APR</p></div>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260707T182540Z
+    - ID: "28079f3a-896b-4273-be5f-59d0ebb7cd7d"
+      Hint: PromoText
+      Value: |
+        <div class="ck-content"><p>Express Mortgage<br />20 year term as low as<br /><br />6.874% APR</p></div>
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "7e45597b-ec04-443b-86ce-a82a951f505b"
+      Hint: PromoLink2
+      Value: |
+        <link text="Learn More" anchor="" linktype="internal" class="" title="" target="_blank" querystring="" id="{9D6D5B4E-354B-48D5-A5F1-F243EFC87CD0}" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "89be8cc6-9307-4583-acd0-01ae0335e432"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c6e604c3-5371-4e67-83df-a09a5ea66249"
+      Hint: PromoText3
+      Value: Featured Rates
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260710T173143Z
+    - ID: "ef24bed2-46ab-4d53-ad1a-1019935a4e89"
+      Hint: PromoLink
+      Value: |
+        <link text="Learn More" anchor="" linktype="internal" class="" title="" target="_blank" querystring="" id="{9D6D5B4E-354B-48D5-A5F1-F243EFC87CD0}" />

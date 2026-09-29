@@ -1,0 +1,34 @@
+﻿---
+ID: "6f12fff9-82ae-4b02-b276-d170b0aa6954"
+Parent: "d9ed4a26-1b44-4f52-9eae-61e1eb193671"
+Template: "d9ed4a26-1b44-4f52-9eae-61e1eb193671"
+Path: /sitecore/templates/Project/pillsbury/Bio/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "19b27df3-a169-420a-a648-7d766ff1ce33"
+      Hint: FullName
+      Value: $name
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260804T192702Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b9105aa7-3dca-4290-8825-2a9327e50864"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260804T192703Z

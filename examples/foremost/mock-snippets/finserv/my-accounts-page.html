@@ -1,0 +1,422 @@
+<!--
+  Mock HTML: My Accounts — finserv customer dashboard (Non-bank style).
+  Static markup for Sitecore content population; Tailwind utility classes only.
+  Colors use the portal @theme tokens (see src/assets/styles/globals.css): e.g. bg-primary / text-primary-foreground
+  for the lime CTA, bg-muted for canvas, bg-card / border-border for surfaces — not hard-coded hex.
+  Root uses w-full / text-left / justify-start so the layout fills RTE or full-width placeholders.
+-->
+<div
+  class="box-border flex w-full max-w-full min-w-0 flex-row justify-start bg-muted text-left font-sans text-foreground antialiased [margin-inline:0]"
+>
+  <!-- Sidebar -->
+  <aside class="flex w-[min(20rem,22vw)] shrink-0 flex-col border-r border-border bg-background px-6 py-8">
+    <div class="text-xl font-bold tracking-tight text-foreground">Non-bank</div>
+
+    <div class="mt-8 flex items-center gap-3">
+      <div
+        class="h-12 w-12 shrink-0 overflow-hidden rounded-full bg-muted ring-2 ring-background"
+        aria-hidden="true"
+      >
+        <svg class="h-full w-full text-muted-foreground" viewBox="0 0 48 48" fill="currentColor">
+          <circle cx="24" cy="18" r="10" class="text-border" />
+          <path d="M8 44c0-10 8.5-16 16-16s16 6 16 16" class="text-border" />
+        </svg>
+      </div>
+      <div class="min-w-0">
+        <p class="truncate text-sm font-semibold text-foreground">Robert Del Naja</p>
+        <p class="truncate text-xs text-muted-foreground">+1 (541) 754-3010</p>
+      </div>
+    </div>
+
+    <nav class="mt-10 flex flex-col gap-1 text-sm font-medium" aria-label="Primary">
+      <a
+        href="#"
+        class="flex items-center gap-3 rounded-xl bg-primary px-3 py-2.5 text-primary-foreground shadow-sm"
+      >
+        <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-primary-foreground/10">
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="6" width="18" height="14" rx="2" />
+            <path d="M3 10h18" />
+          </svg>
+        </span>
+        My loans
+      </a>
+      <a
+        href="#"
+        class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-muted-foreground hover:bg-muted"
+      >
+        <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-muted text-muted-foreground">
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3" />
+            <path
+              d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"
+            />
+          </svg>
+        </span>
+        Settings
+      </a>
+      <a
+        href="#"
+        class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-muted-foreground hover:bg-muted"
+      >
+        <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-muted text-muted-foreground">
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+            <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" />
+          </svg>
+        </span>
+        Forms
+      </a>
+      <a
+        href="#"
+        class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-muted-foreground hover:bg-muted"
+      >
+        <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-muted text-muted-foreground">
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z" />
+          </svg>
+        </span>
+        FAQ
+      </a>
+    </nav>
+
+    <div class="mt-auto pt-10">
+      <div
+        class="relative overflow-hidden rounded-2xl border border-border bg-foreground p-5 text-background shadow-md ring-1 ring-primary/20"
+      >
+        <div
+          class="pointer-events-none absolute -right-6 -top-10 h-32 w-32 rounded-full bg-background/10"
+          aria-hidden="true"
+        ></div>
+        <div
+          class="pointer-events-none absolute -bottom-8 -left-4 h-28 w-40 rounded-full bg-background/10"
+          aria-hidden="true"
+        ></div>
+        <div class="relative flex items-start justify-between text-xs font-medium text-background/70">
+          <span>Balance</span>
+          <span
+            class="rounded bg-primary px-2 py-0.5 text-[10px] font-semibold tracking-wide text-primary-foreground"
+            >VISA</span
+          >
+        </div>
+        <p class="relative mt-3 text-3xl font-semibold tracking-tight">$2,302.00</p>
+        <p class="relative mt-6 text-sm text-background/80">**** 5008</p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <div class="flex min-w-0 flex-1 flex-col gap-6 p-6 lg:p-8">
+    <!-- Loans -->
+    <section
+      class="relative rounded-2xl border border-border bg-card p-6 shadow-sm lg:p-8"
+      aria-labelledby="loans-heading"
+    >
+      <div class="flex flex-col gap-8 lg:flex-row lg:items-stretch">
+        <div class="flex max-w-md flex-1 flex-col">
+          <h1 id="loans-heading" class="text-lg font-bold text-foreground">Loans</h1>
+          <p class="mt-6 text-5xl font-bold tracking-tight text-foreground">$6,202</p>
+          <p class="mt-4 text-sm leading-relaxed text-muted-foreground">
+            Combined minimum payment across your active installment loans. Amounts include principal
+            and interest due on your next statement date of April 28, 2026.
+          </p>
+          <div class="mt-8">
+            <a
+              href="#"
+              class="inline-flex items-center justify-center rounded-xl bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm transition hover:bg-primary-hover"
+            >
+              View details
+            </a>
+          </div>
+        </div>
+
+        <div class="relative flex min-w-0 flex-1 items-stretch gap-4">
+          <div class="flex min-w-0 flex-1 gap-4 overflow-x-auto pb-1">
+            <article
+              class="flex min-w-[11.5rem] flex-1 flex-col rounded-2xl border border-border bg-muted p-4 shadow-inner"
+            >
+              <div class="flex h-9 w-9 items-center justify-center rounded-xl bg-card text-muted-foreground shadow-sm">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                  <path d="M9 22V12h6v10" />
+                </svg>
+              </div>
+              <h2 class="mt-4 text-sm font-semibold text-foreground">Family house loan</h2>
+              <p class="mt-2 text-lg font-bold text-foreground">-$120,000</p>
+              <p class="mt-1 text-xs text-muted-foreground">Balance owing</p>
+            </article>
+
+            <article
+              class="flex min-w-[11.5rem] flex-1 flex-col rounded-2xl border border-border bg-muted p-4 shadow-inner"
+            >
+              <div class="flex h-9 w-9 items-center justify-center rounded-xl bg-card text-muted-foreground shadow-sm">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4" />
+                  <path d="M9 9v0M9 12v0M9 15v0" />
+                </svg>
+              </div>
+              <h2 class="mt-4 text-sm font-semibold text-foreground">Eurotrip loan</h2>
+              <p class="mt-2 text-lg font-bold text-foreground">-$21,489</p>
+              <p class="mt-1 text-xs text-muted-foreground">Balance owing</p>
+            </article>
+
+            <article
+              class="flex min-w-[11.5rem] flex-1 flex-col rounded-2xl border border-border bg-muted p-4 shadow-inner"
+            >
+              <div class="flex h-9 w-9 items-center justify-center rounded-xl bg-card text-muted-foreground shadow-sm">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 17h14v-5H5zM5 12L3 7h18l-2 5" />
+                  <circle cx="7.5" cy="17.5" r="1.5" />
+                  <circle cx="16.5" cy="17.5" r="1.5" />
+                </svg>
+              </div>
+              <h2 class="mt-4 text-sm font-semibold text-foreground">Car loan</h2>
+              <p class="mt-2 text-lg font-bold text-foreground">-$18,240</p>
+              <p class="mt-1 text-xs text-muted-foreground">Balance owing</p>
+            </article>
+          </div>
+          <div
+            class="pointer-events-none hidden h-full shrink-0 select-none items-center self-stretch rounded-xl border border-border bg-card px-2 text-muted-foreground shadow-sm lg:inline-flex"
+            aria-hidden="true"
+          >
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 18l6-6-6-6" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="grid flex-1 gap-6 lg:grid-cols-[1.4fr_minmax(16rem,0.9fr)]">
+      <!-- Docs -->
+      <section
+        class="rounded-2xl border border-border bg-card p-6 shadow-sm"
+        aria-labelledby="docs-heading"
+      >
+        <h2 id="docs-heading" class="text-lg font-bold text-foreground">Docs</h2>
+        <div class="mt-4 overflow-hidden rounded-xl border border-border">
+          <table class="w-full text-left text-sm">
+            <thead class="bg-muted text-xs font-medium uppercase tracking-wide text-muted-foreground">
+              <tr>
+                <th class="px-4 py-3 font-medium">Name</th>
+                <th class="px-4 py-3 font-medium">Status</th>
+                <th class="px-4 py-3 font-medium">Time</th>
+                <th class="w-10 px-2 py-3" aria-hidden="true"></th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-border bg-card">
+              <tr class="hover:bg-muted/80">
+                <td class="px-4 py-3">
+                  <div class="flex items-center gap-3">
+                    <span
+                      class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-destructive/10 text-destructive"
+                      aria-hidden="true"
+                    >
+                      <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M6 2h9l5 5v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" opacity=".2" />
+                        <path
+                          d="M14 2v6h6M8 13h8M8 17h6"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                        />
+                      </svg>
+                    </span>
+                    <span class="font-medium text-foreground">Government-issued ID</span>
+                  </div>
+                </td>
+                <td class="px-4 py-3">
+                  <span
+                    class="inline-flex rounded-full bg-primary/15 px-2.5 py-1 text-xs font-semibold text-foreground ring-1 ring-primary/30"
+                    >Verified</span
+                  >
+                </td>
+                <td class="px-4 py-3 text-muted-foreground">Mar 19, 2:51 PM</td>
+                <td class="px-2 py-3 text-muted-foreground">
+                  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 18l6-6-6-6" />
+                  </svg>
+                </td>
+              </tr>
+              <tr class="hover:bg-muted/80">
+                <td class="px-4 py-3">
+                  <div class="flex items-center gap-3">
+                    <span
+                      class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-destructive/10 text-destructive"
+                      aria-hidden="true"
+                    >
+                      <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M6 2h9l5 5v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" opacity=".2" />
+                        <path
+                          d="M14 2v6h6M8 13h8M8 17h6"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                        />
+                      </svg>
+                    </span>
+                    <span class="font-medium text-foreground">Linked bank information</span>
+                  </div>
+                </td>
+                <td class="px-4 py-3">
+                  <span
+                    class="inline-flex rounded-full bg-destructive/10 px-2.5 py-1 text-xs font-semibold text-destructive ring-1 ring-destructive/20"
+                    >Declined</span
+                  >
+                </td>
+                <td class="px-4 py-3 text-muted-foreground">Mar 18, 9:12 AM</td>
+                <td class="px-2 py-3 text-muted-foreground">
+                  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 18l6-6-6-6" />
+                  </svg>
+                </td>
+              </tr>
+              <tr class="hover:bg-muted/80">
+                <td class="px-4 py-3">
+                  <div class="flex items-center gap-3">
+                    <span
+                      class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-destructive/10 text-destructive"
+                      aria-hidden="true"
+                    >
+                      <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M6 2h9l5 5v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" opacity=".2" />
+                        <path
+                          d="M14 2v6h6M8 13h8M8 17h6"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                        />
+                      </svg>
+                    </span>
+                    <span class="font-medium text-foreground">Proof of income (YTD)</span>
+                  </div>
+                </td>
+                <td class="px-4 py-3">
+                  <span
+                    class="inline-flex rounded-full bg-muted px-2.5 py-1 text-xs font-semibold text-muted-foreground ring-1 ring-border"
+                    >Waiting</span
+                  >
+                </td>
+                <td class="px-4 py-3 text-muted-foreground">Mar 17, 4:06 PM</td>
+                <td class="px-2 py-3 text-muted-foreground">
+                  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 18l6-6-6-6" />
+                  </svg>
+                </td>
+              </tr>
+              <tr class="hover:bg-muted/80">
+                <td class="px-4 py-3">
+                  <div class="flex items-center gap-3">
+                    <span
+                      class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-destructive/10 text-destructive"
+                      aria-hidden="true"
+                    >
+                      <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M6 2h9l5 5v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" opacity=".2" />
+                        <path
+                          d="M14 2v6h6M8 13h8M8 17h6"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                        />
+                      </svg>
+                    </span>
+                    <span class="font-medium text-foreground">Mortgage pre-approval letter</span>
+                  </div>
+                </td>
+                <td class="px-4 py-3">
+                  <span
+                    class="inline-flex rounded-full bg-primary/15 px-2.5 py-1 text-xs font-semibold text-foreground ring-1 ring-primary/30"
+                    >Verified</span
+                  >
+                </td>
+                <td class="px-4 py-3 text-muted-foreground">Mar 14, 11:40 AM</td>
+                <td class="px-2 py-3 text-muted-foreground">
+                  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 18l6-6-6-6" />
+                  </svg>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Statistics -->
+      <section
+        class="flex flex-col rounded-2xl border border-border bg-card p-6 shadow-sm"
+        aria-labelledby="stats-heading"
+      >
+        <div class="flex items-center justify-between gap-2">
+          <h2 id="stats-heading" class="text-lg font-bold text-foreground">Statistics</h2>
+          <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg text-muted-foreground" aria-hidden="true">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M7 17L17 7M7 7h10v10" />
+            </svg>
+          </span>
+        </div>
+
+        <div class="mt-6 space-y-4">
+          <div class="flex items-baseline justify-between gap-3">
+            <div>
+              <p class="text-2xl font-bold tracking-tight text-foreground">$3,430</p>
+              <p class="text-xs font-medium text-muted-foreground">Income</p>
+            </div>
+            <span class="inline-flex items-center gap-1 rounded-full bg-primary/15 px-2 py-1 text-xs font-semibold text-foreground">
+              <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 15l-6-6-6 6" />
+              </svg>
+            </span>
+          </div>
+          <div class="flex items-baseline justify-between gap-3">
+            <div>
+              <p class="text-2xl font-bold tracking-tight text-foreground">$2,430</p>
+              <p class="text-xs font-medium text-muted-foreground">Expense</p>
+            </div>
+            <span class="inline-flex items-center gap-1 rounded-full bg-destructive/10 px-2 py-1 text-xs font-semibold text-destructive">
+              <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </span>
+          </div>
+        </div>
+
+        <div class="mt-8 flex flex-1 flex-col justify-end">
+          <div class="flex h-40 items-end justify-between gap-2 border-t border-border pt-4">
+            <div class="flex flex-1 flex-col items-center gap-2">
+              <div class="h-14 w-full max-w-[2.5rem] rounded-t-lg bg-border">
+                <span class="sr-only">$96</span>
+              </div>
+              <span class="text-[10px] font-medium text-muted-foreground">$96</span>
+            </div>
+            <div class="flex flex-1 flex-col items-center gap-2">
+              <div class="h-[4.25rem] w-full max-w-[2.5rem] rounded-t-lg bg-border">
+                <span class="sr-only">$130</span>
+              </div>
+              <span class="text-[10px] font-medium text-muted-foreground">$130</span>
+            </div>
+            <div class="flex flex-1 flex-col items-center gap-2">
+              <div class="h-16 w-full max-w-[2.5rem] rounded-t-lg bg-border">
+                <span class="sr-only">$83</span>
+              </div>
+              <span class="text-[10px] font-medium text-muted-foreground">$83</span>
+            </div>
+            <div class="flex flex-1 flex-col items-center gap-2">
+              <div class="h-[4.75rem] w-full max-w-[2.5rem] rounded-t-lg bg-primary shadow-sm">
+                <span class="sr-only">$123</span>
+              </div>
+              <span class="text-[10px] font-medium text-muted-foreground">$123</span>
+            </div>
+            <div class="flex flex-1 flex-col items-center gap-2">
+              <div class="h-11 w-full max-w-[2.5rem] rounded-t-lg bg-border">
+                <span class="sr-only">$41</span>
+              </div>
+              <span class="text-[10px] font-medium text-muted-foreground">$41</span>
+            </div>
+          </div>
+          <p class="mt-2 text-center text-[11px] text-muted-foreground">Last 30 days — cashflow by week</p>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>

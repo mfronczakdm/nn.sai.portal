@@ -1,0 +1,45 @@
+﻿---
+ID: "1fed476e-f2b6-464a-8dbf-be4c27f3c90b"
+Parent: "8b7062a2-0a3d-41fb-b6a9-a36f652891ac"
+Template: "dfed4457-d760-457a-bec1-c0dccdc44381"
+Path: "/sitecore/content/builders-firstsourse/builderfs/Data/Promos/Services/Our Installed Services"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260703T142536Z
+    - ID: "28079f3a-896b-4273-be5f-59d0ebb7cd7d"
+      Hint: PromoText
+      Value: |
+        <h3>OUR INSTALLED SERVICES</h3>
+        <p>
+        Keep your focus on building your business and let us handle the rest. Contact your local rep to see which services are available near you.</p>
+        <ul>
+            <li>Framing</li>
+            <li>Windows and Doors</li>
+            <li>Exterior Building Materials</li>
+            <li>Interior Doors and Trim</li>
+            <li>Siding and Exterior Trim</li>
+            <li>Panels and Trusses</li>
+        </ul>
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4c0a53b5-344b-4605-a268-ff7f2fa206e4"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260703T142737Z

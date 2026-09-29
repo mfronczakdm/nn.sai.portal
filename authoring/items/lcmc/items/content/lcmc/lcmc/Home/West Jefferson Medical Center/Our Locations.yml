@@ -1,0 +1,261 @@
+﻿---
+ID: "2c5ba133-5ec7-49fc-8eff-03b25011b504"
+Parent: "244d564f-91dc-4cce-8ae7-b074bfb26ea3"
+Template: "d77937ac-bae4-4eb0-8d7e-69ec09d5bbfc"
+Path: /sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Locations
+SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{5944F724-0620-4D9F-9317-AB0B80D9D094}"
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{9B4E803B-0649-4B6B-A210-EFB749C2E8C5}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "9bcf216b-9702-4dab-8503-5dcf0c755f5d"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{D079A1CD-C889-46ED-96B4-3B3BE1D73867}"
+              s:ds=""
+              s:id="{B1136CF1-94BE-468C-B78D-9BE212AF5428}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Dark Imge&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: "Find the Marrero hospital campus and West Jefferson Medical Center clinics. System-wide location search remains on Our Locations."
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T211257Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Our Locations
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Hospital campus and Westbank clinic directory.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Hospital campus and Westbank clinics
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Our Locations
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Our Locations | West Jefferson Medical Center
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "428d9e08-a807-4a1b-b7e2-2c8fd89a4425"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Find the West Jefferson Medical Center campus in Marrero and affiliated Westbank clinics.
+    - ID: "9d32260e-215d-4eff-80de-6d469daadbc4"
+      Hint: image
+      Value: |
+        <image src="https://www.lcmchealth.org/assets/LCMC-Social-Share.jpg" alt="West Jefferson Medical Center locations" />
+    - ID: "a8a1dfcb-7dd5-4413-8789-db24a95e439f"
+      Hint: Detail
+      Value: |
+        <h2>Hospital campus and Westbank clinics</h2><p>West Jefferson Medical Center’s main hospital is at <strong>1101 Medical Center Blvd., Marrero, LA 70072</strong>. The emergency department is open 24/7. Main phone: <strong>504-347-5511</strong>.</p><p>Open the existing hospital page for campus details, parking, and visitor notes: <a href="/Our-Locations/West-Jefferson-Medical-Center">West Jefferson Medical Center (Our Locations)</a>.</p><p>To browse every LCMC Health site and filter by the West Jefferson Medical Center category, use the system directory: <a href="/Our-Locations">LCMC Health Our Locations</a>. That listing already includes the Marrero campus plus affiliated clinics such as ENT at 1111 Medical Center Blvd. Suite N-707, the Cancer Center on Westbank Expressway, primary care in Algiers, Harvey, and Terrytown, and The Family Birth Place.</p><p>Clinic records live in shared location data and are not duplicated on this microsite. Authors should keep editing location facts on the existing location items — this page is the hospital-facing directory hub.</p>
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: West Jefferson locations
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T164643Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: West Jefferson locations
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{D079A1CD-C889-46ED-96B4-3B3BE1D73867}"
+              s:ds=""
+              s:id="{B1136CF1-94BE-468C-B78D-9BE212AF5428}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Dark Imge&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Encuentre el campus del hospital en Marrero y las clínicas de West Jefferson Medical Center. La búsqueda de ubicaciones de todo el sistema permanece en Our Locations.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T211257Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Our Locations
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Directorio del campus del hospital y clínicas de Westbank.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Campus del hospital y clínicas de Westbank
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Our Locations
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Our Locations | West Jefferson Medical Center
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "018c802a-2d89-4754-ad2d-8b21fd347714"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Encuentre el campus de West Jefferson Medical Center en Marrero y las clínicas afiliadas de Westbank.
+    - ID: "9d32260e-215d-4eff-80de-6d469daadbc4"
+      Hint: image
+      Value: |
+        <image alt="Ubicaciones de West Jefferson Medical Center" src="https://www.lcmchealth.org/assets/LCMC-Social-Share.jpg" />
+    - ID: "a8a1dfcb-7dd5-4413-8789-db24a95e439f"
+      Hint: Detail
+      Value: |
+        <h2>Campus del hospital y clínicas de Westbank</h2><p>El hospital principal de West Jefferson Medical Center está en <strong>1101 Medical Center Blvd., Marrero, LA 70072</strong>. El departamento de emergencias está abierto las 24 horas, los 7 días de la semana. Teléfono principal: <strong>504-347-5511</strong>.</p><p>Abra la página existente del hospital para ver detalles del campus, estacionamiento y notas para visitantes: <a href="/Our-Locations/West-Jefferson-Medical-Center">West Jefferson Medical Center (Our Locations)</a>.</p><p>Para explorar todos los centros de LCMC Health y filtrar por la categoría West Jefferson Medical Center, use el directorio del sistema: <a href="/Our-Locations">LCMC Health Our Locations</a>. Ese listado ya incluye el campus de Marrero, además de clínicas afiliadas como ENT en 1111 Medical Center Blvd. Suite N-707, el Cancer Center en Westbank Expressway, atención primaria en Algiers, Harvey y Terrytown, y The Family Birth Place.</p><p>Los registros de las clínicas se encuentran en datos compartidos de ubicaciones y no se duplican en este micrositio. Los autores deben seguir editando la información de ubicación en los elementos de ubicación existentes; esta página es el centro de directorio del hospital.</p>
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Ubicaciones de West Jefferson
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T162643Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Ubicaciones de West Jefferson
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{D079A1CD-C889-46ED-96B4-3B3BE1D73867}"
+              s:ds=""
+              s:id="{B1136CF1-94BE-468C-B78D-9BE212AF5428}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Dark Imge&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Trouvez le campus hospitalier de Marrero et les cliniques du West Jefferson Medical Center. La recherche d’emplacements à l’échelle du réseau demeure dans Our Locations.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T211257Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Our Locations
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Répertoire du campus hospitalier et des cliniques de la rive ouest.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Campus hospitalier et cliniques de la rive ouest
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Our Locations
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Our Locations | West Jefferson Medical Center
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d67e149f-124e-4f1f-ad4f-80ec84393e7a"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Trouvez le campus du West Jefferson Medical Center à Marrero et les cliniques affiliées de la rive ouest.
+    - ID: "9d32260e-215d-4eff-80de-6d469daadbc4"
+      Hint: image
+      Value: |
+        <image alt="Emplacements du West Jefferson Medical Center" src="https://www.lcmchealth.org/assets/LCMC-Social-Share.jpg" />
+    - ID: "a8a1dfcb-7dd5-4413-8789-db24a95e439f"
+      Hint: Detail
+      Value: |
+        <h2>Campus hospitalier et cliniques de la rive ouest</h2><p>L’hôpital principal du West Jefferson Medical Center est situé au <strong>1101 Medical Center Blvd., Marrero, LA 70072</strong>. Le service des urgences est ouvert 24 h/24, 7 j/7. Téléphone principal : <strong>504-347-5511</strong>.</p><p>Ouvrez la page existante de l’hôpital pour les détails du campus, le stationnement et les renseignements aux visiteurs : <a href="/Our-Locations/West-Jefferson-Medical-Center">West Jefferson Medical Center (Our Locations)</a>.</p><p>Pour parcourir tous les établissements de LCMC Health et filtrer par la catégorie West Jefferson Medical Center, utilisez le répertoire du réseau : <a href="/Our-Locations">LCMC Health Our Locations</a>. Cette liste comprend déjà le campus de Marrero ainsi que des cliniques affiliées comme l’ENT au 1111 Medical Center Blvd. Suite N-707, le Cancer Center sur Westbank Expressway, les soins primaires à Algiers, Harvey et Terrytown, ainsi que The Family Birth Place.</p><p>Les dossiers des cliniques se trouvent dans des données de localisation partagées et ne sont pas dupliqués sur ce microsite. Les auteurs doivent continuer à modifier les renseignements sur les lieux dans les éléments de localisation existants — cette page est le carrefour de répertoire destiné à l’hôpital.</p>
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Emplacements de West Jefferson
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201256Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Emplacements de West Jefferson

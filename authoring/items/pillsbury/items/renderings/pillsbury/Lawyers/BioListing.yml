@@ -1,0 +1,55 @@
+﻿---
+ID: "c67e942a-2ebc-43d5-88fc-dd95edc9a77d"
+Parent: "fa756449-d20c-4cc7-9697-2e480e18b3a8"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Project/pillsbury/Lawyers/BioListing
+SharedFields:
+- ID: "037fe404-dd19-4bf7-8e30-4dadf68b27b0"
+  Hint: componentName
+  Value: BioListing
+- ID: "17bb046a-a32a-41b3-8315-81217947611b"
+  Hint: ComponentQuery
+  Value: |
+    query BioListing($datasource: String!, $language: String!) { datasource: item(path: $datasource, language: $language) { title: field(name: "Title") { jsonValue } intro: field(name: "Intro") { jsonValue } emptyResultsText: field(name: "EmptyResultsText") { jsonValue } showFilters: field(name: "ShowFilters") { jsonValue } biosRoot: field(name: "BiosRoot") { ... on LookupField { targetItem { id children(first: 100) { results { id name url { path } fullName: field(name: "FullName") { jsonValue } preferredName: field(name: "PreferredName") { jsonValue } jobTitle: field(name: "JobTitle") { jsonValue } summary: field(name: "Summary") { jsonValue } phone: field(name: "Phone") { jsonValue } email: field(name: "Email") { jsonValue } headshot: field(name: "Headshot") { jsonValue } office: field(name: "Office") { ... on LookupField { targetItem { id name displayName } } } practiceAreas: field(name: "PracticeAreas") { ... on MultilistField { targetItems { id name displayName title: field(name: "Title") { jsonValue } } } } } } } } } } }
+- ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
+  Hint: Datasource Template
+  Value: /sitecore/templates/Project/pillsbury/Components/Lawyers/BioListing
+- ID: "a77e8568-1ab3-44f1-a664-b7c37ec7810d"
+  Hint: Parameters Template
+  Value: "{E313DF12-EC1A-427F-8178-F974B2B1DECC}"
+- ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
+  Hint: Datasource Location
+  Value: "query:$site/*[@@name='Data']/*[@@templatename='BioListing Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='BioListing Folder']"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "6d0ee189-5cc4-4fdd-96a7-660adc3311d7"
+Languages:
+- Language: en
+  Fields:
+  - ID: "30e85e5d-e00a-4864-b358-7624d511deb4"
+    Hint: __Unversioned revision
+    Value: "06fb651b-a422-4d65-a1b4-f945dc0f3399"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260804T200004Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "06cf6dc8-2b4f-4b66-9de5-a539f3f3855a"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260804T200018Z

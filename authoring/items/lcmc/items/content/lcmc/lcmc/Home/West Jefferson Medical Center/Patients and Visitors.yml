@@ -1,0 +1,261 @@
+﻿---
+ID: "d922d27f-c05c-4431-98bb-27a36a5dee2f"
+Parent: "244d564f-91dc-4cce-8ae7-b074bfb26ea3"
+Template: "d77937ac-bae4-4eb0-8d7e-69ec09d5bbfc"
+Path: /sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Patients and Visitors
+SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{5944F724-0620-4D9F-9317-AB0B80D9D094}"
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{28A04116-BD0E-4A7A-B6B6-23317472AE77}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "20ad20d5-c43f-4a6f-990a-7a63a986bce3"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{FA2842B1-37EF-477F-8A71-8238A886BF09}"
+              s:ds=""
+              s:id="{B1136CF1-94BE-468C-B78D-9BE212AF5428}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Dark Imge&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Hours, parking, amenities, and visitor guidance for patients and families at West Jefferson Medical Center in Marrero.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T211249Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Patients & Visitors
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Plan your visit to West Jefferson Medical Center.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Helpful information for your time at West Jefferson
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Patients & Visitors
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Patients & Visitors | West Jefferson Medical Center
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "fc6a3db1-b6c3-4050-ae91-e1a23ef50451"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Hours, parking, amenities, and visitor information for West Jefferson Medical Center in Marrero.
+    - ID: "9d32260e-215d-4eff-80de-6d469daadbc4"
+      Hint: image
+      Value: |
+        <image src="https://www.lcmchealth.org/assets/LCMC-Social-Share.jpg" alt="Patients and visitors at West Jefferson" />
+    - ID: "a8a1dfcb-7dd5-4413-8789-db24a95e439f"
+      Hint: Detail
+      Value: |
+        <h2>Patient and visitor information</h2><p>Whether you are coming for a scheduled procedure or visiting a loved one, West Jefferson Medical Center is set up to make time on campus more predictable. The Marrero hospital has a café, gift shop, valet parking on weekdays, and 24/7 emergency care.</p><h3>Hours of operation</h3><ul><li><strong>Emergency Room:</strong> 24 hours a day, 7 days a week</li><li><strong>Fast Track:</strong> 11:00 a.m.–11:00 p.m. daily</li><li><strong>Outpatient registration, surgical check-in, and direct admissions:</strong> 5:00 a.m.–5:00 p.m., Monday–Friday</li><li><strong>Outpatient lab:</strong> 6:00 a.m.–5:00 p.m., Monday–Friday</li><li><strong>Women’s Imaging and Breast Care Center:</strong> 8:00 a.m.–4:30 p.m., Monday–Friday</li></ul><h3>Parking</h3><p>Valet parking is available 8:00 a.m.–5:00 p.m., Monday–Friday. Complimentary valet is offered for moms-to-be and visitors 65 and older. Surface lots and garage parking surround the Medical Center Boulevard campus.</p><h3>Questions</h3><p>Call the hospital at <strong>504-347-5511</strong> or the patient information line at <strong>504-380-0723</strong>. For records, billing, and the patient portal, see system resources under <a href="/For-Patients">For Patients</a>.</p>
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Patients & Visitors
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T170958Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Patients & Visitors
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{FA2842B1-37EF-477F-8A71-8238A886BF09}"
+              s:ds=""
+              s:id="{B1136CF1-94BE-468C-B78D-9BE212AF5428}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Dark Imge&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Horarios, estacionamiento, servicios y orientación para visitantes, pacientes y familias en West Jefferson Medical Center en Marrero.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T211249Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Pacientes y visitantes
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Planifique su visita a West Jefferson Medical Center.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Información útil para su tiempo en West Jefferson
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Pacientes y visitantes
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Pacientes y visitantes | West Jefferson Medical Center
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "9049e256-2cbb-4999-96cf-cd3b9fd95db8"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Horarios, estacionamiento, servicios e información para visitantes en West Jefferson Medical Center en Marrero.
+    - ID: "9d32260e-215d-4eff-80de-6d469daadbc4"
+      Hint: image
+      Value: |
+        <image alt="Pacientes y visitantes en West Jefferson" src="https://www.lcmchealth.org/assets/LCMC-Social-Share.jpg" />
+    - ID: "a8a1dfcb-7dd5-4413-8789-db24a95e439f"
+      Hint: Detail
+      Value: |
+        <h2>Información para pacientes y visitantes</h2><p>Ya sea que venga para un procedimiento programado o para visitar a un ser querido, West Jefferson Medical Center está preparado para hacer que su tiempo en el campus sea más predecible. El hospital de Marrero cuenta con cafetería, tienda de regalos, valet parking entre semana y atención de emergencias 24/7.</p><h3>Horarios de atención</h3><ul><li><strong>Sala de Emergencias:</strong> 24 horas al día, 7 días a la semana</li><li><strong>Fast Track:</strong> 11:00 a. m.–11:00 p. m. todos los días</li><li><strong>Registro ambulatorio, admisión para cirugía y admisiones directas:</strong> 5:00 a. m.–5:00 p. m., lunes a viernes</li><li><strong>Laboratorio ambulatorio:</strong> 6:00 a. m.–5:00 p. m., lunes a viernes</li><li><strong>Centro de Imágenes para la Mujer y Cuidado de los Senos:</strong> 8:00 a. m.–4:30 p. m., lunes a viernes</li></ul><h3>Estacionamiento</h3><p>El valet parking está disponible de 8:00 a. m. a 5:00 p. m., de lunes a viernes. El servicio de valet de cortesía se ofrece para futuras mamás y visitantes de 65 años o más. Los lotes de superficie y el estacionamiento en garaje rodean el campus de Medical Center Boulevard.</p><h3>Preguntas</h3><p>Llame al hospital al <strong>504-347-5511</strong> o a la línea de información para pacientes al <strong>504-380-0723</strong>. Para registros, facturación y el portal del paciente, consulte los recursos del sistema en <a href="/For-Patients">For Patients</a>.</p>
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Pacientes y visitantes
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T162643Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Pacientes y visitantes
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{FA2842B1-37EF-477F-8A71-8238A886BF09}"
+              s:ds=""
+              s:id="{B1136CF1-94BE-468C-B78D-9BE212AF5428}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Dark Imge&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Heures, stationnement, commodités et directives pour les visiteurs, patients et familles au West Jefferson Medical Center à Marrero.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T211249Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Patients et visiteurs
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Planifiez votre visite au West Jefferson Medical Center.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Renseignements utiles pour votre visite à West Jefferson
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Patients et visiteurs
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Patients et visiteurs | West Jefferson Medical Center
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "43e9999e-ee7d-43d1-8389-f656d9661fc4"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Heures, stationnement, commodités et renseignements pour les visiteurs au West Jefferson Medical Center à Marrero.
+    - ID: "9d32260e-215d-4eff-80de-6d469daadbc4"
+      Hint: image
+      Value: |
+        <image alt="Patients et visiteurs à West Jefferson" src="https://www.lcmchealth.org/assets/LCMC-Social-Share.jpg" />
+    - ID: "a8a1dfcb-7dd5-4413-8789-db24a95e439f"
+      Hint: Detail
+      Value: |
+        <h2>Renseignements pour les patients et les visiteurs</h2><p>Que vous veniez pour une intervention prévue ou pour rendre visite à un proche, le West Jefferson Medical Center est organisé pour rendre votre temps sur le campus plus simple et plus prévisible. L’hôpital de Marrero offre un café, une boutique-cadeaux, un service de voiturier en semaine et des soins d’urgence 24 h sur 24, 7 j sur 7.</p><h3>Heures d’ouverture</h3><ul><li><strong>Salle d’urgence :</strong> 24 heures sur 24, 7 jours sur 7</li><li><strong>Fast Track :</strong> 11 h 00 à 23 h 00, tous les jours</li><li><strong>Inscription ambulatoire, enregistrement chirurgical et admissions directes :</strong> 5 h 00 à 17 h 00, du lundi au vendredi</li><li><strong>Laboratoire ambulatoire :</strong> 6 h 00 à 17 h 00, du lundi au vendredi</li><li><strong>Centre d’imagerie pour femmes et de soins du sein :</strong> 8 h 00 à 16 h 30, du lundi au vendredi</li></ul><h3>Stationnement</h3><p>Le service de voiturier est offert de 8 h 00 à 17 h 00, du lundi au vendredi. Le voiturier gratuit est offert aux futures mamans et aux visiteurs de 65 ans et plus. Des stationnements de surface et un garage de stationnement entourent le campus de Medical Center Boulevard.</p><h3>Questions</h3><p>Appelez l’hôpital au <strong>504-347-5511</strong> ou la ligne d’information aux patients au <strong>504-380-0723</strong>. Pour les dossiers, la facturation et le portail patient, consultez les ressources du système sous <a href="/For-Patients">For Patients</a>.</p>
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Patients et visiteurs
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201256Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Patients et visiteurs

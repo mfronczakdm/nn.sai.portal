@@ -1,0 +1,52 @@
+﻿---
+ID: "2dd7fac4-5f10-4b5d-99a8-8acd18262095"
+Parent: "b57ec077-eb70-4bba-985d-c85be05212cc"
+Template: "b895f657-9a7b-438b-a2f2-95fb1722be7f"
+Path: "/sitecore/content/new-quanex/quanex-alternators/Home/Landing Page/Data/Page Header Block 1/Logo List Image 2"
+BranchID: "97509128-1b31-4a5b-9c07-d4c94b611d24"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 50
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "9d66ec03-6e6b-4cab-b911-aefff1d120b9"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{D5B5CAB8-C4BB-4C01-8ABF-488C76A328E5}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1f2abc81-60f9-4292-92b4-8c231ec93398"
+      Hint: image
+      Value: |
+        <image mediaid="e6c9badb-e354-40b0-b17c-0710c91d0f5c" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260818T142714Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "36223715-3099-4bff-bdb1-ed17069c4c92"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260818T142831Z

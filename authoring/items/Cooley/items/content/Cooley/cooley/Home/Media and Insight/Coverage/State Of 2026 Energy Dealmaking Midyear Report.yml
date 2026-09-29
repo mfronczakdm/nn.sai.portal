@@ -1,0 +1,55 @@
+﻿---
+ID: "f0997884-f125-49f0-80be-2e4ace8b3e41"
+Parent: "6d3ae677-1f55-4c8f-83b4-c0e887763cf5"
+Template: "25cf32e0-c2d1-4e72-8cb9-fdeb000be0d7"
+Path: /sitecore/content/Cooley/cooley/Home/Media and Insight/Coverage/State Of 2026 Energy Dealmaking Midyear Report
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{55971D0A-E425-49C7-8794-1C19EAEB1D41}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "9f09ea1e-3730-46a4-aae1-e00adb7d56ff"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Press mention — midyear energy dealmaking report.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260817T000112Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: July 13, 2026
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: "State Of 2026 Energy Dealmaking: Midyear Report"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "3f271490-6437-4220-8b0a-0636b5ce5e3f"
+    - ID: "93f130f9-b079-4d7d-b7af-ac85cd31bffd"
+      Hint: Detail
+      Value: "<p>July 13, 2026</p><h2>State Of 2026 Energy Dealmaking: Midyear Report</h2><p>Coverage of Cooley’s midyear look at energy dealmaking trends — transaction volume, financing structures, and regulatory themes shaping the second half of 2026.</p>"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\WIt5EKonMo343Fqq8begbLVKlCgYPAIX
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260817T000546Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: State Of 2026 Energy Dealmaking Midyear Report

@@ -1,0 +1,51 @@
+﻿---
+ID: "c72bb728-14c1-41bc-a3da-c5d0f675ee25"
+Parent: "d14df30a-ca02-4c04-8035-6d2f3037ce0b"
+Template: "4507e405-6110-4e56-af58-27b65b58268f"
+Path: /sitecore/content/progressive/pkm/Data/Feature Banners/College Student Services/Careers
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "52519768-7491-4f51-b171-d389d3cf0204"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "21aae250-ac81-46a1-a336-29a030bfc511"
+      Hint: heading
+      Value: Careers
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260707T181518Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "8dbc1708-2055-458a-844f-c309c425786f"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\WIt5EKonMo343Fqq8begbLVKlCgYPAIX
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260802T180156Z
+    - ID: "f8f97c78-419a-431b-82e7-e46a39c7393f"
+      Hint: image
+      Value: |
+        <Image src="https://mrfbasech.sitecoresandbox.cloud/api/public/content/8b6056a4b28841ee873ea3c0c8cc1900?v=58d06766" dam-id="dnZ2njexRMmIky2jxVp6dw" width="250" height="250" alt="imgi_9_HR Careers v2.png" dam-content-type="Image" thumbnailsrc="https://mrfbasech.sitecoresandbox.cloud/api/gateway/95068/thumbnail" />

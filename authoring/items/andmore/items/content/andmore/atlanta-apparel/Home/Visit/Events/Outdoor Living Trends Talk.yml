@@ -1,0 +1,138 @@
+﻿---
+ID: "ab056721-5d0e-4e80-8a05-62258e42679a"
+Parent: "47cea21c-aec1-4775-93bc-7f5d5b92dfaf"
+Template: "6ccf3409-0a26-4069-92ec-2099dae63088"
+Path: "/sitecore/content/andmore/atlanta-apparel/Home/Visit/Events/Outdoor Living Trends Talk"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{2CC0579F-86CC-40AE-BDC0-4CA1960FCFD6}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "080a0832-7dd9-4759-966d-6a1ef000c4b1"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0c53e23d-511c-4d88-8e5f-91d9694c5a1e"
+      Hint: EventStart
+      Value: 20260915T083000Z
+    - ID: "18ab03d1-c9ae-4f00-815d-220fcb2d80e5"
+      Hint: image
+      Value: |
+        <image src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Outdoor patio seating and nested tables" />
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Learn the driving forces influencing the rising interest in outdoor furnishings.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260901T205035Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Outdoor Living Trends Talk
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Outdoor Living Trends Talk
+    - ID: "61328b9e-a72a-4a8f-a830-29ed998f3fd5"
+      Hint: EventType
+      Value: Trend Talk
+    - ID: "81207b62-0e77-4615-a847-81b17fecc08d"
+      Hint: EventEnd
+      Value: 20260915T093000Z
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Outdoor Living Trends Talk | Atlanta Apparel
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "86b9cc70-9a47-4db4-af75-b9cdc3ddba4e"
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Outdoor Living Trends Talk
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260903T233113Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Outdoor Living Trends Talk
+    - ID: "f79467fb-89e8-478b-8ac7-5b37b53c1c0c"
+      Hint: Detail
+      Value: <p>Learn the driving forces influencing the rising interest in outdoor furnishings. In this session, Jennifer Brindle, Editor in Chief for Casual News Now, will cover topics like sustainable materials, plush performance fabrics and multifunctional pieces that support everyday life while offering compelling versatile luxury outdoor living.</p>
+    - ID: "f8a54ae2-6934-4632-8cf1-a261b2efbdeb"
+      Hint: EventLocation
+      Value: Building 1, Floor 8, Oasis Meeting Space
+  - Version: 2
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0c53e23d-511c-4d88-8e5f-91d9694c5a1e"
+      Hint: EventStart
+      Value: 20261007T083000Z
+    - ID: "18ab03d1-c9ae-4f00-815d-220fcb2d80e5"
+      Hint: image
+      Value: |
+        <image src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Outdoor patio seating and nested tables" />
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Learn the driving forces influencing the rising interest in outdoor furnishings.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260904T103947Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Outdoor Living Trends Talk
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Outdoor Living Trends Talk
+    - ID: "61328b9e-a72a-4a8f-a830-29ed998f3fd5"
+      Hint: EventType
+      Value: Trend Talk
+    - ID: "81207b62-0e77-4615-a847-81b17fecc08d"
+      Hint: EventEnd
+      Value: 20261007T093000Z
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Outdoor Living Trends Talk | Atlanta Apparel
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f5fad8d1-6793-45bb-8b26-26c5416dc043"
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Outdoor Living Trends Talk
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Akv1r1Hmcm16AN61y5QanpMca0RChHPy
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260904T103947Z
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260904T104447Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Outdoor Living Trends Talk
+    - ID: "f79467fb-89e8-478b-8ac7-5b37b53c1c0c"
+      Hint: Detail
+      Value: <p>Learn the driving forces influencing the rising interest in outdoor furnishings. In this session, Jennifer Brindle, Editor in Chief for Casual News Now, will cover topics like sustainable materials, plush performance fabrics and multifunctional pieces that support everyday life while offering compelling versatile luxury outdoor living.</p>
+    - ID: "f8a54ae2-6934-4632-8cf1-a261b2efbdeb"
+      Hint: EventLocation
+      Value: Building 1, Floor 8, Oasis Meeting Space

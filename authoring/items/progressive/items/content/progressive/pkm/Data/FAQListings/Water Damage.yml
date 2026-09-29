@@ -1,0 +1,37 @@
+﻿---
+ID: "cc0b22fe-0b58-4ab0-9585-524c6029bca2"
+Parent: "3ea7edbe-0d3e-44ca-a12a-f597e4187a50"
+Template: "1756bc61-6e53-434e-bbce-bccfd712a58c"
+Path: /sitecore/content/progressive/pkm/Data/FAQListings/Water Damage
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "03ca6d12-f858-45d0-9547-65989114d821"
+      Hint: FeaturedFaq
+      Value: |
+        {EEA61B7A-94AF-475D-86BF-E982347D0E8F}
+        {F400C9FC-C114-4BA8-B433-2DBCF014CED0}
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260730T124914Z
+    - ID: "2b3ae2c4-e325-41c6-bf17-aa5bd68f64c9"
+      Hint: titleOptional
+      Value: Water Damage
+    - ID: "5aac8e0c-aad3-4893-9a11-60c01d6a6a8c"
+      Hint: descriptionOptional
+      Value: Water Damage
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "75eb4344-fea1-4da2-8e16-e02f059b8548"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260730T160823Z

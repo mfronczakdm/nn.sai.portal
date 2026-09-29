@@ -1,0 +1,41 @@
+﻿---
+ID: "a503d407-d267-421c-8e0d-96c2cc2783bb"
+Parent: "681c3225-f42e-4708-9b09-dee191926f9e"
+Template: "bdf6c974-e68c-46a2-a0a9-d382fd0927eb"
+Path: "/sitecore/content/progressive/pkm/Home/Shared Content/05-CommonScenarios/StateSpecific/FL/KB-HO-1005-FallenTreeWind-FL"
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{C3C90D34-6EE9-4E17-BE85-EC774D41DAB8}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "21b8d6f1-4294-46a5-98fd-38df0ce8aae0"
+      Hint: SourceDocumentLOB
+      Value: "{331E5703-41A4-4592-B744-14A83C4CFAAE}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260803T035413Z
+    - ID: "76e0c665-5c4d-4d03-ae66-a5f3d12978ba"
+      Hint: Content
+      Value: "<p>In Florida, authorize Progressive emergency tree removal from the structure and tarp when a wind-fallen tree remains on the roof. Do not approve full yard cleanup beyond Progressive debris allowances without authority.</p>"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c3c82d5a-0a54-4b29-88dd-96fa2596f36b"
+    - ID: "94ce9d2b-aa0c-488f-943a-d2e582eb50bc"
+      Hint: SourceDocumentPerils
+      Value: "{F27BF167-E841-4254-A84B-2F72EC78167F}"
+    - ID: "a8f6d033-4e9e-4598-be5e-da2456c41b9f"
+      Hint: sourceDocumentLink
+      Value: |
+        <link text="Homeowners Fallen Tree and Wind Damage" linktype="internal" class="" title="" target="" querystring="" id="{DE28564F-C405-4461-8793-A2923DF67115}" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260803T035414Z

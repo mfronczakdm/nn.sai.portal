@@ -1,0 +1,179 @@
+﻿---
+ID: "e400e808-4ca5-4659-b2c3-82619277fd1e"
+Parent: "612ae84f-c0c8-451a-859b-1712fb3149d2"
+Template: "b08ec32b-f183-474b-93f7-07512168dd6e"
+Path: "/sitecore/content/pillsbury/pillsburylaw/Home/Insights/Blogs/Consumer-Protection-Dispatch"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{98C631CC-5E60-433E-A834-E9A01D90714C}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "e301ee08-0d86-4876-9712-298c707e5d2b"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260804T170843Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Consumer Protection Dispatch
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Consumer Protection Dispatch
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a30fa562-4d6c-47a2-bd88-81bbb31b2178"
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Consumer Protection Dispatch
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\WIt5EKonMo343Fqq8begbLVKlCgYPAIX
+    - ID: "d2ff0fcf-f6f9-48c6-9efb-db569452b8dc"
+      Hint: Detail
+      Value: <p>Consumer Protection Dispatch blog.</p>
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260804T180329Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: "Consumer-Protection-Dispatch"
+  - Version: 2
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: "Consumer Protection Dispatch covers FTC, CFPB, state AG, and privacy enforcement trends affecting advertising, fintech, retail, and consumer-facing businesses."
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260804T193110Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Consumer Protection Dispatch
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Practical analysis of FTC, CFPB, and consumer protection developments from Pillsbury.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: FTC, CFPB, and consumer regulatory developments
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Consumer Protection Dispatch | Pillsbury Law Blog
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Consumer Protection Dispatch | Pillsbury Law
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f3bfbc01-533f-49f5-8064-21b0b627a306"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: FTC, CFPB, and consumer protection enforcement updates from Pillsbury’s Consumer Protection Dispatch blog.
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Consumer Protection Dispatch
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\WIt5EKonMo343Fqq8begbLVKlCgYPAIX
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260804T193110Z
+    - ID: "d2ff0fcf-f6f9-48c6-9efb-db569452b8dc"
+      Hint: Detail
+      Value: "<p>Consumer Protection Dispatch delivers timely updates on federal and state consumer protection enforcement. Pillsbury lawyers examine FTC and CFPB actions, state attorney general initiatives, advertising and marketing rules, and privacy-related investigations that can reshape compliance programs overnight.</p><p>Whether you operate in fintech, retail, digital advertising, or consumer products, our posts translate regulatory signals into practical takeaways for counsel and business leaders.</p>"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260804T202549Z
+    - ID: "e7f8a9b0-c1d2-4e3f-8a9b-0c1d2e3f4a5b"
+      Hint: metadataAuthor
+      Value: Pillsbury Winthrop Shaw Pittman LLP
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Consumer Protection Dispatch | Pillsbury Law Blog
+    - ID: "f6fcc0b6-31b2-49cd-8a66-4ba282a8ad24"
+      Hint: metadataKeywords
+      Value: consumer protection, FTC, CFPB, advertising law, privacy enforcement, Pillsbury
+  - Version: 3
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: "Consumer Protection Dispatch covers FTC, CFPB, state AG, and privacy enforcement trends affecting advertising, fintech, retail, and consumer-facing businesses."
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260805T122323Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Consumer Protection Dispatch
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "46ab8141-8b68-4775-9397-d9cfd62c4dce"
+      Hint: image
+      Value: |
+        <image src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&h=750&q=80" alt="Retail checkout and consumer shopping experience" width="1200" height="750" />
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Practical analysis of FTC, CFPB, and consumer protection developments from Pillsbury.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: FTC, CFPB, and consumer regulatory developments
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Consumer Protection Dispatch | Pillsbury Law Blog
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Consumer Protection Dispatch | Pillsbury Law
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "fec33b63-c8dd-482c-840c-d75a4e002de9"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: FTC, CFPB, and consumer protection enforcement updates from Pillsbury’s Consumer Protection Dispatch blog.
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Consumer Protection Dispatch
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\WIt5EKonMo343Fqq8begbLVKlCgYPAIX
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260805T122323Z
+    - ID: "d2ff0fcf-f6f9-48c6-9efb-db569452b8dc"
+      Hint: Detail
+      Value: "<p>Consumer Protection Dispatch delivers timely updates on federal and state consumer protection enforcement. Pillsbury lawyers examine FTC and CFPB actions, state attorney general initiatives, advertising and marketing rules, and privacy-related investigations that can reshape compliance programs overnight.</p><p>Whether you operate in fintech, retail, digital advertising, or consumer products, our posts translate regulatory signals into practical takeaways for counsel and business leaders.</p>"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260805T173103Z
+    - ID: "e7f8a9b0-c1d2-4e3f-8a9b-0c1d2e3f4a5b"
+      Hint: metadataAuthor
+      Value: Pillsbury Winthrop Shaw Pittman LLP
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Consumer Protection Dispatch | Pillsbury Law Blog
+    - ID: "f6fcc0b6-31b2-49cd-8a66-4ba282a8ad24"
+      Hint: metadataKeywords
+      Value: consumer protection, FTC, CFPB, advertising law, privacy enforcement, Pillsbury

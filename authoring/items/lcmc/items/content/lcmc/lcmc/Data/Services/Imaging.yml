@@ -1,0 +1,163 @@
+﻿---
+ID: "2c7094f3-7e17-4a5f-8e1f-68830fdc81b6"
+Parent: "d9cb7792-ee41-4a8f-a1f8-729d90b4e527"
+Template: "4540c3ad-240b-4d59-bd8b-f2a34d1edc79"
+Path: /sitecore/content/lcmc/lcmc/Data/Services/Imaging
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "195a3eb9-2014-4ade-9528-46016044c588"
+      Hint: ServiceTitle
+      Value: Imaging
+    - ID: "249f0edb-a3f4-4f20-a0b6-e389bdbe8547"
+      Hint: ServiceDetail
+      Value: "<p>Imaging services support diagnosis and treatment planning with X-ray, CT, MRI, ultrasound, and mammography where available.</p><p>Hospital radiology departments and selected urgent care clinics provide convenient access across the system.</p>"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T003555Z
+    - ID: "36f9cc2a-c286-48dc-8161-cbc3300f8601"
+      Hint: OfferedAtLocations
+      Value: |
+        {EFEAC293-2BF4-4516-873D-4EAC1F998474}
+        {C6A3CDB7-8708-4C60-861B-009B7FB9E786}
+        {C5D069A3-C8BB-40FE-89BE-D7F9D5C9614F}
+        {6B468248-C9D1-4DD0-9E8D-44B477FDB96C}
+        {6766AE91-0553-4034-B328-2327CB54AB85}
+        {063FFD1D-6681-4DFC-8A7A-504EA903090F}
+        {E8F05084-0214-424F-B1D4-B5B562499F5C}
+        {35C77454-5FB8-460D-BC12-299F7B31DE5A}
+        {764E7C6F-75BB-49EE-B304-4E5A0E6F3DAC}
+        {A2D66593-0A5D-4EE4-82D3-FA88A59C71FA}
+        {F1E5353C-A2B7-47F0-9570-85B8FD6D9FED}
+        {57D504EA-804B-4166-84EB-CE298A6853F0}
+        {53907833-68C9-4A0D-A500-FAD77D27FBD0}
+        {4C15C596-29EB-46C8-BD93-53E7DEBA82E0}
+        {EBC36A98-6CF2-477A-827A-7BEFEB2FE5A8}
+        {9E0B2413-44E2-488E-9346-39243F87E342}
+    - ID: "4491d77b-da17-4a4d-8480-8a09826476a5"
+      Hint: ServiceShortDescription
+      Value: "X-ray, CT, MRI, ultrasound, and other diagnostic imaging at LCMC Health hospitals and urgent care sites."
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "e6716d0a-24d0-4fc7-b40f-39a3623976d2"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260908T003819Z
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "195a3eb9-2014-4ade-9528-46016044c588"
+      Hint: ServiceTitle
+      Value: Imagenología
+    - ID: "249f0edb-a3f4-4f20-a0b6-e389bdbe8547"
+      Hint: ServiceDetail
+      Value: <p>Los servicios de imagenología apoyan el diagnóstico y la planificación del tratamiento con radiografías, tomografías computarizadas, resonancias magnéticas, ecografías y mamografías, donde estén disponibles.</p><p>Los departamentos de radiología de los hospitales y algunas clínicas de atención de urgencias brindan acceso conveniente en todo el sistema.</p>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T003555Z
+    - ID: "36f9cc2a-c286-48dc-8161-cbc3300f8601"
+      Hint: OfferedAtLocations
+      Value: |
+        {EFEAC293-2BF4-4516-873D-4EAC1F998474}
+        {C6A3CDB7-8708-4C60-861B-009B7FB9E786}
+        {C5D069A3-C8BB-40FE-89BE-D7F9D5C9614F}
+        {6B468248-C9D1-4DD0-9E8D-44B477FDB96C}
+        {6766AE91-0553-4034-B328-2327CB54AB85}
+        {063FFD1D-6681-4DFC-8A7A-504EA903090F}
+        {E8F05084-0214-424F-B1D4-B5B562499F5C}
+        {35C77454-5FB8-460D-BC12-299F7B31DE5A}
+        {764E7C6F-75BB-49EE-B304-4E5A0E6F3DAC}
+        {A2D66593-0A5D-4EE4-82D3-FA88A59C71FA}
+        {F1E5353C-A2B7-47F0-9570-85B8FD6D9FED}
+        {57D504EA-804B-4166-84EB-CE298A6853F0}
+        {53907833-68C9-4A0D-A500-FAD77D27FBD0}
+        {4C15C596-29EB-46C8-BD93-53E7DEBA82E0}
+        {EBC36A98-6CF2-477A-827A-7BEFEB2FE5A8}
+        {9E0B2413-44E2-488E-9346-39243F87E342}
+    - ID: "4491d77b-da17-4a4d-8480-8a09826476a5"
+      Hint: ServiceShortDescription
+      Value: Radiografías, tomografías computarizadas, resonancias magnéticas, ecografías y otros estudios de diagnóstico por imágenes en los hospitales y centros de atención de urgencias de LCMC Health.
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2b9ea5aa-1c21-4c77-b5eb-7750911bc54c"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T162728Z
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "195a3eb9-2014-4ade-9528-46016044c588"
+      Hint: ServiceTitle
+      Value: Imagerie
+    - ID: "249f0edb-a3f4-4f20-a0b6-e389bdbe8547"
+      Hint: ServiceDetail
+      Value: <p>Les services d’imagerie soutiennent le diagnostic et la planification du traitement grâce à la radiographie, à la TDM, à l’IRM, à l’échographie et à la mammographie, selon la disponibilité.</p><p>Les services de radiologie des hôpitaux et certaines cliniques de soins d’urgence offrent un accès pratique à l’échelle du réseau.</p>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T003555Z
+    - ID: "36f9cc2a-c286-48dc-8161-cbc3300f8601"
+      Hint: OfferedAtLocations
+      Value: |
+        {EFEAC293-2BF4-4516-873D-4EAC1F998474}
+        {C6A3CDB7-8708-4C60-861B-009B7FB9E786}
+        {C5D069A3-C8BB-40FE-89BE-D7F9D5C9614F}
+        {6B468248-C9D1-4DD0-9E8D-44B477FDB96C}
+        {6766AE91-0553-4034-B328-2327CB54AB85}
+        {063FFD1D-6681-4DFC-8A7A-504EA903090F}
+        {E8F05084-0214-424F-B1D4-B5B562499F5C}
+        {35C77454-5FB8-460D-BC12-299F7B31DE5A}
+        {764E7C6F-75BB-49EE-B304-4E5A0E6F3DAC}
+        {A2D66593-0A5D-4EE4-82D3-FA88A59C71FA}
+        {F1E5353C-A2B7-47F0-9570-85B8FD6D9FED}
+        {57D504EA-804B-4166-84EB-CE298A6853F0}
+        {53907833-68C9-4A0D-A500-FAD77D27FBD0}
+        {4C15C596-29EB-46C8-BD93-53E7DEBA82E0}
+        {EBC36A98-6CF2-477A-827A-7BEFEB2FE5A8}
+        {9E0B2413-44E2-488E-9346-39243F87E342}
+    - ID: "4491d77b-da17-4a4d-8480-8a09826476a5"
+      Hint: ServiceShortDescription
+      Value: Radiographie, TDM, IRM, échographie et autres services d’imagerie diagnostique dans les hôpitaux et les centres de soins d’urgence de LCMC Health.
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ed57a3f3-b1c9-47cf-aa8c-087ed64ac593"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201350Z

@@ -1,0 +1,41 @@
+﻿---
+ID: "30419d01-b0ee-4287-a997-dc09a48ace02"
+Parent: "41aba868-a71e-42ec-b32e-6ca037858aa2"
+Template: "8ef3fb89-fd2f-48b9-a8ce-20f387e0ab0a"
+Path: /sitecore/content/quanex/quanex/Data/HeroCarousels/Solar and Extrusions Innovation Hero/Solar Panel Components
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1c6ed158-edf5-4a99-9352-eab4a1943e03"
+      Hint: Link
+      Value: |
+        <link text="EXPLORE SOLAR" linktype="internal" id="{36C969E9-D8C1-4693-AA6C-B54F17B1E3DD}" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260813T190653Z
+    - ID: "48932c54-8c74-4029-ba15-1b8af19fe457"
+      Hint: Description
+      Value: "Module sealing and edge solutions engineered to support PV durability, weatherability and long-term performance."
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "14fae81e-6eff-4f74-a4d9-69aabb293725"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c2442485-2c9e-47d6-85e8-509877a1d977"
+      Hint: Image
+      Value: |
+        <image src="https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg" alt="Quanex solar panel components" />
+    - ID: "c8463a04-9fc1-4d12-b4c6-b4448f0cb298"
+      Hint: SlideName
+      Value: SOLAR PANEL COMPONENTS
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260813T190653Z
+    - ID: "e64b5a37-be27-4001-9380-27bbb40fe1bc"
+      Hint: BackgroundImage
+      Value: |
+        <image src="https://www.quanex.com/globalassets/images/hero/extruded-solutions.jpg" alt="Solar manufacturing backdrop" />

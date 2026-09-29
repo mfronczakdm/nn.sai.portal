@@ -1,0 +1,186 @@
+﻿---
+ID: "620cdba1-8f9d-4b45-bcc2-6f89bffd78c0"
+Parent: "893bbb60-2b8c-4a97-bb8e-541e744f2b33"
+Template: "b2b918c3-acda-433f-a11b-718466493aec"
+Path: /sitecore/content/amkor/amkor/Home/About Us/News/Blog/Amkor Semiconductor Educator Bootcamp
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{E50EEEBF-15B5-4D68-AF75-847B8E659933}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "125f2276-557c-400d-a0ed-046ac707db9f"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Amkor Technology hosted its first educator bootcamp focused on semiconductor manufacturing and workforce opportunities.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260829T161010Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Semiconductor Educator Bootcamp
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{FCA998C5-0CC3-4F91-94D8-0A4E6CAECE88}"
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: June 8, 2026
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Amkor Technology Launches Semiconductor Educator Bootcamp to Strengthen Future Workforce Pipeline
+    - ID: "75eee468-e1a7-4c63-a2d3-43a4956cf1dc"
+      Hint: image
+      Value: |
+        <image src="https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2026/06/SEE-Bootcamp-2-1.png" alt="Amkor Semiconductor Educator Bootcamp" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2f257aef-0a1a-4e1b-bd3c-b7cfb2dc2f42"
+    - ID: "9c0f3bfa-27d9-4c2f-b589-6f67beaf207b"
+      Hint: Detail
+      Value: |
+        <h2>Amkor Technology Launches Semiconductor Educator Bootcamp to Strengthen Future Workforce Pipeline</h2><p><em>June 8, 2026</em></p><p>Amkor Technology hosted its first educator bootcamp focused on semiconductor manufacturing and workforce opportunities.</p><p><a href="https://amkor.com/blog/amkor-semiconductor-educator-bootcamp/" rel="noopener noreferrer" target="_blank">Read on amkor.com</a></p>
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Amkor Technology Launches Semiconductor Educator Bootcamp to Strengthen Future Workforce Pipeline
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260829T204756Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Amkor Semiconductor Educator Bootcamp
+  - Version: 2
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+            l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
+            <r
+              uid="{1A2B3C4D-0020-4000-8000-000000000020}"
+              s:ds=""
+              s:id="{B1136CF1-94BE-468C-B78D-9BE212AF5428}"
+              s:par="DynamicPlaceholderId=1&amp;FieldNames=%7bAA41D913-0CFD-44C6-92E7-52C3D1D99599%7d"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Amkor Technology hosted its first educator bootcamp focused on semiconductor manufacturing and workforce opportunities.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260831T133016Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Semiconductor Educator Bootcamp
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: June 8, 2026
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Amkor Technology Launches Semiconductor Educator Bootcamp to Strengthen Future Workforce Pipeline
+    - ID: "75eee468-e1a7-4c63-a2d3-43a4956cf1dc"
+      Hint: image
+      Value: |
+        <image src="https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2026/06/SEE-Bootcamp-2-1.png" alt="Amkor Semiconductor Educator Bootcamp" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f797d270-e11d-4c8a-bac9-d201c9f3e755"
+    - ID: "9c0f3bfa-27d9-4c2f-b589-6f67beaf207b"
+      Hint: Detail
+      Value: |
+        <h2>Amkor Technology Launches Semiconductor Educator Bootcamp to Strengthen Future Workforce Pipeline</h2><p><em>June 8, 2026</em></p><p>Amkor Technology hosted its first educator bootcamp focused on semiconductor manufacturing and workforce opportunities.</p><p><a href="https://amkor.com/blog/amkor-semiconductor-educator-bootcamp/" rel="noopener noreferrer" target="_blank">Read on amkor.com</a></p>
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Amkor Technology Launches Semiconductor Educator Bootcamp to Strengthen Future Workforce Pipeline
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\WIt5EKonMo343Fqq8begbLVKlCgYPAIX
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260831T133016Z
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260831T211959Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Amkor Semiconductor Educator Bootcamp
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Amkor Technologyは、半導体製造と人材機会に焦点を当てた初の教育者向けブートキャンプを開催しました。
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260829T161010Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: 半導体教育者ブートキャンプ
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{FCA998C5-0CC3-4F91-94D8-0A4E6CAECE88}"
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: 2026年6月8日
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Amkor Technology、将来の人材パイプライン強化に向けて半導体教育者ブートキャンプを開始
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "75eee468-e1a7-4c63-a2d3-43a4956cf1dc"
+      Hint: image
+      Value: |
+        <image alt="Amkor半導体教育者ブートキャンプ" src="https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2026/06/SEE-Bootcamp-2-1.png" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "0f2a8885-a905-429a-8962-ef61d1b1312e"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9c0f3bfa-27d9-4c2f-b589-6f67beaf207b"
+      Hint: Detail
+      Value: |
+        <h2>Amkor Technology、将来の人材パイプライン強化に向けて半導体教育者ブートキャンプを開始</h2><p><em>2026年6月8日</em></p><p>Amkor Technologyは、半導体製造と人材機会に焦点を当てた初の教育者向けブートキャンプを開催しました。</p><p><a href="https://amkor.com/blog/amkor-semiconductor-educator-bootcamp/" rel="noopener noreferrer" target="_blank">amkor.comで続きを読む</a></p>
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Amkor Technology、将来の人材パイプライン強化に向けて半導体教育者ブートキャンプを開始
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260831T030543Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Amkor半導体教育者ブートキャンプ

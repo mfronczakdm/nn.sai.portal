@@ -1,0 +1,41 @@
+﻿---
+ID: "98fc0a17-b56c-4e95-a755-cc61aec9623a"
+Parent: "867ec79d-5c5c-40f3-b988-579f95ac277e"
+Template: "0bb540d0-731b-4f71-8c0e-d99e26562cd2"
+Path: /sitecore/content/dfs/dfs/Home/Portal/support/Data/Support_Center_Detail
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260819T214949Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c0b7bce-7da1-4cec-a7aa-3d28179fe94b"
+      Hint: title
+      Value: Support Center
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "9a96bc9e-e7dc-4a34-976d-dea8564d8a56"
+    - ID: "b0125af5-1538-4b18-9a93-2e8f5781bc2c"
+      Hint: body
+      Value: |
+        <div class="mx-auto w-full max-w-6xl space-y-8"><div class="rounded-2xl border border-border bg-gradient-to-br from-card to-muted/30 p-8 shadow-sm"><h2 class="text-xl font-semibold text-foreground">How can we help today?</h2><p class="mt-2 max-w-2xl text-sm text-muted-foreground">Your dedicated restaurant services team is available for orders, maintenance coordination, and account questions.</p><div class="mt-6 flex flex-wrap gap-3"><a href="#" class="inline-flex items-center rounded-xl bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm">Start live chat</a><a href="tel:18005551234" class="inline-flex items-center rounded-xl border border-border bg-background px-5 py-2.5 text-sm font-semibold text-foreground">Call 1-800-555-1234</a></div></div><div class="grid gap-6 md:grid-cols-3"><section class="rounded-2xl border border-border bg-card p-6 shadow-sm"><h3 class="font-semibold text-foreground">Order support</h3><p class="mt-2 text-sm text-muted-foreground">Quotes, delivery changes, and invoice questions.</p><p class="mt-4 text-sm font-medium text-primary">orders@dfsupply.example</p></section><section class="rounded-2xl border border-border bg-card p-6 shadow-sm"><h3 class="font-semibold text-foreground">Maintenance</h3><p class="mt-2 text-sm text-muted-foreground">Emergency repairs and work-order status.</p><p class="mt-4 text-sm font-medium text-primary">24/7 emergency line</p></section><section class="rounded-2xl border border-border bg-card p-6 shadow-sm"><h3 class="font-semibold text-foreground">Account services</h3><p class="mt-2 text-sm text-muted-foreground">Billing, contracts, and new location setup.</p><p class="mt-4 text-sm font-medium text-primary">accountteam@dfsupply.example</p></section></div><section class="rounded-2xl border border-border bg-card p-6 shadow-sm"><h2 class="text-lg font-semibold text-foreground">Frequently asked questions</h2><div class="mt-4 space-y-3"><details class="rounded-xl border border-border bg-background p-4"><summary class="cursor-pointer font-medium text-foreground">How do I add a new store to my account?</summary><p class="mt-2 text-sm text-muted-foreground">Contact your account manager with the store address and GM details. New locations are typically activated within 2 business days.</p></details><details class="rounded-xl border border-border bg-background p-4"><summary class="cursor-pointer font-medium text-foreground">What is the cutoff for same-week equipment delivery?</summary><p class="mt-2 text-sm text-muted-foreground">Orders placed before Tuesday 2 PM local time qualify for delivery within the same week, subject to inventory availability.</p></details><details class="rounded-xl border border-border bg-background p-4"><summary class="cursor-pointer font-medium text-foreground">Who do I contact for after-hours refrigeration issues?</summary><p class="mt-2 text-sm text-muted-foreground">Use the emergency maintenance option in Maintenance Requests or call the 24/7 line listed above.</p></details></div></section></div>
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "cc7d3a62-3796-41d8-af32-b4408a0749f9"
+      Hint: subtitle
+      Value: Get help from your dedicated restaurant services team for orders, maintenance, and account questions.
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260819T214949Z

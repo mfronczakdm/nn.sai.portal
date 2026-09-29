@@ -1,0 +1,77 @@
+﻿---
+ID: "ff7ed98d-f28e-406e-a173-4a23c8d2511b"
+Parent: "e94fc8b8-faf1-47ef-8985-b2b39bd102d1"
+Template: "75ba19ed-046a-48f7-a214-1ccb30341785"
+Path: "/sitecore/content/Cooley/cooley/Home/People/Andrew-Goldstein"
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{CF337731-EE02-41BD-BCDC-490D30AB70E6}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "027aaf74-a23d-4f1d-a338-378dd796eb7b"
+      Hint: Summary
+      Value: Washington | White Collar Defense and Investigations
+    - ID: "2302c70d-5f7e-4c92-ba54-52ac669e295a"
+      Hint: Phone
+      Value: +1 202 842 7805
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260814T211949Z
+    - ID: "2fbe8cff-9382-4f34-a13d-a3eae26add65"
+      Hint: PreferredName
+      Value: Andrew
+    - ID: "651e4b9d-b1e1-4094-a64a-d1b9641ab48c"
+      Hint: Publications
+      Value: |
+        {68C02F58-15D3-4B71-9D90-DBD6AF8AF9A2}
+        {564320D3-1D92-4749-A52C-81E01049F4DF}
+    - ID: "6cf9e6dc-c127-4b03-854f-a074e892d5bd"
+      Hint: FullName
+      Value: Andrew D. Goldstein
+    - ID: "6f5de62a-0295-4a9c-8cbe-90c1a59f483d"
+      Hint: SeoTitle
+      Value: "Andrew D. Goldstein | Co-Partner in Charge - Washington, DC | Cooley"
+    - ID: "78843463-efe2-448f-a30d-b6e7e2aab380"
+      Hint: Office
+      Value: "{EDD7001F-94A1-44F6-8B0A-789A9461E7A6}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "244f73a6-f3c2-4b65-8091-deb30861ca61"
+    - ID: "9fe86ca5-05e1-4a44-a119-fcf675e32f02"
+      Hint: Biography
+      Value: "<p>Andrew is global head of Cooley's white collar defense and investigations group and co-partner in charge of the Washington, DC, office. A highly acclaimed former federal prosecutor, he previously served as chief of the public corruption unit at the US Attorney's Office for the Southern District of New York. Andrew defends companies and individuals before government agencies and in high-stakes litigation.</p>"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "bbd10213-83c1-468c-8788-5c2a67cf85a0"
+      Hint: Email
+      Value: agoldstein@cooley.com
+    - ID: "c54be241-aff8-4630-b46c-01aae94f8b9e"
+      Hint: SeoDescription
+      Value: "Andrew D. Goldstein is co-partner in charge of Cooley's Washington, DC office and global head of white collar defense."
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260817T101023Z
+    - ID: "e398045d-4cbb-458a-bb3c-84c9c79ef136"
+      Hint: SpeakingEngagements
+      Value: |
+        {6394D7C0-9C84-488C-8368-304D47A425D0}
+        {BF52B91D-4BCE-4169-8E51-E412C626E60A}
+    - ID: "f3c9bb15-bb46-4ec0-9d31-0300245e6acd"
+      Hint: JobTitle
+      Value: "Co-Partner in Charge - Washington, DC"
+    - ID: "f632d418-ab07-4f1d-a0fb-15d4fb9fd92c"
+      Hint: Headshot
+      Value: |
+        <Image src="https://www.cooley.com/-/media/cooley/bio-images/headshots/goldstein-andrew-24964-bw.jpg" alt="Andrew D. Goldstein" />
+    - ID: "f968ea1a-5e81-4417-822e-e5217ae61323"
+      Hint: PracticeAreas
+      Value: |
+        {DE969065-A7E8-474C-911A-5F3FD5E96C28}
+        {4F127923-41BD-4D8F-9D0A-CCB08B1A5165}

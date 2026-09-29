@@ -1,0 +1,134 @@
+﻿---
+ID: "333256ef-2507-4945-b83c-35974bdf8c87"
+Parent: "c890d6d5-5911-4140-96ed-301f22200df6"
+Template: "f6a7b8c9-d0e1-4f5a-3b4c-5d6e7f8a9b0c"
+Path: /sitecore/content/lcmc/lcmc/Data/AI Config/Services/Product Filtering and Search
+BranchID: "f8a9b0c1-d2e3-4f4a-5b6c-7d8e9f0a1b2c"
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "27c11b25-ada2-4d1d-bbae-893644d2d126"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{F4A5B6C7-D8E9-4F0A-1B2C-3D4E5F6A7B8C}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T010429Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "68fc0231-945f-4f94-9cfe-3cd244cb7124"
+    - ID: "b8c9d0e1-f2a3-4b5c-5d6e-7f8a9b0c1d2e"
+      Hint: name
+      Value: Product Filtering and Search
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c9d0e1f2-a3b4-4c5d-6e7f-8a9b0c1d2e3f"
+      Hint: description
+      Value: Filter and search products by category, features, price range, and other product attributes.
+    - ID: "d0e1f2a3-b4c5-4d6e-7f8a-9b0c1d2e3f4a"
+      Hint: category
+      Value: "E-Commerce"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260825T010440Z
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T010429Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5896b672-a42f-4eef-807c-17c251389c30"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "b8c9d0e1-f2a3-4b5c-5d6e-7f8a9b0c1d2e"
+      Hint: name
+      Value: Filtrado y búsqueda de productos
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c9d0e1f2-a3b4-4c5d-6e7f-8a9b0c1d2e3f"
+      Hint: description
+      Value: Filtra y busca productos por categoría, características, rango de precios y otros atributos del producto.
+    - ID: "d0e1f2a3-b4c5-4d6e-7f8a-9b0c1d2e3f4a"
+      Hint: category
+      Value: Comercio electrónico
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T163019Z
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T010429Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "428f4590-c01e-4e7b-8851-f5c7d15bedbe"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "b8c9d0e1-f2a3-4b5c-5d6e-7f8a9b0c1d2e"
+      Hint: name
+      Value: Filtrage et recherche de produits
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c9d0e1f2-a3b4-4c5d-6e7f-8a9b0c1d2e3f"
+      Hint: description
+      Value: Filtrez et recherchez des produits par catégorie, caractéristiques, fourchette de prix et autres attributs du produit.
+    - ID: "d0e1f2a3-b4c5-4d6e-7f8a-9b0c1d2e3f4a"
+      Hint: category
+      Value: Commerce électronique
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201624Z

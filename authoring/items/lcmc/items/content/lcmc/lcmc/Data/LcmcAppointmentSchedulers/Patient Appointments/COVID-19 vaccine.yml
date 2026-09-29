@@ -1,0 +1,106 @@
+﻿---
+ID: "df574856-2f95-4b8b-9b2c-eb3973aa3c40"
+Parent: "67471114-7cd2-4099-9331-cccf8e61d20f"
+Template: "95a6d332-c755-45d8-921a-6b1f2a3675cd"
+Path: "/sitecore/content/lcmc/lcmc/Data/LcmcAppointmentSchedulers/Patient Appointments/COVID-19 vaccine"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0460e082-9902-4a2e-9c72-c618bc1f77c4"
+      Hint: VisitDescription
+      Value: "Kids ages 6 months+ are eligible for the COVID-19 vaccine."
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260902T182036Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "9eda1962-7de3-4d5d-8eeb-2ef6ab65095a"
+    - ID: "8f9fc998-74e8-450e-9e22-a1883bc3cf28"
+      Hint: VisitKey
+      Value: "covid-vaccine"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260902T182036Z
+    - ID: "e4f064f2-f59b-4e15-abf2-11a998810fdf"
+      Hint: VisitTitle
+      Value: "COVID-19 vaccine"
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0460e082-9902-4a2e-9c72-c618bc1f77c4"
+      Hint: VisitDescription
+      Value: "Los niños de 6 meses en adelante son elegibles para la vacuna contra el COVID-19."
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260902T182036Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "cf11ea26-2245-4d8a-bc13-cb066fcefe7a"
+    - ID: "8f9fc998-74e8-450e-9e22-a1883bc3cf28"
+      Hint: VisitKey
+      Value: "vacuna-covid"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T163025Z
+    - ID: "e4f064f2-f59b-4e15-abf2-11a998810fdf"
+      Hint: VisitTitle
+      Value: "vacuna contra el COVID-19"
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0460e082-9902-4a2e-9c72-c618bc1f77c4"
+      Hint: VisitDescription
+      Value: "Les enfants de 6 mois et plus peuvent recevoir le vaccin contre la COVID-19."
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260902T182036Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4672ca52-4777-4e7b-ae3c-fde6a8d6aa73"
+    - ID: "8f9fc998-74e8-450e-9e22-a1883bc3cf28"
+      Hint: VisitKey
+      Value: "covid-vaccine"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201635Z
+    - ID: "e4f064f2-f59b-4e15-abf2-11a998810fdf"
+      Hint: VisitTitle
+      Value: "Vaccin contre la COVID-19"

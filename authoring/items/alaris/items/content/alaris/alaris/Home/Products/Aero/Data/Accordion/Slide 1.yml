@@ -1,0 +1,55 @@
+﻿---
+ID: "9c829202-9ee4-4575-8e38-28bdb3fec97f"
+Parent: "b43f6b21-4902-44dd-bd28-0904ae4c1056"
+Template: "75bc6ab0-2492-4129-9f90-ca0bab019e07"
+Path: /sitecore/content/alaris/alaris/Home/Products/Aero/Data/Accordion/Slide 1
+BranchID: "6b289b7b-5c87-4423-aee6-bf33e0627fbb"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 0
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "caa7ee14-a802-4aec-8901-f7b7baee4c4d"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{5BFEEA23-D434-4F40-8D7B-2878093C4D2E}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260516T104031Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "59f8ca51-d752-468c-bfe5-b36bc0cc4c9d"
+      Hint: heading
+      Value: Slide 1
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "07d9a8b1-dd84-4cb2-a9e0-3c9469c62a91"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260516T104144Z
+    - ID: "e67167b4-10c7-409c-a118-8cd21fd07e1b"
+      Hint: description
+      Value: |
+        <div class="ck-content"><p>This is the beginning of accordion #1.</p><p>And then I'm going to add more.</p><p>&nbsp;</p><p>Just so you know, I want this to be a really long line of text and we'll see if this is something that can happen. Lalalalala. Site 2 for the Sitecore Demo project is pretty cool.</p></div>

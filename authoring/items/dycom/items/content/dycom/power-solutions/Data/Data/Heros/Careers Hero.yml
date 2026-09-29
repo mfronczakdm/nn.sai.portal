@@ -1,0 +1,48 @@
+﻿---
+ID: "674c2c27-528f-4456-851c-3eba33b911af"
+Parent: "4756eca5-459f-427e-905e-db14993b1b1d"
+Template: "ae018465-4e68-4a49-8b15-9702274fa75a"
+Path: "/sitecore/content/dycom/power-solutions/Data/Data/Heros/Careers Hero"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "cf54f705-278b-4255-822e-167ea1d44e04"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260512T162630Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{12FFAC4C-565F-4C9A-B63E-7F77E96B4D1F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d2cd924f-1ca4-4c4a-9074-f063f7c16de5"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "c65eb2cc-503f-48cd-ba69-42c29df106c1"
+      Hint: image
+      Value: |
+        <Image src="https://mrfbasech.sitecoresandbox.cloud/api/public/content/85641-HomePageHero-2000x800?v=1adc1b6e" dam-id="S9il-h9CTyWZKK5VB7NlKA" width="2000" height="800" alt="video image1.png" dam-content-type="Image" thumbnailsrc="https://mrfbasech.sitecoresandbox.cloud/api/gateway/85641/thumbnail" />
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260512T230605Z
+    - ID: "e5e059ce-66e3-4039-887b-0086e7764f09"
+      Hint: title
+      Value: The People Connecting America

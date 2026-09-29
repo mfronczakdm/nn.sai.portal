@@ -1,0 +1,40 @@
+﻿---
+ID: "1ab6b850-b23d-405a-9ae4-c6de172e5ad6"
+Parent: "4efc4068-14a6-4b66-81de-2dfaf1559137"
+Template: "4efc4068-14a6-4b66-81de-2dfaf1559137"
+Path: /sitecore/templates/Project/pillsbury/Components/Lawyers/CareerListing/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260806T165232Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c072212d-dd57-414c-bb51-0f876fb140de"
+    - ID: "9c915538-bb9b-4a80-be95-6a00b54dbed7"
+      Hint: EmptyResultsText
+      Value: No openings match your filters.
+    - ID: "a5f5dce4-fa87-4ee9-88c8-cd93ea7c9bcb"
+      Hint: ShowFilters
+      Value: 1
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260806T165237Z
+    - ID: "fbd93418-91d8-4eb1-91f3-aeb90c27bced"
+      Hint: Title
+      Value: $name

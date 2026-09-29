@@ -1,0 +1,67 @@
+﻿---
+ID: "883337f3-7c1c-4fe8-a342-55471f1355c0"
+Parent: "c30ab91f-550f-4452-8725-5bccaf1b674b"
+Template: "b08ec32b-f183-474b-93f7-07512168dd6e"
+Path: "/sitecore/content/pillsbury/pillsburylaw/Home/Lawyers/Careers/Legal-Operations-Specialist"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{52DCB65E-C54A-40B9-99B3-EEA27B1135E0}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "501661ab-62cc-46f1-9df1-e2ed4f7566e4"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Business professional role supporting legal operations—matter workflow, technology adoption, and enablement for practice teams.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260806T164317Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Business Professionals
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Process, technology & lawyer enablement
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Legal Operations Specialist — Business Professionals
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Legal Operations Specialist | Pillsbury Careers
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "bba4bb9f-4f15-44b2-9a76-7d8fb2f619e3"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Business professional career in legal operations at Pillsbury.
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Legal Operations Specialist
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\WIt5EKonMo343Fqq8begbLVKlCgYPAIX
+    - ID: "d2ff0fcf-f6f9-48c6-9efb-db569452b8dc"
+      Hint: Detail
+      Value: "<h2>Legal Operations Specialist (Business Professionals)</h2><p><em>Open role · Business professionals</em></p><p>Not every career at Pillsbury is a lawyer track. Legal Operations specialists help practices run efficiently—implementing tools, improving matter workflows, and partnering with attorneys on client delivery.</p><p><strong>What you’ll do:</strong></p><ul><li>Support practice operations and knowledge workflows</li><li>Coordinate technology rollouts and training</li><li>Partner with lawyers and firm leadership on continuous improvement</li></ul><p><strong>How to apply:</strong> Apply under Business Professionals on Careers, or ask Pulse about non-lawyer career paths at Pillsbury.</p>"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260806T165250Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: "Legal-Operations-Specialist"

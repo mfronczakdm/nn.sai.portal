@@ -1,0 +1,186 @@
+﻿---
+ID: "874f21e1-91b9-44bd-be36-a5aef1a95055"
+Parent: "cff1b3a2-45c1-44f9-8411-32c55f316627"
+Template: "b2b918c3-acda-433f-a11b-718466493aec"
+Path: /sitecore/content/amkor/amkor/Home/Packaging/System in Package SiP
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{24C038C3-F78F-4F79-BF4C-8BC7D995E3D3}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "a168a54c-b408-4cc1-bbb9-f08d0d35bd41"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: System in Package (SiP)
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T013358Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: System in Package
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{FCA998C5-0CC3-4F91-94D8-0A4E6CAECE88}"
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: System in Package (SiP)
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: System in Package (SiP)
+    - ID: "75eee468-e1a7-4c63-a2d3-43a4956cf1dc"
+      Hint: image
+      Value: |
+        <image src="https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg" alt="System in Package" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b6b6047e-dabf-4544-8f95-bbf57566b4b1"
+    - ID: "9c0f3bfa-27d9-4c2f-b589-6f67beaf207b"
+      Hint: Detail
+      Value: |
+        <h2>System in Package (SiP)</h2><p>Amkor SiP technology integrates greater functionality in smaller form factors with design, assembly and test services.</p><p><a href="https://amkor.com/packaging/system-in-package/">Explore SiP</a></p>
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: System in Package (SiP)
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260829T204814Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: System in Package SiP
+  - Version: 2
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+            l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
+            <r
+              uid="{1A2B3C4D-0044-4000-8000-000000000044}"
+              s:ds=""
+              s:id="{B1136CF1-94BE-468C-B78D-9BE212AF5428}"
+              s:par="DynamicPlaceholderId=1&amp;FieldNames=%7bAA41D913-0CFD-44C6-92E7-52C3D1D99599%7d"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: System in Package (SiP)
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260831T133234Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: System in Package
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: System in Package (SiP)
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: System in Package (SiP)
+    - ID: "75eee468-e1a7-4c63-a2d3-43a4956cf1dc"
+      Hint: image
+      Value: |
+        <image src="https://images.unsplash.com/photo-1494083306499-e22e4a457632?w=1200&amp;q=80" alt="System-in-Package microelectronics detail" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f8a5f070-a91b-4ae8-897d-3ada931c2acf"
+    - ID: "9c0f3bfa-27d9-4c2f-b589-6f67beaf207b"
+      Hint: Detail
+      Value: |
+        <h2>System in Package (SiP)</h2><p>Amkor SiP technology integrates greater functionality in smaller form factors with design, assembly and test services.</p><p><a href="https://amkor.com/packaging/system-in-package/">Explore SiP</a></p>
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: System in Package (SiP)
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\WIt5EKonMo343Fqq8begbLVKlCgYPAIX
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260831T133234Z
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260831T211959Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: System in Package SiP
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: システムインパッケージ（SiP）
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T013358Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: システムインパッケージ
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{FCA998C5-0CC3-4F91-94D8-0A4E6CAECE88}"
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: システムインパッケージ（SiP）
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: システムインパッケージ（SiP）
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "75eee468-e1a7-4c63-a2d3-43a4956cf1dc"
+      Hint: image
+      Value: |
+        <image alt="システムインパッケージ" src="https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "7764d889-a086-401e-9546-7ae8d3c0510a"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9c0f3bfa-27d9-4c2f-b589-6f67beaf207b"
+      Hint: Detail
+      Value: |
+        <h2>システムインパッケージ（SiP）</h2><p>AmkorのSiP技術は、設計、組立、テストサービスにより、より小型のフォームファクターで、より高度な機能統合を実現します。</p><p><a href="https://amkor.com/packaging/system-in-package/">SiPの詳細を見る</a></p>
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: システムインパッケージ（SiP）
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260831T030208Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: システムインパッケージ SiP

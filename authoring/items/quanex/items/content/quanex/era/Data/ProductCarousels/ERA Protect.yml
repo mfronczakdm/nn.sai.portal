@@ -1,0 +1,93 @@
+﻿---
+ID: "59418a07-9cc1-4b1c-a015-62a5b1b5bf2a"
+Parent: "8e4ccaf5-bb55-4da0-a4bb-f993e69426e2"
+Template: "149b23b5-b7c2-434e-826f-171aa7700ba5"
+Path: /sitecore/content/quanex/era/Data/ProductCarousels/ERA Protect
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260818T104442Z
+    - ID: "3aa5ab24-0c0c-4cdb-94e7-f5e106c51d2e"
+      Hint: Title
+      Value: ERA Protect Connected Security
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "014843d5-f84b-4eac-aefd-3e6685e4cb33"
+    - ID: "8d3eece7-48d3-4f23-8de7-1ab8bd74acd1"
+      Hint: ShowOptionsHint
+      Value: 1
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "cb418ccb-edaa-4d6c-8a28-0d62cd901331"
+      Hint: Products
+      Value: |
+        {9BDC0076-B5A0-439E-84DF-5AC606B332CD}
+        {1682F5D9-7197-4B90-895D-10EF87D63578}
+        {899AF56A-709C-4BE5-81BB-6F8C1CECD277}
+        {C8ABC910-F758-440C-90B8-3D32044E8FBE}
+        {D0F79EF4-699E-438D-830F-3A8E09F9B0E2}
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260818T104442Z
+    - ID: "fdc10f8a-7df8-492c-94f4-fe1cbe80b1e7"
+      Hint: CtaLabel
+      Value: More Information
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260818T104442Z
+    - ID: "3aa5ab24-0c0c-4cdb-94e7-f5e106c51d2e"
+      Hint: Title
+      Value: Sécurité connectée ERA Protect
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b9142e33-7f17-4679-96ac-1ab7976499d6"
+    - ID: "8d3eece7-48d3-4f23-8de7-1ab8bd74acd1"
+      Hint: ShowOptionsHint
+      Value: 1
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "cb418ccb-edaa-4d6c-8a28-0d62cd901331"
+      Hint: Products
+      Value: |
+        {9BDC0076-B5A0-439E-84DF-5AC606B332CD}
+        {1682F5D9-7197-4B90-895D-10EF87D63578}
+        {899AF56A-709C-4BE5-81BB-6F8C1CECD277}
+        {C8ABC910-F758-440C-90B8-3D32044E8FBE}
+        {D0F79EF4-699E-438D-830F-3A8E09F9B0E2}
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260818T134619Z
+    - ID: "fdc10f8a-7df8-492c-94f4-fe1cbe80b1e7"
+      Hint: CtaLabel
+      Value: Plus d'informations

@@ -1,0 +1,66 @@
+﻿---
+ID: "1a77f680-720b-4561-b7cc-0a3653b43489"
+Parent: "f9a4da77-9ebe-4f02-be40-d3d7c6bad8cf"
+Template: "3d0988cb-43ed-4892-96a4-f9f44fc399cb"
+Path: /sitecore/content/pillsbury/blg/Data/Blog Listings/Insights Blogs
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{6C59AE29-D0A1-4B77-9305-0ABAB21D5FE5}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "c6449fa5-be2a-4a3d-9a65-77a665e2bde1"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260805T105227Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{C55B483C-EA7F-4E76-A066-985F7D9396CA}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a0c8c127-63fd-4c58-933b-1c501421f213"
+    - ID: "92626bfa-add4-40c0-adf3-c9487083b135"
+      Hint: Intro
+      Value: <p>Pillsbury’s blogs bring together lawyers across our global platform to share practical insight on the legal, regulatory, and commercial issues shaping our clients’ industries.</p>
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260822T014834Z
+    - ID: "db3d4528-7fd1-4618-8be5-32ac3097a4e7"
+      Hint: BlogsRoot
+      Value: "{C8263FF3-EF46-4529-992B-C8EB5C57DBC8}"
+  - Version: 2
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260822T015659Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{C55B483C-EA7F-4E76-A066-985F7D9396CA}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "3fedfa6a-8220-41f0-902b-322c06cdc3f3"
+    - ID: "92626bfa-add4-40c0-adf3-c9487083b135"
+      Hint: Intro
+      Value: <p>BLG blogs bring together lawyers across our Canadian offices to share practical insight on legal, regulatory, and commercial issues. Browse specialized commentary on energy, infrastructure, financial services, technology, and more.</p>
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260822T015659Z
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260822T015659Z
+    - ID: "db3d4528-7fd1-4618-8be5-32ac3097a4e7"
+      Hint: BlogsRoot
+      Value: "{C8263FF3-EF46-4529-992B-C8EB5C57DBC8}"

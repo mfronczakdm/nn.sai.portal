@@ -1,0 +1,50 @@
+﻿---
+ID: "55c757b9-0f6d-44b4-b8a7-6002ff3464cd"
+Parent: "847fc936-c035-4d2c-a774-eb498f9a9bc8"
+Template: "bdf6c974-e68c-46a2-a0a9-d382fd0927eb"
+Path: "/sitecore/content/progressive/pkm/Home/Shared Content/01-General/StateSpecific/NC/KB-CA-1001-CommercialAutoFNOL-NC"
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{F98C445B-B47A-444D-8052-64D83B6818BF}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "21b8d6f1-4294-46a5-98fd-38df0ce8aae0"
+      Hint: SourceDocumentLOB
+      Value: "{E799A026-FF03-4588-8607-16222D811A4C}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260803T140632Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\uDLr1K5wd1M8y82dfXcCgcafj64coB7N
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\uDLr1K5wd1M8y82dfXcCgcafj64coB7N
+    - ID: "76e0c665-5c4d-4d03-ae66-a5f3d12978ba"
+      Hint: Content
+      Value: |
+        <div class="ck-content"><p>So this is the nv variant for section ....</p><p>&nbsp;</p></div>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "955a5b62-9e09-4984-945a-e32fd2b44399"
+    - ID: "a8f6d033-4e9e-4598-be5e-da2456c41b9f"
+      Hint: sourceDocumentLink
+      Value: |
+        <link text="Commercial Auto FNOL — Business Vehicle Intake" linktype="internal" class="" title="" target="" querystring="" id="{D99BB2BD-2AAF-4742-8620-905CCB3892C2}" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260803T140744Z

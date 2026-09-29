@@ -1,0 +1,104 @@
+﻿---
+ID: "1ad809b2-705d-45d3-845f-878755790b6b"
+Parent: "42d7eb86-94f9-4c55-bd65-f078b6fbde2d"
+Template: "3766e92a-e97f-4118-91a0-06223312a461"
+Path: /sitecore/content/dwh/dwh/Home/Data/SignupBanner 1
+BranchID: "890b7b74-9fac-4848-a3a6-ac14313f0684"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "ab73b178-229a-493e-899f-33ad8d481318"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{3DF84705-6ACB-4598-978D-7420BBD89105}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260608T142339Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\chamodi.samarawickrama@sitecore.com
+    - ID: "580cbc2a-05d8-4d6a-a85c-a62a05281979"
+      Hint: Subheading
+      Value: |
+        <div class="ck-content"><p>Sign in to access your saved floor plans and Quick Move-in Homes and easily save new favorites! Plus, you can now add notes on plans you love and manage your email subscriptions.</p></div>
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4edb7cb7-5c03-4889-b1d8-31da1c631361"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "bc100b18-3988-4d51-beb2-b1466c9d0e29"
+      Hint: Heading
+      Value: Keep Track of Your Favorite Homes 
+    - ID: "c5e976c8-e0a2-4b7d-949f-2fa50e39f031"
+      Hint: Image
+      Value: |
+        <Image src="https://mrfbasech.sitecoresandbox.cloud/api/public/content/7077e0a81d654f52bd346bd381a3d39f?v=d62fe4a1" dam-id="RlmYRzBiQWKF5_ixLTGHTQ" width="1100" height="637" alt="imgi_29_ec9a4f6a-1513-4f21-bfaf-c964335741e2.jpg" dam-content-type="Image" thumbnailsrc="https://mrfbasech.sitecoresandbox.cloud/api/gateway/93199/thumbnail" />
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260609T011611Z
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260608T142339Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\chamodi.samarawickrama@sitecore.com
+    - ID: "580cbc2a-05d8-4d6a-a85c-a62a05281979"
+      Hint: Subheading
+      Value: |
+        <div class="ck-content"><p>Connectez-vous pour accéder à vos plans d'étage sauvegardés et à vos maisons prêtes à emménager, et sauvegardez facilement de nouveaux favoris! De plus, vous pouvez maintenant ajouter des notes sur les plans que vous aimez et gérer vos abonnements par courriel.</p></div>
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "6e3c7070-9347-4cf6-9da5-e1fe33c6bccd"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "bc100b18-3988-4d51-beb2-b1466c9d0e29"
+      Hint: Heading
+      Value: Suivez vos maisons préférées
+    - ID: "c5e976c8-e0a2-4b7d-949f-2fa50e39f031"
+      Hint: Image
+      Value: |
+        <Image src="https://mrfbasech.sitecoresandbox.cloud/api/public/content/7077e0a81d654f52bd346bd381a3d39f?v=d62fe4a1" dam-id="RlmYRzBiQWKF5_ixLTGHTQ" width="1100" height="637" alt="imgi_29_ec9a4f6a-1513-4f21-bfaf-c964335741e2.jpg" dam-content-type="Image" thumbnailsrc="https://mrfbasech.sitecoresandbox.cloud/api/gateway/93199/thumbnail" />
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260609T183131Z

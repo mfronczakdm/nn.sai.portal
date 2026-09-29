@@ -1,0 +1,44 @@
+﻿---
+ID: "f60bb7c1-6455-4f0e-886c-6de1695cc9fe"
+Parent: "0f442b42-2403-45f5-a02b-67236dccc929"
+Template: "0f442b42-2403-45f5-a02b-67236dccc929"
+Path: /sitecore/templates/Project/quanex/Components/Navigation/MainNav/__Standard Values
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: "{9B802DA1-FA85-4A77-B169-4151AA0C38CE}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "49230752-1592-4cdc-9918-15583a3d601d"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260814T125114Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "52e99d56-0b9d-4b56-b0ac-90b11cb1285a"
+    - ID: "8e98fe43-d513-4016-a852-316d670d1df7"
+      Hint: UserLabel
+      Value: Account
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260814T125133Z
+    - ID: "fa78db7d-1604-4b71-a9e3-1d4590442cd2"
+      Hint: SearchLabel
+      Value: Search

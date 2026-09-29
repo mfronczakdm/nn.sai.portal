@@ -1,0 +1,55 @@
+﻿---
+ID: "17c29f6f-b7bd-41f6-864b-1fedf1052b05"
+Parent: "a9713239-443c-43e9-af89-2a94356cb9c0"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Project/andmore/Events/EventListing
+SharedFields:
+- ID: "037fe404-dd19-4bf7-8e30-4dadf68b27b0"
+  Hint: componentName
+  Value: EventListing
+- ID: "17bb046a-a32a-41b3-8315-81217947611b"
+  Hint: ComponentQuery
+  Value: |
+    query EventListing($datasource: String!, $language: String!) { datasource: item(path: $datasource, language: $language) { listingTitle: field(name: "ListingTitle") { jsonValue } searchPlaceholder: field(name: "SearchPlaceholder") { jsonValue } eventTypeLabel: field(name: "EventTypeLabel") { jsonValue } moreInfoLabel: field(name: "MoreInfoLabel") { jsonValue } clearCalendarLabel: field(name: "ClearCalendarLabel") { jsonValue } emptyResultsText: field(name: "EmptyResultsText") { jsonValue } eventsRoot: field(name: "EventsRoot") { jsonValue } } }
+- ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
+  Hint: Datasource Template
+  Value: /sitecore/templates/Project/andmore/Components/Events/EventListing
+- ID: "a77e8568-1ab3-44f1-a664-b7c37ec7810d"
+  Hint: Parameters Template
+  Value: "{87763C6E-72C6-409C-8C3B-3346755CC9BC}"
+- ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
+  Hint: Datasource Location
+  Value: "query:$site/*[@@name='Data']/*[@@templatename='EventListing Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='EventListing Folder']"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "4ae6bcb0-77a3-489c-b0fd-5e5a2b24a2d2"
+Languages:
+- Language: en
+  Fields:
+  - ID: "30e85e5d-e00a-4864-b358-7624d511deb4"
+    Hint: __Unversioned revision
+    Value: "2495f554-21f9-4f1e-9c86-0ad7e82d1ddb"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260901T204947Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "73f3f714-ae2e-47f8-adb0-5bb81ede5319"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260902T184315Z

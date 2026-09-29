@@ -1,0 +1,38 @@
+﻿---
+ID: "2271d425-4f14-4d7e-bb50-8e11c0795953"
+Parent: "f7f516ba-e9fb-4e75-a281-200925cb5676"
+Template: "bdf6c974-e68c-46a2-a0a9-d382fd0927eb"
+Path: "/sitecore/content/progressive/pkm/Home/Shared Content/08-RegulatoryAndCompliance/StateSpecific/TX/KB-AU-1002-CoverageDetermination-TX"
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{9732BBCD-3A31-48A6-8BF5-8B8D1E73DB60}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "21b8d6f1-4294-46a5-98fd-38df0ce8aae0"
+      Hint: SourceDocumentLOB
+      Value: "{0944EAEA-5558-443F-A68D-482773EA2153}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260731T141339Z
+    - ID: "76e0c665-5c4d-4d03-ae66-a5f3d12978ba"
+      Hint: Content
+      Value: "<p>For Texas Personal Auto coverage, document the coverage part, deductible, and policy status on the loss date before communicating payment outcomes. Use Progressive coverage letter protocols for denials or reservations of rights, and escalate rideshare or excluded-driver gray areas to the approved SME path.</p>"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "97c29463-6833-49cf-bb97-e6653936e6af"
+    - ID: "a8f6d033-4e9e-4598-be5e-da2456c41b9f"
+      Hint: sourceDocumentLink
+      Value: |
+        <link text="Personal Auto Coverage Determination" linktype="internal" class="" title="" target="" querystring="" id="{BC70A3A2-56ED-4798-AC9F-A28B7531A205}" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\emqWsGLKzRiKgWenEsIKMqdxvXhiQ4cT
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260802T143428Z

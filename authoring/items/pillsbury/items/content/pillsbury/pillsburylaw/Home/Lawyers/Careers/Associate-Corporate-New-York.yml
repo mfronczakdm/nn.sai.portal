@@ -1,0 +1,64 @@
+﻿---
+ID: "9edb3c29-87f7-475b-b960-41791d29ea0d"
+Parent: "c30ab91f-550f-4452-8725-5bccaf1b674b"
+Template: "b08ec32b-f183-474b-93f7-07512168dd6e"
+Path: "/sitecore/content/pillsbury/pillsburylaw/Home/Lawyers/Careers/Associate-Corporate-New-York"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{BA7289D3-0683-4EEA-B15C-DF9A8B1CAF32}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "a9fbdee6-e251-4e91-a5f9-b131ece2948b"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Corporate associate opening in New York for lawyers who want deal experience across M&A, securities, and governance for sophisticated clients.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260806T164307Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Open Role
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{57CC7DCE-E6B1-4564-9581-0E5850B8BDF2}"
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: New York · M&A, capital markets & governance
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Associate — Corporate | New York
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Associate — Corporate | New York | Pillsbury Careers
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "6d2a792f-2fc3-4d4d-8a09-4234c941e98a"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Open corporate associate role in New York focusing on M&A and capital markets.
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Associate — Corporate
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d2ff0fcf-f6f9-48c6-9efb-db569452b8dc"
+      Hint: Detail
+      Value: "<h2>Associate — Corporate (New York)</h2><p><em>Open role · Lawyers</em></p><p>Pillsbury’s New York Corporate practice is hiring an associate to support public and private M&A, capital markets, and governance matters. You will work on live deals with partners across our platform.</p><p><strong>What you’ll do:</strong></p><ul><li>Diligence, drafting, and closing support on domestic and cross-border deals</li><li>Coordinate with specialists in IP, trade, and employment as deals require</li><li>Client-facing writing and deal-team collaboration</li></ul><p><strong>How to apply:</strong> Apply through Careers or contact New York recruiting for the Corporate associate class.</p>"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260806T164308Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: "Associate-Corporate-New-York"

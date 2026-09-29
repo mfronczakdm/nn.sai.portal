@@ -1,0 +1,63 @@
+﻿---
+ID: "aaf5a223-239b-4722-ba4e-d4e2ee391d2f"
+Parent: "26d2aba2-6f81-4499-b283-6bd2fb88340b"
+Template: "705c014a-ced4-409a-89b7-09350cc98116"
+Path: /sitecore/content/solterra/solterra/Home/Landing Page/Data/Article Listing
+BranchID: "97509128-1b31-4a5b-9c07-d4c94b611d24"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "b80c8a23-acfc-4c10-89d7-dbf9e3c5c7e0"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{6F7A96AB-F801-47B1-98F9-F1B96763FE19}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260430T182344Z
+    - ID: "341d70c8-1429-41de-99f7-015714658bf8"
+      Hint: linkOptional
+      Value: |
+        <link class="" id="{DB9E9495-9A38-482A-BBD5-D5C71FA216C4}" querystring="" anchor="" target="" title="" linktype="internal" text="See All" url="" />
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "4d116c64-41a2-4c2b-857a-c268c13b8a72"
+      Hint: descriptionOptional
+      Value: Our team boasts top green energy experts, driving innovation in sustainability.
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "56689e04-c512-4625-9d9d-95f77b424d9c"
+      Hint: featuredContent
+      Value: |
+        {34C1AF42-CEF5-43F8-A0CD-E7A891F7BB6A}
+        {DC9F5DAB-226B-4652-A20A-410B4C581E4F}
+        {7E07C13A-4116-4E62-9694-73F4C677CC32}
+        {98BE3E89-D9BB-4575-8F7E-0E2A5D756443}
+        {98BE3E89-D9BB-4575-8F7E-0E2A5D756443}
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2494236c-3c59-4596-b362-bf111d64cc08"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260430T182458Z
+    - ID: "f173626a-12e7-4c9a-97ca-9866fd814c86"
+      Hint: titleOptional
+      Value: Latest brand news

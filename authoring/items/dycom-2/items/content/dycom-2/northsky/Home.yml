@@ -1,0 +1,208 @@
+﻿---
+ID: "463ff7a1-a5eb-40ea-82fc-1200ca6e4d51"
+Parent: "f0e8822a-3091-48b1-83bb-e1af12e52a01"
+Template: "b6fef2d5-260e-4d37-8211-0512308d339a"
+Path: "/sitecore/content/dycom-2/northsky/Home"
+BranchID: "45cf9f42-b3ac-4412-aab9-f8441c7e448e"
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{84029B54-B508-4588-8C62-5145BCF10B3F}" />
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{F558BEC9-C602-4D7A-B9A1-D0411C946EA4}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{DFC5D928-E4A7-49A4-B2DC-FCBB7B0F62C9}"
+              p:before="*"
+              s:id="{E80C2A78-FCC2-4D32-8EC5-4133F608BE5C}"
+              s:par="?DynamicPlaceholderId=22&amp;excludeTopMargin=1"
+              s:ph="headless-main" />
+            <r
+              uid="{449D7C04-90B0-48F2-860F-71C47645F3B0}"
+              p:after="r[@uid='{DFC5D928-E4A7-49A4-B2DC-FCBB7B0F62C9}']"
+              s:id="{E80C2A78-FCC2-4D32-8EC5-4133F608BE5C}"
+              s:par="?DynamicPlaceholderId=11&amp;backgroundColor=primary&amp;colorScheme=primary&amp;inset=1"
+              s:ph="headless-main" />
+            <r
+              uid="{0522083D-044F-4452-A36A-91D0DBDD4897}"
+              p:after="r[@uid='{449D7C04-90B0-48F2-860F-71C47645F3B0}']"
+              s:id="{E80C2A78-FCC2-4D32-8EC5-4133F608BE5C}"
+              s:par="?DynamicPlaceholderId=27&amp;inset=1"
+              s:ph="headless-main" />
+            <r
+              uid="{78CFC314-C74E-479A-954E-440399805584}"
+              p:after="r[@uid='{0522083D-044F-4452-A36A-91D0DBDD4897}']"
+              s:id="{E80C2A78-FCC2-4D32-8EC5-4133F608BE5C}"
+              s:par="?DynamicPlaceholderId=28&amp;backgroundColor=primary"
+              s:ph="headless-main" />
+            <r
+              uid="{AFC297FA-3D68-4011-A37F-62E349CA8B8D}"
+              p:after="r[@uid='{78CFC314-C74E-479A-954E-440399805584}']"
+              s:id="{E80C2A78-FCC2-4D32-8EC5-4133F608BE5C}"
+              s:par="?DynamicPlaceholderId=31"
+              s:ph="headless-main" />
+            <r
+              uid="{C74CE592-8A5D-4972-B9A9-72372F4DDB46}"
+              p:after="r[@uid='{AFC297FA-3D68-4011-A37F-62E349CA8B8D}']"
+              s:id="{E80C2A78-FCC2-4D32-8EC5-4133F608BE5C}"
+              s:par="?DynamicPlaceholderId=17&amp;inset=1"
+              s:ph="headless-main" />
+            <r
+              uid="{F72D0F08-1E79-4602-A403-6C686F3C2424}"
+              p:after="r[@uid='{C74CE592-8A5D-4972-B9A9-72372F4DDB46}']"
+              s:id="{02340885-3692-4CAD-AC11-ED61206501A3}"
+              s:par="?DynamicPlaceholderId=26"
+              s:ph="headless-main" />
+            <r
+              uid="{7591DCD5-D378-4821-9529-BDCFD02689B2}"
+              p:after="r[@uid='{F72D0F08-1E79-4602-A403-6C686F3C2424}']"
+              s:ds="local:/Data/MultiPromoCarousel"
+              s:id="{D806DDF7-39A7-4A6D-8E0A-D138BC53845D}"
+              s:par="?DynamicPlaceholderId=12"
+              s:ph="/headless-main/container-fullbleed-11" />
+            <r
+              uid="{7F46B363-4797-4D03-A271-C5D63E4007DD}"
+              p:after="r[@uid='{7591DCD5-D378-4821-9529-BDCFD02689B2}']"
+              s:id="{02340885-3692-4CAD-AC11-ED61206501A3}"
+              s:par="?DynamicPlaceholderId=24&amp;excludeTopMargin=1"
+              s:ph="/headless-main/container-fullbleed-11" />
+            <r
+              uid="{EA0870D9-E6F1-4031-80D7-2781C47C1689}"
+              p:after="r[@uid='{7F46B363-4797-4D03-A271-C5D63E4007DD}']"
+              s:id="{02340885-3692-4CAD-AC11-ED61206501A3}"
+              s:par="?DynamicPlaceholderId=18"
+              s:ph="/headless-main/container-fullbleed-17" />
+            <r
+              uid="{8D8FEF59-F490-4C4E-ACE0-71612C3CF768}"
+              p:after="r[@uid='{EA0870D9-E6F1-4031-80D7-2781C47C1689}']"
+              s:ds="local:/Data/Accordion"
+              s:id="{913E30C7-63C2-4A2B-9D44-B2ADAEED6BC2}"
+              s:par="?DynamicPlaceholderId=19"
+              s:ph="/headless-main/container-fullbleed-17/container-fullwidth-18" />
+            <r
+              uid="{782A3D5B-2431-4E4E-8AA6-2055F533AEF0}"
+              p:after="r[@uid='{8D8FEF59-F490-4C4E-ACE0-71612C3CF768}']"
+              s:ds="local:/Data/Testimonial"
+              s:id="{FC274B80-2EF2-4B05-89D4-22FCB1E9CC9C}"
+              s:ph="/headless-main/container-fullbleed-27/container-fullwidth-21" />
+            <r
+              uid="{8288BE3E-E837-4F35-99F3-6613650628C2}"
+              p:after="r[@uid='{782A3D5B-2431-4E4E-8AA6-2055F533AEF0}']"
+              s:ds="local:/Data/Hero"
+              s:id="{6D0AAE4A-C2D1-4F3A-8285-705D13DE8244}"
+              s:par="?DynamicPlaceholderId=23&amp;FieldNames=%7b4B658C4C-6B76-4B96-9FA9-4CFE1E6618B4%7d&amp;colorScheme=secondary"
+              s:ph="/headless-main/container-fullbleed-22" />
+            <r
+              uid="{FA810FBF-DBC1-45DB-A721-0000389DDA2E}"
+              p:after="r[@uid='{8288BE3E-E837-4F35-99F3-6613650628C2}']"
+              s:ds="local:/Data/MultiPromoTabs"
+              s:id="{EAD21DA1-10F6-45C6-A0D5-55AAF09FB743}"
+              s:par="?DynamicPlaceholderId=13"
+              s:ph="/headless-main/container-fullbleed-11/container-fullwidth-24" />
+            <r
+              uid="{C52FCFB8-26E4-48B0-B359-7A5AB5B0F980}"
+              p:after="r[@uid='{FA810FBF-DBC1-45DB-A721-0000389DDA2E}']"
+              s:ds="local:/Data/CTA Banner"
+              s:id="{3332F59B-F5F3-44DF-B66E-2811C31AEB3C}"
+              s:par="?DynamicPlaceholderId=20&amp;colorScheme=light"
+              s:ph="/headless-main/container-fullwidth-26" />
+            <r
+              uid="{80FB5D33-29E6-4CBD-B132-35DC03B5CD8A}"
+              p:after="r[@uid='{C52FCFB8-26E4-48B0-B359-7A5AB5B0F980}']"
+              s:ds="local:/Data/AnimatedPromo"
+              s:id="{241A1B8E-E69A-4E07-B5E4-53975371AD3C}"
+              s:par="?DynamicPlaceholderId=15"
+              s:ph="/headless-main/container-fullbleed-27" />
+            <r
+              uid="{290ACE69-6B07-4495-A7A9-B560F5BF6078}"
+              p:after="r[@uid='{80FB5D33-29E6-4CBD-B132-35DC03B5CD8A}']"
+              s:id="{02340885-3692-4CAD-AC11-ED61206501A3}"
+              s:par="?DynamicPlaceholderId=21"
+              s:ph="/headless-main/container-fullbleed-27" />
+            <r
+              uid="{44B001B7-F061-427D-9172-FCED619404FE}"
+              p:after="r[@uid='{290ACE69-6B07-4495-A7A9-B560F5BF6078}']"
+              s:ds="local:/Data/Topic Listing"
+              s:id="{D890160D-BD57-42EF-9FBD-F9666F385004}"
+              s:par="?DynamicPlaceholderId=30&amp;backgroundTheme=shooting-star"
+              s:ph="/headless-main/container-fullbleed-28" />
+            <r
+              uid="{46A2E201-5D6F-49E7-8211-68E99FDC0A5B}"
+              p:after="*[1=2]"
+              s:ds="local:/Data/Video 1"
+              s:id="{7CB831E8-C889-4193-B822-A1131CB0B755}"
+              s:par="?DynamicPlaceholderId=32&amp;displayIcon=1&amp;useModal=1"
+              s:ph="/headless-main/container-fullbleed-31" />
+          </d>
+        </r>
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Discover wellness, lifestyle, and editorial content that inspires your everyday journey with Solterra & Co.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260525T183754Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Solterra & Co.
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Discover wellness, lifestyle, and editorial content that inspires your everyday journey with Solterra & Co.
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Solterra & Co.
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "65408499-25bc-49d0-a2ff-b2fdd798aafc"
+      Hint: ogImage
+      Value: |
+        <image mediaid="{B229B500-1CAB-40E4-9989-496FDEE77286}" />
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Solterra & Co.
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "02f84295-39fd-47fc-94a1-0398da4d9fbf"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Discover wellness, lifestyle, and editorial content that inspires your everyday journey with Solterra & Co.
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Solterra & Co.
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260525T184144Z
+    - ID: "e7f8a9b0-c1d2-4e3f-8a9b-0c1d2e3f4a5b"
+      Hint: metadataAuthor
+      Value: Sitecore
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Solterra & Co.
+    - ID: "f6fcc0b6-31b2-49cd-8a66-4ba282a8ad24"
+      Hint: metadataKeywords
+      Value: Solterra & Co., wellness, editorial, lifestyle

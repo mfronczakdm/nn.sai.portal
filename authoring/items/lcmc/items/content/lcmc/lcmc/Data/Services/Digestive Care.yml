@@ -1,0 +1,127 @@
+﻿---
+ID: "b491c6f0-3a49-4e3a-b94e-815639b35b92"
+Parent: "d9cb7792-ee41-4a8f-a1f8-729d90b4e527"
+Template: "4540c3ad-240b-4d59-bd8b-f2a34d1edc79"
+Path: /sitecore/content/lcmc/lcmc/Data/Services/Digestive Care
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "195a3eb9-2014-4ade-9528-46016044c588"
+      Hint: ServiceTitle
+      Value: Digestive Care
+    - ID: "249f0edb-a3f4-4f20-a0b6-e389bdbe8547"
+      Hint: ServiceDetail
+      Value: <p>Digestive care teams evaluate reflux, liver disease, inflammatory bowel disease, and other GI conditions.</p><p>Hospital GI programs at East Jefferson, Touro, West Jefferson, and University Medical Center include endoscopy and inpatient support.</p>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T003602Z
+    - ID: "36f9cc2a-c286-48dc-8161-cbc3300f8601"
+      Hint: OfferedAtLocations
+      Value: |
+        {EFEAC293-2BF4-4516-873D-4EAC1F998474}
+        {063FFD1D-6681-4DFC-8A7A-504EA903090F}
+        {E8F05084-0214-424F-B1D4-B5B562499F5C}
+        {35C77454-5FB8-460D-BC12-299F7B31DE5A}
+    - ID: "4491d77b-da17-4a4d-8480-8a09826476a5"
+      Hint: ServiceShortDescription
+      Value: "Gastroenterology and digestive health services including endoscopy and hospital-based GI care."
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "9a1810f2-6571-42a6-b970-202bd06589b3"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260908T003825Z
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "195a3eb9-2014-4ade-9528-46016044c588"
+      Hint: ServiceTitle
+      Value: Atención digestiva
+    - ID: "249f0edb-a3f4-4f20-a0b6-e389bdbe8547"
+      Hint: ServiceDetail
+      Value: <p>Los equipos de atención digestiva evalúan el reflujo, la enfermedad hepática, la enfermedad inflamatoria intestinal y otras afecciones gastrointestinales.</p><p>Los programas hospitalarios de gastroenterología en East Jefferson, Touro, West Jefferson y University Medical Center incluyen endoscopia y apoyo para pacientes hospitalizados.</p>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T003602Z
+    - ID: "36f9cc2a-c286-48dc-8161-cbc3300f8601"
+      Hint: OfferedAtLocations
+      Value: |
+        {EFEAC293-2BF4-4516-873D-4EAC1F998474}
+        {063FFD1D-6681-4DFC-8A7A-504EA903090F}
+        {E8F05084-0214-424F-B1D4-B5B562499F5C}
+        {35C77454-5FB8-460D-BC12-299F7B31DE5A}
+    - ID: "4491d77b-da17-4a4d-8480-8a09826476a5"
+      Hint: ServiceShortDescription
+      Value: Servicios de gastroenterología y salud digestiva, incluyendo endoscopia y atención gastrointestinal hospitalaria.
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "06283b05-6727-4f66-b9cc-f82729038959"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T162722Z
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "195a3eb9-2014-4ade-9528-46016044c588"
+      Hint: ServiceTitle
+      Value: Soins digestifs
+    - ID: "249f0edb-a3f4-4f20-a0b6-e389bdbe8547"
+      Hint: ServiceDetail
+      Value: "<p>Les équipes de soins digestifs évaluent le reflux, les maladies du foie, les maladies inflammatoires de l’intestin et d’autres troubles gastro-intestinaux.</p><p>Les programmes de gastro-entérologie en milieu hospitalier à East Jefferson, Touro, West Jefferson et University Medical Center comprennent l’endoscopie et le soutien aux patients hospitalisés.</p>"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T003602Z
+    - ID: "36f9cc2a-c286-48dc-8161-cbc3300f8601"
+      Hint: OfferedAtLocations
+      Value: |
+        {EFEAC293-2BF4-4516-873D-4EAC1F998474}
+        {063FFD1D-6681-4DFC-8A7A-504EA903090F}
+        {E8F05084-0214-424F-B1D4-B5B562499F5C}
+        {35C77454-5FB8-460D-BC12-299F7B31DE5A}
+    - ID: "4491d77b-da17-4a4d-8480-8a09826476a5"
+      Hint: ServiceShortDescription
+      Value: "Services de gastroentérologie et de santé digestive, y compris l’endoscopie et les soins gastro-intestinaux en milieu hospitalier."
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "27a5c9fa-66ea-4f51-aeab-6c8984f42941"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201350Z

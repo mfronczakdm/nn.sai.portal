@@ -1,0 +1,48 @@
+﻿---
+ID: "578f4355-0874-499f-a0b8-f6c149d37946"
+Parent: "21083968-b118-4555-a20f-206abac397c9"
+Template: "58041043-7bea-44f0-b1b8-08e4ea7054f4"
+Path: /sitecore/content/dycom/dycom/Home/Careers/Engineering Careers Landing Page/Data/Text 1
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "007296ed-5f6f-47b7-a8da-475f07ebafd1"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260512T164626Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{12FFAC4C-565F-4C9A-B63E-7F77E96B4D1F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "8b57dadd-0825-4f5d-9c32-187c0af7e1fd"
+      Hint: text
+      Value: |
+        <div class="ck-content"><div class="wpb_row vc_row-fluid vc_row" style="-webkit-text-stroke-width:0px;background-color:rgb(255, 255, 255);border-width:0px;box-sizing:border-box;color:rgb(89, 89, 89);font-family:Ubuntu;font-feature-settings:inherit;font-kerning:inherit;font-language-override:inherit;font-optical-sizing:inherit;font-size-adjust:inherit;font-size:16px;font-stretch:inherit;font-style:normal;font-variant-alternates:inherit;font-variant-caps:normal;font-variant-east-asian:inherit;font-variant-emoji:inherit;font-variant-ligatures:normal;font-variant-numeric:inherit;font-variant-position:inherit;font-variation-settings:inherit;font-weight:400;letter-spacing:normal;line-height:inherit;margin:0px 0px 50px;orphans:2;padding:calc(2vw) 0px 0px;position:relative;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;vertical-align:baseline;white-space:normal;widows:2;word-spacing:0px;" id="fws_6a0232b639a4a" data-column-margin="default" data-midnight="dark" data-top-percent="2%"><div class="row_col_wrap_12 col span_12 dark left" style="border-width:0px;box-sizing:border-box;display:flex;flex-wrap:wrap;float:none;font:inherit;margin:0px -25px 0px !important;padding:0px;position:relative;vertical-align:baseline;width:auto;z-index:10;"><div class="vc_col-sm-12 wpb_column column_container vc_column_container col no-extra-padding inherit_tablet inherit_phone " style="background-position:center center;border-width:0px;box-shadow:none;box-sizing:border-box;display:block;float:none;font:inherit;margin:0px;padding:0px 25px;position:relative;vertical-align:baseline;width:1420px;" data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-animation="" data-delay="0"><div class="vc_column-inner" style="border-width:0px;box-sizing:border-box;font:inherit;margin:0px;padding:0px;position:relative;vertical-align:baseline;"><div class="wpb_wrapper" style="border-width:0px;box-sizing:border-box;font:inherit;margin:0px;padding:0px;vertical-align:baseline;"><div class="wpb_text_column wpb_content_element " style="border-width:0px;box-sizing:border-box;font:inherit;margin:0px;padding:0px;vertical-align:baseline;"><div class="wpb_wrapper" style="border-width:0px;box-sizing:border-box;font:inherit;margin:0px;padding:0px;vertical-align:baseline;"><p style="-webkit-font-smoothing:antialiased;border-width:0px;box-sizing:border-box;font:inherit;margin:0px;padding:0px;text-align:center;vertical-align:baseline;"><b style="border-width:0px;box-sizing:border-box;font-family:Ubuntu;font-feature-settings:inherit;font-kerning:inherit;font-language-override:inherit;font-optical-sizing:inherit;font-size-adjust:inherit;font-size:inherit;font-stretch:inherit;font-style:inherit;font-variant:inherit;font-variation-settings:inherit;line-height:inherit;margin:0px;padding:0px;vertical-align:baseline;"><strong>Connect to a career with purpose.</strong></b>&nbsp;The connections we make here are meaningful. Our teams connect communities, cities, and families across the country — and we’re proud of that. Our people have stable, long-lasting careers because we prioritize safety, security, and support. People rely on us and we always show up.</p></div></div></div></div></div></div></div></div>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "454797fc-b462-4a94-b5ac-397908147f44"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260513T104636Z

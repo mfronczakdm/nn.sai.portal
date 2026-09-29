@@ -1,0 +1,73 @@
+﻿---
+ID: "eb403db5-652c-4567-9cdc-e60db5a56296"
+Parent: "39a9f2b6-00a9-4b32-8bfe-8ad1091ca4e2"
+Template: "3d6d2e42-d566-4a98-abf3-f1487bc2e603"
+Path: /sitecore/content/amkor/amkor/Data/Icon Link Bars/Amkor Technical Resources/Test Services
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04853561-5122-4fcc-9b42-3dcde0ad89c7"
+      Hint: ItemTitle
+      Value: Test Services
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T020033Z
+    - ID: "297d260c-0217-448b-84a3-bd3eea64f3c1"
+      Hint: ItemLink
+      Value: |
+        <link text="Test Services" anchor="" linktype="external" class="" title="" target="" querystring="" url="https://amkor.com/test-services/" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "aa5db10a-4d0b-4d3c-a133-7996fe3378a2"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260825T020033Z
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04853561-5122-4fcc-9b42-3dcde0ad89c7"
+      Hint: ItemTitle
+      Value: テストサービス
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T020033Z
+    - ID: "297d260c-0217-448b-84a3-bd3eea64f3c1"
+      Hint: ItemLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="テストサービス" url="https://amkor.com/test-services/" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "16c7df37-aade-4c0f-b52c-0dc849b15189"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260831T030426Z

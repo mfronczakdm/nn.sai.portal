@@ -1,0 +1,186 @@
+﻿---
+ID: "41a8a937-48e6-49a9-a547-f5656a9ad18f"
+Parent: "893bbb60-2b8c-4a97-bb8e-541e744f2b33"
+Template: "b2b918c3-acda-433f-a11b-718466493aec"
+Path: /sitecore/content/amkor/amkor/Home/About Us/News/Blog/Amkor Vietnam Industry Award SEMIExpo 2025
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{AAE12A04-27C7-4D57-A9F1-5A89AB158DA4}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "3c0cea47-daed-4c09-8f1a-c2220c118853"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Amkor Technology Vietnam wins the 2025 Semiconductor Industry Award at SEMIExpo, showcasing innovation and leadership in advanced packaging.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260829T161026Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: SEMIExpo Vietnam Award
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{FCA998C5-0CC3-4F91-94D8-0A4E6CAECE88}"
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: November 14, 2025
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Amkor Technology Vietnam Honored with Industry Award and Highlights Innovation at SEMIExpo Vietnam
+    - ID: "75eee468-e1a7-4c63-a2d3-43a4956cf1dc"
+      Hint: image
+      Value: |
+        <image src="https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2025/11/D5_0423-1.png" alt="Amkor Vietnam SEMIExpo award" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "93c9a476-0588-472a-b7ab-4cc0f4314503"
+    - ID: "9c0f3bfa-27d9-4c2f-b589-6f67beaf207b"
+      Hint: Detail
+      Value: |
+        <h2>Amkor Technology Vietnam Honored with Industry Award and Highlights Innovation at SEMIExpo Vietnam</h2><p><em>November 14, 2025</em></p><p>Amkor Technology Vietnam wins the 2025 Semiconductor Industry Award at SEMIExpo, showcasing innovation and leadership in advanced packaging.</p><p><a href="https://amkor.com/blog/amkor-vietnam-industry-award-semiexpo-2025/" rel="noopener noreferrer" target="_blank">Read on amkor.com</a></p>
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Amkor Technology Vietnam Honored with Industry Award and Highlights Innovation at SEMIExpo Vietnam
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260829T204737Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Amkor Vietnam Industry Award SEMIExpo 2025
+  - Version: 2
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+            l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
+            <r
+              uid="{1A2B3C4D-0014-4000-8000-000000000014}"
+              s:ds=""
+              s:id="{B1136CF1-94BE-468C-B78D-9BE212AF5428}"
+              s:par="DynamicPlaceholderId=1&amp;FieldNames=%7bAA41D913-0CFD-44C6-92E7-52C3D1D99599%7d"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Amkor Technology Vietnam wins the 2025 Semiconductor Industry Award at SEMIExpo, showcasing innovation and leadership in advanced packaging.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260831T132957Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: SEMIExpo Vietnam Award
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: November 14, 2025
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Amkor Technology Vietnam Honored with Industry Award and Highlights Innovation at SEMIExpo Vietnam
+    - ID: "75eee468-e1a7-4c63-a2d3-43a4956cf1dc"
+      Hint: image
+      Value: |
+        <image src="https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2025/11/D5_0423-1.png" alt="Amkor Vietnam SEMIExpo award" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ac5c6ad6-1998-4112-8c65-5af8e3915e34"
+    - ID: "9c0f3bfa-27d9-4c2f-b589-6f67beaf207b"
+      Hint: Detail
+      Value: |
+        <h2>Amkor Technology Vietnam Honored with Industry Award and Highlights Innovation at SEMIExpo Vietnam</h2><p><em>November 14, 2025</em></p><p>Amkor Technology Vietnam wins the 2025 Semiconductor Industry Award at SEMIExpo, showcasing innovation and leadership in advanced packaging.</p><p><a href="https://amkor.com/blog/amkor-vietnam-industry-award-semiexpo-2025/" rel="noopener noreferrer" target="_blank">Read on amkor.com</a></p>
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Amkor Technology Vietnam Honored with Industry Award and Highlights Innovation at SEMIExpo Vietnam
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\WIt5EKonMo343Fqq8begbLVKlCgYPAIX
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260831T132957Z
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260831T211955Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Amkor Vietnam Industry Award SEMIExpo 2025
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Amkor Technology VietnamはSEMIExpoで2025年半導体業界賞を受賞し、先端パッケージングにおけるイノベーションとリーダーシップを示しました。
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260829T161026Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: SEMIExpo Vietnam受賞
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{FCA998C5-0CC3-4F91-94D8-0A4E6CAECE88}"
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: 2025年11月14日
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Amkor Technology Vietnamが業界賞を受賞、SEMIExpo Vietnamでイノベーションを披露
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "75eee468-e1a7-4c63-a2d3-43a4956cf1dc"
+      Hint: image
+      Value: |
+        <image alt="Amkor VietnamのSEMIExpo受賞" src="https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2025/11/D5_0423-1.png" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5dab9e6b-aff3-4ac8-b319-8a613a32e714"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9c0f3bfa-27d9-4c2f-b589-6f67beaf207b"
+      Hint: Detail
+      Value: |
+        <h2>Amkor Technology Vietnamが業界賞を受賞、SEMIExpo Vietnamでイノベーションを披露</h2><p><em>2025年11月14日</em></p><p>Amkor Technology VietnamはSEMIExpoで2025年半導体業界賞を受賞し、先端パッケージングにおけるイノベーションとリーダーシップを示しました。</p><p><a href="https://amkor.com/blog/amkor-vietnam-industry-award-semiexpo-2025/" rel="noopener noreferrer" target="_blank">amkor.comで続きを読む</a></p>
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Amkor Technology Vietnamが業界賞を受賞、SEMIExpo Vietnamでイノベーションを披露
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260831T030543Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Amkor Vietnam 業界賞 SEMIExpo 2025

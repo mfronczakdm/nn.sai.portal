@@ -1,0 +1,41 @@
+﻿---
+ID: "f9925140-2515-49d8-a33d-7240541553c6"
+Parent: "166e31e8-2538-4641-a25b-b60ec0cb1ee4"
+Template: "bdf6c974-e68c-46a2-a0a9-d382fd0927eb"
+Path: "/sitecore/content/progressive/pkm/Home/Shared Content/05-CommonScenarios/StateSpecific/NC/KB-HO-1004-TheftBurglary-NC"
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{E4302BD1-B468-409C-AD2A-27FC92458AD9}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "21b8d6f1-4294-46a5-98fd-38df0ce8aae0"
+      Hint: SourceDocumentLOB
+      Value: "{331E5703-41A4-4592-B744-14A83C4CFAAE}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260803T035408Z
+    - ID: "76e0c665-5c4d-4d03-ae66-a5f3d12978ba"
+      Hint: Content
+      Value: <p>In North Carolina, secure Progressive HO entry points after burglary before inventory work begins, and escalate SIU when Progressive sees repeated theft claims or inconsistent inventories on the same risk.</p>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f0bbb809-7258-4616-8159-07ac54f96ff0"
+    - ID: "94ce9d2b-aa0c-488f-943a-d2e582eb50bc"
+      Hint: SourceDocumentPerils
+      Value: "{152FCA3B-0726-49A3-8D73-447F35E1F334}"
+    - ID: "a8f6d033-4e9e-4598-be5e-da2456c41b9f"
+      Hint: sourceDocumentLink
+      Value: |
+        <link text="Homeowners Theft and Burglary Claims" linktype="internal" class="" title="" target="" querystring="" id="{498591A1-5845-44D9-B5EA-97C6BC2A9966}" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260803T035409Z

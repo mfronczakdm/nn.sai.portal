@@ -1,0 +1,208 @@
+﻿---
+ID: "1fbcd9bc-0b94-4fb8-9f71-98f9bfff8573"
+Parent: "630147ea-d612-489c-800f-28baf27659b7"
+Template: "f382ed37-1016-4449-bc8f-e46499a451bc"
+Path: /sitecore/content/lcmc/lcmc/Data/Link Columns Bands/LCMC Hospital Network
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T015811Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "64bb33d3-c29b-45f7-89eb-d2148e7638f1"
+      Hint: PrimaryLink
+      Value: |
+        <link text="Learn more about LCMC Health services" anchor="" linktype="external" class="" title="" target="" querystring="" url="https://www.lcmchealth.org/about-us/" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f656a851-8ca4-446f-a34a-c6ffe507c536"
+    - ID: "97d2b9ff-fbb0-494f-9100-164dce5bf93d"
+      Hint: SectionTitle
+      Value: Louisiana’s only hospital system of its kind
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T161537Z
+    - ID: "da0c12e6-d08b-40c1-9c9a-6f0dcd6dac06"
+      Hint: CenterImage
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/683b60bbe0d44514b441cf6e151fbd40?v=7d4ff2a6" dam-id="5Dv9EgnQRn6rRcz5d8jMMQ" width="826" height="413" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/86650/thumbnail" />
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T015811Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "64bb33d3-c29b-45f7-89eb-d2148e7638f1"
+      Hint: PrimaryLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="Conozca más sobre LCMC Health" url="https://www.lcmchealth.org/about-us/" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "eed2ea78-0617-4429-aa99-49b1e76bee9b"
+    - ID: "97d2b9ff-fbb0-494f-9100-164dce5bf93d"
+      Hint: SectionTitle
+      Value: El único sistema hospitalario de su tipo en Luisiana
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T162654Z
+  - Version: 2
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260909T231956Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "64bb33d3-c29b-45f7-89eb-d2148e7638f1"
+      Hint: PrimaryLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="Conozca más sobre LCMC Health" url="https://www.lcmchealth.org/about-us/" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "94755a4f-3d22-4fec-9df5-2a0c771c8a73"
+    - ID: "97d2b9ff-fbb0-494f-9100-164dce5bf93d"
+      Hint: SectionTitle
+      Value: El único sistema hospitalario de este tipo en Luisiana
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260909T231956Z
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T232009Z
+    - ID: "da0c12e6-d08b-40c1-9c9a-6f0dcd6dac06"
+      Hint: CenterImage
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/683b60bbe0d44514b441cf6e151fbd40?v=7d4ff2a6" dam-id="5Dv9EgnQRn6rRcz5d8jMMQ" width="826" height="413" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/86650/thumbnail" />
+  - Version: 3
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T015811Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "64bb33d3-c29b-45f7-89eb-d2148e7638f1"
+      Hint: PrimaryLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="Conozca más sobre LCMC Health" url="https://www.lcmchealth.org/about-us/" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c07a95df-3b71-4dd0-8e54-cd4dae1c3ad6"
+    - ID: "97d2b9ff-fbb0-494f-9100-164dce5bf93d"
+      Hint: SectionTitle
+      Value: El único sistema hospitalario de su tipo en Luisiana
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T234802Z
+    - ID: "da0c12e6-d08b-40c1-9c9a-6f0dcd6dac06"
+      Hint: CenterImage
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/683b60bbe0d44514b441cf6e151fbd40?v=7d4ff2a6" dam-id="5Dv9EgnQRn6rRcz5d8jMMQ" width="826" height="413" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/86650/thumbnail" />
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T015811Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "64bb33d3-c29b-45f7-89eb-d2148e7638f1"
+      Hint: PrimaryLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="En savoir plus sur les services de LCMC Health" url="https://www.lcmchealth.org/about-us/" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "108fcafd-e959-466c-b4d2-0d863ca3506b"
+    - ID: "97d2b9ff-fbb0-494f-9100-164dce5bf93d"
+      Hint: SectionTitle
+      Value: Le seul réseau hospitalier du genre en Louisiane
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201314Z
+    - ID: "da0c12e6-d08b-40c1-9c9a-6f0dcd6dac06"
+      Hint: CenterImage
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/683b60bbe0d44514b441cf6e151fbd40?v=7d4ff2a6" dam-id="5Dv9EgnQRn6rRcz5d8jMMQ" width="826" height="413" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/86650/thumbnail" />

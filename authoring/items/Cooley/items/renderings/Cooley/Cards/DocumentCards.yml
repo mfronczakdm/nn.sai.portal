@@ -1,0 +1,61 @@
+﻿---
+ID: "e355ef35-a679-4afc-8aba-35dd4a6e0da5"
+Parent: "c41a9d69-3275-47f8-9de7-40da97a90f42"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Project/Cooley/Cards/DocumentCards
+SharedFields:
+- ID: "037fe404-dd19-4bf7-8e30-4dadf68b27b0"
+  Hint: componentName
+  Value: DocumentCards
+- ID: "17bb046a-a32a-41b3-8315-81217947611b"
+  Hint: ComponentQuery
+  Value: |
+    query DocumentCards($datasource: String!, $language: String!) { datasource: item(path: $datasource, language: $language) { sectionTitle: field(name: "SectionTitle") { jsonValue } sectionIntro: field(name: "SectionIntro") { jsonValue } children { results { id cardTitle: field(name: "CardTitle") { jsonValue } cardSummary: field(name: "CardSummary") { jsonValue } previewImage: field(name: "PreviewImage") { jsonValue } documentLink: field(name: "DocumentLink") { jsonValue } fileType: field(name: "FileType") { jsonValue } fileSize: field(name: "FileSize") { jsonValue } publishedDate: field(name: "PublishedDate") { jsonValue } practiceArea: field(name: "PracticeArea") { jsonValue } downloadLabel: field(name: "DownloadLabel") { jsonValue } } } } }
+- ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
+  Hint: Datasource Template
+  Value: /sitecore/templates/Project/Cooley/Components/Cards/DocumentCards
+- ID: "a77e8568-1ab3-44f1-a664-b7c37ec7810d"
+  Hint: Parameters Template
+  Value: "{CEBF4394-E3C5-44EA-AC59-104C24598C09}"
+- ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
+  Hint: Datasource Location
+  Value: "query:$site/*[@@name='Data']/*[@@templatename='DocumentCards Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='DocumentCards Folder']"
+- ID: "c39a90ce-0035-41bb-90f6-3c8a6ea87797"
+  Hint: AddFieldEditorButton
+  Value: 
+- ID: "c7b72114-3f04-45a0-ba43-3856a9c9feb3"
+  Hint: FieldEditorFields
+  Value: 
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "8c167134-8c52-4d6c-bb40-9b39ba8c202e"
+Languages:
+- Language: en
+  Fields:
+  - ID: "30e85e5d-e00a-4864-b358-7624d511deb4"
+    Hint: __Unversioned revision
+    Value: "ec461fa4-09a0-4842-8858-8e4594c87196"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260818T194432Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "6aea0135-d1b9-45bf-839f-b76f33de5d97"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260819T145057Z

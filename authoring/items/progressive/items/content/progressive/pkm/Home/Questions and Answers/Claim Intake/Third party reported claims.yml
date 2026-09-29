@@ -1,0 +1,37 @@
+﻿---
+ID: "bdc7f022-7cf3-46c8-b116-67bcdb727501"
+Parent: "aee914ad-afd5-442a-9e5d-f087e3de6752"
+Template: "73e57eaa-b54a-41e1-b689-bf7dae9155ad"
+Path: /sitecore/content/progressive/pkm/Home/Questions and Answers/Claim Intake/Third party reported claims
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{1F917A5A-AED1-41DC-BD31-64F39DBE70FD}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260729T192621Z
+    - ID: "2d71e32d-e990-46b3-8ca1-58cd89743d5e"
+      Hint: Question
+      Value: "Can Progressive accept FNOL from a third party who is not the named insured?"
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Third party reported claims
+    - ID: "4f8dc72e-1548-471c-9f3e-a13e944e4321"
+      Hint: Answer
+      Value: "Yes—Progressive accepts third-party reported losses, but verify the reporter’s relationship, contact details, and known policy identifiers. Confirm the policy and named insured before coverage discussions. Limit liability statements and follow Progressive third-party intake scripts for privacy and accuracy."
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4bcd141f-41a1-4ddf-9b78-7ffa5a2774b9"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260729T192622Z

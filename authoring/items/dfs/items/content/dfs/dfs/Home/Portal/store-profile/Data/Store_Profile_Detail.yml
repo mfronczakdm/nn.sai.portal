@@ -1,0 +1,41 @@
+﻿---
+ID: "be9c47b0-4c9f-445b-9459-ec2402ddf0ac"
+Parent: "519ad38d-0665-48bf-a054-b497ea3d5f1e"
+Template: "0bb540d0-731b-4f71-8c0e-d99e26562cd2"
+Path: "/sitecore/content/dfs/dfs/Home/Portal/store-profile/Data/Store_Profile_Detail"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260819T214940Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c0b7bce-7da1-4cec-a7aa-3d28179fe94b"
+      Hint: title
+      Value: Store Profile
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b45107e9-a62d-47c6-a4bb-84345549e9fe"
+    - ID: "b0125af5-1538-4b18-9a93-2e8f5781bc2c"
+      Hint: body
+      Value: |
+        <div class="mx-auto w-full max-w-6xl space-y-8"><div class="rounded-2xl border border-border bg-card p-6 shadow-sm"><h2 class="text-lg font-semibold text-foreground">Your locations</h2><p class="mt-1 text-sm text-muted-foreground">Select a store to update operating hours, delivery instructions, and primary contacts.</p><div class="mt-4 grid gap-4 md:grid-cols-2"><article class="rounded-xl border border-primary/30 bg-background p-5 ring-1 ring-primary/10"><p class="text-xs font-medium uppercase tracking-wide text-primary">Selected</p><h3 class="mt-1 text-base font-semibold text-foreground">Store #1042 — Midtown</h3><p class="mt-1 text-sm text-muted-foreground">1420 Commerce Blvd, Suite A</p><dl class="mt-4 grid grid-cols-2 gap-3 text-sm"><div><dt class="text-muted-foreground">Hours</dt><dd class="font-medium text-foreground">6 AM – 11 PM</dd></div><div><dt class="text-muted-foreground">GM</dt><dd class="font-medium text-foreground">Alex Rivera</dd></div></dl></article><article class="rounded-xl border border-border bg-background p-5"><h3 class="text-base font-semibold text-foreground">Store #1187 — Westside</h3><p class="mt-1 text-sm text-muted-foreground">880 Industrial Park Dr</p><dl class="mt-4 grid grid-cols-2 gap-3 text-sm"><div><dt class="text-muted-foreground">Hours</dt><dd class="font-medium text-foreground">7 AM – 12 AM</dd></div><div><dt class="text-muted-foreground">GM</dt><dd class="font-medium text-foreground">Priya Nair</dd></div></dl></article></div></div><div class="grid gap-6 lg:grid-cols-2"><section class="rounded-2xl border border-border bg-card p-6 shadow-sm"><h2 class="text-lg font-semibold text-foreground">Store details</h2><dl class="mt-4 space-y-3 text-sm"><div class="flex justify-between gap-4 border-b border-border pb-3"><dt class="text-muted-foreground">Store ID</dt><dd class="font-medium text-foreground">1042</dd></div><div class="flex justify-between gap-4 border-b border-border pb-3"><dt class="text-muted-foreground">Delivery dock</dt><dd class="font-medium text-foreground">Rear alley, Gate B</dd></div><div class="flex justify-between gap-4 border-b border-border pb-3"><dt class="text-muted-foreground">Primary phone</dt><dd class="font-medium text-foreground">(555) 014-2200</dd></div><div class="flex justify-between gap-4"><dt class="text-muted-foreground">Last updated</dt><dd class="font-medium text-foreground">Aug 10, 2026</dd></div></dl></section><section class="rounded-2xl border border-border bg-card p-6 shadow-sm"><h2 class="text-lg font-semibold text-foreground">Update profile</h2><p class="mt-2 text-sm text-muted-foreground">Changes to hours or contacts may require approval from your regional manager.</p><ul class="mt-4 space-y-2 text-sm text-foreground"><li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>Operating hours &amp; holiday schedule</li><li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>Delivery &amp; receiving instructions</li><li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>Store manager &amp; backup contacts</li></ul><a href="#" class="mt-5 inline-flex items-center rounded-xl bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm">Edit store profile</a></section></div></div>
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "cc7d3a62-3796-41d8-af32-b4408a0749f9"
+      Hint: subtitle
+      Value: Update store details, operating hours, and primary contact information for each location.
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260819T214940Z

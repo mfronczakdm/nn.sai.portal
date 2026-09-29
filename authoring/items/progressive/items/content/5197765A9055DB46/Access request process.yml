@@ -1,0 +1,37 @@
+﻿---
+ID: "4bcb2055-2606-4733-830d-7f2690b5b573"
+Parent: "b485f61d-0896-45b8-8153-d626aa139dae"
+Template: "73e57eaa-b54a-41e1-b689-bf7dae9155ad"
+Path: /sitecore/content/progressive/pkm/Home/Questions and Answers/Systems Tools/Access request process/StateSpecific/TX/Access request process
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{E469469C-7CEF-4F28-B101-46FEAED23E54}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260731T012521Z
+    - ID: "2d71e32d-e990-46b3-8ca1-58cd89743d5e"
+      Hint: Question
+      Value: "How do Progressive Texas associates request system access for claims tools?"
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Access request process
+    - ID: "4f8dc72e-1548-471c-9f3e-a13e944e4321"
+      Hint: Answer
+      Value: "Submit Progressive access requests through the approved access workflow, including role and business justification—note Texas DOI, prompt-payment, or storm-surge tooling needs when relevant. Do not share passwords or use another associate's Progressive credentials. Follow up with Progressive IT support if access is delayed beyond SLA."
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d8956ac4-08b5-45b1-848e-6978430f8659"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260731T012522Z

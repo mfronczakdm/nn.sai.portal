@@ -1,0 +1,62 @@
+﻿---
+ID: "4582ae7b-b85f-40f9-8df4-55bbbcabc881"
+Parent: "7bce8441-8075-4af8-8465-c4c848dcc6e3"
+Template: "2b90bf80-bb08-44a2-ad76-600ad0ed915b"
+Path: "/sitecore/content/dycom-2/northsky/Home/Landing Page/Data/Logo Tab/Log Tab Item 2"
+BranchID: "97509128-1b31-4a5b-9c07-d4c94b611d24"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 50
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "31b14b44-22e0-4fcc-93d1-629168b56703"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{3449A305-5E2B-4279-985A-814630D920CB}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260525T183952Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "540321da-fce1-4f19-8c3c-9a3e7290d1c8"
+      Hint: descriptionOptional
+      Value: "Unleash Your Power with Stryve Athletics’ 2025 Spring Collection: Performance Meets Precision."
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "96bca739-5ed0-4f16-ab52-8730a10db78d"
+    - ID: "a4bc2c37-49a5-4aaf-a5db-869166a9f21f"
+      Hint: imageRequired
+      Value: |
+        <image mediaid="e6c9badb-e354-40b0-b17c-0710c91d0f5c" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "be1eeb4c-c0c0-407d-8fb4-40ae00eeb8e6"
+      Hint: linkOptional
+      Value: |
+        <link class="" id="{463FF7A1-A5EB-40EA-82FC-1200CA6E4D51}" querystring="" anchor="" target="" title="" linktype="internal" text="Explore Maison Lume" url="" />
+    - ID: "bf88958e-72a9-48a1-9348-30be4f2c86a5"
+      Hint: titleRequired
+      Value: Maison Lume
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260525T184113Z

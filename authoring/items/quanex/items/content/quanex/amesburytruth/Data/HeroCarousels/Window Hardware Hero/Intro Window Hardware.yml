@@ -1,0 +1,35 @@
+﻿---
+ID: "be66e15c-aa93-4c15-a57e-6939068719c1"
+Parent: "f14d2256-db73-40d6-8713-9d2cbb71610b"
+Template: "8ef3fb89-fd2f-48b9-a8ce-20f387e0ab0a"
+Path: /sitecore/content/quanex/amesburytruth/Data/HeroCarousels/Window Hardware Hero/Intro Window Hardware
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0938c532-f9ba-4658-b361-a96061553a4c"
+      Hint: Summary
+      Value: "CASEMENT | HUNG | SLIDING | TILT-N-TURN"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260813T190619Z
+    - ID: "48932c54-8c74-4029-ba15-1b8af19fe457"
+      Hint: Description
+      Value: Fenestration products and engineered solutions for OEM window manufacturers.
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a9d34e6d-7a57-405f-8946-f5c66342fe79"
+    - ID: "9e1f36b3-3da6-4b86-9691-2a312252392f"
+      Hint: IsIntroSlide
+      Value: 1
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c8463a04-9fc1-4d12-b4c6-b4448f0cb298"
+      Hint: SlideName
+      Value: AmesburyTruth
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260813T190619Z

@@ -1,0 +1,95 @@
+﻿---
+ID: "b1853d9b-536f-424d-95eb-ef2ed06c9304"
+Parent: "eb48326b-2b4e-4817-8d43-3db38a947077"
+Template: "d47bddda-da7c-491a-b1a0-f41e060f8839"
+Path: "/sitecore/content/rockland/rockland/Home/personal/banking/checking-products"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{51C91D53-DE2A-475F-A1A6-C67D9E922EA9}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "91c73d80-f829-432e-82af-28371878c5bc"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{A992E9BF-70D5-4926-B33F-5441C046397C}"
+              p:before="*"
+              s:ds="d29b4d79-5a2d-4e5e-89af-7253eea5bc00"
+              s:id="{D806DDF7-39A7-4A6D-8E0A-D138BC53845D}"
+              s:par="FieldNames=%7BA9E32524-B8C8-4D15-89D4-E29169675937%7D&amp;numColumns&amp;CSSStyles&amp;DynamicPlaceholderId=5"
+              s:ph="headless-main" />
+            <r
+              uid="{A938C939-5C66-4F99-85F4-8E8791C7F445}"
+              p:after="r[@uid='{A992E9BF-70D5-4926-B33F-5441C046397C}']"
+              s:ds="20088dc2-1cfa-450c-b26c-1d83859440d2"
+              s:id="{2492BAC4-DA07-4C86-87F0-9873D40E2276}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Background=dark&amp;FieldNames=%7BADAE9008-5830-41EE-9276-4B18E1C08162%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=6"
+              s:ph="headless-main" />
+            <r
+              uid="{5C0389A1-51B1-468E-9A3F-F29AA15C31A0}"
+              p:after="r[@uid='{A938C939-5C66-4F99-85F4-8E8791C7F445}']"
+              s:ds="c014e9b0-e8ae-4b55-be02-9e9605e0bf48"
+              s:id="{2492BAC4-DA07-4C86-87F0-9873D40E2276}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Background=dark&amp;FieldNames=%7B68336B9B-7202-4ABA-80A2-1A6AC1AD7910%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=4"
+              s:ph="headless-main" />
+            <r
+              uid="{702D75D7-62F5-4901-A458-2532049A2227}"
+              p:after="*[1=2]"
+              s:ds="cd2d558c-a4a2-462c-b1dd-acc16941e067"
+              s:id="{D806DDF7-39A7-4A6D-8E0A-D138BC53845D}"
+              s:par="FieldNames=%7B6DD0DADB-752B-481B-9951-49730844ADE2%7D&amp;numColumns&amp;CSSStyles&amp;DynamicPlaceholderId=2"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Checking Products from Rockland Trust personal banking — checking, savings, loans, and services designed to help you manage everyday finances with confidence.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260707T105235Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Checking Products
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Banking solutions from Rockland Trust — where each relationship matters.
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Checking Products
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "38fd31ae-c235-4a6a-891f-e966ceef1a42"
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Checking Products | Rockland Trust
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260803T155507Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: "checking-products"

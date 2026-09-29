@@ -1,0 +1,42 @@
+﻿---
+ID: "ef6e66c9-dedf-4dba-aada-a31816742b43"
+Parent: "a4bf6755-a43a-46ac-a1a7-5b81cab2787e"
+Template: "e1f2a3b4-c5d6-4e7f-8a9b-0c1d2e3f4a5b"
+Path: /sitecore/content/progressive/pkm/Data/AI Config/FAQ/Escalations/VIP claim handling
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{D80A9F0D-4F7B-4383-8136-BD27AB0DB1D6}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260729T131048Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "811501af-eb50-40f4-9870-3b848c4ca24b"
+    - ID: "a3b4c5d6-e7f8-4a9b-0c1d-2e3f4a5b6c7d"
+      Hint: question
+      Value: "How should Progressive agents handle VIP or sensitive claims?"
+    - ID: "b4c5d6e7-f8a9-4b0c-1d2e-3f4a5b6c7d8e"
+      Hint: answer
+      Value: "Follow Progressive VIP/special handling playbooks for communication, privacy, and supervisor involvement. Limit discussion to need-to-know Progressive staff. Document all contacts carefully and avoid social media or external commentary."
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260729T191507Z

@@ -1,0 +1,148 @@
+﻿---
+ID: "31a4b5a2-10fb-4cf1-b1e5-8fc21c802d06"
+Parent: "13c422fb-8991-4468-b996-be73a904c23e"
+Template: "dd974469-0ef7-479d-8e2b-f61c09e0c4db"
+Path: /sitecore/content/lcmc/lcmc/Data/Physicians/Brian LeBlanc MD
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1499b7e7-bfd9-4192-bf06-67bf1a9fd65f"
+      Hint: PhysicianDetailPage
+      Value: "{5D495AF6-DED3-47C3-AA72-ABC901C9D616}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T003730Z
+    - ID: "3c71e7a2-30b6-4199-847b-808de57253ff"
+      Hint: PhysicianBio
+      Value: <p>Dr. LeBlanc is an orthopedic surgeon at West Jefferson Medical Center, treating fractures, joints, and sports injuries on the Westbank.</p>
+    - ID: "53091afb-0d3f-4b5b-a945-9555d8cf59d7"
+      Hint: PhysicianPhone
+      Value: "504-349-6800"
+    - ID: "66ea9126-0717-40dc-9bbf-0e726397ef3d"
+      Hint: ServingLocations
+      Value: "{35C77454-5FB8-460D-BC12-299F7B31DE5A}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c6722d63-bd0d-4a49-83c1-461c91c4bceb"
+    - ID: "994c5b31-453a-473a-bbe9-dc87f28ce361"
+      Hint: LanguagesSpoken
+      Value: English, Spanish
+    - ID: "ba01a187-99bb-480e-bac0-225160cec41d"
+      Hint: PhysicianFullName
+      Value: Brian LeBlanc
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d4c17411-0fcd-44a2-af62-a97801b89b46"
+      Hint: Specialty
+      Value: Orthopedic Surgery
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T121338Z
+    - ID: "e633a16f-0854-4684-b841-b4742c322099"
+      Hint: Credentials
+      Value: MD
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1499b7e7-bfd9-4192-bf06-67bf1a9fd65f"
+      Hint: PhysicianDetailPage
+      Value: "{5D495AF6-DED3-47C3-AA72-ABC901C9D616}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T003730Z
+    - ID: "3c71e7a2-30b6-4199-847b-808de57253ff"
+      Hint: PhysicianBio
+      Value: <p>El Dr. LeBlanc es un cirujano ortopédico en West Jefferson Medical Center, donde trata fracturas, articulaciones y lesiones deportivas en la Westbank.</p>
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "53091afb-0d3f-4b5b-a945-9555d8cf59d7"
+      Hint: PhysicianPhone
+      Value: "504-349-6800"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "66ea9126-0717-40dc-9bbf-0e726397ef3d"
+      Hint: ServingLocations
+      Value: "{35C77454-5FB8-460D-BC12-299F7B31DE5A}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "cdd8abf4-f97a-4280-8e90-131a447d6dad"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "ba01a187-99bb-480e-bac0-225160cec41d"
+      Hint: PhysicianFullName
+      Value: Brian LeBlanc
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d4c17411-0fcd-44a2-af62-a97801b89b46"
+      Hint: Specialty
+      Value: Cirugía ortopédica
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T162710Z
+    - ID: "e633a16f-0854-4684-b841-b4742c322099"
+      Hint: Credentials
+      Value: Médico
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1499b7e7-bfd9-4192-bf06-67bf1a9fd65f"
+      Hint: PhysicianDetailPage
+      Value: "{5D495AF6-DED3-47C3-AA72-ABC901C9D616}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T003730Z
+    - ID: "3c71e7a2-30b6-4199-847b-808de57253ff"
+      Hint: PhysicianBio
+      Value: <p>Le Dr LeBlanc est un chirurgien orthopédique au West Jefferson Medical Center. Il traite les fractures, les articulations et les blessures sportives sur la rive ouest.</p>
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "53091afb-0d3f-4b5b-a945-9555d8cf59d7"
+      Hint: PhysicianPhone
+      Value: "504-349-6800"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "66ea9126-0717-40dc-9bbf-0e726397ef3d"
+      Hint: ServingLocations
+      Value: "{35C77454-5FB8-460D-BC12-299F7B31DE5A}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f4671f02-e364-4fd9-a047-db143abc2437"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "994c5b31-453a-473a-bbe9-dc87f28ce361"
+      Hint: LanguagesSpoken
+      Value: anglais, espagnol
+    - ID: "ba01a187-99bb-480e-bac0-225160cec41d"
+      Hint: PhysicianFullName
+      Value: Brian LeBlanc
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d4c17411-0fcd-44a2-af62-a97801b89b46"
+      Hint: Specialty
+      Value: Chirurgie orthopédique
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201332Z
+    - ID: "e633a16f-0854-4684-b841-b4742c322099"
+      Hint: Credentials
+      Value: M.D.

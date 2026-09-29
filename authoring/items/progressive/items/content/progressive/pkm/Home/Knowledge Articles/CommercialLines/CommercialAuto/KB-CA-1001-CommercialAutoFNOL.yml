@@ -1,0 +1,264 @@
+﻿---
+ID: "d99bb2bd-2aaf-4742-8620-905ccb3892c2"
+Parent: "1a0b2134-7ec9-4896-b9e2-64530610df08"
+Template: "42f8929a-83cd-48fe-92f0-8aac46e6cc62"
+Path: "/sitecore/content/progressive/pkm/Home/Knowledge Articles/CommercialLines/CommercialAuto/KB-CA-1001-CommercialAutoFNOL"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{FA097F7E-ECE4-489E-842D-63AE8A7FCDD2}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{1C5B2676-0DF2-45A2-9D17-64FC5520DA94}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "01865411-6866-4f46-b24c-3d6fdea2f671"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: 
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{91FDE197-21CA-4BFB-95D7-A29F62B81D0A}"
+              p:after="r[@uid='{717E1701-1FF6-418A-A8F1-35443B43B403}']"
+              s:id="{F44005E1-CCBB-4B27-9598-5EF43FB60A46}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB6A72F2A-15BE-4113-B40F-0305459DC374%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=2"
+              s:ph="headless-main" />
+            <r
+              uid="{BD93E76A-CE49-48C3-BBF9-7AE6DBC97569}"
+              p:after="*[1=2]"
+              s:ds=""
+              s:id="{88D43837-24CA-45A7-9171-FEAD8AE89702}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B5E0CEF20-DC70-4922-A183-E6ADB987AF60%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=3"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "1a6c4003-b700-4ff6-9a1e-b0b809a20c52"
+      Hint: Standard Site Inspection Rules
+      Value: "<ul><li>Confirm VIN against Progressive schedule and note any unit mismatch</li><li>Document commercial markings, wrap advertising, and GVWR indicators when relevant</li><li>Desk estimate when photos meet standards and damage is clearly non-structural</li><li>Field inspection for structural damage, underride, prior damage disputes, or total-loss indicators</li><li>Separate cargo / tools damage from auto physical damage scope</li></ul>"
+    - ID: "1d2229f9-6c8b-4828-97c0-ade6f1a125d0"
+      Hint: TotalRatings
+      Value: 38
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Progressive Claims Advisor guide for first notice of loss on commercial / business auto policies, including scheduled vehicles and driver verification.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260802T132631Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Commercial Auto FNOL
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{325A5D47-D4EB-4876-B759-0E18E2D9DCED}"
+    - ID: "480bb6b8-0914-4d2c-a73e-c5b28b8693e0"
+      Hint: Intake Triggers
+      Value: "<p>Open or update a Commercial Auto FNOL when:</p><ul><li>Named insured, fleet manager, or Progressive agent reports an accident, theft, vandalism, glass, or cargo-related incident involving a Progressive-scheduled commercial vehicle</li><li>Third-party claimant reports injury or property damage involving a Progressive business auto</li><li>Employee or permissive business driver is involved while operating for the insured’s business</li><li>Police, tow yard, or repair facility notifies Progressive with an identifiable commercial policy / VIN</li></ul><p>Do <strong>not</strong> duplicate an open claim for the same loss date, VIN, and parties — amend the existing FNOL.</p>"
+    - ID: "4d1faace-7b0f-4ec7-94b8-9ae80e0a9bce"
+      Hint: Common Scenarios
+      Value: "<ul><li><strong>Delivery van rear-end at light:</strong> complete FNOL, employee driver status, desk estimate path</li><li><strong>Box truck dock impact:</strong> capture dock camera if available; check cargo damage separately</li><li><strong>Employee personal errand in company truck:</strong> document purpose of trip; coverage SME if personal use disputed</li><li><strong>Hit-and-run on parked service van:</strong> comprehensive/UMPD path per Progressive commercial forms</li><li><strong>Certificate holder tender letter:</strong> do not admit coverage; escalate tender handling</li></ul>"
+    - ID: "4ed4709d-3dc8-4d81-bc4b-b44be7d21c45"
+      Hint: LastRated
+      Value: 20260725T143000Z
+    - ID: "4f91e6ca-b571-41f9-bc35-4e7e89c590de"
+      Hint: Baseline Reserve Guidelines
+      Value: <ul><li>Set initial PD and BI reserves using Progressive commercial severity bands</li><li>Include storage/tow early when unit is undrivable</li><li>Separate cargo / inland marine style exposures from auto PD reserves when identified</li><li>Update reserves when additional claimants, AI tenders, or attorney involvement appear</li></ul>
+    - ID: "568439dd-7959-4317-ac05-4aca4fe37a7a"
+      Hint: AverageRating
+      Value: 4.26
+    - ID: "5897e9d3-8204-4ed7-9f6a-ceb4891c3182"
+      Hint: PositiveCount
+      Value: 42
+    - ID: "5b49b775-a3f5-41cd-bd78-90fae97f1fd6"
+      Hint: Core Triage Questions
+      Value: "<ol><li>What is the loss date/time and exact location (city, state, road/mile marker)?</li><li>Which Progressive commercial policy and which scheduled vehicle (year/make/model/VIN) are involved?</li><li>Was the operator an employee, owner-operator, listed driver, or other permissive user? On-duty for the business?</li><li>Any injuries, fatalities, pedestrians, or multiple commercial units?</li><li>Police report taken? Agency and report number?</li><li>Is the vehicle drivable? Current location (yard, tow lot, shop)?</li><li>Any cargo, tools, or customer property in/on the vehicle at time of loss?</li><li>Certificate of insurance / additional insured tender already received?</li></ol>"
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Commercial Auto FNOL — Business Vehicle Intake
+    - ID: "6be9cd31-e34e-4bed-880a-a218075a5b0d"
+      Hint: General Payment Triggers
+      Value: "<ul><li>Physical damage payment after coverage confirmation and agreed estimate/appraisal</li><li>Liability payments after coverage + liability decision + settlement authority</li><li>Direct repair / commercial shop invoices follow Progressive commercial DRP rules</li><li>Rental / loss-of-use only when endorsed and dates align to loss of use of the scheduled unit</li></ul>"
+    - ID: "71d4c96f-1e34-4f86-8ba5-e7a24a873933"
+      Hint: NegativeCount
+      Value: 5
+    - ID: "76c3fa76-04cb-4142-9756-6fcb96442bf4"
+      Hint: "KB-ID"
+      Value: "KB-CA-1001"
+    - ID: "8147ab19-7525-4ef0-a878-3e3f0a3157ac"
+      Hint: LOB
+      Value: "{E799A026-FF03-4588-8607-16222D811A4C}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "11e1402e-fd97-4d91-86d7-194ec905c990"
+    - ID: "ae3f508c-c043-4863-899c-986ad4b75bd5"
+      Hint: Photo Video Standards
+      Value: "<ul><li>Four corners and all sides of the Progressive commercial unit</li><li>Close-ups of impact points, paint transfer, and underride contact</li><li>VIN plate, odometer/hubometer, and license plate</li><li>Scene photos when available (intersection, dock, job site)</li><li>Cargo compartment / ladder rack / box contents when cargo is claimed</li></ul>"
+    - ID: "b3f4a945-e28b-4a1c-81c7-857555b83127"
+      Hint: General Escalation Rules
+      Value: "<ul><li><strong>Injury / fatality / pedestrian:</strong> Progressive commercial severity path; flag BI desk</li><li><strong>Fleet / large loss / multiple units:</strong> commercial large-loss / fleet desk</li><li><strong>Additional insured / tender / MCS-90 hints:</strong> coverage SME before committing tender response</li><li><strong>Suspected fraud / staged commercial accident:</strong> SIU checklist</li><li><strong>Radius / out-of-state / interstate trucking facts:</strong> verify policy eligibility and escalate if use exceeds declarations</li></ul>"
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Commercial Auto FNOL
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\WIt5EKonMo343Fqq8begbLVKlCgYPAIX
+    - ID: "c09aaa65-03f7-41a9-ba56-69b018e89ccc"
+      Hint: General Mitigation
+      Value: <ul><li>Authorize tow to a Progressive commercial repair network shop when appropriate</li><li>Secure cargo and advise insured on temporary replacement / rental truck options per coverage</li><li>Preserve dashcam / telematics / ELD data retention notices when available</li><li>Do not authorize teardown beyond Progressive commercial estimate protocol without adjuster approval</li></ul>
+    - ID: "cc6e82f0-6942-4103-8d12-c8742b54a7a1"
+      Hint: Purpose
+      Value: "<p>Guide Progressive Claims Advisors through accurate <strong>Commercial Auto / Business Auto FNOL</strong> so liability, physical damage, and hired/non-owned exposures are identified at intake.</p><ul><li>Confirm the correct Progressive commercial policy and scheduled unit</li><li>Capture business use, driver employment status, and cargo/passenger facts</li><li>Route severity, fleet, and potential MCS-90 / certificate issues early</li></ul>"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260802T180114Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: "KB-CA-1001-CommercialAutoFNOL"
+    - ID: "ef17e08a-c9dd-47e0-adf2-9232c87aaa7f"
+      Hint: RatingsSum
+      Value: 162
+    - ID: "fc43bd45-b665-4895-a9e5-6d9a34ea7835"
+      Hint: Title
+      Value: Commercial Auto FNOL — Business Vehicle Intake
+  - Version: 2
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{91FDE197-21CA-4BFB-95D7-A29F62B81D0A}"
+              p:after="r[@uid='{717E1701-1FF6-418A-A8F1-35443B43B403}']"
+              s:id="{F44005E1-CCBB-4B27-9598-5EF43FB60A46}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB6A72F2A-15BE-4113-B40F-0305459DC374%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=2"
+              s:ph="headless-main" />
+            <r
+              uid="{BD93E76A-CE49-48C3-BBF9-7AE6DBC97569}"
+              p:after="*[1=2]"
+              s:ds=""
+              s:id="{88D43837-24CA-45A7-9171-FEAD8AE89702}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B5E0CEF20-DC70-4922-A183-E6ADB987AF60%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=3"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "1a6c4003-b700-4ff6-9a1e-b0b809a20c52"
+      Hint: Standard Site Inspection Rules
+      Value: "<ul><li>Confirm VIN against Progressive schedule and note any unit mismatch</li><li>Document commercial markings, wrap advertising, and GVWR indicators when relevant</li><li>Desk estimate when photos meet standards and damage is clearly non-structural</li><li>Field inspection for structural damage, underride, prior damage disputes, or total-loss indicators</li><li>Separate cargo / tools damage from auto physical damage scope</li></ul>"
+    - ID: "1d2229f9-6c8b-4828-97c0-ade6f1a125d0"
+      Hint: TotalRatings
+      Value: 38
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Progressive Claims Advisor guide for first notice of loss on commercial / business auto policies, including scheduled vehicles and driver verification.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260803T035638Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Commercial Auto FNOL
+    - ID: "29d334fb-0f6f-41fa-98ea-a6f30222129f"
+      Hint: sharedContent
+      Value: |
+        {225A8CF4-B423-4098-8012-32A6191402CC}
+        {4E8E2553-4862-4EA4-B88C-1CBCBA5C655D}
+        {AE4EB0DF-1046-4EA9-912B-0290652ED9C6}
+        {55C757B9-0F6D-44B4-B8A7-6002FF3464CD}
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{325A5D47-D4EB-4876-B759-0E18E2D9DCED}"
+    - ID: "480bb6b8-0914-4d2c-a73e-c5b28b8693e0"
+      Hint: Intake Triggers
+      Value: |
+        <div class="ck-content"><p>Open or update a Commercial Auto FNOL when:&nbsp;</p><ul><li>Named insured, fleet manager, or Progressive agent reports an accident, theft, vandalism, glass, or cargo-related incident involving a Progressive-scheduled commercial vehicle</li><li>Third-party claimant reports injury or property damage involving a Progressive business auto</li><li>Employee or permissive business driver is involved while operating for the insured’s business</li><li>Police, tow yard, or repair facility notifies Progressive with an identifiable commercial policy / VIN</li></ul><p>Do <strong>not</strong> duplicate an open claim for the same loss date, VIN, and parties — amend the existing FNOL.</p></div>
+    - ID: "4d1faace-7b0f-4ec7-94b8-9ae80e0a9bce"
+      Hint: Common Scenarios
+      Value: "<ul><li><strong>Delivery van rear-end at light:</strong> complete FNOL, employee driver status, desk estimate path</li><li><strong>Box truck dock impact:</strong> capture dock camera if available; check cargo damage separately</li><li><strong>Employee personal errand in company truck:</strong> document purpose of trip; coverage SME if personal use disputed</li><li><strong>Hit-and-run on parked service van:</strong> comprehensive/UMPD path per Progressive commercial forms</li><li><strong>Certificate holder tender letter:</strong> do not admit coverage; escalate tender handling</li></ul>"
+    - ID: "4ed4709d-3dc8-4d81-bc4b-b44be7d21c45"
+      Hint: LastRated
+      Value: 20260725T143000Z
+    - ID: "4f91e6ca-b571-41f9-bc35-4e7e89c590de"
+      Hint: Baseline Reserve Guidelines
+      Value: <ul><li>Set initial PD and BI reserves using Progressive commercial severity bands</li><li>Include storage/tow early when unit is undrivable</li><li>Separate cargo / inland marine style exposures from auto PD reserves when identified</li><li>Update reserves when additional claimants, AI tenders, or attorney involvement appear</li></ul>
+    - ID: "568439dd-7959-4317-ac05-4aca4fe37a7a"
+      Hint: AverageRating
+      Value: 4.26
+    - ID: "5897e9d3-8204-4ed7-9f6a-ceb4891c3182"
+      Hint: PositiveCount
+      Value: 42
+    - ID: "5b49b775-a3f5-41cd-bd78-90fae97f1fd6"
+      Hint: Core Triage Questions
+      Value: "<ol><li>What is the loss date/time and exact location (city, state, road/mile marker)?</li><li>Which Progressive commercial policy and which scheduled vehicle (year/make/model/VIN) are involved?</li><li>Was the operator an employee, owner-operator, listed driver, or other permissive user? On-duty for the business?</li><li>Any injuries, fatalities, pedestrians, or multiple commercial units?</li><li>Police report taken? Agency and report number?</li><li>Is the vehicle drivable? Current location (yard, tow lot, shop)?</li><li>Any cargo, tools, or customer property in/on the vehicle at time of loss?</li><li>Certificate of insurance / additional insured tender already received?</li></ol>"
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Commercial Auto FNOL — Business Vehicle Intake
+    - ID: "6be9cd31-e34e-4bed-880a-a218075a5b0d"
+      Hint: General Payment Triggers
+      Value: "<ul><li>Physical damage payment after coverage confirmation and agreed estimate/appraisal</li><li>Liability payments after coverage + liability decision + settlement authority</li><li>Direct repair / commercial shop invoices follow Progressive commercial DRP rules</li><li>Rental / loss-of-use only when endorsed and dates align to loss of use of the scheduled unit</li></ul>"
+    - ID: "71d4c96f-1e34-4f86-8ba5-e7a24a873933"
+      Hint: NegativeCount
+      Value: 5
+    - ID: "76c3fa76-04cb-4142-9756-6fcb96442bf4"
+      Hint: "KB-ID"
+      Value: "KB-CA-1001"
+    - ID: "8147ab19-7525-4ef0-a878-3e3f0a3157ac"
+      Hint: LOB
+      Value: "{E799A026-FF03-4588-8607-16222D811A4C}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "cc9bc005-2755-4c1e-a606-3d782cc8d4d8"
+    - ID: "ae3f508c-c043-4863-899c-986ad4b75bd5"
+      Hint: Photo Video Standards
+      Value: "<ul><li>Four corners and all sides of the Progressive commercial unit</li><li>Close-ups of impact points, paint transfer, and underride contact</li><li>VIN plate, odometer/hubometer, and license plate</li><li>Scene photos when available (intersection, dock, job site)</li><li>Cargo compartment / ladder rack / box contents when cargo is claimed</li></ul>"
+    - ID: "b3f4a945-e28b-4a1c-81c7-857555b83127"
+      Hint: General Escalation Rules
+      Value: "<ul><li><strong>Injury / fatality / pedestrian:</strong> Progressive commercial severity path; flag BI desk</li><li><strong>Fleet / large loss / multiple units:</strong> commercial large-loss / fleet desk</li><li><strong>Additional insured / tender / MCS-90 hints:</strong> coverage SME before committing tender response</li><li><strong>Suspected fraud / staged commercial accident:</strong> SIU checklist</li><li><strong>Radius / out-of-state / interstate trucking facts:</strong> verify policy eligibility and escalate if use exceeds declarations</li></ul>"
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Commercial Auto FNOL
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c09aaa65-03f7-41a9-ba56-69b018e89ccc"
+      Hint: General Mitigation
+      Value: <ul><li>Authorize tow to a Progressive commercial repair network shop when appropriate</li><li>Secure cargo and advise insured on temporary replacement / rental truck options per coverage</li><li>Preserve dashcam / telematics / ELD data retention notices when available</li><li>Do not authorize teardown beyond Progressive commercial estimate protocol without adjuster approval</li></ul>
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260803T035638Z
+    - ID: "cc6e82f0-6942-4103-8d12-c8742b54a7a1"
+      Hint: Purpose
+      Value: |
+        <div class="ck-content"><p>Guide Progressive Claims Advisors through accurate <strong>Commercial Auto / Business Auto FNOL</strong> so liability, physical damage, and hired/non-owned exposures are identified at intake.&nbsp;</p><ul><li>Confirm the correct Progressive commercial policy and scheduled unit</li><li>Capture business use, driver employment status, and cargo/passenger facts</li><li>Route severity, fleet, and potential MCS-90 / certificate issues early</li></ul></div>
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260804T162253Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: "KB-CA-1001-CommercialAutoFNOL"
+    - ID: "ef17e08a-c9dd-47e0-adf2-9232c87aaa7f"
+      Hint: RatingsSum
+      Value: 162
+    - ID: "fc43bd45-b665-4895-a9e5-6d9a34ea7835"
+      Hint: Title
+      Value: Commercial Auto FNOL — Business Vehicle Intake

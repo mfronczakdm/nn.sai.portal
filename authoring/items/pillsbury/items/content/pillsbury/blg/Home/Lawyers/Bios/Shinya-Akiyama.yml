@@ -1,0 +1,169 @@
+﻿---
+ID: "3bf2422c-6266-4fa6-9c40-73446c27dd9e"
+Parent: "b3dfdc46-22e0-4f87-8cc5-2b635afc2242"
+Template: "d9ed4a26-1b44-4f52-9eae-61e1eb193671"
+Path: "/sitecore/content/pillsbury/blg/Home/Lawyers/Bios/Shinya-Akiyama"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{6C59AE29-D0A1-4B77-9305-0ABAB21D5FE5}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{C83574CF-2449-47CE-8AAB-6AAC05617AD1}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "a079ef43-1341-4314-a171-9b0259f1fb9c"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{4022F39F-6274-4DAC-8A8B-99F97AF6E805}"
+              s:ds=""
+              s:id="{560AB1F6-8C48-4449-9E72-F29C39BA750D}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B111402C4-3C22-4400-B2DE-2B6D31F268D9%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "19b27df3-a169-420a-a648-7d766ff1ce33"
+      Hint: FullName
+      Value: Duncan Ault
+    - ID: "1bcd45b4-983e-4549-a1f0-8c69ed67e2ad"
+      Hint: PreferredName
+      Value: Duncan
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260804T195344Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{C55B483C-EA7F-4E76-A066-985F7D9396CA}"
+    - ID: "4e0e2a6d-de8f-4156-ab56-e0ad0a7824fa"
+      Hint: Office
+      Value: "{BC25F57A-F34E-49E7-9D5D-AEAC7C1D7D7A}"
+    - ID: "7abdd52d-64a7-443b-bc39-4a20cb7dee8e"
+      Hint: Headshot
+      Value: |
+        <image src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&w=800&h=800&q=80" alt="Shinya Akiyama" width="800" height="800" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b11bba13-b423-4bcb-bffd-5d053852c052"
+    - ID: "a3aae655-77a7-4ec0-85ba-d1ddc3a4d34f"
+      Hint: SeoTitle
+      Value: Duncan Ault | Corporate Commercial Lawyer Ottawa | BLG
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d628b04c-71e1-416d-bfb6-ec073f1dba6e"
+      Hint: SeoDescription
+      Value: Duncan Ault is a Partner in Corporate Commercial litigation at BLG in Ottawa.
+    - ID: "d83bbbee-b5ff-4713-aa0e-9e59fdc7563f"
+      Hint: Email
+      Value: dault@blg.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260822T014256Z
+    - ID: "dc46c43e-781c-4388-b53f-a1d8a083f2d9"
+      Hint: PracticeAreas
+      Value: |
+        {EDE35581-25D3-492F-9B9B-34A76AC72158}
+        {C7FD9086-5891-4BCC-91E0-3C62CD9F084B}
+    - ID: "df24e0b6-c373-4add-b339-034c64452a38"
+      Hint: Summary
+      Value: Partner in Ottawa focusing on civil litigation, including contractual and shareholder disputes, class actions, and directors’ and officers’ liability.
+    - ID: "dfcaa3d1-e572-4289-9111-2324afa8ee5f"
+      Hint: JobTitle
+      Value: Partner
+    - ID: "e653befc-026a-4333-8b42-13d7ca3bf88a"
+      Hint: BarAdmissions
+      Value: "{64064E8A-29F9-4DBB-98CB-362404CD1973}"
+    - ID: "e854dce0-3a20-40db-b32e-9e223e599310"
+      Hint: Biography
+      Value: <p>Duncan Ault is a partner in BLG’s Ottawa office whose practice focuses on civil litigation. He advises clients in corporate commercial litigation, including contractual disputes, shareholder disputes, class actions, commercial arbitrations, and directors’ and officers’ liability.</p><p>Duncan also has an active administrative and public law practice and acts for both governmental agencies and private interests. He has appeared before all levels of court in Ontario, as well as the Québec Court of Appeal and the Supreme Court of Canada.</p>
+    - ID: "f9f1c6c2-6a9e-4f91-8b8c-084feab583db"
+      Hint: Phone
+      Value: +1.613.237.5160
+  - Version: 2
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{4022F39F-6274-4DAC-8A8B-99F97AF6E805}"
+              s:ds=""
+              s:id="{560AB1F6-8C48-4449-9E72-F29C39BA750D}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B111402C4-3C22-4400-B2DE-2B6D31F268D9%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "19b27df3-a169-420a-a648-7d766ff1ce33"
+      Hint: FullName
+      Value: Duncan Ault
+    - ID: "1bcd45b4-983e-4549-a1f0-8c69ed67e2ad"
+      Hint: PreferredName
+      Value: Duncan
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260822T022846Z
+    - ID: "4e0e2a6d-de8f-4156-ab56-e0ad0a7824fa"
+      Hint: Office
+      Value: "{BC25F57A-F34E-49E7-9D5D-AEAC7C1D7D7A}"
+    - ID: "7abdd52d-64a7-443b-bc39-4a20cb7dee8e"
+      Hint: Headshot
+      Value: |
+        <image src="https://www.blg.com/-/media/bios/img_ottawa/duncan_ault.png" alt="Duncan Ault" width="800" height="800" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "8b4e50f8-17aa-462d-975b-4962bb6f45b6"
+    - ID: "a3aae655-77a7-4ec0-85ba-d1ddc3a4d34f"
+      Hint: SeoTitle
+      Value: Duncan Ault | Corporate Commercial Lawyer Ottawa | BLG
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260822T022846Z
+    - ID: "d628b04c-71e1-416d-bfb6-ec073f1dba6e"
+      Hint: SeoDescription
+      Value: Duncan Ault is a Partner in Corporate Commercial litigation at BLG in Ottawa.
+    - ID: "d83bbbee-b5ff-4713-aa0e-9e59fdc7563f"
+      Hint: Email
+      Value: dault@blg.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260822T022846Z
+    - ID: "dc46c43e-781c-4388-b53f-a1d8a083f2d9"
+      Hint: PracticeAreas
+      Value: |
+        {EDE35581-25D3-492F-9B9B-34A76AC72158}
+        {C7FD9086-5891-4BCC-91E0-3C62CD9F084B}
+    - ID: "df24e0b6-c373-4add-b339-034c64452a38"
+      Hint: Summary
+      Value: Partner in Ottawa focusing on civil litigation, including contractual and shareholder disputes, class actions, and directors’ and officers’ liability.
+    - ID: "dfcaa3d1-e572-4289-9111-2324afa8ee5f"
+      Hint: JobTitle
+      Value: Partner
+    - ID: "e653befc-026a-4333-8b42-13d7ca3bf88a"
+      Hint: BarAdmissions
+      Value: "{64064E8A-29F9-4DBB-98CB-362404CD1973}"
+    - ID: "e854dce0-3a20-40db-b32e-9e223e599310"
+      Hint: Biography
+      Value: <p>Duncan Ault is a partner in BLG’s Ottawa office whose practice focuses on civil litigation. He advises clients in corporate commercial litigation, including contractual disputes, shareholder disputes, class actions, commercial arbitrations, and directors’ and officers’ liability.</p><p>Duncan also has an active administrative and public law practice and acts for both governmental agencies and private interests. He has appeared before all levels of court in Ontario, as well as the Québec Court of Appeal and the Supreme Court of Canada.</p>
+    - ID: "f9f1c6c2-6a9e-4f91-8b8c-084feab583db"
+      Hint: Phone
+      Value: +1.613.237.5160

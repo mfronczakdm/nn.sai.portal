@@ -1,0 +1,41 @@
+﻿---
+ID: "f8c3606c-8349-4a6c-a46d-c5fb315b3993"
+Parent: "8a50e1d2-45bd-4d9b-a8ec-bed3fdc37c92"
+Template: "8a50e1d2-45bd-4d9b-a8ec-bed3fdc37c92"
+Path: /sitecore/templates/Project/andmore/Components/Banners/MediaCanvas/__Standard Values
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: "{E7FBF341-4DCD-4743-8F37-DFECA7A1DCEF}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "b8c616c5-9ade-4c5c-b398-5ac8aabfd74a"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260901T203641Z
+    - ID: "40771b55-b2cc-4bfe-b58b-5ca2274fc9fb"
+      Hint: CanvasTitle
+      Value: $name
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "edf542e8-8d72-4f56-bafe-5720356eb594"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260901T203658Z

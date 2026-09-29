@@ -1,0 +1,128 @@
+﻿---
+ID: "d6ee652b-63e4-4ee9-ba28-dd87942c18d3"
+Parent: "4a0baa84-b60a-44b6-ab8f-ce4320d3016e"
+Template: "4db8bf02-57f9-4c17-a1bb-8b076a24e615"
+Path: "/sitecore/content/granite-parnters/geotek/Home"
+BranchID: "45cf9f42-b3ac-4412-aab9-f8441c7e448e"
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{78B66119-922A-4CCE-B148-1A0753221715}" />
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{F558BEC9-C602-4D7A-B9A1-D0411C946EA4}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{B0908F83-2C83-4D35-BE1D-1B5A1E15B475}"
+              p:before="*"
+              s:ds="local:/Data/HeroST/HeroST 1"
+              s:id="{7943A20A-669D-4921-81EE-F4EC7F2E78A3}"
+              s:par="?DynamicPlaceholderId=1&amp;FieldNames=%7b3D7F187E-14E0-4E05-818A-1FECE4E2DFC9%7d"
+              s:ph="headless-main" />
+            <r
+              uid="{4A975521-64A7-4A71-837A-AAD5F1FC655B}"
+              p:after="r[@uid='{B0908F83-2C83-4D35-BE1D-1B5A1E15B475}']"
+              s:ds="local:/Data/HeroST/HeroST 2"
+              s:id="{7943A20A-669D-4921-81EE-F4EC7F2E78A3}"
+              s:par="?DynamicPlaceholderId=3&amp;FieldNames=%7b87B6651B-D72D-40F3-B90C-30720C0AE2AB%7d"
+              s:ph="headless-main" />
+            <r
+              uid="{5E4AA3AA-A5BC-424E-9BCF-9FDEF4FDE607}"
+              p:after="r[@uid='{4A975521-64A7-4A71-837A-AAD5F1FC655B}']"
+              s:ds="local:/Data/HeroST/HeroST 3"
+              s:id="{7943A20A-669D-4921-81EE-F4EC7F2E78A3}"
+              s:par="?DynamicPlaceholderId=4&amp;FieldNames=%7b3D7F187E-14E0-4E05-818A-1FECE4E2DFC9%7d"
+              s:ph="headless-main" />
+            <r
+              uid="{430848DC-A6E8-4D35-962E-071F7A7DD877}"
+              p:after="r[@uid='{5E4AA3AA-A5BC-424E-9BCF-9FDEF4FDE607}']"
+              s:ds="local:/Data/TextSlider 1"
+              s:id="{234881E2-350F-4C17-A310-85138E9310A3}"
+              s:par="?DynamicPlaceholderId=2"
+              s:ph="headless-main" />
+            <r
+              uid="{12A5C8BF-2819-4734-B5DE-11A41FCF5F34}"
+              p:after="r[@uid='{430848DC-A6E8-4D35-962E-071F7A7DD877}']"
+              s:ds="local:/Data/MultiPromo 2"
+              s:id="{D806DDF7-39A7-4A6D-8E0A-D138BC53845D}"
+              s:par="?DynamicPlaceholderId=6&amp;FieldNames=%7b252E4A61-F572-481C-97CF-F085A8907AF1%7d&amp;Styles=%257C%7b02AC53CC-CB68-4086-983F-204750A19256%7d%257C"
+              s:ph="headless-main" />
+            <r
+              uid="{650D950A-1CE6-470F-9F0C-72FC96FE5C3C}"
+              p:after="*[1=2]"
+              s:ds="local:/Data/SignupBanner 1"
+              s:id="{EF8925C3-D106-4187-9BC4-3C19A213AE75}"
+              s:par="?DynamicPlaceholderId=5&amp;FieldNames=%7bC6D92F9C-4E1A-4729-A1C3-7EA18327B905%7d"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Premium audio equipment and speakers designed for audiophiles. Experience exceptional sound quality with SYNCs heritage collection.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260617T114540Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: SYNC
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Premium audio equipment and speakers designed for audiophiles. Experience exceptional sound quality with SYNCs heritage collection.
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: SYNC
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "65408499-25bc-49d0-a2ff-b2fdd798aafc"
+      Hint: ogImage
+      Value: |
+        <image mediaid="{5977A6A5-D5D4-45BD-ADD5-0E7E629162FD}" />
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: SYNC
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "51e43274-5733-4b6e-803a-85381d91b3bb"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Premium audio equipment and speakers designed for audiophiles. Experience exceptional sound quality with SYNCs heritage collection.
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: SYNC
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260617T115045Z
+    - ID: "e7f8a9b0-c1d2-4e3f-8a9b-0c1d2e3f4a5b"
+      Hint: metadataAuthor
+      Value: Sitecore
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: SYNC
+    - ID: "f6fcc0b6-31b2-49cd-8a66-4ba282a8ad24"
+      Hint: metadataKeywords
+      Value: SYNC, audio equipment, speakers, headphones, premium sound, audiophile

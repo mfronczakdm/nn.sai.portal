@@ -1,0 +1,216 @@
+﻿---
+ID: "b95a263a-fd7a-4243-82ca-8febe67c4134"
+Parent: "66b44e6a-6d2f-4b01-bb8a-a26e4e3ec29c"
+Template: "d77937ac-bae4-4eb0-8d7e-69ec09d5bbfc"
+Path: /sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/Ears Nose and Throat Care/Nose
+SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{5944F724-0620-4D9F-9317-AB0B80D9D094}"
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{45A5AAE6-92E7-4F47-982C-4DAE711C5590}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "6f31606a-c5ac-4dbf-8773-deef7558e5d6"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: "West Jefferson ENT specialists treat sinusitis, allergies, nasal polyps, and related nasal and sinus conditions. Call 504-934-8550 to schedule."
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260909T171100Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Nose
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Allergy, sinus, and nasal care on the Westbank.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: From allergies to sinus infections, we're here to help
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Nose
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Nasal and Sinus Care | West Jefferson Medical Center
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a33f5d6c-88b3-44e1-afb5-81d467d2a17e"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: "Nasal and sinus care at West Jefferson Medical Center on the Westbank, including balloon sinuplasty, septoplasty, and endoscopic sinus surgery. Call 504-934-8550."
+    - ID: "9d32260e-215d-4eff-80de-6d469daadbc4"
+      Hint: image
+      Value: |
+        <image src="https://www.lcmchealth.org/assets/LCMC-Social-Share.jpg" alt="Nasal and sinus care at West Jefferson Medical Center" />
+    - ID: "a8a1dfcb-7dd5-4413-8789-db24a95e439f"
+      Hint: Detail
+      Value: |
+        <h2>From allergies to sinus infections, we're here to help</h2><p>A stuffy nose certainly can be inconvenient, but if you experience chronic congestion, sinus infections, allergies, or any other nasal or sinus-related issue, it may be time to see a specialist.</p><p>Your nasal passages and sinuses are key parts of your respiratory system. When they’re not working at their best, it can be more than just uncomfortable — it can lead to a range of health problems.</p><p>The ear, nose, and throat (ENT) specialists at West Jefferson Medical Center can help you get to the bottom of your nasal and sinus problems. We’re experts in everything from sinusitis and allergies to nasal polyps and a deviated septum. We offer these and many other services:</p><ul><li>Balloon sinuplasty</li><li>ClariFix</li><li>Endoscopic sinus surgery</li><li>Nasal polypectomy</li><li>Septoplasty</li></ul><h3>How to make an appointment</h3><p>Call the West Jefferson ENT clinic at <strong>504-934-8550</strong> to schedule, or <a href="/Find-a-Provider">find an otolaryngologist in the LCMC Health provider directory</a>.</p><p><strong>West Jefferson Medical Center Ear, Nose &amp; Throat</strong><br/>1111 Medical Center Blvd., Suite N-707<br/>Marrero, LA 70072<br/>Phone: 504-934-8550</p>
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Nose
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Akv1r1Hmcm16AN61y5QanpMca0RChHPy
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T192710Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Nasal and Sinus Care at West Jefferson
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: "Los especialistas de ENT de West Jefferson tratan sinusitis, alergias, pólipos nasales y afecciones relacionadas de la nariz y los senos paranasales. Llame al 504-934-8550 para programar una cita."
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260909T171100Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Nariz
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Atención para alergias, senos paranasales y nariz en la Westbank.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Desde las alergias hasta las infecciones de los senos paranasales, estamos aquí para ayudarle
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Nariz
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Atención nasal y de los senos paranasales | West Jefferson Medical Center
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "19b0e230-a78d-411c-ae02-2cd5f11c99e6"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: "Atención nasal y de los senos paranasales en West Jefferson Medical Center en la Westbank, que incluye sinuplastía con balón, septoplastia y cirugía endoscópica de los senos paranasales. Llame al 504-934-8550."
+    - ID: "9d32260e-215d-4eff-80de-6d469daadbc4"
+      Hint: image
+      Value: |
+        <image alt="Atención nasal y de los senos paranasales en West Jefferson Medical Center" src="https://www.lcmchealth.org/assets/LCMC-Social-Share.jpg" />
+    - ID: "a8a1dfcb-7dd5-4413-8789-db24a95e439f"
+      Hint: Detail
+      Value: |
+        <h2>Desde las alergias hasta las infecciones de los senos paranasales, estamos aquí para ayudarle</h2><p>Una nariz congestionada sin duda puede ser incómoda, pero si presenta congestión crónica, infecciones de los senos paranasales, alergias o cualquier otro problema relacionado con la nariz o los senos paranasales, puede ser el momento de consultar a un especialista.</p><p>Sus fosas nasales y sus senos paranasales son partes clave de su sistema respiratorio. Cuando no funcionan de la mejor manera, puede ser más que una simple molestia: puede provocar una variedad de problemas de salud.</p><p>Los especialistas en oído, nariz y garganta (ENT) de West Jefferson Medical Center pueden ayudarle a encontrar la causa de sus problemas nasales y de los senos paranasales. Somos expertos en todo, desde sinusitis y alergias hasta pólipos nasales y tabique desviado. Ofrecemos estos y muchos otros servicios:</p><ul><li>Sinuplastía con balón</li><li>ClariFix</li><li>Cirugía endoscópica de los senos paranasales</li><li>Polipectomía nasal</li><li>Septoplastia</li></ul><h3>Cómo programar una cita</h3><p>Llame a la clínica ENT de West Jefferson al <strong>504-934-8550</strong> para programar su cita, o <a href="/Find-a-Provider">encuentre un otorrinolaringólogo en el directorio de proveedores de LCMC Health</a>.</p><p><strong>West Jefferson Medical Center Ear, Nose &amp; Throat</strong><br/>1111 Medical Center Blvd., Suite N-707<br/>Marrero, LA 70072<br/>Teléfono: 504-934-8550</p>
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Nariz
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T234054Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Atención nasal y de los senos paranasales en West Jefferson
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: "Les spécialistes ORL de West Jefferson traitent la sinusite, les allergies, les polypes nasaux et les affections connexes du nez et des sinus. Appelez au 504-934-8550 pour prendre rendez-vous."
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260909T171100Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Nez
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Soins des allergies, des sinus et du nez sur la rive ouest.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Des allergies aux infections des sinus, nous sommes là pour vous aider
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Nez
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Soins nasaux et des sinus | West Jefferson Medical Center
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ae285429-c4ce-4acf-8a81-a707327a2d48"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: "Soins nasaux et des sinus au West Jefferson Medical Center sur la rive ouest, y compris la sinuplastie par ballonnet, la septoplastie et la chirurgie endoscopique des sinus. Appelez au 504-934-8550."
+    - ID: "9d32260e-215d-4eff-80de-6d469daadbc4"
+      Hint: image
+      Value: |
+        <image alt="Soins nasaux et des sinus au West Jefferson Medical Center" src="https://www.lcmchealth.org/assets/LCMC-Social-Share.jpg" />
+    - ID: "a8a1dfcb-7dd5-4413-8789-db24a95e439f"
+      Hint: Detail
+      Value: |
+        <h2>Des allergies aux infections des sinus, nous sommes là pour vous aider</h2><p>Un nez bouché peut certainement être incommodant, mais si vous souffrez de congestion chronique, d’infections des sinus, d’allergies ou de tout autre problème lié au nez ou aux sinus, il est peut-être temps de consulter un spécialiste.</p><p>Vos voies nasales et vos sinus sont des parties essentielles de votre système respiratoire. Lorsqu’ils ne fonctionnent pas de façon optimale, cela peut être plus qu’inconfortable — cela peut entraîner divers problèmes de santé.</p><p>Les spécialistes en ORL du West Jefferson Medical Center peuvent vous aider à déterminer la cause de vos problèmes nasaux et sinusaux. Nous sommes experts dans le traitement de tout, de la sinusite et des allergies aux polypes nasaux et à la déviation de la cloison nasale. Nous offrons ces services et bien d’autres :</p><ul><li>Sinuplastie par ballonnet</li><li>ClariFix</li><li>Chirurgie endoscopique des sinus</li><li>Polypectomie nasale</li><li>Septoplastie</li></ul><h3>Comment prendre rendez-vous</h3><p>Appelez la clinique ORL de West Jefferson au <strong>504-934-8550</strong> pour prendre rendez-vous, ou <a href="/Find-a-Provider">trouvez un oto-rhino-laryngologiste dans le répertoire des fournisseurs de LCMC Health</a>.</p><p><strong>West Jefferson Medical Center Ear, Nose &amp; Throat</strong><br/>1111 Medical Center Blvd., Suite N-707<br/>Marrero, LA 70072<br/>Téléphone : 504-934-8550</p>
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Nez
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201827Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Soins nasaux et des sinus à West Jefferson

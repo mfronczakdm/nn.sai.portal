@@ -1,0 +1,67 @@
+﻿---
+ID: "3b966ee1-275b-4bc2-9b5e-bbfe7da8f47c"
+Parent: "e94fc8b8-faf1-47ef-8985-b2b39bd102d1"
+Template: "75ba19ed-046a-48f7-a214-1ccb30341785"
+Path: "/sitecore/content/Cooley/cooley/Home/People/Mark-Weinstein"
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{A4DA2D88-0913-41A6-B056-ECA739460330}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "027aaf74-a23d-4f1d-a338-378dd796eb7b"
+      Hint: Summary
+      Value: Palo Alto | Intellectual Property Litigation
+    - ID: "2302c70d-5f7e-4c92-ba54-52ac669e295a"
+      Hint: Phone
+      Value: +1 650 843 5007
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260814T212010Z
+    - ID: "2fbe8cff-9382-4f34-a13d-a3eae26add65"
+      Hint: PreferredName
+      Value: Mark
+    - ID: "6cf9e6dc-c127-4b03-854f-a074e892d5bd"
+      Hint: FullName
+      Value: Mark Weinstein
+    - ID: "6f5de62a-0295-4a9c-8cbe-90c1a59f483d"
+      Hint: SeoTitle
+      Value: Mark Weinstein | Partner | Cooley
+    - ID: "78843463-efe2-448f-a30d-b6e7e2aab380"
+      Hint: Office
+      Value: "{DC232E23-EA83-420F-9875-BC6D75EE28E3}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a400c099-ba7a-4222-b2c0-5da61a8ec7e0"
+    - ID: "9fe86ca5-05e1-4a44-a119-fcf675e32f02"
+      Hint: Biography
+      Value: "<p>Mark Weinstein's practice focuses on patent and other complex technology-related disputes. He has handled high-stakes litigations throughout the US involving computer software and hardware, Internet applications, electronic transactions, e-commerce, computer networking, entertainment software and medical devices.</p>"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "bbd10213-83c1-468c-8788-5c2a67cf85a0"
+      Hint: Email
+      Value: mweinstein@cooley.com
+    - ID: "c54be241-aff8-4630-b46c-01aae94f8b9e"
+      Hint: SeoDescription
+      Value: Mark Weinstein is a Partner in Cooley's Palo Alto office focusing on patent and technology litigation.
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260817T025700Z
+    - ID: "f3c9bb15-bb46-4ec0-9d31-0300245e6acd"
+      Hint: JobTitle
+      Value: Partner
+    - ID: "f632d418-ab07-4f1d-a0fb-15d4fb9fd92c"
+      Hint: Headshot
+      Value: |
+        <Image src="https://www.cooley.com/-/media/cooley/bio-images/full-images/weinstein-mark-15132-web.jpg" alt="Mark Weinstein" />
+    - ID: "f968ea1a-5e81-4417-822e-e5217ae61323"
+      Hint: PracticeAreas
+      Value: |
+        {269A6858-23DD-4CC0-93A1-AC315EAF3AEA}
+        {4F127923-41BD-4D8F-9D0A-CCB08B1A5165}

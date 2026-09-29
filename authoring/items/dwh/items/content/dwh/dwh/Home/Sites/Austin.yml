@@ -1,0 +1,75 @@
+﻿---
+ID: "beaa3094-4c3e-4a6d-b8b8-8d81d13d62da"
+Parent: "de36396d-86e5-4999-a8ea-75f7a11f7613"
+Template: "a0293a8c-d81b-4572-a220-9a3b7d0ca161"
+Path: /sitecore/content/dwh/dwh/Home/Sites/Austin
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: "{A09D9C22-7872-4501-B71A-2025660B17D1}"
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{5300D9B4-2DBB-4F39-A2B1-5EA52541E0AB}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "669299a9-dc16-40fc-8c3f-883e4966df7a"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{1195052C-ADE1-474E-8067-EBAD301AC1A6}"
+              p:before="*"
+              s:ds="2b19cae5-94c1-40ce-a1d6-cce6a3a85ff6"
+              s:id="{269C8C2D-D7DC-4A88-9BC3-A797DA32DEF4}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+              s:ph="headless-main" />
+            <r
+              uid="{6B0A7593-2E23-4023-9FAB-10E335A8ACA3}"
+              p:after="r[@uid='{1195052C-ADE1-474E-8067-EBAD301AC1A6}']"
+              s:ds="4e8e9c02-8753-4105-9144-ec84b8aee0db"
+              s:id="{2492BAC4-DA07-4C86-87F0-9873D40E2276}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B2D994C08-48EF-4DD4-AF28-66CBACD27392%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=2"
+              s:ph="headless-main" />
+            <r
+              uid="{BF14F2DC-186B-4534-8CFF-E1905B163C0D}"
+              p:after="*[1=2]"
+              s:id="{62DD1639-9F28-4040-8738-C886480B2127}"
+              s:par="FormId=9bb73667027b4c3aa28ce59c0598e515-use&amp;GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260623T210208Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "1e2ee7df-01c2-4337-b1c9-6a4c69bc60c1"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\nick.robinett@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260625T132721Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Austin

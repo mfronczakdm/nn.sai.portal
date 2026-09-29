@@ -1,0 +1,104 @@
+﻿---
+ID: "2f243f36-c6ac-477c-9577-67ab86b05306"
+Parent: "5dad4c5c-84cd-471a-80ef-c805570be79a"
+Template: "d9ed4a26-1b44-4f52-9eae-61e1eb193671"
+Path: "/sitecore/content/pillsbury/pillsburylaw/Home/Lawyers/Bios/Andrew-V-Alfano"
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{0BD17457-C95C-43B6-9053-3F86DD865F53}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "586663f0-68da-4824-9df9-40b114db4f23"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{68333130-D476-4695-9E8F-BEBA02A4055C}"
+              s:id="{560AB1F6-8C48-4449-9E72-F29C39BA750D}"
+              s:par="GridParameters&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "19b27df3-a169-420a-a648-7d766ff1ce33"
+      Hint: FullName
+      Value: Andrew V. Alfano
+    - ID: "1bcd45b4-983e-4549-a1f0-8c69ed67e2ad"
+      Hint: PreferredName
+      Value: Andrew
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260804T195357Z
+    - ID: "4e0e2a6d-de8f-4156-ab56-e0ad0a7824fa"
+      Hint: Office
+      Value: "{1569C0D4-48E7-40AD-9632-231EBE1614CE}"
+    - ID: "69a84be7-9ec6-488c-a354-7eb9b2b31a85"
+      Hint: Certifications
+      Value: "{8B2D3987-7552-4782-B3E8-CF9BD8F42118}"
+    - ID: "7abdd52d-64a7-443b-bc39-4a20cb7dee8e"
+      Hint: Headshot
+      Value: |
+        <Image src="https://mrfbasech.sitecoresandbox.cloud/api/public/content/ab4e0dd92bc84d1c9aaaa61cd088c437?v=5ec46409" dam-id="P6PCotQiTcuKxcplEkh-Fg" width="1148" height="1148" dam-content-type="Image" thumbnailsrc="https://mrfbasech.sitecoresandbox.cloud/api/gateway/95952/thumbnail" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "34218aba-a007-48ea-8091-1c9bb3a6c742"
+    - ID: "8e86bae1-7f7a-4e3e-a916-ba2e2eafea5a"
+      Hint: Industries
+      Value: |
+        {35F1E271-2ACD-4C10-83D3-FA4FF150C41F}
+        {D8144E78-40E7-4AAF-9539-EF64140E07BC}
+        {9AC61F03-07D4-4246-8DF0-42D3A17EF807}
+    - ID: "a18c18ef-21ef-4198-ae8c-33e00afc24bc"
+      Hint: Education
+      Value: |
+        {95CE9F1F-4B7C-4E86-AEE2-EDC3B17CBCC0}
+        {770E324D-B9AA-410C-94C6-4478F76B5606}
+    - ID: "a3aae655-77a7-4ec0-85ba-d1ddc3a4d34f"
+      Hint: SeoTitle
+      Value: Andrew V. Alfano | Counsel | Insolvency & Restructuring | Pillsbury
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d628b04c-71e1-416d-bfb6-ec073f1dba6e"
+      Hint: SeoDescription
+      Value: Andrew V. Alfano is Counsel in Insolvency & Restructuring based in New York.
+    - ID: "d83bbbee-b5ff-4713-aa0e-9e59fdc7563f"
+      Hint: Email
+      Value: andrew.alfano@pillsburylaw.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260821T153845Z
+    - ID: "dc46c43e-781c-4388-b53f-a1d8a083f2d9"
+      Hint: PracticeAreas
+      Value: "{AFB78D21-1D07-46B9-B580-D1C94CC9E509}"
+    - ID: "df24e0b6-c373-4add-b339-034c64452a38"
+      Hint: Summary
+      Value: Advises distressed companies, investors, and creditors through all stages of complex restructurings.
+    - ID: "dfcaa3d1-e572-4289-9111-2324afa8ee5f"
+      Hint: JobTitle
+      Value: Counsel
+    - ID: "e653befc-026a-4333-8b42-13d7ca3bf88a"
+      Hint: BarAdmissions
+      Value: |
+        {56FB9D8A-6647-4565-80F1-ACD0015D5A31}
+        {17BE7A75-144A-480E-9D2D-6B56410714EF}
+    - ID: "e854dce0-3a20-40db-b32e-9e223e599310"
+      Hint: Biography
+      Value: <p>Andrew Alfano regularly advises companies facing financial distress, purchasers and investors in distressed businesses, and lenders and other creditors of troubled companies in all stages of complex restructurings. His work spans a variety of industries, most recently including pharmaceuticals, aviation, electric vehicles and energy storage.</p>
+    - ID: "f9f1c6c2-6a9e-4f91-8b8c-084feab583db"
+      Hint: Phone
+      Value: +1.212.858.1051

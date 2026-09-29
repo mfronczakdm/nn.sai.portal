@@ -1,0 +1,303 @@
+﻿---
+ID: "d7264bd2-810b-479e-8468-fb894f9a8c17"
+Parent: "aa49d41d-1397-42fd-badb-0ec488686514"
+Template: "3cb38973-6209-4407-b463-4b017e0467cd"
+Path: /sitecore/content/lcmc/lcmc/Presentation/Partial Designs/Global/Header/Data/Header
+BranchID: "3e0f1e87-6c71-4b15-877c-7a2d1680fe32"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "4c12238a-7981-41b7-bcbc-9c7e7a55cb5a"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{B6B871AD-41EC-4ABB-AEDA-4F9B6AC3A14A}"
+Languages:
+- Language: en
+  Fields:
+  - ID: "30e85e5d-e00a-4864-b358-7624d511deb4"
+    Hint: __Unversioned revision
+    Value: "4beff2a2-8aca-41df-8f75-0b14043290d6"
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: LCMC Header
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "2230296b-d1f6-4f24-819c-c744ec9782b1"
+      Hint: SupportLink
+      Value: |
+        <link linktype="external" url="/" target="" text="Support" title="" class=""/>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T010256Z
+    - ID: "34b1e883-e1fa-4bb0-b605-0bf9dd521dc9"
+      Hint: SearchLink
+      Value: |
+        <link linktype="external" url="/" target="" class="" text="Search" title=""/>
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "81209a76-ecf8-4185-9166-076f4b6a8987"
+      Hint: Logo
+      Value: |
+        <image mediaid="9b0311dc-f62f-4db5-bac3-0040bbfc7370" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "3fbfa736-8fab-4dd8-8e58-6ee1141bbd07"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260825T010500Z
+    - ID: "fa169fd8-4c46-433e-b61b-c7d6660257dd"
+      Hint: CartLink
+      Value: |
+        <link linktype="external" url="/" target="" class="" text="Cart" title=""/>
+  - Version: 2
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "2230296b-d1f6-4f24-819c-c744ec9782b1"
+      Hint: SupportLink
+      Value: |
+        <link id="{F280CB2F-C7F8-4217-B325-004870571DC8}" linktype="internal" text="For Providers" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T121443Z
+    - ID: "308709cf-0bbc-49c4-878e-d9bd41d73f23"
+      Hint: LoginLink
+      Value: |
+        <link linktype="external" url="https://www.mylcmchealth.org/" target="_blank" text="Patient Portal" />
+    - ID: "34b1e883-e1fa-4bb0-b605-0bf9dd521dc9"
+      Hint: SearchLink
+      Value: |
+        <link text="Search" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{B22CA21A-3609-448D-98B3-EE528B80A68A}" />
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: 
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "81209a76-ecf8-4185-9166-076f4b6a8987"
+      Hint: Logo
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/77a49444f828477b8ef89953fd1bdfcc?v=9e1f9fe3" dam-id="VoNvfPC7Rt6oSW0cEnhJ_g" width="110" height="60" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/86514/thumbnail" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "93ae8eee-155b-4249-ab90-166e9f86115c"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260825T121443Z
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T110309Z
+    - ID: "fa169fd8-4c46-433e-b61b-c7d6660257dd"
+      Hint: CartLink
+      Value: |
+        <link id="{E71BF3C3-7DAC-43EF-8222-963DD4F3EF49}" linktype="internal" text="Notice of Non-Discrimination" />
+- Language: "es-CO"
+  Fields:
+  - ID: "30e85e5d-e00a-4864-b358-7624d511deb4"
+    Hint: __Unversioned revision
+    Value: "7b9cf166-10d1-4210-812a-03e52160f9a9"
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Encabezado de LCMC
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "2230296b-d1f6-4f24-819c-c744ec9782b1"
+      Hint: SupportLink
+      Value: |
+        <link id="{F280CB2F-C7F8-4217-B325-004870571DC8}" linktype="internal" text="Para proveedores" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T121443Z
+    - ID: "308709cf-0bbc-49c4-878e-d9bd41d73f23"
+      Hint: LoginLink
+      Value: |
+        <link linktype="external" url="https://www.mylcmchealth.org/" target="_blank" text="Portal del paciente" />
+    - ID: "34b1e883-e1fa-4bb0-b605-0bf9dd521dc9"
+      Hint: SearchLink
+      Value: |
+        <link id="{C04ED62D-9082-490D-99EE-D72146755712}" linktype="internal" text="Contáctenos" />
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "81209a76-ecf8-4185-9166-076f4b6a8987"
+      Hint: Logo
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/77a49444f828477b8ef89953fd1bdfcc?v=9e1f9fe3" dam-id="VoNvfPC7Rt6oSW0cEnhJ_g" width="110" height="60" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/86514/thumbnail" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b6bff07a-9f0a-4384-8d3a-da94a8c8167c"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Akv1r1Hmcm16AN61y5QanpMca0RChHPy
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260825T121443Z
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T192640Z
+    - ID: "fa169fd8-4c46-433e-b61b-c7d6660257dd"
+      Hint: CartLink
+      Value: |
+        <link id="{E71BF3C3-7DAC-43EF-8222-963DD4F3EF49}" linktype="internal" text="Aviso de no discriminación" />
+  - Version: 2
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "2230296b-d1f6-4f24-819c-c744ec9782b1"
+      Hint: SupportLink
+      Value: |
+        <link id="{F280CB2F-C7F8-4217-B325-004870571DC8}" linktype="internal" text="Para proveedores" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T121443Z
+    - ID: "308709cf-0bbc-49c4-878e-d9bd41d73f23"
+      Hint: LoginLink
+      Value: |
+        <link linktype="external" url="https://www.mylcmchealth.org/" target="_blank" text="Portal del paciente" />
+    - ID: "34b1e883-e1fa-4bb0-b605-0bf9dd521dc9"
+      Hint: SearchLink
+      Value: |
+        <link id="{C04ED62D-9082-490D-99EE-D72146755712}" linktype="internal" text="Contáctenos" />
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: 
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "81209a76-ecf8-4185-9166-076f4b6a8987"
+      Hint: Logo
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/77a49444f828477b8ef89953fd1bdfcc?v=9e1f9fe3" dam-id="VoNvfPC7Rt6oSW0cEnhJ_g" width="110" height="60" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/86514/thumbnail" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a30b6f4d-91d2-4c0b-ae5e-153acd6d7e21"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260825T121443Z
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T163204Z
+    - ID: "fa169fd8-4c46-433e-b61b-c7d6660257dd"
+      Hint: CartLink
+      Value: |
+        <link id="{E71BF3C3-7DAC-43EF-8222-963DD4F3EF49}" linktype="internal" text="Aviso de no discriminación" />
+- Language: "fr-CA"
+  Fields:
+  - ID: "30e85e5d-e00a-4864-b358-7624d511deb4"
+    Hint: __Unversioned revision
+    Value: "259f90aa-3e36-4822-bebb-e9136f3ab55c"
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: "En-tête LCMC"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "2230296b-d1f6-4f24-819c-c744ec9782b1"
+      Hint: SupportLink
+      Value: |
+        <link id="{F280CB2F-C7F8-4217-B325-004870571DC8}" linktype="internal" text="Pour les fournisseurs" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T121443Z
+    - ID: "308709cf-0bbc-49c4-878e-d9bd41d73f23"
+      Hint: LoginLink
+      Value: |
+        <link linktype="external" url="https://www.mylcmchealth.org/" target="_blank" text="Portail patient" />
+    - ID: "34b1e883-e1fa-4bb0-b605-0bf9dd521dc9"
+      Hint: SearchLink
+      Value: |
+        <link class="" id="{B22CA21A-3609-448D-98B3-EE528B80A68A}" querystring="" anchor="" target="" title="" linktype="internal" text="Recherche" />
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: 
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "81209a76-ecf8-4185-9166-076f4b6a8987"
+      Hint: Logo
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/77a49444f828477b8ef89953fd1bdfcc?v=9e1f9fe3" dam-id="VoNvfPC7Rt6oSW0cEnhJ_g" width="110" height="60" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/86514/thumbnail" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d2cfecb8-0bda-4286-b370-5ff31a521d3f"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260825T121443Z
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201850Z
+    - ID: "fa169fd8-4c46-433e-b61b-c7d6660257dd"
+      Hint: CartLink
+      Value: |
+        <link id="{E71BF3C3-7DAC-43EF-8222-963DD4F3EF49}" linktype="internal" text="Avis de non-discrimination" />

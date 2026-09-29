@@ -1,0 +1,109 @@
+﻿---
+ID: "53c6aa8a-9f3b-41f3-9eca-5e29dba2a7fc"
+Parent: "e0802197-af95-4cd0-8864-f8f80960749c"
+Template: "3cb38973-6209-4407-b463-4b017e0467cd"
+Path: /sitecore/content/quanex/amesburytruth/Presentation/Partial Designs/Global/Header/Data/Header
+BranchID: "3e0f1e87-6c71-4b15-877c-7a2d1680fe32"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "9f0c774a-9347-4de9-beb7-71365af92721"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{B6B871AD-41EC-4ABB-AEDA-4F9B6AC3A14A}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "2230296b-d1f6-4f24-819c-c744ec9782b1"
+      Hint: SupportLink
+      Value: |
+        <link linktype="external" url="/" target="" text="Support" title="" class=""/>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260811T153254Z
+    - ID: "34b1e883-e1fa-4bb0-b605-0bf9dd521dc9"
+      Hint: SearchLink
+      Value: |
+        <link linktype="external" url="/" target="" class="" text="Search" title=""/>
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "81209a76-ecf8-4185-9166-076f4b6a8987"
+      Hint: Logo
+      Value: |
+        <image mediaid="9b0311dc-f62f-4db5-bac3-0040bbfc7370" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a16f0de2-7516-4c1a-be1e-e327c14c50d2"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260811T153503Z
+    - ID: "fa169fd8-4c46-433e-b61b-c7d6660257dd"
+      Hint: CartLink
+      Value: |
+        <link linktype="external" url="/" target="" class="" text="Cart" title=""/>
+  - Version: 2
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "2230296b-d1f6-4f24-819c-c744ec9782b1"
+      Hint: SupportLink
+      Value: |
+        <link text="Contact Us" linktype="internal" id="{3A818DD2-63A3-4C70-A844-5DDD980B35FA}" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260812T003002Z
+    - ID: "34b1e883-e1fa-4bb0-b605-0bf9dd521dc9"
+      Hint: SearchLink
+      Value: |
+        <link linktype="external" url="/" target="" class="" text="Search" title=""/>
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "81209a76-ecf8-4185-9166-076f4b6a8987"
+      Hint: Logo
+      Value: |
+        <image mediaid="9b0311dc-f62f-4db5-bac3-0040bbfc7370" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "e836f5b6-5c43-4a0f-a0e9-c2ccdb109f8e"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Akv1r1Hmcm16AN61y5QanpMca0RChHPy
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260812T003002Z
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260812T094343Z
+    - ID: "fa169fd8-4c46-433e-b61b-c7d6660257dd"
+      Hint: CartLink
+      Value: |
+        <link linktype="external" url="/" target="" class="" text="Cart" title=""/>

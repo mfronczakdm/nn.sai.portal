@@ -1,0 +1,53 @@
+﻿---
+ID: "e09d0fb0-8642-4e6d-8f37-593cd95524fa"
+Parent: "fe08b84e-c4a0-4c77-b385-12c31aa643c8"
+Template: "efd96479-7bf2-4be1-a08a-b01e59f92cdc"
+Path: "/sitecore/content/new-quanex/quanex-alternators/Presentation/Partial Designs/Global/Header/Data/Global Header"
+BranchID: "ed920ceb-2272-432a-829e-4610b6b94945"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{615185A5-8A93-4119-9E26-A8494A6A2135}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260818T142732Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "4da75bcf-390e-46fa-ad87-926ec4db0876"
+      Hint: headerLogo
+      Value: |
+        <image mediaid="{E732C884-8655-4A03-B8B0-F7EBA817E231}" alt="Logo" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b17af89e-5d5a-4613-b962-c19deb1fc55e"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260818T142846Z
+    - ID: "e3289100-a242-4fc7-814f-0ffef0ffe8bd"
+      Hint: headerContact
+      Value: |
+        <link class="" querystring="" id="{07139DB1-270D-45FE-A700-2DCC780E4EBF}" anchor="" target="" title="" linktype="internal" text="Get In Touch" url="" />
+    - ID: "f073d52d-022c-4560-90c2-71fc674cf8bf"
+      Hint: primaryNavigationLinks
+      Value: |
+        {5E2EE404-D626-4173-9E3C-F3792442EDB0}
+        {2D319278-C4C4-4808-ABE9-CC48633D28E3}
+        {9365B042-0D8A-47B8-96E3-AAF0801AF2EB}

@@ -1,0 +1,265 @@
+﻿---
+ID: "ada24c39-a4dc-4d06-8e81-9d433d8def7f"
+Parent: "45493019-f268-4cf4-9bc1-f23c9e6dfc40"
+Template: "3cb38973-6209-4407-b463-4b017e0467cd"
+Path: /sitecore/content/amkor/amkor/Presentation/Partial Designs/Global/Header/Data/Header
+BranchID: "3e0f1e87-6c71-4b15-877c-7a2d1680fe32"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "b6091273-4b2d-4f41-b54c-c3f3a7c3997f"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{B6B871AD-41EC-4ABB-AEDA-4F9B6AC3A14A}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "2230296b-d1f6-4f24-819c-c744ec9782b1"
+      Hint: SupportLink
+      Value: |
+        <link linktype="external" url="/" target="" text="Support" title="" class=""/>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260824T120624Z
+    - ID: "34b1e883-e1fa-4bb0-b605-0bf9dd521dc9"
+      Hint: SearchLink
+      Value: |
+        <link linktype="external" url="/" target="" class="" text="Search" title=""/>
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "81209a76-ecf8-4185-9166-076f4b6a8987"
+      Hint: Logo
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/2d5b901029d0474b91b196ec60a1aa39?v=f5ab2f7d" dam-id="FhlJzKPwRdChUmISmeDplA" width="270" height="100" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/85996/thumbnail" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "1e3ac2cc-c584-4e3c-b958-ae1c0d4a99b1"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260827T015112Z
+    - ID: "fa169fd8-4c46-433e-b61b-c7d6660257dd"
+      Hint: CartLink
+      Value: |
+        <link linktype="external" url="/" target="" class="" text="Cart" title=""/>
+  - Version: 2
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "2230296b-d1f6-4f24-819c-c744ec9782b1"
+      Hint: SupportLink
+      Value: |
+        <link linktype="external" url="/" target="" text="Support" title="" class=""/>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260831T214159Z
+    - ID: "34b1e883-e1fa-4bb0-b605-0bf9dd521dc9"
+      Hint: SearchLink
+      Value: |
+        <link text="Search" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{45F745C1-A6B1-4ECE-A053-84A109CEC45F}" />
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{FCA998C5-0CC3-4F91-94D8-0A4E6CAECE88}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "81209a76-ecf8-4185-9166-076f4b6a8987"
+      Hint: Logo
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/2d5b901029d0474b91b196ec60a1aa39?v=f5ab2f7d" dam-id="FhlJzKPwRdChUmISmeDplA" width="270" height="100" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/85996/thumbnail" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "eba757a9-0ce5-4a72-aad6-fbdf22e1030a"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260831T214159Z
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260901T121349Z
+    - ID: "fa169fd8-4c46-433e-b61b-c7d6660257dd"
+      Hint: CartLink
+      Value: |
+        <link linktype="external" url="/" target="" class="" text="Cart" title=""/>
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "2230296b-d1f6-4f24-819c-c744ec9782b1"
+      Hint: SupportLink
+      Value: |
+        <link class="" target="" title="" linktype="external" text="サポート" url="/" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260824T120624Z
+    - ID: "34b1e883-e1fa-4bb0-b605-0bf9dd521dc9"
+      Hint: SearchLink
+      Value: |
+        <link class="" target="" title="" linktype="external" text="検索" url="/" />
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "81209a76-ecf8-4185-9166-076f4b6a8987"
+      Hint: Logo
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/2d5b901029d0474b91b196ec60a1aa39?v=f5ab2f7d" dam-id="FhlJzKPwRdChUmISmeDplA" width="270" height="100" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/85996/thumbnail" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ce55becf-c5b7-4942-b888-cc6eb8ffe48c"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260831T030614Z
+    - ID: "fa169fd8-4c46-433e-b61b-c7d6660257dd"
+      Hint: CartLink
+      Value: |
+        <link class="" target="" title="" linktype="external" text="カート" url="/" />
+- Language: "ko-KR"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "2230296b-d1f6-4f24-819c-c744ec9782b1"
+      Hint: SupportLink
+      Value: |
+        <link class="" target="" title="" linktype="external" text="지원" url="/" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260824T120624Z
+    - ID: "34b1e883-e1fa-4bb0-b605-0bf9dd521dc9"
+      Hint: SearchLink
+      Value: |
+        <link class="" target="" title="" linktype="external" text="검색" url="/" />
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "81209a76-ecf8-4185-9166-076f4b6a8987"
+      Hint: Logo
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/2d5b901029d0474b91b196ec60a1aa39?v=f5ab2f7d" dam-id="FhlJzKPwRdChUmISmeDplA" width="270" height="100" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/85996/thumbnail" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "963d9cb5-bfb3-43f6-ba19-7f5e517d29a8"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Akv1r1Hmcm16AN61y5QanpMca0RChHPy
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260901T125423Z
+    - ID: "fa169fd8-4c46-433e-b61b-c7d6660257dd"
+      Hint: CartLink
+      Value: |
+        <link class="" target="" title="" linktype="external" text="장바구니" url="/" />
+- Language: "zh-CN"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "2230296b-d1f6-4f24-819c-c744ec9782b1"
+      Hint: SupportLink
+      Value: |
+        <link class="" target="" title="" linktype="external" text="支持" url="/" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260831T214159Z
+    - ID: "34b1e883-e1fa-4bb0-b605-0bf9dd521dc9"
+      Hint: SearchLink
+      Value: |
+        <link class="" id="{45F745C1-A6B1-4ECE-A053-84A109CEC45F}" querystring="" anchor="" target="" title="" linktype="internal" text="搜索" />
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{12FFAC4C-565F-4C9A-B63E-7F77E96B4D1F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "81209a76-ecf8-4185-9166-076f4b6a8987"
+      Hint: Logo
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/2d5b901029d0474b91b196ec60a1aa39?v=f5ab2f7d" dam-id="FhlJzKPwRdChUmISmeDplA" width="270" height="100" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/85996/thumbnail" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "18947028-5413-4d8d-98da-26d460c426b4"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260831T214159Z
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260902T121313Z
+    - ID: "fa169fd8-4c46-433e-b61b-c7d6660257dd"
+      Hint: CartLink
+      Value: |
+        <link class="" target="" title="" linktype="external" text="购物车" url="/" />

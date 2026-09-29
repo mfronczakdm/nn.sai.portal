@@ -1,0 +1,70 @@
+﻿---
+ID: "e162783a-fbaf-41a5-bcd2-662adb8c3bc9"
+Parent: "324da045-f857-4ef3-9681-159dfc87ef3a"
+Template: "c241957a-b7cc-4bdd-962f-bf8652ed595c"
+Path: /sitecore/content/progressive/pkm/Home/People and Teams/Contact lists/Data/HeroST1
+BranchID: "ec16fa58-5f86-4b5a-bfaa-10fafe515ba3"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "278a7fed-2054-4cde-aee3-8a5ee9be8d43"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{EF1BD196-3891-431A-92D7-07C53F574A1D}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260728T214130Z
+    - ID: "2d9c3674-1ac3-4f41-9806-1cd1d57b1a8f"
+      Hint: Link2
+      Value: |
+        <link text="Print" linktype="external" url="#" anchor="" target="" />
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "65a20063-e768-4f8f-9f12-3197e3b500ef"
+      Hint: Image1
+      Value: |
+        <Image src="https://mrfbasech.sitecoresandbox.cloud/api/public/content/89538338843c4f9ebab1c4128e14a6ff?v=09cbf09d" mediaid="" alt="Family roasting marshmallows outdoors" />
+    - ID: "83ea62a2-9b61-481e-9917-0914be85f124"
+      Hint: Title
+      Value: Contact lists
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "3f4b7b4a-b1a2-4685-b12e-3a55fa2e8ad1"
+    - ID: "a580050c-e1c7-4d49-a8ad-4862efbc43d5"
+      Hint: Link1
+      Value: |
+        <link text="Add to Favorites" linktype="external" url="#" anchor="" target="" />
+    - ID: "b0d63558-b173-45c0-8169-d2b89270f939"
+      Hint: Eyebrow
+      Value: People & Teams
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\WIt5EKonMo343Fqq8begbLVKlCgYPAIX
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260729T132116Z
+    - ID: "ed7e710b-3811-4fcf-a154-836bd33fac65"
+      Hint: Image2
+      Value: |
+        <Image src="https://mrfbasech.sitecoresandbox.cloud/api/public/content/89538338843c4f9ebab1c4128e14a6ff?v=09cbf09d" mediaid="" alt="Family roasting marshmallows outdoors" />

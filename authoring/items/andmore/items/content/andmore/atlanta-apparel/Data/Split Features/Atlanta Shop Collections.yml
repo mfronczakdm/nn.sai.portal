@@ -1,0 +1,44 @@
+﻿---
+ID: "eaff2a4b-436b-4cf5-8d14-d5f8cf137dc6"
+Parent: "85be9eab-3905-4c98-b8fc-da66bdbfff32"
+Template: "70780390-a3eb-478d-b5de-062ba3c9e897"
+Path: "/sitecore/content/andmore/atlanta-apparel/Data/Split Features/Atlanta Shop Collections"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1e2b9b0c-18e0-44d4-bd70-6c21307b2a5c"
+      Hint: SectionTitle
+      Value: Shop the latest collections
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T015902Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "76acf4ae-4743-4e04-8150-ad9fcb505011"
+      Hint: EyebrowText
+      Value: Discover
+    - ID: "7c4e343a-1394-4002-a9c9-79d019670ce5"
+      Hint: PrimaryLink
+      Value: |
+        <link text="Explore the show" anchor="" linktype="external" class="" title="" target="" querystring="" url="https://www.atlanta-apparel.com/" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a51639ff-8de9-4211-a9e0-738583d28c24"
+    - ID: "9bcfa365-c779-4e5b-b029-abee39f389be"
+      Hint: Description
+      Value: "<p>Explore ready-to-wear, accessories, and emerging brands across Atlanta Apparel.</p>"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260825T015902Z

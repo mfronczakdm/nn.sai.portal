@@ -1,0 +1,44 @@
+﻿---
+ID: "5edac6c2-1564-4a5c-8208-eb7364a25deb"
+Parent: "bcaf473b-a5a8-4db1-ba8c-a5aef5959f52"
+Template: "093943e6-3092-4d75-bcea-4aedc764351b"
+Path: /sitecore/content/dfs/dfs/Data/Portal Hub/Restaurant/Equipment Ordering
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260819T211803Z
+    - ID: "497c5e39-2335-43da-881d-6b1812510bcd"
+      Hint: Cta Text
+      Value: Browse catalog
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "52dee76d-add8-47ca-a950-4aff8f1fb886"
+      Hint: Link
+      Value: |
+        <link linktype="internal" url="/portal/equipment-ordering" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "80af96f4-247d-4383-bcfe-933bfc3cd10f"
+      Hint: Title
+      Value: Equipment Ordering
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "52ed77c1-2c53-42fb-a3ae-0821d4b4679a"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260819T211803Z
+    - ID: "da35cc87-2d16-498e-8470-c1fd37a0f78b"
+      Hint: Description
+      Value: Order kitchen equipment, smallwares, and replacement parts for your locations.

@@ -1,0 +1,112 @@
+﻿---
+ID: "2f860237-0b2c-4b72-b166-8fa4468c7176"
+Parent: "4c243b26-7226-4bde-b4b5-dd3fce658616"
+Template: "b08ec32b-f183-474b-93f7-07512168dd6e"
+Path: "/sitecore/content/pillsbury/blg/Home/Lawyers/Careers/Lateral-Partner-Intellectual-Property"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{6C59AE29-D0A1-4B77-9305-0ABAB21D5FE5}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{F8D0E48E-14E5-4241-A453-797520BC898A}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "8c11009d-e5dd-4ea2-b918-e854b3bf1339"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Lateral partner opportunity for IP litigators and counselors ready to grow a portable practice within Pillsbury’s Intellectual Property platform.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260806T164314Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Lateral
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: IP litigation & counseling · Select U.S. offices
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Lateral Partner — Intellectual Property
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Lateral Partner — Intellectual Property | Pillsbury Careers
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "cbac6bae-3dc6-479e-b849-ffbf242e0476"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Lateral partner opening in Intellectual Property at Pillsbury.
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Lateral Partner — Intellectual Property
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d2ff0fcf-f6f9-48c6-9efb-db569452b8dc"
+      Hint: Detail
+      Value: "<h2>Lateral Partner — Intellectual Property</h2><p><em>Open role · Laterals</em></p><p>We welcome conversations with IP partners who bring patent litigation, trade secret, or counseling practices and want a collaborative platform. Our IP group works closely with corporate and technology clients nationwide.</p><p><strong>What we look for:</strong></p><ul><li>Portable book and proven courtroom or counseling excellence</li><li>Interest in teaming across offices and practices</li><li>Alignment with Pillsbury’s client service model</li></ul><p><strong>How to start:</strong> Contact lateral recruiting via Careers, or explore related bios (e.g. Mark Abate, Ranjini Acharya) to understand the practice.</p>"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260822T010554Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: "Lateral-Partner-Intellectual-Property"
+  - Version: 2
+    Fields:
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Lateral partner opportunity for IP litigators and counselors ready to grow a portable practice within Pillsbury’s Intellectual Property platform.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260822T013036Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Lateral
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{C55B483C-EA7F-4E76-A066-985F7D9396CA}"
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: IP litigation & counseling · Select U.S. offices
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Lateral Partner — Intellectual Property
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Lateral Partner — Intellectual Property | Pillsbury Careers
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "86595cf8-00c5-47fc-8de7-1f5316677b09"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Lateral partner opening in Intellectual Property at Pillsbury.
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Lateral Partner — Intellectual Property
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260822T013036Z
+    - ID: "d2ff0fcf-f6f9-48c6-9efb-db569452b8dc"
+      Hint: Detail
+      Value: "<h2>Lateral Partner — Intellectual Property</h2><p><em>Open role · Laterals</em></p><p>We welcome conversations with IP partners who bring patent, trademark, or counseling practices and want a collaborative national platform. BLG’s IP group works closely with corporate and technology clients across Canada.</p><p><strong>What we look for:</strong></p><ul><li>Portable book and proven counseling or courtroom excellence</li><li>Interest in teaming across our five Canadian offices</li><li>Alignment with BLG’s client service model</li></ul><p><strong>How to start:</strong> Contact lateral recruiting via Careers.</p>"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260822T014354Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: "Lateral-Partner-Intellectual-Property"

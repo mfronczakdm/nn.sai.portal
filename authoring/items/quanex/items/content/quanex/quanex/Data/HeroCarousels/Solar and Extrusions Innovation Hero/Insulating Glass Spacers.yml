@@ -1,0 +1,41 @@
+﻿---
+ID: "2b73e095-171c-4e7e-9a53-6f80bf38a7df"
+Parent: "41aba868-a71e-42ec-b32e-6ca037858aa2"
+Template: "8ef3fb89-fd2f-48b9-a8ce-20f387e0ab0a"
+Path: /sitecore/content/quanex/quanex/Data/HeroCarousels/Solar and Extrusions Innovation Hero/Insulating Glass Spacers
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1c6ed158-edf5-4a99-9352-eab4a1943e03"
+      Hint: Link
+      Value: |
+        <link text="EXPLORE IG SPACERS" linktype="internal" id="{9726E4D1-8FCD-4DD6-B5E9-BB4467655176}" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260813T190656Z
+    - ID: "48932c54-8c74-4029-ba15-1b8af19fe457"
+      Hint: Description
+      Value: "Warm-edge spacer systems that improve thermal performance and durability of IG units."
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d3b3dee6-bb6b-41f4-b5e4-8e3cf7f32a47"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c2442485-2c9e-47d6-85e8-509877a1d977"
+      Hint: Image
+      Value: |
+        <image src="https://www.quanex.com/globalassets/images/hero/custom-solutions.jpg" alt="Quanex insulating glass spacers" />
+    - ID: "c8463a04-9fc1-4d12-b4c6-b4448f0cb298"
+      Hint: SlideName
+      Value: INSULATING GLASS SPACERS
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260813T190656Z
+    - ID: "e64b5a37-be27-4001-9380-27bbb40fe1bc"
+      Hint: BackgroundImage
+      Value: |
+        <image src="https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg" alt="IG spacer backdrop" />

@@ -1,0 +1,53 @@
+﻿---
+ID: "a509f7b1-48ea-40b8-8e5c-8808f54a9175"
+Parent: "d98fac71-f106-4498-81ea-b499013fa703"
+Template: "f24978e9-cab5-4a7f-a836-d423ff20b830"
+Path: /sitecore/content/solterra/solterra/Presentation/Partial Designs/Global/Footer/Data/Global Footer/Facebook
+BranchID: "ed920ceb-2272-432a-829e-4610b6b94945"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "0554c4ad-b95a-4567-8728-4a3c2e48e2a0"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{193A3CB7-48A3-4959-A542-4B860EF2F801}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260430T182402Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "e86e4a63-557e-4e53-9422-0bac327b0933"
+    - ID: "9eb14315-948f-4ada-b8e9-029f42c6fdca"
+      Hint: link
+      Value: |
+        <link linktype="external" url="https://facebook.com/" anchor="" target="_blank" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260430T182515Z
+    - ID: "e11f29f8-4940-4273-962a-5c598a9dc6bf"
+      Hint: socialIcon
+      Value: |
+        <image mediaid="{27AAFDEA-E9AB-4522-B789-3A90F0E9C8A7}" alt="Facebook Icon" />

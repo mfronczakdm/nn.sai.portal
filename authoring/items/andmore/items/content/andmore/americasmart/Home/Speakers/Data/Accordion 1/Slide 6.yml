@@ -1,0 +1,125 @@
+﻿---
+ID: "cab8a81c-d3e2-41b2-a8f4-362304ff2c20"
+Parent: "70e56dae-3b5a-475e-9427-f7993718bbc4"
+Template: "75bc6ab0-2492-4129-9f90-ca0bab019e07"
+Path: /sitecore/content/andmore/americasmart/Home/Speakers/Data/Accordion 1/Slide 6
+BranchID: "9660ff60-8e47-4efc-b22d-bac3fd04c8d7"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "e3e0c423-272d-41f6-9407-6764c58bee41"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{91223385-BF48-4F0E-99F2-E3EE605C003D}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260824T120253Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "59f8ca51-d752-468c-bfe5-b36bc0cc4c9d"
+      Hint: heading
+      Value: "What’s included in the box?"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f9fa6902-206a-4908-a94b-673da3e93ff8"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260824T120503Z
+    - ID: "e67167b4-10c7-409c-a118-8cd21fd07e1b"
+      Hint: description
+      Value: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean venenatis imperdiet nisi, quis ornare nisi porttitor volutpat. Maecenas vitae dolor vel velit pretium consectetur. Integer tincidunt pellentesque sem id cursus. Nulla non dolor quis enim maximus pellentesque mollis vel mi. Phasellus a nulla leo. Pellentesque nec tincidunt leo, eget commodo libero. Pellentesque pellentesque turpis metus, quis scelerisque erat posuere at. Donec viverra rutrum fermentum. Maecenas ut suscipit dolor. Mauris et velit lacinia, ultrices augue ut, tempus eros. Praesent eu quam scelerisque nunc egestas luctus in sed metus. Ut ultricies rhoncus nibh, eget feugiat sem gravida non.
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260824T120253Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "59f8ca51-d752-468c-bfe5-b36bc0cc4c9d"
+      Hint: heading
+      Value: "¿Qué incluye la caja?"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5f88523c-8a10-4c35-be91-875aefdfb9b7"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260904T105436Z
+    - ID: "e67167b4-10c7-409c-a118-8cd21fd07e1b"
+      Hint: description
+      Value: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean venenatis imperdiet nisi, quis ornare nisi porttitor volutpat. Maecenas vitae dolor vel velit pretium consectetur. Integer tincidunt pellentesque sem id cursus. Nulla non dolor quis enim maximus pellentesque mollis vel mi. Phasellus a nulla leo. Pellentesque nec tincidunt leo, eget commodo libero. Pellentesque pellentesque turpis metus, quis scelerisque erat posuere at. Donec viverra rutrum fermentum. Maecenas ut suscipit dolor. Mauris et velit lacinia, ultrices augue ut, tempus eros. Praesent eu quam scelerisque nunc egestas luctus in sed metus. Ut ultricies rhoncus nibh, eget feugiat sem gravida non.
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260824T120253Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "59f8ca51-d752-468c-bfe5-b36bc0cc4c9d"
+      Hint: heading
+      Value: 箱に含まれているものは何ですか？
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d4b2a8e0-aaa3-41d3-8d36-fb3cd3b7bf49"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260904T105500Z
+    - ID: "e67167b4-10c7-409c-a118-8cd21fd07e1b"
+      Hint: description
+      Value: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean venenatis imperdiet nisi, quis ornare nisi porttitor volutpat. Maecenas vitae dolor vel velit pretium consectetur. Integer tincidunt pellentesque sem id cursus. Nulla non dolor quis enim maximus pellentesque mollis vel mi. Phasellus a nulla leo. Pellentesque nec tincidunt leo, eget commodo libero. Pellentesque pellentesque turpis metus, quis scelerisque erat posuere at. Donec viverra rutrum fermentum. Maecenas ut suscipit dolor. Mauris et velit lacinia, ultrices augue ut, tempus eros. Praesent eu quam scelerisque nunc egestas luctus in sed metus. Ut ultricies rhoncus nibh, eget feugiat sem gravida non.

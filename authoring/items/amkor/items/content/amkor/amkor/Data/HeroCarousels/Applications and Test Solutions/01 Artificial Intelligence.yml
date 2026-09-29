@@ -1,0 +1,97 @@
+﻿---
+ID: "09d07196-e205-4188-9807-8359855945ce"
+Parent: "eb291c8e-1aa0-4bc2-9357-ea872f420560"
+Template: "8ef3fb89-fd2f-48b9-a8ce-20f387e0ab0a"
+Path: /sitecore/content/amkor/amkor/Data/HeroCarousels/Applications and Test Solutions/01 Artificial Intelligence
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0938c532-f9ba-4658-b361-a96061553a4c"
+      Hint: Summary
+      Value: Advanced AI and ML Applications
+    - ID: "0c10d953-55c9-409d-bc96-022baeb83f02"
+      Hint: ImageOnLeft
+      Value: 1
+    - ID: "1c6ed158-edf5-4a99-9352-eab4a1943e03"
+      Hint: Link
+      Value: |
+        <link linktype="internal" id="2d3b2322-d080-4557-9e16-cb198f62c8aa" anchor="" querystring="" target="" class="" text="EXPLORE AI" title=""/>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260829T154638Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{FCA998C5-0CC3-4F91-94D8-0A4E6CAECE88}"
+    - ID: "48932c54-8c74-4029-ba15-1b8af19fe457"
+      Hint: Description
+      Value: "Heterogeneous packaging solutions that integrate chiplets, logic, memory, and high-bandwidth memory."
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ed2969cc-9ade-4c20-8890-ef1b73927a01"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c2442485-2c9e-47d6-85e8-509877a1d977"
+      Hint: Image
+      Value: |
+        <Image src="https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2026/07/Nvidia-Partnership-Banner_2000x600px_Final.jpg" width="2000" height="600" alt="Artificial intelligence and machine learning packaging solutions" />
+    - ID: "c8463a04-9fc1-4d12-b4c6-b4448f0cb298"
+      Hint: SlideName
+      Value: Artificial Intelligence and Machine Learning
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260829T204642Z
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0938c532-f9ba-4658-b361-a96061553a4c"
+      Hint: Summary
+      Value: 高度なAIおよびMLアプリケーション
+    - ID: "0c10d953-55c9-409d-bc96-022baeb83f02"
+      Hint: ImageOnLeft
+      Value: 1
+    - ID: "1c6ed158-edf5-4a99-9352-eab4a1943e03"
+      Hint: Link
+      Value: |
+        <link class="" querystring="" id="2d3b2322-d080-4557-9e16-cb198f62c8aa" anchor="" target="" title="" linktype="internal" text="AIを探索" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260829T154638Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{FCA998C5-0CC3-4F91-94D8-0A4E6CAECE88}"
+    - ID: "48932c54-8c74-4029-ba15-1b8af19fe457"
+      Hint: Description
+      Value: チップレット、ロジック、メモリ、高帯域幅メモリを統合するヘテロジニアスパッケージングソリューション。
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "6c6781f7-fe51-4f11-8d3e-f0c53561c0cb"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c2442485-2c9e-47d6-85e8-509877a1d977"
+      Hint: Image
+      Value: |
+        <image height="600" alt="人工知能および機械学習のパッケージングソリューション" width="2000" src="https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2026/07/Nvidia-Partnership-Banner_2000x600px_Final.jpg" />
+    - ID: "c8463a04-9fc1-4d12-b4c6-b4448f0cb298"
+      Hint: SlideName
+      Value: 人工知能および機械学習
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260831T030420Z

@@ -1,0 +1,218 @@
+﻿---
+ID: "69a414f6-9e12-48d6-92c1-215609517a83"
+Parent: "b6028f08-ae23-4416-b39e-789e8c97f337"
+Template: "d8715f80-7ca6-460f-bfc6-60c70451d736"
+Path: /sitecore/content/quanex/era/Home
+BranchID: "45cf9f42-b3ac-4412-aab9-f8441c7e448e"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{47F09AFA-562A-4689-AF0F-C203780D802A}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "3434c01f-1418-4c2e-a501-ac8f00f708fe"
+- ID: "dec8d2d5-e3cf-48b6-a653-8e69e2716641"
+  Hint: __Security
+  Value: |
+    ar|sitecore\Era Author|pd|-item:create|-item:delete|+item:read|^*|-bucket:makebucket|-item:rename|-bucket:unmake|-item:admin|-item:write|pe|-item:create|-item:delete|+item:read|-bucket:makebucket|^*|-item:rename|-bucket:unmake|-item:admin|-item:write|au|sitecore\testuser2@sitecore.info|pd|-item:create|-item:delete|+item:read|-item:rename|-item:write|pe|-item:create|-item:delete|+item:read|-item:rename|-item:write|
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{F558BEC9-C602-4D7A-B9A1-D0411C946EA4}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{E2524BB2-2C82-44F8-ACB1-9DA394F47AA9}"
+              p:before="*"
+              s:ds="0ef0b3ac-be3a-4156-99bc-2d98a5209fd1"
+              s:id="{80E42F34-7012-491E-9E5E-8D2B241CDEFF}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B67B0B8E9-448E-4452-84F6-3D0598E1A97F%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=7"
+              s:ph="headless-main" />
+            <r
+              uid="{4812DF09-E4D7-4BF3-B3D8-83901C132C35}"
+              p:after="r[@uid='{E2524BB2-2C82-44F8-ACB1-9DA394F47AA9}']"
+              s:ds="28ccfef6-befc-4164-af69-f4af16942dc3"
+              s:id="{6850377F-83D9-4C25-B26D-4CE1BC80BA3D}"
+              s:par="FieldNames=%7BCA91B068-E6A3-484B-A66C-1B964ABD078F%7D&amp;CSSStyles&amp;DynamicPlaceholderId=9"
+              s:ph="headless-main" />
+            <r
+              uid="{F396BE0D-D521-4AA9-A5DC-89B1823F40F5}"
+              p:after="*[1=2]"
+              s:ds="62d10a21-dba6-4f54-8152-9e73356f759f"
+              s:id="{4A6F68B9-709B-4AA8-9444-B695EFDC7180}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BA0EB8358-8100-4708-907B-904FFD1781CD%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=8"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Premium audio equipment and speakers designed for audiophiles. Experience exceptional sound quality with SYNCs heritage collection.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260811T154511Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: SYNC
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Premium audio equipment and speakers designed for audiophiles. Experience exceptional sound quality with SYNCs heritage collection.
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: SYNC
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "65408499-25bc-49d0-a2ff-b2fdd798aafc"
+      Hint: ogImage
+      Value: |
+        <image mediaid="{5977A6A5-D5D4-45BD-ADD5-0E7E629162FD}" />
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Seamless Synchronization
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "9426c3b0-c2b7-4ba8-a061-60f554564d1a"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Premium audio equipment and speakers designed for audiophiles. Experience exceptional sound quality with SYNCs heritage collection.
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: SYNC
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260821T115428Z
+    - ID: "e7f8a9b0-c1d2-4e3f-8a9b-0c1d2e3f4a5b"
+      Hint: metadataAuthor
+      Value: Sitecore
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: SYNC
+    - ID: "f6fcc0b6-31b2-49cd-8a66-4ba282a8ad24"
+      Hint: metadataKeywords
+      Value: home security, fenestration components, sustainable security solutions, ERA Everywhere platform, heritage and trust, security excellence, innovative security products, streamlined ordering, UK home security provider, total security solutions
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{E2524BB2-2C82-44F8-ACB1-9DA394F47AA9}"
+              p:before="*"
+              s:ds="0ef0b3ac-be3a-4156-99bc-2d98a5209fd1"
+              s:id="{80E42F34-7012-491E-9E5E-8D2B241CDEFF}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B67B0B8E9-448E-4452-84F6-3D0598E1A97F%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=7"
+              s:ph="headless-main" />
+            <r
+              uid="{4812DF09-E4D7-4BF3-B3D8-83901C132C35}"
+              p:after="r[@uid='{E2524BB2-2C82-44F8-ACB1-9DA394F47AA9}']"
+              s:ds="28ccfef6-befc-4164-af69-f4af16942dc3"
+              s:id="{6850377F-83D9-4C25-B26D-4CE1BC80BA3D}"
+              s:par="FieldNames=%7BCA91B068-E6A3-484B-A66C-1B964ABD078F%7D&amp;CSSStyles&amp;DynamicPlaceholderId=9"
+              s:ph="headless-main" />
+            <r
+              uid="{F396BE0D-D521-4AA9-A5DC-89B1823F40F5}"
+              p:after="*[1=2]"
+              s:ds="62d10a21-dba6-4f54-8152-9e73356f759f"
+              s:id="{4A6F68B9-709B-4AA8-9444-B695EFDC7180}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BA0EB8358-8100-4708-907B-904FFD1781CD%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=8"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: "Équipement audio et haut-parleurs haut de gamme conçus pour les audiophiles. Découvrez une qualité sonore exceptionnelle avec la collection patrimoniale de SYNC."
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260811T154511Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: SYNC
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: "Équipement audio et haut-parleurs haut de gamme conçus pour les audiophiles. Découvrez une qualité sonore exceptionnelle avec la collection patrimoniale de SYNC."
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: SYNC
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "65408499-25bc-49d0-a2ff-b2fdd798aafc"
+      Hint: ogImage
+      Value: |
+        <image mediaid="{5977A6A5-D5D4-45BD-ADD5-0E7E629162FD}" alt="Femme avec des écouteurs" />
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Synchronisation transparente
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "fedd3330-8a09-4d28-9d19-9ee810b428a1"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: "Équipement audio et haut-parleurs haut de gamme conçus pour les audiophiles. Découvrez une qualité sonore exceptionnelle avec la collection patrimoniale de SYNC."
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: SYNC
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260818T134455Z
+    - ID: "e7f8a9b0-c1d2-4e3f-8a9b-0c1d2e3f4a5b"
+      Hint: metadataAuthor
+      Value: Sitecore
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: SYNC
+    - ID: "f6fcc0b6-31b2-49cd-8a66-4ba282a8ad24"
+      Hint: metadataKeywords
+      Value: "sécurité à domicile, composants de fenestration, solutions de sécurité durables, plateforme ERA Everywhere, patrimoine et confiance, excellence en matière de sécurité, produits de sécurité innovants, commande simplifiée, fournisseur de sécurité à domicile au Royaume-Uni, solutions de sécurité totales"

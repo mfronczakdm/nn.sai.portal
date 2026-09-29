@@ -1,0 +1,126 @@
+﻿---
+ID: "9dfdded4-a062-42e6-b33b-0818c6538eb0"
+Parent: "b51818b3-e80a-490f-b9d5-03d8ff9bddc0"
+Template: "c241957a-b7cc-4bdd-962f-bf8652ed595c"
+Path: /sitecore/content/dwh/dwh/Home/Data/HeroST/HeroST 1
+BranchID: "890b7b74-9fac-4848-a3a6-ac14313f0684"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "a5e87b8a-496f-481b-bce9-5f96af1518c5"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{F804E5E9-2DAF-4E1C-847C-B31A6C8DF19B}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260608T142337Z
+    - ID: "2d9c3674-1ac3-4f41-9806-1cd1d57b1a8f"
+      Hint: Link2
+      Value: |
+        <link text="Buy" linktype="external" url="/Speakers/Heritage-30" anchor="" target="" />
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "65a20063-e768-4f8f-9f12-3197e3b500ef"
+      Hint: Image1
+      Value: |
+        <Image src="https://mrfbasech.sitecoresandbox.cloud/api/public/content/5a17f120778043fd91fc25b52fce8e86?v=fa929a7f" dam-id="RlmYRzBiQWKF5_ixLTGHTQ" width="2000" height="1158" alt="imgi_29_ec9a4f6a-1513-4f21-bfaf-c964335741e2.jpg" dam-content-type="Image" thumbnailsrc="https://mrfbasech.sitecoresandbox.cloud/api/gateway/93199/thumbnail" />
+    - ID: "83ea62a2-9b61-481e-9917-0914be85f124"
+      Hint: Title
+      Value: Explore areas
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "66c0feff-24d9-4c80-92fd-a20869406494"
+    - ID: "a580050c-e1c7-4d49-a8ad-4862efbc43d5"
+      Hint: Link1
+      Value: |
+        <link linktype="internal" id="35154d73-9938-4a53-a633-910c66b085a7" anchor="" querystring="" target="" class="" text="Search" title=""/>
+    - ID: "b0d63558-b173-45c0-8169-d2b89270f939"
+      Hint: Eyebrow
+      Value: Find your new Dream Home
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260625T200820Z
+    - ID: "ed7e710b-3811-4fcf-a154-836bd33fac65"
+      Hint: Image2
+      Value: |
+        <image mediaid="{875CD263-10C9-4D28-9285-7022A4802CE7}" />
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260608T142337Z
+    - ID: "2d9c3674-1ac3-4f41-9806-1cd1d57b1a8f"
+      Hint: Link2
+      Value: |
+        <link anchor="" target="" linktype="external" text="Acheter" url="/Speakers/Heritage-30" />
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "65a20063-e768-4f8f-9f12-3197e3b500ef"
+      Hint: Image1
+      Value: |
+        <Image src="https://mrfbasech.sitecoresandbox.cloud/api/public/content/5a17f120778043fd91fc25b52fce8e86?v=fa929a7f" dam-id="RlmYRzBiQWKF5_ixLTGHTQ" width="2000" height="1158" alt="imgi_29_ec9a4f6a-1513-4f21-bfaf-c964335741e2.jpg" dam-content-type="Image" thumbnailsrc="https://mrfbasech.sitecoresandbox.cloud/api/gateway/93199/thumbnail" />
+    - ID: "83ea62a2-9b61-481e-9917-0914be85f124"
+      Hint: Title
+      Value: Explorer les régions
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ff2bac4c-d5b6-47c8-979b-1fac8db47a62"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "a580050c-e1c7-4d49-a8ad-4862efbc43d5"
+      Hint: Link1
+      Value: |
+        <link anchor="" target="" linktype="external" text="Détails de Monarch II" url="/Speakers" />
+    - ID: "b0d63558-b173-45c0-8169-d2b89270f939"
+      Hint: Eyebrow
+      Value: Trouvez votre nouvelle maison de rêve
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260609T183254Z
+    - ID: "ed7e710b-3811-4fcf-a154-836bd33fac65"
+      Hint: Image2
+      Value: |
+        <image mediaid="{875CD263-10C9-4D28-9285-7022A4802CE7}" alt="vagues" />

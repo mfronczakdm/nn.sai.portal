@@ -1,0 +1,26 @@
+﻿---
+ID: "684fa81b-14a4-4383-b115-2a766ca44afb"
+Parent: "3290960d-8079-47c1-8ce9-cb404bc4e375"
+Template: "67ad4631-f2bd-4f8e-8539-dfaa4ebea596"
+Path: "/sitecore/content/andmore/atlanta-apparel/Data/Event Listings/Atlanta Apparel Events"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260901T204957Z
+    - ID: "729d4f5c-0587-4dea-8732-e8030a5898a4"
+      Hint: ListingTitle
+      Value: All Events
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a3824447-cd88-47d6-9db0-22ce058ac1c0"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260901T204957Z

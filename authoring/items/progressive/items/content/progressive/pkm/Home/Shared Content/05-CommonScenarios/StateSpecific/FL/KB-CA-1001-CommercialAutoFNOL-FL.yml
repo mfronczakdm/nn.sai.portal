@@ -1,0 +1,38 @@
+﻿---
+ID: "225a8cf4-b423-4098-8012-32a6191402cc"
+Parent: "681c3225-f42e-4708-9b09-dee191926f9e"
+Template: "bdf6c974-e68c-46a2-a0a9-d382fd0927eb"
+Path: "/sitecore/content/progressive/pkm/Home/Shared Content/05-CommonScenarios/StateSpecific/FL/KB-CA-1001-CommercialAutoFNOL-FL"
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{4FAAFB41-A03F-4014-A96E-B000382ED5A0}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "21b8d6f1-4294-46a5-98fd-38df0ce8aae0"
+      Hint: SourceDocumentLOB
+      Value: "{E799A026-FF03-4588-8607-16222D811A4C}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260803T035417Z
+    - ID: "76e0c665-5c4d-4d03-ae66-a5f3d12978ba"
+      Hint: Content
+      Value: "<p>In Florida, verify Progressive commercial schedule VIN and Eastern Time loss stamp on Commercial Auto FNOL, and escalate AI tender / MCS-90 language to Progressive coverage SME before any Florida tender response.</p>"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a737a7c8-9bca-4ecd-ac26-f2d1dcce627f"
+    - ID: "a8f6d033-4e9e-4598-be5e-da2456c41b9f"
+      Hint: sourceDocumentLink
+      Value: |
+        <link text="Commercial Auto FNOL — Business Vehicle Intake" linktype="internal" class="" title="" target="" querystring="" id="{D99BB2BD-2AAF-4742-8620-905CCB3892C2}" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260803T035418Z

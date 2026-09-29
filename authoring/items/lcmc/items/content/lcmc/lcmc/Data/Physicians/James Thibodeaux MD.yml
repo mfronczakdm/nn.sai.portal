@@ -1,0 +1,148 @@
+﻿---
+ID: "3649da30-9c2f-445b-9b40-ad91f25276dc"
+Parent: "13c422fb-8991-4468-b996-be73a904c23e"
+Template: "dd974469-0ef7-479d-8e2b-f61c09e0c4db"
+Path: /sitecore/content/lcmc/lcmc/Data/Physicians/James Thibodeaux MD
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1499b7e7-bfd9-4192-bf06-67bf1a9fd65f"
+      Hint: PhysicianDetailPage
+      Value: "{166BF434-5AA4-449F-89CB-8CB37B8343A0}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T003716Z
+    - ID: "3c71e7a2-30b6-4199-847b-808de57253ff"
+      Hint: PhysicianBio
+      Value: <p>Dr. Thibodeaux provides heart and vascular care at Lakeview Hospital and the LCMC Health Heart and Vascular clinic in Covington.</p>
+    - ID: "53091afb-0d3f-4b5b-a945-9555d8cf59d7"
+      Hint: PhysicianPhone
+      Value: "985-867-2131"
+    - ID: "66ea9126-0717-40dc-9bbf-0e726397ef3d"
+      Hint: ServingLocations
+      Value: "{C5D069A3-C8BB-40FE-89BE-D7F9D5C9614F}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "da080c15-8afa-436d-bb24-0df7c728e9ba"
+    - ID: "994c5b31-453a-473a-bbe9-dc87f28ce361"
+      Hint: LanguagesSpoken
+      Value: English, Spanish
+    - ID: "ba01a187-99bb-480e-bac0-225160cec41d"
+      Hint: PhysicianFullName
+      Value: James Thibodeaux
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d4c17411-0fcd-44a2-af62-a97801b89b46"
+      Hint: Specialty
+      Value: Cardiology
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T121344Z
+    - ID: "e633a16f-0854-4684-b841-b4742c322099"
+      Hint: Credentials
+      Value: MD, FACC
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1499b7e7-bfd9-4192-bf06-67bf1a9fd65f"
+      Hint: PhysicianDetailPage
+      Value: "{166BF434-5AA4-449F-89CB-8CB37B8343A0}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T003716Z
+    - ID: "3c71e7a2-30b6-4199-847b-808de57253ff"
+      Hint: PhysicianBio
+      Value: <p>El Dr. Thibodeaux brinda atención cardíaca y vascular en Lakeview Hospital y en la clínica del corazón y vascular de LCMC Health en Covington.</p>
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "53091afb-0d3f-4b5b-a945-9555d8cf59d7"
+      Hint: PhysicianPhone
+      Value: "985-867-2131"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "66ea9126-0717-40dc-9bbf-0e726397ef3d"
+      Hint: ServingLocations
+      Value: "{C5D069A3-C8BB-40FE-89BE-D7F9D5C9614F}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d97ded1c-2c30-4419-8af7-e40b9f468787"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "ba01a187-99bb-480e-bac0-225160cec41d"
+      Hint: PhysicianFullName
+      Value: James Thibodeaux
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d4c17411-0fcd-44a2-af62-a97801b89b46"
+      Hint: Specialty
+      Value: Cardiología
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T162715Z
+    - ID: "e633a16f-0854-4684-b841-b4742c322099"
+      Hint: Credentials
+      Value: MD, FACC
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1499b7e7-bfd9-4192-bf06-67bf1a9fd65f"
+      Hint: PhysicianDetailPage
+      Value: "{166BF434-5AA4-449F-89CB-8CB37B8343A0}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T003716Z
+    - ID: "3c71e7a2-30b6-4199-847b-808de57253ff"
+      Hint: PhysicianBio
+      Value: <p>Le Dr Thibodeaux offre des soins cardiaques et vasculaires à l’Hôpital Lakeview et à la clinique cardiaque et vasculaire de LCMC Health à Covington.</p>
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "53091afb-0d3f-4b5b-a945-9555d8cf59d7"
+      Hint: PhysicianPhone
+      Value: "985-867-2131"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "66ea9126-0717-40dc-9bbf-0e726397ef3d"
+      Hint: ServingLocations
+      Value: "{C5D069A3-C8BB-40FE-89BE-D7F9D5C9614F}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c0f1480b-d3fa-4b4c-8323-27b7da38595f"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "994c5b31-453a-473a-bbe9-dc87f28ce361"
+      Hint: LanguagesSpoken
+      Value: anglais, espagnol
+    - ID: "ba01a187-99bb-480e-bac0-225160cec41d"
+      Hint: PhysicianFullName
+      Value: James Thibodeaux
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d4c17411-0fcd-44a2-af62-a97801b89b46"
+      Hint: Specialty
+      Value: Cardiologie
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201338Z
+    - ID: "e633a16f-0854-4684-b841-b4742c322099"
+      Hint: Credentials
+      Value: M.D., FACC

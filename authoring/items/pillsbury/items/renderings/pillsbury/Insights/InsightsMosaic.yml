@@ -1,0 +1,55 @@
+﻿---
+ID: "cfd708f4-0bac-4e8e-9bac-90c52da27dc7"
+Parent: "53eafa3f-2a59-41fd-a4d9-02be5bbd583c"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Project/pillsbury/Insights/InsightsMosaic
+SharedFields:
+- ID: "037fe404-dd19-4bf7-8e30-4dadf68b27b0"
+  Hint: componentName
+  Value: InsightsMosaic
+- ID: "17bb046a-a32a-41b3-8315-81217947611b"
+  Hint: ComponentQuery
+  Value: |
+    query InsightsMosaic($datasource: String!, $language: String!) { datasource: item(path: $datasource, language: $language) { sectionTitle: field(name: "SectionTitle") { jsonValue } viewAllLink: field(name: "ViewAllLink") { jsonValue } children { results { id tileTitle: field(name: "TileTitle") { jsonValue } tileImage: field(name: "TileImage") { jsonValue } tileLink: field(name: "TileLink") { jsonValue } tileTag: field(name: "TileTag") { jsonValue } tileNumber: field(name: "TileNumber") { jsonValue } accentColor: field(name: "AccentColor") { jsonValue } imagePlacement: field(name: "ImagePlacement") { jsonValue } tileSpan: field(name: "TileSpan") { jsonValue } } } } }
+- ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
+  Hint: Datasource Template
+  Value: /sitecore/templates/Project/pillsbury/Components/Insights/InsightsMosaic
+- ID: "a77e8568-1ab3-44f1-a664-b7c37ec7810d"
+  Hint: Parameters Template
+  Value: "{3A68F371-3438-44E8-A89C-80F39D90C274}"
+- ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
+  Hint: Datasource Location
+  Value: "query:$site/*[@@name='Data']/*[@@templatename='Insights Mosaic Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='Insights Mosaic Folder']"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "c435c884-bfb1-47d7-b5e2-12e76ca39fe6"
+Languages:
+- Language: en
+  Fields:
+  - ID: "30e85e5d-e00a-4864-b358-7624d511deb4"
+    Hint: __Unversioned revision
+    Value: "12ed16da-6408-4bff-9017-1c17ca98fea5"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260822T023849Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c44395ef-94a4-4e72-a752-3c06db7fa166"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260822T023850Z

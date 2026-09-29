@@ -1,0 +1,139 @@
+﻿---
+ID: "b69f3f30-2dfd-4668-aced-3cee2b15273d"
+Parent: "d9cb7792-ee41-4a8f-a1f8-729d90b4e527"
+Template: "4540c3ad-240b-4d59-bd8b-f2a34d1edc79"
+Path: /sitecore/content/lcmc/lcmc/Data/Services/Urgent Care
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "195a3eb9-2014-4ade-9528-46016044c588"
+      Hint: ServiceTitle
+      Value: Urgent Care
+    - ID: "249f0edb-a3f4-4f20-a0b6-e389bdbe8547"
+      Hint: ServiceDetail
+      Value: <p>Urgent care clinics treat sprains, infections, minor injuries, and illnesses that need prompt attention but are not emergencies.</p><p>Neighborhood locations across Chalmette, Clearview, Gretna, Kenner, Lakeview, Luling, Marrero, and Uptown keep care close to home.</p>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T003601Z
+    - ID: "36f9cc2a-c286-48dc-8161-cbc3300f8601"
+      Hint: OfferedAtLocations
+      Value: |
+        {764E7C6F-75BB-49EE-B304-4E5A0E6F3DAC}
+        {A2D66593-0A5D-4EE4-82D3-FA88A59C71FA}
+        {F1E5353C-A2B7-47F0-9570-85B8FD6D9FED}
+        {57D504EA-804B-4166-84EB-CE298A6853F0}
+        {53907833-68C9-4A0D-A500-FAD77D27FBD0}
+        {4C15C596-29EB-46C8-BD93-53E7DEBA82E0}
+        {EBC36A98-6CF2-477A-827A-7BEFEB2FE5A8}
+        {9E0B2413-44E2-488E-9346-39243F87E342}
+    - ID: "4491d77b-da17-4a4d-8480-8a09826476a5"
+      Hint: ServiceShortDescription
+      Value: "Walk-in evaluation for non-life-threatening illnesses and injuries at LCMC Health urgent care clinics."
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "3b0715f9-808f-47ac-9363-4a5d1ff2eb0f"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260908T003825Z
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "195a3eb9-2014-4ade-9528-46016044c588"
+      Hint: ServiceTitle
+      Value: Atención de urgencias
+    - ID: "249f0edb-a3f4-4f20-a0b6-e389bdbe8547"
+      Hint: ServiceDetail
+      Value: <p>Las clínicas de atención de urgencias tratan esguinces, infecciones, lesiones menores y enfermedades que necesitan atención rápida, pero que no son emergencias.</p><p>Las ubicaciones en Chalmette, Clearview, Gretna, Kenner, Lakeview, Luling, Marrero y Uptown mantienen la atención cerca de casa.</p>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T003601Z
+    - ID: "36f9cc2a-c286-48dc-8161-cbc3300f8601"
+      Hint: OfferedAtLocations
+      Value: |
+        {764E7C6F-75BB-49EE-B304-4E5A0E6F3DAC}
+        {A2D66593-0A5D-4EE4-82D3-FA88A59C71FA}
+        {F1E5353C-A2B7-47F0-9570-85B8FD6D9FED}
+        {57D504EA-804B-4166-84EB-CE298A6853F0}
+        {53907833-68C9-4A0D-A500-FAD77D27FBD0}
+        {4C15C596-29EB-46C8-BD93-53E7DEBA82E0}
+        {EBC36A98-6CF2-477A-827A-7BEFEB2FE5A8}
+        {9E0B2413-44E2-488E-9346-39243F87E342}
+    - ID: "4491d77b-da17-4a4d-8480-8a09826476a5"
+      Hint: ServiceShortDescription
+      Value: Evaluación sin cita previa para enfermedades y lesiones que no ponen en peligro la vida en las clínicas de atención de urgencias de LCMC Health.
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "87bb0fde-3acd-4c34-90f8-c57a3540fe83"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T162729Z
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "195a3eb9-2014-4ade-9528-46016044c588"
+      Hint: ServiceTitle
+      Value: Soins urgents
+    - ID: "249f0edb-a3f4-4f20-a0b6-e389bdbe8547"
+      Hint: ServiceDetail
+      Value: <p>Les cliniques de soins urgents traitent les entorses, les infections, les blessures mineures et les maladies qui nécessitent des soins rapides, sans toutefois être des urgences.</p><p>Des emplacements de quartier à Chalmette, Clearview, Gretna, Kenner, Lakeview, Luling, Marrero et Uptown permettent de recevoir des soins près de chez vous.</p>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T003601Z
+    - ID: "36f9cc2a-c286-48dc-8161-cbc3300f8601"
+      Hint: OfferedAtLocations
+      Value: |
+        {764E7C6F-75BB-49EE-B304-4E5A0E6F3DAC}
+        {A2D66593-0A5D-4EE4-82D3-FA88A59C71FA}
+        {F1E5353C-A2B7-47F0-9570-85B8FD6D9FED}
+        {57D504EA-804B-4166-84EB-CE298A6853F0}
+        {53907833-68C9-4A0D-A500-FAD77D27FBD0}
+        {4C15C596-29EB-46C8-BD93-53E7DEBA82E0}
+        {EBC36A98-6CF2-477A-827A-7BEFEB2FE5A8}
+        {9E0B2413-44E2-488E-9346-39243F87E342}
+    - ID: "4491d77b-da17-4a4d-8480-8a09826476a5"
+      Hint: ServiceShortDescription
+      Value: "Évaluation sans rendez-vous pour les maladies et blessures non mortelles dans les cliniques de soins urgents de LCMC Health."
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ebe5f104-2976-492f-bb46-96616cbd3a9e"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201357Z

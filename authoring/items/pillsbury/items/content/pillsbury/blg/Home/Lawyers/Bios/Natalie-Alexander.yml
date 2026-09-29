@@ -1,0 +1,181 @@
+﻿---
+ID: "ab3fb02f-0c92-42ed-b826-3de899cf4cb6"
+Parent: "b3dfdc46-22e0-4f87-8cc5-2b635afc2242"
+Template: "d9ed4a26-1b44-4f52-9eae-61e1eb193671"
+Path: "/sitecore/content/pillsbury/blg/Home/Lawyers/Bios/Natalie-Alexander"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{6C59AE29-D0A1-4B77-9305-0ABAB21D5FE5}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{CB52AA51-5E9B-4446-B12C-D3700F8D3AA5}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "246a1ef7-3707-4914-a09b-5bad3f4d594c"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{80F560E6-9362-4818-A29F-5F145AE15500}"
+              s:ds=""
+              s:id="{560AB1F6-8C48-4449-9E72-F29C39BA750D}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B111402C4-3C22-4400-B2DE-2B6D31F268D9%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "19b27df3-a169-420a-a648-7d766ff1ce33"
+      Hint: FullName
+      Value: Kendall Andersen
+    - ID: "1bcd45b4-983e-4549-a1f0-8c69ed67e2ad"
+      Hint: PreferredName
+      Value: Kendall
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260804T195355Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{C55B483C-EA7F-4E76-A066-985F7D9396CA}"
+    - ID: "4e0e2a6d-de8f-4156-ab56-e0ad0a7824fa"
+      Hint: Office
+      Value: "{B29025A4-B652-41BC-A04B-47565C8CF77E}"
+    - ID: "7abdd52d-64a7-443b-bc39-4a20cb7dee8e"
+      Hint: Headshot
+      Value: |
+        <image src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=800&h=800&q=80" alt="Natalie Alexander" width="800" height="800" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2fbfd7c4-dbb0-4b7c-adb7-5e6743d60be9"
+    - ID: "8e86bae1-7f7a-4e3e-a916-ba2e2eafea5a"
+      Hint: Industries
+      Value: |
+        {034063EC-F9BD-4A0A-AE68-9B20B352E4C4}
+        {A6914937-06AF-475A-A9FD-07C7057232B2}
+    - ID: "a3aae655-77a7-4ec0-85ba-d1ddc3a4d34f"
+      Hint: SeoTitle
+      Value: Kendall Andersen | Banking & Financial Services Lawyer Vancouver | BLG
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d628b04c-71e1-416d-bfb6-ec073f1dba6e"
+      Hint: SeoDescription
+      Value: Kendall Andersen is a Partner in Banking, Financial Services and Insolvency at BLG in Vancouver.
+    - ID: "d83bbbee-b5ff-4713-aa0e-9e59fdc7563f"
+      Hint: Email
+      Value: kandersen@blg.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260822T014252Z
+    - ID: "dc46c43e-781c-4388-b53f-a1d8a083f2d9"
+      Hint: PracticeAreas
+      Value: |
+        {F22F6BDD-0E2F-4064-B163-EF4F22C95864}
+        {B67F9D4E-B9CD-4E53-AE8A-D02887602E63}
+        {A91BC866-E6E4-482F-BD1C-1644F2A9345B}
+    - ID: "df24e0b6-c373-4add-b339-034c64452a38"
+      Hint: Summary
+      Value: Practises commercial lending, bankruptcy, insolvency and restructuring, mergers and acquisitions, and commercial transactions in Vancouver.
+    - ID: "dfcaa3d1-e572-4289-9111-2324afa8ee5f"
+      Hint: JobTitle
+      Value: Partner
+    - ID: "e653befc-026a-4333-8b42-13d7ca3bf88a"
+      Hint: BarAdmissions
+      Value: "{91760DE9-CC42-4A4D-9F34-FD19F3E5CA73}"
+    - ID: "e854dce0-3a20-40db-b32e-9e223e599310"
+      Hint: Biography
+      Value: "<p>Kendall Andersen practises commercial lending, bankruptcy, insolvency and restructuring, mergers and acquisitions, and commercial transactions. He regularly acts for financial institutions, borrowers and private lenders.</p><p>He also advises on corporate and commercial matters, including LNG projects and long-term terminal services agreements, and acts for debtors, creditors, trustees and monitors in CCAA and BIA proceedings. Kendall provides legal services through a Law Corporation.</p>"
+    - ID: "f9f1c6c2-6a9e-4f91-8b8c-084feab583db"
+      Hint: Phone
+      Value: +1.604.687.5744
+  - Version: 2
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{80F560E6-9362-4818-A29F-5F145AE15500}"
+              s:ds=""
+              s:id="{560AB1F6-8C48-4449-9E72-F29C39BA750D}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B111402C4-3C22-4400-B2DE-2B6D31F268D9%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "19b27df3-a169-420a-a648-7d766ff1ce33"
+      Hint: FullName
+      Value: Kendall Andersen
+    - ID: "1bcd45b4-983e-4549-a1f0-8c69ed67e2ad"
+      Hint: PreferredName
+      Value: Kendall
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260822T022838Z
+    - ID: "4e0e2a6d-de8f-4156-ab56-e0ad0a7824fa"
+      Hint: Office
+      Value: "{B29025A4-B652-41BC-A04B-47565C8CF77E}"
+    - ID: "7abdd52d-64a7-443b-bc39-4a20cb7dee8e"
+      Hint: Headshot
+      Value: |
+        <image src="https://www.blg.com/-/media/bios/img_vancouver/ken_anderson.png" alt="Kendall Andersen" width="800" height="800" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a9bcb88f-e1d3-4c98-8792-2a52363535ba"
+    - ID: "8e86bae1-7f7a-4e3e-a916-ba2e2eafea5a"
+      Hint: Industries
+      Value: |
+        {034063EC-F9BD-4A0A-AE68-9B20B352E4C4}
+        {A6914937-06AF-475A-A9FD-07C7057232B2}
+    - ID: "a3aae655-77a7-4ec0-85ba-d1ddc3a4d34f"
+      Hint: SeoTitle
+      Value: Kendall Andersen | Banking & Financial Services Lawyer Vancouver | BLG
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260822T022838Z
+    - ID: "d628b04c-71e1-416d-bfb6-ec073f1dba6e"
+      Hint: SeoDescription
+      Value: Kendall Andersen is a Partner in Banking, Financial Services and Insolvency at BLG in Vancouver.
+    - ID: "d83bbbee-b5ff-4713-aa0e-9e59fdc7563f"
+      Hint: Email
+      Value: kandersen@blg.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260822T022838Z
+    - ID: "dc46c43e-781c-4388-b53f-a1d8a083f2d9"
+      Hint: PracticeAreas
+      Value: |
+        {F22F6BDD-0E2F-4064-B163-EF4F22C95864}
+        {B67F9D4E-B9CD-4E53-AE8A-D02887602E63}
+        {A91BC866-E6E4-482F-BD1C-1644F2A9345B}
+    - ID: "df24e0b6-c373-4add-b339-034c64452a38"
+      Hint: Summary
+      Value: Practises commercial lending, bankruptcy, insolvency and restructuring, mergers and acquisitions, and commercial transactions in Vancouver.
+    - ID: "dfcaa3d1-e572-4289-9111-2324afa8ee5f"
+      Hint: JobTitle
+      Value: Partner
+    - ID: "e653befc-026a-4333-8b42-13d7ca3bf88a"
+      Hint: BarAdmissions
+      Value: "{91760DE9-CC42-4A4D-9F34-FD19F3E5CA73}"
+    - ID: "e854dce0-3a20-40db-b32e-9e223e599310"
+      Hint: Biography
+      Value: "<p>Kendall Andersen practises commercial lending, bankruptcy, insolvency and restructuring, mergers and acquisitions, and commercial transactions. He regularly acts for financial institutions, borrowers and private lenders.</p><p>He also advises on corporate and commercial matters, including LNG projects and long-term terminal services agreements, and acts for debtors, creditors, trustees and monitors in CCAA and BIA proceedings. Kendall provides legal services through a Law Corporation.</p>"
+    - ID: "f9f1c6c2-6a9e-4f91-8b8c-084feab583db"
+      Hint: Phone
+      Value: +1.604.687.5744

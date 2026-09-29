@@ -1,0 +1,119 @@
+﻿---
+ID: "29672707-cbb0-4eb9-9063-89944fba2d44"
+Parent: "beaa3094-4c3e-4a6d-b8b8-8d81d13d62da"
+Template: "77954ee9-a334-4fba-8a0b-ff380e249391"
+Path: /sitecore/content/dwh/dwh/Home/Sites/Austin/Triple Creek Crossing
+BranchID: "5b8c4bd8-7dbe-4d06-8c3b-ced7af8086a5"
+SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{D9F5319E-74F4-4DEB-8CD1-BA27A8782FA9}"
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{7C43F215-D911-463C-BEF3-BD2A1939E694}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "01102072-92f6-4c76-8351-a6d89b92964d"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{B9E5B018-3FD0-4626-B29C-24EA1FB31BE0}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "01f01b68-9200-4a32-8adf-218f8cf1d749"
+      Hint: ammenities
+      Value: |
+        {90845C7F-AB40-4FAF-A9ED-5880E16E9169}
+        {1376466B-919E-4469-A39E-20E0A3CCA6A6}
+        {A91DFF16-3397-4A8F-A2B9-6B324E2B8090}
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{A8A6F637-A456-4C63-AAB9-2F147B29188E}"
+              p:before="*"
+              s:id="{F418B228-1B5C-440B-9922-6443CEFC7B54}"
+              s:par="CSSStyles"
+              s:ph="headless-main" />
+            <r
+              uid="{0627AE27-C8A2-4212-A3FC-1FD58F705C10}"
+              p:after="*[1=2]"
+              s:id="{B748CFCF-5440-435C-8429-261EFFAF6DD1}"
+              s:par="CSSStyles"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "09bc62ec-1e1c-4bf1-9e8a-dda5c42144ff"
+      Hint: ProductName
+      Value: Triple Creek Crossing
+    - ID: "0d60ba7b-b73e-484c-afd8-722f121433ba"
+      Hint: Image1
+      Value: |
+        <Image src="https://mrfbasech.sitecoresandbox.cloud/api/public/content/94765-HomepagePromoCTAs-1100x740?v=fafd8f17" dam-id="NEn7ygGBQAKA_2UKnHEwxw" width="1100" height="740" alt="imgi_196_49617599-bbca-47b9-8c98-f7e501e93e88.jpg" dam-content-type="Image" thumbnailsrc="https://mrfbasech.sitecoresandbox.cloud/api/gateway/94765/thumbnail" />
+    - ID: "145aa895-f513-4912-8d8a-442de67d8598"
+      Hint: Slug
+      Value: 
+    - ID: "195b75fb-1ac3-49af-93e2-b3f6b3349439"
+      Hint: Name
+      Value: Triple Creek Crossing
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260626T170914Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{57CC7DCE-E6B1-4564-9581-0E5850B8BDF2}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\nick.robinett@sitecore.com
+    - ID: "56fdd583-461f-424d-8922-0ca69340a977"
+      Hint: Community Type
+      Value: |
+        {8F5DCE2C-EFA9-47AD-9F94-5625B1EBAC6A}
+        {2BFD63CB-B092-4D63-855B-5F4521CDF540}
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\nick.robinett@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "fda02da6-b67f-4d34-9989-01a667142b8e"
+    - ID: "acacfe9c-91e6-45b9-9e3d-5b3a0aadbc11"
+      Hint: Overview
+      Value: |
+        <div class="ck-content"><p>David Weekley Homes is a premium yet practical homebuilder known for trust, quality craftsmanship, and personalization. Founded in Texas, the company operates across 13 states and 19 markets, guiding buyers through the homebuilding journey with exceptional customer care and energy-efficient solutions. Focused on creating homes that reflect individual lifestyles, the brand combines emotional promises like fostering trust with practical benefits such as innovative designs and sustainable living programs like EnergySaver.</p></div>
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\nick.robinett@sitecore.com
+    - ID: "bf86d3d1-281f-48a0-b348-386c150cebc6"
+      Hint: FloorPlans
+      Value: |
+        {A73BD66C-850B-4C17-85E4-CF0E710E8DCC}
+        {C02C53CA-DA9D-441E-B577-0BA31463947D}
+        {1CFCEF2B-4733-4653-A93B-40A15E3925BA}
+    - ID: "c2dfbc7f-9aa9-4b31-aeb9-cb5985ab8fee"
+      Hint: Status
+      Value: Active
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260626T172400Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Triple Creek Crossing
+    - ID: "f6e0e5dc-2f2e-49a3-a3e6-a25fa2bff1c1"
+      Hint: square footage range
+      Value: "1800-3000"

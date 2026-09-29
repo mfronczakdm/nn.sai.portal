@@ -1,0 +1,23 @@
+﻿---
+ID: "9f34023a-f2fe-45cd-8bed-fb743f305263"
+Parent: "c0917e28-1932-4e37-8fcd-743c1c9a35a5"
+Template: "020fc644-d837-49f1-842a-3ffc03b08b61"
+Path: "/sitecore/content/dwh/dwh/Data/Site/Dallas - Fort Worth"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260623T142932Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "e9bb0ced-e07a-4a56-b003-b1215bf6e081"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260623T142932Z

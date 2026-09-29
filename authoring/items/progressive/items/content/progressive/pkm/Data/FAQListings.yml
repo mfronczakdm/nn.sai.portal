@@ -1,0 +1,30 @@
+﻿---
+ID: "3ea7edbe-0d3e-44ca-a12a-f597e4187a50"
+Parent: "d37965be-ed74-4694-9040-57ad038a3b70"
+Template: "8a4273dc-35e8-4fb3-aeae-2898179bc593"
+Path: /sitecore/content/progressive/pkm/Data/FAQListings
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: "{1756BC61-6E53-434E-BBCE-BCCFD712A58C}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "e8219e17-7706-4112-8fbf-e691c9f3b7d2"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260729T221146Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2fafad93-80c4-4300-a567-30a8412a3afb"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260730T124335Z

@@ -1,0 +1,148 @@
+﻿---
+ID: "24eb9bf3-bfd6-4d01-87a7-baf6d3da421c"
+Parent: "13c422fb-8991-4468-b996-be73a904c23e"
+Template: "dd974469-0ef7-479d-8e2b-f61c09e0c4db"
+Path: /sitecore/content/lcmc/lcmc/Data/Physicians/Gabrielle Moreau MD
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1499b7e7-bfd9-4192-bf06-67bf1a9fd65f"
+      Hint: PhysicianDetailPage
+      Value: "{5F05A3ED-0BC5-4274-AF3C-80D66CF30503}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260909T000747Z
+    - ID: "3c71e7a2-30b6-4199-847b-808de57253ff"
+      Hint: PhysicianBio
+      Value: "<p>Dr. Moreau is a board-certified otolaryngologist at West Jefferson Medical Center, caring for adults and children with ear, nose, and throat conditions on the Westbank.</p>"
+    - ID: "53091afb-0d3f-4b5b-a945-9555d8cf59d7"
+      Hint: PhysicianPhone
+      Value: "504-347-5511"
+    - ID: "66ea9126-0717-40dc-9bbf-0e726397ef3d"
+      Hint: ServingLocations
+      Value: "{35C77454-5FB8-460D-BC12-299F7B31DE5A}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "31bdb7af-132b-4812-a5b5-c627c00d94f3"
+    - ID: "994c5b31-453a-473a-bbe9-dc87f28ce361"
+      Hint: LanguagesSpoken
+      Value: English, Spanish
+    - ID: "ba01a187-99bb-480e-bac0-225160cec41d"
+      Hint: PhysicianFullName
+      Value: Gabrielle Moreau
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d4c17411-0fcd-44a2-af62-a97801b89b46"
+      Hint: Specialty
+      Value: ENT
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T195008Z
+    - ID: "e633a16f-0854-4684-b841-b4742c322099"
+      Hint: Credentials
+      Value: MD
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1499b7e7-bfd9-4192-bf06-67bf1a9fd65f"
+      Hint: PhysicianDetailPage
+      Value: "{5F05A3ED-0BC5-4274-AF3C-80D66CF30503}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260909T000747Z
+    - ID: "3c71e7a2-30b6-4199-847b-808de57253ff"
+      Hint: PhysicianBio
+      Value: <p>La Dra. Moreau es una otorrinolaringóloga certificada por la junta en West Jefferson Medical Center, donde atiende a adultos y niños con afecciones del oído, la nariz y la garganta en la Ribera Oeste.</p>
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "53091afb-0d3f-4b5b-a945-9555d8cf59d7"
+      Hint: PhysicianPhone
+      Value: "504-349-6400"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "66ea9126-0717-40dc-9bbf-0e726397ef3d"
+      Hint: ServingLocations
+      Value: "{35C77454-5FB8-460D-BC12-299F7B31DE5A}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "cde15568-c6c6-4bdf-bc74-3720b3177a96"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "ba01a187-99bb-480e-bac0-225160cec41d"
+      Hint: PhysicianFullName
+      Value: Gabrielle Moreau
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d4c17411-0fcd-44a2-af62-a97801b89b46"
+      Hint: Specialty
+      Value: Otorrinolaringología
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T162710Z
+    - ID: "e633a16f-0854-4684-b841-b4742c322099"
+      Hint: Credentials
+      Value: Médica
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1499b7e7-bfd9-4192-bf06-67bf1a9fd65f"
+      Hint: PhysicianDetailPage
+      Value: "{5F05A3ED-0BC5-4274-AF3C-80D66CF30503}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260909T000747Z
+    - ID: "3c71e7a2-30b6-4199-847b-808de57253ff"
+      Hint: PhysicianBio
+      Value: "<p>La Dre Moreau est une oto-rhino-laryngologiste certifiée par le conseil qui soigne les adultes et les enfants pour des problèmes d’oreille, de nez et de gorge au West Jefferson Medical Center, sur la rive ouest.</p>"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "53091afb-0d3f-4b5b-a945-9555d8cf59d7"
+      Hint: PhysicianPhone
+      Value: "504-347-5511"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "66ea9126-0717-40dc-9bbf-0e726397ef3d"
+      Hint: ServingLocations
+      Value: "{35C77454-5FB8-460D-BC12-299F7B31DE5A}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ebb3f46d-3aa3-48c2-89c5-206058234776"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "994c5b31-453a-473a-bbe9-dc87f28ce361"
+      Hint: LanguagesSpoken
+      Value: anglais, espagnol
+    - ID: "ba01a187-99bb-480e-bac0-225160cec41d"
+      Hint: PhysicianFullName
+      Value: Gabrielle Moreau
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d4c17411-0fcd-44a2-af62-a97801b89b46"
+      Hint: Specialty
+      Value: ORL
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201338Z
+    - ID: "e633a16f-0854-4684-b841-b4742c322099"
+      Hint: Credentials
+      Value: M.D.

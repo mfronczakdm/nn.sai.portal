@@ -1,0 +1,189 @@
+﻿---
+ID: "33e873d4-852e-44bc-9900-5016147f7212"
+Parent: "0284e480-e14c-4a3e-ae47-caf505c93347"
+Template: "13c565fe-09c3-4994-8b5a-580da061be0c"
+Path: /sitecore/content/lcmc/lcmc/Data/Listing Blocks/LCMC News and Events/News Specialists
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0bed7c19-045c-4702-8f2e-4ba6219951a7"
+      Hint: ItemSummary
+      Value: <p>Cardiology and oncology teams welcome new physicians this summer.</p>
+    - ID: "18691602-fac5-4db1-b600-f2c00b31cc1e"
+      Hint: ItemTitle
+      Value: New specialists join University Medical Center
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T015850Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "67c74492-4daf-40dc-bcb9-7bb8ef6cb8c5"
+      Hint: ItemImage
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/d2bea644f2f6417db8a9b1d188bd4535?v=4795892f" dam-id="vIkGKMnuRoiD8qeVplO3FQ" width="700" height="468" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/87285/thumbnail" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "48289e78-82d9-404f-9e70-f284a0638dc0"
+    - ID: "b940d47f-05d1-404d-844e-c3eb1146c521"
+      Hint: ItemDate
+      Value: July 28, 2026
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T164701Z
+    - ID: "da6bd2f3-3f33-4807-aabe-81732653d5ca"
+      Hint: ItemLink
+      Value: |
+        <link text="Read story" anchor="" linktype="external" class="" title="" target="" querystring="" url="https://www.lcmchealth.org/news/" />
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0bed7c19-045c-4702-8f2e-4ba6219951a7"
+      Hint: ItemSummary
+      Value: <p>Los equipos de cardiología y oncología dan la bienvenida a nuevos médicos este verano.</p>
+    - ID: "18691602-fac5-4db1-b600-f2c00b31cc1e"
+      Hint: ItemTitle
+      Value: Nuevos especialistas se incorporan al University Medical Center
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T015850Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "83a48602-3792-4e6f-a965-cbcb724da48b"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "b940d47f-05d1-404d-844e-c3eb1146c521"
+      Hint: ItemDate
+      Value: 28 de julio de 2026
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T163031Z
+    - ID: "da6bd2f3-3f33-4807-aabe-81732653d5ca"
+      Hint: ItemLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="Leer la historia" url="https://www.lcmchealth.org/news/" />
+  - Version: 2
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0bed7c19-045c-4702-8f2e-4ba6219951a7"
+      Hint: ItemSummary
+      Value: <p>Los equipos de cardiología y oncología dan la bienvenida a nuevos médicos este verano.</p>
+    - ID: "18691602-fac5-4db1-b600-f2c00b31cc1e"
+      Hint: ItemTitle
+      Value: Nuevos especialistas se unen a University Medical Center
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260910T200831Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "67c74492-4daf-40dc-bcb9-7bb8ef6cb8c5"
+      Hint: ItemImage
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/d2bea644f2f6417db8a9b1d188bd4535?v=4795892f" dam-id="vIkGKMnuRoiD8qeVplO3FQ" width="700" height="468" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/87285/thumbnail" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "8e0fee26-a723-45d8-94c3-ab48a8e45d80"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "b940d47f-05d1-404d-844e-c3eb1146c521"
+      Hint: ItemDate
+      Value: 28 de julio de 2026
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260910T200831Z
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T200836Z
+    - ID: "da6bd2f3-3f33-4807-aabe-81732653d5ca"
+      Hint: ItemLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="Leer historia" url="https://www.lcmchealth.org/news/" />
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0bed7c19-045c-4702-8f2e-4ba6219951a7"
+      Hint: ItemSummary
+      Value: <p>Les équipes de cardiologie et d’oncologie accueillent de nouveaux médecins cet été.</p>
+    - ID: "18691602-fac5-4db1-b600-f2c00b31cc1e"
+      Hint: ItemTitle
+      Value: De nouveaux spécialistes se joignent à University Medical Center
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T015850Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "67c74492-4daf-40dc-bcb9-7bb8ef6cb8c5"
+      Hint: ItemImage
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/d2bea644f2f6417db8a9b1d188bd4535?v=4795892f" dam-id="vIkGKMnuRoiD8qeVplO3FQ" width="700" height="468" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/87285/thumbnail" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f8a09a4c-0858-4492-aab5-5bf7fab75bdd"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "b940d47f-05d1-404d-844e-c3eb1146c521"
+      Hint: ItemDate
+      Value: 28 juillet 2026
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201646Z
+    - ID: "da6bd2f3-3f33-4807-aabe-81732653d5ca"
+      Hint: ItemLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="Lire l’article" url="https://www.lcmchealth.org/news/" />

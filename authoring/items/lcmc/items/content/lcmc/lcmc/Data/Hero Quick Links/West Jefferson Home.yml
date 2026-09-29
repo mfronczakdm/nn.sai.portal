@@ -1,0 +1,343 @@
+﻿---
+ID: "de41eeee-dbfb-4fac-a53a-a8009c62dc73"
+Parent: "56c2e25d-8b3a-4d8f-bafe-7c78f479889d"
+Template: "cff35dc3-7968-4adb-b146-417cb0aa6bbb"
+Path: /sitecore/content/lcmc/lcmc/Data/Hero Quick Links/West Jefferson Home
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "08d932ab-22de-406e-8607-9333752601f0"
+      Hint: ZipPlaceholder
+      Value: Enter your ZIP code
+    - ID: "19727ed8-0fc6-4a07-88f3-7fa8e715cba9"
+      Hint: ZipLabel
+      Value: Find a provider near you
+    - ID: "2238e1f9-7718-49a3-81f7-4d6c11ce7b21"
+      Hint: BackgroundImage
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/2384069e59e64468935d5dcc0ff5cce8?v=4031d193" dam-id="vIkGKMnuRoiD8qeVplO3FQ" width="700" height="468" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/87285/thumbnail" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T124004Z
+    - ID: "4aad72d8-6199-4092-b07f-5b3238530b0c"
+      Hint: SpecialtyOptions
+      Value: |
+        Addiction Medicine
+        Cardiology
+        Emergency Medicine
+        Family Medicine
+        Internal Medicine
+        Obstetrics and Gynecology
+        Orthopedic Surgery
+        Pediatrics
+        Primary Care
+        Urgent Care
+    - ID: "6af5ca49-2775-4088-b525-64368e238e54"
+      Hint: ZipSearchLink
+      Value: |
+        <link text="Find a provider" anchor="" linktype="external" class="" title="" target="" querystring="" url="https://www.lcmchealth.org/find-a-provider/" />
+    - ID: "6c93a8e5-7182-45f6-9ac5-89d3daa58a19"
+      Hint: Headline
+      Value: Your Health Starts Here
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ae235b98-ba36-4fd6-a964-4df05e8e9c5a"
+    - ID: "ac54f8c6-4497-47ad-9f7b-c9d0b4da42d3"
+      Hint: SpecialtyLabel
+      Value: Search by specialty
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "cf941c96-49e6-42c3-8342-0dadf9efe4cd"
+      Hint: SpecialtySearchLink
+      Value: |
+        <link text="Search by specialty" anchor="" linktype="external" class="" title="" target="" querystring="" url="https://www.lcmchealth.org/find-a-provider/" />
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T101503Z
+    - ID: "da2f5138-64ab-4e3e-a6fe-7569c58da5c2"
+      Hint: SpecialtyPlaceholder
+      Value: Select a specialty
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "08d932ab-22de-406e-8607-9333752601f0"
+      Hint: ZipPlaceholder
+      Value: Ingresa tu código postal
+    - ID: "19727ed8-0fc6-4a07-88f3-7fa8e715cba9"
+      Hint: ZipLabel
+      Value: Encuentra un proveedor cerca de ti
+    - ID: "2238e1f9-7718-49a3-81f7-4d6c11ce7b21"
+      Hint: BackgroundImage
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/d85584a4578b464881725e5e7263fdb4?v=46ad2e9a" dam-id="FFKau2dLQCKZB3YbE8Ot8w" width="1920" height="645" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/85608/thumbnail" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T124004Z
+    - ID: "4aad72d8-6199-4092-b07f-5b3238530b0c"
+      Hint: SpecialtyOptions
+      Value: |
+        Medicina de las adicciones
+        Cardiología
+        Medicina de urgencias
+        Medicina familiar
+        Medicina interna
+        Obstetricia y ginecología
+        Cirugía ortopédica
+        Pediatría
+        Atención primaria
+        Atención de urgencias
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "6af5ca49-2775-4088-b525-64368e238e54"
+      Hint: ZipSearchLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="Encuentra un proveedor" url="https://www.lcmchealth.org/find-a-provider/" />
+    - ID: "6c93a8e5-7182-45f6-9ac5-89d3daa58a19"
+      Hint: Headline
+      Value: Nunca estás lejos de una sala de urgencias de confianza
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5106c8a8-08db-4906-81dd-457c1edd1415"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "ac54f8c6-4497-47ad-9f7b-c9d0b4da42d3"
+      Hint: SpecialtyLabel
+      Value: Buscar por especialidad
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "cf941c96-49e6-42c3-8342-0dadf9efe4cd"
+      Hint: SpecialtySearchLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="Buscar por especialidad" url="https://www.lcmchealth.org/find-a-provider/" />
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T162644Z
+    - ID: "da2f5138-64ab-4e3e-a6fe-7569c58da5c2"
+      Hint: SpecialtyPlaceholder
+      Value: Selecciona una especialidad
+  - Version: 2
+    Fields:
+    - ID: "08d932ab-22de-406e-8607-9333752601f0"
+      Hint: ZipPlaceholder
+      Value: Ingresa tu código postal
+    - ID: "19727ed8-0fc6-4a07-88f3-7fa8e715cba9"
+      Hint: ZipLabel
+      Value: Encuentra un proveedor cerca de ti
+    - ID: "2238e1f9-7718-49a3-81f7-4d6c11ce7b21"
+      Hint: BackgroundImage
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/d85584a4578b464881725e5e7263fdb4?v=46ad2e9a" dam-id="FFKau2dLQCKZB3YbE8Ot8w" width="1920" height="645" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/85608/thumbnail" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260909T231955Z
+    - ID: "4aad72d8-6199-4092-b07f-5b3238530b0c"
+      Hint: SpecialtyOptions
+      Value: |
+        Medicina de las adicciones
+        Cardiología
+        Medicina de emergencias
+        Medicina familiar
+        Medicina interna
+        Obstetricia y ginecología
+        Cirugía ortopédica
+        Pediatría
+        Atención primaria
+        Atención de urgencias
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "6af5ca49-2775-4088-b525-64368e238e54"
+      Hint: ZipSearchLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="Encontrar un proveedor" url="https://www.lcmchealth.org/find-a-provider/" />
+    - ID: "6c93a8e5-7182-45f6-9ac5-89d3daa58a19"
+      Hint: Headline
+      Value: Nunca estás lejos de una sala de emergencias de confianza
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "6f0515ce-f759-4030-8f41-8f173c2660ec"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "ac54f8c6-4497-47ad-9f7b-c9d0b4da42d3"
+      Hint: SpecialtyLabel
+      Value: Buscar por especialidad
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260909T231955Z
+    - ID: "cf941c96-49e6-42c3-8342-0dadf9efe4cd"
+      Hint: SpecialtySearchLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="Buscar por especialidad" url="https://www.lcmchealth.org/find-a-provider/" />
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T232002Z
+    - ID: "da2f5138-64ab-4e3e-a6fe-7569c58da5c2"
+      Hint: SpecialtyPlaceholder
+      Value: Selecciona una especialidad
+  - Version: 3
+    Fields:
+    - ID: "08d932ab-22de-406e-8607-9333752601f0"
+      Hint: ZipPlaceholder
+      Value: Ingresa tu código postal
+    - ID: "19727ed8-0fc6-4a07-88f3-7fa8e715cba9"
+      Hint: ZipLabel
+      Value: Encuentra un proveedor cerca de ti
+    - ID: "2238e1f9-7718-49a3-81f7-4d6c11ce7b21"
+      Hint: BackgroundImage
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/d85584a4578b464881725e5e7263fdb4?v=46ad2e9a" dam-id="FFKau2dLQCKZB3YbE8Ot8w" width="1920" height="645" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/85608/thumbnail" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T124004Z
+    - ID: "4aad72d8-6199-4092-b07f-5b3238530b0c"
+      Hint: SpecialtyOptions
+      Value: |
+        Medicina de las adicciones
+        Cardiología
+        Medicina de emergencias
+        Medicina familiar
+        Medicina interna
+        Obstetricia y ginecología
+        Cirugía ortopédica
+        Pediatría
+        Atención primaria
+        Atención de urgencias
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "6af5ca49-2775-4088-b525-64368e238e54"
+      Hint: ZipSearchLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="Encontrar un proveedor" url="https://www.lcmchealth.org/find-a-provider/" />
+    - ID: "6c93a8e5-7182-45f6-9ac5-89d3daa58a19"
+      Hint: Headline
+      Value: Nunca estás lejos de una sala de emergencias de confianza
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "300f6cdf-20b5-43f9-bf2b-f106135b5c03"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "ac54f8c6-4497-47ad-9f7b-c9d0b4da42d3"
+      Hint: SpecialtyLabel
+      Value: Buscar por especialidad
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 
+    - ID: "cf941c96-49e6-42c3-8342-0dadf9efe4cd"
+      Hint: SpecialtySearchLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="Buscar por especialidad" url="https://www.lcmchealth.org/find-a-provider/" />
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T234801Z
+    - ID: "da2f5138-64ab-4e3e-a6fe-7569c58da5c2"
+      Hint: SpecialtyPlaceholder
+      Value: Selecciona una especialidad
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "08d932ab-22de-406e-8607-9333752601f0"
+      Hint: ZipPlaceholder
+      Value: Entrez votre code postal
+    - ID: "19727ed8-0fc6-4a07-88f3-7fa8e715cba9"
+      Hint: ZipLabel
+      Value: Trouvez un fournisseur près de chez vous
+    - ID: "2238e1f9-7718-49a3-81f7-4d6c11ce7b21"
+      Hint: BackgroundImage
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/2384069e59e64468935d5dcc0ff5cce8?v=4031d193" dam-id="vIkGKMnuRoiD8qeVplO3FQ" width="700" height="468" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/87285/thumbnail" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T124004Z
+    - ID: "4aad72d8-6199-4092-b07f-5b3238530b0c"
+      Hint: SpecialtyOptions
+      Value: |
+        Médecine de la dépendance
+        Cardiologie
+        Médecine d’urgence
+        Médecine familiale
+        Médecine interne
+        Obstétrique et gynécologie
+        Chirurgie orthopédique
+        Pédiatrie
+        Soins primaires
+        Soins d’urgence
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "6af5ca49-2775-4088-b525-64368e238e54"
+      Hint: ZipSearchLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="Trouver un fournisseur" url="https://www.lcmchealth.org/find-a-provider/" />
+    - ID: "6c93a8e5-7182-45f6-9ac5-89d3daa58a19"
+      Hint: Headline
+      Value: Votre santé commence ici
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "8cae7142-6232-492b-88e7-3b903e19b274"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "ac54f8c6-4497-47ad-9f7b-c9d0b4da42d3"
+      Hint: SpecialtyLabel
+      Value: Rechercher par spécialité
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "cf941c96-49e6-42c3-8342-0dadf9efe4cd"
+      Hint: SpecialtySearchLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="Rechercher par spécialité" url="https://www.lcmchealth.org/find-a-provider/" />
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201304Z
+    - ID: "da2f5138-64ab-4e3e-a6fe-7569c58da5c2"
+      Hint: SpecialtyPlaceholder
+      Value: Sélectionnez une spécialité

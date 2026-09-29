@@ -1,0 +1,41 @@
+﻿---
+ID: "6d5fb648-7873-4e75-aa4f-82cd1a07a640"
+Parent: "121c5252-c423-475e-abd6-42dd90c87917"
+Template: "bdf6c974-e68c-46a2-a0a9-d382fd0927eb"
+Path: "/sitecore/content/progressive/pkm/Home/Shared Content/08-RegulatoryAndCompliance/StateSpecific/NC/KB-AU-1001-FNOL-NC"
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{0CB93891-8B5F-4043-9140-5483F842D5C2}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "21b8d6f1-4294-46a5-98fd-38df0ce8aae0"
+      Hint: SourceDocumentLOB
+      Value: "{0944EAEA-5558-443F-A68D-482773EA2153}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260731T141335Z
+    - ID: "76e0c665-5c4d-4d03-ae66-a5f3d12978ba"
+      Hint: Content
+      Value: "<p>For North Carolina Auto FNOL, capture loss date/time, operator identity, injury indicators, and police report status consistently in the file. Avoid improvised coverage or liability statements at intake, and follow Progressive represented-claimant handling when counsel is already involved.</p>"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ce3e0987-4768-4d4c-ae64-65a9a60e5f87"
+    - ID: "94ce9d2b-aa0c-488f-943a-d2e582eb50bc"
+      Hint: SourceDocumentPerils
+      Value: "{152FCA3B-0726-49A3-8D73-447F35E1F334}"
+    - ID: "a8f6d033-4e9e-4598-be5e-da2456c41b9f"
+      Hint: sourceDocumentLink
+      Value: |
+        <link text="Personal Auto FNOL - First Notice of Loss Intake" linktype="internal" class="" title="" target="" querystring="" id="{8134326F-FF16-4B77-8D34-9EDB10353DA1}" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\emqWsGLKzRiKgWenEsIKMqdxvXhiQ4cT
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260802T143427Z

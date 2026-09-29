@@ -1,0 +1,267 @@
+﻿---
+ID: "498591a1-5845-44d9-b5ea-97c6bc2a9966"
+Parent: "cdc93682-3ac4-4922-bfd6-f75905ad3289"
+Template: "42f8929a-83cd-48fe-92f0-8aac46e6cc62"
+Path: "/sitecore/content/progressive/pkm/Home/Knowledge Articles/PersonalLines/Homeowners/KB-HO-1004-TheftBurglary"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{FA097F7E-ECE4-489E-842D-63AE8A7FCDD2}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{9C86A29A-760A-4B73-8394-0F2B2E6B4AFD}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "9e5aeb04-3623-4f9b-bbf3-aabe2152e5d2"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: 
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{0C902EC2-7480-4019-8248-5BBCBA797C58}"
+              p:after="r[@uid='{717E1701-1FF6-418A-A8F1-35443B43B403}']"
+              s:id="{F44005E1-CCBB-4B27-9598-5EF43FB60A46}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB6A72F2A-15BE-4113-B40F-0305459DC374%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=2"
+              s:ph="headless-main" />
+            <r
+              uid="{983C00DF-D19A-4050-B66D-08CA1BC1A8A3}"
+              p:after="*[1=2]"
+              s:ds=""
+              s:id="{88D43837-24CA-45A7-9171-FEAD8AE89702}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B5E0CEF20-DC70-4922-A183-E6ADB987AF60%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=3"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "1a6c4003-b700-4ff6-9a1e-b0b809a20c52"
+      Hint: Standard Site Inspection Rules
+      Value: "<ul><li>Photograph point of entry and interior disturbance</li><li>Do not require insured to recreate inventory on-site alone — use worksheets</li></ul>"
+    - ID: "1cf7f3e5-7109-4726-aca1-76bf779f1f95"
+      Hint: Peril type
+      Value: "{152FCA3B-0726-49A3-8D73-447F35E1F334}"
+    - ID: "1d2229f9-6c8b-4828-97c0-ade6f1a125d0"
+      Hint: TotalRatings
+      Value: 28
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Progressive Homeowners intake for burglary, theft from premises, and related Coverage C personal property losses.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260802T135024Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Theft & Burglary
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{325A5D47-D4EB-4876-B759-0E18E2D9DCED}"
+    - ID: "480bb6b8-0914-4d2c-a73e-c5b28b8693e0"
+      Hint: Intake Triggers
+      Value: "<p>Use when:</p><ul><li>Insured reports break-in with missing belongings</li><li>Theft from residence while away (vacation / storage on premises)</li><li>Vandalism in connection with attempted burglary</li><li>Jewelry, electronics, or firearms stolen — possible special limits</li></ul>"
+    - ID: "4d1faace-7b0f-4ec7-94b8-9ae80e0a9bce"
+      Hint: Common Scenarios
+      Value: "<ul><li><strong>Forced rear-door entry, electronics taken:</strong> A + C path</li><li><strong>Jewelry stolen without schedule:</strong> special limit counseling</li><li><strong>Garage bike theft with no forced entry:</strong> verify burglary vs mysterious disappearance</li><li><strong>Package porch theft:</strong> often off-premises / special handling — check form</li></ul>"
+    - ID: "4ed4709d-3dc8-4d81-bc4b-b44be7d21c45"
+      Hint: LastRated
+      Value: 20260717T131500Z
+    - ID: "4f91e6ca-b571-41f9-bc35-4e7e89c590de"
+      Hint: Baseline Reserve Guidelines
+      Value: <ul><li>Coverage C inventory band from preliminary list</li><li>Coverage A for door/window repair when forced entry</li><li>Apply Progressive special limits early for jewelry/cash/firearms categories</li></ul>
+    - ID: "568439dd-7959-4317-ac05-4aca4fe37a7a"
+      Hint: AverageRating
+      Value: 3.50
+    - ID: "5897e9d3-8204-4ed7-9f6a-ceb4891c3182"
+      Hint: PositiveCount
+      Value: 31
+    - ID: "5b49b775-a3f5-41cd-bd78-90fae97f1fd6"
+      Hint: Core Triage Questions
+      Value: "<ol><li>Police report number and jurisdiction?</li><li>Forced entry evidence (door/window)?</li><li>Date discovered vs date of loss?</li><li>Itemized list with approximate ages/values?</li><li>Any Progressive scheduled personal property / riders?</li><li>Anyone with keys / roommate / contractor access?</li></ol>"
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Homeowners Theft and Burglary Claims
+    - ID: "6be9cd31-e34e-4bed-880a-a218075a5b0d"
+      Hint: General Payment Triggers
+      Value: <ul><li>After police report (when required by Progressive guidelines) and inventory support</li><li>Dwelling repairs after agreed scope for entry damage</li></ul>
+    - ID: "71d4c96f-1e34-4f86-8ba5-e7a24a873933"
+      Hint: NegativeCount
+      Value: 9
+    - ID: "76c3fa76-04cb-4142-9756-6fcb96442bf4"
+      Hint: "KB-ID"
+      Value: "KB-HO-1004"
+    - ID: "8147ab19-7525-4ef0-a878-3e3f0a3157ac"
+      Hint: LOB
+      Value: "{331E5703-41A4-4592-B744-14A83C4CFAAE}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "586b3c4f-7f33-43ee-abaa-49deb0e7f9ff"
+    - ID: "ae3f508c-c043-4863-899c-986ad4b75bd5"
+      Hint: Photo Video Standards
+      Value: <ul><li>Damaged locks, frames, glass at entry</li><li>Empty spaces / cut cables where electronics removed</li><li>Receipts or photos of items if insured provides</li></ul>
+    - ID: "b3f4a945-e28b-4a1c-81c7-857555b83127"
+      Hint: General Escalation Rules
+      Value: "<ul><li><strong>High-value jewelry / collectibles without schedule:</strong> special limits review + supervisor</li><li><strong>Repeated theft claims / inconsistent inventory:</strong> SIU checklist</li><li><strong>Off-premises theft:</strong> verify Progressive away-from-home coverage</li></ul>"
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Theft & Burglary
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\WIt5EKonMo343Fqq8begbLVKlCgYPAIX
+    - ID: "c09aaa65-03f7-41a9-ba56-69b018e89ccc"
+      Hint: General Mitigation
+      Value: <ul><li>Secure premises (board/repair entry) to prevent further loss</li><li>Advise cancelling cards / monitoring accounts for stolen IDs if applicable</li></ul>
+    - ID: "cc6e82f0-6942-4103-8d12-c8742b54a7a1"
+      Hint: Purpose
+      Value: "<p>Guide Progressive Claims Advisors on <strong>homeowners theft and burglary</strong> claims involving personal property and dwelling damage from forced entry.</p><ul><li>Confirm police report and forced-entry facts</li><li>Separate scheduled vs unscheduled personal property</li><li>Document broken doors/windows as Coverage A when applicable</li></ul>"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260802T180114Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: "KB-HO-1004-TheftBurglary"
+    - ID: "ef17e08a-c9dd-47e0-adf2-9232c87aaa7f"
+      Hint: RatingsSum
+      Value: 98
+    - ID: "fc43bd45-b665-4895-a9e5-6d9a34ea7835"
+      Hint: Title
+      Value: Homeowners Theft and Burglary Claims
+  - Version: 2
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{0C902EC2-7480-4019-8248-5BBCBA797C58}"
+              p:after="r[@uid='{717E1701-1FF6-418A-A8F1-35443B43B403}']"
+              s:id="{F44005E1-CCBB-4B27-9598-5EF43FB60A46}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB6A72F2A-15BE-4113-B40F-0305459DC374%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=2"
+              s:ph="headless-main" />
+            <r
+              uid="{983C00DF-D19A-4050-B66D-08CA1BC1A8A3}"
+              p:after="*[1=2]"
+              s:ds=""
+              s:id="{88D43837-24CA-45A7-9171-FEAD8AE89702}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B5E0CEF20-DC70-4922-A183-E6ADB987AF60%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=3"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "1a6c4003-b700-4ff6-9a1e-b0b809a20c52"
+      Hint: Standard Site Inspection Rules
+      Value: "<ul><li>Photograph point of entry and interior disturbance</li><li>Do not require insured to recreate inventory on-site alone — use worksheets</li></ul>"
+    - ID: "1cf7f3e5-7109-4726-aca1-76bf779f1f95"
+      Hint: Peril type
+      Value: "{152FCA3B-0726-49A3-8D73-447F35E1F334}"
+    - ID: "1d2229f9-6c8b-4828-97c0-ade6f1a125d0"
+      Hint: TotalRatings
+      Value: 28
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Progressive Homeowners intake for burglary, theft from premises, and related Coverage C personal property losses.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260803T035632Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Theft & Burglary
+    - ID: "29d334fb-0f6f-41fa-98ea-a6f30222129f"
+      Hint: sharedContent
+      Value: |
+        {8EADBEBA-BAB9-4668-86D1-DC39C36C2514}
+        {F9925140-2515-49D8-A33D-7240541553C6}
+        {7F601366-B1E8-49DF-BBF0-425135FD0DF7}
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{325A5D47-D4EB-4876-B759-0E18E2D9DCED}"
+    - ID: "480bb6b8-0914-4d2c-a73e-c5b28b8693e0"
+      Hint: Intake Triggers
+      Value: "<p>Use when:</p><ul><li>Insured reports break-in with missing belongings</li><li>Theft from residence while away (vacation / storage on premises)</li><li>Vandalism in connection with attempted burglary</li><li>Jewelry, electronics, or firearms stolen — possible special limits</li></ul>"
+    - ID: "4d1faace-7b0f-4ec7-94b8-9ae80e0a9bce"
+      Hint: Common Scenarios
+      Value: "<ul><li><strong>Forced rear-door entry, electronics taken:</strong> A + C path</li><li><strong>Jewelry stolen without schedule:</strong> special limit counseling</li><li><strong>Garage bike theft with no forced entry:</strong> verify burglary vs mysterious disappearance</li><li><strong>Package porch theft:</strong> often off-premises / special handling — check form</li></ul>"
+    - ID: "4ed4709d-3dc8-4d81-bc4b-b44be7d21c45"
+      Hint: LastRated
+      Value: 20260717T131500Z
+    - ID: "4f91e6ca-b571-41f9-bc35-4e7e89c590de"
+      Hint: Baseline Reserve Guidelines
+      Value: <ul><li>Coverage C inventory band from preliminary list</li><li>Coverage A for door/window repair when forced entry</li><li>Apply Progressive special limits early for jewelry/cash/firearms categories</li></ul>
+    - ID: "568439dd-7959-4317-ac05-4aca4fe37a7a"
+      Hint: AverageRating
+      Value: 3.50
+    - ID: "5897e9d3-8204-4ed7-9f6a-ceb4891c3182"
+      Hint: PositiveCount
+      Value: 31
+    - ID: "5b49b775-a3f5-41cd-bd78-90fae97f1fd6"
+      Hint: Core Triage Questions
+      Value: "<ol><li>Police report number and jurisdiction?</li><li>Forced entry evidence (door/window)?</li><li>Date discovered vs date of loss?</li><li>Itemized list with approximate ages/values?</li><li>Any Progressive scheduled personal property / riders?</li><li>Anyone with keys / roommate / contractor access?</li></ol>"
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Homeowners Theft and Burglary Claims
+    - ID: "6be9cd31-e34e-4bed-880a-a218075a5b0d"
+      Hint: General Payment Triggers
+      Value: <ul><li>After police report (when required by Progressive guidelines) and inventory support</li><li>Dwelling repairs after agreed scope for entry damage</li></ul>
+    - ID: "71d4c96f-1e34-4f86-8ba5-e7a24a873933"
+      Hint: NegativeCount
+      Value: 9
+    - ID: "76c3fa76-04cb-4142-9756-6fcb96442bf4"
+      Hint: "KB-ID"
+      Value: "KB-HO-1004"
+    - ID: "8147ab19-7525-4ef0-a878-3e3f0a3157ac"
+      Hint: LOB
+      Value: "{331E5703-41A4-4592-B744-14A83C4CFAAE}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "120d442f-d937-464e-973b-ecc649db761a"
+    - ID: "ae3f508c-c043-4863-899c-986ad4b75bd5"
+      Hint: Photo Video Standards
+      Value: <ul><li>Damaged locks, frames, glass at entry</li><li>Empty spaces / cut cables where electronics removed</li><li>Receipts or photos of items if insured provides</li></ul>
+    - ID: "b3f4a945-e28b-4a1c-81c7-857555b83127"
+      Hint: General Escalation Rules
+      Value: "<ul><li><strong>High-value jewelry / collectibles without schedule:</strong> special limits review + supervisor</li><li><strong>Repeated theft claims / inconsistent inventory:</strong> SIU checklist</li><li><strong>Off-premises theft:</strong> verify Progressive away-from-home coverage</li></ul>"
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Theft & Burglary
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\WIt5EKonMo343Fqq8begbLVKlCgYPAIX
+    - ID: "c09aaa65-03f7-41a9-ba56-69b018e89ccc"
+      Hint: General Mitigation
+      Value: <ul><li>Secure premises (board/repair entry) to prevent further loss</li><li>Advise cancelling cards / monitoring accounts for stolen IDs if applicable</li></ul>
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260803T035632Z
+    - ID: "cc6e82f0-6942-4103-8d12-c8742b54a7a1"
+      Hint: Purpose
+      Value: "<p>Guide Progressive Claims Advisors on <strong>homeowners theft and burglary</strong> claims involving personal property and dwelling damage from forced entry.</p><ul><li>Confirm police report and forced-entry facts</li><li>Separate scheduled vs unscheduled personal property</li><li>Document broken doors/windows as Coverage A when applicable</li></ul>"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260803T040803Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: "KB-HO-1004-TheftBurglary"
+    - ID: "ef17e08a-c9dd-47e0-adf2-9232c87aaa7f"
+      Hint: RatingsSum
+      Value: 98
+    - ID: "fc43bd45-b665-4895-a9e5-6d9a34ea7835"
+      Hint: Title
+      Value: Homeowners Theft and Burglary Claims

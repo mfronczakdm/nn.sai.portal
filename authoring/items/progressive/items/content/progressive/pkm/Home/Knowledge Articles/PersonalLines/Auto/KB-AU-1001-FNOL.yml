@@ -1,0 +1,298 @@
+﻿---
+ID: "8134326f-ff16-4b77-8d34-9edb10353da1"
+Parent: "b0789647-4b73-4e34-b6a7-fa3e98f6c2cd"
+Template: "42f8929a-83cd-48fe-92f0-8aac46e6cc62"
+Path: "/sitecore/content/progressive/pkm/Home/Knowledge Articles/PersonalLines/Auto/KB-AU-1001-FNOL"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{FA097F7E-ECE4-489E-842D-63AE8A7FCDD2}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{4D173CFF-C940-4651-A1D9-504639254018}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "bb2626ff-2e42-42a3-9a82-81c46580cdfc"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: 
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{717E1701-1FF6-418A-A8F1-35443B43B403}">
+              <p:d />
+            </r>
+            <r
+              uid="{DDEDDA60-E166-4FC0-AE6E-627BF501C8F5}"
+              p:before="*"
+              s:id="{F44005E1-CCBB-4B27-9598-5EF43FB60A46}"
+              s:par="GridParameters&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+              s:ph="headless-main" />
+            <r
+              uid="{0DF305E9-30AD-45D2-8DD9-CE6A0F3D2D77}"
+              p:after="*[1=2]"
+              s:ds=""
+              s:id="{88D43837-24CA-45A7-9171-FEAD8AE89702}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B5E0CEF20-DC70-4922-A183-E6ADB987AF60%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=2"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "1a6c4003-b700-4ff6-9a1e-b0b809a20c52"
+      Hint: Standard Site Inspection Rules
+      Value: "<ul><li>Confirm vehicle location and access (tow lot fees, storage, keys)</li><li>Desk estimate preferred when photos meet Progressive photo standards and damage is clearly non-structural</li><li>Field inspection when structural, underride, prior damage disputes, or total-loss indicators</li><li>Document pre-existing damage separately from loss-related damage</li><li>Capture odometer, VIN plate, and license plate in inspection notes</li></ul>"
+    - ID: "1cf7f3e5-7109-4726-aca1-76bf779f1f95"
+      Hint: Peril type
+      Value: |
+        {152FCA3B-0726-49A3-8D73-447F35E1F334}
+        {C26A71E6-098D-4B9C-A36C-AF820F40F91B}
+    - ID: "1d2229f9-6c8b-4828-97c0-ade6f1a125d0"
+      Hint: TotalRatings
+      Value: 70
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Standards for Progressive Personal Auto first notice of loss intake, triage, and escalation.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260730T194748Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Auto FNOL
+    - ID: "29d334fb-0f6f-41fa-98ea-a6f30222129f"
+      Hint: sharedContent
+      Value: |
+        {69F3074A-AC8C-407E-B9FF-3BD55F1FB742}
+        {6D5FB648-7873-4E75-AA4F-82CD1A07A640}
+        {C0460247-DED2-4F89-B3B5-4932D7993D0A}
+        {FB479F0D-8FE8-411D-ACF2-1225B122C0A7}
+        {F1783B30-4465-4F47-9932-84692ECBC806}
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{325A5D47-D4EB-4876-B759-0E18E2D9DCED}"
+    - ID: "480bb6b8-0914-4d2c-a73e-c5b28b8693e0"
+      Hint: Intake Triggers
+      Value: "<p>Open or update an Auto FNOL when any of the following occur:</p><ul><li>Policyholder, household member, or Progressive agent reports an auto accident, glass loss, hit-and-run, theft, vandalism, or roadside incident involving a covered vehicle</li><li>Third-party claimant reports loss involving a Progressive-insured vehicle</li><li>Police, tow yard, or repair facility notifies Progressive of a loss with an identifiable Progressive policy</li><li>Prior FNOL is incomplete and missing required intake fields that block assignment</li></ul><p>Do <strong>not</strong> create a duplicate claim when an open FNOL already exists for the same loss date, VIN, and parties — link or amend instead.</p>"
+    - ID: "4d1faace-7b0f-4ec7-94b8-9ae80e0a9bce"
+      Hint: Common Scenarios
+      Value: "<ul><li><strong>Rear-end with minor bumper damage:</strong> complete FNOL, capture photos, desk estimate path</li><li><strong>Hit-and-run parking lot:</strong> confirm UMPD/collision deductible path; police report if available</li><li><strong>Single-vehicle animal strike:</strong> confirm comprehensive; photos of animal debris if possible</li><li><strong>Multi-car interstate:</strong> capture all parties, severity triage, possible field assignment</li><li><strong>Glass crack only:</strong> route to Progressive glass partners; skip full collision FNOL fields not required</li></ul>"
+    - ID: "4ed4709d-3dc8-4d81-bc4b-b44be7d21c45"
+      Hint: LastRated
+      Value: 20260728T090000Z
+    - ID: "4f91e6ca-b571-41f9-bc35-4e7e89c590de"
+      Hint: Baseline Reserve Guidelines
+      Value: "<ul><li>Set initial indemnity reserve consistent with Progressive Auto severity band (PD-only vs BI)</li><li>Glass-only: use glass program reserve defaults</li><li>Potential total loss: include storage/tow and owner retention considerations early</li><li>Update reserves when new injuries, additional vehicles, or attorney involvement appear</li></ul>"
+    - ID: "568439dd-7959-4317-ac05-4aca4fe37a7a"
+      Hint: AverageRating
+      Value: 4.50
+    - ID: "5897e9d3-8204-4ed7-9f6a-ceb4891c3182"
+      Hint: PositiveCount
+      Value: 78
+    - ID: "5b49b775-a3f5-41cd-bd78-90fae97f1fd6"
+      Hint: Core Triage Questions
+      Value: "<ol><li>What is the <strong>date/time</strong> and <strong>exact location</strong> of loss (city, state, highway/mile marker if applicable)?</li><li>Who was driving, and were all occupants Progressive named insureds, listed drivers, or permissive users?</li><li>How many vehicles/parties are involved, and is anyone injured?</li><li>Was a police report taken? Agency name and report number?</li><li>Is the Progressive vehicle drivable? Where is it now (home, tow yard, shop)?</li><li>Are airbags deployed, fluids leaking, or is the vehicle a potential total loss?</li><li>Any rental need, rideshare/commercial use at time of loss, or prior damage?</li><li>Is there glass-only damage, animal strike, flood, hail, or fire?</li></ol>"
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Personal Auto FNOL — First Notice of Loss Intake
+    - ID: "6be9cd31-e34e-4bed-880a-a218075a5b0d"
+      Hint: General Payment Triggers
+      Value: "<ul><li>Payment after coverage confirmation, liability position (where required), and estimate/appraisal agreement</li><li>Direct repair network payments follow Progressive DRP invoice rules</li><li>Rental payments require rental coverage confirmation and dates of loss</li><li>Third-party payments require claimant identity verification and release where applicable</li></ul>"
+    - ID: "71d4c96f-1e34-4f86-8ba5-e7a24a873933"
+      Hint: NegativeCount
+      Value: 6
+    - ID: "76c3fa76-04cb-4142-9756-6fcb96442bf4"
+      Hint: "KB-ID"
+      Value: "KB-AU-1001"
+    - ID: "8147ab19-7525-4ef0-a878-3e3f0a3157ac"
+      Hint: LOB
+      Value: "{0944EAEA-5558-443F-A68D-482773EA2153}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5f491194-a26c-4963-bf16-689282396dd5"
+    - ID: "ae3f508c-c043-4863-899c-986ad4b75bd5"
+      Hint: Photo Video Standards
+      Value: "<ul><li>Four corners + all four sides of the Progressive vehicle</li><li>Close-ups of impact points, paint transfer, and debris</li><li>VIN plate, odometer, and dash warning lights if relevant</li><li>Scene photos when available (intersection, skid marks, signals)</li><li>Avoid blurry/dark images; request re-upload before closing intake</li></ul>"
+    - ID: "b3f4a945-e28b-4a1c-81c7-857555b83127"
+      Hint: General Escalation Rules
+      Value: "<ul><li><strong>Injury / fatality / pedestrian / motorcycle:</strong> escalate per Progressive severity guidelines; flag for injury adjuster</li><li><strong>Suspected fraud / staged accident / VIN mismatch:</strong> SIU referral checklist</li><li><strong>Attorney representation already retained:</strong> follow represented claimant handling</li><li><strong>Catastrophe / declared weather event:</strong> route to CAT intake playbook</li><li><strong>Rideshare / delivery / business use:</strong> verify endorsement and escalate coverage SME if unclear</li><li><strong>Unlisted driver / excluded driver / lapsed policy:</strong> supervisor review before denial language</li></ul>"
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Personal Auto FNOL
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\uDLr1K5wd1M8y82dfXcCgcafj64coB7N
+    - ID: "c09aaa65-03f7-41a9-ba56-69b018e89ccc"
+      Hint: General Mitigation
+      Value: <ul><li>Advise safe vehicle storage and authorize tow to preferred Progressive network shop when appropriate</li><li>Explain rental / transportation options based on coverage (rental reimbursement, rideshare reimbursement where applicable)</li><li>Remind customer to retain repair estimates and police report copies</li><li>Do not authorize teardown beyond Progressive estimate protocol without adjuster approval</li></ul>
+    - ID: "cc6e82f0-6942-4103-8d12-c8742b54a7a1"
+      Hint: Purpose
+      Value: <p>Guide Progressive Claims Advisors through accurate, complete <strong>Personal Auto FNOL</strong> so the claim is set up correctly the first time.</p><ul><li>Capture loss facts that drive coverage and liability decisions</li><li>Identify severity and special handling early</li><li>Route to the right Progressive workflow (desk, field, catastrophe, SIU)</li></ul>
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260803T214816Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: "KB-AU-1001-FNOL"
+    - ID: "ef17e08a-c9dd-47e0-adf2-9232c87aaa7f"
+      Hint: RatingsSum
+      Value: 315
+    - ID: "fc43bd45-b665-4895-a9e5-6d9a34ea7835"
+      Hint: Title
+      Value: Personal Auto FNOL — First Notice of Loss Intake
+  - Version: 2
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{717E1701-1FF6-418A-A8F1-35443B43B403}">
+              <p:d />
+            </r>
+            <r
+              uid="{DDEDDA60-E166-4FC0-AE6E-627BF501C8F5}"
+              p:before="*"
+              s:id="{F44005E1-CCBB-4B27-9598-5EF43FB60A46}"
+              s:par="GridParameters&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+              s:ph="headless-main" />
+            <r
+              uid="{0DF305E9-30AD-45D2-8DD9-CE6A0F3D2D77}"
+              p:after="*[1=2]"
+              s:ds=""
+              s:id="{88D43837-24CA-45A7-9171-FEAD8AE89702}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B5E0CEF20-DC70-4922-A183-E6ADB987AF60%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=2"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "1a6c4003-b700-4ff6-9a1e-b0b809a20c52"
+      Hint: Standard Site Inspection Rules
+      Value: "<ul><li>Confirm vehicle location and access (tow lot fees, storage, keys)</li><li>Desk estimate preferred when photos meet Progressive photo standards and damage is clearly non-structural</li><li>Field inspection when structural, underride, prior damage disputes, or total-loss indicators</li><li>Document pre-existing damage separately from loss-related damage</li><li>Capture odometer, VIN plate, and license plate in inspection notes</li></ul>"
+    - ID: "1cf7f3e5-7109-4726-aca1-76bf779f1f95"
+      Hint: Peril type
+      Value: |
+        {152FCA3B-0726-49A3-8D73-447F35E1F334}
+        {C26A71E6-098D-4B9C-A36C-AF820F40F91B}
+    - ID: "1d2229f9-6c8b-4828-97c0-ade6f1a125d0"
+      Hint: TotalRatings
+      Value: 70
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Standards for Progressive Personal Auto first notice of loss intake, triage, and escalation.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260804T161430Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Auto FNOL
+    - ID: "29d334fb-0f6f-41fa-98ea-a6f30222129f"
+      Hint: sharedContent
+      Value: |
+        {69F3074A-AC8C-407E-B9FF-3BD55F1FB742}
+        {6D5FB648-7873-4E75-AA4F-82CD1A07A640}
+        {C0460247-DED2-4F89-B3B5-4932D7993D0A}
+        {FB479F0D-8FE8-411D-ACF2-1225B122C0A7}
+        {F1783B30-4465-4F47-9932-84692ECBC806}
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{8C7B2964-CC9E-44C7-A0F7-7436FD280DF4}"
+    - ID: "480bb6b8-0914-4d2c-a73e-c5b28b8693e0"
+      Hint: Intake Triggers
+      Value: "<p>Open or update an Auto FNOL when any of the following occur:</p><ul><li>Policyholder, household member, or Progressive agent reports an auto accident, glass loss, hit-and-run, theft, vandalism, or roadside incident involving a covered vehicle</li><li>Third-party claimant reports loss involving a Progressive-insured vehicle</li><li>Police, tow yard, or repair facility notifies Progressive of a loss with an identifiable Progressive policy</li><li>Prior FNOL is incomplete and missing required intake fields that block assignment</li></ul><p>Do <strong>not</strong> create a duplicate claim when an open FNOL already exists for the same loss date, VIN, and parties — link or amend instead.</p>"
+    - ID: "4d1faace-7b0f-4ec7-94b8-9ae80e0a9bce"
+      Hint: Common Scenarios
+      Value: "<ul><li><strong>Rear-end with minor bumper damage:</strong> complete FNOL, capture photos, desk estimate path</li><li><strong>Hit-and-run parking lot:</strong> confirm UMPD/collision deductible path; police report if available</li><li><strong>Single-vehicle animal strike:</strong> confirm comprehensive; photos of animal debris if possible</li><li><strong>Multi-car interstate:</strong> capture all parties, severity triage, possible field assignment</li><li><strong>Glass crack only:</strong> route to Progressive glass partners; skip full collision FNOL fields not required</li></ul>"
+    - ID: "4ed4709d-3dc8-4d81-bc4b-b44be7d21c45"
+      Hint: LastRated
+      Value: 20260728T090000Z
+    - ID: "4f91e6ca-b571-41f9-bc35-4e7e89c590de"
+      Hint: Baseline Reserve Guidelines
+      Value: "<ul><li>Set initial indemnity reserve consistent with Progressive Auto severity band (PD-only vs BI)</li><li>Glass-only: use glass program reserve defaults</li><li>Potential total loss: include storage/tow and owner retention considerations early</li><li>Update reserves when new injuries, additional vehicles, or attorney involvement appear</li></ul>"
+    - ID: "568439dd-7959-4317-ac05-4aca4fe37a7a"
+      Hint: AverageRating
+      Value: 4
+    - ID: "5897e9d3-8204-4ed7-9f6a-ceb4891c3182"
+      Hint: PositiveCount
+      Value: 78
+    - ID: "5b49b775-a3f5-41cd-bd78-90fae97f1fd6"
+      Hint: Core Triage Questions
+      Value: "<ol><li>What is the <strong>date/time</strong> and <strong>exact location</strong> of loss (city, state, highway/mile marker if applicable)?</li><li>Who was driving, and were all occupants Progressive named insureds, listed drivers, or permissive users?</li><li>How many vehicles/parties are involved, and is anyone injured?</li><li>Was a police report taken? Agency name and report number?</li><li>Is the Progressive vehicle drivable? Where is it now (home, tow yard, shop)?</li><li>Are airbags deployed, fluids leaking, or is the vehicle a potential total loss?</li><li>Any rental need, rideshare/commercial use at time of loss, or prior damage?</li><li>Is there glass-only damage, animal strike, flood, hail, or fire?</li></ol>"
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Personal Auto FNOL — First Notice of Loss Intake
+    - ID: "6be9cd31-e34e-4bed-880a-a218075a5b0d"
+      Hint: General Payment Triggers
+      Value: "<ul><li>Payment after coverage confirmation, liability position (where required), and estimate/appraisal agreement</li><li>Direct repair network payments follow Progressive DRP invoice rules</li><li>Rental payments require rental coverage confirmation and dates of loss</li><li>Third-party payments require claimant identity verification and release where applicable</li></ul>"
+    - ID: "71d4c96f-1e34-4f86-8ba5-e7a24a873933"
+      Hint: NegativeCount
+      Value: 6
+    - ID: "76c3fa76-04cb-4142-9756-6fcb96442bf4"
+      Hint: "KB-ID"
+      Value: "KB-AU-1001"
+    - ID: "8147ab19-7525-4ef0-a878-3e3f0a3157ac"
+      Hint: LOB
+      Value: "{0944EAEA-5558-443F-A68D-482773EA2153}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "8a76d66e-270e-4aa2-99d1-663d9be12670"
+    - ID: "ae3f508c-c043-4863-899c-986ad4b75bd5"
+      Hint: Photo Video Standards
+      Value: "<ul><li>Four corners + all four sides of the Progressive vehicle</li><li>Close-ups of impact points, paint transfer, and debris</li><li>VIN plate, odometer, and dash warning lights if relevant</li><li>Scene photos when available (intersection, skid marks, signals)</li><li>Avoid blurry/dark images; request re-upload before closing intake</li></ul>"
+    - ID: "b3f4a945-e28b-4a1c-81c7-857555b83127"
+      Hint: General Escalation Rules
+      Value: "<ul><li><strong>Injury / fatality / pedestrian / motorcycle:</strong> escalate per Progressive severity guidelines; flag for injury adjuster</li><li><strong>Suspected fraud / staged accident / VIN mismatch:</strong> SIU referral checklist</li><li><strong>Attorney representation already retained:</strong> follow represented claimant handling</li><li><strong>Catastrophe / declared weather event:</strong> route to CAT intake playbook</li><li><strong>Rideshare / delivery / business use:</strong> verify endorsement and escalate coverage SME if unclear</li><li><strong>Unlisted driver / excluded driver / lapsed policy:</strong> supervisor review before denial language</li></ul>"
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Personal Auto FNOL
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c09aaa65-03f7-41a9-ba56-69b018e89ccc"
+      Hint: General Mitigation
+      Value: <ul><li>Advise safe vehicle storage and authorize tow to preferred Progressive network shop when appropriate</li><li>Explain rental / transportation options based on coverage (rental reimbursement, rideshare reimbursement where applicable)</li><li>Remind customer to retain repair estimates and police report copies</li><li>Do not authorize teardown beyond Progressive estimate protocol without adjuster approval</li></ul>
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260804T161430Z
+    - ID: "cc6e82f0-6942-4103-8d12-c8742b54a7a1"
+      Hint: Purpose
+      Value: |
+        <p>Guide Progressive Claims Advisors through accurate, complete <strong>Personal Auto FNOL</strong> so the claim is set up correctly the first time.</p>
+        <ul>
+            <li>Capture loss facts that drive coverage and liability decisions</li>
+            <li>Identify severity and special handling early</li>
+            <li>Route to the right Progressive workflows (desk, field, catastrophe, SIU)</li>
+        </ul>
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260804T163414Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: "KB-AU-1001-FNOL"
+    - ID: "ef17e08a-c9dd-47e0-adf2-9232c87aaa7f"
+      Hint: RatingsSum
+      Value: 315
+    - ID: "f98518c7-9e12-404f-93a9-8ffdc223a290"
+      Hint: AccessControl
+      Value: "{35E2C104-2767-44B2-867B-F7F2D7622596}"
+    - ID: "fc43bd45-b665-4895-a9e5-6d9a34ea7835"
+      Hint: Title
+      Value: Personal Auto FNOL — First Notice of Loss Intake

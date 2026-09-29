@@ -1,0 +1,267 @@
+﻿---
+ID: "8334cba5-15f1-476d-9944-cd90bb701c76"
+Parent: "dbd3e687-c2dc-49b5-a51d-4b6c462d9be7"
+Template: "42f8929a-83cd-48fe-92f0-8aac46e6cc62"
+Path: "/sitecore/content/progressive/pkm/Home/Knowledge Articles/CommercialLines/CommercialProperty/KB-CP-1001-FireLoss"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{FA097F7E-ECE4-489E-842D-63AE8A7FCDD2}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{38FEE843-5D99-4FA8-A57F-1CFB68889BED}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "8ffbcca7-3476-4221-9004-1422626994ce"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: 
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{75AB8CC3-56F2-4F29-8F4B-D321D2808DA1}"
+              p:after="r[@uid='{717E1701-1FF6-418A-A8F1-35443B43B403}']"
+              s:id="{F44005E1-CCBB-4B27-9598-5EF43FB60A46}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB6A72F2A-15BE-4113-B40F-0305459DC374%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=2"
+              s:ph="headless-main" />
+            <r
+              uid="{620D42D6-6B2E-4DCF-8E80-0C88EF8AECF4}"
+              p:after="*[1=2]"
+              s:ds=""
+              s:id="{88D43837-24CA-45A7-9171-FEAD8AE89702}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B5E0CEF20-DC70-4922-A183-E6ADB987AF60%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=3"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "1a6c4003-b700-4ff6-9a1e-b0b809a20c52"
+      Hint: Standard Site Inspection Rules
+      Value: "<ul><li>Do not enter unsafe structures until cleared by fire authorities / Progressive engineer guidance</li><li>Document origin area, burn patterns at a high level, and extent of smoke migration</li><li>Inventory major BPP categories and salvageable stock early</li><li>Note sprinkler heads activated and water damage secondary to firefighting</li><li>Separate pre-existing conditions from fire / smoke damage</li></ul>"
+    - ID: "1cf7f3e5-7109-4726-aca1-76bf779f1f95"
+      Hint: Peril type
+      Value: "{389A8AD2-4BD8-4260-8059-761BC507FEB1}"
+    - ID: "1d2229f9-6c8b-4828-97c0-ade6f1a125d0"
+      Hint: TotalRatings
+      Value: 52
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Progressive commercial property fire FNOL, safety, investigation, and mitigation guidance for Claims Advisors.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260802T132706Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Commercial Property Fire
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{325A5D47-D4EB-4876-B759-0E18E2D9DCED}"
+    - ID: "480bb6b8-0914-4d2c-a73e-c5b28b8693e0"
+      Hint: Intake Triggers
+      Value: "<p>Start a Commercial Property fire workflow when:</p><ul><li>Named insured, property manager, or Progressive agent reports fire, explosion with fire, or smoke damage at a Progressive-insured commercial location</li><li>Fire department / alarm company notifies Progressive of a structure fire with an identifiable commercial policy</li><li>Tenant or landlord on a Progressive commercial policy reports fire originating in or spreading to the insured premises</li><li>Prior fire claim needs reopening for secondary smoke, odor, or contents discovery</li></ul>"
+    - ID: "4d1faace-7b0f-4ec7-94b8-9ae80e0a9bce"
+      Hint: Common Scenarios
+      Value: "<ul><li><strong>Kitchen hood / grease fire in restaurant:</strong> fire + smoke + possible ordinance/law; BI likely</li><li><strong>Electrical panel fire in warehouse:</strong> origin-and-cause; inventory smoke damage</li><li><strong>Tenant space fire spreading to adjoining suite:</strong> confirm who Progressive insures; subrogation watch</li><li><strong>Smoke-only from neighboring unit:</strong> document migration path; limited building scope</li><li><strong>Arson suspected:</strong> SIU; preserve scene; do not disturb evidence</li></ul>"
+    - ID: "4ed4709d-3dc8-4d81-bc4b-b44be7d21c45"
+      Hint: LastRated
+      Value: 20260727T130000Z
+    - ID: "4f91e6ca-b571-41f9-bc35-4e7e89c590de"
+      Hint: Baseline Reserve Guidelines
+      Value: "<ul><li>Building reserve by areas affected and construction type</li><li>BPP / stock reserve from early inventory estimates</li><li>Debris removal expectation early on total / near-total losses</li><li>BI / extra expense placeholder when operations are interrupted — refine after worksheets</li></ul>"
+    - ID: "568439dd-7959-4317-ac05-4aca4fe37a7a"
+      Hint: AverageRating
+      Value: 4.50
+    - ID: "5897e9d3-8204-4ed7-9f6a-ceb4891c3182"
+      Hint: PositiveCount
+      Value: 61
+    - ID: "5b49b775-a3f5-41cd-bd78-90fae97f1fd6"
+      Hint: Core Triage Questions
+      Value: "<ol><li>Exact address / suite and occupancy type (retail, warehouse, office, restaurant)?</li><li>Is the fire extinguished? Any remaining hot spots or utility shutoffs?</li><li>Fire department report / incident number? Cause under investigation?</li><li>Anyone injured or hospitalized?</li><li>Building vs contents vs stock vs equipment damaged?</li><li>Is the business able to operate (partial / full interruption)?</li><li>Sprinkler discharge, smoke only, or open flame involvement?</li><li>Any hazardous materials, deep fryers, welding, or known ignition sources?</li></ol>"
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Commercial Property Fire — Intake to Mitigation
+    - ID: "6be9cd31-e34e-4bed-880a-a218075a5b0d"
+      Hint: General Payment Triggers
+      Value: "<ul><li>Emergency board-up / mitigation after coverage confirmation and reasonableness review</li><li>Building repairs after agreed estimate and deductible</li><li>BPP after inventory and valuation (ACV/RCV per Progressive commercial forms)</li><li>BI / extra expense with documented loss of income and continuing expenses per policy</li></ul>"
+    - ID: "71d4c96f-1e34-4f86-8ba5-e7a24a873933"
+      Hint: NegativeCount
+      Value: 7
+    - ID: "76c3fa76-04cb-4142-9756-6fcb96442bf4"
+      Hint: "KB-ID"
+      Value: "KB-CP-1001"
+    - ID: "8147ab19-7525-4ef0-a878-3e3f0a3157ac"
+      Hint: LOB
+      Value: "{E799A026-FF03-4588-8607-16222D811A4C}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "6e74f7b4-ace7-47dc-9d57-27bdceff9337"
+    - ID: "ae3f508c-c043-4863-899c-986ad4b75bd5"
+      Hint: Photo Video Standards
+      Value: "<ul><li>Exterior elevations and roof if accessible/safe</li><li>Origin area overview (not disturbing evidence)</li><li>Smoke lines, soot on HVAC, inventory, and finishes</li><li>Utility shutoffs, boarded openings, and temporary power</li><li>Date-stamped vendor mitigation photos when available</li></ul>"
+    - ID: "b3f4a945-e28b-4a1c-81c7-857555b83127"
+      Hint: General Escalation Rules
+      Value: "<ul><li><strong>Active fire / structural collapse risk / hazmat:</strong> emergency services priority + commercial large-loss desk</li><li><strong>Fatalities or multiple injuries:</strong> severity / SIU / executive notice per Progressive guidelines</li><li><strong>Cause undetermined / arson indicators:</strong> SIU and origin-and-cause expert path</li><li><strong>High BI / extra expense / multi-location impact:</strong> commercial property large-loss</li><li><strong>Landlord / tenant / HOA / condo association disputes:</strong> confirm insurable interest before coverage commitments</li></ul>"
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Commercial Property Fire
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\WIt5EKonMo343Fqq8begbLVKlCgYPAIX
+    - ID: "c09aaa65-03f7-41a9-ba56-69b018e89ccc"
+      Hint: General Mitigation
+      Value: "<ul><li>Authorize board-up, temporary roofing, and water extraction from firefighting runoff when reasonably necessary</li><li>Coordinate smoke / soot remediation with approved Progressive commercial vendors</li><li>Advise insured on inventory preservation and cold-storage for perishable stock when applicable</li><li>Discuss temporary relocation / extra expense only after confirming Progressive commercial coverages</li></ul>"
+    - ID: "cc6e82f0-6942-4103-8d12-c8742b54a7a1"
+      Hint: Purpose
+      Value: "<p>Equip Progressive Claims Advisors to handle <strong>Commercial Property fire</strong> losses with accurate intake, life-safety prioritization, and clear building / BPP / BI framing.</p><ul><li>Secure the site and coordinate with fire authorities</li><li>Separate building, business personal property, and debris removal exposures</li><li>Identify early business interruption / extra expense needs</li></ul>"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260802T180113Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: "KB-CP-1001-FireLoss"
+    - ID: "ef17e08a-c9dd-47e0-adf2-9232c87aaa7f"
+      Hint: RatingsSum
+      Value: 234
+    - ID: "fc43bd45-b665-4895-a9e5-6d9a34ea7835"
+      Hint: Title
+      Value: Commercial Property Fire — Intake to Mitigation
+  - Version: 2
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{75AB8CC3-56F2-4F29-8F4B-D321D2808DA1}"
+              p:after="r[@uid='{717E1701-1FF6-418A-A8F1-35443B43B403}']"
+              s:id="{F44005E1-CCBB-4B27-9598-5EF43FB60A46}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB6A72F2A-15BE-4113-B40F-0305459DC374%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=2"
+              s:ph="headless-main" />
+            <r
+              uid="{620D42D6-6B2E-4DCF-8E80-0C88EF8AECF4}"
+              p:after="*[1=2]"
+              s:ds=""
+              s:id="{88D43837-24CA-45A7-9171-FEAD8AE89702}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B5E0CEF20-DC70-4922-A183-E6ADB987AF60%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=3"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "1a6c4003-b700-4ff6-9a1e-b0b809a20c52"
+      Hint: Standard Site Inspection Rules
+      Value: "<ul><li>Do not enter unsafe structures until cleared by fire authorities / Progressive engineer guidance</li><li>Document origin area, burn patterns at a high level, and extent of smoke migration</li><li>Inventory major BPP categories and salvageable stock early</li><li>Note sprinkler heads activated and water damage secondary to firefighting</li><li>Separate pre-existing conditions from fire / smoke damage</li></ul>"
+    - ID: "1cf7f3e5-7109-4726-aca1-76bf779f1f95"
+      Hint: Peril type
+      Value: "{389A8AD2-4BD8-4260-8059-761BC507FEB1}"
+    - ID: "1d2229f9-6c8b-4828-97c0-ade6f1a125d0"
+      Hint: TotalRatings
+      Value: 52
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Progressive commercial property fire FNOL, safety, investigation, and mitigation guidance for Claims Advisors.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260803T035643Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Commercial Property Fire
+    - ID: "29d334fb-0f6f-41fa-98ea-a6f30222129f"
+      Hint: sharedContent
+      Value: |
+        {6A14F5F2-5952-4895-B522-1214EAFABC20}
+        {5B918F5D-5A9F-4C2D-BB22-4D43903190B0}
+        {C42952D4-C1D2-41DF-BFB4-A3370C22FAF6}
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{325A5D47-D4EB-4876-B759-0E18E2D9DCED}"
+    - ID: "480bb6b8-0914-4d2c-a73e-c5b28b8693e0"
+      Hint: Intake Triggers
+      Value: "<p>Start a Commercial Property fire workflow when:</p><ul><li>Named insured, property manager, or Progressive agent reports fire, explosion with fire, or smoke damage at a Progressive-insured commercial location</li><li>Fire department / alarm company notifies Progressive of a structure fire with an identifiable commercial policy</li><li>Tenant or landlord on a Progressive commercial policy reports fire originating in or spreading to the insured premises</li><li>Prior fire claim needs reopening for secondary smoke, odor, or contents discovery</li></ul>"
+    - ID: "4d1faace-7b0f-4ec7-94b8-9ae80e0a9bce"
+      Hint: Common Scenarios
+      Value: "<ul><li><strong>Kitchen hood / grease fire in restaurant:</strong> fire + smoke + possible ordinance/law; BI likely</li><li><strong>Electrical panel fire in warehouse:</strong> origin-and-cause; inventory smoke damage</li><li><strong>Tenant space fire spreading to adjoining suite:</strong> confirm who Progressive insures; subrogation watch</li><li><strong>Smoke-only from neighboring unit:</strong> document migration path; limited building scope</li><li><strong>Arson suspected:</strong> SIU; preserve scene; do not disturb evidence</li></ul>"
+    - ID: "4ed4709d-3dc8-4d81-bc4b-b44be7d21c45"
+      Hint: LastRated
+      Value: 20260727T130000Z
+    - ID: "4f91e6ca-b571-41f9-bc35-4e7e89c590de"
+      Hint: Baseline Reserve Guidelines
+      Value: "<ul><li>Building reserve by areas affected and construction type</li><li>BPP / stock reserve from early inventory estimates</li><li>Debris removal expectation early on total / near-total losses</li><li>BI / extra expense placeholder when operations are interrupted — refine after worksheets</li></ul>"
+    - ID: "568439dd-7959-4317-ac05-4aca4fe37a7a"
+      Hint: AverageRating
+      Value: 4.50
+    - ID: "5897e9d3-8204-4ed7-9f6a-ceb4891c3182"
+      Hint: PositiveCount
+      Value: 61
+    - ID: "5b49b775-a3f5-41cd-bd78-90fae97f1fd6"
+      Hint: Core Triage Questions
+      Value: "<ol><li>Exact address / suite and occupancy type (retail, warehouse, office, restaurant)?</li><li>Is the fire extinguished? Any remaining hot spots or utility shutoffs?</li><li>Fire department report / incident number? Cause under investigation?</li><li>Anyone injured or hospitalized?</li><li>Building vs contents vs stock vs equipment damaged?</li><li>Is the business able to operate (partial / full interruption)?</li><li>Sprinkler discharge, smoke only, or open flame involvement?</li><li>Any hazardous materials, deep fryers, welding, or known ignition sources?</li></ol>"
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Commercial Property Fire — Intake to Mitigation
+    - ID: "6be9cd31-e34e-4bed-880a-a218075a5b0d"
+      Hint: General Payment Triggers
+      Value: "<ul><li>Emergency board-up / mitigation after coverage confirmation and reasonableness review</li><li>Building repairs after agreed estimate and deductible</li><li>BPP after inventory and valuation (ACV/RCV per Progressive commercial forms)</li><li>BI / extra expense with documented loss of income and continuing expenses per policy</li></ul>"
+    - ID: "71d4c96f-1e34-4f86-8ba5-e7a24a873933"
+      Hint: NegativeCount
+      Value: 7
+    - ID: "76c3fa76-04cb-4142-9756-6fcb96442bf4"
+      Hint: "KB-ID"
+      Value: "KB-CP-1001"
+    - ID: "8147ab19-7525-4ef0-a878-3e3f0a3157ac"
+      Hint: LOB
+      Value: "{E799A026-FF03-4588-8607-16222D811A4C}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "18b17f98-8046-48ca-9372-efbb5af525db"
+    - ID: "ae3f508c-c043-4863-899c-986ad4b75bd5"
+      Hint: Photo Video Standards
+      Value: "<ul><li>Exterior elevations and roof if accessible/safe</li><li>Origin area overview (not disturbing evidence)</li><li>Smoke lines, soot on HVAC, inventory, and finishes</li><li>Utility shutoffs, boarded openings, and temporary power</li><li>Date-stamped vendor mitigation photos when available</li></ul>"
+    - ID: "b3f4a945-e28b-4a1c-81c7-857555b83127"
+      Hint: General Escalation Rules
+      Value: "<ul><li><strong>Active fire / structural collapse risk / hazmat:</strong> emergency services priority + commercial large-loss desk</li><li><strong>Fatalities or multiple injuries:</strong> severity / SIU / executive notice per Progressive guidelines</li><li><strong>Cause undetermined / arson indicators:</strong> SIU and origin-and-cause expert path</li><li><strong>High BI / extra expense / multi-location impact:</strong> commercial property large-loss</li><li><strong>Landlord / tenant / HOA / condo association disputes:</strong> confirm insurable interest before coverage commitments</li></ul>"
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Commercial Property Fire
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\WIt5EKonMo343Fqq8begbLVKlCgYPAIX
+    - ID: "c09aaa65-03f7-41a9-ba56-69b018e89ccc"
+      Hint: General Mitigation
+      Value: "<ul><li>Authorize board-up, temporary roofing, and water extraction from firefighting runoff when reasonably necessary</li><li>Coordinate smoke / soot remediation with approved Progressive commercial vendors</li><li>Advise insured on inventory preservation and cold-storage for perishable stock when applicable</li><li>Discuss temporary relocation / extra expense only after confirming Progressive commercial coverages</li></ul>"
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260803T035643Z
+    - ID: "cc6e82f0-6942-4103-8d12-c8742b54a7a1"
+      Hint: Purpose
+      Value: "<p>Equip Progressive Claims Advisors to handle <strong>Commercial Property fire</strong> losses with accurate intake, life-safety prioritization, and clear building / BPP / BI framing.</p><ul><li>Secure the site and coordinate with fire authorities</li><li>Separate building, business personal property, and debris removal exposures</li><li>Identify early business interruption / extra expense needs</li></ul>"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260803T040803Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: "KB-CP-1001-FireLoss"
+    - ID: "ef17e08a-c9dd-47e0-adf2-9232c87aaa7f"
+      Hint: RatingsSum
+      Value: 234
+    - ID: "fc43bd45-b665-4895-a9e5-6d9a34ea7835"
+      Hint: Title
+      Value: Commercial Property Fire — Intake to Mitigation

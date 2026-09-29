@@ -1,0 +1,114 @@
+﻿---
+ID: "79f1b8f9-bc78-4534-a66a-7ec6ae3bd5a2"
+Parent: "28f5596c-9b5d-4078-b685-26a7cdf2ae41"
+Template: "bd372d9d-6e4f-4ae9-a54c-dbc2acdebe2a"
+Path: /sitecore/content/dycom/dycom/Data/Animated Promos/Engineer Careers Promo_var2
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "af16983a-b96a-405e-b864-8334289cab24"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260512T204720Z
+    - ID: "3a2a1142-68ca-4f5b-afb0-c17d2c0ef8ea"
+      Hint: secondaryLink
+      Value: |
+        <link linktype="internal" id="53c6c975-a600-41eb-a4ec-8c482ab4a550" anchor="" querystring="" target="" class="" text="Explore Careers with Dycom" title=""/>
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "84a2a397-786e-43bd-85a0-bfbcc51fc3f3"
+      Hint: image
+      Value: |
+        <Image src="https://mrfbasech.sitecoresandbox.cloud/api/public/content/27c6dfcdf2674425ba5037c647b65d29?v=b85ee239" dam-id="akmUFFMtTQ2nyRR3apDrhQ" width="854" height="780" dam-content-type="Image" thumbnailsrc="https://mrfbasech.sitecoresandbox.cloud/api/gateway/88590/thumbnail" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "777ff920-6a3c-4d9d-bba1-c8e91044aab7"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Akv1r1Hmcm16AN61y5QanpMca0RChHPy
+    - ID: "c00d4bd2-a452-4067-a861-e8c6d47201a7"
+      Hint: description
+      Value: "Dycom Industries, Inc.  (NYSE:DY) is a leading provider of specialty contracting services to the telecommunications infrastructure and utility industries throughout the United States. We supply the single most critical resource telecom service providers need: skilled people. We serve the nation from hundreds of field offices and are unparalleled in scope and scale. "
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260812T094338Z
+    - ID: "da7db0f2-08eb-47c5-af07-ed12a1e998db"
+      Hint: title
+      Value: In the Air and Underground™ 
+    - ID: "e9e9c847-e0f0-497d-8e41-5211a087029a"
+      Hint: primaryLink
+      Value: |
+        <link linktype="internal" id="60e1eef0-ff15-41a3-ad72-ce32b1a58d16" anchor="" querystring="" target="" class="" text="Explore our Family of Companies" title=""/>
+- Language: "es-MX"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260512T204720Z
+    - ID: "3a2a1142-68ca-4f5b-afb0-c17d2c0ef8ea"
+      Hint: secondaryLink
+      Value: |
+        <link class="" querystring="" id="53c6c975-a600-41eb-a4ec-8c482ab4a550" anchor="" target="" title="" linktype="internal" text="Explora Carreras con Dycom" />
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "84a2a397-786e-43bd-85a0-bfbcc51fc3f3"
+      Hint: image
+      Value: |
+        <Image src="https://mrfbasech.sitecoresandbox.cloud/api/public/content/85845-HomepagePromoCTAs-1100x740?v=a1862a3c" dam-id="zrO-4LpwQUWXBaZIfipgfg" width="1100" height="740" alt="imgi_55_RS333__CGC5618-scr.jpg" dam-content-type="Image" thumbnailsrc="https://mrfbasech.sitecoresandbox.cloud/api/gateway/85845/thumbnail" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "19963a87-75d0-4568-bfc8-27f42dd6b519"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Akv1r1Hmcm16AN61y5QanpMca0RChHPy
+    - ID: "c00d4bd2-a452-4067-a861-e8c6d47201a7"
+      Hint: description
+      Value: "Dycom Industries, Inc. (NYSE:DY) es un proveedor líder de servicios especializados de contratación para las industrias de infraestructura de telecomunicaciones y servicios públicos en los Estados Unidos. Proporcionamos el recurso más crítico que los proveedores de servicios de telecomunicaciones necesitan: personal capacitado. Servimos a la nación desde cientos de oficinas de campo y somos incomparables en alcance y escala."
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260812T094338Z
+    - ID: "da7db0f2-08eb-47c5-af07-ed12a1e998db"
+      Hint: title
+      Value: En el Aire y Bajo Tierra™
+    - ID: "e9e9c847-e0f0-497d-8e41-5211a087029a"
+      Hint: primaryLink
+      Value: |
+        <link class="" querystring="" id="60e1eef0-ff15-41a3-ad72-ce32b1a58d16" anchor="" target="" title="" linktype="internal" text="Explora nuestra Familia de Empresas" />

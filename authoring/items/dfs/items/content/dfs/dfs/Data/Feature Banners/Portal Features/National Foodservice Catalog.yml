@@ -1,0 +1,51 @@
+﻿---
+ID: "1124b683-35b5-4ede-b0eb-309370c78d38"
+Parent: "b424dc55-1698-4cde-bd12-40c1ff57c305"
+Template: "4507e405-6110-4e56-af58-27b65b58268f"
+Path: /sitecore/content/dfs/dfs/Data/Feature Banners/Portal Features/National Foodservice Catalog
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: 
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "01ccee8e-8479-4600-95ae-c07c20709812"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "21aae250-ac81-46a1-a336-29a030bfc511"
+      Hint: heading
+      Value: 100,000+ foodservice SKUs
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260819T233954Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{12FFAC4C-565F-4C9A-B63E-7F77E96B4D1F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "29a96289-062c-4d2f-9835-059b17f98271"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260820T132601Z
+    - ID: "f8f97c78-419a-431b-82e7-e46a39c7393f"
+      Hint: image
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/d4797cd0ff684684a5145e840de170e2?v=9bf6d566" dam-id="B0fvqtc8T3mgiQ1U51lGww" width="150" height="118" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/84396/thumbnail" />

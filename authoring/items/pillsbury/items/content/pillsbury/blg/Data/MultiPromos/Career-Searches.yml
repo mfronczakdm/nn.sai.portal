@@ -1,0 +1,82 @@
+﻿---
+ID: "e87d9f77-5756-4bd4-a65d-3e185446b6c3"
+Parent: "0cd7e167-e318-4db4-9788-7f2aff1fe458"
+Template: "775d6354-cf01-4f34-9713-d34645079c88"
+Path: "/sitecore/content/pillsbury/blg/Data/MultiPromos/Career-Searches"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{6C59AE29-D0A1-4B77-9305-0ABAB21D5FE5}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "4bcb73f7-ab82-497b-bdf8-e04bd5657d6b"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "24fa0354-d116-4f42-9eaa-bdab15a8ade7"
+      Hint: title
+      Value: FIND YOUR CAREER AT PILLSBURY
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260806T170016Z
+    - ID: "2fe9bed7-7bcc-4a35-a209-34bcb84fcb42"
+      Hint: description
+      Value: "Looking for a career? Browse open roles—associates, summer associates, and more—then apply in a few steps."
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "6f68a42a-935a-469c-897a-e0d1aa11fc20"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Akv1r1Hmcm16AN61y5QanpMca0RChHPy
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260812T094340Z
+  - Version: 2
+    Fields:
+    - ID: "24fa0354-d116-4f42-9eaa-bdab15a8ade7"
+      Hint: title
+      Value: FIND YOUR CAREER AT PILLSBURY
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260822T014836Z
+    - ID: "2fe9bed7-7bcc-4a35-a209-34bcb84fcb42"
+      Hint: description
+      Value: "Looking for a career? Browse open roles—associates, summer associates, and more—then apply in a few steps."
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{C55B483C-EA7F-4E76-A066-985F7D9396CA}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b6263ef1-8005-402c-868f-6ab755b53931"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260822T014836Z
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260822T014852Z

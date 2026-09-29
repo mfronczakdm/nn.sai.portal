@@ -1,0 +1,146 @@
+﻿---
+ID: "aa238cde-7dba-4d66-bf9d-55aa267a1bf2"
+Parent: "3e80f0b9-3d7e-437d-ad41-d301df789f22"
+Template: "3766e92a-e97f-4118-91a0-06223312a461"
+Path: /sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Data/SignupBanner 1
+BranchID: "890b7b74-9fac-4848-a3a6-ac14313f0684"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "7f6164b4-06a6-47fb-86ef-7d77493bd888"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{3DF84705-6ACB-4598-978D-7420BBD89105}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T010206Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\chamodi.samarawickrama@sitecore.com
+    - ID: "580cbc2a-05d8-4d6a-a85c-a62a05281979"
+      Hint: Subheading
+      Value: Get 10% off your first purchase at Sync.com, plus enjoy early access to product launches, exclusive sales, and curated news delivered just for you.
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "bafb1d2e-bd6f-40ce-87d3-4c6f4be85b5d"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Akv1r1Hmcm16AN61y5QanpMca0RChHPy
+    - ID: "bc100b18-3988-4d51-beb2-b1466c9d0e29"
+      Hint: Heading
+      Value: GET VIP ACCESS.
+    - ID: "c5e976c8-e0a2-4b7d-949f-2fa50e39f031"
+      Hint: Image
+      Value: |
+        <image mediaid="f810c913-9957-494b-a3e0-abaaa612d283" />
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T112301Z
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T010206Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\chamodi.samarawickrama@sitecore.com
+    - ID: "580cbc2a-05d8-4d6a-a85c-a62a05281979"
+      Hint: Subheading
+      Value: Obtén 10% de descuento en tu primera compra en Sync.com, además disfruta acceso anticipado a lanzamientos de productos, ventas exclusivas y noticias seleccionadas para ti.
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "14dbe15c-50a6-4b52-adf3-93ea4dbb7796"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Akv1r1Hmcm16AN61y5QanpMca0RChHPy
+    - ID: "bc100b18-3988-4d51-beb2-b1466c9d0e29"
+      Hint: Heading
+      Value: OBTÉN ACCESO VIP.
+    - ID: "c5e976c8-e0a2-4b7d-949f-2fa50e39f031"
+      Hint: Image
+      Value: |
+        <image mediaid="f810c913-9957-494b-a3e0-abaaa612d283" alt="Arte abstracto" />
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T112336Z
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T010206Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\chamodi.samarawickrama@sitecore.com
+    - ID: "580cbc2a-05d8-4d6a-a85c-a62a05281979"
+      Hint: Subheading
+      Value: Obtenez 10 % de rabais sur votre premier achat chez Sync.com, plus un accès anticipé aux lancements de produits, à des soldes exclusives et à des nouvelles sélectionnées pour vous.
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "cf6fda47-88ab-423c-aad5-a3d68d6c8b66"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "bc100b18-3988-4d51-beb2-b1466c9d0e29"
+      Hint: Heading
+      Value: OBTENEZ UN ACCÈS VIP.
+    - ID: "c5e976c8-e0a2-4b7d-949f-2fa50e39f031"
+      Hint: Image
+      Value: |
+        <image mediaid="f810c913-9957-494b-a3e0-abaaa612d283" alt="Art abstrait" />
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201549Z

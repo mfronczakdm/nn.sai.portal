@@ -1,0 +1,37 @@
+﻿---
+ID: "f54e5eab-cd84-424b-bfd1-35f971329736"
+Parent: "c59a1054-dedc-41f5-9641-8842a26e026c"
+Template: "73e57eaa-b54a-41e1-b689-bf7dae9155ad"
+Path: /sitecore/content/progressive/pkm/Home/Questions and Answers/Coverage Eligibility/Special handling flags
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{D97E3E4A-D683-4471-8BD0-B4EE1CF6D241}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260729T192635Z
+    - ID: "2d71e32d-e990-46b3-8ca1-58cd89743d5e"
+      Hint: Question
+      Value: "What Progressive special handling flags should claims advisors watch for?"
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Special handling flags
+    - ID: "4f8dc72e-1548-471c-9f3e-a13e944e4321"
+      Hint: Answer
+      Value: Look for Progressive special handling indicators such as VIP, litigation hold, attorney representation, fraud review, or sensitive claim types. Follow the flagged Progressive playbook and avoid informal status updates outside approved channels. Escalate immediately to a supervisor or SME when a new special handling condition is discovered.
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a971dbde-d4ad-489b-a898-dff858c68810"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260729T192636Z

@@ -1,0 +1,36 @@
+﻿---
+ID: "63aa8e43-48db-4292-9883-875f9d1251ae"
+Parent: "bcdac03c-f707-4431-8d86-b0ce1159a478"
+Template: "9c063cfd-1d09-42b5-9fc4-560a6d7e859f"
+Path: /sitecore/content/dfs/dfs/Data/HeroCarousels/Taco Bell Portal Hero/Kitchen Equipment
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0da51f00-cb5f-45ef-9c9e-4a387ca41a53"
+      Hint: Description
+      Value: "Fryers, holding equipment, prep tools, and MRO parts sourced for Taco Bell's kitchen workflows and peak-hour throughput."
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260819T184720Z
+    - ID: "3ce233be-84f2-4003-a560-6c0e347d1a09"
+      Hint: Summary
+      Value: Kitchen ready
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "e670d8e4-55d4-451b-ade9-df8e83247e34"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "cd3300c5-39a0-4b1a-9d0d-37a89b7517f9"
+      Hint: SlideName
+      Value: Kitchen Equipment & MRO
+    - ID: "d7652d2b-7405-4763-afd9-8d541a2f1f13"
+      Hint: Link
+      Value: |
+        <link linktype="external" url="/portal" text="Browse kitchen" />
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260819T184720Z

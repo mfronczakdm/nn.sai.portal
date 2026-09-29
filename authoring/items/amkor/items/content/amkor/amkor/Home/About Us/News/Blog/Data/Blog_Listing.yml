@@ -1,0 +1,63 @@
+﻿---
+ID: "206e42c9-0bdb-44fd-aa2b-9f31c958f6d5"
+Parent: "ace46555-f912-42be-a802-0b069d5bb6b2"
+Template: "3d0988cb-43ed-4892-96a4-f9f44fc399cb"
+Path: /sitecore/content/amkor/amkor/Home/About Us/News/Blog/Data/Blog_Listing
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260829T161046Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "9bf30b1d-7a51-4378-896c-81d1611ae6f2"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260829T161046Z
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "2301c73f-11b3-47fb-adec-5a9d401b149a"
+      Hint: Title
+      Value: ブログ
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260829T161046Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "56f25315-06e2-4e16-9bc5-61e94d810f2f"
+      Hint: EmptyResultsText
+      Value: 検索条件に一致するブログはありません。
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ef12037b-c2f9-4ed4-aa74-fdb55dc90984"
+    - ID: "92626bfa-add4-40c0-adf3-c9487083b135"
+      Hint: Intro
+      Value: <p>業界や業務分野を横断する実践的な知見について、Pillsbury のブログをご覧ください。</p>
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d3030ce1-71a7-4819-9d42-3552f2a315f2"
+      Hint: ShowFilters
+      Value: 1
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260831T030608Z

@@ -1,0 +1,62 @@
+﻿---
+ID: "b75ac65c-a9e4-410a-8f5b-a6e0c6141b98"
+Parent: "cfd18055-836f-4d59-9bf5-8a8b9f7745cb"
+Template: "e64d342f-e5aa-4233-88c4-58ccd451a7d3"
+Path: "/sitecore/content/dycom-2/northsky/Home/Landing Page/Data/Vertical Image Accordion/Vertical Accordion Item 3"
+BranchID: "97509128-1b31-4a5b-9c07-d4c94b611d24"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 75
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "7f11626c-2c75-49ae-beca-55dca0765a23"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{97B22921-B2B8-4894-9CD1-4B4C72B91C29}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "024a119b-09d8-480b-b179-872c47dce1b5"
+      Hint: linkOptional
+      Value: |
+        <link class="" querystring="" id="{F42C7304-798E-4A11-BAA6-6B5E1C42B7CB}" anchor="" target="" title="" linktype="internal" text="Explore" url="" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260525T183955Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "57b7cdd6-1dbb-4e0f-9df0-6cccb20444c6"
+      Hint: descriptionOptional
+      Value: "Driven by innovation and performance, our Move division is dedicated to redefining athletic excellence with cutting-edge gear designed for strength, speed, and endurance."
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "6ef0efde-7773-4786-af78-860ff2f4eeac"
+      Hint: titleRequired
+      Value: Solterra Beauty
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b6eebda6-fcc1-44a2-b88f-6ca5fc458334"
+    - ID: "ab7c812f-8768-4203-8ee2-40d0ebb2107a"
+      Hint: imageRequired
+      Value: |
+        <image mediaid="9fda38d2-e66f-4da3-98fd-8643bcfd9664" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260525T184114Z

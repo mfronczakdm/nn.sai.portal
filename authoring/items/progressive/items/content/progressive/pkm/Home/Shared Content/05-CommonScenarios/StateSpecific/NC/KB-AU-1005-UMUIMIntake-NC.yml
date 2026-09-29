@@ -1,0 +1,38 @@
+﻿---
+ID: "a6d4e07f-a2a2-4959-b5d4-23e916498616"
+Parent: "166e31e8-2538-4641-a25b-b60ec0cb1ee4"
+Template: "bdf6c974-e68c-46a2-a0a9-d382fd0927eb"
+Path: "/sitecore/content/progressive/pkm/Home/Shared Content/05-CommonScenarios/StateSpecific/NC/KB-AU-1005-UMUIMIntake-NC"
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{F7A17AD4-98D6-484E-9538-6C53D7C7E41E}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "21b8d6f1-4294-46a5-98fd-38df0ce8aae0"
+      Hint: SourceDocumentLOB
+      Value: "{0944EAEA-5558-443F-A68D-482773EA2153}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260803T035352Z
+    - ID: "76e0c665-5c4d-4d03-ae66-a5f3d12978ba"
+      Hint: Content
+      Value: "<p>In North Carolina, require a police report notation for Progressive hit-and-run UM intakes whenever available, and escalate Progressive coverage SME before paying phantom-vehicle UM BI without corroboration.</p>"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "6f1d27dd-5460-4f0c-bfeb-fb96ac754a8e"
+    - ID: "a8f6d033-4e9e-4598-be5e-da2456c41b9f"
+      Hint: sourceDocumentLink
+      Value: |
+        <link text="Personal Auto Uninsured and Underinsured Motorist Intake" linktype="internal" class="" title="" target="" querystring="" id="{533E1C5F-A219-491D-BA13-F9EB069E3753}" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260803T035353Z

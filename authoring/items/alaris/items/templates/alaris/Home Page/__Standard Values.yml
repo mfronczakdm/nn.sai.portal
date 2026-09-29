@@ -1,0 +1,44 @@
+﻿---
+ID: "796fa1e2-bb9f-4a99-a1b7-c60a61b0c2cc"
+Parent: "b305394e-0b80-4803-b483-ea0477cb2076"
+Template: "b305394e-0b80-4803-b483-ea0477cb2076"
+Path: /sitecore/templates/Project/alaris/Home Page/__Standard Values
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {F09933B1-1BA9-4C7B-9B5A-6ABE5B708984}
+    {572A489D-D658-48CD-9D0C-D28511F7C6F0}
+    {BFB734EC-8455-4EAA-9101-BFCFA6E93922}
+    {D45A6062-D1A2-46E0-94F6-F248DA04EA35}
+    {AE8D2D0E-0231-42CA-8984-973AE1F46F7E}
+    {006022CA-B6DF-4051-94A3-781C1A73D6C1}
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "776a6619-0afc-4497-ac07-bae7b00c4c43"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260516T104131Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5ea0f4fd-3cd0-4752-a919-82b1442f730c"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260516T104134Z

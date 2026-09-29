@@ -1,0 +1,51 @@
+﻿---
+ID: "1a2af042-9bf8-4f49-94f2-b0d779091a49"
+Parent: "2c87a8c4-c121-4647-aafa-a404bbdb8bc5"
+Template: "70780390-a3eb-478d-b5de-062ba3c9e897"
+Path: "/sitecore/content/andmore/atlanta-apparel/Home/Data/SplitFeature-Shop"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "1e2b9b0c-18e0-44d4-bd70-6c21307b2a5c"
+      Hint: SectionTitle
+      Value: Shop the latest collections
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T020024Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "76acf4ae-4743-4e04-8150-ad9fcb505011"
+      Hint: EyebrowText
+      Value: Discover
+    - ID: "7c4e343a-1394-4002-a9c9-79d019670ce5"
+      Hint: PrimaryLink
+      Value: |
+        <link text="Explore the show" anchor="" linktype="external" class="" title="" target="" querystring="" url="https://www.atlanta-apparel.com/" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4197818c-e6dd-4042-a97c-f87764b4e2bf"
+    - ID: "9bcfa365-c779-4e5b-b029-abee39f389be"
+      Hint: Description
+      Value: "<p>Explore ready-to-wear, accessories, and emerging brands across Atlanta Apparel.</p>"
+    - ID: "a22f9921-5ac5-40d3-a3a5-49bb1ae7292d"
+      Hint: FeatureImage
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/29178038eae340a188dbcc8fc2c71902?v=a3aa1636" dam-id="LsZRY1I3TJ-SCuUQijucZQ" width="598" height="598" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/85639/thumbnail" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260903T154042Z

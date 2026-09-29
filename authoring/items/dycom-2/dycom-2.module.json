@@ -1,0 +1,26 @@
+﻿{
+    "$schema": "../../../.sitecore/schemas/ModuleFile.schema.json",
+    "namespace": "dycom-2",
+    "items": {
+        "includes": [
+            {
+                "name": "content",
+                "path": "/sitecore/content/dycom-2",
+                "scope": "ItemAndDescendants",
+                "allowedPushOperations": "CreateUpdateAndDelete"
+            },
+            {
+                "name": "renderings",
+                "path": "/sitecore/layout/Renderings/Project/dycom-2",
+                "scope": "ItemAndDescendants",
+                "allowedPushOperations": "CreateUpdateAndDelete"
+            },
+            {
+                "name": "templates",
+                "path": "/sitecore/templates/Project/dycom-2",
+                "scope": "ItemAndDescendants",
+                "allowedPushOperations": "CreateUpdateAndDelete"
+            }
+        ]
+    }
+}

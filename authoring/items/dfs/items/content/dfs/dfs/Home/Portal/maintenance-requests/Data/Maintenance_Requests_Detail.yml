@@ -1,0 +1,41 @@
+﻿---
+ID: "4a055a18-9707-4001-b9db-bd1ce96fbd37"
+Parent: "fdbae2c5-dba4-4276-867f-b5f13990344a"
+Template: "0bb540d0-731b-4f71-8c0e-d99e26562cd2"
+Path: "/sitecore/content/dfs/dfs/Home/Portal/maintenance-requests/Data/Maintenance_Requests_Detail"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260819T214931Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c0b7bce-7da1-4cec-a7aa-3d28179fe94b"
+      Hint: title
+      Value: Maintenance Requests
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "224894cf-778f-43b9-a3c1-a40b7ff2e74f"
+    - ID: "b0125af5-1538-4b18-9a93-2e8f5781bc2c"
+      Hint: body
+      Value: |
+        <div class="mx-auto w-full max-w-6xl space-y-8"><div class="rounded-2xl border border-amber-500/30 bg-amber-500/10 p-4 text-sm text-foreground"><strong class="font-semibold">Priority service:</strong> Refrigeration and hood-system issues are routed to our 24/7 emergency queue. Use the emergency option when submitting.</div><div class="grid gap-4 sm:grid-cols-3"><div class="rounded-2xl border border-border bg-card p-5 shadow-sm"><p class="text-xs font-medium uppercase tracking-wide text-muted-foreground">Open requests</p><p class="mt-1 text-3xl font-semibold text-foreground">4</p></div><div class="rounded-2xl border border-border bg-card p-5 shadow-sm"><p class="text-xs font-medium uppercase tracking-wide text-muted-foreground">Avg. response</p><p class="mt-1 text-3xl font-semibold text-foreground">&lt; 4 hrs</p></div><div class="rounded-2xl border border-border bg-card p-5 shadow-sm"><p class="text-xs font-medium uppercase tracking-wide text-muted-foreground">Completed (30d)</p><p class="mt-1 text-3xl font-semibold text-foreground">18</p></div></div><div class="grid gap-6 lg:grid-cols-2"><section class="rounded-2xl border border-border bg-card p-6 shadow-sm"><h2 class="text-lg font-semibold text-foreground">Submit a new request</h2><p class="mt-2 text-sm text-muted-foreground">Select the issue type and location. Attach photos when available to speed up diagnosis.</p><ul class="mt-4 space-y-2 text-sm text-foreground"><li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>Equipment repair (kitchen, HVAC, refrigeration)</li><li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>Facility maintenance (plumbing, electrical, structural)</li><li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>Preventive maintenance scheduling</li></ul><a href="#" class="mt-5 inline-flex items-center rounded-xl bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm">Start maintenance request</a></section><section class="rounded-2xl border border-border bg-card p-6 shadow-sm"><h2 class="text-lg font-semibold text-foreground">Active work orders</h2><ul class="mt-4 space-y-3 text-sm"><li class="rounded-xl border border-border bg-background p-4"><div class="flex items-start justify-between gap-3"><div><p class="font-medium text-foreground">Walk-in cooler temp alarm</p><p class="text-muted-foreground">Store #1042 · Ticket #MR-4821</p></div><span class="rounded-full bg-amber-500/15 px-2 py-0.5 text-xs font-medium text-amber-700">In progress</span></div></li><li class="rounded-xl border border-border bg-background p-4"><div class="flex items-start justify-between gap-3"><div><p class="font-medium text-foreground">Fryer ignition failure</p><p class="text-muted-foreground">Store #1187 · Ticket #MR-4798</p></div><span class="rounded-full bg-primary/10 px-2 py-0.5 text-xs font-medium text-primary">Scheduled</span></div></li><li class="rounded-xl border border-border bg-background p-4"><div class="flex items-start justify-between gap-3"><div><p class="font-medium text-foreground">Quarterly hood cleaning</p><p class="text-muted-foreground">Store #1042 · Ticket #MR-4755</p></div><span class="rounded-full bg-muted px-2 py-0.5 text-xs font-medium text-muted-foreground">Completed</span></div></li></ul></section></div></div>
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "cc7d3a62-3796-41d8-af32-b4408a0749f9"
+      Hint: subtitle
+      Value: Submit and track facility and equipment maintenance requests across all your restaurant locations.
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260819T214931Z

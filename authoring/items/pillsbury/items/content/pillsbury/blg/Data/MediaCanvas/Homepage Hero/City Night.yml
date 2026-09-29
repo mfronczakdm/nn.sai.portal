@@ -1,0 +1,43 @@
+﻿---
+ID: "45f7b624-b161-4710-90cd-57aa39f52f5f"
+Parent: "9f15f9fb-313d-4032-a286-b8fa0d4cbea1"
+Template: "2f26cc64-f6c8-45cc-8702-7a874677d94f"
+Path: /sitecore/content/pillsbury/blg/Data/MediaCanvas/Homepage Hero/City Night
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{6C59AE29-D0A1-4B77-9305-0ABAB21D5FE5}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "f40f7b86-98b7-4bb4-802e-ff1ea965b99b"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260822T023528Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{C55B483C-EA7F-4E76-A066-985F7D9396CA}"
+    - ID: "668cdf1f-c2bd-4cf2-9940-f3d23436fc09"
+      Hint: Image
+      Value: |
+        <image mediaid="96426adc-2df4-470c-bdbb-ccbbe79d3748" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "59c23d75-4a2f-4495-9ec3-2ac508e93382"
+    - ID: "8eeb4761-71f9-48c2-9837-b03256954ba6"
+      Hint: Tagline
+      Value: Business across Canada
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260822T130009Z

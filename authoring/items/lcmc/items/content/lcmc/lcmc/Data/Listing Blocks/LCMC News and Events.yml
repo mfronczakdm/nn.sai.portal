@@ -1,0 +1,156 @@
+﻿---
+ID: "0284e480-e14c-4a3e-ae47-caf505c93347"
+Parent: "e08ec401-7dc5-4972-86d4-f9fb3e942e5f"
+Template: "4a77fd9b-93b9-4ab2-91f7-936173963913"
+Path: /sitecore/content/lcmc/lcmc/Data/Listing Blocks/LCMC News and Events
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1851a4e1-1266-4e67-aabf-f06dfcbc8fd3"
+      Hint: Description
+      Value: Stay up to date with stories and upcoming events from LCMC Health.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T015814Z
+    - ID: "34a564fa-135c-4c98-92ec-63c5f01c60ac"
+      Hint: ViewAllLink
+      Value: |
+        <link text="View all news" anchor="" linktype="external" class="" title="" target="" querystring="" url="https://www.lcmchealth.org/news/" />
+    - ID: "400a0423-f93a-48c6-8e6f-76207e8c724b"
+      Hint: SectionTitle
+      Value: News & Events
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "7cc306c8-6863-4b4c-b8a5-a65c8dc25e2f"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T165117Z
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1851a4e1-1266-4e67-aabf-f06dfcbc8fd3"
+      Hint: Description
+      Value: Mantente al día con historias y próximos eventos de LCMC Health.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T015814Z
+    - ID: "34a564fa-135c-4c98-92ec-63c5f01c60ac"
+      Hint: ViewAllLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="Ver todas las noticias" url="https://www.lcmchealth.org/news/" />
+    - ID: "400a0423-f93a-48c6-8e6f-76207e8c724b"
+      Hint: SectionTitle
+      Value: Noticias y eventos
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "0b5e88fd-ac5a-4657-a41e-a74d71eb8f7f"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T162654Z
+  - Version: 2
+    Fields:
+    - ID: "1851a4e1-1266-4e67-aabf-f06dfcbc8fd3"
+      Hint: Description
+      Value: Manténgase al día con historias y próximos eventos de LCMC Health.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260910T200824Z
+    - ID: "34a564fa-135c-4c98-92ec-63c5f01c60ac"
+      Hint: ViewAllLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="Ver todas las noticias" url="https://www.lcmchealth.org/news/" />
+    - ID: "400a0423-f93a-48c6-8e6f-76207e8c724b"
+      Hint: SectionTitle
+      Value: Noticias y eventos
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "3b0c1930-e5f3-4cb2-ab2d-e6a76916187c"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260910T200824Z
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T200836Z
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1851a4e1-1266-4e67-aabf-f06dfcbc8fd3"
+      Hint: Description
+      Value: Restez à l’affût des histoires et des événements à venir de LCMC Health.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T015814Z
+    - ID: "34a564fa-135c-4c98-92ec-63c5f01c60ac"
+      Hint: ViewAllLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="Voir toutes les nouvelles" url="https://www.lcmchealth.org/news/" />
+    - ID: "400a0423-f93a-48c6-8e6f-76207e8c724b"
+      Hint: SectionTitle
+      Value: Nouvelles et événements
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "3c2be81f-bf5d-43be-a73b-abd4505a2705"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201314Z

@@ -1,0 +1,46 @@
+﻿---
+ID: "f5294528-43bc-4906-9b13-b146162786c4"
+Parent: "847fc936-c035-4d2c-a774-eb498f9a9bc8"
+Template: "bdf6c974-e68c-46a2-a0a9-d382fd0927eb"
+Path: "/sitecore/content/progressive/pkm/Home/Shared Content/01-General/StateSpecific/NC/KB-HO-1001-WaterDamage-NC"
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{3F0606D5-128B-4C7A-9512-6FB7066028DA}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "21b8d6f1-4294-46a5-98fd-38df0ce8aae0"
+      Hint: SourceDocumentLOB
+      Value: "{331E5703-41A4-4592-B744-14A83C4CFAAE}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260805T110542Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\uDLr1K5wd1M8y82dfXcCgcafj64coB7N
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\uDLr1K5wd1M8y82dfXcCgcafj64coB7N
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4698fd61-cd67-44dd-8cda-dfb94f92d9da"
+    - ID: "94ce9d2b-aa0c-488f-943a-d2e582eb50bc"
+      Hint: SourceDocumentPerils
+      Value: "{C26A71E6-098D-4B9C-A36C-AF820F40F91B}"
+    - ID: "a8f6d033-4e9e-4598-be5e-da2456c41b9f"
+      Hint: sourceDocumentLink
+      Value: |
+        <link text="Homeowners Water Damage — Intake to Mitigation" linktype="internal" class="" title="" target="" querystring="" id="{8EB3B901-6561-463B-B09B-012F7EB4FC2D}" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\uDLr1K5wd1M8y82dfXcCgcafj64coB7N
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260805T110543Z

@@ -1,0 +1,46 @@
+﻿---
+ID: "670a7018-fa4f-4800-be1c-f6279e5a4aa5"
+Parent: "e543f358-afac-453d-94c9-27e8cbc145a8"
+Template: "dfed4457-d760-457a-bec1-c0dccdc44381"
+Path: /sitecore/content/rockland/rockland/Data/Promos/Home Equity Loan
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "1f66862d-a5e3-405f-8e3e-b787b4c39b12"
+      Hint: PromoText2
+      Value: |
+        <div class="ck-content"><p>You've probably invested a lot of time improving your home. Now that its value has increased, you can borrow against it to address other expenses or projects. Our home equity line of credit is best if you need access to a revolving line of credit to meet your needs as they arise. &nbsp;Now with a Fixed Rate Loan Conversion Option: convert a portion or all of outstanding line balances into a fixed term loan.</p><p>With our Home Equity Line of Credit, you'll get the funds you need at a competitive rate that makes your money go further. Our easy-to-use home equity calculator1(Opens in a new Window) can help you determine what your home equity is. Rockland Trust has an easy application process for a home equity line of credit and we’re always happy to talk you through it.</p></div>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260804T114104Z
+    - ID: "28079f3a-896b-4273-be5f-59d0ebb7cd7d"
+      Hint: PromoText
+      Value: |
+        <div class="ck-content"><p>It's time your home paid you back.</p></div>
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2db3e323-7e44-454a-9ff4-4f6f36978d8d"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260804T174055Z
+    - ID: "f94b9858-c439-4291-863b-757b536c8b65"
+      Hint: PromoIcon
+      Value: |
+        <Image src="https://mrfbasech.sitecoresandbox.cloud/api/public/content/c7ebb3ae759349d09521d48ce322b4d6?v=879bc6e7" dam-id="Qfhc1BO9TrCEqzd1EwvPhA" width="893" height="444" dam-content-type="Image" thumbnailsrc="https://mrfbasech.sitecoresandbox.cloud/api/gateway/95297/thumbnail" />

@@ -1,0 +1,275 @@
+﻿---
+ID: "01e1ab28-68ff-45d0-8fc2-e7b7d0f25772"
+Parent: "cef5d18e-d013-4e2f-a538-11634e2810c1"
+Template: "537cad02-fa7d-4fce-989e-246844a833a1"
+Path: /sitecore/content/microbiologics/microbiologics/Home/Support Hub/New Page for Support
+BranchID: "38d2c7d0-73ab-48eb-89e0-843193823da5"
+SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{F3CD0718-8C62-4236-98A9-32B9E8D1E103}"
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{4B1CC6C9-C90F-4594-AC3F-2C04DB14BFE2}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "96477994-c0a1-44c7-944b-8bdd27bb3673"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{944D7467-26E9-42C3-94A6-3109D466EE33}"
+Languages:
+- Language: "de-DE"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{1E24F50F-ECAD-4925-B028-654B93A1652E}"
+              p:before="*"
+              s:id="{E80C2A78-FCC2-4D32-8EC5-4133F608BE5C}"
+              s:par="backgroundColor&amp;excludeTopMargin=1&amp;inset&amp;CSSStyles&amp;DynamicPlaceholderId=2"
+              s:ph="headless-main" />
+            <r
+              uid="{75B94739-C82C-4BEC-978D-C2811C31B09A}"
+              p:after="r[@uid='{1E24F50F-ECAD-4925-B028-654B93A1652E}']"
+              s:id="{3F9CCCB1-7BD7-4245-A3E9-91ED43575D98}"
+              s:par="excludeTopMargin&amp;CSSStyles&amp;DynamicPlaceholderId=4&amp;Styles=%7B417CFF95-A3B6-4A1D-B10A-D41D449CE5FA%7D%7C%7BAE80F34C-96EF-4B45-8028-78EE7FB5B559%7D%7C%7BEF966498-A54E-44F1-80B4-917F0535B239%7D"
+              s:ph="headless-main" />
+            <r
+              uid="{FB98C4A3-8C0B-47E4-AA67-D3C9166FB710}"
+              p:after="r[@uid='{75B94739-C82C-4BEC-978D-C2811C31B09A}']"
+              s:id="{02340885-3692-4CAD-AC11-ED61206501A3}"
+              s:par="excludeTopMargin&amp;CSSStyles&amp;DynamicPlaceholderId=8"
+              s:ph="headless-main" />
+            <r
+              uid="{E3602665-E6C8-4A63-B397-C4A4BD09DD59}"
+              p:after="r[@uid='{FB98C4A3-8C0B-47E4-AA67-D3C9166FB710}']"
+              s:id="{E80C2A78-FCC2-4D32-8EC5-4133F608BE5C}"
+              s:par="backgroundColor=secondary&amp;excludeTopMargin&amp;inset&amp;CSSStyles&amp;DynamicPlaceholderId=6"
+              s:ph="headless-main" />
+            <r
+              uid="{EE5191AB-D41F-4FD4-A46D-3DB95BA6EBA2}"
+              p:after="r[@uid='{E3602665-E6C8-4A63-B397-C4A4BD09DD59}']"
+              s:ds="local:/Data/Article Header"
+              s:id="{DD6C6E80-1458-4276-B753-001691C8841C}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B5F224F44-21A5-4C24-9AA2-EC4FF6C613F1%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=3"
+              s:ph="/headless-main/container-fullbleed-2" />
+            <r
+              uid="{D61AB6FE-6379-4953-B42A-797F650313EE}"
+              p:after="r[@uid='{EE5191AB-D41F-4FD4-A46D-3DB95BA6EBA2}']"
+              s:ds="local:/Data/Text 1"
+              s:id="{50B36874-8C4E-4958-9DD6-8B95C6AFD09A}"
+              s:par="CSSStyles&amp;DynamicPlaceholderId=5"
+              s:ph="/headless-main/container-seventy-4" />
+            <r
+              uid="{D5047C48-4899-4E9B-AC74-3D047C742DD4}"
+              p:after="r[@uid='{D61AB6FE-6379-4953-B42A-797F650313EE}']"
+              s:ds="local:/Data/CTA Banner"
+              s:id="{3332F59B-F5F3-44DF-B66E-2811C31AEB3C}"
+              s:par="colorScheme&amp;CSSStyles&amp;DynamicPlaceholderId=7"
+              s:ph="/headless-main/container-fullbleed-6" />
+            <r
+              uid="{BF765A56-49EF-4EB4-9919-077DE7509853}"
+              p:after="r[@uid='{D5047C48-4899-4E9B-AC74-3D047C742DD4}']"
+              s:id="{62DD1639-9F28-4040-8738-C886480B2127}"
+              s:par="FormId=9bb73667027b4c3aa28ce59c0598e515-use&amp;GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles"
+              s:ph="/headless-main/container-fullwidth-8" />
+            <r
+              uid="{FF31F600-1C35-4098-BAF4-72001E339A2E}"
+              p:after="*[1=2]"
+              s:id="{791A1860-DCCE-495C-B778-78F6B19AAB51}"
+              s:par=""
+              s:ph="/headless-main/container-fullwidth-8" />
+          </d>
+        </r>
+    - ID: "1c5dc4c1-21cd-405b-873b-5a82e1c0dd31"
+      Hint: ArticleBody
+      Value: Artikeltext
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Zusammenfassung
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260617T173529Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Kurztitel
+    - ID: "2fcae033-cf44-4b77-b8ad-91f41b56cb1c"
+      Hint: pageDisplayDate
+      Value: 20260616T000000Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{57CC7DCE-E6B1-4564-9581-0E5850B8BDF2}"
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Untertitel
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\nick.robinett@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Seitentitel
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\nick.robinett@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "754050c9-4402-4ed8-a082-aa2e6e3f5e86"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "afd3e865-f6ac-4485-95f2-cae591dd8f0a"
+      Hint: pageReadTime
+      Value: 10 Min.
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: "Wachstumsförderungstests (GPT): Praktische Anleitung für eine sichere und konsistente Medienqualifikation"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\nick.robinett@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260617T180403Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Neue Seite für Support
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{1E24F50F-ECAD-4925-B028-654B93A1652E}"
+              p:before="*"
+              s:id="{E80C2A78-FCC2-4D32-8EC5-4133F608BE5C}"
+              s:par="backgroundColor&amp;excludeTopMargin=1&amp;inset&amp;CSSStyles&amp;DynamicPlaceholderId=2"
+              s:ph="headless-main" />
+            <r
+              uid="{75B94739-C82C-4BEC-978D-C2811C31B09A}"
+              p:after="r[@uid='{1E24F50F-ECAD-4925-B028-654B93A1652E}']"
+              s:id="{3F9CCCB1-7BD7-4245-A3E9-91ED43575D98}"
+              s:par="excludeTopMargin&amp;CSSStyles&amp;DynamicPlaceholderId=4&amp;Styles=%7B417CFF95-A3B6-4A1D-B10A-D41D449CE5FA%7D%7C%7BAE80F34C-96EF-4B45-8028-78EE7FB5B559%7D%7C%7BEF966498-A54E-44F1-80B4-917F0535B239%7D"
+              s:ph="headless-main" />
+            <r
+              uid="{FB98C4A3-8C0B-47E4-AA67-D3C9166FB710}"
+              p:after="r[@uid='{75B94739-C82C-4BEC-978D-C2811C31B09A}']"
+              s:id="{02340885-3692-4CAD-AC11-ED61206501A3}"
+              s:par="excludeTopMargin&amp;CSSStyles&amp;DynamicPlaceholderId=8"
+              s:ph="headless-main" />
+            <r
+              uid="{E3602665-E6C8-4A63-B397-C4A4BD09DD59}"
+              p:after="r[@uid='{FB98C4A3-8C0B-47E4-AA67-D3C9166FB710}']"
+              s:id="{E80C2A78-FCC2-4D32-8EC5-4133F608BE5C}"
+              s:par="backgroundColor=secondary&amp;excludeTopMargin&amp;inset&amp;CSSStyles&amp;DynamicPlaceholderId=6"
+              s:ph="headless-main" />
+            <r
+              uid="{EE5191AB-D41F-4FD4-A46D-3DB95BA6EBA2}"
+              p:after="r[@uid='{E3602665-E6C8-4A63-B397-C4A4BD09DD59}']"
+              s:ds="local:/Data/Article Header"
+              s:id="{DD6C6E80-1458-4276-B753-001691C8841C}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B5F224F44-21A5-4C24-9AA2-EC4FF6C613F1%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=3"
+              s:ph="/headless-main/container-fullbleed-2" />
+            <r
+              uid="{D61AB6FE-6379-4953-B42A-797F650313EE}"
+              p:after="r[@uid='{EE5191AB-D41F-4FD4-A46D-3DB95BA6EBA2}']"
+              s:ds="local:/Data/Text 1"
+              s:id="{50B36874-8C4E-4958-9DD6-8B95C6AFD09A}"
+              s:par="CSSStyles&amp;DynamicPlaceholderId=5"
+              s:ph="/headless-main/container-seventy-4" />
+            <r
+              uid="{D5047C48-4899-4E9B-AC74-3D047C742DD4}"
+              p:after="r[@uid='{D61AB6FE-6379-4953-B42A-797F650313EE}']"
+              s:ds="local:/Data/CTA Banner"
+              s:id="{3332F59B-F5F3-44DF-B66E-2811C31AEB3C}"
+              s:par="colorScheme&amp;CSSStyles&amp;DynamicPlaceholderId=7"
+              s:ph="/headless-main/container-fullbleed-6" />
+            <r
+              uid="{BF765A56-49EF-4EB4-9919-077DE7509853}"
+              p:after="r[@uid='{D5047C48-4899-4E9B-AC74-3D047C742DD4}']"
+              s:id="{62DD1639-9F28-4040-8738-C886480B2127}"
+              s:par="FormId=9bb73667027b4c3aa28ce59c0598e515-use&amp;GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles"
+              s:ph="/headless-main/container-fullwidth-8" />
+            <r
+              uid="{FF31F600-1C35-4098-BAF4-72001E339A2E}"
+              p:after="*[1=2]"
+              s:id="{791A1860-DCCE-495C-B778-78F6B19AAB51}"
+              s:par=""
+              s:ph="/headless-main/container-fullwidth-8" />
+          </d>
+        </r>
+    - ID: "1c5dc4c1-21cd-405b-873b-5a82e1c0dd31"
+      Hint: ArticleBody
+      Value: Article Body
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Summary
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260617T173529Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Short Title
+    - ID: "2fcae033-cf44-4b77-b8ad-91f41b56cb1c"
+      Hint: pageDisplayDate
+      Value: 20260616T000000Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{57CC7DCE-E6B1-4564-9581-0E5850B8BDF2}"
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Subtitle
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\nick.robinett@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Page Title
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\nick.robinett@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4b39e05b-9406-4a83-8afb-fdf11cb2e35c"
+    - ID: "afd3e865-f6ac-4485-95f2-cae591dd8f0a"
+      Hint: pageReadTime
+      Value: 10 min
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: "Growth Promotion Testing (GPT): Practical Guidance for Confident, Consistent Media Qualification"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\nick.robinett@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260617T174213Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: New Page for Support

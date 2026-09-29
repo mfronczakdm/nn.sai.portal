@@ -1,0 +1,45 @@
+﻿---
+ID: "8af2c42c-ffd3-4c21-a2a5-18e4449b01b3"
+Parent: "21e6ee2f-364d-4691-b77e-bc387f16d62f"
+Template: "0f442b42-2403-45f5-a02b-67236dccc929"
+Path: /sitecore/content/quanex/quanex/Data/MainNav/MainNav
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260814T125205Z
+    - ID: "6208af57-c3a6-4fdd-bb15-d0644f5985fb"
+      Hint: ShowCart
+      Value: 1
+    - ID: "7d881e04-5371-409c-8f34-93b3f3c8c078"
+      Hint: UserLink
+      Value: |
+        <link text="User" anchor="" linktype="internal" class="" title="" target="_blank" querystring="" id="{E6276198-3FC7-4D8B-BD14-8669B1701536}" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "8a1bd8b1-a3b6-4971-b83e-e0f2180200fe"
+    - ID: "9bf0bb64-9927-422f-9f0b-d129c43a08e8"
+      Hint: SearchPage
+      Value: |
+        <link text="Search" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{41BCA884-B8AC-42D5-A5AA-9BAF61161266}" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "bc6d8de7-eeba-49c7-8a35-6bea676c82a3"
+      Hint: Logo
+      Value: |
+        <image mediaid="{5ACC5ED4-283A-4929-8258-B8A0770C801D}" />
+    - ID: "bf0dc0e1-3bcb-478d-b47d-422d40fe98d9"
+      Hint: NavigationRoot
+      Value: "{E6276198-3FC7-4D8B-BD14-8669B1701536}"
+    - ID: "d5cb2527-5668-42d4-948f-6f888e41a281"
+      Hint: LogoLink
+      Value: |
+        <link text="" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{E6276198-3FC7-4D8B-BD14-8669B1701536}" />
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260818T012824Z

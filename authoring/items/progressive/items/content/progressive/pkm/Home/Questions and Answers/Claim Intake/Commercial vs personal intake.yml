@@ -1,0 +1,55 @@
+﻿---
+ID: "2356271c-b041-4901-9135-fc35900e383a"
+Parent: "aee914ad-afd5-442a-9e5d-f087e3de6752"
+Template: "73e57eaa-b54a-41e1-b689-bf7dae9155ad"
+Path: /sitecore/content/progressive/pkm/Home/Questions and Answers/Claim Intake/Commercial vs personal intake
+SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: 
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{18393093-ADEB-4B72-A0F7-94141CC970B7}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "f2494674-dcb8-4e85-acdf-41f949404bb9"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "1448612e-d0c2-4300-9cbf-29a59ce05ca8"
+      Hint: LOB
+      Value: "{E799A026-FF03-4588-8607-16222D811A4C}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260729T192618Z
+    - ID: "2d71e32d-e990-46b3-8ca1-58cd89743d5e"
+      Hint: Question
+      Value: "What is different about Progressive commercial lines claim intake versus personal lines?"
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Commercial vs personal intake
+    - ID: "4f8dc72e-1548-471c-9f3e-a13e944e4321"
+      Hint: Answer
+      Value: Commercial intake often requires business name, FEIN or account identifiers, vehicle/unit numbers, and confirmation of applicable commercial coverages. Personal lines typically centers on named insured, drivers, and personal auto or property details. Use the correct Progressive product path and severity rules for the line of business.
+    - ID: "59a219ef-0eb8-4f95-8c6d-0cad71f56aa0"
+      Hint: Peril Type
+      Value: |
+        {389A8AD2-4BD8-4260-8059-761BC507FEB1}
+        {3DEA691C-C20E-41AD-A6C7-AD0630E4541B}
+        {C26A71E6-098D-4B9C-A36C-AF820F40F91B}
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "eb25a739-957e-4f00-b00f-867991d96941"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260730T160521Z

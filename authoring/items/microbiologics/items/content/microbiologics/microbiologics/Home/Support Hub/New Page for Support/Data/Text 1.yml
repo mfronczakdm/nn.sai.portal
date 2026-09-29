@@ -1,0 +1,90 @@
+﻿---
+ID: "acdb2965-ad5e-48a9-975e-9dd78a6c0596"
+Parent: "6d2f4625-8256-47e3-954f-4a0d39275199"
+Template: "58041043-7bea-44f0-b1b8-08e4ea7054f4"
+Path: /sitecore/content/microbiologics/microbiologics/Home/Support Hub/New Page for Support/Data/Text 1
+BranchID: "38d2c7d0-73ab-48eb-89e0-843193823da5"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "bc107070-c103-4d64-9216-e4c30d646bac"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{1EE8C835-A9E4-4590-A54C-9C50FA2A3AC1}"
+Languages:
+- Language: "de-DE"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260617T173534Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\nick.robinett@sitecore.com
+    - ID: "8b57dadd-0825-4f5d-9c32-187c0af7e1fd"
+      Hint: text
+      Value: |
+        <div class="ck-content"><p>Das Wachstumstestverfahren (Growth Promotion Testing, GPT) ist ein entscheidendes Verfahren in der Mikrobiologie, um die Qualität und Eignung von Nährmedien sicherzustellen. Dieser Prozess dient dazu, zu überprüfen, ob spezifische Medien das Wachstum von Mikroorganismen effektiv unterstützen können, und gewährleistet somit zuverlässige Ergebnisse in der Labortestung.</p><p>Die Implementierung von GPT erfordert akribische Aufmerksamkeit für Details, einschließlich der Einhaltung strenger Industriestandards und bewährter Praktiken. Durch die konsequente Durchführung dieser Tests können Labore die Genauigkeit und das Vertrauen in ihre mikrobiologische Analyse verbessern, wodurch die öffentliche Gesundheit und wissenschaftliche Integrität geschützt werden. Praktische Anleitungen für GPT umfassen die Auswahl geeigneter Referenzstämme, korrekte Inokulationstechniken und die Sicherstellung konsistenter Umweltbedingungen, um Variabilität in den Ergebnissen zu eliminieren.</p><p>Microbiologics steht für Innovation und Expertise bei der Bereitstellung hochwertiger biologischer Referenzmaterialien und ist ein vertrauenswürdiger Partner in diesem Bereich. Das Engagement des Unternehmens für maßgeschneiderte Lösungen befähigt Labore, optimale Ergebnisse bei der Qualifikation von Nährmedien zu erzielen und Vertrauen sowie Zuverlässigkeit in der mikrobiologischen Testung zu fördern.</p></div>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "390724e4-0eae-4a38-a032-389d2e53edd2"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Akv1r1Hmcm16AN61y5QanpMca0RChHPy
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260812T094416Z
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260617T173534Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\nick.robinett@sitecore.com
+    - ID: "8b57dadd-0825-4f5d-9c32-187c0af7e1fd"
+      Hint: text
+      Value: |
+        <div class="ck-content"><p>Growth Promotion Testing (GPT) serves as a critical procedure in microbiology to ensure the quality and suitability of culture media. This process is designed to verify that specific media can support the growth of microorganisms effectively, thereby guaranteeing reliable results in laboratory testing.</p><p>Implementing GPT requires meticulous attention to detail, including adherence to rigorous industry standards and best practices. By conducting these tests consistently, laboratories can enhance the accuracy and confidence of their microbial analysis, safeguarding public health and scientific integrity. Practical guidance for GPT involves the selection of appropriate reference strains, proper inoculation techniques, and ensuring consistent environmental conditions to eliminate variability in results.</p><p>Microbiologics exemplifies innovation and expertise in providing high-quality biological reference materials, making it a trusted partner in the field. Its dedication to delivering tailored solutions empowers laboratories to achieve optimal media qualification outcomes, fostering trust and reliability in microbiological testing.</p></div>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "dc900a9a-4e40-4791-a68c-1b221da06151"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Akv1r1Hmcm16AN61y5QanpMca0RChHPy
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260812T094416Z

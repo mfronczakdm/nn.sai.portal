@@ -1,0 +1,102 @@
+﻿---
+ID: "ce6aa9d0-16d3-4122-a3c1-c5d78c2af257"
+Parent: "895ada99-9638-4f98-acd1-b95279b68852"
+Template: "bee4869d-b588-42c2-9797-76510c397e6a"
+Path: "/sitecore/content/builders-firstsourse/builderfs/Home/Resources/Insights and Trends Blog/HowAIIsStreamliningHomeBuilding/Data/CTA Banner"
+BranchID: "7c645a95-50c2-4548-9af6-eb1e3f085a1d"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "37760ea8-2d49-40c0-a6a0-876f0049dd2c"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{7BD9918C-C603-448C-8CB8-8F4EAFB195BB}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260512T133520Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{12FFAC4C-565F-4C9A-B63E-7F77E96B4D1F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "7a8c2095-39f5-4f40-b69d-16ddff188a68"
+      Hint: titleRequired
+      Value: INSULATION AND WEATHERPROOFING 
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "82a627ce-ff7b-4291-8532-9b9f09c5a1d8"
+    - ID: "9fdcf3e1-5289-4ae0-b4e4-9460ad50814f"
+      Hint: linkOptional
+      Value: |
+        <link linktype="internal" id="{7211FBD7-CD2B-4393-A479-0B0B1519D956}" anchor="" querystring="" target="" class="" text="Find a Location" title=""/>
+    - ID: "a35015fe-805c-45d7-9446-f88b33a157d4"
+      Hint: descriptionOptional
+      Value: "When it's time to seal up a house, our selection of insulation and weatherproofing products will help to create an air-tight home. We can help protect your build from the elements from the very beginning with house wrap and sheeting - and years after completion with premium flashing and vapor barrier products.  "
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260512T192227Z
+- Language: "nl-NL"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260512T133520Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "7a8c2095-39f5-4f40-b69d-16ddff188a68"
+      Hint: titleRequired
+      Value: ISOLATIE EN WEERBESTENDIGHEID
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ba012122-9575-49cd-95fe-9742dc6c1d27"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9fdcf3e1-5289-4ae0-b4e4-9460ad50814f"
+      Hint: linkOptional
+      Value: |
+        <link class="" querystring="" id="{7211FBD7-CD2B-4393-A479-0B0B1519D956}" anchor="" target="" title="" linktype="internal" text="Vind een locatie" />
+    - ID: "a35015fe-805c-45d7-9446-f88b33a157d4"
+      Hint: descriptionOptional
+      Value: "Wanneer het tijd is om een huis af te sluiten, helpt onze selectie isolatie- en weersbestendige producten om een luchtdicht huis te creëren. We kunnen uw bouw vanaf het allereerste begin beschermen tegen de elementen met huisfolie en platen - en jaren na voltooiing met premium flashing- en dampbarrièreproducten."
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Akv1r1Hmcm16AN61y5QanpMca0RChHPy
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260812T094358Z

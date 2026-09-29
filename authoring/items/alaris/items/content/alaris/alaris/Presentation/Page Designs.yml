@@ -1,0 +1,45 @@
+﻿---
+ID: "a618ebb7-24e4-453a-9002-13584ff4659b"
+Parent: "fd207406-1ab3-44f6-8281-4e90a651d7cb"
+Template: "b7ccaa21-3fac-4506-934b-31a8d6128d81"
+Path: /sitecore/content/alaris/alaris/Presentation/Page Designs
+BranchID: "45cf9f42-b3ac-4412-aab9-f8441c7e448e"
+SharedFields:
+- ID: "ba1f60d6-3deb-40cc-bb61-eec772279ee1"
+  Hint: TemplatesMapping
+  Value: "%7bB305394E-0B80-4803-B483-EA0477CB2076%7d%3d%257B31C2BE89-95F5-49AF-8958-96796092A6F2%257D%26%7b7960EF0D-35D0-4615-A196-3B5AC1930253%7d%3d%257B31C2BE89-95F5-49AF-8958-96796092A6F2%257D%26%7b572A489D-D658-48CD-9D0C-D28511F7C6F0%7d%26%7bF09933B1-1BA9-4C7B-9B5A-6ABE5B708984%7d%3d%257B31C2BE89-95F5-49AF-8958-96796092A6F2%257D%26%7bBFB734EC-8455-4EAA-9101-BFCFA6E93922%7d%3d%257B31C2BE89-95F5-49AF-8958-96796092A6F2%257D%26%7bD45A6062-D1A2-46E0-94F6-F248DA04EA35%7d%3d%257B31C2BE89-95F5-49AF-8958-96796092A6F2%257D%26%7bAE8D2D0E-0231-42CA-8984-973AE1F46F7E%7d%3d%257B31C2BE89-95F5-49AF-8958-96796092A6F2%257D"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "1285807c-3f5c-4ead-928a-9eb6a8e1cc6a"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{2EA756FA-AED6-4599-83B7-36FEFE229B31}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260516T103919Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a749bbf0-77ce-4531-ac1f-e432e130e57f"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260516T104159Z

@@ -1,0 +1,202 @@
+﻿---
+ID: "fbf2801a-d424-408b-8856-50a852ee6624"
+Parent: "06b0c966-f143-4c64-b217-d7953c7e5180"
+Template: "7629f514-e156-4543-adc6-051453441b33"
+Path: "/sitecore/content/quanex/era/Home/Fab and Fix/Entrance Doors/Multi-Point Door Locks/Invincible Euro Cylinder Multi-Point Lock"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{01CED566-3A69-4F8A-8BA0-3EAFA019C7FB}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "a2a83de5-d763-4cd9-b184-4bf521e5398d"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: 
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0169dfce-89a4-4941-821a-ab1266a1de4a"
+      Hint: CategoryLabel
+      Value: "MULTI-POINT LOCKS"
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1"
+          s:xsd="http://www.w3.org/2001/XMLSchema">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{5C1C1AF6-89A7-4317-B9EA-494BFDD1B2B1}"
+              s:par="" />
+            <r
+              uid="{6A62E09A-A4BC-4197-991F-CCE657988CCF}"
+              p:after="*[1=2]"
+              s:ds=""
+              s:id="{9AFBB222-DFDC-400D-9385-E50BA119B0C0}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "17cbe776-d3b6-4203-a37c-30a46022bae6"
+      Hint: SpecSheetLink
+      Value: |
+        <link text="Print a Spec Sheet" linktype="external" url="https://www.eraeverywhere.com/default/door-components/entrance-doors/multi-point-door-locks/invincible-euro-cylinder-multi-point-lock/" anchor="" target="_blank" />
+    - ID: "190e4142-e8b7-4d47-bcf7-b6bac38ce753"
+      Hint: TechnicalData
+      Value: <ul><li>Euro cylinder multipoint platform</li><li>Hook and roller options for PVCu doors</li><li>Compatible with Invincible cylinder range</li></ul>
+    - ID: "211d45c2-39f7-430f-8c81-14d8ba310a0f"
+      Hint: ImageUrl
+      Value: "https://www.eraeverywhere.com/globalassets/era/product-1500max/10115.jpg"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260813T212453Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "77b62e2b-2f05-418e-bb41-2903feb32e39"
+      Hint: Description
+      Value: "<p>ERA Invincible Euro Cylinder Multi-Point Lock delivers enhanced security performance for PVCu, timber, and composite entrance doors. Hook and roller configurations support PAS 24 door packages with proven multipoint engagement.</p>"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5bb5c26d-60d1-4791-827d-172640979f2b"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c5b02812-deb7-4b51-8a68-8019a44f0db3"
+      Hint: ProductSKU
+      Value: "ERA-MP-10115"
+    - ID: "ca94ec7f-2908-4e34-a9e5-f8ec8dd7a91d"
+      Hint: ProductID
+      Value: "ERA-INV"
+    - ID: "d004b569-75aa-446d-8e28-e6d0df434626"
+      Hint: ImageSecondaryUrl
+      Value: "https://www.eraeverywhere.com/globalassets/era/product-1500max/10103.jpg"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260814T145521Z
+    - ID: "dbd19eed-f27a-4850-9a43-512eb6176c14"
+      Hint: Benefits
+      Value: "<ul><li>High-security multipoint engagement</li><li>Broad profile coverage for UK entrance doors</li></ul>"
+    - ID: "f2fa4f60-bfec-4b8a-858c-f5ae25df459b"
+      Hint: ProductName
+      Value: "Invincible Euro Cylinder Multi-Point Lock"
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0169dfce-89a4-4941-821a-ab1266a1de4a"
+      Hint: CategoryLabel
+      Value: SERRURES MULTIPOINTS
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1"
+          s:xsd="http://www.w3.org/2001/XMLSchema">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{5C1C1AF6-89A7-4317-B9EA-494BFDD1B2B1}"
+              s:par="" />
+            <r
+              uid="{6A62E09A-A4BC-4197-991F-CCE657988CCF}"
+              p:after="*[1=2]"
+              s:ds=""
+              s:id="{9AFBB222-DFDC-400D-9385-E50BA119B0C0}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "17cbe776-d3b6-4203-a37c-30a46022bae6"
+      Hint: SpecSheetLink
+      Value: |
+        <link anchor="" target="_blank" linktype="external" text="Imprimer une fiche technique" url="https://www.eraeverywhere.com/default/door-components/entrance-doors/multi-point-door-locks/invincible-euro-cylinder-multi-point-lock/" />
+    - ID: "190e4142-e8b7-4d47-bcf7-b6bac38ce753"
+      Hint: TechnicalData
+      Value: <ul><li>Plateforme multipoints à cylindre Euro</li><li>Options à crochet et rouleau pour portes en PVCu</li><li>Compatible avec la gamme de cylindres Invincible</li></ul>
+    - ID: "211d45c2-39f7-430f-8c81-14d8ba310a0f"
+      Hint: ImageUrl
+      Value: "https://www.eraeverywhere.com/globalassets/era/product-1500max/10115.jpg"
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Description sommaire
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260813T212453Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Titre court
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{57CC7DCE-E6B1-4564-9581-0E5850B8BDF2}"
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: "Sous-titre"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: $name
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "77b62e2b-2f05-418e-bb41-2903feb32e39"
+      Hint: Description
+      Value: <p>La serrure multipoints ERA Invincible Euro Cylinder offre une performance de sécurité améliorée pour les portes d'entrée en PVCu, bois et composite. Les configurations à crochet et rouleau soutiennent les ensembles de portes conformes à la norme PAS 24 avec un engagement multipoints éprouvé.</p>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b288ba87-4bf8-4e29-a125-351d9f0bb843"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: "Titre de l'en-tête"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c5b02812-deb7-4b51-8a68-8019a44f0db3"
+      Hint: ProductSKU
+      Value: "ERA-MP-10115"
+    - ID: "ca94ec7f-2908-4e34-a9e5-f8ec8dd7a91d"
+      Hint: ProductID
+      Value: "ERA-INV"
+    - ID: "d004b569-75aa-446d-8e28-e6d0df434626"
+      Hint: ImageSecondaryUrl
+      Value: "https://www.eraeverywhere.com/globalassets/era/product-1500max/10103.jpg"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260818T134945Z
+    - ID: "dbd19eed-f27a-4850-9a43-512eb6176c14"
+      Hint: Benefits
+      Value: "<ul><li>Engagement multipoints haute sécurité</li><li>Couverture de profil étendue pour les portes d'entrée au Royaume-Uni</li></ul>"
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: $name
+    - ID: "f2fa4f60-bfec-4b8a-858c-f5ae25df459b"
+      Hint: ProductName
+      Value: Serrure multipoints à cylindre Euro Invincible

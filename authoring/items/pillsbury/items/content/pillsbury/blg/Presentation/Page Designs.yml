@@ -1,0 +1,45 @@
+﻿---
+ID: "5a7b1067-39ed-4006-a415-be8634beb2ce"
+Parent: "99611092-5720-4e14-9c9b-dba32306b136"
+Template: "7adf0622-1b16-4862-b211-ca513349c8d5"
+Path: /sitecore/content/pillsbury/blg/Presentation/Page Designs
+BranchID: "45cf9f42-b3ac-4412-aab9-f8441c7e448e"
+SharedFields:
+- ID: "ba1f60d6-3deb-40cc-bb61-eec772279ee1"
+  Hint: TemplatesMapping
+  Value: "%7b1C0EAB68-CEC1-4BE1-853D-D4017F52392A%7d%3d%257BB39FA743-5D85-48C6-BC2B-A017643215F6%257D%26%7b1254312E-9BF5-409E-A583-1E6238997499%7d%3d%257BB39FA743-5D85-48C6-BC2B-A017643215F6%257D%26%7b8ED35C65-36A6-4293-B2DD-F7F8709307F4%7d%3d%257BDC538A8A-E1DE-4596-9430-36B946E16A5E%257D%26%7b57711C22-144E-432C-8903-6A7F5D0D4858%7d%3d%257BB39FA743-5D85-48C6-BC2B-A017643215F6%257D%26%7bA6FDD18E-0FBA-43B3-9C85-3357DC089452%7d%3d%257BB39FA743-5D85-48C6-BC2B-A017643215F6%257D%26%7b09926B82-AA52-43F6-A8E6-4E08ED1ABABE%7d%3d%257BB39FA743-5D85-48C6-BC2B-A017643215F6%257D%26%7bE72F255D-2FBF-4B59-8385-F98FB8E81D29%7d%3d%257BB39FA743-5D85-48C6-BC2B-A017643215F6%257D%26%7bD9ED4A26-1B44-4F52-9EAE-61E1EB193671%7d%3d%257BB39FA743-5D85-48C6-BC2B-A017643215F6%257D%26%7bB08EC32B-F183-474B-93F7-07512168DD6E%7d%3d%257BB39FA743-5D85-48C6-BC2B-A017643215F6%257D"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "ad988185-2103-4b6d-9d47-28fcb01998c7"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{2EA756FA-AED6-4599-83B7-36FEFE229B31}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260804T102941Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "6ead7b25-6acc-48c7-a890-22c61d89b4ed"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260822T010456Z

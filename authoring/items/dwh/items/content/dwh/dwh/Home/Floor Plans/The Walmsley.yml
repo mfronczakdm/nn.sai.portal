@@ -1,0 +1,120 @@
+﻿---
+ID: "1cfcef2b-4733-4653-a93b-40a15e3925ba"
+Parent: "742f7685-4f27-4fdd-aadf-4a3599df5f17"
+Template: "bc610c22-b361-4f96-bbb9-7d1084552ad0"
+Path: /sitecore/content/dwh/dwh/Home/Floor Plans/The Walmsley
+BranchID: "061168c2-fcfb-48e2-b7be-900c557aa601"
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {4F0A8BA1-39D6-4EC4-A96F-643CAB9CA9E8}
+    {8F5B2202-4BEA-4014-9479-513753144765}
+    {A0293A8C-D81B-4572-A220-9A3B7D0CA161}
+    {26D9E650-E829-4189-BFFC-8B7D77F9B79E}
+    {D631B10B-2281-4011-A5D1-429F30F0AE9F}
+    {A09D9C22-7872-4501-B71A-2025660B17D1}
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{D9F5319E-74F4-4DEB-8CD1-BA27A8782FA9}"
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{0D385960-CCE4-40D1-AD76-C5FFE3F64DA1}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "2a277e2a-87e7-470a-8375-9ff35b7d1e82"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{B9DAB4EF-2797-41DA-8295-0A9FD8E9FE30}"
+Languages:
+- Language: en
+  Fields:
+  - ID: "30e85e5d-e00a-4864-b358-7624d511deb4"
+    Hint: __Unversioned revision
+    Value: "2160c9e8-b610-4074-b357-84e3b3cb5dad"
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: The Walmsley
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{96BED07A-F42E-4874-BF33-E2124F09E7CE}"
+              s:id="{07FF534B-D0FA-4F36-809D-C91C5FEC57EC}"
+              s:par="CSSStyles"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "0ac8fdcf-80c5-4c23-8e19-1b7c0fc2e68d"
+      Hint: PlanID
+      Value: 5549
+    - ID: "0ea68393-08de-44b3-8840-8f53f4bd0301"
+      Hint: Overview
+      Value: |
+        <div class="ck-content"><p>Explore thoughtfully designed floor plans tailored to fit your lifestyle. Each layout showcases the David Weekley Difference—combining quality craftsmanship, personalized design, and energy-efficient features. Whether you're seeking open-concept living spaces, functional rooms, or elegant finishes, our homes are crafted to reflect your unique needs while ensuring comfort and functionality for years to come.</p></div>
+    - ID: "0f359397-c765-4ce1-baa8-231e3b551195"
+      Hint: image1
+      Value: |
+        <Image src="https://mrfbasech.sitecoresandbox.cloud/api/public/content/c41e13cade164d52a29ba728b84a9357?v=75ffe6b0" dam-id="DJELJlR4SEu-tS75tcVsQQ" width="1200" height="410" alt="imgi_32_bX1CB5.jpg" dam-content-type="Image" thumbnailsrc="https://mrfbasech.sitecoresandbox.cloud/api/gateway/94860/thumbnail" />
+    - ID: "101d1c70-1546-4df0-a427-b050d019e388"
+      Hint: First Floor
+      Value: |
+        <Image src="https://mrfbasech.sitecoresandbox.cloud/api/public/content/a7f3bac7a8b34266b1236f9333a4da9b?v=8ad23353" dam-id="7XJvPsLbSlWi0-bFwEWnZg" width="700" height="975" alt="firstfloor.gif" dam-content-type="Image" thumbnailsrc="https://mrfbasech.sitecoresandbox.cloud/api/gateway/94921/thumbnail" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260623T211206Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "7a1ed542-d6ae-47fe-b74a-9a7483362a10"
+      Hint: Full Baths
+      Value: 4
+    - ID: "83c1a31a-0662-487e-bf15-480f7fbc67ee"
+      Hint: Bedrooms
+      Value: 5
+    - ID: "898fd0ce-ff5a-4d5c-acfa-f16f6c1bd3f6"
+      Hint: Car Garage
+      Value: 2
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "fb096648-b3e2-4563-af38-608b2922881f"
+    - ID: "99bc7588-5825-4aad-bdf4-06dc07909862"
+      Hint: image2
+      Value: |
+        <Image src="https://mrfbasech.sitecoresandbox.cloud/api/public/content/20a1803894ad4cf48740de39b6bad835?v=58a6c363" dam-id="NEn7ygGBQAKA_2UKnHEwxw" width="2000" height="1712" alt="imgi_196_49617599-bbca-47b9-8c98-f7e501e93e88.jpg" dam-content-type="Image" thumbnailsrc="https://mrfbasech.sitecoresandbox.cloud/api/gateway/94765/thumbnail" />
+    - ID: "ab497717-cbfd-400c-beb6-be5f471855f6"
+      Hint: Stories
+      Value: 2
+    - ID: "b33804ee-bc4e-4b76-99ec-453e34add86c"
+      Hint: sq footage
+      Value: 3209
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\nick.robinett@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260626T135820Z
+    - ID: "ea31b459-a381-47a5-a623-914866e80421"
+      Hint: price
+      Value: 527990
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: New page
+    - ID: "ef42f202-3306-4fad-8816-946815eaa6ea"
+      Hint: Plan Name
+      Value: The Walmsley 

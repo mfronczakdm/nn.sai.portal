@@ -1,0 +1,115 @@
+﻿---
+ID: "18c99ebe-56dd-4285-a66b-f917395e152d"
+Parent: "9c81aeb5-f1db-4840-8544-220617cb97d5"
+Template: "92979eba-bd00-422e-b295-3d8dadca860d"
+Path: "/sitecore/content/andmore/atlanta-apparel/Presentation/Partial Designs/Global/Footer/Data/Footer"
+BranchID: "3e0f1e87-6c71-4b15-877c-7a2d1680fe32"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "66cdd7fb-18eb-4063-b163-f7142cd2a904"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{CF67B851-D5C2-44F9-AE65-55CA0A1A1B4C}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260824T120348Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "4ca9bbc2-95df-411f-8347-cfc9803b9ae8"
+      Hint: InstagramLink
+      Value: |
+        <link linktype="external" https://www.instagram.com/" target="" text="Instagram" title="" class=""/>
+    - ID: "50b8a490-082d-4b70-a654-59ffedabe9bd"
+      Hint: CopyrightText
+      Value: |
+        <div class="ck-content"><p>© 2025 SYNC. All rights reserved.</p></div>
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "231743b4-e146-4027-94e4-6f408d9be6b3"
+    - ID: "a034ad1f-79eb-4b6a-9860-e5465a3e2733"
+      Hint: LinkedinLink
+      Value: |
+        <link linktype="external" url="https://www.linkedin.com/" target="" text="Linkedin" title="" class=""/>
+    - ID: "a826b100-dcc9-4a5d-adc2-59aa5367238b"
+      Hint: FacebookLink
+      Value: |
+        <link linktype="external" url="https://www.facebook.com/" target="" text="Facebook" title="" class=""/>
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "bc9a0214-7aee-450d-a030-463883e72394"
+      Hint: Title
+      Value: Let's sync.
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260824T120548Z
+  - Version: 2
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260901T210236Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "4ca9bbc2-95df-411f-8347-cfc9803b9ae8"
+      Hint: InstagramLink
+      Value: |
+        <link linktype="external" https://www.instagram.com/" target="" text="Instagram" title="" class=""/>
+    - ID: "50b8a490-082d-4b70-a654-59ffedabe9bd"
+      Hint: CopyrightText
+      Value: |
+        <div class="ck-content"><p>© 2026 Atlanta Apparel. An ANDMORE market.</p></div>
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b98945ca-15f9-44a2-ba3b-3d923dbbe37b"
+    - ID: "a034ad1f-79eb-4b6a-9860-e5465a3e2733"
+      Hint: LinkedinLink
+      Value: |
+        <link linktype="external" url="https://www.linkedin.com/" target="" text="Linkedin" title="" class=""/>
+    - ID: "a826b100-dcc9-4a5d-adc2-59aa5367238b"
+      Hint: FacebookLink
+      Value: |
+        <link linktype="external" url="https://www.facebook.com/" target="" text="Facebook" title="" class=""/>
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Akv1r1Hmcm16AN61y5QanpMca0RChHPy
+    - ID: "bc9a0214-7aee-450d-a030-463883e72394"
+      Hint: Title
+      Value: Atlanta Apparel
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260901T210236Z
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260902T190143Z

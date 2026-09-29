@@ -1,0 +1,277 @@
+﻿---
+ID: "efeac293-2bf4-4516-873d-4eac1f998474"
+Parent: "76041887-6e16-4844-ad13-366bc2e32265"
+Template: "1be17bb8-084f-4fba-a33f-8568e92f5b45"
+Path: /sitecore/content/lcmc/lcmc/Data/Locations/East Jefferson General Hospital
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0cbd1feb-1e88-4b8f-974e-40a39d92b678"
+      Hint: VisitorInfo
+      Value: <p>Check in at the main lobby information desk. Visiting hours vary by unit; ask staff for current guidelines.</p>
+    - ID: "1a4b9586-ee63-4f6b-aa77-fe5fa10b298d"
+      Hint: ParkingInfo
+      Value: "On-site visitor parking is available around the main campus. Valet and garage options are offered during weekday hours."
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T003617Z
+    - ID: "2c7fc5d0-8c5e-4947-96ed-5b9a8c1a6553"
+      Hint: LandingPage
+      Value: "{8EED2D44-9041-483E-9DE2-6DEE4E92B0B0}"
+    - ID: "3bd52b62-4c4c-414b-badb-7b22a8302c2b"
+      Hint: HoursText
+      Value: Hospital open 24 hours. Emergency department open 24/7.
+    - ID: "5b761c6e-2119-4e9f-88ad-2ca564ac098e"
+      Hint: LocationTitle
+      Value: East Jefferson General Hospital
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4b543de6-5f09-446c-ab9b-8defee442f33"
+    - ID: "949f2600-c710-4b8f-9c6a-45287b4b177a"
+      Hint: State
+      Value: LA
+    - ID: "a527f3e4-3842-44e6-8e33-4e4d4b07cb4c"
+      Hint: StreetAddress
+      Value: 4200 Houma Blvd.
+    - ID: "b71a3795-49f5-4073-8783-6e811d20e7cd"
+      Hint: PhoneNumber
+      Value: "504-702-3000"
+    - ID: "b8865cad-75b2-44be-a7fc-81898a04ce1d"
+      Hint: LocationType
+      Value: Hospital
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "bc5eb2b3-2e35-42b6-a006-49a269250e79"
+      Hint: HasEmergencyDepartment
+      Value: 1
+    - ID: "c0d058ff-7eee-4fb6-8b01-50fcafcec82a"
+      Hint: OfferedServices
+      Value: |
+        {21FB8DB6-1732-4A44-8BEC-E39C52C1961A}
+        {872D3FA1-DBC7-4ABF-9544-5A668C0D08B1}
+        {72C9C518-0BB1-4BB0-9319-A38875217CD3}
+        {D2B7F3AD-6DF9-4B0D-AB3B-58AD3669DB5B}
+        {168532F3-37CE-4045-A84C-F0672164EEBE}
+        {2C7094F3-7E17-4A5F-8E1F-68830FDC81B6}
+        {EF79ADEF-3A78-4992-B297-04B3447C9CF4}
+        {DB0C3D51-6686-4387-89A4-97B0AB5E440E}
+        {DBD2AAB8-F409-4288-9EE0-5CFD676A1C66}
+        {B491C6F0-3A49-4E3A-B94E-815639B35B92}
+    - ID: "ce0500e1-7c8b-4845-b54c-909c049e7f63"
+      Hint: PostalCode
+      Value: 70006
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T195008Z
+    - ID: "de83b497-49bc-41da-9b5f-3d04437dd153"
+      Hint: Latitude
+      Value: 29.9967
+    - ID: "e9488a30-c918-403c-bbaa-11feba2dfcb1"
+      Hint: LocationShortName
+      Value: East Jefferson
+    - ID: "ee630347-777d-47f6-8df9-c27c904a7903"
+      Hint: City
+      Value: Metairie
+    - ID: "f565cf13-09f9-4fbe-943e-1551fa1f6056"
+      Hint: LocationDescription
+      Value: <p>East Jefferson General Hospital is an academic hospital in Metairie serving Jefferson Parish with emergency, specialty, and inpatient care.</p>
+    - ID: "fa6567c5-386f-4030-b03e-9cef3568cb4f"
+      Hint: LocationPhysicians
+      Value: |
+        {12B533A6-8DF8-4D80-B466-111A5B26B8E4}
+        {C176B05D-10A5-49C8-A980-9380046CE24F}
+    - ID: "facb5aff-7d1d-4234-88d6-50de5299d83f"
+      Hint: Longitude
+      Value: "-90.1526"
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0cbd1feb-1e88-4b8f-974e-40a39d92b678"
+      Hint: VisitorInfo
+      Value: <p>Regístrese en el mostrador de información del lobby principal. Los horarios de visita varían según la unidad; consulte al personal para conocer las pautas vigentes.</p>
+    - ID: "1a4b9586-ee63-4f6b-aa77-fe5fa10b298d"
+      Hint: ParkingInfo
+      Value: Hay estacionamiento para visitantes disponible en el campus principal. Se ofrecen opciones de valet y parqueadero cubierto durante el horario entre semana.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T003617Z
+    - ID: "2c7fc5d0-8c5e-4947-96ed-5b9a8c1a6553"
+      Hint: LandingPage
+      Value: "{8EED2D44-9041-483E-9DE2-6DEE4E92B0B0}"
+    - ID: "3bd52b62-4c4c-414b-badb-7b22a8302c2b"
+      Hint: HoursText
+      Value: Hospital abierto las 24 horas. Departamento de emergencias abierto las 24 horas, todos los días.
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5b761c6e-2119-4e9f-88ad-2ca564ac098e"
+      Hint: LocationTitle
+      Value: Hospital General East Jefferson
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "e19eb922-2761-45dc-872b-2d81af3809fd"
+    - ID: "949f2600-c710-4b8f-9c6a-45287b4b177a"
+      Hint: State
+      Value: LA
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "a527f3e4-3842-44e6-8e33-4e4d4b07cb4c"
+      Hint: StreetAddress
+      Value: 4200 Houma Blvd.
+    - ID: "b71a3795-49f5-4073-8783-6e811d20e7cd"
+      Hint: PhoneNumber
+      Value: "504-503-4000"
+    - ID: "b8865cad-75b2-44be-a7fc-81898a04ce1d"
+      Hint: LocationType
+      Value: Hospital
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "bc5eb2b3-2e35-42b6-a006-49a269250e79"
+      Hint: HasEmergencyDepartment
+      Value: 1
+    - ID: "c0d058ff-7eee-4fb6-8b01-50fcafcec82a"
+      Hint: OfferedServices
+      Value: |
+        {21FB8DB6-1732-4A44-8BEC-E39C52C1961A}
+        {872D3FA1-DBC7-4ABF-9544-5A668C0D08B1}
+        {72C9C518-0BB1-4BB0-9319-A38875217CD3}
+        {D2B7F3AD-6DF9-4B0D-AB3B-58AD3669DB5B}
+        {168532F3-37CE-4045-A84C-F0672164EEBE}
+        {2C7094F3-7E17-4A5F-8E1F-68830FDC81B6}
+        {EF79ADEF-3A78-4992-B297-04B3447C9CF4}
+        {DB0C3D51-6686-4387-89A4-97B0AB5E440E}
+        {DBD2AAB8-F409-4288-9EE0-5CFD676A1C66}
+        {B491C6F0-3A49-4E3A-B94E-815639B35B92}
+    - ID: "ce0500e1-7c8b-4845-b54c-909c049e7f63"
+      Hint: PostalCode
+      Value: 70006
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T162654Z
+    - ID: "de83b497-49bc-41da-9b5f-3d04437dd153"
+      Hint: Latitude
+      Value: 29.9967
+    - ID: "e9488a30-c918-403c-bbaa-11feba2dfcb1"
+      Hint: LocationShortName
+      Value: East Jefferson
+    - ID: "ee630347-777d-47f6-8df9-c27c904a7903"
+      Hint: City
+      Value: Metairie
+    - ID: "f565cf13-09f9-4fbe-943e-1551fa1f6056"
+      Hint: LocationDescription
+      Value: <p>El Hospital General East Jefferson es un hospital académico en Metairie que presta servicios a Jefferson Parish con atención de emergencia, especializada y hospitalaria.</p>
+    - ID: "fa6567c5-386f-4030-b03e-9cef3568cb4f"
+      Hint: LocationPhysicians
+      Value: |
+        {12B533A6-8DF8-4D80-B466-111A5B26B8E4}
+        {C176B05D-10A5-49C8-A980-9380046CE24F}
+    - ID: "facb5aff-7d1d-4234-88d6-50de5299d83f"
+      Hint: Longitude
+      Value: "-90.1526"
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0cbd1feb-1e88-4b8f-974e-40a39d92b678"
+      Hint: VisitorInfo
+      Value: "<p>Présentez-vous au bureau d’information du hall principal. Les heures de visite varient selon l’unité; demandez au personnel les consignes en vigueur.</p>"
+    - ID: "1a4b9586-ee63-4f6b-aa77-fe5fa10b298d"
+      Hint: ParkingInfo
+      Value: Le stationnement des visiteurs est offert sur place autour du campus principal. Des options de voiturier et de garage sont offertes pendant les heures de semaine.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T003617Z
+    - ID: "2c7fc5d0-8c5e-4947-96ed-5b9a8c1a6553"
+      Hint: LandingPage
+      Value: "{8EED2D44-9041-483E-9DE2-6DEE4E92B0B0}"
+    - ID: "3bd52b62-4c4c-414b-badb-7b22a8302c2b"
+      Hint: HoursText
+      Value: Hôpital ouvert 24 heures sur 24. Service des urgences ouvert 24 h sur 24, 7 j sur 7.
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5b761c6e-2119-4e9f-88ad-2ca564ac098e"
+      Hint: LocationTitle
+      Value: East Jefferson General Hospital
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "741108d6-6048-4331-93ef-0622f0b367d6"
+    - ID: "949f2600-c710-4b8f-9c6a-45287b4b177a"
+      Hint: State
+      Value: LA
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "a527f3e4-3842-44e6-8e33-4e4d4b07cb4c"
+      Hint: StreetAddress
+      Value: 4200 Houma Blvd.
+    - ID: "b71a3795-49f5-4073-8783-6e811d20e7cd"
+      Hint: PhoneNumber
+      Value: "504-702-3000"
+    - ID: "b8865cad-75b2-44be-a7fc-81898a04ce1d"
+      Hint: LocationType
+      Value: Hôpital
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "bc5eb2b3-2e35-42b6-a006-49a269250e79"
+      Hint: HasEmergencyDepartment
+      Value: 1
+    - ID: "c0d058ff-7eee-4fb6-8b01-50fcafcec82a"
+      Hint: OfferedServices
+      Value: |
+        {21FB8DB6-1732-4A44-8BEC-E39C52C1961A}
+        {872D3FA1-DBC7-4ABF-9544-5A668C0D08B1}
+        {72C9C518-0BB1-4BB0-9319-A38875217CD3}
+        {D2B7F3AD-6DF9-4B0D-AB3B-58AD3669DB5B}
+        {168532F3-37CE-4045-A84C-F0672164EEBE}
+        {2C7094F3-7E17-4A5F-8E1F-68830FDC81B6}
+        {EF79ADEF-3A78-4992-B297-04B3447C9CF4}
+        {DB0C3D51-6686-4387-89A4-97B0AB5E440E}
+        {DBD2AAB8-F409-4288-9EE0-5CFD676A1C66}
+        {B491C6F0-3A49-4E3A-B94E-815639B35B92}
+    - ID: "ce0500e1-7c8b-4845-b54c-909c049e7f63"
+      Hint: PostalCode
+      Value: 70006
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201314Z
+    - ID: "de83b497-49bc-41da-9b5f-3d04437dd153"
+      Hint: Latitude
+      Value: 29.9967
+    - ID: "e9488a30-c918-403c-bbaa-11feba2dfcb1"
+      Hint: LocationShortName
+      Value: East Jefferson
+    - ID: "ee630347-777d-47f6-8df9-c27c904a7903"
+      Hint: City
+      Value: Metairie
+    - ID: "f565cf13-09f9-4fbe-943e-1551fa1f6056"
+      Hint: LocationDescription
+      Value: <p>East Jefferson General Hospital est un hôpital universitaire à Metairie qui dessert la paroisse de Jefferson avec des soins d’urgence, spécialisés et hospitaliers.</p>
+    - ID: "fa6567c5-386f-4030-b03e-9cef3568cb4f"
+      Hint: LocationPhysicians
+      Value: |
+        {12B533A6-8DF8-4D80-B466-111A5B26B8E4}
+        {C176B05D-10A5-49C8-A980-9380046CE24F}
+    - ID: "facb5aff-7d1d-4234-88d6-50de5299d83f"
+      Hint: Longitude
+      Value: "-90.1526"

@@ -1,0 +1,125 @@
+﻿---
+ID: "84ca45d1-cba6-43a9-b087-3b858c85a6eb"
+Parent: "de0cb44e-9407-48fd-9d92-c6a8a87277e4"
+Template: "775d6354-cf01-4f34-9713-d34645079c88"
+Path: /sitecore/content/andmore/americasmart/Home/Speakers/Data/MultiPromo 3
+BranchID: "9660ff60-8e47-4efc-b22d-bac3fd04c8d7"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "da562d3c-e9ee-4cef-bd78-72a889b35581"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{63C3CCB6-FEAF-42AB-9D37-6F29FEC74588}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "24fa0354-d116-4f42-9eaa-bdab15a8ade7"
+      Hint: title
+      Value: BREAKING THE BARRIER OF LIVE MUSIC AT HOME. 
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260824T120255Z
+    - ID: "2fe9bed7-7bcc-4a35-a209-34bcb84fcb42"
+      Hint: description
+      Value: When Sync first started shaping the sound of music, our amps were proudly built in Georgia. Decades later, some of our most iconic amps are still crafted in the same factory. 
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "fb6eeeef-7bde-4e71-a53c-2256b01d882a"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260824T120504Z
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "24fa0354-d116-4f42-9eaa-bdab15a8ade7"
+      Hint: title
+      Value: ROMPIENDO LA BARRERA DE LA MÚSICA EN VIVO EN CASA.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260824T120255Z
+    - ID: "2fe9bed7-7bcc-4a35-a209-34bcb84fcb42"
+      Hint: description
+      Value: Cuando Sync empezó a dar forma al sonido de la música, nuestros amplificadores se fabricaban con orgullo en Georgia. Décadas después, algunos de nuestros amplificadores más icónicos todavía se elaboran en la misma fábrica.
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "270c91ea-c0c7-402e-aea9-ef560f4ae1df"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260904T105309Z
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "24fa0354-d116-4f42-9eaa-bdab15a8ade7"
+      Hint: title
+      Value: 自宅でのライブ音楽の壁を打ち破る。
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260824T120255Z
+    - ID: "2fe9bed7-7bcc-4a35-a209-34bcb84fcb42"
+      Hint: description
+      Value: Syncが音楽のサウンドを形作り始めた当初、当社のアンプは誇りを持ってジョージア州で製造されていました。数十年後の今でも、当社の最も象徴的なアンプのいくつかは、同じ工場で作られています。
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f2493f1d-dd70-4f93-bec3-3e725c16ddc0"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260904T105337Z

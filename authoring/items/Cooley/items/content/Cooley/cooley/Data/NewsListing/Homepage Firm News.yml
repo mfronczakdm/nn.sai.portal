@@ -1,0 +1,30 @@
+﻿---
+ID: "b23fb132-3143-415f-a220-b9b6cf90817b"
+Parent: "fa2c6030-3f01-4859-b6b4-db1ad772b9f4"
+Template: "de22037d-099b-40fd-895e-af11c08fd8ee"
+Path: /sitecore/content/Cooley/cooley/Data/NewsListing/Homepage Firm News
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260817T000151Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "afacf2cf-0bae-4d51-b932-1f89e73bb2d8"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c351fb98-4e20-4598-844f-90497bc78e7d"
+      Hint: FeaturedItems
+      Value: |
+        {8C778F99-E512-4D05-95BE-FC5B4A6E3A2E}
+        {47E7AD19-7548-412D-9FE4-2715987277E1}
+        {F0997884-F125-49F0-80BE-2E4ACE8B3E41}
+        {4AEA92D3-6D10-4549-962E-A0FDD33FB3CE}
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260817T000151Z

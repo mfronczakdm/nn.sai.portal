@@ -1,0 +1,63 @@
+﻿---
+ID: "450edda1-109d-4b4e-a922-4847c0393d69"
+Parent: "3f985721-35e0-4b02-9416-2b50cba761f3"
+Template: "0f442b42-2403-45f5-a02b-67236dccc929"
+Path: /sitecore/content/quanex/era/Data/MainNav/MainNav
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260814T125207Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "59e5532e-e55c-47e4-8b62-a18f8a13b528"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "bf0dc0e1-3bcb-478d-b47d-422d40fe98d9"
+      Hint: NavigationRoot
+      Value: "{69A414F6-9E12-48D6-92C1-215609517A83}"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260814T125207Z
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260814T125207Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f3ccc0e6-81c0-4639-93e7-77725e595689"
+    - ID: "8e98fe43-d513-4016-a852-316d670d1df7"
+      Hint: UserLabel
+      Value: Compte
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "bf0dc0e1-3bcb-478d-b47d-422d40fe98d9"
+      Hint: NavigationRoot
+      Value: "{69A414F6-9E12-48D6-92C1-215609517A83}"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260818T134615Z
+    - ID: "fa78db7d-1604-4b71-a9e3-1d4590442cd2"
+      Hint: SearchLabel
+      Value: Recherche

@@ -1,0 +1,52 @@
+﻿---
+ID: "a0f73461-d363-4421-8c5c-607001d47a37"
+Parent: "21083968-b118-4555-a20f-206abac397c9"
+Template: "4eb24890-61ec-4283-8c61-c55a86d1fe2a"
+Path: /sitecore/content/dycom/dycom/Home/Careers/Engineering Careers Landing Page/Data/Image Gallery 1
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "1035bf7e-3bba-4a6f-af07-7e73341f8a38"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260512T164841Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{12FFAC4C-565F-4C9A-B63E-7F77E96B4D1F}"
+    - ID: "45324e3c-4e19-41d7-9497-bdcde2228eb1"
+      Hint: image2
+      Value: |
+        <Image src="https://mrfbasech.sitecoresandbox.cloud/api/public/content/85847-HomepagePromoCTAs-1100x740?v=e03a5316" dam-id="rDkRfIS4RUWZYVAqshUiPA" width="1100" height="740" alt="imgi_51_Dycom_Construction_Image_04.jpg" dam-content-type="Image" thumbnailsrc="https://mrfbasech.sitecoresandbox.cloud/api/gateway/85847/thumbnail" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "9bfdf387-47f8-4016-bf16-6fb9abd79037"
+    - ID: "a5a74a19-c942-421c-9ff5-c3116fcffa0d"
+      Hint: image1
+      Value: |
+        <Image src="https://mrfbasech.sitecoresandbox.cloud/api/public/content/85851-LandingPageHero-2000x600?v=47c764f9" dam-id="VkQtNx5-Qi2v3elcQ_r4Ug" width="2000" height="600" alt="imgi_54_209A2514-1.jpg" dam-content-type="Image" thumbnailsrc="https://mrfbasech.sitecoresandbox.cloud/api/gateway/85851/thumbnail" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260513T104636Z

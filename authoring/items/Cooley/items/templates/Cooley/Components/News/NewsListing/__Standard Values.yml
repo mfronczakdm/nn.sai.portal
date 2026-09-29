@@ -1,0 +1,37 @@
+﻿---
+ID: "9e49cd6b-7215-4476-ae56-4c85d1f71f0f"
+Parent: "de22037d-099b-40fd-895e-af11c08fd8ee"
+Template: "de22037d-099b-40fd-895e-af11c08fd8ee"
+Path: /sitecore/templates/Project/Cooley/Components/News/NewsListing/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260817T000131Z
+    - ID: "4e9732bd-2457-4d98-8bdd-cf44082c4304"
+      Hint: Eyebrow
+      Value: Firm News
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "6a5bad2f-6a55-4c92-b63e-c6990e2242d1"
+      Hint: Title
+      Value: What Matters
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "8944285f-b7b7-40a5-a804-4572d947ead1"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260817T000137Z

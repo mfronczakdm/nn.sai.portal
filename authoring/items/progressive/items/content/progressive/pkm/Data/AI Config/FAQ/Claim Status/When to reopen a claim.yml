@@ -1,0 +1,42 @@
+﻿---
+ID: "3210307f-5884-451c-b589-2b49f8900b1f"
+Parent: "c6663299-af98-49fa-89b6-ddf8bef0758e"
+Template: "e1f2a3b4-c5d6-4e7f-8a9b-0c1d2e3f4a5b"
+Path: /sitecore/content/progressive/pkm/Data/AI Config/FAQ/Claim Status/When to reopen a claim
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{194BD2A6-1FF5-4D4D-A999-DFCA4311B67C}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260729T131100Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c14a2477-cfe1-4de3-bf0e-977415b47d5f"
+    - ID: "a3b4c5d6-e7f8-4a9b-0c1d-2e3f4a5b6c7d"
+      Hint: question
+      Value: "When can Progressive agents reopen a closed claim?"
+    - ID: "b4c5d6e7-f8a9-4b0c-1d2e-3f4a5b6c7d8e"
+      Hint: answer
+      Value: Reopen when new material Progressive documentation, new damages related to the original loss, or approved reopen criteria are met. Document the reopen reason and notify the assigned Progressive owner. Do not reopen for unrelated new losses—those need a new FNOL.
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260729T191516Z

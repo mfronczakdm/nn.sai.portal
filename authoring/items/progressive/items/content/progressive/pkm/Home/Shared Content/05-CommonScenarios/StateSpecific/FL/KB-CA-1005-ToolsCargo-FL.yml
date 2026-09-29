@@ -1,0 +1,38 @@
+﻿---
+ID: "d30d20b0-7c58-49ef-8589-61146c3cba2c"
+Parent: "681c3225-f42e-4708-9b09-dee191926f9e"
+Template: "bdf6c974-e68c-46a2-a0a9-d382fd0927eb"
+Path: "/sitecore/content/progressive/pkm/Home/Shared Content/05-CommonScenarios/StateSpecific/FL/KB-CA-1005-ToolsCargo-FL"
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{46D77F3D-E4E1-4303-A4E8-E49F7061E628}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "21b8d6f1-4294-46a5-98fd-38df0ce8aae0"
+      Hint: SourceDocumentLOB
+      Value: "{E799A026-FF03-4588-8607-16222D811A4C}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260803T035447Z
+    - ID: "76e0c665-5c4d-4d03-ae66-a5f3d12978ba"
+      Hint: Content
+      Value: <p>In Florida, keep Progressive commercial auto PD separate from tools/cargo until inland marine or BPP coverage is confirmed, and escalate Progressive bailee exposures when customer goods are damaged in a Progressive scheduled unit.</p>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a9e6ef00-2dae-4516-9f42-90320798d9c2"
+    - ID: "a8f6d033-4e9e-4598-be5e-da2456c41b9f"
+      Hint: sourceDocumentLink
+      Value: |
+        <link text="Commercial Auto — Tools, Equipment, and Cargo After Collision" linktype="internal" class="" title="" target="" querystring="" id="{3E173CFE-F7A6-4CCE-9D44-64B3EA20DA76}" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260803T035448Z

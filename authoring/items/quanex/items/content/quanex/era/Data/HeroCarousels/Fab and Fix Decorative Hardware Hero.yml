@@ -1,0 +1,59 @@
+﻿---
+ID: "0ef0b3ac-be3a-4156-99bc-2d98a5209fd1"
+Parent: "3c0b98d1-7f79-4c00-9655-c732e5a4f8d2"
+Template: "ed997a6b-feca-4349-a58d-72535e7fefff"
+Path: /sitecore/content/quanex/era/Data/HeroCarousels/Fab and Fix Decorative Hardware Hero
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260813T190541Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "cdd9823c-5a14-4808-b63b-f7efb9ac674c"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260813T190541Z
+    - ID: "f94f50d4-7756-4dd8-a4ca-21f057242f56"
+      Hint: ContactLink
+      Value: |
+        <link text="CONTACT US" linktype="internal" id="{D7BB5D97-0E6E-4EAF-A4A6-70C75C5E1764}" />
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260813T190541Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "acb824f0-1728-47e0-954d-084299f1a4ff"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260818T134615Z
+    - ID: "f94f50d4-7756-4dd8-a4ca-21f057242f56"
+      Hint: ContactLink
+      Value: |
+        <link id="{D7BB5D97-0E6E-4EAF-A4A6-70C75C5E1764}" linktype="internal" text="CONTACTEZ-NOUS" />

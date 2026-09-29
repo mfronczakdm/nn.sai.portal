@@ -1,0 +1,47 @@
+﻿---
+ID: "7c4cc74f-c782-407f-933c-380474424a12"
+Parent: "9f15f9fb-313d-4032-a286-b8fa0d4cbea1"
+Template: "2f26cc64-f6c8-45cc-8702-7a874677d94f"
+Path: /sitecore/content/pillsbury/blg/Data/MediaCanvas/Homepage Hero/Port Video
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{6C59AE29-D0A1-4B77-9305-0ABAB21D5FE5}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "0410e98e-1a53-4657-8a2f-de8277275f1e"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260822T023532Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{C55B483C-EA7F-4E76-A066-985F7D9396CA}"
+    - ID: "668cdf1f-c2bd-4cf2-9940-f3d23436fc09"
+      Hint: Image
+      Value: |
+        <image mediaid="14650e86-ca57-4702-8f52-6eff115cf56a" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "3462021e-42f4-4587-ae61-ff95eadaf88c"
+    - ID: "8eeb4761-71f9-48c2-9837-b03256954ba6"
+      Hint: Tagline
+      Value: Trade and infrastructure
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260822T130035Z
+    - ID: "dcb8478f-df9d-4697-bdd2-9b2784a60dff"
+      Hint: Video
+      Value: |
+        <link text="Port night video" linktype="external" url="https://videos.pexels.com/video-files/3129671/3129671-uhd_2560_1440_30fps.mp4" anchor="" title="Port night video" target="" />

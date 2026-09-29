@@ -1,0 +1,51 @@
+﻿---
+ID: "62f712a7-8dfb-4faf-9b0b-5f21910ac7bc"
+Parent: "a466abc2-332d-4f09-90a7-279c66cc2082"
+Template: "b2c3d4e5-f6a7-4b5c-9d0e-1f2a3b4c5d6e"
+Path: /sitecore/content/solterra/solterra/Data/AI Config/Summary
+BranchID: "1a1b2c3d-4e5f-4a6b-7c8d-9e0f1a2b3c4d"
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 100
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "bf4f677c-6c2b-4078-9312-282d0770f364"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{1C3D4E5F-6A7B-4C8D-9E0F-1A2B3C4D5E6F}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260430T182454Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "bb95ae0f-f84e-44c7-babc-d50690d7a3ea"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d4e5f6a7-b8c9-4d5e-1f2a-3b4c5d6e7f8a"
+      Hint: title
+      Value: Solterra & Co.
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260430T182503Z
+    - ID: "e5f6a7b8-c9d0-4e5f-2a3b-4c5d6e7f8a9b"
+      Hint: description
+      Value: "Solterra & Co. is a lifestyle and editorial site showcasing content-driven experiences for modern brands. It features modular components, article and topic listings, hero and promo sections, and rich media. Built with Sitecore XM Cloud and Next.js for performance, personalization, and AI-ready content delivery."

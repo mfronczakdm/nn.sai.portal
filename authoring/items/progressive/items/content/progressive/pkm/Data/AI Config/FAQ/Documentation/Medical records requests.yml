@@ -1,0 +1,42 @@
+﻿---
+ID: "edae8158-fe8f-49a4-99e2-ea8a660ce514"
+Parent: "fde7cb47-14e9-46cd-902b-2b21725e808b"
+Template: "e1f2a3b4-c5d6-4e7f-8a9b-0c1d2e3f4a5b"
+Path: /sitecore/content/progressive/pkm/Data/AI Config/FAQ/Documentation/Medical records requests
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{3E422B28-0CE6-4D8D-8E70-0FF0C3E1E46B}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260729T131032Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d4757c22-88ef-4e5e-95ec-f04077945022"
+    - ID: "a3b4c5d6-e7f8-4a9b-0c1d-2e3f4a5b6c7d"
+      Hint: question
+      Value: "How do Progressive agents request medical or repair records?"
+    - ID: "b4c5d6e7-f8a9-4b0c-1d2e-3f4a5b6c7d8e"
+      Hint: answer
+      Value: "Request medical or repair records using Progressive-approved authorizations and forms when the claim type requires them. Track outstanding requests as pending information. Never store or share medical data outside Progressive privacy rules."
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260729T191457Z

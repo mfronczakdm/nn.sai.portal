@@ -1,0 +1,72 @@
+﻿---
+ID: "945a2f3f-39c8-4d6b-a46b-58857cfa760f"
+Parent: "3ba72117-c7d9-4047-8259-2d3eea9c29ea"
+Template: "69728677-52e5-4482-a415-94f0222799b8"
+Path: "/sitecore/content/andmore/atlanta-apparel/Home/Markets and Events/Atlanta Apparel/October Atlanta Apparel"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: 
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{7F65F083-7B08-41E7-AEC7-E8AD25CBC103}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "e6979b03-faea-4832-92f0-b1224c05b7be"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "18ab03d1-c9ae-4f00-815d-220fcb2d80e5"
+      Hint: image
+      Value: |
+        <image src="https://www.atlanta-apparel.com/-/media/Atlanta-Apparel/Fashion-Gallery/ELLE9097_Resized.jpg?h=400&amp;iar=0&amp;w=700&amp;hash=03F08062862C050AF2F712F6CB700F10" alt="October Atlanta Apparel" />
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Shop showrooms, First Finds and seasonal apparel collections at October Atlanta Apparel.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T013620Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: October Atlanta Apparel
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: 
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Stay in step with the season in Atlanta.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Stay in step with the season in Atlanta.
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: October Atlanta Apparel
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: October Atlanta Apparel
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "23c31c9e-10c5-4f58-b8ae-a0d62234f9ea"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Shop showrooms, First Finds and seasonal collections at October Atlanta Apparel.
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: October Atlanta Apparel
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260825T114941Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: October Atlanta Apparel
+    - ID: "f79467fb-89e8-478b-8ac7-5b37b53c1c0c"
+      Hint: Detail
+      Value: |
+        <p>Stay in step with the season—and your customers—at the Southeast's top wholesale apparel marketplace. Shop showrooms and First Finds at October Atlanta Apparel.</p><p><a href="https://www.atlanta-apparel.com/Markets/Atlanta-Apparel/October">View October Atlanta Apparel details</a></p>

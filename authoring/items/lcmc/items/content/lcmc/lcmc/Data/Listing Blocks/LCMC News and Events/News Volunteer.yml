@@ -1,0 +1,189 @@
+﻿---
+ID: "c4ae20fc-0b84-471b-8cab-7394d170efe0"
+Parent: "0284e480-e14c-4a3e-ae47-caf505c93347"
+Template: "13c565fe-09c3-4994-8b5a-580da061be0c"
+Path: /sitecore/content/lcmc/lcmc/Data/Listing Blocks/LCMC News and Events/News Volunteer
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0bed7c19-045c-4702-8f2e-4ba6219951a7"
+      Hint: ItemSummary
+      Value: <p>Support patients and families through our volunteer programs.</p>
+    - ID: "18691602-fac5-4db1-b600-f2c00b31cc1e"
+      Hint: ItemTitle
+      Value: Volunteer with LCMC Health
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T015852Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "67c74492-4daf-40dc-bcb9-7bb8ef6cb8c5"
+      Hint: ItemImage
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/5854d6008f3f408ca5c54f1aeb97b042?v=aeb20c23" dam-id="I0g-X_AvQl-qWlM8KXJ3nw" width="500" height="400" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/86522/thumbnail" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "eaf17f20-1b51-4095-8c53-92161afe62c1"
+    - ID: "b940d47f-05d1-404d-844e-c3eb1146c521"
+      Hint: ItemDate
+      Value: Ongoing
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T164759Z
+    - ID: "da6bd2f3-3f33-4807-aabe-81732653d5ca"
+      Hint: ItemLink
+      Value: |
+        <link text="Get involved" anchor="" linktype="external" class="" title="" target="" querystring="" url="https://www.lcmchealth.org/" />
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0bed7c19-045c-4702-8f2e-4ba6219951a7"
+      Hint: ItemSummary
+      Value: <p>Apoye a los pacientes y a sus familias a través de nuestros programas de voluntariado.</p>
+    - ID: "18691602-fac5-4db1-b600-f2c00b31cc1e"
+      Hint: ItemTitle
+      Value: Sea voluntario con LCMC Health
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T015852Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b9d944c2-afd6-4d84-8d95-7964d386fd8e"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "b940d47f-05d1-404d-844e-c3eb1146c521"
+      Hint: ItemDate
+      Value: Continuo
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T163031Z
+    - ID: "da6bd2f3-3f33-4807-aabe-81732653d5ca"
+      Hint: ItemLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="Participe" url="https://www.lcmchealth.org/" />
+  - Version: 2
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0bed7c19-045c-4702-8f2e-4ba6219951a7"
+      Hint: ItemSummary
+      Value: <p>Apoye a los pacientes y a sus familias a través de nuestros programas de voluntariado.</p>
+    - ID: "18691602-fac5-4db1-b600-f2c00b31cc1e"
+      Hint: ItemTitle
+      Value: Sea voluntario con LCMC Health
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260910T200831Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "67c74492-4daf-40dc-bcb9-7bb8ef6cb8c5"
+      Hint: ItemImage
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/5854d6008f3f408ca5c54f1aeb97b042?v=aeb20c23" dam-id="I0g-X_AvQl-qWlM8KXJ3nw" width="500" height="400" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/86522/thumbnail" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "639acbd2-a35b-472a-9226-7e25391ed712"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "b940d47f-05d1-404d-844e-c3eb1146c521"
+      Hint: ItemDate
+      Value: Permanente
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260910T200831Z
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T200836Z
+    - ID: "da6bd2f3-3f33-4807-aabe-81732653d5ca"
+      Hint: ItemLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="Participe" url="https://www.lcmchealth.org/" />
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0bed7c19-045c-4702-8f2e-4ba6219951a7"
+      Hint: ItemSummary
+      Value: <p>Soutenez les patients et les familles grâce à nos programmes de bénévolat.</p>
+    - ID: "18691602-fac5-4db1-b600-f2c00b31cc1e"
+      Hint: ItemTitle
+      Value: Faites du bénévolat avec LCMC Health
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T015852Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "67c74492-4daf-40dc-bcb9-7bb8ef6cb8c5"
+      Hint: ItemImage
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/5854d6008f3f408ca5c54f1aeb97b042?v=aeb20c23" dam-id="I0g-X_AvQl-qWlM8KXJ3nw" width="500" height="400" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/86522/thumbnail" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f54b230a-29dc-4f15-82f7-639498ce2608"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "b940d47f-05d1-404d-844e-c3eb1146c521"
+      Hint: ItemDate
+      Value: En continu
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201646Z
+    - ID: "da6bd2f3-3f33-4807-aabe-81732653d5ca"
+      Hint: ItemLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="Impliquez-vous" url="https://www.lcmchealth.org/" />

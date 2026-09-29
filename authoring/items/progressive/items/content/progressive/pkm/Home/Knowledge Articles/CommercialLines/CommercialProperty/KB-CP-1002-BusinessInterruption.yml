@@ -1,0 +1,267 @@
+﻿---
+ID: "fc8f587f-0354-452b-ae90-e8fee418c90b"
+Parent: "dbd3e687-c2dc-49b5-a51d-4b6c462d9be7"
+Template: "42f8929a-83cd-48fe-92f0-8aac46e6cc62"
+Path: "/sitecore/content/progressive/pkm/Home/Knowledge Articles/CommercialLines/CommercialProperty/KB-CP-1002-BusinessInterruption"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{FA097F7E-ECE4-489E-842D-63AE8A7FCDD2}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{DECC2934-48CB-4689-8729-47BBB4D3445A}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "40ae1b05-031e-4715-ac25-e4c3a08f7ed1"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: 
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{F8AE26A5-6035-4403-8DB6-7F6836176755}"
+              p:after="r[@uid='{717E1701-1FF6-418A-A8F1-35443B43B403}']"
+              s:id="{F44005E1-CCBB-4B27-9598-5EF43FB60A46}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB6A72F2A-15BE-4113-B40F-0305459DC374%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=2"
+              s:ph="headless-main" />
+            <r
+              uid="{BD2CD752-4FF6-4BD7-8762-12CCEB149433}"
+              p:after="*[1=2]"
+              s:ds=""
+              s:id="{88D43837-24CA-45A7-9171-FEAD8AE89702}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B5E0CEF20-DC70-4922-A183-E6ADB987AF60%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=3"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "1a6c4003-b700-4ff6-9a1e-b0b809a20c52"
+      Hint: Standard Site Inspection Rules
+      Value: <ul><li>Document why the premises cannot operate (photos of critical areas)</li><li>Note temporary measures that allow partial reopening</li><li>Do not calculate final BI at FNOL — gather facts for specialists</li></ul>
+    - ID: "1cf7f3e5-7109-4726-aca1-76bf779f1f95"
+      Hint: Peril type
+      Value: "{5DDEBC5C-5867-430F-A157-6D6485D11006}"
+    - ID: "1d2229f9-6c8b-4828-97c0-ade6f1a125d0"
+      Hint: TotalRatings
+      Value: 40
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Progressive commercial BI / extra expense intake when operations stop after a covered property peril.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260802T134948Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Business Interruption
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{325A5D47-D4EB-4876-B759-0E18E2D9DCED}"
+    - ID: "480bb6b8-0914-4d2c-a73e-c5b28b8693e0"
+      Hint: Intake Triggers
+      Value: "<p>Start BI triage when:</p><ul><li>Fire, wind, water, or other covered property damage closes or partially closes the business</li><li>Insured requests lost income, payroll continuance, or temporary location expense</li><li>Civil authority or ingress/egress issues are alleged after a nearby Progressive-covered event (verify form)</li></ul>"
+    - ID: "4d1faace-7b0f-4ec7-94b8-9ae80e0a9bce"
+      Hint: Common Scenarios
+      Value: "<ul><li><strong>Restaurant closed after kitchen fire:</strong> BI + extra expense for temp kitchen</li><li><strong>Retail store smoke-only but HVAC down:</strong> partial interruption analysis</li><li><strong>Warehouse rack collapse from water:</strong> shipping delay / BI</li><li><strong>Neighbor fire — civil authority order:</strong> verify Progressive civil authority wording</li></ul>"
+    - ID: "4ed4709d-3dc8-4d81-bc4b-b44be7d21c45"
+      Hint: LastRated
+      Value: 20260724T101500Z
+    - ID: "4f91e6ca-b571-41f9-bc35-4e7e89c590de"
+      Hint: Baseline Reserve Guidelines
+      Value: <ul><li>Placeholder BI reserve based on rough monthly revenue band once coverage indicated</li><li>Extra expense reserve for documented temporary costs</li><li>Refine after worksheets and CPA packages</li></ul>
+    - ID: "568439dd-7959-4317-ac05-4aca4fe37a7a"
+      Hint: AverageRating
+      Value: 3.70
+    - ID: "5897e9d3-8204-4ed7-9f6a-ceb4891c3182"
+      Hint: PositiveCount
+      Value: 33
+    - ID: "5b49b775-a3f5-41cd-bd78-90fae97f1fd6"
+      Hint: Core Triage Questions
+      Value: "<ol><li>What covered property peril caused the shutdown?</li><li>Full closure vs partial operations?</li><li>Date operations stopped and expected reopen date?</li><li>Any temporary location or rental equipment already incurred?</li><li>Who maintains books (owner, CPA)? Monthly sales trend available?</li><li>Seasonal business or dependent properties?</li></ol>"
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Commercial Property Business Interruption — After a Covered Loss
+    - ID: "6be9cd31-e34e-4bed-880a-a218075a5b0d"
+      Hint: General Payment Triggers
+      Value: <ul><li>Advances only with Progressive authority after coverage confirmation</li><li>Final BI after agreed worksheets and period of restoration</li></ul>
+    - ID: "71d4c96f-1e34-4f86-8ba5-e7a24a873933"
+      Hint: NegativeCount
+      Value: 11
+    - ID: "76c3fa76-04cb-4142-9756-6fcb96442bf4"
+      Hint: "KB-ID"
+      Value: "KB-CP-1002"
+    - ID: "8147ab19-7525-4ef0-a878-3e3f0a3157ac"
+      Hint: LOB
+      Value: "{E799A026-FF03-4588-8607-16222D811A4C}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "05d5106e-c1d2-4398-9c34-697f353fce99"
+    - ID: "ae3f508c-c043-4863-899c-986ad4b75bd5"
+      Hint: Photo Video Standards
+      Value: <ul><li>Damaged production / sales areas that drive interruption</li><li>Boarded storefronts and temporary locations if used</li><li>Equipment critical to operations that is down</li></ul>
+    - ID: "b3f4a945-e28b-4a1c-81c7-857555b83127"
+      Hint: General Escalation Rules
+      Value: "<ul><li><strong>Large BI / complex accounting:</strong> commercial large-loss / forensic accountant path</li><li><strong>Civil authority / contingent BI:</strong> coverage SME before committing</li><li><strong>Coinsurance or reporting-form issues:</strong> coverage specialist</li></ul>"
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Business Interruption
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\WIt5EKonMo343Fqq8begbLVKlCgYPAIX
+    - ID: "c09aaa65-03f7-41a9-ba56-69b018e89ccc"
+      Hint: General Mitigation
+      Value: <ul><li>Encourage reasonable extra expense to shorten downtime when Progressive coverage applies</li><li>Set expectations that BI requires financial documentation</li><li>Coordinate property repairs that unlock reopening</li></ul>
+    - ID: "cc6e82f0-6942-4103-8d12-c8742b54a7a1"
+      Hint: Purpose
+      Value: <p>Guide Progressive Claims Advisors on <strong>Business Interruption (BI)</strong> and extra expense when a Progressive commercial property loss suspends operations.</p><ul><li>Confirm a covered cause of loss first</li><li>Capture period of restoration facts early</li><li>Separate lost income from extra expense to resume operations</li></ul>
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260802T180114Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: "KB-CP-1002-BusinessInterruption"
+    - ID: "ef17e08a-c9dd-47e0-adf2-9232c87aaa7f"
+      Hint: RatingsSum
+      Value: 148
+    - ID: "fc43bd45-b665-4895-a9e5-6d9a34ea7835"
+      Hint: Title
+      Value: Commercial Property Business Interruption — After a Covered Loss
+  - Version: 2
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{F8AE26A5-6035-4403-8DB6-7F6836176755}"
+              p:after="r[@uid='{717E1701-1FF6-418A-A8F1-35443B43B403}']"
+              s:id="{F44005E1-CCBB-4B27-9598-5EF43FB60A46}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB6A72F2A-15BE-4113-B40F-0305459DC374%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=2"
+              s:ph="headless-main" />
+            <r
+              uid="{BD2CD752-4FF6-4BD7-8762-12CCEB149433}"
+              p:after="*[1=2]"
+              s:ds=""
+              s:id="{88D43837-24CA-45A7-9171-FEAD8AE89702}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B5E0CEF20-DC70-4922-A183-E6ADB987AF60%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=3"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "1a6c4003-b700-4ff6-9a1e-b0b809a20c52"
+      Hint: Standard Site Inspection Rules
+      Value: <ul><li>Document why the premises cannot operate (photos of critical areas)</li><li>Note temporary measures that allow partial reopening</li><li>Do not calculate final BI at FNOL — gather facts for specialists</li></ul>
+    - ID: "1cf7f3e5-7109-4726-aca1-76bf779f1f95"
+      Hint: Peril type
+      Value: "{5DDEBC5C-5867-430F-A157-6D6485D11006}"
+    - ID: "1d2229f9-6c8b-4828-97c0-ade6f1a125d0"
+      Hint: TotalRatings
+      Value: 40
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Progressive commercial BI / extra expense intake when operations stop after a covered property peril.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260803T035649Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Business Interruption
+    - ID: "29d334fb-0f6f-41fa-98ea-a6f30222129f"
+      Hint: sharedContent
+      Value: |
+        {8D287006-2331-4103-89CD-D49FBE4C27AD}
+        {039520BE-569A-4A53-94C1-5F6B03AA4488}
+        {068C78BB-FBF4-4A9B-86C9-C7FDD0E3FFD6}
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{325A5D47-D4EB-4876-B759-0E18E2D9DCED}"
+    - ID: "480bb6b8-0914-4d2c-a73e-c5b28b8693e0"
+      Hint: Intake Triggers
+      Value: "<p>Start BI triage when:</p><ul><li>Fire, wind, water, or other covered property damage closes or partially closes the business</li><li>Insured requests lost income, payroll continuance, or temporary location expense</li><li>Civil authority or ingress/egress issues are alleged after a nearby Progressive-covered event (verify form)</li></ul>"
+    - ID: "4d1faace-7b0f-4ec7-94b8-9ae80e0a9bce"
+      Hint: Common Scenarios
+      Value: "<ul><li><strong>Restaurant closed after kitchen fire:</strong> BI + extra expense for temp kitchen</li><li><strong>Retail store smoke-only but HVAC down:</strong> partial interruption analysis</li><li><strong>Warehouse rack collapse from water:</strong> shipping delay / BI</li><li><strong>Neighbor fire — civil authority order:</strong> verify Progressive civil authority wording</li></ul>"
+    - ID: "4ed4709d-3dc8-4d81-bc4b-b44be7d21c45"
+      Hint: LastRated
+      Value: 20260724T101500Z
+    - ID: "4f91e6ca-b571-41f9-bc35-4e7e89c590de"
+      Hint: Baseline Reserve Guidelines
+      Value: <ul><li>Placeholder BI reserve based on rough monthly revenue band once coverage indicated</li><li>Extra expense reserve for documented temporary costs</li><li>Refine after worksheets and CPA packages</li></ul>
+    - ID: "568439dd-7959-4317-ac05-4aca4fe37a7a"
+      Hint: AverageRating
+      Value: 3.70
+    - ID: "5897e9d3-8204-4ed7-9f6a-ceb4891c3182"
+      Hint: PositiveCount
+      Value: 33
+    - ID: "5b49b775-a3f5-41cd-bd78-90fae97f1fd6"
+      Hint: Core Triage Questions
+      Value: "<ol><li>What covered property peril caused the shutdown?</li><li>Full closure vs partial operations?</li><li>Date operations stopped and expected reopen date?</li><li>Any temporary location or rental equipment already incurred?</li><li>Who maintains books (owner, CPA)? Monthly sales trend available?</li><li>Seasonal business or dependent properties?</li></ol>"
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Commercial Property Business Interruption — After a Covered Loss
+    - ID: "6be9cd31-e34e-4bed-880a-a218075a5b0d"
+      Hint: General Payment Triggers
+      Value: <ul><li>Advances only with Progressive authority after coverage confirmation</li><li>Final BI after agreed worksheets and period of restoration</li></ul>
+    - ID: "71d4c96f-1e34-4f86-8ba5-e7a24a873933"
+      Hint: NegativeCount
+      Value: 11
+    - ID: "76c3fa76-04cb-4142-9756-6fcb96442bf4"
+      Hint: "KB-ID"
+      Value: "KB-CP-1002"
+    - ID: "8147ab19-7525-4ef0-a878-3e3f0a3157ac"
+      Hint: LOB
+      Value: "{E799A026-FF03-4588-8607-16222D811A4C}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "87381860-9f9c-4588-ad25-426de3b4b5c2"
+    - ID: "ae3f508c-c043-4863-899c-986ad4b75bd5"
+      Hint: Photo Video Standards
+      Value: <ul><li>Damaged production / sales areas that drive interruption</li><li>Boarded storefronts and temporary locations if used</li><li>Equipment critical to operations that is down</li></ul>
+    - ID: "b3f4a945-e28b-4a1c-81c7-857555b83127"
+      Hint: General Escalation Rules
+      Value: "<ul><li><strong>Large BI / complex accounting:</strong> commercial large-loss / forensic accountant path</li><li><strong>Civil authority / contingent BI:</strong> coverage SME before committing</li><li><strong>Coinsurance or reporting-form issues:</strong> coverage specialist</li></ul>"
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Business Interruption
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\WIt5EKonMo343Fqq8begbLVKlCgYPAIX
+    - ID: "c09aaa65-03f7-41a9-ba56-69b018e89ccc"
+      Hint: General Mitigation
+      Value: <ul><li>Encourage reasonable extra expense to shorten downtime when Progressive coverage applies</li><li>Set expectations that BI requires financial documentation</li><li>Coordinate property repairs that unlock reopening</li></ul>
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260803T035649Z
+    - ID: "cc6e82f0-6942-4103-8d12-c8742b54a7a1"
+      Hint: Purpose
+      Value: <p>Guide Progressive Claims Advisors on <strong>Business Interruption (BI)</strong> and extra expense when a Progressive commercial property loss suspends operations.</p><ul><li>Confirm a covered cause of loss first</li><li>Capture period of restoration facts early</li><li>Separate lost income from extra expense to resume operations</li></ul>
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260803T040804Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: "KB-CP-1002-BusinessInterruption"
+    - ID: "ef17e08a-c9dd-47e0-adf2-9232c87aaa7f"
+      Hint: RatingsSum
+      Value: 148
+    - ID: "fc43bd45-b665-4895-a9e5-6d9a34ea7835"
+      Hint: Title
+      Value: Commercial Property Business Interruption — After a Covered Loss

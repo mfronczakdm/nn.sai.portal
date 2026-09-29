@@ -1,0 +1,134 @@
+﻿---
+ID: "290726b6-3797-4f62-8592-4ef23fc6df23"
+Parent: "c422829d-36a4-4f31-966d-6e75e9eea920"
+Template: "6589a92d-1e47-457d-8cc1-d37d5868b89d"
+Path: /sitecore/content/andmore/americasmart/Home/Speakers/Heritage 50/Data/ProductComparison 1
+BranchID: "9660ff60-8e47-4efc-b22d-bac3fd04c8d7"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "c7971436-cf00-4029-aa18-fc5e43fd2c8c"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{B490B0DE-B382-44B0-8CBE-C39B3FE930FF}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "00c102cf-9cbd-47da-a91f-918e59ab2e73"
+      Hint: Title
+      Value: "Which speaker is right for you?"
+    - ID: "0258696b-45ce-4a68-9a9d-1eda3a543f54"
+      Hint: Products
+      Value: |
+        {3B3A5E12-1320-4073-B8C8-B3DFC83FC71F}
+        {2FAB4E35-5B58-435F-9EE1-41B7869B812F}
+        {4A81762C-0A1C-4FA6-9F15-E39786057676}
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260824T120308Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4301044e-0bdf-4291-84fc-78b5868288f4"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260824T120509Z
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "00c102cf-9cbd-47da-a91f-918e59ab2e73"
+      Hint: Title
+      Value: "¿Qué altavoz es adecuado para ti?"
+    - ID: "0258696b-45ce-4a68-9a9d-1eda3a543f54"
+      Hint: Products
+      Value: |
+        {3B3A5E12-1320-4073-B8C8-B3DFC83FC71F}
+        {2FAB4E35-5B58-435F-9EE1-41B7869B812F}
+        {4A81762C-0A1C-4FA6-9F15-E39786057676}
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260824T120308Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b01b2295-333d-44da-864f-7e67bfc36ab9"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260904T105446Z
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "00c102cf-9cbd-47da-a91f-918e59ab2e73"
+      Hint: Title
+      Value: あなたにぴったりのスピーカーは？
+    - ID: "0258696b-45ce-4a68-9a9d-1eda3a543f54"
+      Hint: Products
+      Value: |
+        {3B3A5E12-1320-4073-B8C8-B3DFC83FC71F}
+        {2FAB4E35-5B58-435F-9EE1-41B7869B812F}
+        {4A81762C-0A1C-4FA6-9F15-E39786057676}
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260824T120308Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ed15cf92-ce37-4bb1-a337-e79fc6ba43d6"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260904T105510Z

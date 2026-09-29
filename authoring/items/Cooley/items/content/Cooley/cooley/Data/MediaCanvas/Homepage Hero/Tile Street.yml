@@ -1,0 +1,34 @@
+﻿---
+ID: "901c4a0e-8279-49a0-afc6-07c94fd394b0"
+Parent: "3c6afef1-aae6-48a8-bd76-3fd71a13ace4"
+Template: "9e9a4a47-08ec-44ca-ab32-d0c6e88d8792"
+Path: /sitecore/content/Cooley/cooley/Data/MediaCanvas/Homepage Hero/Tile Street
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260814T210523Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "bfda55e5-7753-4832-a788-ff43de74a9c6"
+    - ID: "ab1661e6-df8c-47fc-8d4e-bc88f42948ba"
+      Hint: Video
+      Value: |
+        <link text="Sample loop" linktype="external" url="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/e9eb2371712a4eda9e38a9668a221961?v=c102d2d4" anchor="" target="" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\andrew.vieau@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260819T045539Z
+    - ID: "f7987410-0bd9-4947-a43f-ae883dd17b7a"
+      Hint: Image
+      Value: |
+        <image src="https://mrfbasech.sitecoresandbox.cloud/api/public/content/30f31f5d5b1e44169fc6279394ca1795?v=a5eb7d98" dam-id="aoQGr3eSQRualCA7pcqWKQ" width="893" height="444" dam-content-type="Image" thumbnailsrc="https://mrfbasech.sitecoresandbox.cloud/api/gateway/95303/thumbnail" alt="" />

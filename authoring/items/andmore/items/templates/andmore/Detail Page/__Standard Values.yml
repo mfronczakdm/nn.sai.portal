@@ -1,0 +1,44 @@
+﻿---
+ID: "9d7af5e0-ce47-4d63-aa26-7b5146fd1213"
+Parent: "9949d5a5-dd38-43b0-964e-3e41ddde4a64"
+Template: "9949d5a5-dd38-43b0-964e-3e41ddde4a64"
+Path: /sitecore/templates/Project/andmore/Detail Page/__Standard Values
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {FBEF829B-19E8-4686-A445-023CEB9ACF2B}
+    {7B62B7D3-369A-4A78-8A85-B1DC82318ED5}
+    {9949D5A5-DD38-43B0-964E-3E41DDDE4A64}
+    {55913A3F-0350-4708-8360-EDD64B93ACCF}
+    {49095075-639B-45F2-8AA3-8EB17339CBC7}
+    {9F8AD610-0BF4-4801-A9AC-7E242EDD1B6A}
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "963308ee-a7cf-43db-ae32-ab97a9e7d99e"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260824T120449Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "92796ee8-853a-4dc2-9533-bb78cd41d827"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260824T120451Z

@@ -1,0 +1,216 @@
+﻿---
+ID: "b8e18689-cb80-4194-9166-797ed30706f2"
+Parent: "66b44e6a-6d2f-4b01-bb8a-a26e4e3ec29c"
+Template: "d77937ac-bae4-4eb0-8d7e-69ec09d5bbfc"
+Path: /sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/Ears Nose and Throat Care/Ear
+SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{5944F724-0620-4D9F-9317-AB0B80D9D094}"
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{B186E1D4-BAD8-4487-A6E6-89EA42968FE1}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "9a420a15-78eb-4aae-a929-0c84c0056834"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: "West Jefferson ENT specialists treat tinnitus, hearing loss, dizziness, and other ear conditions. Call 504-934-8550 to schedule."
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260909T171054Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Ear
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Hearing, balance, and surgical ear care on the Westbank.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: From balance problems to surgical ear treatments, we're here to help
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Ear
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Ear Care Services Marrero | West Jefferson Medical Center
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "3dfeff82-25fe-4c5b-8507-1fe38b60b2f6"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: "Ear care at West Jefferson Medical Center in Marrero, including hearing, tinnitus, dizziness, and surgical ear treatments. Call 504-934-8550."
+    - ID: "9d32260e-215d-4eff-80de-6d469daadbc4"
+      Hint: image
+      Value: |
+        <image src="https://www.lcmchealth.org/assets/LCMC-Social-Share.jpg" alt="Ear care at West Jefferson Medical Center" />
+    - ID: "a8a1dfcb-7dd5-4413-8789-db24a95e439f"
+      Hint: Detail
+      Value: |
+        <h2>From balance problems to surgical ear treatments, we're here to help</h2><p>Ringing in your ears is more than a nuisance — it can be a real problem and even lead to hearing loss. But our ears do more than help us hear. They also play a key role in helping us stay balanced.</p><p>Issues like lightheadedness or unsteadiness can sometimes be linked to the inner ear. When the vestibular system in your inner ear is affected, it can impact your sense of balance.</p><p>The ear, nose, and throat (ENT) specialists at West Jefferson Medical Center can help get to the bottom of your balance and hearing concerns. We offer these and many other ear services:</p><ul><li>Cochlear implants</li><li>Dizziness and imbalance care</li><li>Hearing aids</li><li>Hearing care</li><li>Otology: Medical and surgical ear care</li><li>Tinnitus</li></ul><h3>How to make an appointment</h3><p>Call the West Jefferson ENT clinic at <strong>504-934-8550</strong> to schedule, or <a href="/Find-a-Provider">find an otolaryngologist in the LCMC Health provider directory</a>.</p><p><strong>West Jefferson Medical Center Ear, Nose &amp; Throat</strong><br/>1111 Medical Center Blvd., Suite N-707<br/>Marrero, LA 70072<br/>Phone: 504-934-8550</p>
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Ear
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Akv1r1Hmcm16AN61y5QanpMca0RChHPy
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T192710Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Ear Care at West Jefferson Medical Center
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: "Los especialistas ENT de West Jefferson tratan tinnitus, pérdida auditiva, mareos y otras afecciones del oído. Llame al 504-934-8550 para programar una cita."
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260909T171054Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Oído
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Atención del oído, la audición y el equilibrio en el Westbank.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Desde problemas de equilibrio hasta tratamientos quirúrgicos del oído, estamos aquí para ayudarle
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Oído
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Servicios de atención del oído en Marrero | West Jefferson Medical Center
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "68f2c506-0f27-4144-bc25-a9dfa60aee3f"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: "Atención del oído en West Jefferson Medical Center en Marrero, incluyendo audición, tinnitus, mareos y tratamientos quirúrgicos del oído. Llame al 504-934-8550."
+    - ID: "9d32260e-215d-4eff-80de-6d469daadbc4"
+      Hint: image
+      Value: |
+        <image alt="Atención del oído en West Jefferson Medical Center" src="https://www.lcmchealth.org/assets/LCMC-Social-Share.jpg" />
+    - ID: "a8a1dfcb-7dd5-4413-8789-db24a95e439f"
+      Hint: Detail
+      Value: |
+        <h2>Desde problemas de equilibrio hasta tratamientos quirúrgicos del oído, estamos aquí para ayudarle</h2><p>El zumbido en los oídos es más que una molestia: puede ser un problema real e incluso provocar pérdida auditiva. Pero los oídos hacen más que ayudarnos a oír. También cumplen una función clave para ayudarnos a mantener el equilibrio.</p><p>Problemas como el mareo o la inestabilidad a veces pueden estar relacionados con el oído interno. Cuando el sistema vestibular del oído interno se ve afectado, puede afectar su sentido del equilibrio.</p><p>Los especialistas en oído, nariz y garganta (ENT) de West Jefferson Medical Center pueden ayudarle a encontrar la causa de sus problemas de equilibrio y audición. Ofrecemos estos y muchos otros servicios para el oído:</p><ul><li>Implantes cocleares</li><li>Atención para mareos y desequilibrio</li><li>Audífonos</li><li>Atención auditiva</li><li>Otología: atención médica y quirúrgica del oído</li><li>Tinnitus</li></ul><h3>Cómo programar una cita</h3><p>Llame a la clínica ENT de West Jefferson al <strong>504-934-8550</strong> para programar una cita, o <a href="/Find-a-Provider">encuentre un otorrinolaringólogo en el directorio de proveedores de LCMC Health</a>.</p><p><strong>West Jefferson Medical Center Ear, Nose &amp; Throat</strong><br/>1111 Medical Center Blvd., Suite N-707<br/>Marrero, LA 70072<br/>Teléfono: 504-934-8550</p>
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Oído
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T234054Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Atención del oído en West Jefferson Medical Center
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: "Les spécialistes ORL de West Jefferson traitent les acouphènes, la perte auditive, les étourdissements et d’autres troubles de l’oreille. Appelez au 504-934-8550 pour prendre rendez-vous."
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260909T171054Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Oreille
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Soins de l’audition, de l’équilibre et chirurgie de l’oreille sur la rive ouest.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Des troubles de l’équilibre aux traitements chirurgicaux de l’oreille, nous sommes là pour vous aider
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Oreille
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Services de soins de l’oreille à Marrero | West Jefferson Medical Center
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c7eeec1f-0729-4220-bc44-0b40f3a268e2"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: "Soins de l’oreille au West Jefferson Medical Center à Marrero, y compris l’audition, les acouphènes, les étourdissements et les traitements chirurgicaux de l’oreille. Appelez au 504-934-8550."
+    - ID: "9d32260e-215d-4eff-80de-6d469daadbc4"
+      Hint: image
+      Value: |
+        <image alt="Soins de l’oreille au West Jefferson Medical Center" src="https://www.lcmchealth.org/assets/LCMC-Social-Share.jpg" />
+    - ID: "a8a1dfcb-7dd5-4413-8789-db24a95e439f"
+      Hint: Detail
+      Value: |
+        <h2>Des troubles de l’équilibre aux traitements chirurgicaux de l’oreille, nous sommes là pour vous aider</h2><p>Les bourdonnements d’oreille sont plus qu’une nuisance — ils peuvent devenir un vrai problème et même entraîner une perte auditive. Mais nos oreilles ne servent pas seulement à entendre. Elles jouent aussi un rôle clé dans notre équilibre.</p><p>Des problèmes comme les étourdissements ou l’instabilité peuvent parfois être liés à l’oreille interne. Lorsque le système vestibulaire de l’oreille interne est touché, cela peut nuire à votre sens de l’équilibre.</p><p>Les spécialistes en ORL du West Jefferson Medical Center peuvent vous aider à trouver la cause de vos problèmes d’équilibre et d’audition. Nous offrons ces services de l’oreille, et bien d’autres :</p><ul><li>Implants cochléaires</li><li>Soins pour les étourdissements et les troubles de l’équilibre</li><li>Appareils auditifs</li><li>Soins auditifs</li><li>Otologie : soins médicaux et chirurgicaux de l’oreille</li><li>Acouphènes</li></ul><h3>Comment prendre rendez-vous</h3><p>Appelez la clinique ORL de West Jefferson au <strong>504-934-8550</strong> pour prendre rendez-vous, ou <a href="/Find-a-Provider">trouvez un oto-rhino-laryngologiste dans le répertoire des fournisseurs de LCMC Health</a>.</p><p><strong>West Jefferson Medical Center Ear, Nose &amp; Throat</strong><br/>1111 Medical Center Blvd., Suite N-707<br/>Marrero, LA 70072<br/>Téléphone : 504-934-8550</p>
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Oreille
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201826Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Soins de l’oreille au West Jefferson Medical Center

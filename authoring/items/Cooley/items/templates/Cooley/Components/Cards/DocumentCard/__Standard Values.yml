@@ -1,0 +1,40 @@
+﻿---
+ID: "2ee85c17-9297-4fe1-bca6-5fff85cfd691"
+Parent: "209d7904-335f-426b-9724-87e8a1e1ac0b"
+Template: "209d7904-335f-426b-9724-87e8a1e1ac0b"
+Path: /sitecore/templates/Project/Cooley/Components/Cards/DocumentCard/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260818T194359Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "7dbf456c-98eb-4c98-beea-983af1aff729"
+      Hint: FileType
+      Value: PDF
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "9e4553e4-6762-44b1-9ff2-318b4dff59c5"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260818T194417Z
+    - ID: "f79134a4-1574-463b-8adb-42317ae3f520"
+      Hint: CardTitle
+      Value: $name
+    - ID: "fb59136d-a3aa-406d-a5cf-f4b2dab3a4d0"
+      Hint: DownloadLabel
+      Value: Download PDF

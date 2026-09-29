@@ -1,0 +1,160 @@
+﻿---
+ID: "a658b39f-908e-4a51-b999-b9f8e05c0b44"
+Parent: "7851f7f8-b800-4ea4-b236-c367174e7e3f"
+Template: "b08ec32b-f183-474b-93f7-07512168dd6e"
+Path: "/sitecore/content/pillsbury/blg/Home/Insights/Events/Webinar/MENA-Corporate-Setup-and-US-Export-Compliance"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{6C59AE29-D0A1-4B77-9305-0ABAB21D5FE5}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{EEA5E9E6-95D6-4852-9071-662CE61C848D}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "ef65ba8d-fff5-46db-9398-9d719a3fa04d"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260805T205011Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: "MENA-Corporate-Setup-and-US-Export-Compliance"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2c413620-a111-42e4-a3b0-d4f504c9f9cf"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\WIt5EKonMo343Fqq8begbLVKlCgYPAIX
+    - ID: "d2ff0fcf-f6f9-48c6-9efb-db569452b8dc"
+      Hint: Detail
+      Value: "<h2>MENA Corporate Setup &amp; U.S. Export Compliance</h2><p><em>Webinar · Corporate &amp; International Trade</em></p><p>Entity formation, JV structures, and technology transfers into the Gulf raise dual questions: local corporate requirements and U.S. export / sanctions compliance. This session maps a coordinated playbook across Riyadh, Doha, and Washington.</p><p><strong>Featured speakers:</strong> Khalid A. AlArfaj (Riyadh), Osama Abu-Dehays (Doha), and Ata A. Akiner (Washington, DC).</p>"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260805T205516Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: "MENA-Corporate-Setup-and-US-Export-Compliance"
+  - Version: 2
+    Fields:
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: "How to stand up a Saudi or Qatar entity without missing U.S. trade-control obligations—entity formation, commercial contracting, and EAR/OFAC handoffs in one briefing."
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260806T132829Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Webinar
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: "Entity formation across MENA with U.S. export-compliance obligations covered."
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Corporate & International Trade · Riyadh, Doha, and Washington
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: MENA Corporate Setup & U.S. Export Compliance | Pillsbury Webinar
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: MENA Corporate Setup & U.S. Export Compliance | Pillsbury
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "894fe03b-d874-4c9b-b7b2-88b2006f6b1c"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Webinar on MENA entity setup and U.S. export compliance for companies expanding into Saudi Arabia and Qatar.
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: MENA Corporate Setup & U.S. Export Compliance
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260806T132829Z
+    - ID: "d2ff0fcf-f6f9-48c6-9efb-db569452b8dc"
+      Hint: Detail
+      Value: "<h2>MENA Corporate Setup &amp; U.S. Export Compliance</h2><p><em>Webinar · Corporate &amp; International Trade</em></p><p>Entity formation, JV structures, and technology transfers into the Gulf raise dual questions: local corporate requirements and U.S. export / sanctions compliance. This session maps a coordinated playbook across Riyadh, Doha, and Washington.</p><p><strong>Featured speakers:</strong> Khalid A. AlArfaj (Riyadh), Osama Abu-Dehays (Doha), and Ata A. Akiner (Washington, DC).</p>"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260822T010548Z
+    - ID: "e7f8a9b0-c1d2-4e3f-8a9b-0c1d2e3f4a5b"
+      Hint: metadataAuthor
+      Value: Pillsbury Winthrop Shaw Pittman LLP
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: MENA Corporate Setup & U.S. Export Compliance
+    - ID: "f6fcc0b6-31b2-49cd-8a66-4ba282a8ad24"
+      Hint: metadataKeywords
+      Value: MENA, Saudi Arabia, Qatar, export compliance, corporate setup, webinar, Pillsbury
+  - Version: 3
+    Fields:
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: "How to stand up a Saudi or Qatar entity without missing U.S. trade-control obligations—entity formation, commercial contracting, and EAR/OFAC handoffs in one briefing."
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260822T013051Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Webinar
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{C55B483C-EA7F-4E76-A066-985F7D9396CA}"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: "Entity formation across MENA with U.S. export-compliance obligations covered."
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Corporate & International Trade · Riyadh, Doha, and Washington
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: MENA Corporate Setup & U.S. Export Compliance | Pillsbury Webinar
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: MENA Corporate Setup & U.S. Export Compliance | Pillsbury
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "88bb5ac1-008e-4ec2-8166-7bf6b5fea20b"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Webinar on MENA entity setup and U.S. export compliance for companies expanding into Saudi Arabia and Qatar.
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: MENA Corporate Setup & U.S. Export Compliance
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260822T013051Z
+    - ID: "d2ff0fcf-f6f9-48c6-9efb-db569452b8dc"
+      Hint: Detail
+      Value: "<p>From Eh to Zed: The practical guide to doing business in Canada. Corporate setup, employment, tax, and regulatory considerations for inbound investment.</p>"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260822T014549Z
+    - ID: "e7f8a9b0-c1d2-4e3f-8a9b-0c1d2e3f4a5b"
+      Hint: metadataAuthor
+      Value: Pillsbury Winthrop Shaw Pittman LLP
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: MENA Corporate Setup & U.S. Export Compliance
+    - ID: "f6fcc0b6-31b2-49cd-8a66-4ba282a8ad24"
+      Hint: metadataKeywords
+      Value: MENA, Saudi Arabia, Qatar, export compliance, corporate setup, webinar, Pillsbury

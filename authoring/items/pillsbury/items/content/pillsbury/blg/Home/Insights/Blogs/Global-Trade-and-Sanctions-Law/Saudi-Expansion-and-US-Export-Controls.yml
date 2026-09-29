@@ -1,0 +1,138 @@
+﻿---
+ID: "0ec6dc19-4c9e-49c7-a3b5-20ce8d3532d1"
+Parent: "bc0fc499-e7cb-48a8-8462-7a2ff223a6c1"
+Template: "b08ec32b-f183-474b-93f7-07512168dd6e"
+Path: "/sitecore/content/pillsbury/blg/Home/Insights/Blogs/Global-Trade-and-Sanctions-Law/Saudi-Expansion-and-US-Export-Controls"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{6C59AE29-D0A1-4B77-9305-0ABAB21D5FE5}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{A40EE4B2-3521-4194-9252-A0277ECA675B}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "1a18f1c9-89da-47e2-bb61-4e55ac1f8af2"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Why EAR and OFAC analysis should sit beside entity setup from the first Vision 2030 planning sessions—and how to coordinate Washington trade counsel with Riyadh corporate counsel.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260806T132335Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Blog
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "46ab8141-8b68-4775-9397-d9cfd62c4dce"
+      Hint: image
+      Value: |
+        <image src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&h=750&q=80" alt="Modern skyline representing Saudi Vision 2030 expansion" width="1200" height="750" />
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: EAR/OFAC diligence for Vision 2030 market entry, from Ata A. Akiner.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Global Trade & Sanctions Law · Commentary by Ata A. Akiner
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Saudi Expansion and U.S. Export Controls | Global Trade Blog
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Saudi Expansion and U.S. Export Controls | Pillsbury
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2efaff53-f5ca-4bcd-b9db-30121e17c448"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Blog commentary by Ata A. Akiner on EAR/OFAC diligence for U.S. companies expanding into Saudi Arabia under Vision 2030.
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Saudi Expansion and U.S. Export Controls
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d2ff0fcf-f6f9-48c6-9efb-db569452b8dc"
+      Hint: Detail
+      Value: "<h2>Saudi Expansion and U.S. Export Controls</h2><p><em>Global Trade &amp; Sanctions Law · Commentary by Ata A. Akiner</em></p><p>U.S. companies expanding into Saudi Arabia under Vision 2030 frequently treat export-control questions as a late-stage compliance checkbox. In practice, EAR and OFAC analysis should sit beside entity setup and commercial diligence from the first planning sessions.</p><p><strong>Key takeaways for expansion teams:</strong></p><ul><li>Map technology, software, and services against EAR classifications before local JV or subsidiary formation.</li><li>Coordinate Washington trade counsel with Riyadh corporate counsel so licensing and entity structure move together.</li><li>Brief the business side with webinars and checklists before the first intake call—so questions land with the right specialists.</li></ul><p>For a curated path, start with Ata Akiner (International Trade, Washington, DC) and Khalid AlArfaj (Corporate, Riyadh), then use the Export Controls 101 webinar and KSA entry checklist.</p>"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260822T010546Z
+    - ID: "e7f8a9b0-c1d2-4e3f-8a9b-0c1d2e3f4a5b"
+      Hint: metadataAuthor
+      Value: Ata A. Akiner
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Saudi Expansion and U.S. Export Controls
+    - ID: "f6fcc0b6-31b2-49cd-8a66-4ba282a8ad24"
+      Hint: metadataKeywords
+      Value: Saudi Arabia, Vision 2030, export controls, EAR, OFAC, Akiner, blog, Pillsbury
+  - Version: 2
+    Fields:
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Why EAR and OFAC analysis should sit beside entity setup from the first Vision 2030 planning sessions—and how to coordinate Washington trade counsel with Riyadh corporate counsel.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260822T013104Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Blog
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{C55B483C-EA7F-4E76-A066-985F7D9396CA}"
+    - ID: "46ab8141-8b68-4775-9397-d9cfd62c4dce"
+      Hint: image
+      Value: |
+        <image src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&h=750&q=80" alt="Canadian skyline for doing-business-in-Canada insight" width="1200" height="750" />
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: EAR/OFAC diligence for Vision 2030 market entry, from Ata A. Akiner.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Global Trade & Sanctions Law · Commentary by Ata A. Akiner
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Saudi Expansion and U.S. Export Controls | Global Trade Blog
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Saudi Expansion and U.S. Export Controls | Pillsbury
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "1d16098e-baf8-4e8a-981b-40b879bc4d4a"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Blog commentary by Ata A. Akiner on EAR/OFAC diligence for U.S. companies expanding into Saudi Arabia under Vision 2030.
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Saudi Expansion and U.S. Export Controls
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260822T013104Z
+    - ID: "d2ff0fcf-f6f9-48c6-9efb-db569452b8dc"
+      Hint: Detail
+      Value: <p>Doing business in Canada and managing trade compliance — BLG perspectives for inbound investors.</p>
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260822T014548Z
+    - ID: "e7f8a9b0-c1d2-4e3f-8a9b-0c1d2e3f4a5b"
+      Hint: metadataAuthor
+      Value: Ata A. Akiner
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Saudi Expansion and U.S. Export Controls
+    - ID: "f6fcc0b6-31b2-49cd-8a66-4ba282a8ad24"
+      Hint: metadataKeywords
+      Value: Saudi Arabia, Vision 2030, export controls, EAR, OFAC, Akiner, blog, Pillsbury

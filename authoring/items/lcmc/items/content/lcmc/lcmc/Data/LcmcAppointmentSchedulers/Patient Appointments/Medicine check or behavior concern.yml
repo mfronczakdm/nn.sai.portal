@@ -1,0 +1,106 @@
+﻿---
+ID: "6de398d1-01cf-405e-b166-b37164fde776"
+Parent: "67471114-7cd2-4099-9331-cccf8e61d20f"
+Template: "95a6d332-c755-45d8-921a-6b1f2a3675cd"
+Path: /sitecore/content/lcmc/lcmc/Data/LcmcAppointmentSchedulers/Patient Appointments/Medicine check or behavior concern
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0460e082-9902-4a2e-9c72-c618bc1f77c4"
+      Hint: VisitDescription
+      Value: You need to be seen regarding medication for ADHD, anxiety, depression, asthma or have another behavioral/mental health concern.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260902T182034Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c1bab86b-900b-45f1-98de-b38583b754ed"
+    - ID: "8f9fc998-74e8-450e-9e22-a1883bc3cf28"
+      Hint: VisitKey
+      Value: "medicine-behavior"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260902T182034Z
+    - ID: "e4f064f2-f59b-4e15-abf2-11a998810fdf"
+      Hint: VisitTitle
+      Value: Medicine check or behavior concern
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0460e082-9902-4a2e-9c72-c618bc1f77c4"
+      Hint: VisitDescription
+      Value: Necesita ser atendido por medicamentos para TDAH, ansiedad, depresión, asma o por otra inquietud de salud conductual o mental.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260902T182034Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "858442ae-da20-47f1-a92a-9e084a9e6a41"
+    - ID: "8f9fc998-74e8-450e-9e22-a1883bc3cf28"
+      Hint: VisitKey
+      Value: "medicina-comportamiento"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T163025Z
+    - ID: "e4f064f2-f59b-4e15-abf2-11a998810fdf"
+      Hint: VisitTitle
+      Value: Chequeo de medicamentos o inquietud de comportamiento
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0460e082-9902-4a2e-9c72-c618bc1f77c4"
+      Hint: VisitDescription
+      Value: Vous devez être vu pour un suivi de médication pour le TDAH, l’anxiété, la dépression, l’asthme ou pour un autre problème de santé comportementale ou mentale.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260902T182034Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "afd5511d-a3c6-4a94-a7c7-41a7dc3de6a3"
+    - ID: "8f9fc998-74e8-450e-9e22-a1883bc3cf28"
+      Hint: VisitKey
+      Value: "medication-comportement"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201640Z
+    - ID: "e4f064f2-f59b-4e15-abf2-11a998810fdf"
+      Hint: VisitTitle
+      Value: Vérification de médication ou problème de comportement

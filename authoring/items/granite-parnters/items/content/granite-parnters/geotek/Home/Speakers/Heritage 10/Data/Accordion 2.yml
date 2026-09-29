@@ -1,0 +1,55 @@
+﻿---
+ID: "1b647d41-6fed-4e52-9432-9c49aadb4637"
+Parent: "76874613-abbe-445e-b196-9dd7a2e0179f"
+Template: "4dddcbac-a737-4c55-8ec8-508f1550d44a"
+Path: "/sitecore/content/granite-parnters/geotek/Home/Speakers/Heritage 10/Data/Accordion 2"
+BranchID: "9660ff60-8e47-4efc-b22d-bac3fd04c8d7"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "71dd03e5-c593-4e40-b229-2f191a83e35d"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{86A84969-96AD-438F-80E7-FE504F071B2A}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "23c31b2b-4652-4755-94b0-184bca384219"
+      Hint: heading
+      Value: PRODUCT DETAILS
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260617T114718Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "6938a6f3-824b-41d6-83ce-bce57f4cb90a"
+      Hint: link
+      Value: |
+        <link text="Contact us" linktype="external" url="/" anchor="" target="" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "cc1a4b29-0dec-4bc5-a276-b3f3ddb3ff52"
+    - ID: "9054b11a-2026-4582-8830-f66d1adfb618"
+      Hint: description
+      Value: "Still have questions? Reach out."
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260617T114945Z

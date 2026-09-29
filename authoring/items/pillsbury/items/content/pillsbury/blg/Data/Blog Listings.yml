@@ -1,0 +1,23 @@
+﻿---
+ID: "f9a4da77-9ebe-4f02-be40-d3d7c6bad8cf"
+Parent: "30f7f522-5982-4993-a8b0-6e00baeb8715"
+Template: "fadf27cb-f64d-4406-b1e2-09daaed54d82"
+Path: /sitecore/content/pillsbury/blg/Data/Blog Listings
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260805T105214Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "8d87c345-9d50-4ba3-8592-01cbce0aa273"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260805T105214Z

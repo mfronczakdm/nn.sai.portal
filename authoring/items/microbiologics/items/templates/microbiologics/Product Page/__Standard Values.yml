@@ -1,0 +1,44 @@
+﻿---
+ID: "dee23de2-77c5-476b-a5ac-94e2893f0ca3"
+Parent: "972df078-8ba7-4b88-9b35-9ad236cce625"
+Template: "972df078-8ba7-4b88-9b35-9ad236cce625"
+Path: /sitecore/templates/Project/microbiologics/Product Page/__Standard Values
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {F5669F1E-2BEA-4ECB-8221-8DF42DCA4B70}
+    {257FA757-31DD-4120-9413-D1DABE97D367}
+    {8FFD0712-8F01-4AEB-918C-BD727569A098}
+    {CB4E8905-2609-428B-A04D-3DCEB8135F32}
+    {972DF078-8BA7-4B88-9B35-9AD236CCE625}
+    {DABFA2D0-87FF-41B7-85EC-E92ABB80D945}
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "49085fcf-5c46-48c8-9eb1-c06f8e09a4cd"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260608T183825Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "28a0167c-54b2-455c-8cd1-c8970677d911"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260608T183826Z

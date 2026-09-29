@@ -1,0 +1,130 @@
+﻿---
+ID: "168532f3-37ce-4045-a84c-f0672164eebe"
+Parent: "d9cb7792-ee41-4a8f-a1f8-729d90b4e527"
+Template: "4540c3ad-240b-4d59-bd8b-f2a34d1edc79"
+Path: /sitecore/content/lcmc/lcmc/Data/Services/Womens Health
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "195a3eb9-2014-4ade-9528-46016044c588"
+      Hint: ServiceTitle
+      Value: Women's Health
+    - ID: "249f0edb-a3f4-4f20-a0b6-e389bdbe8547"
+      Hint: ServiceDetail
+      Value: <p>Women's health programs include prenatal care, labor and delivery, gynecology, and breast health.</p><p>East Jefferson, Touro, West Jefferson, Lakeview, and New Orleans East Hospital provide maternity and women's specialty services.</p>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T003554Z
+    - ID: "36f9cc2a-c286-48dc-8161-cbc3300f8601"
+      Hint: OfferedAtLocations
+      Value: |
+        {EFEAC293-2BF4-4516-873D-4EAC1F998474}
+        {C5D069A3-C8BB-40FE-89BE-D7F9D5C9614F}
+        {6766AE91-0553-4034-B328-2327CB54AB85}
+        {063FFD1D-6681-4DFC-8A7A-504EA903090F}
+        {35C77454-5FB8-460D-BC12-299F7B31DE5A}
+    - ID: "4491d77b-da17-4a4d-8480-8a09826476a5"
+      Hint: ServiceShortDescription
+      Value: Obstetrics, gynecology, breast care, and maternity services for women across the LCMC Health network.
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "7c279ea1-547d-4c7f-a164-f9130a4a18cc"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260908T003817Z
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "195a3eb9-2014-4ade-9528-46016044c588"
+      Hint: ServiceTitle
+      Value: Salud de la mujer
+    - ID: "249f0edb-a3f4-4f20-a0b6-e389bdbe8547"
+      Hint: ServiceDetail
+      Value: <p>Los programas de salud de la mujer incluyen atención prenatal, trabajo de parto y parto, ginecología y salud mamaria.</p><p>East Jefferson, Touro, West Jefferson, Lakeview y New Orleans East Hospital brindan servicios de maternidad y especialidades para la mujer.</p>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T003554Z
+    - ID: "36f9cc2a-c286-48dc-8161-cbc3300f8601"
+      Hint: OfferedAtLocations
+      Value: |
+        {EFEAC293-2BF4-4516-873D-4EAC1F998474}
+        {C5D069A3-C8BB-40FE-89BE-D7F9D5C9614F}
+        {6766AE91-0553-4034-B328-2327CB54AB85}
+        {063FFD1D-6681-4DFC-8A7A-504EA903090F}
+        {35C77454-5FB8-460D-BC12-299F7B31DE5A}
+    - ID: "4491d77b-da17-4a4d-8480-8a09826476a5"
+      Hint: ServiceShortDescription
+      Value: Obstetricia, ginecología, atención mamaria y servicios de maternidad para mujeres en toda la red de LCMC Health.
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d24d2c00-b1fc-4964-b7e4-ca3d5f9ed2d9"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T162729Z
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "195a3eb9-2014-4ade-9528-46016044c588"
+      Hint: ServiceTitle
+      Value: Santé des femmes
+    - ID: "249f0edb-a3f4-4f20-a0b6-e389bdbe8547"
+      Hint: ServiceDetail
+      Value: <p>Les programmes de santé des femmes comprennent les soins prénataux, le travail et l’accouchement, la gynécologie et la santé du sein.</p><p>East Jefferson, Touro, West Jefferson, Lakeview et New Orleans East Hospital offrent des services de maternité et des services spécialisés pour les femmes.</p>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T003554Z
+    - ID: "36f9cc2a-c286-48dc-8161-cbc3300f8601"
+      Hint: OfferedAtLocations
+      Value: |
+        {EFEAC293-2BF4-4516-873D-4EAC1F998474}
+        {C5D069A3-C8BB-40FE-89BE-D7F9D5C9614F}
+        {6766AE91-0553-4034-B328-2327CB54AB85}
+        {063FFD1D-6681-4DFC-8A7A-504EA903090F}
+        {35C77454-5FB8-460D-BC12-299F7B31DE5A}
+    - ID: "4491d77b-da17-4a4d-8480-8a09826476a5"
+      Hint: ServiceShortDescription
+      Value: Obstétrique, gynécologie, soins du sein et services de maternité pour les femmes dans l’ensemble du réseau de LCMC Health.
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "1947ea48-e4f3-4bde-8f79-87df5ef09829"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201357Z

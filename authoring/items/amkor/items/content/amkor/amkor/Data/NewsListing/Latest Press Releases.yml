@@ -1,0 +1,89 @@
+﻿---
+ID: "464a51c6-4046-404d-92de-16167789e5cb"
+Parent: "960ae89a-45f2-4d7b-b9fc-ebabde0f6ac7"
+Template: "de22037d-099b-40fd-895e-af11c08fd8ee"
+Path: /sitecore/content/amkor/amkor/Data/NewsListing/Latest Press Releases
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260830T210933Z
+    - ID: "4ca382af-be31-48d5-a714-7c7173d3b002"
+      Hint: CtaLink
+      Value: |
+        <link text="View All Releases" linktype="external" class="" title="" target="_blank" querystring="" url="https://ir.amkor.com/press-releases" />
+    - ID: "4e9732bd-2457-4d98-8bdd-cf44082c4304"
+      Hint: Eyebrow
+      Value: amkor investor relations
+    - ID: "6a5bad2f-6a55-4c92-b63e-c6990e2242d1"
+      Hint: Title
+      Value: Latest Press Releases
+    - ID: "7cffb21e-1450-4fc5-96b1-4bf1b8390dc7"
+      Hint: CtaText
+      Value: View All Releases
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "69ceb146-640a-42d2-93e1-3225ce3407cc"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c351fb98-4e20-4598-844f-90497bc78e7d"
+      Hint: FeaturedItems
+      Value: |
+        {F171370F-82D3-4E83-8596-6B1E78A2B958}
+        {50289AA5-EDC5-4B20-94BB-13B6B22F1D80}
+        {A42872CF-6EF9-42DA-A65E-02FE32E11A56}
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260830T210934Z
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260830T210933Z
+    - ID: "4ca382af-be31-48d5-a714-7c7173d3b002"
+      Hint: CtaLink
+      Value: |
+        <link class="" querystring="" target="_blank" title="" linktype="external" text="すべてのリリースを見る" url="https://ir.amkor.com/press-releases" />
+    - ID: "4e9732bd-2457-4d98-8bdd-cf44082c4304"
+      Hint: Eyebrow
+      Value: アムコー インベスターリレーションズ
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "6a5bad2f-6a55-4c92-b63e-c6990e2242d1"
+      Hint: Title
+      Value: 最新のプレスリリース
+    - ID: "7cffb21e-1450-4fc5-96b1-4bf1b8390dc7"
+      Hint: CtaText
+      Value: すべてのリリースを見る
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b918acb3-3e40-490c-a0b3-29eca5de6563"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c351fb98-4e20-4598-844f-90497bc78e7d"
+      Hint: FeaturedItems
+      Value: |
+        {F171370F-82D3-4E83-8596-6B1E78A2B958}
+        {50289AA5-EDC5-4B20-94BB-13B6B22F1D80}
+        {A42872CF-6EF9-42DA-A65E-02FE32E11A56}
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260831T030249Z

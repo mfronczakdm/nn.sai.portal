@@ -1,0 +1,51 @@
+﻿---
+ID: "d8f39706-f7c2-442c-bccf-19db1ca2e4a6"
+Parent: "de56c786-55ea-495e-b84a-65d60178768b"
+Template: "d2c0babb-51e4-4e13-9305-6a1107962413"
+Path: "/sitecore/content/new-quanex/quanex-alternators/Home/Landing Page/Data/Subscription Banner"
+BranchID: "97509128-1b31-4a5b-9c07-d4c94b611d24"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "e1dcb6e8-8999-43a2-b136-f5cc08a00ad6"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{EBF79BA7-6C73-4436-8CD5-3B4A815E9F0E}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260818T142714Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "57fd1a39-ec9a-460d-b86f-da1791b8de9d"
+      Hint: descriptionOptional
+      Value: Be a part of the confidence revolution with Solterra & Co.
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a8967021-4ea0-45a2-892d-8ba54461d3e6"
+    - ID: "a823205f-7781-42e2-914c-2b9b0e65161f"
+      Hint: titleRequired
+      Value: Subscribe to Sunguide, your source for company updates.
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260818T142831Z

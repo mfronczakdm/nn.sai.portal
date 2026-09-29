@@ -1,0 +1,161 @@
+﻿---
+ID: "b8641a1e-2e6d-4871-ad55-3bd93df5f27a"
+Parent: "de0cb44e-9407-48fd-9d92-c6a8a87277e4"
+Template: "b754cb40-d82d-46e5-b001-e7f4434fd399"
+Path: /sitecore/content/andmore/americasmart/Home/Speakers/Data/ImageBanner 1
+BranchID: "9660ff60-8e47-4efc-b22d-bac3fd04c8d7"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "b3a0ff7c-3c9e-47d0-9eb1-5f6646c6e1e2"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{1DCD7425-7B3A-426B-86A4-4C9F59EF1AD8}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260824T120255Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "87ac64e1-6130-4c85-b8ae-6f6a46a48ddb"
+      Hint: Body
+      Value: When Sync first started shaping the sound of music, our amps were proudly built in Georgia. Decades later, some of our most iconic amps are still crafted in the same factory.
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4ccba8a7-5b5a-48e8-b8b7-ba2876a80c46"
+    - ID: "8ecf2383-cc5b-4117-a28e-beaaa49f70e7"
+      Hint: Title
+      Value: Iconic design that stands apart
+    - ID: "9e31f586-d332-43a1-a3b6-794a0ce6f95d"
+      Hint: Image2
+      Value: |
+        <image mediaid="{F66FB7CE-5D21-402C-B51F-069CCD7CDCCD}" />
+    - ID: "a2f1b23d-31df-4913-a4ca-d1e2948f968a"
+      Hint: Image1
+      Value: |
+        <image mediaid="{E9A3ECD5-43E6-49DE-BA26-62875615879B}" />
+    - ID: "b8cc9165-bb12-446b-b4b2-3d40756ca79c"
+      Hint: Image3
+      Value: |
+        <image mediaid="{5DBB555A-F1B7-421C-8883-580F0DF163B3}" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260824T120504Z
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260824T120255Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "87ac64e1-6130-4c85-b8ae-6f6a46a48ddb"
+      Hint: Body
+      Value: Cuando Sync comenzó a dar forma al sonido de la música, nuestros amplificadores se fabricaban con orgullo en Georgia. Décadas después, algunos de nuestros amplificadores más icónicos todavía se elaboran en la misma fábrica.
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "fb24804e-2d70-4494-b2aa-e46cb812ea9a"
+    - ID: "8ecf2383-cc5b-4117-a28e-beaaa49f70e7"
+      Hint: Title
+      Value: Diseño icónico que se destaca
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9e31f586-d332-43a1-a3b6-794a0ce6f95d"
+      Hint: Image2
+      Value: |
+        <image mediaid="{F66FB7CE-5D21-402C-B51F-069CCD7CDCCD}" alt="Altavoz inteligente" />
+    - ID: "a2f1b23d-31df-4913-a4ca-d1e2948f968a"
+      Hint: Image1
+      Value: |
+        <image mediaid="{E9A3ECD5-43E6-49DE-BA26-62875615879B}" alt="multitud en un concierto" />
+    - ID: "b8cc9165-bb12-446b-b4b2-3d40756ca79c"
+      Hint: Image3
+      Value: |
+        <image mediaid="{5DBB555A-F1B7-421C-8883-580F0DF163B3}" alt="ingeniero de estudio de grabación" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260904T105309Z
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260824T120255Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "87ac64e1-6130-4c85-b8ae-6f6a46a48ddb"
+      Hint: Body
+      Value: Syncが音楽のサウンドづくりを始めた当初、当社のアンプは誇りを持ってジョージア州で製造されていました。数十年を経た今でも、最も象徴的なアンプの一部は同じ工場で作られています。
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "1ac2e3c8-2be4-4c86-bf1c-1a894290c0f4"
+    - ID: "8ecf2383-cc5b-4117-a28e-beaaa49f70e7"
+      Hint: Title
+      Value: ひときわ目を引く象徴的なデザイン
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9e31f586-d332-43a1-a3b6-794a0ce6f95d"
+      Hint: Image2
+      Value: |
+        <image mediaid="{F66FB7CE-5D21-402C-B51F-069CCD7CDCCD}" alt="スマートスピーカー" />
+    - ID: "a2f1b23d-31df-4913-a4ca-d1e2948f968a"
+      Hint: Image1
+      Value: |
+        <image mediaid="{E9A3ECD5-43E6-49DE-BA26-62875615879B}" alt="コンサートの観客" />
+    - ID: "b8cc9165-bb12-446b-b4b2-3d40756ca79c"
+      Hint: Image3
+      Value: |
+        <image mediaid="{5DBB555A-F1B7-421C-8883-580F0DF163B3}" alt="レコーディングスタジオのエンジニア" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260904T105336Z

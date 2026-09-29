@@ -1,0 +1,54 @@
+﻿---
+ID: "8d2bd78a-bdeb-4a58-9ede-a0d8f8e36eb5"
+Parent: "99d95104-89e2-4aa5-93ff-bd7c6148c3e2"
+Template: "f6a7b8c9-d0e1-4f5a-3b4c-5d6e7f8a9b0c"
+Path: /sitecore/content/rockland/rockland/Data/AI Config/Services/Product Catalog Display
+BranchID: "f8a9b0c1-d2e3-4f4a-5b6c-7d8e9f0a1b2c"
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 100
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "68677d35-147a-4a7f-8e3e-1cc232d56606"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{E3F4A5B6-C7D8-4E9F-0A1B-2C3D4E5F6A7B}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260707T101404Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "020a1302-1244-450b-94de-6b363fd8a7c1"
+    - ID: "b8c9d0e1-f2a3-4b5c-5d6e-7f8a9b0c1d2e"
+      Hint: name
+      Value: Product Catalog Display
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c9d0e1f2-a3b4-4c5d-6e7f-8a9b0c1d2e3f"
+      Hint: description
+      Value: Display and browse product catalogs with rich product information, images, and specifications.
+    - ID: "d0e1f2a3-b4c5-4d6e-7f8a-9b0c1d2e3f4a"
+      Hint: category
+      Value: "E-Commerce"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260707T101414Z

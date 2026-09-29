@@ -1,0 +1,26 @@
+﻿{
+    "$schema": "../../../.sitecore/schemas/ModuleFile.schema.json",
+    "namespace": "quanex",
+    "items": {
+        "includes": [
+            {
+                "name": "content",
+                "path": "/sitecore/content/quanex",
+                "scope": "ItemAndDescendants",
+                "allowedPushOperations": "CreateUpdateAndDelete"
+            },
+            {
+                "name": "renderings",
+                "path": "/sitecore/layout/Renderings/Project/quanex",
+                "scope": "ItemAndDescendants",
+                "allowedPushOperations": "CreateUpdateAndDelete"
+            },
+            {
+                "name": "templates",
+                "path": "/sitecore/templates/Project/quanex",
+                "scope": "ItemAndDescendants",
+                "allowedPushOperations": "CreateUpdateAndDelete"
+            }
+        ]
+    }
+}

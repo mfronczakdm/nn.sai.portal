@@ -1,0 +1,44 @@
+﻿---
+ID: "9bd9d23e-5c18-4af9-b67a-ba2fd89b834c"
+Parent: "06956982-8c82-4f7a-ac98-999b0962f933"
+Template: "06956982-8c82-4f7a-ac98-999b0962f933"
+Path: /sitecore/templates/Project/dycom/Article Page/__Standard Values
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {06956982-8C82-4F7A-AC98-999B0962F933}
+    {32D945B5-D490-47D9-A703-FE07652CB130}
+    {36BA0DAB-63FD-4249-8EE6-B4B0533D5317}
+    {3BB64D5C-3C6E-408F-9B03-E2A00D5082E3}
+    {AE959BB3-E576-4E91-8FD7-36242B92DB12}
+    {C5E2AE39-4F86-41B8-9DD1-495C8C92C896}
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "d4e2c2e1-7745-4584-a6b6-2c52f77f736b"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260509T145833Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "e7dfe00c-6674-4746-8f94-deffde73e18a"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260509T145835Z

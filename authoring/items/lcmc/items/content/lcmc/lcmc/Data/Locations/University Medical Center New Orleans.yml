@@ -1,0 +1,271 @@
+﻿---
+ID: "e8f05084-0214-424f-b1d4-b5b562499f5c"
+Parent: "76041887-6e16-4844-ad13-366bc2e32265"
+Template: "1be17bb8-084f-4fba-a33f-8568e92f5b45"
+Path: /sitecore/content/lcmc/lcmc/Data/Locations/University Medical Center New Orleans
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0cbd1feb-1e88-4b8f-974e-40a39d92b678"
+      Hint: VisitorInfo
+      Value: <p>All visitors check in at the main lobby. Trauma and ICU units have additional screening and hour limits.</p>
+    - ID: "1a4b9586-ee63-4f6b-aa77-fe5fa10b298d"
+      Hint: ParkingInfo
+      Value: Patient and visitor parking is available in the Canal Street garage. Follow signs for Emergency and Main Entrance.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T003631Z
+    - ID: "2c7fc5d0-8c5e-4947-96ed-5b9a8c1a6553"
+      Hint: LandingPage
+      Value: "{618FA09A-743B-4623-A06C-F1CEE45FDF4F}"
+    - ID: "3bd52b62-4c4c-414b-badb-7b22a8302c2b"
+      Hint: HoursText
+      Value: Hospital open 24 hours. Emergency and trauma services open 24/7.
+    - ID: "5b761c6e-2119-4e9f-88ad-2ca564ac098e"
+      Hint: LocationTitle
+      Value: University Medical Center New Orleans
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "9d1fe5e8-a79d-42b3-b8a6-0fd966d83d35"
+    - ID: "949f2600-c710-4b8f-9c6a-45287b4b177a"
+      Hint: State
+      Value: LA
+    - ID: "a527f3e4-3842-44e6-8e33-4e4d4b07cb4c"
+      Hint: StreetAddress
+      Value: 2000 Canal St.
+    - ID: "b71a3795-49f5-4073-8783-6e811d20e7cd"
+      Hint: PhoneNumber
+      Value: "504-702-3000"
+    - ID: "b8865cad-75b2-44be-a7fc-81898a04ce1d"
+      Hint: LocationType
+      Value: Hospital
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "bc5eb2b3-2e35-42b6-a006-49a269250e79"
+      Hint: HasEmergencyDepartment
+      Value: 1
+    - ID: "c0d058ff-7eee-4fb6-8b01-50fcafcec82a"
+      Hint: OfferedServices
+      Value: |
+        {21FB8DB6-1732-4A44-8BEC-E39C52C1961A}
+        {872D3FA1-DBC7-4ABF-9544-5A668C0D08B1}
+        {72C9C518-0BB1-4BB0-9319-A38875217CD3}
+        {2C7094F3-7E17-4A5F-8E1F-68830FDC81B6}
+        {EF79ADEF-3A78-4992-B297-04B3447C9CF4}
+        {DB0C3D51-6686-4387-89A4-97B0AB5E440E}
+        {DBD2AAB8-F409-4288-9EE0-5CFD676A1C66}
+        {B491C6F0-3A49-4E3A-B94E-815639B35B92}
+    - ID: "ce0500e1-7c8b-4845-b54c-909c049e7f63"
+      Hint: PostalCode
+      Value: 70112
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260908T003757Z
+    - ID: "de83b497-49bc-41da-9b5f-3d04437dd153"
+      Hint: Latitude
+      Value: 29.9590
+    - ID: "e9488a30-c918-403c-bbaa-11feba2dfcb1"
+      Hint: LocationShortName
+      Value: UMCNO
+    - ID: "ee630347-777d-47f6-8df9-c27c904a7903"
+      Hint: City
+      Value: New Orleans
+    - ID: "f565cf13-09f9-4fbe-943e-1551fa1f6056"
+      Hint: LocationDescription
+      Value: <p>University Medical Center New Orleans is the academic medical center of LCMC Health and the region's Level I Trauma Center.</p>
+    - ID: "fa6567c5-386f-4030-b03e-9cef3568cb4f"
+      Hint: LocationPhysicians
+      Value: |
+        {79C12EE1-19F2-48EB-89CF-3473364D2488}
+        {B7224F06-A404-40C9-8F72-8A1FDD04C472}
+    - ID: "facb5aff-7d1d-4234-88d6-50de5299d83f"
+      Hint: Longitude
+      Value: "-90.0786"
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0cbd1feb-1e88-4b8f-974e-40a39d92b678"
+      Hint: VisitorInfo
+      Value: <p>Todos los visitantes deben registrarse en el lobby principal. Las unidades de trauma y UCI tienen controles adicionales y límites de horario.</p>
+    - ID: "1a4b9586-ee63-4f6b-aa77-fe5fa10b298d"
+      Hint: ParkingInfo
+      Value: Hay estacionamiento para pacientes y visitantes disponible en el garaje de Canal Street. Siga las señales hacia Emergencias y la Entrada Principal.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T003631Z
+    - ID: "2c7fc5d0-8c5e-4947-96ed-5b9a8c1a6553"
+      Hint: LandingPage
+      Value: "{618FA09A-743B-4623-A06C-F1CEE45FDF4F}"
+    - ID: "3bd52b62-4c4c-414b-badb-7b22a8302c2b"
+      Hint: HoursText
+      Value: Hospital abierto las 24 horas. Servicios de emergencia y trauma abiertos 24/7.
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5b761c6e-2119-4e9f-88ad-2ca564ac098e"
+      Hint: LocationTitle
+      Value: Centro Médico Universitario de Nueva Orleans
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ea14ca58-c2bc-41fa-bf49-2da46a24ca19"
+    - ID: "949f2600-c710-4b8f-9c6a-45287b4b177a"
+      Hint: State
+      Value: LA
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "a527f3e4-3842-44e6-8e33-4e4d4b07cb4c"
+      Hint: StreetAddress
+      Value: 2000 Canal St.
+    - ID: "b71a3795-49f5-4073-8783-6e811d20e7cd"
+      Hint: PhoneNumber
+      Value: "504-702-3000"
+    - ID: "b8865cad-75b2-44be-a7fc-81898a04ce1d"
+      Hint: LocationType
+      Value: Hospital
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "bc5eb2b3-2e35-42b6-a006-49a269250e79"
+      Hint: HasEmergencyDepartment
+      Value: 1
+    - ID: "c0d058ff-7eee-4fb6-8b01-50fcafcec82a"
+      Hint: OfferedServices
+      Value: |
+        {21FB8DB6-1732-4A44-8BEC-E39C52C1961A}
+        {872D3FA1-DBC7-4ABF-9544-5A668C0D08B1}
+        {72C9C518-0BB1-4BB0-9319-A38875217CD3}
+        {2C7094F3-7E17-4A5F-8E1F-68830FDC81B6}
+        {EF79ADEF-3A78-4992-B297-04B3447C9CF4}
+        {DB0C3D51-6686-4387-89A4-97B0AB5E440E}
+        {DBD2AAB8-F409-4288-9EE0-5CFD676A1C66}
+        {B491C6F0-3A49-4E3A-B94E-815639B35B92}
+    - ID: "ce0500e1-7c8b-4845-b54c-909c049e7f63"
+      Hint: PostalCode
+      Value: 70112
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T162704Z
+    - ID: "de83b497-49bc-41da-9b5f-3d04437dd153"
+      Hint: Latitude
+      Value: 29.9590
+    - ID: "e9488a30-c918-403c-bbaa-11feba2dfcb1"
+      Hint: LocationShortName
+      Value: UMCNO
+    - ID: "ee630347-777d-47f6-8df9-c27c904a7903"
+      Hint: City
+      Value: Nueva Orleans
+    - ID: "f565cf13-09f9-4fbe-943e-1551fa1f6056"
+      Hint: LocationDescription
+      Value: <p>El Centro Médico Universitario de Nueva Orleans es el centro médico académico de LCMC Health y el Centro de Trauma de Nivel I de la región.</p>
+    - ID: "fa6567c5-386f-4030-b03e-9cef3568cb4f"
+      Hint: LocationPhysicians
+      Value: |
+        {79C12EE1-19F2-48EB-89CF-3473364D2488}
+        {B7224F06-A404-40C9-8F72-8A1FDD04C472}
+    - ID: "facb5aff-7d1d-4234-88d6-50de5299d83f"
+      Hint: Longitude
+      Value: "-90.0786"
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0cbd1feb-1e88-4b8f-974e-40a39d92b678"
+      Hint: VisitorInfo
+      Value: <p>Tous les visiteurs doivent s’enregistrer au hall principal. Les unités de traumatologie et de soins intensifs ont un dépistage supplémentaire et des heures de visite limitées.</p>
+    - ID: "1a4b9586-ee63-4f6b-aa77-fe5fa10b298d"
+      Hint: ParkingInfo
+      Value: Le stationnement pour les patients et les visiteurs est disponible dans le garage de la rue Canal. Suivez les panneaux indiquant l’Urgence et l’Entrée principale.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T003631Z
+    - ID: "2c7fc5d0-8c5e-4947-96ed-5b9a8c1a6553"
+      Hint: LandingPage
+      Value: "{618FA09A-743B-4623-A06C-F1CEE45FDF4F}"
+    - ID: "3bd52b62-4c4c-414b-badb-7b22a8302c2b"
+      Hint: HoursText
+      Value: Hôpital ouvert 24 heures sur 24. Les services d’urgence et de traumatologie sont ouverts 24 h sur 24, 7 j sur 7.
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5b761c6e-2119-4e9f-88ad-2ca564ac098e"
+      Hint: LocationTitle
+      Value: "Centre médical universitaire de La Nouvelle-Orléans"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f74b238d-87ea-4af7-a5ef-ea21dab10f25"
+    - ID: "949f2600-c710-4b8f-9c6a-45287b4b177a"
+      Hint: State
+      Value: LA
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "a527f3e4-3842-44e6-8e33-4e4d4b07cb4c"
+      Hint: StreetAddress
+      Value: 2000, rue Canal
+    - ID: "b71a3795-49f5-4073-8783-6e811d20e7cd"
+      Hint: PhoneNumber
+      Value: "504-702-3000"
+    - ID: "b8865cad-75b2-44be-a7fc-81898a04ce1d"
+      Hint: LocationType
+      Value: Hôpital
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "bc5eb2b3-2e35-42b6-a006-49a269250e79"
+      Hint: HasEmergencyDepartment
+      Value: 1
+    - ID: "c0d058ff-7eee-4fb6-8b01-50fcafcec82a"
+      Hint: OfferedServices
+      Value: |
+        {21FB8DB6-1732-4A44-8BEC-E39C52C1961A}
+        {872D3FA1-DBC7-4ABF-9544-5A668C0D08B1}
+        {72C9C518-0BB1-4BB0-9319-A38875217CD3}
+        {2C7094F3-7E17-4A5F-8E1F-68830FDC81B6}
+        {EF79ADEF-3A78-4992-B297-04B3447C9CF4}
+        {DB0C3D51-6686-4387-89A4-97B0AB5E440E}
+        {DBD2AAB8-F409-4288-9EE0-5CFD676A1C66}
+        {B491C6F0-3A49-4E3A-B94E-815639B35B92}
+    - ID: "ce0500e1-7c8b-4845-b54c-909c049e7f63"
+      Hint: PostalCode
+      Value: 70112
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201325Z
+    - ID: "de83b497-49bc-41da-9b5f-3d04437dd153"
+      Hint: Latitude
+      Value: 29.9590
+    - ID: "e9488a30-c918-403c-bbaa-11feba2dfcb1"
+      Hint: LocationShortName
+      Value: UMCNO
+    - ID: "ee630347-777d-47f6-8df9-c27c904a7903"
+      Hint: City
+      Value: "La Nouvelle-Orléans"
+    - ID: "f565cf13-09f9-4fbe-943e-1551fa1f6056"
+      Hint: LocationDescription
+      Value: "<p>Le Centre médical universitaire de La Nouvelle-Orléans est le centre médical universitaire de LCMC Health et le centre de traumatologie de niveau I de la région.</p>"
+    - ID: "fa6567c5-386f-4030-b03e-9cef3568cb4f"
+      Hint: LocationPhysicians
+      Value: |
+        {79C12EE1-19F2-48EB-89CF-3473364D2488}
+        {B7224F06-A404-40C9-8F72-8A1FDD04C472}
+    - ID: "facb5aff-7d1d-4234-88d6-50de5299d83f"
+      Hint: Longitude
+      Value: "-90.0786"

@@ -1,0 +1,37 @@
+﻿---
+ID: "2d266324-8192-42ea-8be4-35d12a90bb8b"
+Parent: "91505d2a-bfd0-4da9-9006-00ee4f8de872"
+Template: "73e57eaa-b54a-41e1-b689-bf7dae9155ad"
+Path: /sitecore/content/progressive/pkm/Home/Questions and Answers/Escalations/Litigation hold indicators/StateSpecific/TX/Litigation hold indicators
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{79D78C17-53C7-48E6-98E4-0E2240B77BB8}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260731T012518Z
+    - ID: "2d71e32d-e990-46b3-8ca1-58cd89743d5e"
+      Hint: Question
+      Value: "What Progressive litigation hold indicators should Texas claims advisors watch for?"
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Litigation hold indicators
+    - ID: "4f8dc72e-1548-471c-9f3e-a13e944e4321"
+      Hint: Answer
+      Value: "Watch for attorney letters, lawsuit notices, preservation requests, or explicit litigation language—including Texas prompt-payment disputes and storm-related claim challenges. Immediately apply Progressive litigation-hold procedures and stop routine document destruction or informal email about the claim. Notify the designated Progressive litigation contact the same day, and note any Texas DOI complaint or regulatory correspondence."
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "e9134f51-f76a-42a7-8f95-4823c81e36cc"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260731T012519Z

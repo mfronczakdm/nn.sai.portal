@@ -1,0 +1,41 @@
+﻿---
+ID: "039520be-569a-4a53-94c1-5f6b03aa4488"
+Parent: "166e31e8-2538-4641-a25b-b60ec0cb1ee4"
+Template: "bdf6c974-e68c-46a2-a0a9-d382fd0927eb"
+Path: "/sitecore/content/progressive/pkm/Home/Shared Content/05-CommonScenarios/StateSpecific/NC/KB-CP-1002-BusinessInterruption-NC"
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{A7490D8E-290B-4603-9A79-18BA8FB60E6A}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "21b8d6f1-4294-46a5-98fd-38df0ce8aae0"
+      Hint: SourceDocumentLOB
+      Value: "{E799A026-FF03-4588-8607-16222D811A4C}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260803T035534Z
+    - ID: "76e0c665-5c4d-4d03-ae66-a5f3d12978ba"
+      Hint: Content
+      Value: <p>In North Carolina, escalate Progressive civil authority or contingent BI questions to coverage SME before committing, and route complex Progressive BI accounting to forensic accountant paths when monthly sales packages are incomplete.</p>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2a9d7c44-2561-454d-8dfb-f3db06005bcd"
+    - ID: "94ce9d2b-aa0c-488f-943a-d2e582eb50bc"
+      Hint: SourceDocumentPerils
+      Value: "{5DDEBC5C-5867-430F-A157-6D6485D11006}"
+    - ID: "a8f6d033-4e9e-4598-be5e-da2456c41b9f"
+      Hint: sourceDocumentLink
+      Value: |
+        <link text="Commercial Property Business Interruption — After a Covered Loss" linktype="internal" class="" title="" target="" querystring="" id="{FC8F587F-0354-452B-AE90-E8FEE418C90B}" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260803T035535Z

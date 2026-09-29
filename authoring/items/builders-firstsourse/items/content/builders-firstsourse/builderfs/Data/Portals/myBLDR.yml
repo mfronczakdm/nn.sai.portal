@@ -1,0 +1,541 @@
+﻿---
+ID: "18427759-0c60-45a9-94a1-64384ffb46cb"
+Parent: "1d800ef5-fbbc-47f7-8504-b5c5a4fa8505"
+Template: "0bb540d0-731b-4f71-8c0e-d99e26562cd2"
+Path: "/sitecore/content/builders-firstsourse/builderfs/Data/Portals/myBLDR"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260510T144418Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c0b7bce-7da1-4cec-a7aa-3d28179fe94b"
+      Hint: title
+      Value: MyBLDR
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "93eec741-849e-476f-9c3e-42f7cf3ebeca"
+    - ID: "b0125af5-1538-4b18-9a93-2e8f5781bc2c"
+      Hint: body
+      Value: |
+        <!--
+          Static HTML snippet for Sitecore content population: myBLDR Portal Hub.
+          Mimics Builders FirstSource myBLDR platform capabilities with non-interactive dashboard screenshots.
+        -->
+        <section
+          class="mx-auto w-full max-w-6xl px-4 py-10 text-slate-950"
+          aria-labelledby="mybldr-portal-hub-title"
+        >
+          <div class="mb-8 max-w-3xl space-y-3">
+            <p class="text-sm font-bold uppercase tracking-[0.18em] text-[#ED1D24]">myBLDR portal</p>
+            <h2
+              id="mybldr-portal-hub-title"
+              class="text-3xl font-bold tracking-tight text-[#292670] md:text-5xl"
+            >
+              Your digital homebuilding command center
+            </h2>
+            <p class="text-base leading-relaxed text-slate-600 md:text-lg">
+              Centralize plans, selections, quotes, orders, schedules, budgets, and jobsite updates in one
+              portal built for production builders and their trade partners.
+            </p>
+          </div>
+        
+          <div class="grid gap-5 lg:grid-cols-[1.2fr_0.8fr]">
+            <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+              <div class="mb-5 flex flex-wrap items-center justify-between gap-3">
+                <div>
+                  <p class="text-xs font-bold uppercase tracking-[0.16em] text-slate-500">Project snapshot</p>
+                  <h3 class="mt-1 text-2xl font-bold text-[#292670]">Lot 42 - Canyon Ridge</h3>
+                </div>
+                <span class="border border-[#ED1D24] px-3 py-1 text-xs font-bold uppercase text-[#ED1D24]">
+                  On schedule
+                </span>
+              </div>
+        
+              <div class="grid gap-4 md:grid-cols-3">
+                <div class="border-l-4 border-[#ED1D24] bg-slate-50 p-4">
+                  <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Active tasks</p>
+                  <p class="mt-2 text-3xl font-bold text-[#292670]">18</p>
+                  <p class="mt-1 text-sm text-slate-600">5 due this week</p>
+                </div>
+                <div class="border-l-4 border-[#292670] bg-slate-50 p-4">
+                  <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Open orders</p>
+                  <p class="mt-2 text-3xl font-bold text-[#292670]">7</p>
+                  <p class="mt-1 text-sm text-slate-600">2 ready for delivery</p>
+                </div>
+                <div class="border-l-4 border-slate-400 bg-slate-50 p-4">
+                  <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Budget status</p>
+                  <p class="mt-2 text-3xl font-bold text-[#292670]">96%</p>
+                  <p class="mt-1 text-sm text-slate-600">Committed vs. plan</p>
+                </div>
+              </div>
+        
+              <div class="mt-5 overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
+                <div class="flex items-center justify-between border-b border-slate-200 bg-white px-4 py-3">
+                  <p class="text-sm font-bold text-[#292670]">Schedule and materials timeline</p>
+                  <p class="text-xs font-semibold text-slate-500">Updated today</p>
+                </div>
+                <div class="space-y-3 p-4">
+                  <div class="grid gap-3 md:grid-cols-[9rem_1fr_7rem] md:items-center">
+                    <p class="text-sm font-semibold text-slate-700">Framing package</p>
+                    <div class="h-3 bg-slate-200">
+                      <div class="h-3 w-[86%] bg-[#ED1D24]"></div>
+                    </div>
+                    <p class="text-sm font-bold text-[#292670]">Delivered</p>
+                  </div>
+                  <div class="grid gap-3 md:grid-cols-[9rem_1fr_7rem] md:items-center">
+                    <p class="text-sm font-semibold text-slate-700">Window order</p>
+                    <div class="h-3 bg-slate-200">
+                      <div class="h-3 w-[62%] bg-[#292670]"></div>
+                    </div>
+                    <p class="text-sm font-bold text-[#292670]">In transit</p>
+                  </div>
+                  <div class="grid gap-3 md:grid-cols-[9rem_1fr_7rem] md:items-center">
+                    <p class="text-sm font-semibold text-slate-700">Selections</p>
+                    <div class="h-3 bg-slate-200">
+                      <div class="h-3 w-[44%] bg-slate-500"></div>
+                    </div>
+                    <p class="text-sm font-bold text-[#292670]">Review</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+        
+            <aside class="rounded-2xl border border-slate-200 bg-[#292670] p-5 text-white shadow-sm">
+              <p class="text-xs font-bold uppercase tracking-[0.16em] text-white/70">Digital workflow</p>
+              <h3 class="mt-2 text-2xl font-bold">From plan upload to jobsite delivery</h3>
+              <p class="mt-3 text-sm leading-relaxed text-white/80">
+                Connect design, procurement, project controls, and field communication so every stakeholder
+                is working from the latest information.
+              </p>
+        
+              <div class="mt-6 space-y-3">
+                <div class="bg-white/10 p-4">
+                  <p class="font-bold">1. Upload plans</p>
+                  <p class="mt-1 text-sm text-white/75">Store plan sets, revisions, photos, and markups.</p>
+                </div>
+                <div class="bg-white/10 p-4">
+                  <p class="font-bold">2. Build quotes and orders</p>
+                  <p class="mt-1 text-sm text-white/75">Review BFS material quantities and submit POs.</p>
+                </div>
+                <div class="bg-white/10 p-4">
+                  <p class="font-bold">3. Track fulfillment</p>
+                  <p class="mt-1 text-sm text-white/75">Coordinate delivery dates and jobsite readiness.</p>
+                </div>
+              </div>
+        
+              <a
+                href="https://www.bldr.com/digital-tools/mybldr"
+                class="mt-6 inline-block bg-[#ED1D24] px-5 py-3 text-sm font-bold uppercase tracking-wide text-white no-underline"
+              >
+                Explore myBLDR
+              </a>
+            </aside>
+          </div>
+        
+          <div class="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+            <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+              <div class="mb-4 flex h-12 w-12 items-center justify-center bg-[#292670] text-lg font-bold text-white">
+                P
+              </div>
+              <h3 class="text-lg font-bold text-[#292670]">Projects</h3>
+              <p class="mt-2 text-sm leading-relaxed text-slate-600">
+                Manage plans, selections, schedules, budgets, documents, and access control by job.
+              </p>
+            </article>
+        
+            <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+              <div class="mb-4 flex h-12 w-12 items-center justify-center bg-[#292670] text-lg font-bold text-white">
+                D
+              </div>
+              <h3 class="text-lg font-bold text-[#292670]">Documents</h3>
+              <p class="mt-2 text-sm leading-relaxed text-slate-600">
+                Keep the latest plans, markups, photos, videos, and files organized in shared folders.
+              </p>
+            </article>
+        
+            <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+              <div class="mb-4 flex h-12 w-12 items-center justify-center bg-[#ED1D24] text-lg font-bold text-white">
+                M
+              </div>
+              <h3 class="text-lg font-bold text-[#292670]">Materials</h3>
+              <p class="mt-2 text-sm leading-relaxed text-slate-600">
+                Review quotes, submit purchase orders, request deliveries, and confirm delivered products.
+              </p>
+            </article>
+        
+            <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+              <div class="mb-4 flex h-12 w-12 items-center justify-center bg-[#ED1D24] text-lg font-bold text-white">
+                3D
+              </div>
+              <h3 class="text-lg font-bold text-[#292670]">3D visualization</h3>
+              <p class="mt-2 text-sm leading-relaxed text-slate-600">
+                Turn 2D plans into visual models for clearer design decisions and fewer change orders.
+              </p>
+            </article>
+          </div>
+        
+          <div class="mt-6 grid gap-5 lg:grid-cols-3">
+            <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+              <p class="text-xs font-bold uppercase tracking-[0.16em] text-[#ED1D24]">Screenshot mock</p>
+              <h3 class="mt-2 text-xl font-bold text-[#292670]">Document markup</h3>
+              <div class="mt-4 border border-slate-200 bg-slate-50 p-4">
+                <div class="mb-3 h-3 w-2/3 bg-slate-300"></div>
+                <div class="mb-2 h-2 w-full bg-slate-200"></div>
+                <div class="mb-2 h-2 w-5/6 bg-slate-200"></div>
+                <div class="relative mt-5 h-32 border border-dashed border-slate-300 bg-white">
+                  <div class="absolute left-6 top-5 h-10 w-20 border-2 border-[#ED1D24]"></div>
+                  <div class="absolute bottom-5 right-5 bg-[#292670] px-3 py-2 text-xs font-bold text-white">
+                    Framing note
+                  </div>
+                </div>
+              </div>
+            </article>
+        
+            <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+              <p class="text-xs font-bold uppercase tracking-[0.16em] text-[#ED1D24]">Screenshot mock</p>
+              <h3 class="mt-2 text-xl font-bold text-[#292670]">Materials order</h3>
+              <div class="mt-4 overflow-hidden border border-slate-200">
+                <div class="grid grid-cols-3 bg-[#292670] px-3 py-2 text-xs font-bold uppercase text-white">
+                  <span>Item</span>
+                  <span>Qty</span>
+                  <span>Status</span>
+                </div>
+                <div class="grid grid-cols-3 border-b border-slate-200 px-3 py-3 text-sm">
+                  <span>Lumber pack</span>
+                  <span>1</span>
+                  <span class="font-bold text-[#ED1D24]">Ready</span>
+                </div>
+                <div class="grid grid-cols-3 border-b border-slate-200 px-3 py-3 text-sm">
+                  <span>Windows</span>
+                  <span>22</span>
+                  <span class="font-bold text-[#292670]">Quoted</span>
+                </div>
+                <div class="grid grid-cols-3 px-3 py-3 text-sm">
+                  <span>Doors</span>
+                  <span>14</span>
+                  <span class="font-bold text-slate-600">Review</span>
+                </div>
+              </div>
+            </article>
+        
+            <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+              <p class="text-xs font-bold uppercase tracking-[0.16em] text-[#ED1D24]">Screenshot mock</p>
+              <h3 class="mt-2 text-xl font-bold text-[#292670]">Schedule view</h3>
+              <div class="mt-4 space-y-3 border border-slate-200 bg-slate-50 p-4">
+                <div class="flex items-center gap-3">
+                  <span class="h-3 w-3 bg-[#ED1D24]"></span>
+                  <div class="h-3 flex-1 bg-slate-300"></div>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="h-3 w-3 bg-[#292670]"></span>
+                  <div class="h-3 w-4/5 bg-slate-300"></div>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="h-3 w-3 bg-slate-500"></span>
+                  <div class="h-3 w-3/5 bg-slate-300"></div>
+                </div>
+                <div class="mt-5 grid grid-cols-5 gap-2">
+                  <div class="h-16 bg-white"></div>
+                  <div class="h-16 bg-white"></div>
+                  <div class="h-16 bg-[#ED1D24]/15"></div>
+                  <div class="h-16 bg-white"></div>
+                  <div class="h-16 bg-[#292670]/15"></div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+        
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "cc7d3a62-3796-41d8-af32-b4408a0749f9"
+      Hint: subtitle
+      Value: Your portal to the world
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260510T151122Z
+- Language: "nl-NL"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260510T144418Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c0b7bce-7da1-4cec-a7aa-3d28179fe94b"
+      Hint: title
+      Value: MyBLDR
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "cb582c89-8672-4513-ae01-cdb546bfbbaa"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "b0125af5-1538-4b18-9a93-2e8f5781bc2c"
+      Hint: body
+      Value: |
+        <!--
+          Static HTML snippet for Sitecore content population: myBLDR Portal Hub.
+          Mimics Builders FirstSource myBLDR platform capabilities with non-interactive dashboard screenshots.
+        -->
+        <section
+          class="mx-auto w-full max-w-6xl px-4 py-10 text-slate-950"
+          aria-labelledby="mybldr-portal-hub-title"
+        >
+          <div class="mb-8 max-w-3xl space-y-3">
+            <p class="text-sm font-bold uppercase tracking-[0.18em] text-[#ED1D24]">myBLDR portal</p>
+            <h2
+              id="mybldr-portal-hub-title"
+              class="text-3xl font-bold tracking-tight text-[#292670] md:text-5xl"
+            >
+              Uw digitale commandocentrum voor woningbouw
+            </h2>
+            <p class="text-base leading-relaxed text-slate-600 md:text-lg">
+              Centraliseer plannen, keuzes, offertes, bestellingen, schema's, budgetten en updates van de bouwplaats in één
+              portal, speciaal ontworpen voor productie bouwers en hun handelspartners.
+            </p>
+          </div>
+        
+          <div class="grid gap-5 lg:grid-cols-[1.2fr_0.8fr]">
+            <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+              <div class="mb-5 flex flex-wrap items-center justify-between gap-3">
+                <div>
+                  <p class="text-xs font-bold uppercase tracking-[0.16em] text-slate-500">Projectoverzicht</p>
+                  <h3 class="mt-1 text-2xl font-bold text-[#292670]">Perceel 42 - Canyon Ridge</h3>
+                </div>
+                <span class="border border-[#ED1D24] px-3 py-1 text-xs font-bold uppercase text-[#ED1D24]">
+                  Op schema
+                </span>
+              </div>
+        
+              <div class="grid gap-4 md:grid-cols-3">
+                <div class="border-l-4 border-[#ED1D24] bg-slate-50 p-4">
+                  <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Actieve taken</p>
+                  <p class="mt-2 text-3xl font-bold text-[#292670]">18</p>
+                  <p class="mt-1 text-sm text-slate-600">5 deze week verschuldigd</p>
+                </div>
+                <div class="border-l-4 border-[#292670] bg-slate-50 p-4">
+                  <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Openstaande bestellingen</p>
+                  <p class="mt-2 text-3xl font-bold text-[#292670]">7</p>
+                  <p class="mt-1 text-sm text-slate-600">2 klaar voor levering</p>
+                </div>
+                <div class="border-l-4 border-slate-400 bg-slate-50 p-4">
+                  <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Budgetstatus</p>
+                  <p class="mt-2 text-3xl font-bold text-[#292670]">96%</p>
+                  <p class="mt-1 text-sm text-slate-600">Toegezegd versus plan</p>
+                </div>
+              </div>
+        
+              <div class="mt-5 overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
+                <div class="flex items-center justify-between border-b border-slate-200 bg-white px-4 py-3">
+                  <p class="text-sm font-bold text-[#292670]">Schema en materiaal tijdlijn</p>
+                  <p class="text-xs font-semibold text-slate-500">Vandaag bijgewerkt</p>
+                </div>
+                <div class="space-y-3 p-4">
+                  <div class="grid gap-3 md:grid-cols-[9rem_1fr_7rem] md:items-center">
+                    <p class="text-sm font-semibold text-slate-700">Framepakket</p>
+                    <div class="h-3 bg-slate-200">
+                      <div class="h-3 w-[86%] bg-[#ED1D24]"></div>
+                    </div>
+                    <p class="text-sm font-bold text-[#292670]">Geleverd</p>
+                  </div>
+                  <div class="grid gap-3 md:grid-cols-[9rem_1fr_7rem] md:items-center">
+                    <p class="text-sm font-semibold text-slate-700">Raambestelling</p>
+                    <div class="h-3 bg-slate-200">
+                      <div class="h-3 w-[62%] bg-[#292670]"></div>
+                    </div>
+                    <p class="text-sm font-bold text-[#292670]">Onderweg</p>
+                  </div>
+                  <div class="grid gap-3 md:grid-cols-[9rem_1fr_7rem] md:items-center">
+                    <p class="text-sm font-semibold text-slate-700">Keuzes</p>
+                    <div class="h-3 bg-slate-200">
+                      <div class="h-3 w-[44%] bg-slate-500"></div>
+                    </div>
+                    <p class="text-sm font-bold text-[#292670]">Beoordeling</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+        
+            <aside class="rounded-2xl border border-slate-200 bg-[#292670] p-5 text-white shadow-sm">
+              <p class="text-xs font-bold uppercase tracking-[0.16em] text-white/70">Digitale workflow</p>
+              <h3 class="mt-2 text-2xl font-bold">Van het uploaden van plannen tot levering op de bouwplaats</h3>
+              <p class="mt-3 text-sm leading-relaxed text-white/80">
+                Verbind ontwerp, inkoop, projectbeheer en communicatie op locatie zodat elke belanghebbende
+                werkt met de meest recente informatie.
+              </p>
+        
+              <div class="mt-6 space-y-3">
+                <div class="bg-white/10 p-4">
+                  <p class="font-bold">1. Upload plannen</p>
+                  <p class="mt-1 text-sm text-white/75">Bewaar plan sets, revisies, foto's en aantekeningen.</p>
+                </div>
+                <div class="bg-white/10 p-4">
+                  <p class="font-bold">2. Maak offertes en bestellingen</p>
+                  <p class="mt-1 text-sm text-white/75">Bekijk BFS materiaalhoeveelheden en dien inkooporders in.</p>
+                </div>
+                <div class="bg-white/10 p-4">
+                  <p class="font-bold">3. Volg de uitvoering</p>
+                  <p class="mt-1 text-sm text-white/75">Stem leveringsdata en gereedheid van de bouwplaats af.</p>
+                </div>
+              </div>
+        
+              <a
+                href="https://www.bldr.com/digital-tools/mybldr"
+                class="mt-6 inline-block bg-[#ED1D24] px-5 py-3 text-sm font-bold uppercase tracking-wide text-white no-underline"
+              >
+                Ontdek myBLDR
+              </a>
+            </aside>
+          </div>
+        
+          <div class="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+            <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+              <div class="mb-4 flex h-12 w-12 items-center justify-center bg-[#292670] text-lg font-bold text-white">
+                P
+              </div>
+              <h3 class="text-lg font-bold text-[#292670]">Projecten</h3>
+              <p class="mt-2 text-sm leading-relaxed text-slate-600">
+                Beheer plannen, keuzes, schema's, budgetten, documenten en toegangscontrole per project.
+              </p>
+            </article>
+        
+            <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+              <div class="mb-4 flex h-12 w-12 items-center justify-center bg-[#292670] text-lg font-bold text-white">
+                D
+              </div>
+              <h3 class="text-lg font-bold text-[#292670]">Documenten</h3>
+              <p class="mt-2 text-sm leading-relaxed text-slate-600">
+                Houd de nieuwste plannen, aantekeningen, foto's, video's en bestanden georganiseerd in gedeelde mappen.
+              </p>
+            </article>
+        
+            <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+              <div class="mb-4 flex h-12 w-12 items-center justify-center bg-[#ED1D24] text-lg font-bold text-white">
+                M
+              </div>
+              <h3 class="text-lg font-bold text-[#292670]">Materialen</h3>
+              <p class="mt-2 text-sm leading-relaxed text-slate-600">
+                Bekijk offertes, dien inkooporders in, vraag leveringen aan en bevestig geleverde producten.
+              </p>
+            </article>
+        
+            <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+              <div class="mb-4 flex h-12 w-12 items-center justify-center bg-[#ED1D24] text-lg font-bold text-white">
+                3D
+              </div>
+              <h3 class="text-lg font-bold text-[#292670]">3D-visualisatie</h3>
+              <p class="mt-2 text-sm leading-relaxed text-slate-600">
+                Zet 2D-plannen om in visuele modellen voor duidelijkere ontwerpbeslissingen en minder wijzigingsopdrachten.
+              </p>
+            </article>
+          </div>
+        
+          <div class="mt-6 grid gap-5 lg:grid-cols-3">
+            <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+              <p class="text-xs font-bold uppercase tracking-[0.16em] text-[#ED1D24]">Screenshot mock</p>
+              <h3 class="mt-2 text-xl font-bold text-[#292670]">Document aantekening</h3>
+              <div class="mt-4 border border-slate-200 bg-slate-50 p-4">
+                <div class="mb-3 h-3 w-2/3 bg-slate-300"></div>
+                <div class="mb-2 h-2 w-full bg-slate-200"></div>
+                <div class="mb-2 h-2 w-5/6 bg-slate-200"></div>
+                <div class="relative mt-5 h-32 border border-dashed border-slate-300 bg-white">
+                  <div class="absolute left-6 top-5 h-10 w-20 border-2 border-[#ED1D24]"></div>
+                  <div class="absolute bottom-5 right-5 bg-[#292670] px-3 py-2 text-xs font-bold text-white">
+                    Frame notitie
+                  </div>
+                </div>
+              </div>
+            </article>
+        
+            <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+              <p class="text-xs font-bold uppercase tracking-[0.16em] text-[#ED1D24]">Screenshot mock</p>
+              <h3 class="mt-2 text-xl font-bold text-[#292670]">Materialen bestelling</h3>
+              <div class="mt-4 overflow-hidden border border-slate-200">
+                <div class="grid grid-cols-3 bg-[#292670] px-3 py-2 text-xs font-bold uppercase text-white">
+                  <span>Item</span>
+                  <span>Aantal</span>
+                  <span>Status</span>
+                </div>
+                <div class="grid grid-cols-3 border-b border-slate-200 px-3 py-3 text-sm">
+                  <span>Houtpakket</span>
+                  <span>1</span>
+                  <span class="font-bold text-[#ED1D24]">Klaar</span>
+                </div>
+                <div class="grid grid-cols-3 border-b border-slate-200 px-3 py-3 text-sm">
+                  <span>Ramen</span>
+                  <span>22</span>
+                  <span class="font-bold text-[#292670]">Offerte</span>
+                </div>
+                <div class="grid grid-cols-3 px-3 py-3 text-sm">
+                  <span>Deuren</span>
+                  <span>14</span>
+                  <span class="font-bold text-slate-600">Beoordeling</span>
+                </div>
+              </div>
+            </article>
+        
+            <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+              <p class="text-xs font-bold uppercase tracking-[0.16em] text-[#ED1D24]">Screenshot mock</p>
+              <h3 class="mt-2 text-xl font-bold text-[#292670]">Schema weergave</h3>
+              <div class="mt-4 space-y-3 border border-slate-200 bg-slate-50 p-4">
+                <div class="flex items-center gap-3">
+                  <span class="h-3 w-3 bg-[#ED1D24]"></span>
+                  <div class="h-3 flex-1 bg-slate-300"></div>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="h-3 w-3 bg-[#292670]"></span>
+                  <div class="h-3 w-4/5 bg-slate-300"></div>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="h-3 w-3 bg-slate-500"></span>
+                  <div class="h-3 w-3/5 bg-slate-300"></div>
+                </div>
+                <div class="mt-5 grid grid-cols-5 gap-2">
+                  <div class="h-16 bg-white"></div>
+                  <div class="h-16 bg-white"></div>
+                  <div class="h-16 bg-[#ED1D24]/15"></div>
+                  <div class="h-16 bg-white"></div>
+                  <div class="h-16 bg-[#292670]/15"></div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+        
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\johannes.zijlstra@sitecore.com
+    - ID: "cc7d3a62-3796-41d8-af32-b4408a0749f9"
+      Hint: subtitle
+      Value: Uw toegangspoort tot de wereld
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260626T202658Z

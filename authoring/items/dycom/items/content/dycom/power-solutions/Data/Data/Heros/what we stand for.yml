@@ -1,0 +1,57 @@
+﻿---
+ID: "b19d31e2-d5be-4c05-9c2f-72b8c75604e5"
+Parent: "4756eca5-459f-427e-905e-db14993b1b1d"
+Template: "ae018465-4e68-4a49-8b15-9702274fa75a"
+Path: "/sitecore/content/dycom/power-solutions/Data/Data/Heros/what we stand for"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "851299e3-74c7-454a-a58f-cbab6ed36231"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260510T201103Z
+    - ID: "29fdc472-23a7-463e-8b3e-cd93551fa51c"
+      Hint: badge
+      Value: Badge
+    - ID: "3c2b7d00-8de2-4636-a65f-d667a75ec4a7"
+      Hint: description
+      Value: desc
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{12FFAC4C-565F-4C9A-B63E-7F77E96B4D1F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "de656d94-beea-463b-b5ed-68e6323a1228"
+    - ID: "9ad66b62-4ebd-42da-8e1a-09dca7db5aea"
+      Hint: bannerText
+      Value: banner text
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c65eb2cc-503f-48cd-ba69-42c29df106c1"
+      Hint: image
+      Value: |
+        <Image src="https://mrfbasech.sitecoresandbox.cloud/api/public/content/84934-HomepagePromoCTAs-1100x740?v=1d8ef7c9" dam-id="AFHhTYbkRDCtiG3XNkGzUQ" width="1100" height="740" alt="imgi_18_Dycom_PM_Image_04.jpg" dam-content-type="Image" thumbnailsrc="https://mrfbasech.sitecoresandbox.cloud/api/gateway/84934/thumbnail" />
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260510T201518Z
+    - ID: "e5e059ce-66e3-4039-887b-0086e7764f09"
+      Hint: title
+      Value: Title

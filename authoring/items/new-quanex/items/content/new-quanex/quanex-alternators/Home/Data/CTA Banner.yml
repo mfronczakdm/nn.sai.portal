@@ -1,0 +1,55 @@
+﻿---
+ID: "a57c3f00-948c-4d66-a695-4c003132b94b"
+Parent: "69d47a38-f3df-45cc-bb15-d80265efcef1"
+Template: "bee4869d-b588-42c2-9797-76510c397e6a"
+Path: "/sitecore/content/new-quanex/quanex-alternators/Home/Data/CTA Banner"
+BranchID: "67d5aed7-9d44-4899-925d-d06ef478b9fb"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "39e33b6c-7623-4857-a028-6d173d4a7085"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{9413AD74-CA2D-4D81-8988-2BD12BD58CF6}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260818T142657Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "7a8c2095-39f5-4f40-b69d-16ddff188a68"
+      Hint: titleRequired
+      Value: 3.4 billion people in 190 countries use our brands every day.
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "1e4d052d-dd6e-4060-85e9-9590852de370"
+    - ID: "9fdcf3e1-5289-4ae0-b4e4-9460ad50814f"
+      Hint: linkOptional
+      Value: |
+        <link class="" querystring="" id="{07139DB1-270D-45FE-A700-2DCC780E4EBF}" anchor="" target="" title="" linktype="internal" text="See Our Brands" url="" />
+    - ID: "a35015fe-805c-45d7-9446-f88b33a157d4"
+      Hint: descriptionOptional
+      Value: Be a part of the confidence revolution with Solterra & Co.
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260818T142832Z

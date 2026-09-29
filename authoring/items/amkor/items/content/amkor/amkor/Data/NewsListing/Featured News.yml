@@ -1,0 +1,95 @@
+﻿---
+ID: "e6ba41e4-6316-4dab-9724-c8ae3be23509"
+Parent: "960ae89a-45f2-4d7b-b9fc-ebabde0f6ac7"
+Template: "de22037d-099b-40fd-895e-af11c08fd8ee"
+Path: /sitecore/content/amkor/amkor/Data/NewsListing/Featured News
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260829T173458Z
+    - ID: "4ca382af-be31-48d5-a714-7c7173d3b002"
+      Hint: CtaLink
+      Value: |
+        <link text="View All Posts" linktype="internal" class="" title="" target="" querystring="" id="{893BBB60-2B8C-4A97-BB8E-541E744F2B33}" />
+    - ID: "4e9732bd-2457-4d98-8bdd-cf44082c4304"
+      Hint: Eyebrow
+      Value: amkor news
+    - ID: "6a5bad2f-6a55-4c92-b63e-c6990e2242d1"
+      Hint: Title
+      Value: Latest Blog Posts
+    - ID: "7cffb21e-1450-4fc5-96b1-4bf1b8390dc7"
+      Hint: CtaText
+      Value: View All Posts
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f96f7bd2-151f-46bc-9832-f45703fe1970"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c351fb98-4e20-4598-844f-90497bc78e7d"
+      Hint: FeaturedItems
+      Value: |
+        {71F8E54C-5557-4BFD-B869-CB79994E42CA}
+        {0C088EBE-1D07-45D5-91B5-6567AD0D7AAC}
+        {0227D955-DE71-4AA4-B1BD-EC944EAC53D8}
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260830T172046Z
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260829T173458Z
+    - ID: "4ca382af-be31-48d5-a714-7c7173d3b002"
+      Hint: CtaLink
+      Value: |
+        <link class="" id="{893BBB60-2B8C-4A97-BB8E-541E744F2B33}" querystring="" target="" title="" linktype="internal" text="すべての投稿を見る" />
+    - ID: "4e9732bd-2457-4d98-8bdd-cf44082c4304"
+      Hint: Eyebrow
+      Value: amkor ニュース
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "6a5bad2f-6a55-4c92-b63e-c6990e2242d1"
+      Hint: Title
+      Value: 最新のブログ記事
+    - ID: "7cffb21e-1450-4fc5-96b1-4bf1b8390dc7"
+      Hint: CtaText
+      Value: すべての投稿を見る
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "07d26045-ac9e-480f-99ae-1f1a28372e57"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c351fb98-4e20-4598-844f-90497bc78e7d"
+      Hint: FeaturedItems
+      Value: |
+        {71F8E54C-5557-4BFD-B869-CB79994E42CA}
+        {0C088EBE-1D07-45D5-91B5-6567AD0D7AAC}
+        {0227D955-DE71-4AA4-B1BD-EC944EAC53D8}
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260831T030249Z

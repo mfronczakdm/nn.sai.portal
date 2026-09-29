@@ -1,0 +1,58 @@
+﻿---
+ID: "936a6f41-4993-4911-9c14-466f52bb5048"
+Parent: "df811abd-5ccf-4e60-ba0d-cccbd528be60"
+Template: "58041043-7bea-44f0-b1b8-08e4ea7054f4"
+Path: /sitecore/content/dycom/dycom/Home/Data/Text 3
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "3c991e80-016c-4d9d-bbd5-c407e7f48766"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260512T210301Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "8b57dadd-0825-4f5d-9c32-187c0af7e1fd"
+      Hint: text
+      Value: |
+        <div class="ck-content">
+              <p class="vc_custom_heading" style="-webkit-font-smoothing:antialiased;-webkit-text-stroke-width:0px;background-color:rgb(255, 255, 255);border-width:0px;box-sizing:border-box;color:rgb(0, 92, 185);font-family:Roboto;font-feature-settings:inherit;font-kerning:inherit;font-language-override:inherit;font-optical-sizing:inherit;font-size-adjust:inherit;font-size:30px;font-stretch:inherit;font-style:normal;font-variant-alternates:inherit;font-variant-caps:normal;font-variant-east-asian:inherit;font-variant-emoji:inherit;font-variant-ligatures:normal;font-variant-numeric:inherit;font-variant-position:inherit;font-variation-settings:inherit;letter-spacing:normal;line-height:20px;margin:0px;orphans:2;padding:0px 0px 1.5em;text-align:center;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;vertical-align:baseline;white-space:normal;widows:2;word-spacing:0px;">
+                <strong>Our Reach</strong>
+              </p>
+              <p class="vc_custom_heading box-desc" style="-webkit-font-smoothing:antialiased;-webkit-text-stroke-width:0px;background-color:rgb(255, 255, 255);border-width:0px;box-sizing:border-box;color:rgb(135, 135, 135);font-family:Ubuntu;font-feature-settings:inherit;font-kerning:inherit;font-language-override:inherit;font-optical-sizing:inherit;font-size-adjust:inherit;font-size:16px;font-stretch:inherit;font-style:normal;font-variant-alternates:inherit;font-variant-caps:normal;font-variant-east-asian:inherit;font-variant-emoji:inherit;font-variant-ligatures:normal;font-variant-numeric:inherit;font-variant-position:inherit;font-variation-settings:inherit;font-weight:400;height:300px !important;letter-spacing:normal;line-height:inherit;margin:0px;orphans:2;padding:0px 0px 1.5em;text-align:center;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;vertical-align:baseline;white-space:normal;widows:2;word-spacing:0px;">The reach of our expansive group of companies is built on our deep relationships with leading service providers. Dedicated to safety and quality, we have the partners to meet the needs of every client, no matter the scope or deadline.</p>
+              <p style="text-align:center;">
+                <a class="nectar-button large regular accent-color has-icon regular-button column-btn family-btn" style="-webkit-text-stroke-width:0px;background-color:rgb(0, 92, 185) !important;border-radius:200px !important;border-width:0px;box-shadow:none;box-sizing:border-box;color:rgb(255, 255, 255);display:inline-block;font-family:Ubuntu;font-feature-settings:inherit;font-kerning:inherit;font-language-override:inherit;font-optical-sizing:inherit;font-size-adjust:inherit;font-size:14px;font-stretch:inherit;font-style:normal;font-variant-alternates:inherit;font-variant-caps:normal;font-variant-east-asian:inherit;font-variant-emoji:inherit;font-variant-ligatures:normal;font-variant-numeric:inherit;font-variant-position:inherit;font-variation-settings:inherit;font-weight:500;letter-spacing:normal;line-height:20px;margin:auto 0px 10px;opacity:0.87;orphans:2;padding:15px 44px 15px 46px;position:relative;text-align:center;text-decoration:none;text-indent:0px;text-transform:none;top:0px;transition:opacity 0.45s cubic-bezier(0.25, 1, 0.33, 1), transform 0.45s cubic-bezier(0.25, 1, 0.33, 1), border-color 0.45s cubic-bezier(0.25, 1, 0.33, 1), color 0.45s cubic-bezier(0.25, 1, 0.33, 1), background-color 0.45s cubic-bezier(0.25, 1, 0.33, 1), box-shadow 0.45s cubic-bezier(0.25, 1, 0.33, 1);vertical-align:baseline;visibility:visible;white-space:normal;widows:2;word-spacing:0px;" href="https://dycomind.com/about-us/companies/">
+                  <span style="border-width:0px;box-sizing:border-box;display:inline-block;font:inherit;left:0px;margin:0px;padding:0px;position:relative;transform:translateX(-18px);transition:opacity 0.45s cubic-bezier(0.25, 1, 0.33, 1), transform 0.45s cubic-bezier(0.25, 1, 0.33, 1);vertical-align:baseline;">Our Family of Companies</span>
+                </a>
+                <br /> </p>
+            </div>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "166ed342-afd1-4cf9-bd3b-8a058edaec9d"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260525T221733Z

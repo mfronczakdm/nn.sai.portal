@@ -1,0 +1,97 @@
+﻿---
+ID: "8975098d-c541-48d9-a3bd-9bf69cbba739"
+Parent: "f2b11166-5630-47aa-9c2b-471aa9e2c5c3"
+Template: "7629f514-e156-4543-adc6-051453441b33"
+Path: "/sitecore/content/quanex/amesburytruth/Home/Door Hardware/Hinged/Locks/P3000 Multi-Point Lock"
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{6D0C0297-C945-46AE-8EB0-7880A8ACEF10}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "698d67bd-3e52-44b4-9a1a-b56119918fad"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: 
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0169dfce-89a4-4941-821a-ab1266a1de4a"
+      Hint: CategoryLabel
+      Value: LOCKS
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1"
+          s:xsd="http://www.w3.org/2001/XMLSchema">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{5C1C1AF6-89A7-4317-B9EA-494BFDD1B2B1}"
+              s:par="" />
+            <r
+              uid="{3842E484-014C-49D1-B894-AB599EE30B1F}"
+              p:after="*[1=2]"
+              s:ds=""
+              s:id="{9AFBB222-DFDC-400D-9385-E50BA119B0C0}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "17cbe776-d3b6-4203-a37c-30a46022bae6"
+      Hint: SpecSheetLink
+      Value: |
+        <link text="Print a Spec Sheet" linktype="external" url="https://amesburytruth.com/products/doors/hinged/locks/euro-mount/thumb-turn-above/p3000/p3000-active-5pt-2-rhinos" anchor="" target="_blank" />
+    - ID: "190e4142-e8b7-4d47-bcf7-b6bac38ce753"
+      Hint: TechnicalData
+      Value: |
+        <ul><li>Backset options: 35mm, 45mm &amp; 60mm</li><li>Eurogroove: 16mm &amp; 20mm</li><li>8mm spindle, 92mm handle spacing</li><li>1" deadbolt and shoot tip throws</li></ul>
+    - ID: "211d45c2-39f7-430f-8c81-14d8ba310a0f"
+      Hint: ImageUrl
+      Value: "https://www.amesburytruth.com/images/products/674530021_GearBox_6.png"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260813T212440Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "77b62e2b-2f05-418e-bb41-2903feb32e39"
+      Hint: Description
+      Value: "<p>The AmesburyTruth P3000 multi-point lock system orients the thumb-turn above the handle to match common front-entry configurations. The deadbolt operates independently from other locking points, helping users secure the door even when unfamiliar with MPL technology.</p>"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5ba81adb-49da-437c-bc96-48da711db9d1"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c5b02812-deb7-4b51-8a68-8019a44f0db3"
+      Hint: ProductSKU
+      Value: "AT-LOCK-P3000"
+    - ID: "ca94ec7f-2908-4e34-a9e5-f8ec8dd7a91d"
+      Hint: ProductID
+      Value: "AT-P3000"
+    - ID: "d004b569-75aa-446d-8e28-e6d0df434626"
+      Hint: ImageSecondaryUrl
+      Value: "https://www.amesburytruth.com/images/products/664530017_Rhino_1.png"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260814T145457Z
+    - ID: "dbd19eed-f27a-4850-9a43-512eb6176c14"
+      Hint: Benefits
+      Value: "<ul><li>Familiar thumb-turn-above handle layout</li><li>Independent deadbolt for simple day locking</li><li>Rhino hook, tongue, roller, and shoot tip options</li></ul>"
+    - ID: "f2fa4f60-bfec-4b8a-858c-f5ae25df459b"
+      Hint: ProductName
+      Value: "P3000 Multi-Point Lock"

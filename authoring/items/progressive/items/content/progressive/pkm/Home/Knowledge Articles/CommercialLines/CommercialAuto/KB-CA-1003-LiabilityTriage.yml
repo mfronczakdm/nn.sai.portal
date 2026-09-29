@@ -1,0 +1,261 @@
+﻿---
+ID: "6603d085-b8ad-44b1-8656-fe5f26c41dce"
+Parent: "1a0b2134-7ec9-4896-b9e2-64530610df08"
+Template: "42f8929a-83cd-48fe-92f0-8aac46e6cc62"
+Path: "/sitecore/content/progressive/pkm/Home/Knowledge Articles/CommercialLines/CommercialAuto/KB-CA-1003-LiabilityTriage"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{FA097F7E-ECE4-489E-842D-63AE8A7FCDD2}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{3E3BEEF0-405D-4CB1-BD6E-FCCB51A010D3}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "b2c29f2b-a335-4059-a47e-5055beaea0ca"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: 
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{BA04EEE7-20C1-4F94-BF53-A0C1C03A842C}"
+              p:after="r[@uid='{717E1701-1FF6-418A-A8F1-35443B43B403}']"
+              s:id="{F44005E1-CCBB-4B27-9598-5EF43FB60A46}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB6A72F2A-15BE-4113-B40F-0305459DC374%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=2"
+              s:ph="headless-main" />
+            <r
+              uid="{66DC84E0-F065-4FDB-ADDD-128564A5BF15}"
+              p:after="*[1=2]"
+              s:ds=""
+              s:id="{88D43837-24CA-45A7-9171-FEAD8AE89702}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B5E0CEF20-DC70-4922-A183-E6ADB987AF60%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=3"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "1a6c4003-b700-4ff6-9a1e-b0b809a20c52"
+      Hint: Standard Site Inspection Rules
+      Value: <ul><li>Document impact points on all vehicles and property</li><li>Preserve scene evidence (skid, debris, dock cameras)</li><li>Do not negotiate medical specials without authority</li><li>Coordinate Progressive unit PD on a separate estimate track</li></ul>
+    - ID: "1d2229f9-6c8b-4828-97c0-ade6f1a125d0"
+      Hint: TotalRatings
+      Value: 48
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: "Progressive Claims Advisor guide for commercial auto liability triage, comparative negligence, and third-party handling."
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260802T134919Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Commercial Auto Liability
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{325A5D47-D4EB-4876-B759-0E18E2D9DCED}"
+    - ID: "480bb6b8-0914-4d2c-a73e-c5b28b8693e0"
+      Hint: Intake Triggers
+      Value: "<p>Run commercial auto liability triage when:</p><ul><li>Third party alleges injury or vehicle/property damage caused by a Progressive commercial auto</li><li>Multi-vehicle accident includes a Progressive-scheduled business unit</li><li>Pedestrian, bicyclist, or dock worker injury is reported</li><li>Attorney or certificate holder tenders a liability claim to Progressive</li></ul>"
+    - ID: "4d1faace-7b0f-4ec7-94b8-9ae80e0a9bce"
+      Hint: Common Scenarios
+      Value: "<ul><li><strong>Rear-end by Progressive delivery van:</strong> likely liability; capture employee statement and dashcam</li><li><strong>Backing from loading dock into private auto:</strong> witness + dock camera</li><li><strong>Lane-change sideswipe on interstate:</strong> disputed liability; telematics critical</li><li><strong>Pedestrian in crosswalk:</strong> severity path immediately</li></ul>"
+    - ID: "4ed4709d-3dc8-4d81-bc4b-b44be7d21c45"
+      Hint: LastRated
+      Value: 20260728T110000Z
+    - ID: "4f91e6ca-b571-41f9-bc35-4e7e89c590de"
+      Hint: Baseline Reserve Guidelines
+      Value: "<ul><li>BI reserve by injury severity band; PD by visible damage</li><li>Update when attorney, surgery, or additional claimants appear</li><li>Keep Progressive first-party PD reserves separate from liability</li></ul>"
+    - ID: "568439dd-7959-4317-ac05-4aca4fe37a7a"
+      Hint: AverageRating
+      Value: 4.50
+    - ID: "5897e9d3-8204-4ed7-9f6a-ceb4891c3182"
+      Hint: PositiveCount
+      Value: 55
+    - ID: "5b49b775-a3f5-41cd-bd78-90fae97f1fd6"
+      Hint: Core Triage Questions
+      Value: "<ol><li>Who was operating the Progressive unit and for what business purpose?</li><li>How many claimants (BI vs PD)? Any ambulance / hospital?</li><li>Police report, citations, and independent witnesses?</li><li>Dashcam / telematics / ELD available?</li><li>Any additional insured, hold-harmless, or tender letter?</li><li>Comparative negligence facts (lane change, rear-end, backing, blind spot)?</li><li>State of loss and any no-fault / PIP interaction?</li></ol>"
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: "Commercial Auto Liability — Third-Party Injury and PD"
+    - ID: "6be9cd31-e34e-4bed-880a-a218075a5b0d"
+      Hint: General Payment Triggers
+      Value: "<ul><li>Third-party PD after liability decision and agreed estimate/release as required</li><li>BI after medical evaluation, liability decision, and settlement authority</li><li>No payments that imply coverage beyond Progressive commercial limits without authority</li></ul>"
+    - ID: "71d4c96f-1e34-4f86-8ba5-e7a24a873933"
+      Hint: NegativeCount
+      Value: 3
+    - ID: "76c3fa76-04cb-4142-9756-6fcb96442bf4"
+      Hint: "KB-ID"
+      Value: "KB-CA-1003"
+    - ID: "8147ab19-7525-4ef0-a878-3e3f0a3157ac"
+      Hint: LOB
+      Value: "{E799A026-FF03-4588-8607-16222D811A4C}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4b2ac18b-d2d8-4cde-8e02-fc3f77dc4631"
+    - ID: "ae3f508c-c043-4863-899c-986ad4b75bd5"
+      Hint: Photo Video Standards
+      Value: <ul><li>All involved vehicles’ damage and plate/VIN where accessible</li><li>Property damage (fence, building, signage) with scale references</li><li>Scene overview and traffic control devices</li><li>Retain telematics clips per Progressive evidence handling</li></ul>
+    - ID: "b3f4a945-e28b-4a1c-81c7-857555b83127"
+      Hint: General Escalation Rules
+      Value: "<ul><li><strong>Serious injury / fatality:</strong> Progressive commercial severity desk</li><li><strong>Represented claimant:</strong> represented handling rules only</li><li><strong>AI tender / MCS-90 language:</strong> coverage SME before response</li><li><strong>Disputed liability with large exposure:</strong> supervisor / liability specialist</li></ul>"
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Commercial Auto Liability
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\WIt5EKonMo343Fqq8begbLVKlCgYPAIX
+    - ID: "c09aaa65-03f7-41a9-ba56-69b018e89ccc"
+      Hint: General Mitigation
+      Value: "<ul><li>Confirm rental / loss-of-use expectations for third-party PD only when liability is reasonably clear</li><li>Advise insured not to discuss fault on social media or with claimants</li><li>Secure Progressive unit and cargo if still at scene</li></ul>"
+    - ID: "cc6e82f0-6942-4103-8d12-c8742b54a7a1"
+      Hint: Purpose
+      Value: "<p>Guide Progressive Claims Advisors through <strong>Commercial Auto liability</strong> claims involving third-party bodily injury and property damage.</p><ul><li>Establish liability facts early without admitting fault improperly</li><li>Separate Progressive-insured unit PD from third-party exposures</li><li>Identify additional insured / tender and severity paths quickly</li></ul>"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260802T180114Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: "KB-CA-1003-LiabilityTriage"
+    - ID: "ef17e08a-c9dd-47e0-adf2-9232c87aaa7f"
+      Hint: RatingsSum
+      Value: 216
+    - ID: "fc43bd45-b665-4895-a9e5-6d9a34ea7835"
+      Hint: Title
+      Value: "Commercial Auto Liability — Third-Party Injury and PD"
+  - Version: 2
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{BA04EEE7-20C1-4F94-BF53-A0C1C03A842C}"
+              p:after="r[@uid='{717E1701-1FF6-418A-A8F1-35443B43B403}']"
+              s:id="{F44005E1-CCBB-4B27-9598-5EF43FB60A46}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB6A72F2A-15BE-4113-B40F-0305459DC374%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=2"
+              s:ph="headless-main" />
+            <r
+              uid="{66DC84E0-F065-4FDB-ADDD-128564A5BF15}"
+              p:after="*[1=2]"
+              s:ds=""
+              s:id="{88D43837-24CA-45A7-9171-FEAD8AE89702}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B5E0CEF20-DC70-4922-A183-E6ADB987AF60%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=3"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "1a6c4003-b700-4ff6-9a1e-b0b809a20c52"
+      Hint: Standard Site Inspection Rules
+      Value: <ul><li>Document impact points on all vehicles and property</li><li>Preserve scene evidence (skid, debris, dock cameras)</li><li>Do not negotiate medical specials without authority</li><li>Coordinate Progressive unit PD on a separate estimate track</li></ul>
+    - ID: "1d2229f9-6c8b-4828-97c0-ade6f1a125d0"
+      Hint: TotalRatings
+      Value: 48
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: "Progressive Claims Advisor guide for commercial auto liability triage, comparative negligence, and third-party handling."
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260803T035640Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Commercial Auto Liability
+    - ID: "29d334fb-0f6f-41fa-98ea-a6f30222129f"
+      Hint: sharedContent
+      Value: |
+        {3D3E1480-C07A-4999-BD59-1DBEF3DE935E}
+        {9B4E6F1A-221D-44B3-B13F-D16120FCCDBF}
+        {D20D2603-CF97-4A24-8B48-53582CB04735}
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{325A5D47-D4EB-4876-B759-0E18E2D9DCED}"
+    - ID: "480bb6b8-0914-4d2c-a73e-c5b28b8693e0"
+      Hint: Intake Triggers
+      Value: "<p>Run commercial auto liability triage when:</p><ul><li>Third party alleges injury or vehicle/property damage caused by a Progressive commercial auto</li><li>Multi-vehicle accident includes a Progressive-scheduled business unit</li><li>Pedestrian, bicyclist, or dock worker injury is reported</li><li>Attorney or certificate holder tenders a liability claim to Progressive</li></ul>"
+    - ID: "4d1faace-7b0f-4ec7-94b8-9ae80e0a9bce"
+      Hint: Common Scenarios
+      Value: "<ul><li><strong>Rear-end by Progressive delivery van:</strong> likely liability; capture employee statement and dashcam</li><li><strong>Backing from loading dock into private auto:</strong> witness + dock camera</li><li><strong>Lane-change sideswipe on interstate:</strong> disputed liability; telematics critical</li><li><strong>Pedestrian in crosswalk:</strong> severity path immediately</li></ul>"
+    - ID: "4ed4709d-3dc8-4d81-bc4b-b44be7d21c45"
+      Hint: LastRated
+      Value: 20260728T110000Z
+    - ID: "4f91e6ca-b571-41f9-bc35-4e7e89c590de"
+      Hint: Baseline Reserve Guidelines
+      Value: "<ul><li>BI reserve by injury severity band; PD by visible damage</li><li>Update when attorney, surgery, or additional claimants appear</li><li>Keep Progressive first-party PD reserves separate from liability</li></ul>"
+    - ID: "568439dd-7959-4317-ac05-4aca4fe37a7a"
+      Hint: AverageRating
+      Value: 4.50
+    - ID: "5897e9d3-8204-4ed7-9f6a-ceb4891c3182"
+      Hint: PositiveCount
+      Value: 55
+    - ID: "5b49b775-a3f5-41cd-bd78-90fae97f1fd6"
+      Hint: Core Triage Questions
+      Value: "<ol><li>Who was operating the Progressive unit and for what business purpose?</li><li>How many claimants (BI vs PD)? Any ambulance / hospital?</li><li>Police report, citations, and independent witnesses?</li><li>Dashcam / telematics / ELD available?</li><li>Any additional insured, hold-harmless, or tender letter?</li><li>Comparative negligence facts (lane change, rear-end, backing, blind spot)?</li><li>State of loss and any no-fault / PIP interaction?</li></ol>"
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: "Commercial Auto Liability — Third-Party Injury and PD"
+    - ID: "6be9cd31-e34e-4bed-880a-a218075a5b0d"
+      Hint: General Payment Triggers
+      Value: "<ul><li>Third-party PD after liability decision and agreed estimate/release as required</li><li>BI after medical evaluation, liability decision, and settlement authority</li><li>No payments that imply coverage beyond Progressive commercial limits without authority</li></ul>"
+    - ID: "71d4c96f-1e34-4f86-8ba5-e7a24a873933"
+      Hint: NegativeCount
+      Value: 3
+    - ID: "76c3fa76-04cb-4142-9756-6fcb96442bf4"
+      Hint: "KB-ID"
+      Value: "KB-CA-1003"
+    - ID: "8147ab19-7525-4ef0-a878-3e3f0a3157ac"
+      Hint: LOB
+      Value: "{E799A026-FF03-4588-8607-16222D811A4C}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ca679d18-3684-4318-8f9b-0822e537748a"
+    - ID: "ae3f508c-c043-4863-899c-986ad4b75bd5"
+      Hint: Photo Video Standards
+      Value: <ul><li>All involved vehicles’ damage and plate/VIN where accessible</li><li>Property damage (fence, building, signage) with scale references</li><li>Scene overview and traffic control devices</li><li>Retain telematics clips per Progressive evidence handling</li></ul>
+    - ID: "b3f4a945-e28b-4a1c-81c7-857555b83127"
+      Hint: General Escalation Rules
+      Value: "<ul><li><strong>Serious injury / fatality:</strong> Progressive commercial severity desk</li><li><strong>Represented claimant:</strong> represented handling rules only</li><li><strong>AI tender / MCS-90 language:</strong> coverage SME before response</li><li><strong>Disputed liability with large exposure:</strong> supervisor / liability specialist</li></ul>"
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Commercial Auto Liability
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\WIt5EKonMo343Fqq8begbLVKlCgYPAIX
+    - ID: "c09aaa65-03f7-41a9-ba56-69b018e89ccc"
+      Hint: General Mitigation
+      Value: "<ul><li>Confirm rental / loss-of-use expectations for third-party PD only when liability is reasonably clear</li><li>Advise insured not to discuss fault on social media or with claimants</li><li>Secure Progressive unit and cargo if still at scene</li></ul>"
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260803T035640Z
+    - ID: "cc6e82f0-6942-4103-8d12-c8742b54a7a1"
+      Hint: Purpose
+      Value: "<p>Guide Progressive Claims Advisors through <strong>Commercial Auto liability</strong> claims involving third-party bodily injury and property damage.</p><ul><li>Establish liability facts early without admitting fault improperly</li><li>Separate Progressive-insured unit PD from third-party exposures</li><li>Identify additional insured / tender and severity paths quickly</li></ul>"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260803T040803Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: "KB-CA-1003-LiabilityTriage"
+    - ID: "ef17e08a-c9dd-47e0-adf2-9232c87aaa7f"
+      Hint: RatingsSum
+      Value: 216
+    - ID: "fc43bd45-b665-4895-a9e5-6d9a34ea7835"
+      Hint: Title
+      Value: "Commercial Auto Liability — Third-Party Injury and PD"

@@ -1,0 +1,39 @@
+﻿---
+ID: "f50e8412-01f7-475c-ba38-9db8b44167e5"
+Parent: "bcdac03c-f707-4431-8d86-b0ce1159a478"
+Template: "9c063cfd-1d09-42b5-9fc4-560a6d7e859f"
+Path: /sitecore/content/dfs/dfs/Data/HeroCarousels/Taco Bell Portal Hero/Intro Welcome
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0da51f00-cb5f-45ef-9c9e-4a387ca41a53"
+      Hint: Description
+      Value: DFS delivers consolidated foodservice supply ordering for Taco Bell franchise and corporate locations—one portal for equipment, maintenance, and operations.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260819T184720Z
+    - ID: "3ce233be-84f2-4003-a560-6c0e347d1a09"
+      Hint: Summary
+      Value: Diversified Foodservice Supply
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "3b3791d1-c9bd-4791-9d2c-490d19f36ec8"
+    - ID: "979e79f0-d6d5-4abb-a3bf-d971f54f5990"
+      Hint: IsIntroSlide
+      Value: 1
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "cd3300c5-39a0-4b1a-9d0d-37a89b7517f9"
+      Hint: SlideName
+      Value: Welcome to your Taco Bell supply portal
+    - ID: "d7652d2b-7405-4763-afd9-8d541a2f1f13"
+      Hint: Link
+      Value: |
+        <link linktype="external" url="/portal" text="Go to portal" />
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260819T184720Z

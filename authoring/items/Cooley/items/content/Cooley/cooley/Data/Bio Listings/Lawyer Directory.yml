@@ -1,0 +1,32 @@
+﻿---
+ID: "cc01d713-85de-40c8-9662-8b383083c443"
+Parent: "3424ff84-c8d9-411b-b11f-ee5cfbde8f3e"
+Template: "247f4201-fb4e-4b8b-821e-f94af16709f1"
+Path: /sitecore/content/Cooley/cooley/Data/Bio Listings/Lawyer Directory
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260804T200003Z
+    - ID: "6d7d203f-a179-446a-9b05-9d2b6850165f"
+      Hint: Title
+      Value: Our Lawyers
+    - ID: "82c601dd-590c-4554-a704-e87f16294082"
+      Hint: Intro
+      Value: <p>Search our attorney directory by name, practice area, or office.</p>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "1abaa54b-78a4-4911-9c67-de46d3a6fcd6"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260815T102759Z
+    - ID: "eefc79b9-8d34-447a-bda2-7ee988828070"
+      Hint: BiosRoot
+      Value: "{E94FC8B8-FAF1-47EF-8985-B2B39BD102D1}"

@@ -1,0 +1,42 @@
+﻿---
+ID: "86458e46-d0ae-4913-b741-1faf41624847"
+Parent: "259a5850-f67b-4709-a869-792013b01972"
+Template: "8ef3fb89-fd2f-48b9-a8ce-20f387e0ab0a"
+Path: /sitecore/content/quanex/quanex/Data/HeroCarousels/Homepage Hero/Intro Brand
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 0
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "638e8aa1-933f-4e9a-a7ad-8e4c63e6eb70"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0938c532-f9ba-4658-b361-a96061553a4c"
+      Hint: Summary
+      Value: EXTRUDED SOLUTIONS | HARDWARE SOLUTIONS | CUSTOM SOLUTIONS
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260813T130851Z
+    - ID: "48932c54-8c74-4029-ba15-1b8af19fe457"
+      Hint: Description
+      Value: A Part of Something Bigger®
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "15a7e564-65f7-4688-8d6b-1ac553412d18"
+    - ID: "9e1f36b3-3da6-4b86-9691-2a312252392f"
+      Hint: IsIntroSlide
+      Value: 1
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c8463a04-9fc1-4d12-b4c6-b4448f0cb298"
+      Hint: SlideName
+      Value: Quanex®
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260813T131105Z

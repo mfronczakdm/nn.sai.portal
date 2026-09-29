@@ -1,0 +1,35 @@
+﻿---
+ID: "89babcde-fb85-4b21-9d5a-3a77610dbf50"
+Parent: "31e957a9-994f-4cd7-9be0-e2fdffe5591e"
+Template: "ef69b5f3-3e95-4ff1-8a42-eb5a95f43f0e"
+Path: "/sitecore/content/andmore/atlanta-apparel/Data/Button Rows/Atlanta Additional Resources/Exhibitor Resources"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T020035Z
+    - ID: "3163a2f1-956f-40c9-85b7-bdcce9d0719c"
+      Hint: ItemLink
+      Value: |
+        <link text="Exhibitor resources" anchor="" linktype="external" class="" title="" target="" querystring="" url="https://www.atlanta-apparel.com/exhibit/" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "25316325-dd6e-4b62-84a3-45acad690a63"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260825T020035Z

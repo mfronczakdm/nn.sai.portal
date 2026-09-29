@@ -1,0 +1,79 @@
+﻿---
+ID: "5e8c92ff-ab75-4cfb-beb8-d53f681421c5"
+Parent: "823c8519-e9d4-4328-8a53-3bef90ac0fb7"
+Template: "4a77fd9b-93b9-4ab2-91f7-936173963913"
+Path: /sitecore/content/amkor/amkor/Data/Listing Blocks/Amkor Press
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1851a4e1-1266-4e67-aabf-f06dfcbc8fd3"
+      Hint: Description
+      Value: Latest news from Amkor Technology.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T015901Z
+    - ID: "34a564fa-135c-4c98-92ec-63c5f01c60ac"
+      Hint: ViewAllLink
+      Value: |
+        <link text="View all news" anchor="" linktype="external" class="" title="" target="" querystring="" url="https://amkor.com/news/" />
+    - ID: "400a0423-f93a-48c6-8e6f-76207e8c724b"
+      Hint: SectionTitle
+      Value: Press Releases
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "94ff3703-bbbb-4717-9de6-83684f9ad2bc"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260825T015901Z
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1851a4e1-1266-4e67-aabf-f06dfcbc8fd3"
+      Hint: Description
+      Value: Amkor Technologyの最新ニュース。
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T015901Z
+    - ID: "34a564fa-135c-4c98-92ec-63c5f01c60ac"
+      Hint: ViewAllLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="すべてのニュースを見る" url="https://amkor.com/news/" />
+    - ID: "400a0423-f93a-48c6-8e6f-76207e8c724b"
+      Hint: SectionTitle
+      Value: プレスリリース
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "36c59029-5bc8-46a4-87ad-b54835c7f3ab"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260831T030227Z

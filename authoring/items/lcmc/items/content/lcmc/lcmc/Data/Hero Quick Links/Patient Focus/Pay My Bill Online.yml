@@ -1,0 +1,125 @@
+﻿---
+ID: "42a5732d-f40c-4cc7-b68d-81f0207762ed"
+Parent: "f98b52dc-1f15-4344-b00f-92574bdc43cd"
+Template: "fe0a7f7e-7242-4126-b07f-2a6fa7bd4807"
+Path: /sitecore/content/lcmc/lcmc/Data/Hero Quick Links/Patient Focus/Pay My Bill Online
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 100
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "2f08f379-e9dd-4e02-b9bf-6e405efd3477"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "213b2f72-d7bf-4dbb-b9ae-100b6efbe0b1"
+      Hint: ItemImage
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/77acd37694ce4a688fc0ab111fcc40f1?v=8ec6820a" dam-id="9O3zTtG3SRiZDQWg1SeXlQ" width="93" height="91" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/87028/thumbnail" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T124012Z
+    - ID: "65903900-19e3-44d7-8e7a-1f2ae3e8e0a0"
+      Hint: ItemTitle
+      Value: Schedule an appointment
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "cbffa0be-96f0-478c-acae-ced1e1f17f1a"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T210615Z
+    - ID: "dea28bb2-3170-4869-89f5-b0eaa6a254dd"
+      Hint: ItemLink
+      Value: |
+        <link linktype="external" url="https://lcmc-health.vercel.app/For-Patients/Patient-Appointments?visit=sick-visit&amp;specialty=ENT&amp;location=West+Jefferson+Medical+Center&amp;provider=Gabrielle+Moreau" target="" text="Book Now" title="" class=""/>
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "213b2f72-d7bf-4dbb-b9ae-100b6efbe0b1"
+      Hint: ItemImage
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/3bb701f717b444e4908c20b4b3906c9e?v=9d87eae6" dam-id="m_lbEejeR-OC28nZ0jgAFQ" width="64" height="80" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/85428/thumbnail" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T124012Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "65903900-19e3-44d7-8e7a-1f2ae3e8e0a0"
+      Hint: ItemTitle
+      Value: Paga mi factura en línea
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b865cff6-bd99-4a00-940b-cddce65e3dfc"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T163020Z
+    - ID: "dea28bb2-3170-4869-89f5-b0eaa6a254dd"
+      Hint: ItemLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="Paga mi factura en línea" url="https://www.lcmchealth.org/for-patients/pay-my-bill/" />
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "213b2f72-d7bf-4dbb-b9ae-100b6efbe0b1"
+      Hint: ItemImage
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/77acd37694ce4a688fc0ab111fcc40f1?v=8ec6820a" dam-id="9O3zTtG3SRiZDQWg1SeXlQ" width="93" height="91" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/87028/thumbnail" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T124012Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "65903900-19e3-44d7-8e7a-1f2ae3e8e0a0"
+      Hint: ItemTitle
+      Value: "Prendre rendez-vous"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "6c3942b5-33aa-43e7-bf2d-4b3941ed57ac"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201630Z
+    - ID: "dea28bb2-3170-4869-89f5-b0eaa6a254dd"
+      Hint: ItemLink
+      Value: |
+        <link class="" target="" title="" linktype="external" text="Réserver maintenant" url="https://lcmc-health.vercel.app/For-Patients/Patient-Appointments?visit=sick-visit&amp;specialty=ENT&amp;location=West+Jefferson+Medical+Center&amp;provider=Gabrielle+Moreau" />

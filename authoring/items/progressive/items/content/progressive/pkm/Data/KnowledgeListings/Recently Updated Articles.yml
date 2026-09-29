@@ -1,0 +1,32 @@
+﻿---
+ID: "24a6b1d2-11e8-49b2-9b57-d736da47b1ad"
+Parent: "c5fbc3d5-7031-4bda-bbcb-1b6b8d19bb4a"
+Template: "3ac1b045-ae12-46df-b605-3356993ac628"
+Path: /sitecore/content/progressive/pkm/Data/KnowledgeListings/Recently Updated Articles
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "10814bd1-fac9-48e7-8e28-6d3ed86edfad"
+      Hint: Description
+      Value: Newest Knowledge Articles under Home, ordered by last update.
+    - ID: "1b4a0bae-f9f2-40f4-ad8a-88b1fab16794"
+      Hint: Title
+      Value: Recently Updated
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260802T165329Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2f2eed9d-8ee7-4a83-8ab0-83573002976e"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d1a2d4fa-da61-4d12-865d-21b527308798"
+      Hint: FeaturedArticles
+      Value: 
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260802T174811Z

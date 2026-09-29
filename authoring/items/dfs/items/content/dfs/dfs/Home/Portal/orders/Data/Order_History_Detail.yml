@@ -1,0 +1,41 @@
+﻿---
+ID: "ffde6815-ef0d-4d3b-92c4-c9f4a5bc1cab"
+Parent: "de721b42-a0a1-4bf3-9e23-97bd44c335bf"
+Template: "0bb540d0-731b-4f71-8c0e-d99e26562cd2"
+Path: /sitecore/content/dfs/dfs/Home/Portal/orders/Data/Order_History_Detail
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260819T214935Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c0b7bce-7da1-4cec-a7aa-3d28179fe94b"
+      Hint: title
+      Value: Order History
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f0676b51-6a3f-4db4-a4b4-25e73c03d46e"
+    - ID: "b0125af5-1538-4b18-9a93-2e8f5781bc2c"
+      Hint: body
+      Value: |
+        <div class="mx-auto w-full max-w-6xl space-y-8"><div class="grid gap-4 sm:grid-cols-4"><div class="rounded-2xl border border-border bg-card p-5 shadow-sm"><p class="text-xs font-medium uppercase tracking-wide text-muted-foreground">Orders (90 days)</p><p class="mt-1 text-3xl font-semibold text-foreground">47</p></div><div class="rounded-2xl border border-border bg-card p-5 shadow-sm"><p class="text-xs font-medium uppercase tracking-wide text-muted-foreground">In transit</p><p class="mt-1 text-3xl font-semibold text-foreground">6</p></div><div class="rounded-2xl border border-border bg-card p-5 shadow-sm"><p class="text-xs font-medium uppercase tracking-wide text-muted-foreground">Pending invoice</p><p class="mt-1 text-3xl font-semibold text-foreground">2</p></div><div class="rounded-2xl border border-border bg-card p-5 shadow-sm"><p class="text-xs font-medium uppercase tracking-wide text-muted-foreground">Total spend YTD</p><p class="mt-1 text-3xl font-semibold text-foreground">$284K</p></div></div><section class="rounded-2xl border border-border bg-card p-6 shadow-sm"><div class="flex flex-wrap items-center justify-between gap-3"><h2 class="text-lg font-semibold text-foreground">Recent orders</h2><span class="text-sm text-muted-foreground">Showing last 30 days</span></div><div class="mt-4 overflow-hidden rounded-xl border border-border"><table class="w-full text-left text-sm"><thead class="bg-muted/50 text-xs uppercase tracking-wide text-muted-foreground"><tr><th class="px-4 py-3">Order #</th><th class="px-4 py-3">Date</th><th class="px-4 py-3">Location</th><th class="px-4 py-3">Total</th><th class="px-4 py-3">Status</th></tr></thead><tbody class="divide-y divide-border bg-background"><tr><td class="px-4 py-3 font-medium text-primary">#EO-2026-1842</td><td class="px-4 py-3 text-muted-foreground">Aug 12</td><td class="px-4 py-3 text-muted-foreground">Store #1042</td><td class="px-4 py-3 font-medium text-foreground">$12,480</td><td class="px-4 py-3"><span class="rounded-full bg-primary/10 px-2 py-0.5 text-xs font-medium text-primary">In transit</span></td></tr><tr><td class="px-4 py-3 font-medium text-primary">#EO-2026-1810</td><td class="px-4 py-3 text-muted-foreground">Aug 5</td><td class="px-4 py-3 text-muted-foreground">Store #1187</td><td class="px-4 py-3 font-medium text-foreground">$3,215</td><td class="px-4 py-3"><span class="rounded-full bg-muted px-2 py-0.5 text-xs font-medium text-muted-foreground">Delivered</span></td></tr><tr><td class="px-4 py-3 font-medium text-primary">#EO-2026-1774</td><td class="px-4 py-3 text-muted-foreground">Jul 28</td><td class="px-4 py-3 text-muted-foreground">Store #1042</td><td class="px-4 py-3 font-medium text-foreground">$890</td><td class="px-4 py-3"><span class="rounded-full bg-muted px-2 py-0.5 text-xs font-medium text-muted-foreground">Invoiced</span></td></tr></tbody></table></div></section><div class="flex flex-wrap gap-3"><a href="#" class="inline-flex items-center rounded-xl bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm">Export order history</a><a href="#" class="inline-flex items-center rounded-xl border border-border bg-background px-5 py-2.5 text-sm font-semibold text-foreground">View invoices</a></div></div>
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "cc7d3a62-3796-41d8-af32-b4408a0749f9"
+      Hint: subtitle
+      Value: Review past equipment orders, invoices, and delivery status for every location in your group.
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260819T214935Z

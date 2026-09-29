@@ -1,0 +1,45 @@
+﻿---
+ID: "e437a4af-7726-43c0-bf1d-6081f7394bda"
+Parent: "3b91a21d-6288-498f-843b-d7e0bcb30d5a"
+Template: "b36043a9-6203-4453-ae1b-546283344ec4"
+Path: /sitecore/content/microbiologics/microbiologics/Presentation/Page Designs
+BranchID: "45cf9f42-b3ac-4412-aab9-f8441c7e448e"
+SharedFields:
+- ID: "ba1f60d6-3deb-40cc-bb61-eec772279ee1"
+  Hint: TemplatesMapping
+  Value: "%7bB57F7329-4EDC-4BFC-9A85-0A7AF06C0C22%7d%3d%257BF3CD0718-8C62-4236-98A9-32B9E8D1E103%257D%26%7bEED3F3A0-D401-4CB1-88E6-F078E9A42226%7d%3d%257BF3CD0718-8C62-4236-98A9-32B9E8D1E103%257D%26%7b257FA757-31DD-4120-9413-D1DABE97D367%7d%3d%257B60BA4544-C971-4509-98F2-A7579551C783%257D%26%7bF5669F1E-2BEA-4ECB-8221-8DF42DCA4B70%7d%3d%257BF3CD0718-8C62-4236-98A9-32B9E8D1E103%257D%26%7b8FFD0712-8F01-4AEB-918C-BD727569A098%7d%3d%257BF3CD0718-8C62-4236-98A9-32B9E8D1E103%257D%26%7bCB4E8905-2609-428B-A04D-3DCEB8135F32%7d%3d%257BF3CD0718-8C62-4236-98A9-32B9E8D1E103%257D%26%7b972DF078-8BA7-4B88-9B35-9AD236CCE625%7d%3d%257BF3CD0718-8C62-4236-98A9-32B9E8D1E103%257D"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "34832b85-0136-4f5b-a223-4737d3c0c198"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{2EA756FA-AED6-4599-83B7-36FEFE229B31}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260608T183510Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "dfc9d124-5926-4607-81ae-77278791a41f"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260608T183900Z

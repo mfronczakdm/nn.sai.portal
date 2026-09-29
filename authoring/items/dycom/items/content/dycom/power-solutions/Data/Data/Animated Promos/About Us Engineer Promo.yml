@@ -1,0 +1,62 @@
+﻿---
+ID: "9bd56a36-a529-4327-aae5-fc74c0b6e2bf"
+Parent: "dcee0408-f93d-4f3e-8923-2d9ab61736cf"
+Template: "bd372d9d-6e4f-4ae9-a54c-dbc2acdebe2a"
+Path: "/sitecore/content/dycom/power-solutions/Data/Data/Animated Promos/About Us Engineer Promo"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "768cf1cd-ca91-4f4e-8215-b32e807afd7a"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260512T203511Z
+    - ID: "3a2a1142-68ca-4f5b-afb0-c17d2c0ef8ea"
+      Hint: secondaryLink
+      Value: |
+        <link linktype="external" url="https://www.sitecore.com" text="What We Do" anchor=""/>
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "84a2a397-786e-43bd-85a0-bfbcc51fc3f3"
+      Hint: image
+      Value: |
+        <Image src="https://mrfbasech.sitecoresandbox.cloud/api/public/content/66d55bfecc004038bb42502b089f5039?v=4c6557ec" dam-id="VkQtNx5-Qi2v3elcQ_r4Ug" width="751" height="681" alt="imgi_54_209A2514-1.jpg" dam-content-type="Image" thumbnailsrc="https://mrfbasech.sitecoresandbox.cloud/api/gateway/85851/thumbnail" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2277931a-881e-4cb0-814b-cd7cb373c1ea"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Akv1r1Hmcm16AN61y5QanpMca0RChHPy
+    - ID: "c00d4bd2-a452-4067-a861-e8c6d47201a7"
+      Hint: description
+      Value: Embracing a common vision of connecting America, Dycom proudly builds networks and partnerships nationwide. Our engaged workforce is key to meeting the needs of our customers by bringing and keeping communities online and connected. We live by our values at Dycom. They guide our interactions with each other, with our customers, and with the communities where we live and work.
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260901T125509Z
+    - ID: "da7db0f2-08eb-47c5-af07-ed12a1e998db"
+      Hint: title
+      Value: What we stand for
+    - ID: "e9e9c847-e0f0-497d-8e41-5211a087029a"
+      Hint: primaryLink
+      Value: |
+        <link linktype="external" url="https://sitecore.ai" text="About Us" anchor=""/>

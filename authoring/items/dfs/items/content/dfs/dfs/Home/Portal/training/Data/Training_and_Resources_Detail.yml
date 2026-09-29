@@ -1,0 +1,41 @@
+﻿---
+ID: "2285e1d2-0501-4114-bf8c-6bf21cf5af29"
+Parent: "8952e45b-cf8c-43f3-822a-3d6a3950759d"
+Template: "0bb540d0-731b-4f71-8c0e-d99e26562cd2"
+Path: /sitecore/content/dfs/dfs/Home/Portal/training/Data/Training_and_Resources_Detail
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260819T214952Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c0b7bce-7da1-4cec-a7aa-3d28179fe94b"
+      Hint: title
+      Value: Training and Resources
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "68cf8378-7763-4bbf-9d57-4dcfcba0b5a4"
+    - ID: "b0125af5-1538-4b18-9a93-2e8f5781bc2c"
+      Hint: body
+      Value: |
+        <div class="mx-auto w-full max-w-6xl space-y-8"><div class="grid gap-4 sm:grid-cols-3"><div class="rounded-2xl border border-border bg-card p-5 shadow-sm"><p class="text-xs font-medium uppercase tracking-wide text-muted-foreground">Available courses</p><p class="mt-1 text-3xl font-semibold text-foreground">32</p></div><div class="rounded-2xl border border-border bg-card p-5 shadow-sm"><p class="text-xs font-medium uppercase tracking-wide text-muted-foreground">Team completion</p><p class="mt-1 text-3xl font-semibold text-foreground">78%</p></div><div class="rounded-2xl border border-border bg-card p-5 shadow-sm"><p class="text-xs font-medium uppercase tracking-wide text-muted-foreground">Certifications due</p><p class="mt-1 text-3xl font-semibold text-foreground">5</p></div></div><section class="rounded-2xl border border-border bg-card p-6 shadow-sm"><h2 class="text-lg font-semibold text-foreground">Featured resources</h2><div class="mt-4 grid gap-4 md:grid-cols-2 lg:grid-cols-3"><a href="#" class="group rounded-xl border border-border bg-background p-5 transition hover:border-primary/40 hover:shadow-sm"><p class="text-xs font-medium uppercase tracking-wide text-primary">Operations</p><h3 class="mt-2 font-semibold text-foreground group-hover:text-primary">Opening &amp; closing checklists</h3><p class="mt-2 text-sm text-muted-foreground">Daily procedures for managers and shift leads.</p></a><a href="#" class="group rounded-xl border border-border bg-background p-5 transition hover:border-primary/40 hover:shadow-sm"><p class="text-xs font-medium uppercase tracking-wide text-primary">Safety</p><h3 class="mt-2 font-semibold text-foreground group-hover:text-primary">Food safety refresher</h3><p class="mt-2 text-sm text-muted-foreground">Required annual training for all kitchen staff.</p></a><a href="#" class="group rounded-xl border border-border bg-background p-5 transition hover:border-primary/40 hover:shadow-sm"><p class="text-xs font-medium uppercase tracking-wide text-primary">Equipment</p><h3 class="mt-2 font-semibold text-foreground group-hover:text-primary">Commercial oven maintenance</h3><p class="mt-2 text-sm text-muted-foreground">Preventive care guides and troubleshooting videos.</p></a></div></section><div class="grid gap-6 lg:grid-cols-2"><section class="rounded-2xl border border-border bg-card p-6 shadow-sm"><h2 class="text-lg font-semibold text-foreground">Onboarding paths</h2><ul class="mt-4 space-y-3 text-sm"><li class="flex items-center justify-between rounded-xl border border-border bg-background px-4 py-3"><span class="font-medium text-foreground">New store manager</span><span class="text-muted-foreground">6 modules · 2.5 hrs</span></li><li class="flex items-center justify-between rounded-xl border border-border bg-background px-4 py-3"><span class="font-medium text-foreground">Kitchen equipment basics</span><span class="text-muted-foreground">4 modules · 1 hr</span></li><li class="flex items-center justify-between rounded-xl border border-border bg-background px-4 py-3"><span class="font-medium text-foreground">Facilities &amp; maintenance</span><span class="text-muted-foreground">5 modules · 1.5 hrs</span></li></ul></section><section class="rounded-2xl border border-primary/20 bg-primary/5 p-6"><h2 class="text-lg font-semibold text-foreground">Need a custom training package?</h2><p class="mt-2 text-sm text-muted-foreground">Request a tailored onboarding plan for new locations or leadership transitions.</p><a href="#" class="mt-4 inline-flex items-center rounded-xl bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm">Request training plan</a></section></div></div>
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "cc7d3a62-3796-41d8-af32-b4408a0749f9"
+      Hint: subtitle
+      Value: Access operational guides, safety training, and onboarding materials for your restaurant team.
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260819T214952Z

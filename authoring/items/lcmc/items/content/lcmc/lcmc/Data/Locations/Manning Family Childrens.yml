@@ -1,0 +1,262 @@
+﻿---
+ID: "6b468248-c9d1-4dd0-9e8d-44b477fdb96c"
+Parent: "76041887-6e16-4844-ad13-366bc2e32265"
+Template: "1be17bb8-084f-4fba-a33f-8568e92f5b45"
+Path: /sitecore/content/lcmc/lcmc/Data/Locations/Manning Family Childrens
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0cbd1feb-1e88-4b8f-974e-40a39d92b678"
+      Hint: VisitorInfo
+      Value: <p>One or two caregivers may stay with a child. Check with the unit for sibling and visitor guidelines.</p>
+    - ID: "1a4b9586-ee63-4f6b-aa77-fe5fa10b298d"
+      Hint: ParkingInfo
+      Value: Garage and street parking are available near the Henry Clay campus. Family valet is offered during posted hours.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T003623Z
+    - ID: "2c7fc5d0-8c5e-4947-96ed-5b9a8c1a6553"
+      Hint: LandingPage
+      Value: "{733FA878-5E4D-4882-9F64-5F55FF00F1D8}"
+    - ID: "3bd52b62-4c4c-414b-badb-7b22a8302c2b"
+      Hint: HoursText
+      Value: Hospital open 24 hours. Pediatric emergency department open 24/7.
+    - ID: "5b761c6e-2119-4e9f-88ad-2ca564ac098e"
+      Hint: LocationTitle
+      Value: Manning Family Children's
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "e054d4ee-7297-43b5-92e8-ce63a361f3b1"
+    - ID: "949f2600-c710-4b8f-9c6a-45287b4b177a"
+      Hint: State
+      Value: LA
+    - ID: "a527f3e4-3842-44e6-8e33-4e4d4b07cb4c"
+      Hint: StreetAddress
+      Value: 200 Henry Clay Ave.
+    - ID: "b71a3795-49f5-4073-8783-6e811d20e7cd"
+      Hint: PhoneNumber
+      Value: "504-899-9511"
+    - ID: "b8865cad-75b2-44be-a7fc-81898a04ce1d"
+      Hint: LocationType
+      Value: Hospital
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "bc5eb2b3-2e35-42b6-a006-49a269250e79"
+      Hint: HasEmergencyDepartment
+      Value: 1
+    - ID: "c0d058ff-7eee-4fb6-8b01-50fcafcec82a"
+      Hint: OfferedServices
+      Value: |
+        {BEEA85BD-08B1-40E3-AAD6-7600A802F71F}
+        {21FB8DB6-1732-4A44-8BEC-E39C52C1961A}
+        {2C7094F3-7E17-4A5F-8E1F-68830FDC81B6}
+        {EF79ADEF-3A78-4992-B297-04B3447C9CF4}
+        {D2B7F3AD-6DF9-4B0D-AB3B-58AD3669DB5B}
+    - ID: "ce0500e1-7c8b-4845-b54c-909c049e7f63"
+      Hint: PostalCode
+      Value: 70118
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260908T003755Z
+    - ID: "de83b497-49bc-41da-9b5f-3d04437dd153"
+      Hint: Latitude
+      Value: 29.9268
+    - ID: "e9488a30-c918-403c-bbaa-11feba2dfcb1"
+      Hint: LocationShortName
+      Value: Manning Children's
+    - ID: "ee630347-777d-47f6-8df9-c27c904a7903"
+      Hint: City
+      Value: New Orleans
+    - ID: "f565cf13-09f9-4fbe-943e-1551fa1f6056"
+      Hint: LocationDescription
+      Value: <p>Manning Family Children's is the LCMC Health pediatric hospital in Uptown New Orleans, caring for infants through adolescents.</p>
+    - ID: "fa6567c5-386f-4030-b03e-9cef3568cb4f"
+      Hint: LocationPhysicians
+      Value: |
+        {BC61F2D9-4655-42D8-867B-41407505B6DC}
+        {49B7EB4F-7C96-4D02-BA27-99FF3F2C75E2}
+    - ID: "facb5aff-7d1d-4234-88d6-50de5299d83f"
+      Hint: Longitude
+      Value: "-90.1264"
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0cbd1feb-1e88-4b8f-974e-40a39d92b678"
+      Hint: VisitorInfo
+      Value: <p>Uno o dos cuidadores pueden quedarse con un niño. Consulte con la unidad las pautas para hermanos y visitantes.</p>
+    - ID: "1a4b9586-ee63-4f6b-aa77-fe5fa10b298d"
+      Hint: ParkingInfo
+      Value: Hay estacionamiento en garaje y en la calle disponible cerca del campus Henry Clay. Se ofrece servicio de valet para familias durante el horario publicado.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T003623Z
+    - ID: "2c7fc5d0-8c5e-4947-96ed-5b9a8c1a6553"
+      Hint: LandingPage
+      Value: "{733FA878-5E4D-4882-9F64-5F55FF00F1D8}"
+    - ID: "3bd52b62-4c4c-414b-badb-7b22a8302c2b"
+      Hint: HoursText
+      Value: Hospital abierto las 24 horas. Departamento de emergencias pediátricas abierto 24/7.
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5b761c6e-2119-4e9f-88ad-2ca564ac098e"
+      Hint: LocationTitle
+      Value: Children's de la Familia Manning
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "431a8d6d-2fa9-443b-8fdc-2e4c90cfb039"
+    - ID: "949f2600-c710-4b8f-9c6a-45287b4b177a"
+      Hint: State
+      Value: LA
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "a527f3e4-3842-44e6-8e33-4e4d4b07cb4c"
+      Hint: StreetAddress
+      Value: 200 Henry Clay Ave.
+    - ID: "b71a3795-49f5-4073-8783-6e811d20e7cd"
+      Hint: PhoneNumber
+      Value: "504-899-9511"
+    - ID: "b8865cad-75b2-44be-a7fc-81898a04ce1d"
+      Hint: LocationType
+      Value: Hospital
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "bc5eb2b3-2e35-42b6-a006-49a269250e79"
+      Hint: HasEmergencyDepartment
+      Value: 1
+    - ID: "c0d058ff-7eee-4fb6-8b01-50fcafcec82a"
+      Hint: OfferedServices
+      Value: |
+        {BEEA85BD-08B1-40E3-AAD6-7600A802F71F}
+        {21FB8DB6-1732-4A44-8BEC-E39C52C1961A}
+        {2C7094F3-7E17-4A5F-8E1F-68830FDC81B6}
+        {EF79ADEF-3A78-4992-B297-04B3447C9CF4}
+        {D2B7F3AD-6DF9-4B0D-AB3B-58AD3669DB5B}
+    - ID: "ce0500e1-7c8b-4845-b54c-909c049e7f63"
+      Hint: PostalCode
+      Value: 70118
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T162704Z
+    - ID: "de83b497-49bc-41da-9b5f-3d04437dd153"
+      Hint: Latitude
+      Value: 29.9268
+    - ID: "e9488a30-c918-403c-bbaa-11feba2dfcb1"
+      Hint: LocationShortName
+      Value: Children's Manning
+    - ID: "ee630347-777d-47f6-8df9-c27c904a7903"
+      Hint: City
+      Value: New Orleans
+    - ID: "f565cf13-09f9-4fbe-943e-1551fa1f6056"
+      Hint: LocationDescription
+      Value: <p>Children's de la Familia Manning es el hospital pediátrico de LCMC Health en Uptown New Orleans, que atiende a bebés, niños y adolescentes.</p>
+    - ID: "fa6567c5-386f-4030-b03e-9cef3568cb4f"
+      Hint: LocationPhysicians
+      Value: |
+        {BC61F2D9-4655-42D8-867B-41407505B6DC}
+        {49B7EB4F-7C96-4D02-BA27-99FF3F2C75E2}
+    - ID: "facb5aff-7d1d-4234-88d6-50de5299d83f"
+      Hint: Longitude
+      Value: "-90.1264"
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0cbd1feb-1e88-4b8f-974e-40a39d92b678"
+      Hint: VisitorInfo
+      Value: <p>Une ou deux personnes proches aidantes peuvent rester avec un enfant. Vérifiez auprès de l’unité pour connaître les directives concernant les frères, sœurs et autres visiteurs.</p>
+    - ID: "1a4b9586-ee63-4f6b-aa77-fe5fa10b298d"
+      Hint: ParkingInfo
+      Value: Des places de stationnement dans le garage et dans la rue sont offertes près du campus Henry Clay. Un service de voiturier pour les familles est offert pendant les heures affichées.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T003623Z
+    - ID: "2c7fc5d0-8c5e-4947-96ed-5b9a8c1a6553"
+      Hint: LandingPage
+      Value: "{733FA878-5E4D-4882-9F64-5F55FF00F1D8}"
+    - ID: "3bd52b62-4c4c-414b-badb-7b22a8302c2b"
+      Hint: HoursText
+      Value: Hôpital ouvert 24 heures sur 24. Service d’urgence pédiatrique ouvert 24 h sur 24, 7 j sur 7.
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5b761c6e-2119-4e9f-88ad-2ca564ac098e"
+      Hint: LocationTitle
+      Value: Manning Family Children's
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "606819b0-8468-48e0-b99b-391c397e9308"
+    - ID: "949f2600-c710-4b8f-9c6a-45287b4b177a"
+      Hint: State
+      Value: LA
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "a527f3e4-3842-44e6-8e33-4e4d4b07cb4c"
+      Hint: StreetAddress
+      Value: 200 Henry Clay Ave.
+    - ID: "b71a3795-49f5-4073-8783-6e811d20e7cd"
+      Hint: PhoneNumber
+      Value: "504-899-9511"
+    - ID: "b8865cad-75b2-44be-a7fc-81898a04ce1d"
+      Hint: LocationType
+      Value: Hôpital
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "bc5eb2b3-2e35-42b6-a006-49a269250e79"
+      Hint: HasEmergencyDepartment
+      Value: 1
+    - ID: "c0d058ff-7eee-4fb6-8b01-50fcafcec82a"
+      Hint: OfferedServices
+      Value: |
+        {BEEA85BD-08B1-40E3-AAD6-7600A802F71F}
+        {21FB8DB6-1732-4A44-8BEC-E39C52C1961A}
+        {2C7094F3-7E17-4A5F-8E1F-68830FDC81B6}
+        {EF79ADEF-3A78-4992-B297-04B3447C9CF4}
+        {D2B7F3AD-6DF9-4B0D-AB3B-58AD3669DB5B}
+    - ID: "ce0500e1-7c8b-4845-b54c-909c049e7f63"
+      Hint: PostalCode
+      Value: 70118
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201325Z
+    - ID: "de83b497-49bc-41da-9b5f-3d04437dd153"
+      Hint: Latitude
+      Value: 29.9268
+    - ID: "e9488a30-c918-403c-bbaa-11feba2dfcb1"
+      Hint: LocationShortName
+      Value: Manning Children's
+    - ID: "ee630347-777d-47f6-8df9-c27c904a7903"
+      Hint: City
+      Value: "La Nouvelle-Orléans"
+    - ID: "f565cf13-09f9-4fbe-943e-1551fa1f6056"
+      Hint: LocationDescription
+      Value: "<p>Manning Family Children's est l’hôpital pédiatrique de LCMC Health dans le quartier Uptown de La Nouvelle-Orléans, où nous prenons soin des nourrissons, des enfants et des adolescents.</p>"
+    - ID: "fa6567c5-386f-4030-b03e-9cef3568cb4f"
+      Hint: LocationPhysicians
+      Value: |
+        {BC61F2D9-4655-42D8-867B-41407505B6DC}
+        {49B7EB4F-7C96-4D02-BA27-99FF3F2C75E2}
+    - ID: "facb5aff-7d1d-4234-88d6-50de5299d83f"
+      Hint: Longitude
+      Value: "-90.1264"

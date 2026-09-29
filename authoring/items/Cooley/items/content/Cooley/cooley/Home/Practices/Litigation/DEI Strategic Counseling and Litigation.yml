@@ -1,0 +1,88 @@
+﻿---
+ID: "cc6f5cdb-a59f-492b-9bf9-736af8b58f6a"
+Parent: "fa9246a9-f5b5-4192-bfa5-c5276e0eb553"
+Template: "25cf32e0-c2d1-4e72-8cb9-fdeb000be0d7"
+Path: /sitecore/content/Cooley/cooley/Home/Practices/Litigation/DEI Strategic Counseling and Litigation
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{48FB20EB-5C7C-4982-B6C0-C42AAD85AA16}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "c4732755-689a-4376-b97a-1f5db878d36e"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: "Cooley advises companies on diversity-related programs, investigations, and litigation in a changing legal landscape."
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260814T205842Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: DEI Counseling
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: DEI counseling from Cooley LLP.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Programs, investigations, and related disputes.
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: DEI Strategic Counseling and Litigation | Cooley LLP
+    - ID: "65408499-25bc-49d0-a2ff-b2fdd798aafc"
+      Hint: ogImage
+      Value: |
+        <image mediaid="" src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1600&q=80" alt="Team" />
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: DEI Counseling and Litigation | Cooley LLP
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "17d439cd-85c7-49f1-b722-163c209545d3"
+    - ID: "8cff1548-edb9-4e39-836b-23f86ed55248"
+      Hint: image
+      Value: |
+        <image mediaid="" src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1600&q=80" alt="Diverse group of colleagues" />
+    - ID: "93f130f9-b079-4d7d-b7af-ac85cd31bffd"
+      Hint: Detail
+      Value: <h2>Programs under legal scrutiny</h2><p>Cooley advises companies on how diversity, equity, and inclusion programs are designed, documented, and defended. We counsel on investigations and litigation as the legal environment continues to shift in the United States.</p><h3>Counsel</h3><ul><li>Program design and risk review</li><li>Investigations</li><li>Related employment and constitutional claims</li></ul>
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Cooley DEI strategic counseling and litigation.
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: DEI Strategic Counseling and Litigation
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\WIt5EKonMo343Fqq8begbLVKlCgYPAIX
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260815T104856Z
+    - ID: "e7f8a9b0-c1d2-4e3f-8a9b-0c1d2e3f4a5b"
+      Hint: metadataAuthor
+      Value: Cooley LLP
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: DEI Counseling | Cooley LLP
+    - ID: "efbce7e8-6d4e-49e2-9b48-a9ab9a1e6fd7"
+      Hint: pageThumbnail
+      Value: |
+        <image mediaid="" src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1600&q=80" alt="Colleagues" />
+    - ID: "f6fcc0b6-31b2-49cd-8a66-4ba282a8ad24"
+      Hint: metadataKeywords
+      Value: Cooley, DEI, employment, investigations

@@ -1,0 +1,41 @@
+﻿---
+ID: "13bb2b19-875d-4428-90b4-fda3b84deb86"
+Parent: "9f34023a-f2fe-45cd-8bed-fb743f305263"
+Template: "2ef3a54a-4d06-482e-931e-3a1b127287b3"
+Path: "/sitecore/content/dwh/dwh/Data/Site/Dallas - Fort Worth/Mustang Lakes"
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{95166D1E-5DC5-4DD0-ACC1-AC581957CF8A}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260623T200256Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "156befb6-7a1a-408d-b871-b19d5e6f2545"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260623T200304Z
+    - ID: "fd867eec-51d2-474d-aa9d-c4e85efa88e4"
+      Hint: amenities
+      Value: |
+        {9D137831-5BAC-40DE-BE28-0BE24CE8D879}
+        {A91DFF16-3397-4A8F-A2B9-6B324E2B8090}

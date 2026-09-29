@@ -1,0 +1,37 @@
+﻿---
+ID: "d4984588-04ab-4433-99ba-367412c360cb"
+Parent: "e4837c64-5321-45b5-be3e-b55123fc8cf3"
+Template: "73e57eaa-b54a-41e1-b689-bf7dae9155ad"
+Path: /sitecore/content/progressive/pkm/Home/Questions and Answers/Escalations/Catastrophe claim routing/StateSpecific/FL/Catastrophe claim routing
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{B40A5EAA-A6C7-4E31-93E8-BF5F61802851}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260731T012530Z
+    - ID: "2d71e32d-e990-46b3-8ca1-58cd89743d5e"
+      Hint: Question
+      Value: "How are Progressive Florida catastrophe claims routed?"
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Catastrophe claim routing
+    - ID: "4f8dc72e-1548-471c-9f3e-a13e944e4321"
+      Hint: Answer
+      Value: "Identify Progressive catastrophe or weather-event claims using designated codes and route them to CAT teams or surge queues per Progressive Florida playbooks, noting PIP/no-fault intersections where relevant. Use abbreviated intake where authorized and align with Florida DFS CAT expectations. Keep customers informed with Progressive CAT communication scripts."
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "6142cb43-99e1-40a6-838b-9113d8ee66e5"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260731T012531Z

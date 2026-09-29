@@ -1,0 +1,44 @@
+﻿---
+ID: "45ef2d58-5cd1-46e0-88e3-5b9380dfb358"
+Parent: "d47bddda-da7c-491a-b1a0-f41e060f8839"
+Template: "d47bddda-da7c-491a-b1a0-f41e060f8839"
+Path: /sitecore/templates/Project/rockland/Detail Page/__Standard Values
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {EBE26B6A-BEAF-4FF1-B064-0791EC9E8E62}
+    {05D8740E-2F54-412B-A38B-3BEB0E9B5E5C}
+    {D47BDDDA-DA7C-491A-B1A0-F41E060F8839}
+    {85483EFA-6B4E-48F1-B890-1F01A209BD39}
+    {74E2B991-32F2-4753-95DF-46C9DFED00BC}
+    {063306B0-24F6-4965-9246-6C6B5D8D9C51}
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "d0818af0-61f6-4f4c-be90-1c8664eb43d6"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260707T101354Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "79256cea-0594-4cd0-a7c5-eb233432bd3b"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260707T101356Z

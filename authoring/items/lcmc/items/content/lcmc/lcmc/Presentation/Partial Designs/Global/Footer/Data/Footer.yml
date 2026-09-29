@@ -1,0 +1,272 @@
+﻿---
+ID: "cbc82743-e6a7-4a36-a938-4dc03635e9be"
+Parent: "3dc10fab-d4fb-4b68-9b5e-1dc5d00e93db"
+Template: "92979eba-bd00-422e-b295-3d8dadca860d"
+Path: /sitecore/content/lcmc/lcmc/Presentation/Partial Designs/Global/Footer/Data/Footer
+BranchID: "3e0f1e87-6c71-4b15-877c-7a2d1680fe32"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "d061bc10-75c1-4150-a903-18696ac7e7e1"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{CF67B851-D5C2-44F9-AE65-55CA0A1A1B4C}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T010252Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "4ca9bbc2-95df-411f-8347-cfc9803b9ae8"
+      Hint: InstagramLink
+      Value: |
+        <link linktype="external" https://www.instagram.com/" target="" text="Instagram" title="" class=""/>
+    - ID: "50b8a490-082d-4b70-a654-59ffedabe9bd"
+      Hint: CopyrightText
+      Value: |
+        <div class="ck-content"><p>© 2025 SYNC. All rights reserved.</p></div>
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "e94ac40f-8f0f-4d15-a931-cbadd19c5597"
+    - ID: "a034ad1f-79eb-4b6a-9860-e5465a3e2733"
+      Hint: LinkedinLink
+      Value: |
+        <link linktype="external" url="https://www.linkedin.com/" target="" text="Linkedin" title="" class=""/>
+    - ID: "a826b100-dcc9-4a5d-adc2-59aa5367238b"
+      Hint: FacebookLink
+      Value: |
+        <link linktype="external" url="https://www.facebook.com/" target="" text="Facebook" title="" class=""/>
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "bc9a0214-7aee-450d-a030-463883e72394"
+      Hint: Title
+      Value: Let's sync.
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260825T010457Z
+  - Version: 2
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T121810Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: 
+    - ID: "4ca9bbc2-95df-411f-8347-cfc9803b9ae8"
+      Hint: InstagramLink
+      Value: |
+        <link linktype="external" url="https://www.instagram.com/lcmchealth/" target="_blank" text="Instagram" title="" class=""/>
+    - ID: "50b8a490-082d-4b70-a654-59ffedabe9bd"
+      Hint: CopyrightText
+      Value: |
+        <div class="ck-content"><p>1100 Poydras St., New Orleans, LA 70163</p><p>© 2026 LCMC Health. All rights reserved.</p></div>
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "00f9b9b4-62c1-49f9-a259-8e36834c4797"
+    - ID: "a034ad1f-79eb-4b6a-9860-e5465a3e2733"
+      Hint: LinkedinLink
+      Value: |
+        <link linktype="external" url="https://www.linkedin.com/company/lcmchealth" target="_blank" text="LinkedIn" title="" class=""/>
+    - ID: "a826b100-dcc9-4a5d-adc2-59aa5367238b"
+      Hint: FacebookLink
+      Value: |
+        <link linktype="external" url="https://www.facebook.com/LCMCHealth" target="_blank" text="Facebook" title="" class=""/>
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "bc9a0214-7aee-450d-a030-463883e72394"
+      Hint: Title
+      Value: Let's stay connected.
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260825T121810Z
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260825T121810Z
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T121810Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "4ca9bbc2-95df-411f-8347-cfc9803b9ae8"
+      Hint: InstagramLink
+      Value: |
+        <link linktype="external" url="https://www.instagram.com/lcmchealth/" target="_blank" text="Instagram" title="" class=""/>
+    - ID: "50b8a490-082d-4b70-a654-59ffedabe9bd"
+      Hint: CopyrightText
+      Value: |
+        <div class="ck-content"><p>1100 Poydras St., New Orleans, LA 70163</p><p>© 2026 LCMC Health. Todos los derechos reservados.</p></div>
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4ad5cbb8-5383-4ba1-8732-3f1e6441443d"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "a034ad1f-79eb-4b6a-9860-e5465a3e2733"
+      Hint: LinkedinLink
+      Value: |
+        <link linktype="external" url="https://www.linkedin.com/company/lcmchealth" target="_blank" text="LinkedIn" title="" class=""/>
+    - ID: "a826b100-dcc9-4a5d-adc2-59aa5367238b"
+      Hint: FacebookLink
+      Value: |
+        <link linktype="external" url="https://www.facebook.com/LCMCHealth" target="_blank" text="Facebook" title="" class=""/>
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Akv1r1Hmcm16AN61y5QanpMca0RChHPy
+    - ID: "bc9a0214-7aee-450d-a030-463883e72394"
+      Hint: Title
+      Value: Sigamos conectados.
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260825T121810Z
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T192640Z
+  - Version: 2
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T121810Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: 
+    - ID: "4ca9bbc2-95df-411f-8347-cfc9803b9ae8"
+      Hint: InstagramLink
+      Value: |
+        <link linktype="external" url="https://www.instagram.com/lcmchealth/" target="_blank" text="Instagram" title="" class=""/>
+    - ID: "50b8a490-082d-4b70-a654-59ffedabe9bd"
+      Hint: CopyrightText
+      Value: |
+        <div class="ck-content"><p>1100 Poydras St., Nueva Orleans, LA 70163</p><p>© 2026 LCMC Health. Todos los derechos reservados.</p></div>
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "00258a92-84c1-44c4-ac14-205e7633d02e"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "a034ad1f-79eb-4b6a-9860-e5465a3e2733"
+      Hint: LinkedinLink
+      Value: |
+        <link linktype="external" url="https://www.linkedin.com/company/lcmchealth" target="_blank" text="LinkedIn" title="" class=""/>
+    - ID: "a826b100-dcc9-4a5d-adc2-59aa5367238b"
+      Hint: FacebookLink
+      Value: |
+        <link linktype="external" url="https://www.facebook.com/LCMCHealth" target="_blank" text="Facebook" title="" class=""/>
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "bc9a0214-7aee-450d-a030-463883e72394"
+      Hint: Title
+      Value: Sigamos conectados.
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260825T121810Z
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T163158Z
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T121810Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: 
+    - ID: "4ca9bbc2-95df-411f-8347-cfc9803b9ae8"
+      Hint: InstagramLink
+      Value: |
+        <link linktype="external" url="https://www.instagram.com/lcmchealth/" target="_blank" text="Instagram" title="" class=""/>
+    - ID: "50b8a490-082d-4b70-a654-59ffedabe9bd"
+      Hint: CopyrightText
+      Value: |
+        <div class="ck-content"><p>1100, rue Poydras, La Nouvelle-Orléans, LA 70163</p><p>© 2026 LCMC Health. Tous droits réservés.</p></div>
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "7ce94d3e-711d-4019-b31e-3476f521a361"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "a034ad1f-79eb-4b6a-9860-e5465a3e2733"
+      Hint: LinkedinLink
+      Value: |
+        <link linktype="external" url="https://www.linkedin.com/company/lcmchealth" target="_blank" text="LinkedIn" title="" class=""/>
+    - ID: "a826b100-dcc9-4a5d-adc2-59aa5367238b"
+      Hint: FacebookLink
+      Value: |
+        <link linktype="external" url="https://www.facebook.com/LCMCHealth" target="_blank" text="Facebook" title="" class=""/>
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "bc9a0214-7aee-450d-a030-463883e72394"
+      Hint: Title
+      Value: Restons en contact.
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260825T121810Z
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201844Z

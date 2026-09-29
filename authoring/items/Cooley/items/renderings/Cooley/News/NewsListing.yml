@@ -1,0 +1,86 @@
+﻿---
+ID: "29419abc-5e18-40b5-a113-26d89297d1a5"
+Parent: "21d0a90e-d11d-4d07-ae71-b1b1da3112e4"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Project/Cooley/News/NewsListing
+SharedFields:
+- ID: "037fe404-dd19-4bf7-8e30-4dadf68b27b0"
+  Hint: componentName
+  Value: NewsListing
+- ID: "17bb046a-a32a-41b3-8315-81217947611b"
+  Hint: ComponentQuery
+  Value: |
+    query NewsListing($datasource: String!, $language: String!) {
+      datasource: item(path: $datasource, language: $language) {
+        eyebrow: field(name: "Eyebrow") { jsonValue }
+        title: field(name: "Title") { jsonValue }
+        ctaLink: field(name: "CtaLink") { jsonValue }
+        ctaText: field(name: "CtaText") { jsonValue }
+        items: field(name: "FeaturedItems") {
+          ... on MultilistField {
+            targetItems {
+              id
+              name
+              displayName
+              url { path }
+              pageTitle: field(name: "pageTitle") { jsonValue }
+              pageSubtitle: field(name: "pageSubtitle") { jsonValue }
+              pageSummary: field(name: "pageSummary") { jsonValue }
+              detail: field(name: "Detail") { jsonValue }
+              image: field(name: "image") { value }
+              parent {
+                name
+              }
+            }
+          }
+        }
+      }
+    }
+- ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
+  Hint: Datasource Template
+  Value: /sitecore/templates/Project/Cooley/Components/News/NewsListing
+- ID: "a77e8568-1ab3-44f1-a664-b7c37ec7810d"
+  Hint: Parameters Template
+  Value: "{5F1C0522-B946-437D-9958-17B57783E539}"
+- ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
+  Hint: Datasource Location
+  Value: "query:$site/*[@@name='Data']/*[@@templatename='NewsListing Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='NewsListing Folder']"
+- ID: "c7b72114-3f04-45a0-ba43-3856a9c9feb3"
+  Hint: FieldEditorFields
+  Value: Eyebrow|Title|FeaturedItems|CtaLink|CtaText
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "9a51772f-c7bd-4e1c-9c71-82e929db52dd"
+Languages:
+- Language: en
+  Fields:
+  - ID: "30e85e5d-e00a-4864-b358-7624d511deb4"
+    Hint: __Unversioned revision
+    Value: "6a42f3e0-ba4b-490d-9dd6-e351ff1c545c"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260817T000143Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{FCA998C5-0CC3-4F91-94D8-0A4E6CAECE88}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "263c1a6e-6958-4ec9-84b8-600be2b66d31"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260830T171400Z

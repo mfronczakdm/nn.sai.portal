@@ -1,0 +1,38 @@
+﻿---
+ID: "d20d2603-cf97-4a24-8b48-53582cb04735"
+Parent: "df8e06b0-3c44-46d9-b27d-de8f8f83debd"
+Template: "bdf6c974-e68c-46a2-a0a9-d382fd0927eb"
+Path: "/sitecore/content/progressive/pkm/Home/Shared Content/05-CommonScenarios/StateSpecific/TX/KB-CA-1003-LiabilityTriage-TX"
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{F84F262B-53BC-4761-B5CE-4C9E6D46E703}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "21b8d6f1-4294-46a5-98fd-38df0ce8aae0"
+      Hint: SourceDocumentLOB
+      Value: "{E799A026-FF03-4588-8607-16222D811A4C}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260803T035442Z
+    - ID: "76e0c665-5c4d-4d03-ae66-a5f3d12978ba"
+      Hint: Content
+      Value: "<p>In Texas, escalate Progressive AI tender or MCS-90 language to coverage SME before responding, and update Progressive BI reserves when surgery or additional claimants appear on a commercial liability claim.</p>"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "bbe5ad9b-59b1-4861-b9d9-c16bd80396ba"
+    - ID: "a8f6d033-4e9e-4598-be5e-da2456c41b9f"
+      Hint: sourceDocumentLink
+      Value: |
+        <link text="Commercial Auto Liability — Third-Party Injury and PD" linktype="internal" class="" title="" target="" querystring="" id="{6603D085-B8AD-44B1-8656-FE5F26C41DCE}" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260803T035443Z

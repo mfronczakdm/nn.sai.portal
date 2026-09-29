@@ -1,0 +1,202 @@
+﻿---
+ID: "91cd7e60-04c3-4dfd-863b-b4adfbce3e61"
+Parent: "01506bfb-5734-4c5b-a28c-6500ba7dba60"
+Template: "5ad908da-deb0-4b6f-8a3d-00fdfc802915"
+Path: /sitecore/content/lcmc/lcmc/Data/Icon Link Bars/LCMC Quick Links
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T015802Z
+    - ID: "47315939-1bcc-4e7c-89b3-faefe71dc758"
+      Hint: SectionTitle
+      Value: Quick Links
+    - ID: "75c8149d-5f65-46ac-866c-a46478932724"
+      Hint: SectionDescription
+      Value: Find care, locations, and services across LCMC Health.
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b533b394-b6a0-4def-a8de-cb4ca4153b0a"
+    - ID: "aa8be91d-05f2-4c3f-82b6-f59aab8594bb"
+      Hint: SearchLink
+      Value: |
+        <link linktype="internal" id="bae717f7-d99d-4722-8faf-ced2581df809" anchor="" querystring="" target="" class="" text="Find a Provider" title=""/>
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T210344Z
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T015802Z
+    - ID: "47315939-1bcc-4e7c-89b3-faefe71dc758"
+      Hint: SectionTitle
+      Value: Enlaces rápidos
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "75c8149d-5f65-46ac-866c-a46478932724"
+      Hint: SectionDescription
+      Value: Encuentre atención, ubicaciones y servicios en LCMC Health.
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "8ac97d9f-4a9d-4304-b1cd-71d1d3c067e8"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "aa8be91d-05f2-4c3f-82b6-f59aab8594bb"
+      Hint: SearchLink
+      Value: |
+        <link class="" querystring="" id="bae717f7-d99d-4722-8faf-ced2581df809" anchor="" target="" title="" linktype="internal" text="Encontrar un proveedor" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T162644Z
+  - Version: 2
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260909T232003Z
+    - ID: "47315939-1bcc-4e7c-89b3-faefe71dc758"
+      Hint: SectionTitle
+      Value: Enlaces rápidos
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "75c8149d-5f65-46ac-866c-a46478932724"
+      Hint: SectionDescription
+      Value: Encuentre atención, ubicaciones y servicios en LCMC Health.
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "8a2911f4-4c8e-48d5-acd1-7e6e6bf65783"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "aa8be91d-05f2-4c3f-82b6-f59aab8594bb"
+      Hint: SearchLink
+      Value: |
+        <link class="" querystring="" id="bae717f7-d99d-4722-8faf-ced2581df809" anchor="" target="" title="" linktype="internal" text="Encontrar un proveedor" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260909T232003Z
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T232009Z
+  - Version: 3
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T015802Z
+    - ID: "47315939-1bcc-4e7c-89b3-faefe71dc758"
+      Hint: SectionTitle
+      Value: Enlaces rápidos
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "75c8149d-5f65-46ac-866c-a46478932724"
+      Hint: SectionDescription
+      Value: Encuentre atención, ubicaciones y servicios en LCMC Health.
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c6b9acf5-c852-4947-b692-f492f0a1fa7d"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "aa8be91d-05f2-4c3f-82b6-f59aab8594bb"
+      Hint: SearchLink
+      Value: |
+        <link class="" querystring="" id="bae717f7-d99d-4722-8faf-ced2581df809" anchor="" target="" title="" linktype="internal" text="Encontrar un proveedor" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T234808Z
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T015802Z
+    - ID: "47315939-1bcc-4e7c-89b3-faefe71dc758"
+      Hint: SectionTitle
+      Value: Liens rapides
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "75c8149d-5f65-46ac-866c-a46478932724"
+      Hint: SectionDescription
+      Value: Trouvez des soins, des emplacements et des services dans l’ensemble de LCMC Health.
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5e70c584-15af-4c13-bbb6-caba398cf0ed"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "aa8be91d-05f2-4c3f-82b6-f59aab8594bb"
+      Hint: SearchLink
+      Value: |
+        <link class="" querystring="" id="bae717f7-d99d-4722-8faf-ced2581df809" anchor="" target="" title="" linktype="internal" text="Trouver un fournisseur" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201305Z

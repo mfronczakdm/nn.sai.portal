@@ -1,0 +1,46 @@
+﻿---
+ID: "49e3b280-970b-42c9-99d2-8bad3f9ab5ca"
+Parent: "5a48a3a9-60ca-483c-ae91-f227ff7ac07b"
+Template: "bdf6c974-e68c-46a2-a0a9-d382fd0927eb"
+Path: /sitecore/content/progressive/pkm/Presentation/Page Branches/Knowledge Variant/$name
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{D5F604FA-D5E4-4F2E-8E37-99F4F83ACC0E}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "241ca4a8-ff2f-438c-88ab-1adaaa9b8bd3"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{FC07EAC3-D1A1-420A-B353-C47353518E04}"
+              p:after="*[1=2]"
+              s:id="{7C8268A5-70F7-45DD-B15F-7F7AC8B41532}"
+              s:par="GridParameters&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260731T131401Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "e5cfa93c-5a6f-457e-b392-4ce6e846a30c"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260731T143803Z

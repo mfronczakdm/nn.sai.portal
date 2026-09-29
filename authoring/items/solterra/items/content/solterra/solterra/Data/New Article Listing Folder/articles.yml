@@ -1,0 +1,50 @@
+﻿---
+ID: "5955312d-4d65-4ea7-841a-18f6843ef100"
+Parent: "a2fc3b76-5467-4c2c-83ea-7dc27449b73b"
+Template: "705c014a-ced4-409a-89b7-09350cc98116"
+Path: /sitecore/content/solterra/solterra/Data/New Article Listing Folder/articles
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "f7792aab-c24f-4d81-87bb-38b828b01581"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260624T185433Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "56689e04-c512-4625-9d9d-95f77b424d9c"
+      Hint: featuredContent
+      Value: |
+        {34C1AF42-CEF5-43F8-A0CD-E7A891F7BB6A}
+        {DC9F5DAB-226B-4652-A20A-410B4C581E4F}
+        {7E07C13A-4116-4E62-9694-73F4C677CC32}
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "0d307c35-6558-4836-a8a6-6859601fb9b6"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Akv1r1Hmcm16AN61y5QanpMca0RChHPy
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260812T094416Z

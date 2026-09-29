@@ -1,0 +1,43 @@
+﻿---
+ID: "849db871-44a4-4802-b95c-13868d57ed45"
+Parent: "3a20d0f9-b329-47f6-be41-2f2caa49414f"
+Template: "3a20d0f9-b329-47f6-be41-2f2caa49414f"
+Path: "/sitecore/templates/Project/dycom-2/Page/__Standard Values"
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {3A20D0F9-B329-47F6-BE41-2F2CAA49414F}
+    {C14B6289-8AC2-439C-9E5B-40DE9F820C3F}
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "60e9548f-4d70-46c7-8a2b-f2cb5343e497"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260525T183741Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2d38eb0a-7054-4319-9371-0fbdfc64e3f2"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260525T184049Z
+    - ID: "ffd52d49-ef1a-46b1-afa1-1d108dd83c8e"
+      Hint: Title
+      Value: $name

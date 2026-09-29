@@ -1,0 +1,42 @@
+﻿---
+ID: "d7675488-61ee-4e9d-ac56-b70177c52dd0"
+Parent: "e5592e6b-2214-4342-b0d7-87f93abbd0b1"
+Template: "e1f2a3b4-c5d6-4e7f-8a9b-0c1d2e3f4a5b"
+Path: /sitecore/content/progressive/pkm/Data/AI Config/FAQ/Claim Intake/Severity assignment at intake
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{DB6AC7A4-E15E-4C0C-BE89-D59B8B3958E8}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260729T131010Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "19485b55-d85b-4cbc-abfc-8b74d2a7668b"
+    - ID: "a3b4c5d6-e7f8-4a9b-0c1d-2e3f4a5b6c7d"
+      Hint: question
+      Value: "How do Progressive claims agents assign claim severity at intake?"
+    - ID: "b4c5d6e7-f8a9-4b0c-1d2e-3f4a5b6c7d8e"
+      Hint: answer
+      Value: "Apply Progressive severity guidelines based on injuries, total loss indicators, litigation potential, commercial exposure, and catastrophic events. Assign the severity tier during intake so the claim routes to the correct queue. Escalate uncertain high-severity indicators to a supervisor rather than under-classifying the file."
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260729T191607Z

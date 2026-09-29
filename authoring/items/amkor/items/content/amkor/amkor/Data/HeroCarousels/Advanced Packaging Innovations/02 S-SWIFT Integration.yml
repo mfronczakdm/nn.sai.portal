@@ -1,0 +1,98 @@
+﻿---
+ID: "6a8c51f9-13d3-4454-8128-bc37b73483d2"
+Parent: "b787e258-83fd-48bc-a176-895168f37bcc"
+Template: "8ef3fb89-fd2f-48b9-a8ce-20f387e0ab0a"
+Path: "/sitecore/content/amkor/amkor/Data/HeroCarousels/Advanced Packaging Innovations/02 S-SWIFT Integration"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0938c532-f9ba-4658-b361-a96061553a4c"
+      Hint: Summary
+      Value: Heterogeneous Integration
+    - ID: "1c6ed158-edf5-4a99-9352-eab4a1943e03"
+      Hint: Link
+      Value: |
+        <link linktype="internal" id="661eebcd-90ee-4393-a085-f4ff6710a826" anchor="" querystring="" target="" class="" text="EXPLORE S-SWIFT" title=""/>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260829T154636Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{FCA998C5-0CC3-4F91-94D8-0A4E6CAECE88}"
+    - ID: "48932c54-8c74-4029-ba15-1b8af19fe457"
+      Hint: Description
+      Value: "High-performance, cost-effective integration of multiple chiplets and memories."
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "7cc14d95-b270-4f23-ab1b-54c779d2ca17"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c2442485-2c9e-47d6-85e8-509877a1d977"
+      Hint: Image
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/7e62d86233b040eb98f55166b2c3c4ca?v=fd6ac004" dam-id="mlJMApNbQ1KS_zCeNDSuPA" width="2000" height="643" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/85382/thumbnail" />
+    - ID: "c8463a04-9fc1-4d12-b4c6-b4448f0cb298"
+      Hint: SlideName
+      Value: "S-SWIFT Silicon Wafer Integrated Fan-Out"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260831T235418Z
+    - ID: "e64b5a37-be27-4001-9380-27bbb40fe1bc"
+      Hint: BackgroundImage
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/85376-HomepagePromoCTAs-1100x740?v=9390d6fb" dam-id="m2_bNQ9jSpaQHGfEYLrC4w" width="1100" height="740" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/85376/thumbnail" />
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0938c532-f9ba-4658-b361-a96061553a4c"
+      Hint: Summary
+      Value: 異種統合
+    - ID: "1c6ed158-edf5-4a99-9352-eab4a1943e03"
+      Hint: Link
+      Value: |
+        <link class="" querystring="" id="661eebcd-90ee-4393-a085-f4ff6710a826" anchor="" target="" title="" linktype="internal" text="S-SWIFT を見る" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260829T154636Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{FCA998C5-0CC3-4F91-94D8-0A4E6CAECE88}"
+    - ID: "48932c54-8c74-4029-ba15-1b8af19fe457"
+      Hint: Description
+      Value: 複数のチップレットとメモリを高性能かつコスト効率よく統合。
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "83b5c7cf-5ad8-4e1a-a906-a737889db420"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c2442485-2c9e-47d6-85e8-509877a1d977"
+      Hint: Image
+      Value: |
+        <image height="230" alt="S-Connect 高度パッケージングタイル" width="370" src="https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2026/07/S-Connect_BG_Tile.png" />
+    - ID: "c8463a04-9fc1-4d12-b4c6-b4448f0cb298"
+      Hint: SlideName
+      Value: "S-SWIFT シリコンウェハー統合ファンアウト"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260831T030415Z

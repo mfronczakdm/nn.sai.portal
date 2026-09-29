@@ -1,0 +1,79 @@
+﻿---
+ID: "7e04f310-ad73-4b02-b540-8e22e1f8ba07"
+Parent: "823c8519-e9d4-4328-8a53-3bef90ac0fb7"
+Template: "4a77fd9b-93b9-4ab2-91f7-936173963913"
+Path: /sitecore/content/amkor/amkor/Data/Listing Blocks/Amkor Events
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1851a4e1-1266-4e67-aabf-f06dfcbc8fd3"
+      Hint: Description
+      Value: Meet Amkor at upcoming industry events.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T015900Z
+    - ID: "34a564fa-135c-4c98-92ec-63c5f01c60ac"
+      Hint: ViewAllLink
+      Value: |
+        <link text="View all events" anchor="" linktype="external" class="" title="" target="" querystring="" url="https://amkor.com/events/" />
+    - ID: "400a0423-f93a-48c6-8e6f-76207e8c724b"
+      Hint: SectionTitle
+      Value: Events
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "8749dbb7-b00f-4f18-b91f-6ca7f28eb964"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260825T015900Z
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1851a4e1-1266-4e67-aabf-f06dfcbc8fd3"
+      Hint: Description
+      Value: 今後の業界イベントでAmkorにお会いください。
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T015900Z
+    - ID: "34a564fa-135c-4c98-92ec-63c5f01c60ac"
+      Hint: ViewAllLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="すべてのイベントを見る" url="https://amkor.com/events/" />
+    - ID: "400a0423-f93a-48c6-8e6f-76207e8c724b"
+      Hint: SectionTitle
+      Value: イベント
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "450edef6-6960-4560-92ce-52768b7d592f"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260831T030227Z

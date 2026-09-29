@@ -1,0 +1,45 @@
+﻿---
+ID: "974e9c7b-5654-4a4e-a21a-0f4d40d12b1e"
+Parent: "595b13f5-2728-4728-93b7-db34a03cd339"
+Template: "97614093-b7a6-4b54-8f24-8274dd7b33de"
+Path: /sitecore/content/dycom/dycom/Presentation/Page Designs
+BranchID: "45cf9f42-b3ac-4412-aab9-f8441c7e448e"
+SharedFields:
+- ID: "ba1f60d6-3deb-40cc-bb61-eec772279ee1"
+  Hint: TemplatesMapping
+  Value: "%7bBB001D38-015B-48D9-BC5E-069A6D81E09A%7d%3d%257BD535BF82-EE8D-4109-93AB-F471B24DAFC8%257D%26%7b46C71586-56C0-47B1-8700-B52B55181898%7d%3d%257BD535BF82-EE8D-4109-93AB-F471B24DAFC8%257D%26%7b32D945B5-D490-47D9-A703-FE07652CB130%7d%3d%257B40C572E2-8BBF-48F6-A888-EE0C849CD575%257D%26%7b06956982-8C82-4F7A-AC98-999B0962F933%7d%3d%257BD535BF82-EE8D-4109-93AB-F471B24DAFC8%257D%26%7b36BA0DAB-63FD-4249-8EE6-B4B0533D5317%7d%3d%257BD535BF82-EE8D-4109-93AB-F471B24DAFC8%257D%26%7b3BB64D5C-3C6E-408F-9B03-E2A00D5082E3%7d%3d%257BD60E3C89-C884-4854-944C-A87FF8AF9F14%257D%26%7bAE959BB3-E576-4E91-8FD7-36242B92DB12%7d%3d%257BD535BF82-EE8D-4109-93AB-F471B24DAFC8%257D"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "52ba12cf-11a1-48d7-9f7d-00c56fb34c67"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{2EA756FA-AED6-4599-83B7-36FEFE229B31}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260509T145532Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ba99a330-3308-44ab-b3d7-bbb3046747d7"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260625T093149Z

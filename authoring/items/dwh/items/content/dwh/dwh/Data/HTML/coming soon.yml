@@ -1,0 +1,838 @@
+﻿---
+ID: "836a34e4-7629-42cb-bc15-f50604e1e3b4"
+Parent: "c7140e82-05d6-4081-a324-4bf07dfc6d0f"
+Template: "912fa158-9f67-49e2-8c3c-0acb71026d1b"
+Path: /sitecore/content/dwh/dwh/Data/HTML/coming soon
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{5537C8DB-F901-4291-82ED-EEECDEABFE61}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "05c233aa-4fec-41dc-9011-b08c6c8ea9c4"
+      Hint: body
+      Value: |
+        <!--
+          David Weekley Homes — Coming Soon communities horizontal carousel (static HTML for Sitecore HtmlSnippet).
+          Single-row scroll: native overflow-x (no JavaScript). Embedded CSS ensures responsive layout in CM/RTE
+          where Tailwind may not compile. DWH palette: charcoal #2f2f2d, sage #a6b49a, orange #f2894f.
+        -->
+        <style>
+          .dwh-cs-section {
+            box-sizing: border-box;
+            width: 100%;
+            max-width: 72rem;
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+            background: #ffffff;
+            border: 1px solid #d8cfc3;
+            border-radius: 1rem;
+            padding: 1rem;
+            box-shadow: 0 1px 2px rgb(0 0 0 / 0.05);
+          }
+        
+          @media (min-width: 768px) {
+            .dwh-cs-section {
+              padding: 1.5rem;
+            }
+          }
+        
+          .dwh-cs-header {
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #d8cfc3;
+          }
+        
+          .dwh-cs-title {
+            margin: 0;
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #2f2f2d;
+            line-height: 1.25;
+          }
+        
+          @media (min-width: 768px) {
+            .dwh-cs-title {
+              font-size: 1.875rem;
+            }
+          }
+        
+          .dwh-cs-subtitle {
+            margin: 0.25rem 0 0;
+            font-size: 0.875rem;
+            color: #a7a09a;
+            line-height: 1.4;
+          }
+        
+          .dwh-cs-row {
+            display: flex;
+            align-items: stretch;
+            gap: 0.5rem;
+            width: 100%;
+            max-width: 100%;
+            min-width: 0;
+          }
+        
+          .dwh-cs-track {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 0.75rem;
+            flex: 1 1 0%;
+            min-width: 0;
+            width: 100%;
+            max-width: 100%;
+            overflow-x: auto;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+            scroll-snap-type: x mandatory;
+            scroll-padding-inline: 0.25rem;
+            padding-bottom: 0.5rem;
+            scrollbar-width: thin;
+          }
+        
+          .dwh-cs-card {
+            box-sizing: border-box;
+            flex: 0 0 auto;
+            width: clamp(17.5rem, 88vw, 32.5rem);
+            max-width: 100%;
+            scroll-snap-align: start;
+            overflow: hidden;
+            background: #ffffff;
+            border: 1px solid #d8cfc3;
+            border-radius: 0.125rem;
+            box-shadow: 0 1px 2px rgb(0 0 0 / 0.04);
+          }
+        
+          @media (min-width: 640px) {
+            .dwh-cs-card {
+              width: min(32.5rem, 85%);
+            }
+          }
+        
+          .dwh-cs-card-title {
+            margin: 0;
+            padding: 0.75rem 1rem;
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 1.125rem;
+            font-weight: 500;
+            color: #2f2f2d;
+            border-bottom: 1px dotted #d8cfc3;
+            word-wrap: break-word;
+          }
+        
+          .dwh-cs-card-body {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            padding: 0.75rem;
+          }
+        
+          @media (min-width: 480px) {
+            .dwh-cs-card-body {
+              flex-direction: row;
+              align-items: flex-start;
+              gap: 1rem;
+              padding: 1rem;
+            }
+          }
+        
+          .dwh-cs-card-image-wrap {
+            position: relative;
+            width: 100%;
+            flex-shrink: 0;
+            overflow: hidden;
+            border-radius: 0.125rem;
+          }
+        
+          @media (min-width: 480px) {
+            .dwh-cs-card-image-wrap {
+              width: 9.5rem;
+              min-width: 9.5rem;
+            }
+          }
+        
+          @media (min-width: 640px) {
+            .dwh-cs-card-image-wrap {
+              width: 12.5rem;
+              min-width: 12.5rem;
+            }
+          }
+        
+          .dwh-cs-card-image {
+            display: block;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 10 / 7;
+            object-fit: cover;
+          }
+        
+          .dwh-cs-card-overlay {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 0.375rem 0.5rem;
+            background: rgb(0 0 0 / 0.55);
+            color: #ffffff;
+            font-size: 0.625rem;
+            font-weight: 700;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+          }
+        
+          .dwh-cs-card-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 0.5rem;
+            min-width: 0;
+            flex: 1 1 auto;
+          }
+        
+          .dwh-cs-badge {
+            display: inline-flex;
+            width: fit-content;
+            padding: 0.125rem 0.5rem;
+            border-radius: 0.125rem;
+            background: #a6b49a;
+            color: #ffffff;
+            font-size: 0.625rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+          }
+        
+          .dwh-cs-link {
+            color: #2563eb;
+            font-size: 0.9375rem;
+            font-weight: 700;
+            text-decoration: none;
+            word-wrap: break-word;
+          }
+        
+          .dwh-cs-link-chevron {
+            color: #f2894f;
+          }
+        
+          .dwh-cs-phone {
+            margin: 0;
+            font-size: 0.875rem;
+            color: #2f2f2d;
+            line-height: 1.4;
+            word-wrap: break-word;
+          }
+        
+          .dwh-cs-share {
+            font-size: 0.875rem;
+            color: #2563eb;
+            text-decoration: none;
+          }
+        
+          .dwh-cs-hint {
+            margin: 0.75rem 0 0;
+            padding: 0 0.25rem;
+            text-align: center;
+            font-size: 0.75rem;
+            color: #a7a09a;
+            line-height: 1.4;
+          }
+        
+          .dwh-cs-arrow {
+            display: none;
+            flex-shrink: 0;
+            align-self: center;
+            padding: 0.25rem 0.5rem;
+            border: 1px solid #d8cfc3;
+            border-radius: 0.125rem;
+            background: #f7f3ed;
+            color: #2f2f2d;
+          }
+        
+          @media (min-width: 640px) {
+            .dwh-cs-arrow {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+          }
+        </style>
+        
+        <section class="dwh-cs-section" aria-label="Coming soon communities">
+          <header class="dwh-cs-header">
+            <h2 class="dwh-cs-title">Coming Soon</h2>
+            <p class="dwh-cs-subtitle">New David Weekley communities opening across our markets — scroll to explore.</p>
+          </header>
+        
+          <div class="dwh-cs-row">
+            <div class="dwh-cs-arrow" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            </div>
+        
+            <div class="dwh-cs-track" tabindex="0" role="region" aria-label="Coming soon community cards">
+              <article class="dwh-cs-card">
+                <h3 class="dwh-cs-card-title">Chisholm Summit</h3>
+                <div class="dwh-cs-card-body">
+                  <div class="dwh-cs-card-image-wrap">
+                    <img class="dwh-cs-card-image" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&amp;h=280&amp;fit=crop" alt="Chisholm Summit model home exterior" width="400" height="280" loading="lazy" />
+                    <div class="dwh-cs-card-overlay">Coming Soon!</div>
+                  </div>
+                  <div class="dwh-cs-card-content">
+                    <span class="dwh-cs-badge">Coming Soon</span>
+                    <a href="#" class="dwh-cs-link">Chisholm Summit <span class="dwh-cs-link-chevron">&rsaquo;</span></a>
+                    <p class="dwh-cs-phone"><strong>Call For Information</strong> (214) 442-0697</p>
+                    <a href="#" class="dwh-cs-share">Share Community</a>
+                  </div>
+                </div>
+              </article>
+        
+              <article class="dwh-cs-card">
+                <h3 class="dwh-cs-card-title">Fields of Thornberry</h3>
+                <div class="dwh-cs-card-body">
+                  <div class="dwh-cs-card-image-wrap">
+                    <img class="dwh-cs-card-image" src="https://images.unsplash.com/photo-1605276374101-dee2a0ed3dff?w=400&amp;h=280&amp;fit=crop" alt="Fields of Thornberry community rendering" width="400" height="280" loading="lazy" />
+                    <div class="dwh-cs-card-overlay">Coming Soon!</div>
+                  </div>
+                  <div class="dwh-cs-card-content">
+                    <span class="dwh-cs-badge">Coming Soon</span>
+                    <a href="#" class="dwh-cs-link">Fields of Thornberry <span class="dwh-cs-link-chevron">&rsaquo;</span></a>
+                    <p class="dwh-cs-phone"><strong>Call For Information</strong> (972) 552-8769</p>
+                    <a href="#" class="dwh-cs-share">Share Community</a>
+                  </div>
+                </div>
+              </article>
+        
+              <article class="dwh-cs-card">
+                <h3 class="dwh-cs-card-title">Willow Creek Estates</h3>
+                <div class="dwh-cs-card-body">
+                  <div class="dwh-cs-card-image-wrap">
+                    <img class="dwh-cs-card-image" src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cd2e?w=400&amp;h=280&amp;fit=crop" alt="Willow Creek Estates model home" width="400" height="280" loading="lazy" />
+                    <div class="dwh-cs-card-overlay">Coming Soon!</div>
+                  </div>
+                  <div class="dwh-cs-card-content">
+                    <span class="dwh-cs-badge">Coming Soon</span>
+                    <a href="#" class="dwh-cs-link">Willow Creek Estates <span class="dwh-cs-link-chevron">&rsaquo;</span></a>
+                    <p class="dwh-cs-phone"><strong>Call For Information</strong> (832) 626-9836</p>
+                    <a href="#" class="dwh-cs-share">Share Community</a>
+                  </div>
+                </div>
+              </article>
+        
+              <article class="dwh-cs-card">
+                <h3 class="dwh-cs-card-title">Highland Park Reserve</h3>
+                <div class="dwh-cs-card-body">
+                  <div class="dwh-cs-card-image-wrap">
+                    <img class="dwh-cs-card-image" src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400&amp;h=280&amp;fit=crop" alt="Highland Park Reserve community" width="400" height="280" loading="lazy" />
+                    <div class="dwh-cs-card-overlay">Coming Soon!</div>
+                  </div>
+                  <div class="dwh-cs-card-content">
+                    <span class="dwh-cs-badge">Coming Soon</span>
+                    <a href="#" class="dwh-cs-link">Highland Park Reserve <span class="dwh-cs-link-chevron">&rsaquo;</span></a>
+                    <p class="dwh-cs-phone"><strong>Call For Information</strong> (512) 555-0142</p>
+                    <a href="#" class="dwh-cs-share">Share Community</a>
+                  </div>
+                </div>
+              </article>
+        
+              <article class="dwh-cs-card">
+                <h3 class="dwh-cs-card-title">Cedar Grove Landing</h3>
+                <div class="dwh-cs-card-body">
+                  <div class="dwh-cs-card-image-wrap">
+                    <img class="dwh-cs-card-image" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400&amp;h=280&amp;fit=crop" alt="Cedar Grove Landing homesite" width="400" height="280" loading="lazy" />
+                    <div class="dwh-cs-card-overlay">Coming Soon!</div>
+                  </div>
+                  <div class="dwh-cs-card-content">
+                    <span class="dwh-cs-badge">Coming Soon</span>
+                    <a href="#" class="dwh-cs-link">Cedar Grove Landing <span class="dwh-cs-link-chevron">&rsaquo;</span></a>
+                    <p class="dwh-cs-phone"><strong>Call For Information</strong> (303) 555-0198</p>
+                    <a href="#" class="dwh-cs-share">Share Community</a>
+                  </div>
+                </div>
+              </article>
+        
+              <article class="dwh-cs-card">
+                <h3 class="dwh-cs-card-title">Providence Village</h3>
+                <div class="dwh-cs-card-body">
+                  <div class="dwh-cs-card-image-wrap">
+                    <img class="dwh-cs-card-image" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400&amp;h=280&amp;fit=crop" alt="Providence Village model home" width="400" height="280" loading="lazy" />
+                    <div class="dwh-cs-card-overlay">Coming Soon!</div>
+                  </div>
+                  <div class="dwh-cs-card-content">
+                    <span class="dwh-cs-badge">Coming Soon</span>
+                    <a href="#" class="dwh-cs-link">Providence Village <span class="dwh-cs-link-chevron">&rsaquo;</span></a>
+                    <p class="dwh-cs-phone"><strong>Call For Information</strong> (704) 555-0163</p>
+                    <a href="#" class="dwh-cs-share">Share Community</a>
+                  </div>
+                </div>
+              </article>
+        
+              <article class="dwh-cs-card">
+                <h3 class="dwh-cs-card-title">Lakewood Ranch</h3>
+                <div class="dwh-cs-card-body">
+                  <div class="dwh-cs-card-image-wrap">
+                    <img class="dwh-cs-card-image" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=400&amp;h=280&amp;fit=crop" alt="Lakewood Ranch community entrance" width="400" height="280" loading="lazy" />
+                    <div class="dwh-cs-card-overlay">Coming Soon!</div>
+                  </div>
+                  <div class="dwh-cs-card-content">
+                    <span class="dwh-cs-badge">Coming Soon</span>
+                    <a href="#" class="dwh-cs-link">Lakewood Ranch <span class="dwh-cs-link-chevron">&rsaquo;</span></a>
+                    <p class="dwh-cs-phone"><strong>Call For Information</strong> (813) 555-0185</p>
+                    <a href="#" class="dwh-cs-share">Share Community</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+        
+            <div class="dwh-cs-arrow" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            </div>
+          </div>
+        
+          <p class="dwh-cs-hint">Swipe sideways to view more coming soon communities</p>
+        </section>
+        
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260609T005933Z
+    - ID: "489bb31d-613b-4af8-b988-052a3df17331"
+      Hint: title
+      Value: 
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8747f05f-e57e-4f0a-9710-0262d125c503"
+      Hint: subtitle
+      Value: 
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "84bcaac2-c3d0-4e8a-8014-2f84737c3917"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260609T010514Z
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "05c233aa-4fec-41dc-9011-b08c6c8ea9c4"
+      Hint: body
+      Value: |
+        <!--
+          David Weekley Homes — Communautés à venir carrousel horizontal (HTML statique pour Sitecore HtmlSnippet).
+          Défilement sur une seule ligne : débordement-x natif (pas de JavaScript). CSS intégré garantit une mise en page réactive dans CM/RTE
+          où Tailwind peut ne pas se compiler. Palette DWH : charbon #2f2f2d, sauge #a6b49a, orange #f2894f.
+        -->
+        <style>
+          .dwh-cs-section {
+            box-sizing: border-box;
+            width: 100%;
+            max-width: 72rem;
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+            background: #ffffff;
+            border: 1px solid #d8cfc3;
+            border-radius: 1rem;
+            padding: 1rem;
+            box-shadow: 0 1px 2px rgb(0 0 0 / 0.05);
+          }
+        
+          @media (min-width: 768px) {
+            .dwh-cs-section {
+              padding: 1.5rem;
+            }
+          }
+        
+          .dwh-cs-header {
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #d8cfc3;
+          }
+        
+          .dwh-cs-title {
+            margin: 0;
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #2f2f2d;
+            line-height: 1.25;
+          }
+        
+          @media (min-width: 768px) {
+            .dwh-cs-title {
+              font-size: 1.875rem;
+            }
+          }
+        
+          .dwh-cs-subtitle {
+            margin: 0.25rem 0 0;
+            font-size: 0.875rem;
+            color: #a7a09a;
+            line-height: 1.4;
+          }
+        
+          .dwh-cs-row {
+            display: flex;
+            align-items: stretch;
+            gap: 0.5rem;
+            width: 100%;
+            max-width: 100%;
+            min-width: 0;
+          }
+        
+          .dwh-cs-track {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 0.75rem;
+            flex: 1 1 0%;
+            min-width: 0;
+            width: 100%;
+            max-width: 100%;
+            overflow-x: auto;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+            scroll-snap-type: x mandatory;
+            scroll-padding-inline: 0.25rem;
+            padding-bottom: 0.5rem;
+            scrollbar-width: thin;
+          }
+        
+          .dwh-cs-card {
+            box-sizing: border-box;
+            flex: 0 0 auto;
+            width: clamp(17.5rem, 88vw, 32.5rem);
+            max-width: 100%;
+            scroll-snap-align: start;
+            overflow: hidden;
+            background: #ffffff;
+            border: 1px solid #d8cfc3;
+            border-radius: 0.125rem;
+            box-shadow: 0 1px 2px rgb(0 0 0 / 0.04);
+          }
+        
+          @media (min-width: 640px) {
+            .dwh-cs-card {
+              width: min(32.5rem, 85%);
+            }
+          }
+        
+          .dwh-cs-card-title {
+            margin: 0;
+            padding: 0.75rem 1rem;
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 1.125rem;
+            font-weight: 500;
+            color: #2f2f2d;
+            border-bottom: 1px dotted #d8cfc3;
+            word-wrap: break-word;
+          }
+        
+          .dwh-cs-card-body {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            padding: 0.75rem;
+          }
+        
+          @media (min-width: 480px) {
+            .dwh-cs-card-body {
+              flex-direction: row;
+              align-items: flex-start;
+              gap: 1rem;
+              padding: 1rem;
+            }
+          }
+        
+          .dwh-cs-card-image-wrap {
+            position: relative;
+            width: 100%;
+            flex-shrink: 0;
+            overflow: hidden;
+            border-radius: 0.125rem;
+          }
+        
+          @media (min-width: 480px) {
+            .dwh-cs-card-image-wrap {
+              width: 9.5rem;
+              min-width: 9.5rem;
+            }
+          }
+        
+          @media (min-width: 640px) {
+            .dwh-cs-card-image-wrap {
+              width: 12.5rem;
+              min-width: 12.5rem;
+            }
+          }
+        
+          .dwh-cs-card-image {
+            display: block;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 10 / 7;
+            object-fit: cover;
+          }
+        
+          .dwh-cs-card-overlay {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 0.375rem 0.5rem;
+            background: rgb(0 0 0 / 0.55);
+            color: #ffffff;
+            font-size: 0.625rem;
+            font-weight: 700;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+          }
+        
+          .dwh-cs-card-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 0.5rem;
+            min-width: 0;
+            flex: 1 1 auto;
+          }
+        
+          .dwh-cs-badge {
+            display: inline-flex;
+            width: fit-content;
+            padding: 0.125rem 0.5rem;
+            border-radius: 0.125rem;
+            background: #a6b49a;
+            color: #ffffff;
+            font-size: 0.625rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+          }
+        
+          .dwh-cs-link {
+            color: #2563eb;
+            font-size: 0.9375rem;
+            font-weight: 700;
+            text-decoration: none;
+            word-wrap: break-word;
+          }
+        
+          .dwh-cs-link-chevron {
+            color: #f2894f;
+          }
+        
+          .dwh-cs-phone {
+            margin: 0;
+            font-size: 0.875rem;
+            color: #2f2f2d;
+            line-height: 1.4;
+            word-wrap: break-word;
+          }
+        
+          .dwh-cs-share {
+            font-size: 0.875rem;
+            color: #2563eb;
+            text-decoration: none;
+          }
+        
+          .dwh-cs-hint {
+            margin: 0.75rem 0 0;
+            padding: 0 0.25rem;
+            text-align: center;
+            font-size: 0.75rem;
+            color: #a7a09a;
+            line-height: 1.4;
+          }
+        
+          .dwh-cs-arrow {
+            display: none;
+            flex-shrink: 0;
+            align-self: center;
+            padding: 0.25rem 0.5rem;
+            border: 1px solid #d8cfc3;
+            border-radius: 0.125rem;
+            background: #f7f3ed;
+            color: #2f2f2d;
+          }
+        
+          @media (min-width: 640px) {
+            .dwh-cs-arrow {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+          }
+        </style>
+        
+        <section class="dwh-cs-section" aria-label="Communautés à venir">
+          <header class="dwh-cs-header">
+            <h2 class="dwh-cs-title">À venir</h2>
+            <p class="dwh-cs-subtitle">Nouvelles communautés David Weekley ouvrant dans nos marchés — faites défiler pour explorer.</p>
+          </header>
+        
+          <div class="dwh-cs-row">
+            <div class="dwh-cs-arrow" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            </div>
+        
+            <div class="dwh-cs-track" tabindex="0" role="region" aria-label="Cartes de communautés à venir">
+              <article class="dwh-cs-card">
+                <h3 class="dwh-cs-card-title">Chisholm Summit</h3>
+                <div class="dwh-cs-card-body">
+                  <div class="dwh-cs-card-image-wrap">
+                    <img class="dwh-cs-card-image" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&amp;h=280&amp;fit=crop" alt="Extérieur de la maison modèle Chisholm Summit" width="400" height="280" loading="lazy" />
+                    <div class="dwh-cs-card-overlay">À venir!</div>
+                  </div>
+                  <div class="dwh-cs-card-content">
+                    <span class="dwh-cs-badge">À venir</span>
+                    <a href="#" class="dwh-cs-link">Chisholm Summit <span class="dwh-cs-link-chevron">&rsaquo;</span></a>
+                    <p class="dwh-cs-phone"><strong>Appelez pour des informations</strong> (214) 442-0697</p>
+                    <a href="#" class="dwh-cs-share">Partager la communauté</a>
+                  </div>
+                </div>
+              </article>
+        
+              <article class="dwh-cs-card">
+                <h3 class="dwh-cs-card-title">Fields of Thornberry</h3>
+                <div class="dwh-cs-card-body">
+                  <div class="dwh-cs-card-image-wrap">
+                    <img class="dwh-cs-card-image" src="https://images.unsplash.com/photo-1605276374101-dee2a0ed3dff?w=400&amp;h=280&amp;fit=crop" alt="Rendu de la communauté Fields of Thornberry" width="400" height="280" loading="lazy" />
+                    <div class="dwh-cs-card-overlay">À venir!</div>
+                  </div>
+                  <div class="dwh-cs-card-content">
+                    <span class="dwh-cs-badge">À venir</span>
+                    <a href="#" class="dwh-cs-link">Fields of Thornberry <span class="dwh-cs-link-chevron">&rsaquo;</span></a>
+                    <p class="dwh-cs-phone"><strong>Appelez pour des informations</strong> (972) 552-8769</p>
+                    <a href="#" class="dwh-cs-share">Partager la communauté</a>
+                  </div>
+                </div>
+              </article>
+        
+              <article class="dwh-cs-card">
+                <h3 class="dwh-cs-card-title">Willow Creek Estates</h3>
+                <div class="dwh-cs-card-body">
+                  <div class="dwh-cs-card-image-wrap">
+                    <img class="dwh-cs-card-image" src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cd2e?w=400&amp;h=280&amp;fit=crop" alt="Maison modèle Willow Creek Estates" width="400" height="280" loading="lazy" />
+                    <div class="dwh-cs-card-overlay">À venir!</div>
+                  </div>
+                  <div class="dwh-cs-card-content">
+                    <span class="dwh-cs-badge">À venir</span>
+                    <a href="#" class="dwh-cs-link">Willow Creek Estates <span class="dwh-cs-link-chevron">&rsaquo;</span></a>
+                    <p class="dwh-cs-phone"><strong>Appelez pour des informations</strong> (832) 626-9836</p>
+                    <a href="#" class="dwh-cs-share">Partager la communauté</a>
+                  </div>
+                </div>
+              </article>
+        
+              <article class="dwh-cs-card">
+                <h3 class="dwh-cs-card-title">Highland Park Reserve</h3>
+                <div class="dwh-cs-card-body">
+                  <div class="dwh-cs-card-image-wrap">
+                    <img class="dwh-cs-card-image" src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400&amp;h=280&amp;fit=crop" alt="Communauté Highland Park Reserve" width="400" height="280" loading="lazy" />
+                    <div class="dwh-cs-card-overlay">À venir!</div>
+                  </div>
+                  <div class="dwh-cs-card-content">
+                    <span class="dwh-cs-badge">À venir</span>
+                    <a href="#" class="dwh-cs-link">Highland Park Reserve <span class="dwh-cs-link-chevron">&rsaquo;</span></a>
+                    <p class="dwh-cs-phone"><strong>Appelez pour des informations</strong> (512) 555-0142</p>
+                    <a href="#" class="dwh-cs-share">Partager la communauté</a>
+                  </div>
+                </div>
+              </article>
+        
+              <article class="dwh-cs-card">
+                <h3 class="dwh-cs-card-title">Cedar Grove Landing</h3>
+                <div class="dwh-cs-card-body">
+                  <div class="dwh-cs-card-image-wrap">
+                    <img class="dwh-cs-card-image" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400&amp;h=280&amp;fit=crop" alt="Terrain de maison Cedar Grove Landing" width="400" height="280" loading="lazy" />
+                    <div class="dwh-cs-card-overlay">À venir!</div>
+                  </div>
+                  <div class="dwh-cs-card-content">
+                    <span class="dwh-cs-badge">À venir</span>
+                    <a href="#" class="dwh-cs-link">Cedar Grove Landing <span class="dwh-cs-link-chevron">&rsaquo;</span></a>
+                    <p class="dwh-cs-phone"><strong>Appelez pour des informations</strong> (303) 555-0198</p>
+                    <a href="#" class="dwh-cs-share">Partager la communauté</a>
+                  </div>
+                </div>
+              </article>
+        
+              <article class="dwh-cs-card">
+                <h3 class="dwh-cs-card-title">Providence Village</h3>
+                <div class="dwh-cs-card-body">
+                  <div class="dwh-cs-card-image-wrap">
+                    <img class="dwh-cs-card-image" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400&amp;h=280&amp;fit=crop" alt="Maison modèle Providence Village" width="400" height="280" loading="lazy" />
+                    <div class="dwh-cs-card-overlay">À venir!</div>
+                  </div>
+                  <div class="dwh-cs-card-content">
+                    <span class="dwh-cs-badge">À venir</span>
+                    <a href="#" class="dwh-cs-link">Providence Village <span class="dwh-cs-link-chevron">&rsaquo;</span></a>
+                    <p class="dwh-cs-phone"><strong>Appelez pour des informations</strong> (704) 555-0163</p>
+                    <a href="#" class="dwh-cs-share">Partager la communauté</a>
+                  </div>
+                </div>
+              </article>
+        
+              <article class="dwh-cs-card">
+                <h3 class="dwh-cs-card-title">Lakewood Ranch</h3>
+                <div class="dwh-cs-card-body">
+                  <div class="dwh-cs-card-image-wrap">
+                    <img class="dwh-cs-card-image" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=400&amp;h=280&amp;fit=crop" alt="Entrée de la communauté Lakewood Ranch" width="400" height="280" loading="lazy" />
+                    <div class="dwh-cs-card-overlay">À venir!</div>
+                  </div>
+                  <div class="dwh-cs-card-content">
+                    <span class="dwh-cs-badge">À venir</span>
+                    <a href="#" class="dwh-cs-link">Lakewood Ranch <span class="dwh-cs-link-chevron">&rsaquo;</span></a>
+                    <p class="dwh-cs-phone"><strong>Appelez pour des informations</strong> (813) 555-0185</p>
+                    <a href="#" class="dwh-cs-share">Partager la communauté</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+        
+            <div class="dwh-cs-arrow" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            </div>
+          </div>
+        
+          <p class="dwh-cs-hint">Glissez latéralement pour voir plus de communautés à venir</p>
+        </section>
+        
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260609T005933Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d9df906a-39ff-48b6-b495-0dceabdea7d6"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260609T183202Z

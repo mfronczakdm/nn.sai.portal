@@ -1,0 +1,55 @@
+﻿---
+ID: "2408797c-36c7-4bd5-a3b9-90b409a06ccd"
+Parent: "9a59b2b4-ee8f-43f1-beb6-3536246dc4f9"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Project/lcmc/Appointments/LcmcAppointmentScheduler
+SharedFields:
+- ID: "037fe404-dd19-4bf7-8e30-4dadf68b27b0"
+  Hint: componentName
+  Value: LcmcAppointmentScheduler
+- ID: "17bb046a-a32a-41b3-8315-81217947611b"
+  Hint: ComponentQuery
+  Value: |
+    query LcmcAppointmentScheduler($datasource: String!, $language: String!) { datasource: item(path: $datasource, language: $language) { appointmentTitle: field(name: "AppointmentTitle") { jsonValue } emergencyText: field(name: "EmergencyText") { jsonValue } visitQuestion: field(name: "VisitQuestion") { jsonValue } filtersLabel: field(name: "FiltersLabel") { jsonValue } showMoreLabel: field(name: "ShowMoreLabel") { jsonValue } fluNote: field(name: "FluNote") { jsonValue } urgentCareBody: field(name: "UrgentCareBody") { jsonValue } finishTitle: field(name: "FinishTitle") { jsonValue } detailsHeading: field(name: "DetailsHeading") { jsonValue } loginHeading: field(name: "LoginHeading") { jsonValue } loginBody: field(name: "LoginBody") { jsonValue } loginCta: field(name: "LoginCta") { jsonValue } guestHeading: field(name: "GuestHeading") { jsonValue } guestCta: field(name: "GuestCta") { jsonValue } confirmationTitle: field(name: "ConfirmationTitle") { jsonValue } confirmationBody: field(name: "ConfirmationBody") { jsonValue } children { results { id visitTitle: field(name: "VisitTitle") { jsonValue } visitDescription: field(name: "VisitDescription") { jsonValue } visitKey: field(name: "VisitKey") { jsonValue } } } } }
+- ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
+  Hint: Datasource Template
+  Value: /sitecore/templates/Project/lcmc/Components/Appointments/LcmcAppointmentScheduler
+- ID: "a77e8568-1ab3-44f1-a664-b7c37ec7810d"
+  Hint: Parameters Template
+  Value: "{16FFD12E-F505-44DB-9931-610875BF930F}"
+- ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
+  Hint: Datasource Location
+  Value: "query:$site/*[@@name='Data']/*[@@templatename='LcmcAppointmentScheduler Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='LcmcAppointmentScheduler Folder']"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "6d4b6bf3-07e7-4dba-b9cc-7a4cc2eadadd"
+Languages:
+- Language: en
+  Fields:
+  - ID: "30e85e5d-e00a-4864-b358-7624d511deb4"
+    Hint: __Unversioned revision
+    Value: "bfa13432-748f-4c3f-87b5-d84c23889e9d"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260902T182016Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "befadbd1-9742-40ae-b748-a25356bb16e0"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260902T182023Z

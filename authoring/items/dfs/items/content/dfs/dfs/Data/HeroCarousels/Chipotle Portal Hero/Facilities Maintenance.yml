@@ -1,0 +1,50 @@
+﻿---
+ID: "7c2edb0e-035e-4a22-b069-f8242035ea9d"
+Parent: "61979ed4-3bad-49c2-af3d-0d725df1884a"
+Template: "9c063cfd-1d09-42b5-9fc4-560a6d7e859f"
+Path: /sitecore/content/dfs/dfs/Data/HeroCarousels/Chipotle Portal Hero/Facilities Maintenance
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "b2e7ad35-11c3-4c08-81c1-b14f22221368"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0da51f00-cb5f-45ef-9c9e-4a387ca41a53"
+      Hint: Description
+      Value: HVAC filters, plumbing, electrical, cleaning chemicals, and facility repair materials to keep every Chipotle location running smoothly.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260819T184718Z
+    - ID: "3ce233be-84f2-4003-a560-6c0e347d1a09"
+      Hint: Summary
+      Value: Keep locations operational
+    - ID: "6488d3e6-7485-4e1a-b83f-c88d6b0db7a5"
+      Hint: Image
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/5fbe31ebd8bb48a38636b37af4f89842?v=3d6c630d" dam-id="4papo7GsTw2F8J-vD1rgNw" width="1920" height="539" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/84580/thumbnail" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "be36f855-717f-448c-8b91-3afd53e96561"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "cd3300c5-39a0-4b1a-9d0d-37a89b7517f9"
+      Hint: SlideName
+      Value: Welcome chipolte
+    - ID: "d7652d2b-7405-4763-afd9-8d541a2f1f13"
+      Hint: Link
+      Value: |
+        <link linktype="external" url="/portal" text="Shop maintenance" />
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260819T221942Z

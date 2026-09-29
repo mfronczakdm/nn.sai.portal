@@ -1,0 +1,27 @@
+﻿---
+ID: "08d16a99-563a-4def-a158-85619dae1ad2"
+Parent: "7fad9903-66a3-4357-b57c-5dad1e295416"
+Template: "ed997a6b-feca-4349-a58d-72535e7fefff"
+Path: "/sitecore/content/quanex/amesburytruth/Data/HeroCarousels/Q-LON Weatherseals Hero"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260813T190543Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "14ecf570-ac60-48d0-a463-2611d0805244"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260813T190544Z
+    - ID: "f94f50d4-7756-4dd8-a4ca-21f057242f56"
+      Hint: ContactLink
+      Value: |
+        <link text="CONTACT US" linktype="internal" id="{3A818DD2-63A3-4C70-A844-5DDD980B35FA}" />

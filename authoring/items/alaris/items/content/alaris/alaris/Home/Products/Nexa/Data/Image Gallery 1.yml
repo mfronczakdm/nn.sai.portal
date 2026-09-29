@@ -1,0 +1,67 @@
+﻿---
+ID: "cb3d076d-443c-4a47-86fe-b0e4ae042d9c"
+Parent: "edfc085a-0590-4525-ad92-2e721f7135f3"
+Template: "4eb24890-61ec-4283-8c61-c55a86d1fe2a"
+Path: /sitecore/content/alaris/alaris/Home/Products/Nexa/Data/Image Gallery 1
+BranchID: "6b289b7b-5c87-4423-aee6-bf33e0627fbb"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "bbe5f9c8-c5b3-47e4-be63-851172e75dd9"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{DCAE7B76-5FEE-4C5A-AB02-76BD47AD1D15}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260516T104034Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "45324e3c-4e19-41d7-9497-bdcde2228eb1"
+      Hint: image2
+      Value: |
+        <image mediaid="db422fcb-809b-43bd-b8bf-d3ea332feb98" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "58d5ed64-d50a-4ea7-ba39-f5d2e98c7c3e"
+      Hint: title
+      Value: The edgy side of luxury.
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "69a878be-bdf4-4509-a304-238b0a24bac4"
+      Hint: image4
+      Value: |
+        <image mediaid="eee53e93-81b2-42c2-a943-bceb097c1368" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d37879cf-6fe4-4a6b-872d-f1efb4bc2a32"
+    - ID: "a5a74a19-c942-421c-9ff5-c3116fcffa0d"
+      Hint: image1
+      Value: |
+        <image mediaid="7d2baee6-8c25-4cce-bfe8-149e95de021d" />
+    - ID: "a7be6790-3f1a-43fc-94bb-302604c97081"
+      Hint: description
+      Value: "Experience seamless, AI-driven mobility with Alaris—where innovation meets effortless sophistication."
+    - ID: "b293c09d-fd8e-4eee-97bd-0f30f3f4ca10"
+      Hint: image3
+      Value: |
+        <image mediaid="c77fb69f-0506-4b97-b077-97dd02e585fb" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260516T104145Z

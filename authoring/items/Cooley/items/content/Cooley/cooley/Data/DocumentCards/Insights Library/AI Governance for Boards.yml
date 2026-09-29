@@ -1,0 +1,49 @@
+﻿---
+ID: "fd4cb0e8-af83-43cc-b074-bb338be85396"
+Parent: "e1f02c92-88bf-4731-8c1f-a8fc15b989ea"
+Template: "209d7904-335f-426b-9724-87e8a1e1ac0b"
+Path: /sitecore/content/Cooley/cooley/Data/DocumentCards/Insights Library/AI Governance for Boards
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "09014979-cb35-4efc-be86-16bd8f04910e"
+      Hint: PracticeArea
+      Value: Artificial Intelligence
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260818T194500Z
+    - ID: "7538013d-0700-4673-9531-9e1ffbc1b0fa"
+      Hint: PublishedDate
+      Value: 20260408T000000Z
+    - ID: "804d28ab-59dd-422b-8355-1ac8878fcfc9"
+      Hint: FileSize
+      Value: 2.1 MB
+    - ID: "8c0c6dfd-a0ad-4503-9f49-37081b086641"
+      Hint: CardSummary
+      Value: Oversight questions, risk allocation, and disclosure points for boards navigating generative AI across the enterprise.
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "618a61c4-05d6-4dae-be80-38dab7d834c5"
+    - ID: "ad868a5c-8b8d-40ce-a78a-1721c54e9778"
+      Hint: DocumentLink
+      Value: |
+        <link linktype="external" url="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/8aa4951088da4e42876b61a5346fadd0?v=3206c826" target="" text="cooley-down-rounds-governance-playbook.pdf" title="" class="" dam-id="0C-503kfQ9yzdKJv_3q__g"/>
+    - ID: "b712fab2-3d16-4eb7-a268-a18d9691ba54"
+      Hint: PreviewImage
+      Value: |
+        <image mediaid="{E049EDFE-2BCC-4AD6-B128-2B409171988D}" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\andrew.vieau@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260819T180350Z
+    - ID: "f79134a4-1574-463b-8adb-42317ae3f520"
+      Hint: CardTitle
+      Value: AI Governance for Boards

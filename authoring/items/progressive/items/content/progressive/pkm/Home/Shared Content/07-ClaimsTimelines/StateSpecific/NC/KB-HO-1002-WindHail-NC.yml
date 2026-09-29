@@ -1,0 +1,41 @@
+﻿---
+ID: "93087160-d085-4a0c-a148-cb206a7bb095"
+Parent: "a8fed2ec-9401-4b0c-a078-188d50c20e69"
+Template: "bdf6c974-e68c-46a2-a0a9-d382fd0927eb"
+Path: "/sitecore/content/progressive/pkm/Home/Shared Content/07-ClaimsTimelines/StateSpecific/NC/KB-HO-1002-WindHail-NC"
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{032573D3-ADA5-4CA3-923F-49699BEDE8DA}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "21b8d6f1-4294-46a5-98fd-38df0ce8aae0"
+      Hint: SourceDocumentLOB
+      Value: "{331E5703-41A4-4592-B744-14A83C4CFAAE}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260731T141323Z
+    - ID: "76e0c665-5c4d-4d03-ae66-a5f3d12978ba"
+      Hint: Content
+      Value: "<p>On North Carolina wind and hail losses, prioritize tarp or board-up the same day when interior exposure is reported. Schedule exterior inspection within Progressive storm-surge service levels for the event county, and give the insured a firm next-milestone date if capacity is constrained.</p>"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "085752f5-993f-4663-b869-e7abb832de88"
+    - ID: "94ce9d2b-aa0c-488f-943a-d2e582eb50bc"
+      Hint: SourceDocumentPerils
+      Value: "{F27BF167-E841-4254-A84B-2F72EC78167F}"
+    - ID: "a8f6d033-4e9e-4598-be5e-da2456c41b9f"
+      Hint: sourceDocumentLink
+      Value: |
+        <link text="Homeowners Wind and Hail - Storm Damage Handling" linktype="internal" class="" title="" target="" querystring="" id="{02878C46-F3A7-4034-A056-9CEBBF9BCA11}" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\emqWsGLKzRiKgWenEsIKMqdxvXhiQ4cT
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260802T143426Z

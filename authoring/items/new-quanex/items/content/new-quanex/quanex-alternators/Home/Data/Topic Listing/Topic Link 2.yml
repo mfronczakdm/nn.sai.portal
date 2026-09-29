@@ -1,0 +1,52 @@
+﻿---
+ID: "4666f7a0-209a-4899-a7f2-09c9823ae86a"
+Parent: "7d505567-03b2-4905-9ebf-6b418b47fb72"
+Template: "15e94068-d790-48f2-aa56-44836ff7042a"
+Path: "/sitecore/content/new-quanex/quanex-alternators/Home/Data/Topic Listing/Topic Link 2"
+BranchID: "67d5aed7-9d44-4899-925d-d06ef478b9fb"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 50
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "00120cc3-b2ef-45af-bc72-0e42f5e3f36a"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{2B866AB6-D3C6-46C1-B5AD-7C0597118A81}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260818T142703Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d054e00e-81e8-440a-acb8-e81d1bfe98a7"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260818T142834Z
+    - ID: "d9d7a7a2-017d-4a0e-92ab-3608b2c88afe"
+      Hint: linkOptional
+      Value: |
+        <link class="" id="{2E64AA56-683B-442D-929D-EE2F71446367}" querystring="" anchor="" target="" title="" linktype="internal" text="Communities" url="" />

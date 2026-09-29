@@ -1,0 +1,139 @@
+﻿---
+ID: "21fb8db6-1732-4a44-8bec-e39c52c1961a"
+Parent: "d9cb7792-ee41-4a8f-a1f8-729d90b4e527"
+Template: "4540c3ad-240b-4d59-bd8b-f2a34d1edc79"
+Path: /sitecore/content/lcmc/lcmc/Data/Services/Emergency Care
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "195a3eb9-2014-4ade-9528-46016044c588"
+      Hint: ServiceTitle
+      Value: Emergency Care
+    - ID: "249f0edb-a3f4-4f20-a0b6-e389bdbe8547"
+      Hint: ServiceDetail
+      Value: <p>LCMC Health emergency departments treat serious injuries, stroke, chest pain, and other urgent conditions that cannot wait.</p><p>University Medical Center New Orleans is the region's Level I Trauma Center, and system hospitals provide neighborhood emergency access throughout greater New Orleans.</p>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T003549Z
+    - ID: "36f9cc2a-c286-48dc-8161-cbc3300f8601"
+      Hint: OfferedAtLocations
+      Value: |
+        {EFEAC293-2BF4-4516-873D-4EAC1F998474}
+        {C6A3CDB7-8708-4C60-861B-009B7FB9E786}
+        {C5D069A3-C8BB-40FE-89BE-D7F9D5C9614F}
+        {6B468248-C9D1-4DD0-9E8D-44B477FDB96C}
+        {6766AE91-0553-4034-B328-2327CB54AB85}
+        {063FFD1D-6681-4DFC-8A7A-504EA903090F}
+        {E8F05084-0214-424F-B1D4-B5B562499F5C}
+        {35C77454-5FB8-460D-BC12-299F7B31DE5A}
+    - ID: "4491d77b-da17-4a4d-8480-8a09826476a5"
+      Hint: ServiceShortDescription
+      Value: "24/7 emergency evaluation and treatment for life-threatening illness and injury across LCMC Health hospitals."
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "976f3ac7-e0e1-42ae-9fec-813e4f12d113"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260908T003812Z
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "195a3eb9-2014-4ade-9528-46016044c588"
+      Hint: ServiceTitle
+      Value: Atención de Emergencias
+    - ID: "249f0edb-a3f4-4f20-a0b6-e389bdbe8547"
+      Hint: ServiceDetail
+      Value: <p>Los departamentos de emergencias de LCMC Health tratan lesiones graves, accidentes cerebrovasculares, dolor en el pecho y otras condiciones urgentes que no pueden esperar.</p><p>University Medical Center New Orleans es el Centro de Trauma de Nivel I de la región, y los hospitales del sistema brindan acceso a atención de emergencias en los vecindarios de toda el área metropolitana de Nueva Orleans.</p>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T003549Z
+    - ID: "36f9cc2a-c286-48dc-8161-cbc3300f8601"
+      Hint: OfferedAtLocations
+      Value: |
+        {EFEAC293-2BF4-4516-873D-4EAC1F998474}
+        {C6A3CDB7-8708-4C60-861B-009B7FB9E786}
+        {C5D069A3-C8BB-40FE-89BE-D7F9D5C9614F}
+        {6B468248-C9D1-4DD0-9E8D-44B477FDB96C}
+        {6766AE91-0553-4034-B328-2327CB54AB85}
+        {063FFD1D-6681-4DFC-8A7A-504EA903090F}
+        {E8F05084-0214-424F-B1D4-B5B562499F5C}
+        {35C77454-5FB8-460D-BC12-299F7B31DE5A}
+    - ID: "4491d77b-da17-4a4d-8480-8a09826476a5"
+      Hint: ServiceShortDescription
+      Value: Evaluación y tratamiento de emergencias las 24 horas, los 7 días de la semana, para enfermedades y lesiones potencialmente mortales en los hospitales de LCMC Health.
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2bec43a5-b71d-44a1-b481-f2d19f9d3708"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T162722Z
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "195a3eb9-2014-4ade-9528-46016044c588"
+      Hint: ServiceTitle
+      Value: Soins d’urgence
+    - ID: "249f0edb-a3f4-4f20-a0b6-e389bdbe8547"
+      Hint: ServiceDetail
+      Value: "<p>Les services d’urgence de LCMC Health traitent les blessures graves, les AVC, les douleurs thoraciques et d’autres problèmes urgents qui ne peuvent pas attendre.</p><p>University Medical Center New Orleans est le centre de traumatologie de niveau I de la région, et les hôpitaux du réseau offrent un accès aux soins d’urgence de proximité dans l’ensemble de la grande région de La Nouvelle-Orléans.</p>"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T003549Z
+    - ID: "36f9cc2a-c286-48dc-8161-cbc3300f8601"
+      Hint: OfferedAtLocations
+      Value: |
+        {EFEAC293-2BF4-4516-873D-4EAC1F998474}
+        {C6A3CDB7-8708-4C60-861B-009B7FB9E786}
+        {C5D069A3-C8BB-40FE-89BE-D7F9D5C9614F}
+        {6B468248-C9D1-4DD0-9E8D-44B477FDB96C}
+        {6766AE91-0553-4034-B328-2327CB54AB85}
+        {063FFD1D-6681-4DFC-8A7A-504EA903090F}
+        {E8F05084-0214-424F-B1D4-B5B562499F5C}
+        {35C77454-5FB8-460D-BC12-299F7B31DE5A}
+    - ID: "4491d77b-da17-4a4d-8480-8a09826476a5"
+      Hint: ServiceShortDescription
+      Value: Évaluation et traitement d’urgence 24 h/24, 7 j/7 pour les maladies et blessures potentiellement mortelles dans les hôpitaux de LCMC Health.
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "3c6f9ce2-8b9d-49ab-8547-9a7dd3f200a0"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201350Z

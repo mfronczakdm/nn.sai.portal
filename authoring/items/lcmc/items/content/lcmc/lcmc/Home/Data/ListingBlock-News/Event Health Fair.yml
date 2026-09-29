@@ -1,0 +1,245 @@
+﻿---
+ID: "9e394681-e681-4286-86ed-95523f074660"
+Parent: "9e825574-f15d-45b1-ad50-29be168cc52b"
+Template: "13c565fe-09c3-4994-8b5a-580da061be0c"
+Path: "/sitecore/content/lcmc/lcmc/Home/Data/ListingBlock-News/Event Health Fair"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0bed7c19-045c-4702-8f2e-4ba6219951a7"
+      Hint: ItemSummary
+      Value: <p>Join us for screenings, family activities, and conversations with care teams.</p>
+    - ID: "18691602-fac5-4db1-b600-f2c00b31cc1e"
+      Hint: ItemTitle
+      Value: Community health fair at Children's Hospital
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T020112Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "67c74492-4daf-40dc-bcb9-7bb8ef6cb8c5"
+      Hint: ItemImage
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/533344d0c3294a998cb79e0e34d21523?v=54df0051" dam-id="VQYuu0qyRpOylxU08upcyA" width="2000" height="1332" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/75811/thumbnail" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "89773247-8a06-4dd2-89a6-95024036778b"
+    - ID: "b940d47f-05d1-404d-844e-c3eb1146c521"
+      Hint: ItemDate
+      Value: September 6, 2026
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T161537Z
+    - ID: "da6bd2f3-3f33-4807-aabe-81732653d5ca"
+      Hint: ItemLink
+      Value: |
+        <link text="Get event details" anchor="" linktype="external" class="" title="" target="" querystring="" url="https://www.lcmchealth.org/events/" />
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0bed7c19-045c-4702-8f2e-4ba6219951a7"
+      Hint: ItemSummary
+      Value: <p>Acompáñenos a exámenes de salud, actividades familiares y conversaciones con los equipos de atención.</p>
+    - ID: "18691602-fac5-4db1-b600-f2c00b31cc1e"
+      Hint: ItemTitle
+      Value: Feria de salud comunitaria en Children's Hospital
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T020112Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "67c74492-4daf-40dc-bcb9-7bb8ef6cb8c5"
+      Hint: ItemImage
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/533344d0c3294a998cb79e0e34d21523?v=54df0051" dam-id="VQYuu0qyRpOylxU08upcyA" width="2000" height="1332" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/75811/thumbnail" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "00a2d622-7cc5-446c-8149-46b79348bf94"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "b940d47f-05d1-404d-844e-c3eb1146c521"
+      Hint: ItemDate
+      Value: 6 de septiembre de 2026
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T162837Z
+    - ID: "da6bd2f3-3f33-4807-aabe-81732653d5ca"
+      Hint: ItemLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="Ver evento" url="https://www.lcmchealth.org/events/" />
+  - Version: 2
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0bed7c19-045c-4702-8f2e-4ba6219951a7"
+      Hint: ItemSummary
+      Value: <p>Acompáñenos para exámenes de salud, actividades familiares y conversaciones con los equipos de atención.</p>
+    - ID: "18691602-fac5-4db1-b600-f2c00b31cc1e"
+      Hint: ItemTitle
+      Value: Feria de salud comunitaria en Children's Hospital
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260909T232005Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "67c74492-4daf-40dc-bcb9-7bb8ef6cb8c5"
+      Hint: ItemImage
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/533344d0c3294a998cb79e0e34d21523?v=54df0051" dam-id="VQYuu0qyRpOylxU08upcyA" width="2000" height="1332" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/75811/thumbnail" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "787a03f6-e58d-4f02-8afc-24a6fe8a1737"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "b940d47f-05d1-404d-844e-c3eb1146c521"
+      Hint: ItemDate
+      Value: 6 de septiembre de 2026
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260909T232005Z
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T232010Z
+    - ID: "da6bd2f3-3f33-4807-aabe-81732653d5ca"
+      Hint: ItemLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="Ver evento" url="https://www.lcmchealth.org/events/" />
+  - Version: 3
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0bed7c19-045c-4702-8f2e-4ba6219951a7"
+      Hint: ItemSummary
+      Value: <p>Acompáñenos para exámenes de salud, actividades familiares y conversaciones con nuestros equipos de atención.</p>
+    - ID: "18691602-fac5-4db1-b600-f2c00b31cc1e"
+      Hint: ItemTitle
+      Value: Feria de salud comunitaria en Children's Hospital
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T020112Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "67c74492-4daf-40dc-bcb9-7bb8ef6cb8c5"
+      Hint: ItemImage
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/533344d0c3294a998cb79e0e34d21523?v=54df0051" dam-id="VQYuu0qyRpOylxU08upcyA" width="2000" height="1332" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/75811/thumbnail" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "3c3313db-4095-4e48-9cbf-1b82ac75c37e"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "b940d47f-05d1-404d-844e-c3eb1146c521"
+      Hint: ItemDate
+      Value: 6 de septiembre de 2026
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T234808Z
+    - ID: "da6bd2f3-3f33-4807-aabe-81732653d5ca"
+      Hint: ItemLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="Ver evento" url="https://www.lcmchealth.org/events/" />
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0bed7c19-045c-4702-8f2e-4ba6219951a7"
+      Hint: ItemSummary
+      Value: "<p>Joignez-vous à nous pour des dépistages, des activités familiales et des échanges avec les équipes de soins.</p>"
+    - ID: "18691602-fac5-4db1-b600-f2c00b31cc1e"
+      Hint: ItemTitle
+      Value: Salon de la santé communautaire à l’Hôpital pour enfants
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T020112Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "67c74492-4daf-40dc-bcb9-7bb8ef6cb8c5"
+      Hint: ItemImage
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/533344d0c3294a998cb79e0e34d21523?v=54df0051" dam-id="VQYuu0qyRpOylxU08upcyA" width="2000" height="1332" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/75811/thumbnail" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "e4089960-35df-40ae-a8b8-9975d1e27d64"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "b940d47f-05d1-404d-844e-c3eb1146c521"
+      Hint: ItemDate
+      Value: 6 septembre 2026
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201433Z
+    - ID: "da6bd2f3-3f33-4807-aabe-81732653d5ca"
+      Hint: ItemLink
+      Value: |
+        <link class="" querystring="" anchor="" target="" title="" linktype="external" text="Obtenez les détails de l’événement" url="https://www.lcmchealth.org/events/" />

@@ -1,0 +1,44 @@
+﻿---
+ID: "23d22387-013e-4e57-8540-695cd17d49ad"
+Parent: "1c0eab68-cec1-4be1-853d-d4017f52392a"
+Template: "1c0eab68-cec1-4be1-853d-d4017f52392a"
+Path: /sitecore/templates/Project/pillsbury/Home Page/__Standard Values
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {57711C22-144E-432C-8903-6A7F5D0D4858}
+    {8ED35C65-36A6-4293-B2DD-F7F8709307F4}
+    {A6FDD18E-0FBA-43B3-9C85-3357DC089452}
+    {09926B82-AA52-43F6-A8E6-4E08ED1ABABE}
+    {E72F255D-2FBF-4B59-8385-F98FB8E81D29}
+    {2C1FD1AF-F374-4F76-9786-DFCA16C61CCB}
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "58cb1e16-7457-4d91-8fb3-380342619860"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260804T103249Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4dbbf6a2-5aa2-4387-adb0-e46afc90ba76"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260804T103252Z

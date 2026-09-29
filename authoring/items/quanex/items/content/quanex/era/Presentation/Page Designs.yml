@@ -1,0 +1,73 @@
+﻿---
+ID: "0f93e8c1-f589-4195-98fb-d022eb7a016c"
+Parent: "fb4f2493-67ee-4745-98c5-47ceb30caa99"
+Template: "2dfe3445-9c97-4648-ac44-c1a53e9e8422"
+Path: /sitecore/content/quanex/era/Presentation/Page Designs
+BranchID: "45cf9f42-b3ac-4412-aab9-f8441c7e448e"
+SharedFields:
+- ID: "ba1f60d6-3deb-40cc-bb61-eec772279ee1"
+  Hint: TemplatesMapping
+  Value: "%7bD8715F80-7CA6-460F-BFC6-60C70451D736%7d%3d%257B9832415A-B8A4-4249-A0F0-1FE01C2DA67D%257D%26%7bECAC2D85-2510-4188-B7BF-5B26A096FD80%7d%3d%257B9832415A-B8A4-4249-A0F0-1FE01C2DA67D%257D%26%7bC7630162-7A5A-47A3-BBA2-77D1CEBBBBC3%7d%3d%257B844DF113-74BB-462E-A71E-C6EC61AFF425%257D%26%7b70B7A694-2CAA-4BA7-9D70-BEF2DDEF8C1D%7d%3d%257B9832415A-B8A4-4249-A0F0-1FE01C2DA67D%257D%26%7bE205C77B-5A65-47B4-8234-C9671FA57B00%7d%3d%257B9832415A-B8A4-4249-A0F0-1FE01C2DA67D%257D%26%7b4659E1F1-4313-4155-8736-1200FE27AE8E%7d%3d%257B9832415A-B8A4-4249-A0F0-1FE01C2DA67D%257D%26%7b2083F738-CC4F-4ADC-AE30-3F32C85E4763%7d%3d%257B9832415A-B8A4-4249-A0F0-1FE01C2DA67D%257D%26%7b274FC64E-530F-457E-BD04-8B195DF94646%7d%3d%257B9832415A-B8A4-4249-A0F0-1FE01C2DA67D%257D"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "58deccb7-c17b-46cd-bba1-fc086994a50a"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{2EA756FA-AED6-4599-83B7-36FEFE229B31}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260811T154512Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4a46ae53-f31c-4ac3-9e2f-065f0b0635a4"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260817T221324Z
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260811T154512Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "e7c78833-9c21-495c-ac1c-a3cdc43dbcf3"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260818T134523Z

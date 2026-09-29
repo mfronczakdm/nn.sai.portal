@@ -1,0 +1,23 @@
+﻿---
+ID: "f4216003-c5a9-433d-8fa5-10e3d9169aa8"
+Parent: "4ad3a9e5-6f9c-4a66-81a2-2a6644789a1b"
+Template: "6f3ec942-5926-4db0-9604-8852622c29ff"
+Path: /sitecore/content/pillsbury/pillsburylaw/Data/Bio Listings
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260804T195959Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "41f8dd9c-950a-4fd3-8c98-26a2821f2188"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260804T195959Z

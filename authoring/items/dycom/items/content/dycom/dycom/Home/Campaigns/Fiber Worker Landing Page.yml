@@ -1,0 +1,212 @@
+﻿---
+ID: "3b2510b1-d4bf-4a8d-b295-8223779b537a"
+Parent: "ee486365-e403-46f2-99b6-3e56c639aef2"
+Template: "3bb64d5c-3c6e-408f-9b03-e2a00d5082e3"
+Path: /sitecore/content/dycom/dycom/Home/Campaigns/Fiber Worker Landing Page
+SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{D535BF82-EE8D-4109-93AB-F471B24DAFC8}"
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 0
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{6BD83934-47F8-47E2-A90E-7A560B0D46D8}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "8a66a8c1-a3bb-4782-9db4-20ade2ba0262"
+Languages:
+- Language: en
+  Fields:
+  - ID: "30e85e5d-e00a-4864-b358-7624d511deb4"
+    Hint: __Unversioned revision
+    Value: "c308598e-dda9-49a8-82c3-96b696fd7cf0"
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Fiber Worker Landing Page
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{961D844A-D3ED-4E4B-88BF-CBA351F60BEE}"
+              p:before="*"
+              s:ds="local:/Data/Fiber Worker Hero"
+              s:id="{7943A20A-669D-4921-81EE-F4EC7F2E78A3}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BFC56217C-743F-40FE-9A5F-89A6162D0E60%7D&amp;Dark Imge=1&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+              s:ph="headless-main" />
+            <r
+              uid="{690805CE-235C-43F7-A15B-9866EE64317E}"
+              p:after="r[@uid='{961D844A-D3ED-4E4B-88BF-CBA351F60BEE}']"
+              s:id="{02340885-3692-4CAD-AC11-ED61206501A3}"
+              s:par="excludeTopMargin&amp;CSSStyles&amp;DynamicPlaceholderId=8"
+              s:ph="headless-main" />
+            <r
+              uid="{BE449F60-FB91-4578-9478-97C0F93EAFC6}"
+              p:after="r[@uid='{690805CE-235C-43F7-A15B-9866EE64317E}']"
+              s:id="{7A1D9A21-B8D7-42F9-9B0B-92ABF8D1974F}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;BackgroundImage&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=10"
+              s:ph="/headless-main/container-fullwidth-8" />
+            <r
+              uid="{510E0167-C8FC-4037-BF92-774376F56B7C}"
+              p:after="r[@uid='{BE449F60-FB91-4578-9478-97C0F93EAFC6}']"
+              s:ds="369d7f2e-9695-41aa-85fe-284f99572626"
+              s:id="{241A1B8E-E69A-4E07-B5E4-53975371AD3C}"
+              s:par="colorScheme=tertiary&amp;FieldNames=%7BC607F078-C933-4DE5-877A-89B34C285DF6%7D&amp;CSSStyles&amp;DynamicPlaceholderId=14"
+              s:ph="/headless-main/container-fullwidth-8/container-10">
+              <rls>
+                <ruleset
+                  s:pet="true">
+                  <rule
+                    uid="{AB0DB6A9-126B-459C-BA11-AB8AD6576E2A}"
+                    s:name="510e0167c8fc4037bf92774376f56b7c_00cca693cbd546b98d362ea673db2351">
+                    <conditions>
+                      <condition
+                        uid="B276E5A1CEC640659CEFB091A22578A2"
+                        s:id="{8E7426A4-12ED-4C44-8625-E7191860E726}"
+                        s:VariantName="510e0167c8fc4037bf92774376f56b7c_00cca693cbd546b98d362ea673db2351" />
+                    </conditions>
+                    <actions>
+                      <action
+                        uid="{D76BD911-B07F-44E4-A51E-E95BA34735B0}"
+                        s:id="{0F3C6BEC-E56B-4875-93D7-2846A75881D2}"
+                        s:DataSource="79f1b8f9-bc78-4534-a66a-7ec6ae3bd5a2" />
+                      <action
+                        uid="{BB5E311A-2165-4FD9-B774-4F1BB09A4AC4}"
+                        s:id="{525C7B5A-8FD2-4B99-89F6-4F3F6D23BB02}"
+                        s:Parameters="colorScheme=tertiary&amp;FieldNames=%7BAFB06FCE-0443-4345-906B-A783E4D4896B%7D&amp;CSSStyles&amp;DynamicPlaceholderId=14" />
+                    </actions>
+                  </rule>
+                  <rule
+                    uid="{00000000-0000-0000-0000-000000000000}"
+                    s:name="Default">
+                    <conditions>
+                      <condition
+                        uid="8BBBC3E2A94C45F3AA8F15D1DA31BEBF"
+                        s:id="{4888ABBB-F17D-4485-B14B-842413F88732}" />
+                    </conditions>
+                  </rule>
+                </ruleset>
+              </rls>
+            </r>
+            <r
+              uid="{D0D8314D-8674-4B19-996C-ACB2728E0382}"
+              p:after="r[@uid='{510E0167-C8FC-4037-BF92-774376F56B7C}']"
+              s:ds="765a049e-ecf9-4abb-94c2-7da8ce16742a"
+              s:id="{09F20AFE-ABD8-4A55-839F-F16CBCBDB7C9}"
+              s:par="CSSStyles"
+              s:ph="/headless-main/container-fullwidth-8/container-10" />
+            <r
+              uid="{DD4DF1A0-9637-40C9-9F08-69D3EB1CF995}"
+              p:after="r[@uid='{D0D8314D-8674-4B19-996C-ACB2728E0382}']"
+              s:ds="local:/Data/Fiber Sign up"
+              s:id="{EF8925C3-D106-4187-9BC4-3C19A213AE75}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B3EDDAB70-AD23-4CC9-A349-6EF07C37AFC8%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=15"
+              s:ph="/headless-main/container-fullwidth-8/container-10" />
+            <r
+              uid="{E299C9F5-8D7F-42EF-85C2-BF38FAAAC708}"
+              p:after="*[1=2]"
+              s:ds="0a06e16e-af6a-4b76-b910-dc0458d9a16d"
+              s:id="{7CB831E8-C889-4193-B822-A1131CB0B755}"
+              s:par="FieldNames=%7B42E40C67-BA00-4D99-852E-73EE84D46977%7D&amp;darkPlayIcon&amp;useModal&amp;displayIcon&amp;CSSStyles&amp;DynamicPlaceholderId=16"
+              s:ph="/headless-main/container-fullwidth-8/container-10" />
+          </d>
+        </r>
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: |
+        If you've driven through a small town lately and noticed crews working roadside, pulling cable, boring under streets, or climbing aerial lines — that's the backbone of modern America being built in real time. And the engineers directing that work? They're not sitting in offices. They're in the field, solving problems that matter, in places that need it most.
+        At Dycom, we just secured two of the largest infrastructure contracts in our company's history — a major BEAD fiber deployment across the Southeast and a data center infrastructure build across the Mid-Atlantic. That means we need engineers who want to be where the action is. Not someday. Now.
+        
+        What Does a Dycom Field Engineer Actually Do?
+        Field engineers at Dycom are the connective tissue between a project plan and a finished network. On any given day that might mean:
+        
+        Surveying and staking new fiber routes through rural communities that have never had broadband
+        Coordinating underground boring crews and ensuring bore paths clear existing utilities safely
+        Troubleshooting aerial splice points on a live network
+        Working directly with municipal inspectors and landowners to keep projects on schedule
+        Reading and redlining construction drawings in real field conditions
+        
+        It's technical. It's physical. It's never the same day twice. And the work you do is permanent — the fiber you deploy will serve that community for the next 30 years.
+        
+        The Moment We're In Is Unprecedented
+        The federal BEAD program is pushing $29.5 billion into broadband infrastructure across the country. Hyperscalers are building data centers faster than the industry has ever seen. 5G densification is still accelerating. All of it requires fiber. All of that fiber requires engineers who know how to build it.
+        This isn't a temporary hiring push. This is a decade-long build cycle that is just getting started — and Dycom is positioned at the center of it. The engineers we bring on today will grow with the largest infrastructure investment in American history.
+        
+        What We're Looking For
+        We're hiring field engineers across the Southeast and Mid-Atlantic right now for roles that range from entry-level construction engineering support to experienced project leads. Here's what matters most to us:
+        You're comfortable in the field. This isn't a remote or hybrid role. You'll be outside, on job sites, working alongside crews. That's the job, and for the right person, it's the best part.
+        You can solve problems in real time. Plans change. Weather happens. Utilities aren't always where the drawings say they are. We need engineers who adapt, communicate, and keep projects moving.
+        You want to build a career, not just fill a role. Dycom promotes from within. The field engineers we hire today are the project managers, operations directors, and regional leaders of tomorrow. We have the training infrastructure — including our new 49-acre immersive training campus in Georgia — to back that up.
+        Experience in telecom, utilities, or civil construction is a plus. But we've built careers from scratch before and we'll do it again. If you have the drive, we have the path.
+        
+        What You'll Get
+        
+        Competitive weekly pay with overtime opportunity on active deployments
+        Full benefits from day one — medical, dental, vision, life insurance, and 401(k) with company match
+        Education reimbursement for engineers pursuing advanced credentials or degrees
+        A national footprint — with 500+ field offices and 39 operating subsidiaries, opportunity follows you wherever your career takes you
+        Stability — Dycom has a $9.5 billion backlog. These aren't short-term projects. This is long-term, mission-critical work with a company that isn't going anywhere.
+        
+        
+        Already at Dycom? This Is for You Too.
+        If you're currently in a field support, locating, or construction role at any of our subsidiaries and you've been thinking about what's next — these contracts are your opening. Talk to your supervisor about our internal advancement pathways, or visit our career development portal to see what engineering roles are available within your region. We built the training campus for exactly this moment.
+        
+        The Bottom Line
+        The country needs this infrastructure built. The communities we serve are counting on it. The engineers who build it will look back on this decade as the moment they did something that actually mattered.
+        If that sounds like the career you've been looking for — or the next step you've been waiting for — we want to hear from you.
+        
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260512T142140Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: From the Ground Up
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: "From the Ground Up: Why Field Engineers Are Building the Most Important Infrastructure of Our Generation"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "034dd13c-5ab4-47fa-b9ab-94f4a554e44e"
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: From the Ground Up
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260715T122459Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Landing 1
+    - ID: "efbce7e8-6d4e-49e2-9b48-a9ab9a1e6fd7"
+      Hint: pageThumbnail
+      Value: |
+        <Image src="https://mrfbasech.sitecoresandbox.cloud/api/public/content/86438-HomePageHero-2000x800?v=8c6e6082" dam-id="da19OI0IRBGpFSfQ0Ea7GA" width="2000" height="800" alt="imgi_12_Dycom_MR_Image_01-scaled.jpg" dam-content-type="Image" thumbnailsrc="https://mrfbasech.sitecoresandbox.cloud/api/gateway/86438/thumbnail" />

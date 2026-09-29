@@ -1,0 +1,37 @@
+﻿---
+ID: "ea4d2d6c-dc36-4794-88a0-333a273bdb27"
+Parent: "f3fce46d-6fc8-4c7d-b01e-72758fd33c95"
+Template: "73e57eaa-b54a-41e1-b689-bf7dae9155ad"
+Path: /sitecore/content/progressive/pkm/Home/Questions and Answers/Claim Intake/Severity assignment at intake/StateSpecific/TX/Severity assignment at intake
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{10B3BAB9-A77C-48E4-B1BB-681BC145763A}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260731T012529Z
+    - ID: "2d71e32d-e990-46b3-8ca1-58cd89743d5e"
+      Hint: Question
+      Value: "How do Progressive claims advisors assign claim severity at intake?"
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Severity assignment at intake
+    - ID: "4f8dc72e-1548-471c-9f3e-a13e944e4321"
+      Hint: Answer
+      Value: "Apply Progressive severity guidelines based on injuries, total loss indicators, litigation potential, commercial exposure, and catastrophic events. Assign the severity tier during intake so the claim routes to the correct queue. In Texas, treat hail and storm surge volume as severity drivers and assign tiers promptly consistent with TX DOI unfair claims practices expectations. Escalate uncertain high-severity indicators to a supervisor or SME rather than under-classifying the file."
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "6287036b-8d13-4b2a-b4e1-f5dad083b2cf"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260731T012530Z

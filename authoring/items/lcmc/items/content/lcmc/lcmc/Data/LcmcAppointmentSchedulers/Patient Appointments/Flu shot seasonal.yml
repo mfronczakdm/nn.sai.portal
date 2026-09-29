@@ -1,0 +1,106 @@
+﻿---
+ID: "aa2dc74d-e999-4ac6-b2cb-f14a2ac36d16"
+Parent: "67471114-7cd2-4099-9331-cccf8e61d20f"
+Template: "95a6d332-c755-45d8-921a-6b1f2a3675cd"
+Path: /sitecore/content/lcmc/lcmc/Data/LcmcAppointmentSchedulers/Patient Appointments/Flu shot seasonal
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0460e082-9902-4a2e-9c72-c618bc1f77c4"
+      Hint: VisitDescription
+      Value: Your child is healthy and needs a flu shot. You can schedule flu shots at any primary care location.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260902T182046Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ab07c3f3-e5c5-4faa-a44e-d8298decf1b4"
+    - ID: "8f9fc998-74e8-450e-9e22-a1883bc3cf28"
+      Hint: VisitKey
+      Value: "flu-shot"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260902T182046Z
+    - ID: "e4f064f2-f59b-4e15-abf2-11a998810fdf"
+      Hint: VisitTitle
+      Value: Flu shot (seasonal)
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0460e082-9902-4a2e-9c72-c618bc1f77c4"
+      Hint: VisitDescription
+      Value: Su hijo está sano y necesita una vacuna contra la influenza. Puede programar vacunas contra la influenza en cualquier sede de atención primaria.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260902T182046Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "cc045af2-d8ad-43fc-ab6a-e0924d67642f"
+    - ID: "8f9fc998-74e8-450e-9e22-a1883bc3cf28"
+      Hint: VisitKey
+      Value: "vacuna-contra-la-influenza"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T163025Z
+    - ID: "e4f064f2-f59b-4e15-abf2-11a998810fdf"
+      Hint: VisitTitle
+      Value: Vacuna contra la influenza (estacional)
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0460e082-9902-4a2e-9c72-c618bc1f77c4"
+      Hint: VisitDescription
+      Value: "Votre enfant est en bonne santé et a besoin d’un vaccin antigrippal. Vous pouvez prendre rendez-vous pour un vaccin antigrippal dans n’importe quel établissement de soins primaires."
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260902T182046Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "de3ca854-fe16-43c2-a591-b88c3495890a"
+    - ID: "8f9fc998-74e8-450e-9e22-a1883bc3cf28"
+      Hint: VisitKey
+      Value: "flu-shot"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201640Z
+    - ID: "e4f064f2-f59b-4e15-abf2-11a998810fdf"
+      Hint: VisitTitle
+      Value: Vaccin antigrippal (saisonnier)

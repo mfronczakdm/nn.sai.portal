@@ -1,0 +1,88 @@
+﻿---
+ID: "fffbf54a-7caf-4897-9554-b774d2170402"
+Parent: "fbeaa926-81a2-48b0-85c5-6db1665509e4"
+Template: "25cf32e0-c2d1-4e72-8cb9-fdeb000be0d7"
+Path: /sitecore/content/Cooley/cooley/Home/Practices/Corporate/Life Sciences and Healthcare Regulatory
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{A9DC9935-97AD-47F3-B212-F6E596C33DA9}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "a89802d2-8706-433e-b49e-b8e528720a7e"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Cooley advises biotech, pharma, medtech, and healthcare companies on FDA and healthcare regulatory issues.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260814T205801Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: LS Regulatory
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Life sciences regulatory counsel from Cooley LLP.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: FDA, healthcare, and product regulation for life sciences companies.
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Life Sciences and Healthcare Regulatory | Cooley LLP
+    - ID: "65408499-25bc-49d0-a2ff-b2fdd798aafc"
+      Hint: ogImage
+      Value: |
+        <image mediaid="" src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=1600&q=80" alt="Lab" />
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Life Sciences Regulatory | Cooley LLP
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "42a132d3-2749-4395-9c94-6f5b87fc419c"
+    - ID: "8cff1548-edb9-4e39-836b-23f86ed55248"
+      Hint: image
+      Value: |
+        <image mediaid="" src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=1600&q=80" alt="Scientist working in a laboratory" />
+    - ID: "93f130f9-b079-4d7d-b7af-ac85cd31bffd"
+      Hint: Detail
+      Value: "<h2>Regulated products, practical advice</h2><p>Cooley’s life sciences and healthcare regulatory lawyers counsel companies on FDA pathways, promotional practices, healthcare fraud-and-abuse, and interactions with providers. We sit with corporate and IP colleagues on financings, partnerships, and product launches.</p><h3>Focus</h3><ul><li>FDA and product lifecycle counseling</li><li>Healthcare compliance and Stark/AKS issues</li><li>Promotional and scientific-exchange review</li></ul>"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Cooley FDA and healthcare regulatory counsel for life sciences companies.
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Life Sciences and Healthcare Regulatory
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\WIt5EKonMo343Fqq8begbLVKlCgYPAIX
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260815T104904Z
+    - ID: "e7f8a9b0-c1d2-4e3f-8a9b-0c1d2e3f4a5b"
+      Hint: metadataAuthor
+      Value: Cooley LLP
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Life Sciences Regulatory | Cooley LLP
+    - ID: "efbce7e8-6d4e-49e2-9b48-a9ab9a1e6fd7"
+      Hint: pageThumbnail
+      Value: |
+        <image mediaid="" src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=1600&q=80" alt="Laboratory" />
+    - ID: "f6fcc0b6-31b2-49cd-8a66-4ba282a8ad24"
+      Hint: metadataKeywords
+      Value: Cooley, FDA, healthcare regulatory, life sciences

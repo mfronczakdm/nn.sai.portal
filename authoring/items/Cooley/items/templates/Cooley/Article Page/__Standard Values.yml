@@ -1,0 +1,44 @@
+﻿---
+ID: "4d99b91a-d228-4ca9-be8e-9c59b1265b31"
+Parent: "41ba957d-9d15-415c-83c7-977bfcfffe40"
+Template: "41ba957d-9d15-415c-83c7-977bfcfffe40"
+Path: /sitecore/templates/Project/Cooley/Article Page/__Standard Values
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {41BA957D-9D15-415C-83C7-977BFCFFFE40}
+    {A9F6756A-36B7-496D-A950-9C6BA40CC384}
+    {1A416DEB-CE48-4A0C-AD57-18F2C7586374}
+    {A8333B29-2578-428A-B974-EB20ADABAA96}
+    {0CE86CCE-1792-47D5-ABD9-525CE558709A}
+    {6FA5680B-34C7-4BAA-8C70-96901362DB3A}
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "4b1f1b0d-05e9-4433-8e4f-7615532e52e6"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260814T195911Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "caa24f76-befa-4667-9042-b5597a233dcd"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260814T195913Z

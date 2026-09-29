@@ -1,0 +1,146 @@
+﻿---
+ID: "e5d63d4b-5a70-43e6-987a-9e454c99034f"
+Parent: "9726e4d1-8fcd-4dd6-b5e9-bb4467655176"
+Template: "7629f514-e156-4543-adc6-051453441b33"
+Path: /sitecore/content/quanex/quanex/Home/Products/Insulating Glass Spacers/Super Spacer
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{D140A924-6284-4418-BE0B-30642F4CDFED}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "4ad7a210-ed24-4eaa-99da-3d53cc8e8972"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0169dfce-89a4-4941-821a-ab1266a1de4a"
+      Hint: CategoryLabel
+      Value: Insulating Glass Spacers
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: 
+    - ID: "17cbe776-d3b6-4203-a37c-30a46022bae6"
+      Hint: SpecSheetLink
+      Value: |
+        <link text="Print a Spec Sheet" linktype="external" url="https://www.quanex.com/product/insulating-glass-spacers/" anchor="" target="_blank" />
+    - ID: "190e4142-e8b7-4d47-bcf7-b6bac38ce753"
+      Hint: TechnicalData
+      Value: "<ul><li>Warm-edge silicone foam spacer construction</li><li>Continuous desiccant for moisture management</li><li>Compatible with dual-seal IG manufacturing lines</li><li>Supports low-e and triple-pane configurations</li><li>Helps reduce perimeter condensation risk</li></ul>"
+    - ID: "211d45c2-39f7-430f-8c81-14d8ba310a0f"
+      Hint: ImageUrl
+      Value: "https://www.quanex.com/wp-content/uploads/2026/04/R1_SuperSpacer_ProductRendering_Glass_Black_TopCorner.jpg"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260813T193636Z
+    - ID: "2c9cc36e-d30c-49c1-93dc-21a353045c54"
+      Hint: StylesAvailable
+      Value: "<ul><li>Standard warm-edge profiles</li><li>TriSeal configurations</li><li>Multiple spacer widths for IG unit designs</li><li>Residential and commercial IG applications</li></ul>"
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Super Spacer
+    - ID: "77b62e2b-2f05-418e-bb41-2903feb32e39"
+      Hint: Description
+      Value: "<p>Super Spacer® is Quanex’s warm-edge insulating glass spacer system engineered to help IG units deliver lasting thermal performance and condensation resistance.</p><p>Its flexible, desiccant-filled design supports high-volume IG manufacturing while helping fabricators meet energy-code and comfort expectations for residential and commercial windows.</p>"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c506c582-38c0-4e0d-86f3-8c7f8d869111"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260814T121953Z
+    - ID: "dbd19eed-f27a-4850-9a43-512eb6176c14"
+      Hint: Benefits
+      Value: |
+        <ul><li>Improved edge-of-glass thermal performance vs. traditional metal spacers</li><li>Durable flexibility for long-term IG unit integrity</li><li>Supports ENERGY STAR® and high-performance fenestration goals</li><li>Trusted by IG fabricators worldwide</li></ul><p><a href="https://www.quanex.com/product/insulating-glass-spacers/">Explore insulating glass spacers</a></p>
+  - Version: 2
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0169dfce-89a4-4941-821a-ab1266a1de4a"
+      Hint: CategoryLabel
+      Value: Insulating Glass Spacers
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: 
+    - ID: "17cbe776-d3b6-4203-a37c-30a46022bae6"
+      Hint: SpecSheetLink
+      Value: |
+        <link text="Print a Spec Sheet" linktype="external" url="https://www.quanex.com/product/insulating-glass-spacers/" anchor="" target="_blank" />
+    - ID: "190e4142-e8b7-4d47-bcf7-b6bac38ce753"
+      Hint: TechnicalData
+      Value: "<ul><li>Warm-edge silicone foam spacer construction</li><li>Continuous desiccant for moisture management</li><li>Compatible with dual-seal IG manufacturing lines</li><li>Supports low-e and triple-pane configurations</li><li>Helps reduce perimeter condensation risk</li></ul>"
+    - ID: "211d45c2-39f7-430f-8c81-14d8ba310a0f"
+      Hint: ImageUrl
+      Value: "https://www.quanex.com/wp-content/uploads/2026/04/R1_SuperSpacer_ProductRendering_Glass_Black_TopCorner.jpg"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260814T120348Z
+    - ID: "2c9cc36e-d30c-49c1-93dc-21a353045c54"
+      Hint: StylesAvailable
+      Value: "<ul><li>Standard warm-edge profiles</li><li>TriSeal configurations</li><li>Multiple spacer widths for IG unit designs</li><li>Residential and commercial IG applications</li></ul>"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: "Super Spacer is Quanex’s warm-edge insulating glass spacer system engineered for lasting thermal performance and condensation resistance."
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Super Spacer
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "65408499-25bc-49d0-a2ff-b2fdd798aafc"
+      Hint: ogImage
+      Value: |
+        <image src="https://www.quanex.com/wp-content/uploads/2026/04/R1_SuperSpacer_ProductRendering_Glass_Black_TopCorner.jpg" alt="Super Spacer" />
+    - ID: "77b62e2b-2f05-418e-bb41-2903feb32e39"
+      Hint: Description
+      Value: "<p>Super Spacer® is Quanex’s warm-edge insulating glass spacer system engineered to help IG units deliver lasting thermal performance and condensation resistance.</p><p>Its flexible, desiccant-filled design supports high-volume IG manufacturing while helping fabricators meet energy-code and comfort expectations for residential and commercial windows.</p>"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4b20ec49-6c2f-439a-b1c9-19462cad5c48"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c5b02812-deb7-4b51-8a68-8019a44f0db3"
+      Hint: ProductSKU
+      Value: "QNX-SS-STD"
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260814T120348Z
+    - ID: "ca94ec7f-2908-4e34-a9e5-f8ec8dd7a91d"
+      Hint: ProductID
+      Value: "QNX-SS"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260814T145439Z
+    - ID: "dbd19eed-f27a-4850-9a43-512eb6176c14"
+      Hint: Benefits
+      Value: |
+        <ul><li>Improved edge-of-glass thermal performance vs. traditional metal spacers</li><li>Durable flexibility for long-term IG unit integrity</li><li>Supports ENERGY STAR® and high-performance fenestration goals</li><li>Trusted by IG fabricators worldwide</li></ul><p><a href="https://www.quanex.com/product/insulating-glass-spacers/">Explore insulating glass spacers</a></p>
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Super Spacer | Quanex
+    - ID: "f2fa4f60-bfec-4b8a-858c-f5ae25df459b"
+      Hint: ProductName
+      Value: Super Spacer

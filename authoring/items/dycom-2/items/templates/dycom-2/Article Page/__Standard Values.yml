@@ -1,0 +1,44 @@
+﻿---
+ID: "25b7dffa-feaa-4fc9-b895-5ae8502c6702"
+Parent: "60a71531-0942-4639-8b00-efe282fbb18d"
+Template: "60a71531-0942-4639-8b00-efe282fbb18d"
+Path: "/sitecore/templates/Project/dycom-2/Article Page/__Standard Values"
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {60A71531-0942-4639-8B00-EFE282FBB18D}
+    {A6FE6DE6-8228-44FD-B93A-9332DB480977}
+    {DBAA4675-CCB7-4D69-8A18-C40B837A39F3}
+    {AE317BBA-C29E-481B-8D60-D519DD367A37}
+    {A4507192-1281-4D6A-AB89-51F2AB59836C}
+    {115F5F0E-50DB-4E73-8E97-DA315929CF90}
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "f2f23900-da1b-45e7-87d1-912cdc110a4d"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260525T184050Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "7ee11924-e5b6-40c1-a719-e4ae88ccd4ef"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260525T184053Z

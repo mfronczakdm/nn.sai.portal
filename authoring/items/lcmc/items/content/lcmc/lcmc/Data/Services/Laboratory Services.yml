@@ -1,0 +1,139 @@
+﻿---
+ID: "ef79adef-3a78-4992-b297-04b3447c9cf4"
+Parent: "d9cb7792-ee41-4a8f-a1f8-729d90b4e527"
+Template: "4540c3ad-240b-4d59-bd8b-f2a34d1edc79"
+Path: /sitecore/content/lcmc/lcmc/Data/Services/Laboratory Services
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "195a3eb9-2014-4ade-9528-46016044c588"
+      Hint: ServiceTitle
+      Value: Laboratory Services
+    - ID: "249f0edb-a3f4-4f20-a0b6-e389bdbe8547"
+      Hint: ServiceDetail
+      Value: <p>Laboratory teams process blood work, cultures, and other diagnostic tests for inpatients, emergency patients, and outpatient visits.</p><p>Each LCMC Health hospital maintains laboratory support for routine and urgent care.</p>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T003556Z
+    - ID: "36f9cc2a-c286-48dc-8161-cbc3300f8601"
+      Hint: OfferedAtLocations
+      Value: |
+        {EFEAC293-2BF4-4516-873D-4EAC1F998474}
+        {C6A3CDB7-8708-4C60-861B-009B7FB9E786}
+        {C5D069A3-C8BB-40FE-89BE-D7F9D5C9614F}
+        {6B468248-C9D1-4DD0-9E8D-44B477FDB96C}
+        {6766AE91-0553-4034-B328-2327CB54AB85}
+        {063FFD1D-6681-4DFC-8A7A-504EA903090F}
+        {E8F05084-0214-424F-B1D4-B5B562499F5C}
+        {35C77454-5FB8-460D-BC12-299F7B31DE5A}
+    - ID: "4491d77b-da17-4a4d-8480-8a09826476a5"
+      Hint: ServiceShortDescription
+      Value: Hospital and outpatient laboratory testing that supports diagnosis, treatment, and emergency care.
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2fe58310-8172-46a7-a033-5d5cf7cda956"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260908T003821Z
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "195a3eb9-2014-4ade-9528-46016044c588"
+      Hint: ServiceTitle
+      Value: Servicios de laboratorio
+    - ID: "249f0edb-a3f4-4f20-a0b6-e389bdbe8547"
+      Hint: ServiceDetail
+      Value: <p>Los equipos de laboratorio procesan análisis de sangre, cultivos y otras pruebas diagnósticas para pacientes hospitalizados, pacientes de urgencias y consultas ambulatorias.</p><p>Cada hospital de LCMC Health mantiene apoyo de laboratorio para la atención rutinaria y urgente.</p>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T003556Z
+    - ID: "36f9cc2a-c286-48dc-8161-cbc3300f8601"
+      Hint: OfferedAtLocations
+      Value: |
+        {EFEAC293-2BF4-4516-873D-4EAC1F998474}
+        {C6A3CDB7-8708-4C60-861B-009B7FB9E786}
+        {C5D069A3-C8BB-40FE-89BE-D7F9D5C9614F}
+        {6B468248-C9D1-4DD0-9E8D-44B477FDB96C}
+        {6766AE91-0553-4034-B328-2327CB54AB85}
+        {063FFD1D-6681-4DFC-8A7A-504EA903090F}
+        {E8F05084-0214-424F-B1D4-B5B562499F5C}
+        {35C77454-5FB8-460D-BC12-299F7B31DE5A}
+    - ID: "4491d77b-da17-4a4d-8480-8a09826476a5"
+      Hint: ServiceShortDescription
+      Value: Pruebas de laboratorio hospitalarias y ambulatorias que apoyan el diagnóstico, el tratamiento y la atención de urgencias.
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "dd58bb07-5a48-4771-862e-38e7a650ad5b"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T162728Z
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "195a3eb9-2014-4ade-9528-46016044c588"
+      Hint: ServiceTitle
+      Value: Services de laboratoire
+    - ID: "249f0edb-a3f4-4f20-a0b6-e389bdbe8547"
+      Hint: ServiceDetail
+      Value: <p>Les équipes de laboratoire traitent les analyses sanguines, les cultures et d’autres tests diagnostiques pour les patients hospitalisés, les patients à l’urgence et les visites en consultation externe.</p><p>Chaque hôpital de LCMC Health offre un soutien de laboratoire pour les soins courants et urgents.</p>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T003556Z
+    - ID: "36f9cc2a-c286-48dc-8161-cbc3300f8601"
+      Hint: OfferedAtLocations
+      Value: |
+        {EFEAC293-2BF4-4516-873D-4EAC1F998474}
+        {C6A3CDB7-8708-4C60-861B-009B7FB9E786}
+        {C5D069A3-C8BB-40FE-89BE-D7F9D5C9614F}
+        {6B468248-C9D1-4DD0-9E8D-44B477FDB96C}
+        {6766AE91-0553-4034-B328-2327CB54AB85}
+        {063FFD1D-6681-4DFC-8A7A-504EA903090F}
+        {E8F05084-0214-424F-B1D4-B5B562499F5C}
+        {35C77454-5FB8-460D-BC12-299F7B31DE5A}
+    - ID: "4491d77b-da17-4a4d-8480-8a09826476a5"
+      Hint: ServiceShortDescription
+      Value: Analyses de laboratoire en milieu hospitalier et ambulatoire pour appuyer le diagnostic, le traitement et les soins d’urgence.
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5db64502-dfd7-4730-b6f4-e8b2944acf1e"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201350Z

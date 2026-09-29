@@ -1,0 +1,206 @@
+﻿---
+ID: "0c0aaec6-e68a-4d32-8356-1acb67ffa3ee"
+Parent: "089d023d-ea90-488d-8d25-6a485586c869"
+Template: "537cad02-fa7d-4fce-989e-246844a833a1"
+Path: /sitecore/content/dwh/dwh/Home/Home Buying Help/Buying/Celebrating 50 years
+BranchID: "6bab7d2c-cdb0-413d-bb2e-5470ee068685"
+SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{D9F5319E-74F4-4DEB-8CD1-BA27A8782FA9}"
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{E60D6E1E-6907-4A7C-9E9E-CA354ACE2F61}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "e900fcdb-b5bb-48ab-b455-1cc050f626ac"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{15222368-6E27-4384-B68D-C0F074A04A95}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{1E24F50F-ECAD-4925-B028-654B93A1652E}"
+              p:before="*"
+              s:id="{E80C2A78-FCC2-4D32-8EC5-4133F608BE5C}"
+              s:par="backgroundColor&amp;excludeTopMargin=1&amp;inset&amp;CSSStyles&amp;DynamicPlaceholderId=2"
+              s:ph="headless-main" />
+            <r
+              uid="{75B94739-C82C-4BEC-978D-C2811C31B09A}"
+              p:after="r[@uid='{1E24F50F-ECAD-4925-B028-654B93A1652E}']"
+              s:id="{3F9CCCB1-7BD7-4245-A3E9-91ED43575D98}"
+              s:par="excludeTopMargin&amp;CSSStyles&amp;DynamicPlaceholderId=4&amp;Styles=%7B417CFF95-A3B6-4A1D-B10A-D41D449CE5FA%7D%7C%7BAE80F34C-96EF-4B45-8028-78EE7FB5B559%7D%7C%7BEF966498-A54E-44F1-80B4-917F0535B239%7D"
+              s:ph="headless-main" />
+            <r
+              uid="{FB98C4A3-8C0B-47E4-AA67-D3C9166FB710}"
+              p:after="r[@uid='{75B94739-C82C-4BEC-978D-C2811C31B09A}']"
+              s:id="{02340885-3692-4CAD-AC11-ED61206501A3}"
+              s:par="excludeTopMargin&amp;CSSStyles&amp;DynamicPlaceholderId=8"
+              s:ph="headless-main" />
+            <r
+              uid="{E3602665-E6C8-4A63-B397-C4A4BD09DD59}"
+              p:after="r[@uid='{FB98C4A3-8C0B-47E4-AA67-D3C9166FB710}']"
+              s:id="{E80C2A78-FCC2-4D32-8EC5-4133F608BE5C}"
+              s:par="backgroundColor=secondary&amp;excludeTopMargin&amp;inset&amp;CSSStyles&amp;DynamicPlaceholderId=6"
+              s:ph="headless-main" />
+            <r
+              uid="{EE5191AB-D41F-4FD4-A46D-3DB95BA6EBA2}"
+              p:after="r[@uid='{E3602665-E6C8-4A63-B397-C4A4BD09DD59}']"
+              s:ds="local:/Data/Article Header"
+              s:id="{DD6C6E80-1458-4276-B753-001691C8841C}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=3"
+              s:ph="/headless-main/container-fullbleed-2" />
+            <r
+              uid="{D61AB6FE-6379-4953-B42A-797F650313EE}"
+              p:after="r[@uid='{EE5191AB-D41F-4FD4-A46D-3DB95BA6EBA2}']"
+              s:ds="local:/Data/Text 1"
+              s:id="{50B36874-8C4E-4958-9DD6-8B95C6AFD09A}"
+              s:par="CSSStyles&amp;DynamicPlaceholderId=5"
+              s:ph="/headless-main/container-seventy-4" />
+            <r
+              uid="{D5047C48-4899-4E9B-AC74-3D047C742DD4}"
+              p:after="r[@uid='{D61AB6FE-6379-4953-B42A-797F650313EE}']"
+              s:ds="local:/Data/CTA Banner"
+              s:id="{3332F59B-F5F3-44DF-B66E-2811C31AEB3C}"
+              s:par="colorScheme&amp;CSSStyles&amp;DynamicPlaceholderId=7"
+              s:ph="/headless-main/container-fullbleed-6" />
+            <r
+              uid="{47E4AE26-1C23-4C1C-B595-90BED86348BA}"
+              p:after="*[1=2]"
+              s:ds="{836A34E4-7629-42CB-BC15-F50604E1E3B4}"
+              s:id="{B7F0E01C-EA01-4D4B-B286-49E058754C84}"
+              s:par="CSSStyles"
+              s:ph="/headless-main/container-fullwidth-8" />
+          </d>
+        </r>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260609T174606Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ec5b4cbb-cdec-40b2-8bc8-b7c547970c96"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\WIt5EKonMo343Fqq8begbLVKlCgYPAIX
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260624T134450Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Celebrating 50 years
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{1E24F50F-ECAD-4925-B028-654B93A1652E}"
+              p:before="*"
+              s:id="{E80C2A78-FCC2-4D32-8EC5-4133F608BE5C}"
+              s:par="backgroundColor&amp;excludeTopMargin=1&amp;inset&amp;CSSStyles&amp;DynamicPlaceholderId=2"
+              s:ph="headless-main" />
+            <r
+              uid="{75B94739-C82C-4BEC-978D-C2811C31B09A}"
+              p:after="r[@uid='{1E24F50F-ECAD-4925-B028-654B93A1652E}']"
+              s:id="{3F9CCCB1-7BD7-4245-A3E9-91ED43575D98}"
+              s:par="excludeTopMargin&amp;CSSStyles&amp;DynamicPlaceholderId=4&amp;Styles=%7B417CFF95-A3B6-4A1D-B10A-D41D449CE5FA%7D%7C%7BAE80F34C-96EF-4B45-8028-78EE7FB5B559%7D%7C%7BEF966498-A54E-44F1-80B4-917F0535B239%7D"
+              s:ph="headless-main" />
+            <r
+              uid="{FB98C4A3-8C0B-47E4-AA67-D3C9166FB710}"
+              p:after="r[@uid='{75B94739-C82C-4BEC-978D-C2811C31B09A}']"
+              s:id="{02340885-3692-4CAD-AC11-ED61206501A3}"
+              s:par="excludeTopMargin&amp;CSSStyles&amp;DynamicPlaceholderId=8"
+              s:ph="headless-main" />
+            <r
+              uid="{E3602665-E6C8-4A63-B397-C4A4BD09DD59}"
+              p:after="r[@uid='{FB98C4A3-8C0B-47E4-AA67-D3C9166FB710}']"
+              s:id="{E80C2A78-FCC2-4D32-8EC5-4133F608BE5C}"
+              s:par="backgroundColor=secondary&amp;excludeTopMargin&amp;inset&amp;CSSStyles&amp;DynamicPlaceholderId=6"
+              s:ph="headless-main" />
+            <r
+              uid="{EE5191AB-D41F-4FD4-A46D-3DB95BA6EBA2}"
+              p:after="r[@uid='{E3602665-E6C8-4A63-B397-C4A4BD09DD59}']"
+              s:ds="local:/Data/Article Header"
+              s:id="{DD6C6E80-1458-4276-B753-001691C8841C}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=3"
+              s:ph="/headless-main/container-fullbleed-2" />
+            <r
+              uid="{D61AB6FE-6379-4953-B42A-797F650313EE}"
+              p:after="r[@uid='{EE5191AB-D41F-4FD4-A46D-3DB95BA6EBA2}']"
+              s:ds="local:/Data/Text 1"
+              s:id="{50B36874-8C4E-4958-9DD6-8B95C6AFD09A}"
+              s:par="CSSStyles&amp;DynamicPlaceholderId=5"
+              s:ph="/headless-main/container-seventy-4" />
+            <r
+              uid="{D5047C48-4899-4E9B-AC74-3D047C742DD4}"
+              p:after="r[@uid='{D61AB6FE-6379-4953-B42A-797F650313EE}']"
+              s:ds="local:/Data/CTA Banner"
+              s:id="{3332F59B-F5F3-44DF-B66E-2811C31AEB3C}"
+              s:par="colorScheme&amp;CSSStyles&amp;DynamicPlaceholderId=7"
+              s:ph="/headless-main/container-fullbleed-6" />
+            <r
+              uid="{47E4AE26-1C23-4C1C-B595-90BED86348BA}"
+              p:after="*[1=2]"
+              s:ds="{836A34E4-7629-42CB-BC15-F50604E1E3B4}"
+              s:id="{B7F0E01C-EA01-4D4B-B286-49E058754C84}"
+              s:par="CSSStyles"
+              s:ph="/headless-main/container-fullwidth-8" />
+          </d>
+        </r>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260609T174606Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{57CC7DCE-E6B1-4564-9581-0E5850B8BDF2}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "58ae8e57-ec89-48d9-a3b1-49b81b28a986"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260617T132430Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Célébrant 50 ans

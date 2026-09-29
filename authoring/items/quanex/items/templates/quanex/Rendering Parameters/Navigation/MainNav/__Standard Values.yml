@@ -1,0 +1,40 @@
+﻿---
+ID: "99e4104d-a730-4a57-9ded-decfb1eee059"
+Parent: "df2d1209-220b-4199-90bb-605001811b2a"
+Template: "df2d1209-220b-4199-90bb-605001811b2a"
+Path: /sitecore/templates/Project/quanex/Rendering Parameters/Navigation/MainNav/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1dd93b90-b8c5-452c-b61b-cbbb3f049c75"
+      Hint: MaxColumns
+      Value: 4
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260814T125116Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "8590283b-2ef3-4e86-a119-03595f8eea81"
+    - ID: "b495463b-b19d-490f-8439-36be1fd65085"
+      Hint: StartLevel
+      Value: 1
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260814T125136Z
+    - ID: "fc7b48c9-df89-4d3f-835f-4a906c3432b7"
+      Hint: EndLevel
+      Value: 3

@@ -1,0 +1,35 @@
+﻿---
+ID: "dc2e60a9-58fa-4918-b0dd-a2c49ea77536"
+Parent: "d3ce9d07-5db5-48f3-b950-377170475c88"
+Template: "3d0988cb-43ed-4892-96a4-f9f44fc399cb"
+Path: /sitecore/content/pillsbury/pillsburylaw/Home/Insights/Blogs/Data/BlogListing
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "2301c73f-11b3-47fb-adec-5a9d401b149a"
+      Hint: Title
+      Value: Latest New
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260805T105316Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "156f9eff-fe6d-4afc-b268-d6a6dcec5636"
+    - ID: "92626bfa-add4-40c0-adf3-c9487083b135"
+      Hint: Intro
+      Value: <p>Pillsbury’s blogs bring together lawyers across our global platform to share practical insight on the legal, regulatory, and commercial issues shaping our clients’ industries.</p>
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260806T183157Z
+    - ID: "db3d4528-7fd1-4618-8be5-32ac3097a4e7"
+      Hint: BlogsRoot
+      Value: "{612AE84F-C0C8-451A-859B-1712FB3149D2}"

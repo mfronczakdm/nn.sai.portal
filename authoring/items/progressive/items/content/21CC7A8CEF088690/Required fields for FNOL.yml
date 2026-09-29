@@ -1,0 +1,37 @@
+﻿---
+ID: "1f42b878-cbbe-4151-9652-48b107e87724"
+Parent: "74c08e41-8c56-494f-8935-9ab56442c289"
+Template: "73e57eaa-b54a-41e1-b689-bf7dae9155ad"
+Path: /sitecore/content/progressive/pkm/Home/Questions and Answers/Claim Intake/Required fields for FNOL/StateSpecific/NC/Required fields for FNOL
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{4075096D-22D2-4FF9-947F-EDC7A65BE8FB}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260731T012524Z
+    - ID: "2d71e32d-e990-46b3-8ca1-58cd89743d5e"
+      Hint: Question
+      Value: "Which fields are required when Progressive claims advisors complete FNOL?"
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Required fields for FNOL
+    - ID: "4f8dc72e-1548-471c-9f3e-a13e944e4321"
+      Hint: Answer
+      Value: "Required FNOL fields typically include policy number or searchable insured identifiers, loss date and approximate time, loss location, loss type, caller relationship to the insured, and a brief description of what happened. Add vehicle, driver, or property details when the loss type requires them. In North Carolina, note coastal wind or beach-area exposure when relevant and align capture with NC DOI expectations and rate bureau context for the risk. Do not submit FNOL until required fields are complete or documented as unavailable with a reason."
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "758b5008-bf12-4553-aee3-7d9f3fd58b57"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260731T012525Z

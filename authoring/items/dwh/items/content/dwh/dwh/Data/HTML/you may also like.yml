@@ -1,0 +1,583 @@
+﻿---
+ID: "ad1cfd21-93ed-4976-b725-6117ee30740c"
+Parent: "c7140e82-05d6-4081-a324-4bf07dfc6d0f"
+Template: "912fa158-9f67-49e2-8c3c-0acb71026d1b"
+Path: /sitecore/content/dwh/dwh/Data/HTML/you may also like
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{7A6AA809-FC57-4150-9C37-20F9ED7DBA87}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "a5fc6d87-08ad-4589-bc95-0153c5e1d6af"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "05c233aa-4fec-41dc-9011-b08c6c8ea9c4"
+      Hint: body
+      Value: |
+        <!--
+          Static HTML for HtmlSnippet / Sitecore: "You May Also Like" horizontal product row.
+          Product titles, descriptions, SKUs, and priceLabel values come from examples/portal/src/components/search-results/data.ts (searchCatalog).
+          Image URLs match examples/portal/src/components/search-results/SearchResults.tsx — productImageForResultId(id) over DWYER_OMEGA_PRODUCT_IMAGES (same hash per catalog id).
+          Links use the catalog base href https://www.dwyeromega.com/ — replace in Sitecore as needed.
+          No JavaScript: carousel arrows are decorative; row scrolls horizontally on narrow viewports.
+          Product thumbs use inline width/height so they stay small and square when Tailwind classes from this file are not compiled (e.g. raw HtmlSnippet in CM).
+          Each product card uses a fixed inline width (narrow column) so cards do not stretch to ~40–50% of the row when utility classes are ignored.
+        -->
+        <section
+          class="mx-auto w-full max-w-[100rem] rounded-2xl border border-border/70 bg-card p-6 shadow-sm ring-1 ring-black/[0.03] dark:ring-white/[0.06]"
+          style="max-width: 72rem; margin-left: auto; margin-right: auto; box-sizing: border-box;"
+          aria-label="You may also like"
+        >
+          <h2 class="mb-5 text-lg font-semibold tracking-tight text-foreground md:text-xl">You May Also Like</h2>
+        
+          <div class="flex items-stretch gap-2 md:gap-3" style="display: flex; align-items: stretch; gap: 0.5rem;">
+            <!-- Decorative prev control (static snippet — wire to carousel in app if needed) -->
+            <div
+              class="hidden shrink-0 items-center justify-center self-center rounded-xl border border-border/60 bg-muted/40 px-1.5 text-muted-foreground sm:flex md:px-2"
+              aria-hidden="true"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-70"><path d="m15 18-6-6 6-6"/></svg>
+            </div>
+        
+            <div
+              class="min-w-0 flex-1 overflow-x-auto pb-1 [scrollbar-width:thin]"
+              style="display: flex; flex-wrap: nowrap; gap: 0.75rem; overflow-x: auto; flex: 1 1 0%; min-width: 0; -webkit-overflow-scrolling: touch;"
+            >
+              <!-- pr-1 -->
+              <article
+                class="flex flex-col overflow-hidden rounded-xl border border-border/70 bg-background shadow-sm"
+                style="width: min(168px, 86vw); flex: 0 0 auto; flex-shrink: 0; box-sizing: border-box;"
+              >
+                <a href="https://www.dwyeromega.com/" class="flex flex-col text-inherit no-underline">
+                  <div class="flex w-full shrink-0 justify-center bg-white py-2" style="display: flex; width: 100%; justify-content: center; background: #fff; padding-top: 0.5rem; padding-bottom: 0.5rem; box-sizing: border-box;">
+                    <div
+                      class="shrink-0 overflow-hidden rounded-md"
+                      style="width: 72px; height: 72px; max-width: 72px; max-height: 72px; box-sizing: border-box; display: flex; align-items: center; justify-content: center;"
+                    >
+                      <img
+                        src="https://assets.dwyeromega.com/do-product-images/Series-DA-DS_L.jpg?imwidth=96"
+                        alt=""
+                        width="72"
+                        height="72"
+                        class="object-contain"
+                        style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; display: block;"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="flex flex-1 flex-col border-t border-border/60 text-left"
+                    style="padding: 0.625rem 0.5rem 0.75rem 0.5rem; box-sizing: border-box;"
+                  >
+                    <h3 class="line-clamp-3 text-sm font-normal leading-snug text-foreground">Series DRF Carbon Steel Pressure Regulator</h3>
+                    <p class="mt-1.5 line-clamp-2 text-xs leading-relaxed text-muted-foreground">
+                      Precision diaphragm regulator for air and compatible gases — stable outlet pressure across varying inlet conditions.
+                    </p>
+                    <p class="mt-2 text-xs italic text-muted-foreground">DRF-SS</p>
+                    <p class="mt-2 text-sm font-bold text-primary">From $189</p>
+                  </div>
+                </a>
+              </article>
+        
+              <!-- pr-2 -->
+              <article
+                class="flex flex-col overflow-hidden rounded-xl border border-border/70 bg-background shadow-sm"
+                style="width: min(168px, 86vw); flex: 0 0 auto; flex-shrink: 0; box-sizing: border-box;"
+              >
+                <a href="https://www.dwyeromega.com/" class="flex flex-col text-inherit no-underline">
+                  <div class="flex w-full shrink-0 justify-center bg-white py-2" style="display: flex; width: 100%; justify-content: center; background: #fff; padding-top: 0.5rem; padding-bottom: 0.5rem; box-sizing: border-box;">
+                    <div
+                      class="shrink-0 overflow-hidden rounded-md"
+                      style="width: 72px; height: 72px; max-width: 72px; max-height: 72px; box-sizing: border-box; display: flex; align-items: center; justify-content: center;"
+                    >
+                      <img
+                        src="https://assets.dwyeromega.com/do-product-images/Series-A6_L.jpg?imwidth=96"
+                        alt=""
+                        width="72"
+                        height="72"
+                        class="object-contain"
+                        style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; display: block;"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="flex flex-1 flex-col border-t border-border/60 text-left"
+                    style="padding: 0.625rem 0.5rem 0.75rem 0.5rem; box-sizing: border-box;"
+                  >
+                    <h3 class="line-clamp-3 text-sm font-normal leading-snug text-foreground">Miniature Pressure Regulator — Brass Body</h3>
+                    <p class="mt-1.5 line-clamp-2 text-xs leading-relaxed text-muted-foreground">
+                      Compact low-flow regulator for panels and analyzers; ideal OEM footprint for instrumentation skids.
+                    </p>
+                    <p class="mt-2 text-xs italic text-muted-foreground">M4-02</p>
+                    <p class="mt-2 text-sm font-bold text-primary">From $312</p>
+                  </div>
+                </a>
+              </article>
+        
+              <!-- pr-3 -->
+              <article
+                class="flex flex-col overflow-hidden rounded-xl border border-border/70 bg-background shadow-sm"
+                style="width: min(168px, 86vw); flex: 0 0 auto; flex-shrink: 0; box-sizing: border-box;"
+              >
+                <a href="https://www.dwyeromega.com/" class="flex flex-col text-inherit no-underline">
+                  <div class="flex w-full shrink-0 justify-center bg-white py-2" style="display: flex; width: 100%; justify-content: center; background: #fff; padding-top: 0.5rem; padding-bottom: 0.5rem; box-sizing: border-box;">
+                    <div
+                      class="shrink-0 overflow-hidden rounded-md"
+                      style="width: 72px; height: 72px; max-width: 72px; max-height: 72px; box-sizing: border-box; display: flex; align-items: center; justify-content: center;"
+                    >
+                      <img
+                        src="https://assets.dwyeromega.com/do-product-images/Series-A1F_L.jpg?imwidth=96"
+                        alt=""
+                        width="72"
+                        height="72"
+                        class="object-contain"
+                        style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; display: block;"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="flex flex-1 flex-col border-t border-border/60 text-left"
+                    style="padding: 0.625rem 0.5rem 0.75rem 0.5rem; box-sizing: border-box;"
+                  >
+                    <h3 class="line-clamp-3 text-sm font-normal leading-snug text-foreground">160 Series Stainless Pressure Gauge</h3>
+                    <p class="mt-1.5 line-clamp-2 text-xs leading-relaxed text-muted-foreground">
+                      Liquid-filled option for pulsation damping on pumps and compressors — maintenance-friendly ¼ NPT lower mount.
+                    </p>
+                    <p class="mt-2 text-xs italic text-muted-foreground">160G-15</p>
+                    <p class="mt-2 text-sm font-bold text-primary">$98</p>
+                  </div>
+                </a>
+              </article>
+        
+              <!-- pr-7 -->
+              <article
+                class="flex flex-col overflow-hidden rounded-xl border border-border/70 bg-background shadow-sm"
+                style="width: min(168px, 86vw); flex: 0 0 auto; flex-shrink: 0; box-sizing: border-box;"
+              >
+                <a href="https://www.dwyeromega.com/" class="flex flex-col text-inherit no-underline">
+                  <div class="flex w-full shrink-0 justify-center bg-white py-2" style="display: flex; width: 100%; justify-content: center; background: #fff; padding-top: 0.5rem; padding-bottom: 0.5rem; box-sizing: border-box;">
+                    <div
+                      class="shrink-0 overflow-hidden rounded-md"
+                      style="width: 72px; height: 72px; max-width: 72px; max-height: 72px; box-sizing: border-box; display: flex; align-items: center; justify-content: center;"
+                    >
+                      <img
+                        src="https://assets.dwyeromega.com/do-product-images/Series-SA1100_L.jpg?imwidth=96"
+                        alt=""
+                        width="72"
+                        height="72"
+                        class="object-contain"
+                        style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; display: block;"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="flex flex-1 flex-col border-t border-border/60 text-left"
+                    style="padding: 0.625rem 0.5rem 0.75rem 0.5rem; box-sizing: border-box;"
+                  >
+                    <h3 class="line-clamp-3 text-sm font-normal leading-snug text-foreground">AT2 Series Electronic Pressure Transmitter</h3>
+                    <p class="mt-1.5 line-clamp-2 text-xs leading-relaxed text-muted-foreground">
+                      4–20 mA loop-powered transmitter with field-selectable ranges — pairs with Omega displays for turnkey panels.
+                    </p>
+                    <p class="mt-2 text-xs italic text-muted-foreground">AT2-110A</p>
+                    <p class="mt-2 text-sm font-bold text-primary">$1,245</p>
+                  </div>
+                </a>
+              </article>
+        
+              <!-- pr-8 -->
+              <article
+                class="flex flex-col overflow-hidden rounded-xl border border-border/70 bg-background shadow-sm"
+                style="width: min(168px, 86vw); flex: 0 0 auto; flex-shrink: 0; box-sizing: border-box;"
+              >
+                <a href="https://www.dwyeromega.com/" class="flex flex-col text-inherit no-underline">
+                  <div class="flex w-full shrink-0 justify-center bg-white py-2" style="display: flex; width: 100%; justify-content: center; background: #fff; padding-top: 0.5rem; padding-bottom: 0.5rem; box-sizing: border-box;">
+                    <div
+                      class="shrink-0 overflow-hidden rounded-md"
+                      style="width: 72px; height: 72px; max-width: 72px; max-height: 72px; box-sizing: border-box; display: flex; align-items: center; justify-content: center;"
+                    >
+                      <img
+                        src="https://assets.dwyeromega.com/do-product-images/ap_600x600new.gif?imwidth=96"
+                        alt=""
+                        width="72"
+                        height="72"
+                        class="object-contain"
+                        style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; display: block;"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="flex flex-1 flex-col border-t border-border/60 text-left"
+                    style="padding: 0.625rem 0.5rem 0.75rem 0.5rem; box-sizing: border-box;"
+                  >
+                    <h3 class="line-clamp-3 text-sm font-normal leading-snug text-foreground">Magnehelic® Differential Pressure Gauge</h3>
+                    <p class="mt-1.5 line-clamp-2 text-xs leading-relaxed text-muted-foreground">
+                      Industry-standard DP indication for filters, fans, and isolation rooms — high-visibility dial options.
+                    </p>
+                    <p class="mt-2 text-xs italic text-muted-foreground">MAGNEHELIC</p>
+                    <p class="mt-2 text-sm font-bold text-primary">From $67</p>
+                  </div>
+                </a>
+              </article>
+        
+              <!-- iot-11 -->
+              <article
+                class="flex flex-col overflow-hidden rounded-xl border border-border/70 bg-background shadow-sm"
+                style="width: min(168px, 86vw); flex: 0 0 auto; flex-shrink: 0; box-sizing: border-box;"
+              >
+                <a href="https://www.dwyeromega.com/" class="flex flex-col text-inherit no-underline">
+                  <div class="flex w-full shrink-0 justify-center bg-white py-2" style="display: flex; width: 100%; justify-content: center; background: #fff; padding-top: 0.5rem; padding-bottom: 0.5rem; box-sizing: border-box;">
+                    <div
+                      class="shrink-0 overflow-hidden rounded-md"
+                      style="width: 72px; height: 72px; max-width: 72px; max-height: 72px; box-sizing: border-box; display: flex; align-items: center; justify-content: center;"
+                    >
+                      <img
+                        src="https://assets.dwyeromega.com/do-product-images/Series-A9_L.jpg?imwidth=96"
+                        alt=""
+                        width="72"
+                        height="72"
+                        class="object-contain"
+                        style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; display: block;"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="flex flex-1 flex-col border-t border-border/60 text-left"
+                    style="padding: 0.625rem 0.5rem 0.75rem 0.5rem; box-sizing: border-box;"
+                  >
+                    <h3 class="line-clamp-3 text-sm font-normal leading-snug text-foreground">Wireless mesh repeater — extend plant coverage</h3>
+                    <p class="mt-1.5 line-clamp-2 text-xs leading-relaxed text-muted-foreground">
+                      Self-healing mesh for Omega W-series endpoints; DIN-rail mount with diagnostics LEDs.
+                    </p>
+                    <p class="mt-2 text-xs italic text-muted-foreground">OM-WG-MESH</p>
+                    <p class="mt-2 text-sm font-bold text-primary">$348</p>
+                  </div>
+                </a>
+              </article>
+            </div>
+        
+            <div
+              class="hidden shrink-0 items-center justify-center self-center rounded-xl border border-primary/30 bg-primary/5 px-1.5 text-primary sm:flex md:px-2"
+              aria-hidden="true"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            </div>
+          </div>
+        </section>
+        
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260505T213022Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "9f54f755-364f-4a0b-8dd0-da8e1cce36d6"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260505T214126Z
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "05c233aa-4fec-41dc-9011-b08c6c8ea9c4"
+      Hint: body
+      Value: |
+        <!--
+          Static HTML for HtmlSnippet / Sitecore: "Vous pourriez aussi aimer" ligne de produits horizontale.
+          Les titres de produits, descriptions, SKU et valeurs de priceLabel proviennent de examples/portal/src/components/search-results/data.ts (searchCatalog).
+          Les URL d'images correspondent à examples/portal/src/components/search-results/SearchResults.tsx — productImageForResultId(id) sur DWYER_OMEGA_PRODUCT_IMAGES (même hachage par identifiant de catalogue).
+          Les liens utilisent l'URL de base du catalogue https://www.dwyeromega.com/ — remplacer dans Sitecore si nécessaire.
+          Pas de JavaScript : les flèches du carrousel sont décoratives ; la ligne défile horizontalement sur des affichages étroits.
+          Les vignettes des produits utilisent une largeur/hauteur en ligne afin qu'elles restent petites et carrées lorsque les classes Tailwind de ce fichier ne sont pas compilées (par exemple, HtmlSnippet brut dans CM).
+          Chaque carte produit utilise une largeur fixe en ligne (colonne étroite) afin que les cartes ne s'étirent pas à ~40–50% de la ligne lorsque les classes utilitaires sont ignorées.
+        -->
+        <section
+          class="mx-auto w-full max-w-[100rem] rounded-2xl border border-border/70 bg-card p-6 shadow-sm ring-1 ring-black/[0.03] dark:ring-white/[0.06]"
+          style="max-width: 72rem; margin-left: auto; margin-right: auto; box-sizing: border-box;"
+          aria-label="Vous pourriez aussi aimer"
+        >
+          <h2 class="mb-5 text-lg font-semibold tracking-tight text-foreground md:text-xl">Vous pourriez aussi aimer</h2>
+        
+          <div class="flex items-stretch gap-2 md:gap-3" style="display: flex; align-items: stretch; gap: 0.5rem;">
+            <!-- Contrôle précédent décoratif (extrait statique — connecter au carrousel dans l'application si nécessaire) -->
+            <div
+              class="hidden shrink-0 items-center justify-center self-center rounded-xl border border-border/60 bg-muted/40 px-1.5 text-muted-foreground sm:flex md:px-2"
+              aria-hidden="true"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-70"><path d="m15 18-6-6 6-6"/></svg>
+            </div>
+        
+            <div
+              class="min-w-0 flex-1 overflow-x-auto pb-1 [scrollbar-width:thin]"
+              style="display: flex; flex-wrap: nowrap; gap: 0.75rem; overflow-x: auto; flex: 1 1 0%; min-width: 0; -webkit-overflow-scrolling: touch;"
+            >
+              <!-- pr-1 -->
+              <article
+                class="flex flex-col overflow-hidden rounded-xl border border-border/70 bg-background shadow-sm"
+                style="width: min(168px, 86vw); flex: 0 0 auto; flex-shrink: 0; box-sizing: border-box;"
+              >
+                <a href="https://www.dwyeromega.com/" class="flex flex-col text-inherit no-underline">
+                  <div class="flex w-full shrink-0 justify-center bg-white py-2" style="display: flex; width: 100%; justify-content: center; background: #fff; padding-top: 0.5rem; padding-bottom: 0.5rem; box-sizing: border-box;">
+                    <div
+                      class="shrink-0 overflow-hidden rounded-md"
+                      style="width: 72px; height: 72px; max-width: 72px; max-height: 72px; box-sizing: border-box; display: flex; align-items: center; justify-content: center;"
+                    >
+                      <img
+                        src="https://assets.dwyeromega.com/do-product-images/Series-DA-DS_L.jpg?imwidth=96"
+                        alt=""
+                        width="72"
+                        height="72"
+                        class="object-contain"
+                        style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; display: block;"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="flex flex-1 flex-col border-t border-border/60 text-left"
+                    style="padding: 0.625rem 0.5rem 0.75rem 0.5rem; box-sizing: border-box;"
+                  >
+                    <h3 class="line-clamp-3 text-sm font-normal leading-snug text-foreground">Régulateur de pression en acier au carbone série DRF</h3>
+                    <p class="mt-1.5 line-clamp-2 text-xs leading-relaxed text-muted-foreground">
+                      Régulateur de diaphragme de précision pour l'air et les gaz compatibles — pression de sortie stable malgré les variations des conditions d'entrée.
+                    </p>
+                    <p class="mt-2 text-xs italic text-muted-foreground">DRF-SS</p>
+                    <p class="mt-2 text-sm font-bold text-primary">À partir de 189 $</p>
+                  </div>
+                </a>
+              </article>
+        
+              <!-- pr-2 -->
+              <article
+                class="flex flex-col overflow-hidden rounded-xl border border-border/70 bg-background shadow-sm"
+                style="width: min(168px, 86vw); flex: 0 0 auto; flex-shrink: 0; box-sizing: border-box;"
+              >
+                <a href="https://www.dwyeromega.com/" class="flex flex-col text-inherit no-underline">
+                  <div class="flex w-full shrink-0 justify-center bg-white py-2" style="display: flex; width: 100%; justify-content: center; background: #fff; padding-top: 0.5rem; padding-bottom: 0.5rem; box-sizing: border-box;">
+                    <div
+                      class="shrink-0 overflow-hidden rounded-md"
+                      style="width: 72px; height: 72px; max-width: 72px; max-height: 72px; box-sizing: border-box; display: flex; align-items: center; justify-content: center;"
+                    >
+                      <img
+                        src="https://assets.dwyeromega.com/do-product-images/Series-A6_L.jpg?imwidth=96"
+                        alt=""
+                        width="72"
+                        height="72"
+                        class="object-contain"
+                        style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; display: block;"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="flex flex-1 flex-col border-t border-border/60 text-left"
+                    style="padding: 0.625rem 0.5rem 0.75rem 0.5rem; box-sizing: border-box;"
+                  >
+                    <h3 class="line-clamp-3 text-sm font-normal leading-snug text-foreground">Régulateur de pression miniature — corps en laiton</h3>
+                    <p class="mt-1.5 line-clamp-2 text-xs leading-relaxed text-muted-foreground">
+                      Régulateur compact à faible débit pour panneaux et analyseurs ; empreinte idéale pour les skids d'instrumentation OEM.
+                    </p>
+                    <p class="mt-2 text-xs italic text-muted-foreground">M4-02</p>
+                    <p class="mt-2 text-sm font-bold text-primary">À partir de 312 $</p>
+                  </div>
+                </a>
+              </article>
+        
+              <!-- pr-3 -->
+              <article
+                class="flex flex-col overflow-hidden rounded-xl border border-border/70 bg-background shadow-sm"
+                style="width: min(168px, 86vw); flex: 0 0 auto; flex-shrink: 0; box-sizing: border-box;"
+              >
+                <a href="https://www.dwyeromega.com/" class="flex flex-col text-inherit no-underline">
+                  <div class="flex w-full shrink-0 justify-center bg-white py-2" style="display: flex; width: 100%; justify-content: center; background: #fff; padding-top: 0.5rem; padding-bottom: 0.5rem; box-sizing: border-box;">
+                    <div
+                      class="shrink-0 overflow-hidden rounded-md"
+                      style="width: 72px; height: 72px; max-width: 72px; max-height: 72px; box-sizing: border-box; display: flex; align-items: center; justify-content: center;"
+                    >
+                      <img
+                        src="https://assets.dwyeromega.com/do-product-images/Series-A1F_L.jpg?imwidth=96"
+                        alt=""
+                        width="72"
+                        height="72"
+                        class="object-contain"
+                        style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; display: block;"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="flex flex-1 flex-col border-t border-border/60 text-left"
+                    style="padding: 0.625rem 0.5rem 0.75rem 0.5rem; box-sizing: border-box;"
+                  >
+                    <h3 class="line-clamp-3 text-sm font-normal leading-snug text-foreground">Manomètre de pression en acier inoxydable série 160</h3>
+                    <p class="mt-1.5 line-clamp-2 text-xs leading-relaxed text-muted-foreground">
+                      Option remplie de liquide pour l'amortissement des pulsations sur les pompes et compresseurs — montage inférieur NPT ¼ facile à entretenir.
+                    </p>
+                    <p class="mt-2 text-xs italic text-muted-foreground">160G-15</p>
+                    <p class="mt-2 text-sm font-bold text-primary">98 $</p>
+                  </div>
+                </a>
+              </article>
+        
+              <!-- pr-7 -->
+              <article
+                class="flex flex-col overflow-hidden rounded-xl border border-border/70 bg-background shadow-sm"
+                style="width: min(168px, 86vw); flex: 0 0 auto; flex-shrink: 0; box-sizing: border-box;"
+              >
+                <a href="https://www.dwyeromega.com/" class="flex flex-col text-inherit no-underline">
+                  <div class="flex w-full shrink-0 justify-center bg-white py-2" style="display: flex; width: 100%; justify-content: center; background: #fff; padding-top: 0.5rem; padding-bottom: 0.5rem; box-sizing: border-box;">
+                    <div
+                      class="shrink-0 overflow-hidden rounded-md"
+                      style="width: 72px; height: 72px; max-width: 72px; max-height: 72px; box-sizing: border-box; display: flex; align-items: center; justify-content: center;"
+                    >
+                      <img
+                        src="https://assets.dwyeromega.com/do-product-images/Series-SA1100_L.jpg?imwidth=96"
+                        alt=""
+                        width="72"
+                        height="72"
+                        class="object-contain"
+                        style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; display: block;"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="flex flex-1 flex-col border-t border-border/60 text-left"
+                    style="padding: 0.625rem 0.5rem 0.75rem 0.5rem; box-sizing: border-box;"
+                  >
+                    <h3 class="line-clamp-3 text-sm font-normal leading-snug text-foreground">Transmetteur de pression électronique série AT2</h3>
+                    <p class="mt-1.5 line-clamp-2 text-xs leading-relaxed text-muted-foreground">
+                      Transmetteur alimenté par boucle 4–20 mA avec plages sélectionnables sur le terrain — s'associe aux écrans Omega pour des panneaux clés en main.
+                    </p>
+                    <p class="mt-2 text-xs italic text-muted-foreground">AT2-110A</p>
+                    <p class="mt-2 text-sm font-bold text-primary">1 245 $</p>
+                  </div>
+                </a>
+              </article>
+        
+              <!-- pr-8 -->
+              <article
+                class="flex flex-col overflow-hidden rounded-xl border border-border/70 bg-background shadow-sm"
+                style="width: min(168px, 86vw); flex: 0 0 auto; flex-shrink: 0; box-sizing: border-box;"
+              >
+                <a href="https://www.dwyeromega.com/" class="flex flex-col text-inherit no-underline">
+                  <div class="flex w-full shrink-0 justify-center bg-white py-2" style="display: flex; width: 100%; justify-content: center; background: #fff; padding-top: 0.5rem; padding-bottom: 0.5rem; box-sizing: border-box;">
+                    <div
+                      class="shrink-0 overflow-hidden rounded-md"
+                      style="width: 72px; height: 72px; max-width: 72px; max-height: 72px; box-sizing: border-box; display: flex; align-items: center; justify-content: center;"
+                    >
+                      <img
+                        src="https://assets.dwyeromega.com/do-product-images/ap_600x600new.gif?imwidth=96"
+                        alt=""
+                        width="72"
+                        height="72"
+                        class="object-contain"
+                        style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; display: block;"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="flex flex-1 flex-col border-t border-border/60 text-left"
+                    style="padding: 0.625rem 0.5rem 0.75rem 0.5rem; box-sizing: border-box;"
+                  >
+                    <h3 class="line-clamp-3 text-sm font-normal leading-snug text-foreground">Manomètre différentiel Magnehelic®</h3>
+                    <p class="mt-1.5 line-clamp-2 text-xs leading-relaxed text-muted-foreground">
+                      Indication DP standard de l'industrie pour filtres, ventilateurs et salles d'isolement — options de cadran haute visibilité.
+                    </p>
+                    <p class="mt-2 text-xs italic text-muted-foreground">MAGNEHELIC</p>
+                    <p class="mt-2 text-sm font-bold text-primary">À partir de 67 $</p>
+                  </div>
+                </a>
+              </article>
+        
+              <!-- iot-11 -->
+              <article
+                class="flex flex-col overflow-hidden rounded-xl border border-border/70 bg-background shadow-sm"
+                style="width: min(168px, 86vw); flex: 0 0 auto; flex-shrink: 0; box-sizing: border-box;"
+              >
+                <a href="https://www.dwyeromega.com/" class="flex flex-col text-inherit no-underline">
+                  <div class="flex w-full shrink-0 justify-center bg-white py-2" style="display: flex; width: 100%; justify-content: center; background: #fff; padding-top: 0.5rem; padding-bottom: 0.5rem; box-sizing: border-box;">
+                    <div
+                      class="shrink-0 overflow-hidden rounded-md"
+                      style="width: 72px; height: 72px; max-width: 72px; max-height: 72px; box-sizing: border-box; display: flex; align-items: center; justify-content: center;"
+                    >
+                      <img
+                        src="https://assets.dwyeromega.com/do-product-images/Series-A9_L.jpg?imwidth=96"
+                        alt=""
+                        width="72"
+                        height="72"
+                        class="object-contain"
+                        style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; display: block;"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="flex flex-1 flex-col border-t border-border/60 text-left"
+                    style="padding: 0.625rem 0.5rem 0.75rem 0.5rem; box-sizing: border-box;"
+                  >
+                    <h3 class="line-clamp-3 text-sm font-normal leading-snug text-foreground">Répéteur de réseau sans fil — étendre la couverture de l'usine</h3>
+                    <p class="mt-1.5 line-clamp-2 text-xs leading-relaxed text-muted-foreground">
+                      Réseau auto-cicatrisant pour les points d'extrémité de la série W d'Omega ; montage sur rail DIN avec voyants de diagnostic.
+                    </p>
+                    <p class="mt-2 text-xs italic text-muted-foreground">OM-WG-MESH</p>
+                    <p class="mt-2 text-sm font-bold text-primary">348 $</p>
+                  </div>
+                </a>
+              </article>
+            </div>
+        
+            <div
+              class="hidden shrink-0 items-center justify-center self-center rounded-xl border border-primary/30 bg-primary/5 px-1.5 text-primary sm:flex md:px-2"
+              aria-hidden="true"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            </div>
+          </div>
+        </section>
+        
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260505T213022Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "befaeae1-b4b4-485c-9976-41691e27c675"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260609T183224Z

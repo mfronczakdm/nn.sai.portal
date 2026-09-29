@@ -1,0 +1,43 @@
+﻿---
+ID: "0e51e2b6-8765-4bf4-818a-a3839cfae667"
+Parent: "9bc41c3c-113d-412c-a039-e0057f014f78"
+Template: "9bc41c3c-113d-412c-a039-e0057f014f78"
+Path: /sitecore/templates/Project/pillsbury/Components/Insights/InsightsMosaicItem/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0c92785d-2513-44c6-886f-15ee46b49482"
+      Hint: TileSpan
+      Value: wide
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260822T023824Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "679bd5e8-b69f-479a-917b-58c2f4f5a26c"
+      Hint: AccentColor
+      Value: navy
+    - ID: "6c90e59c-c23e-4f34-addc-f4fabda525b5"
+      Hint: TileTag
+      Value: ARTICLE
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "e6820f39-a027-4388-a3cc-1c690d6e36a1"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260822T023846Z
+    - ID: "f549c921-cfbc-429f-9386-680a401badb0"
+      Hint: ImagePlacement
+      Value: left

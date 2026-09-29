@@ -1,0 +1,90 @@
+﻿---
+ID: "74d8582a-f145-4436-b4c7-7b75783263c9"
+Parent: "aba8c864-f5e3-4b06-837e-f0c1bc81c297"
+Template: "58041043-7bea-44f0-b1b8-08e4ea7054f4"
+Path: "/sitecore/content/builders-firstsourse/builderfs/Home/Resources/Insights and Trends Blog/Demo Article/Data/Text 1"
+BranchID: "7c645a95-50c2-4548-9af6-eb1e3f085a1d"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "75b1b489-d7d0-4b75-a39c-af4b2b8d37fe"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{9BC0C61A-235C-45C3-B1C6-558747C96D58}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260626T194035Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\johannes.zijlstra@sitecore.com
+    - ID: "8b57dadd-0825-4f5d-9c32-187c0af7e1fd"
+      Hint: text
+      Value: |
+        <div class="ck-content"><p>At this year’s NAHB International Builders’ Show (IBS), Builders FirstSource showcased something really exciting: the next generation of AI-powered digital tools that can save time and money, reduce errors and rework, and help sell more homes.</p><p>These innovative tools, set to launch later this year, aim to tackle the ongoing challenges builders face, like disconnection between design, purchasing, sales, and construction processes.</p><p>“Builders often have to juggle multiple systems that don’t work well together, causing inefficiencies, mistakes, and unnecessary rework,” shared Gayatri Narayan, president of technology for Builders FirstSource, the country’s largest supplier of materials for home builders. “While there are plenty of solutions available, they often focus on specific problems instead of offering a comprehensive approach.”</p><p>This scattered approach has led to delays, higher costs, and lost profits for many builders.</p><p>CONNECTING THE BUILD PROCESS</p><p>The platform brings together data from four key stages of home building:</p><p>Launching communities<br />Plans and design<br />Homeowner selections<br />Purchasing and construction<br />Since these steps are traditionally siloed, builders frequently find it tough to manage specifications and codes across different areas or to gain instant insight into important sales and market trends. They also struggle to easily access historical information—like which layouts include a downstairs primary suite or an optional bedroom/home office flex space.</p><p>By using AI to unite these stages, builders can not only make the most of their data but also effortlessly convert plans into sales, selection, and purchasing workflows. “We’re focused on bridging the gap from vendor SKUs and availability, all through the distribution channel and design process,” Jackson explained.</p><p>AI-driven natural language search simplifies plan discovery and even enables transformation from flat 2D designs to interactive 3D digital twins, complete with visuals ready for sales purposes.<br />&nbsp;</p><p>ADDRESSING BUILDING CHALLENGES</p><p>This user-friendly platform tackles four major issues builders face today:</p><p>Manual data transfer between estimating, design, and purchasing systems<br />Errors that start early in the process but aren’t found until later, when fixing them is expensive<br />A lack of a searchable, centralized source of information for teams and projects<br />A lack of real-time visibility, slowing decisions and increasing mistakes<br />“When issues that crop up early aren't caught until construction, they can have a big impact on both timelines and budgets,” Jackson noted.</p><p>Narayan added that major industry challenges like affordability, supply chain unpredictability, and labor shortages make it essential for builders to have smooth, connected digital processes that boost collaboration with everyone from subcontractors to homebuyers. This platform gives builders a leg up by cutting costs, reducing errors, and speeding up project delivery.</p><p>“By eliminating waste, inefficiency, and confusion, builders can deliver better value and higher quality to their customers,” Jackson said. “Not to mention, the overall experience for the consumer is way better. Offering digital selection options and interactive tools helps customers personalize their choices, which is exactly what modern homebuyers are looking for.”</p><p>“It’s about affordability, reliability, and being able to consistently repeat successful outcomes,” Jackson emphasized. “These systems make everything more efficient, waste less time and materials, and ultimately help builders sell more homes.”</p><p>For more details, visit bldr.com/digital-solutions.</p></div>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f9330963-f0b8-4cf6-a8ec-ac2acbc45c8b"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Akv1r1Hmcm16AN61y5QanpMca0RChHPy
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260812T094417Z
+- Language: "nl-NL"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260626T194035Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\johannes.zijlstra@sitecore.com
+    - ID: "8b57dadd-0825-4f5d-9c32-187c0af7e1fd"
+      Hint: text
+      Value: |
+        <div class="ck-content"><p>Op de NAHB International Builders’ Show (IBS) van dit jaar presenteerde Builders FirstSource iets heel bijzonders: de volgende generatie AI-gestuurde digitale tools die tijd en geld besparen, fouten en herwerk verminderen en helpen meer huizen te verkopen.</p><p>Deze innovatieve tools, die later dit jaar worden gelanceerd, zijn bedoeld om de voortdurende uitdagingen waarmee bouwers worden geconfronteerd aan te pakken, zoals de disconnectie tussen ontwerp-, inkoop-, verkoop- en bouwprocessen.</p><p>“Bouwers moeten vaak meerdere systemen jongleren die niet goed samenwerken, wat leidt tot inefficiënties, fouten en onnodig herwerk,” deelde Gayatri Narayan, president technologie bij Builders FirstSource, de grootste leverancier van materialen voor woningbouwers in de VS. “Hoewel er veel oplossingen beschikbaar zijn, richten ze zich vaak op specifieke problemen in plaats van een allesomvattende aanpak te bieden.”</p><p>Deze gefragmenteerde aanpak heeft geleid tot vertragingen, hogere kosten en verloren winst voor veel bouwers.</p><p>VERBINDEN VAN HET BOUWPROCES</p><p>Het platform brengt gegevens samen uit vier belangrijke fasen van woningbouw:</p><p>Het lanceren van gemeenschappen<br />Plannen en ontwerpen<br />Selecties door huiseigenaren<br />Inkoop en bouw<br />Omdat deze stappen traditioneel gescheiden zijn, vinden bouwers het vaak moeilijk om specificaties en codes in verschillende gebieden te beheren of om direct inzicht te krijgen in belangrijke verkoop- en markttrends. Ze hebben ook moeite om eenvoudig toegang te krijgen tot historische informatie—zoals welke indelingen een primaire suite beneden of een optionele slaapkamer/thuiswerkplek bevatten.</p><p>Door AI te gebruiken om deze fasen te verenigen, kunnen bouwers niet alleen het beste uit hun gegevens halen, maar ook moeiteloos plannen omzetten in verkoop-, selectie- en inkoopworkflows. “We richten ons op het overbruggen van de kloof van leverancier-SKU's en beschikbaarheid, door het hele distributiekanaal en ontwerpproces,” legde Jackson uit.</p><p>AI-gestuurde natuurlijke taalzoekopdrachten vereenvoudigen het ontdekken van plannen en maken zelfs transformatie mogelijk van platte 2D-ontwerpen naar interactieve 3D digitale tweelingen, compleet met visuals die klaar zijn voor verkoopdoeleinden.<br />&nbsp;</p><p>AANPAKKEN VAN BOUWUITDAGINGEN</p><p>Dit gebruiksvriendelijke platform pakt vier grote problemen aan waarmee bouwers vandaag de dag worden geconfronteerd:</p><p>Handmatige gegevensoverdracht tussen schattings-, ontwerp- en inkoopsystemen<br />Fouten die vroeg in het proces beginnen maar pas later worden ontdekt, wanneer het duur is om ze te corrigeren<br />Een gebrek aan een doorzoekbare, gecentraliseerde bron van informatie voor teams en projecten<br />Een gebrek aan realtime zichtbaarheid, wat beslissingen vertraagt en fouten vergroot<br />“Wanneer problemen die vroeg ontstaan niet worden opgemerkt tot de bouw, kunnen ze een grote impact hebben op zowel tijdlijnen als budgetten,” merkte Jackson op.</p><p>Narayan voegde eraan toe dat grote uitdagingen in de industrie zoals betaalbaarheid, onvoorspelbaarheid van de toeleveringsketen en arbeidstekorten het essentieel maken voor bouwers om soepele, verbonden digitale processen te hebben die samenwerking bevorderen met iedereen, van onderaannemers tot huizenkopers. Dit platform geeft bouwers een voorsprong door kosten te verlagen, fouten te verminderen en projectlevering te versnellen.</p><p>“Door verspilling, inefficiëntie en verwarring te elimineren, kunnen bouwers betere waarde en hogere kwaliteit leveren aan hun klanten,” zei Jackson. “Om nog maar te zwijgen van het feit dat de algehele ervaring voor de consument veel beter is. Het aanbieden van digitale selectieopties en interactieve tools helpt klanten hun keuzes te personaliseren, wat precies is waar moderne huizenkopers naar op zoek zijn.”</p><p>“Het gaat om betaalbaarheid, betrouwbaarheid en het consistent herhalen van succesvolle resultaten,” benadrukte Jackson. “Deze systemen maken alles efficiënter, verspillen minder tijd en materialen, en helpen bouwers uiteindelijk meer huizen te verkopen.”</p><p>Voor meer details, bezoek bldr.com/digital-solutions.</p></div>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "66d0fecd-03a4-4f2b-8a08-690dcc9a6a14"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Akv1r1Hmcm16AN61y5QanpMca0RChHPy
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260812T094420Z

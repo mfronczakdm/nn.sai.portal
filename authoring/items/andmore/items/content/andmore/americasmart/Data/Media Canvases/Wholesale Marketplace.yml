@@ -1,0 +1,109 @@
+﻿---
+ID: "77dfcf17-cd55-411e-8094-d8c3997638e6"
+Parent: "256d3eef-2f76-466c-940b-f01274dfb1df"
+Template: "8a50e1d2-45bd-4d9b-a8ec-bed3fdc37c92"
+Path: /sitecore/content/andmore/americasmart/Data/Media Canvases/Wholesale Marketplace
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260901T203736Z
+    - ID: "2d570e69-46f3-4b8e-aa5c-8dc30cb4bf91"
+      Hint: CanvasSubtitle
+      Value: for gift, decor, lifestyle and apparel industries.
+    - ID: "40771b55-b2cc-4bfe-b58b-5ca2274fc9fb"
+      Hint: CanvasTitle
+      Value: THE WHOLESALE MARKETPLACE
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c01d049e-9a90-4ab6-8a6e-4e7f23816fd9"
+    - ID: "ac9d779f-a67a-499d-83c4-50cd9741604b"
+      Hint: PrimaryLink
+      Value: |
+        <link text="ATTEND A MARKET" linktype="internal" url="/Markets-and-Events" anchor="" target="" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260901T203736Z
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260901T203736Z
+    - ID: "2d570e69-46f3-4b8e-aa5c-8dc30cb4bf91"
+      Hint: CanvasSubtitle
+      Value: para las industrias de regalos, decoración, estilo de vida y moda.
+    - ID: "40771b55-b2cc-4bfe-b58b-5ca2274fc9fb"
+      Hint: CanvasTitle
+      Value: EL MERCADO MAYORISTA
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "fb2ea81d-9084-4bb1-9c76-408d9c590e1f"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "ac9d779f-a67a-499d-83c4-50cd9741604b"
+      Hint: PrimaryLink
+      Value: |
+        <link anchor="" target="" linktype="internal" text="ASISTE A UN MERCADO" url="/Markets-and-Events" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260904T105212Z
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260901T203736Z
+    - ID: "2d570e69-46f3-4b8e-aa5c-8dc30cb4bf91"
+      Hint: CanvasSubtitle
+      Value: ギフト、装飾、ライフスタイル、アパレル業界向け。
+    - ID: "40771b55-b2cc-4bfe-b58b-5ca2274fc9fb"
+      Hint: CanvasTitle
+      Value: 卸売マーケットプレイス全体
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b56f6cd3-5796-45a8-939c-b639248fd148"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "ac9d779f-a67a-499d-83c4-50cd9741604b"
+      Hint: PrimaryLink
+      Value: |
+        <link anchor="" target="" linktype="internal" text="マーケットに参加する" url="/Markets-and-Events" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260904T105240Z

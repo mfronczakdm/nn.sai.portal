@@ -1,0 +1,41 @@
+﻿---
+ID: "e3fbda31-8f0e-430d-8765-4f5e73dc788b"
+Parent: "97f77dc4-9147-4e4d-9a82-1c73cdaf3241"
+Template: "149b23b5-b7c2-434e-826f-171aa7700ba5"
+Path: /sitecore/content/quanex/quanex/Data/ProductCarousels/Featured Products
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260813T211527Z
+    - ID: "3aa5ab24-0c0c-4cdb-94e7-f5e106c51d2e"
+      Hint: Title
+      Value: Featured Products
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "553915e1-3a1a-4a05-8298-fd975812842a"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "cb418ccb-edaa-4d6c-8a28-0d62cd901331"
+      Hint: Products
+      Value: |
+        {E5D63D4B-5A70-43E6-987A-9E454C99034F}
+        {464E91A3-C14F-4DF9-9F95-71F15993012B}
+        {E3DDC8AF-C6F9-4600-8365-A37AF8AB4758}
+        {00B55533-00D4-425A-9D48-1A126F079857}
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260813T211528Z

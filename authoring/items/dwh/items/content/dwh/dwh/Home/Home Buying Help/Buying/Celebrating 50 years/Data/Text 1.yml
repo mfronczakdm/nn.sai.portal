@@ -1,0 +1,90 @@
+﻿---
+ID: "af6f5278-9add-4dc3-9a1f-51e299644b1f"
+Parent: "94f33bba-2fc7-4a47-990c-1d375cb8264c"
+Template: "58041043-7bea-44f0-b1b8-08e4ea7054f4"
+Path: /sitecore/content/dwh/dwh/Home/Home Buying Help/Buying/Celebrating 50 years/Data/Text 1
+BranchID: "6bab7d2c-cdb0-413d-bb2e-5470ee068685"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "3debe4ee-ca01-4c36-a730-dc41758b6183"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{ABFDF0CE-81F6-4935-9873-6D11A0F9EA16}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260609T174611Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8b57dadd-0825-4f5d-9c32-187c0af7e1fd"
+      Hint: text
+      Value: |
+        <div class="ck-content"><h4>Celebrating 50 Years: David Weekley Homes Marks Half a Century of Building Dreams</h4><p>&nbsp;</p><p>2026 is a monumental milestone for David Weekley Homes — our 50th year as one of America's leading privately-held homebuilders. From a small Houston office opened by 23-year-old David Weekley in 1976, we've grown into a national builder operating across 19 markets in 13 states, delivering more than 130,000 homes to families nationwide.</p><p>&nbsp;</p><p>This half-century journey reflects our unwavering "people-first" commitment to customers, team members, and communities. We've pioneered innovations like LifeDesign℠ — our exclusive natural light home design technique that balances sight lines, room placement, and windows to enhance everyday living. Our accolades include the prestigious Triple Crown of Homebuilding: America's Best Builder, the National Housing Quality Award, and National Builder of the Year.</p><p>&nbsp;</p><p>Looking forward, we're excited about our Expedition Evergreen initiative launched in 2024, backed by a $1.25 billion capital infusion targeting 10,000 annual closings and doubling our volume over the next decade. We're expanding into new markets including Starkey Ranch in Florida, opening models across Texas, and growing our footprint in Arizona, Colorado, and Utah. Our strategy includes product diversification into attainably priced homes and 55+ communities for empty nesters, plus energy-efficient construction with third-party inspections.</p><p>&nbsp;</p><p>Through our CARE program, we've donated over $400 million to philanthropic causes, demonstrating that building homes goes hand-in-hand with building communities.</p><p>Thank you for making us part of your story. Whether you're a first-time buyer, empty nester, or move-up family, we remain focused on customer service, innovation, and creating spaces where families can thrive for generations.</p><p>&nbsp;</p><p><strong>Your next chapter starts here. Let's build your dream together.</strong></p><p>&nbsp;</p><p>&nbsp;</p></div>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "aa5db376-2064-48cc-a358-09c9805d563e"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\WIt5EKonMo343Fqq8begbLVKlCgYPAIX
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260624T134450Z
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260609T174611Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8b57dadd-0825-4f5d-9c32-187c0af7e1fd"
+      Hint: text
+      Value: |
+        <div class="ck-content"><h4>Célébration de 50 ans : David Weekley Homes marque un demi-siècle de construction de rêves</h4><p>&nbsp;</p><p>2026 est une étape monumentale pour David Weekley Homes — notre 50e année en tant que l'un des principaux constructeurs privés d'Amérique. Depuis un petit bureau à Houston ouvert par David Weekley, alors âgé de 23 ans, en 1976, nous sommes devenus un constructeur national opérant dans 19 marchés de 13 États, livrant plus de 130 000 maisons à des familles à travers le pays.</p><p>&nbsp;</p><p>Ce demi-siècle de parcours reflète notre engagement inébranlable envers les clients, les membres de l'équipe et les communautés. Nous avons été des pionniers dans des innovations comme LifeDesign℠ — notre technique exclusive de conception de lumière naturelle qui équilibre les lignes de vue, le placement des pièces et les fenêtres pour améliorer la vie quotidienne. Nos distinctions incluent la prestigieuse Triple Couronne de la Construction Résidentielle : America's Best Builder, le National Housing Quality Award et le National Builder of the Year.</p><p>&nbsp;</p><p>En regardant vers l'avenir, nous sommes enthousiastes à propos de notre initiative Expedition Evergreen lancée en 2024, soutenue par une infusion de capital de 1,25 milliard de dollars visant 10 000 clôtures annuelles et doublant notre volume au cours de la prochaine décennie. Nous nous étendons dans de nouveaux marchés, y compris Starkey Ranch en Floride, ouvrons des modèles à travers le Texas, et augmentons notre présence en Arizona, au Colorado et en Utah. Notre stratégie inclut la diversification des produits vers des maisons à prix abordable et des communautés 55+ pour les retraités, ainsi que la construction écoénergétique avec des inspections par des tiers.</p><p>&nbsp;</p><p>Grâce à notre programme CARE, nous avons fait don de plus de 400 millions de dollars à des causes philanthropiques, démontrant que construire des maisons va de pair avec construire des communautés.</p><p>Merci de nous avoir inclus dans votre histoire. Que vous soyez un premier acheteur, un retraité ou une famille en évolution, nous restons concentrés sur le service client, l'innovation et la création d'espaces où les familles peuvent prospérer pendant des générations.</p><p>&nbsp;</p><p><strong>Votre prochain chapitre commence ici. Construisons votre rêve ensemble.</strong></p><p>&nbsp;</p><p>&nbsp;</p></div>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "7c373da7-3654-42f2-b333-1085ff5b20a7"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Akv1r1Hmcm16AN61y5QanpMca0RChHPy
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260812T094436Z

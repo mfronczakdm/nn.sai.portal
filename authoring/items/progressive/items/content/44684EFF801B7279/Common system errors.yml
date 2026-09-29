@@ -1,0 +1,37 @@
+﻿---
+ID: "42a43f63-b83e-4051-a740-0faacc0989e5"
+Parent: "c133f46e-c8c5-420c-96e3-6bb486da0ec3"
+Template: "73e57eaa-b54a-41e1-b689-bf7dae9155ad"
+Path: /sitecore/content/progressive/pkm/Home/Questions and Answers/Systems Tools/Common system errors/StateSpecific/FL/Common system errors
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{E051E8F3-860B-4DF1-A405-7B2634B806A9}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260731T012522Z
+    - ID: "2d71e32d-e990-46b3-8ca1-58cd89743d5e"
+      Hint: Question
+      Value: "What should Progressive Florida claims advisors do when claims systems show common errors?"
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Common system errors
+    - ID: "4f8dc72e-1548-471c-9f3e-a13e944e4321"
+      Hint: Answer
+      Value: "Capture the Progressive error message, time, and claim/policy number, then retry once if safe—especially when Florida PIP/no-fault or DFS-related workflows are blocked. Check Progressive troubleshooting job aids for known incidents. Escalate persistent errors to Progressive tools support with screenshots."
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c33cfec4-b770-41c1-9676-6327afc9a10a"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260731T012523Z

@@ -1,0 +1,59 @@
+﻿---
+ID: "cc7a7d1b-0d1b-4918-91bf-374fc19ad4a4"
+Parent: "ba5c5350-096c-4fe2-9eab-95061dc38a84"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Project/quanex/Navigation/MainNav
+SharedFields:
+- ID: "037fe404-dd19-4bf7-8e30-4dadf68b27b0"
+  Hint: componentName
+  Value: MainNav
+- ID: "17bb046a-a32a-41b3-8315-81217947611b"
+  Hint: ComponentQuery
+  Value: |
+    query MainNav($datasource: String!, $language: String!) { datasource: item(path: $datasource, language: $language) { logo: field(name: "Logo") { jsonValue } logoLink: field(name: "LogoLink") { jsonValue } searchPage: field(name: "SearchPage") { jsonValue } searchLabel: field(name: "SearchLabel") { jsonValue } userLink: field(name: "UserLink") { jsonValue } userLabel: field(name: "UserLabel") { jsonValue } showCart: field(name: "ShowCart") { jsonValue } cartLink: field(name: "CartLink") { jsonValue } cartLabel: field(name: "CartLabel") { jsonValue } navigationRoot: field(name: "NavigationRoot") { jsonValue } children { results { id linkText: field(name: "LinkText") { jsonValue } linkUrl: field(name: "LinkUrl") { jsonValue } } } } }
+- ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
+  Hint: Datasource Template
+  Value: /sitecore/templates/Project/quanex/Components/Navigation/MainNav
+- ID: "a77e8568-1ab3-44f1-a664-b7c37ec7810d"
+  Hint: Parameters Template
+  Value: "{DF2D1209-220B-4199-90BB-605001811B2A}"
+- ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
+  Hint: Datasource Location
+  Value: "query:$site/*[@@name='Data']/*[@@templatename='MainNav Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='MainNav Folder']"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "6be85da0-ad13-40fd-abbd-525647b5641c"
+- ID: "dec8d2d5-e3cf-48b6-a653-8e69e2716641"
+  Hint: __Security
+  Value: |
+    au|sitecore\testuser2@sitecore.info|pd|-item:read|pe|-item:read|
+Languages:
+- Language: en
+  Fields:
+  - ID: "30e85e5d-e00a-4864-b358-7624d511deb4"
+    Hint: __Unversioned revision
+    Value: "408f484a-c468-4fb0-8892-0d9f3026c3df"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260814T125139Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "628ab731-5580-429e-9994-7fc3e3056a32"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260818T000516Z

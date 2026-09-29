@@ -1,0 +1,75 @@
+﻿---
+ID: "94a9563c-55f2-4348-bfaf-95d95ddd58a6"
+Parent: "f6caece4-c4c6-466a-9d9f-170d90294ce0"
+Template: "69728677-52e5-4482-a415-94f0222799b8"
+Path: "/sitecore/content/andmore/atlanta-apparel/Home/Visit/Plan Your Market"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: 
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 400
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{B167BE96-14A0-4505-840F-F17D542F43AB}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "a40c0346-95c2-4756-b649-bcd4aee9fce0"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "18ab03d1-c9ae-4f00-815d-220fcb2d80e5"
+      Hint: image
+      Value: |
+        <image src="https://www.atlanta-apparel.com/-/media/Atlanta-Apparel/Fashion-Gallery/Videos2.png?h=400&amp;iar=0&amp;w=700&amp;hash=B2455DDEC2B731844429000DE879554D" alt="Plan Atlanta Apparel market" />
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Build a Market Plan online or in the ANDMORE Markets App, discover brands and organize your market activity.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T013535Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Plan Your Market
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: 
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Build, save and organize your market activity.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Build, save and organize your market activity.
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Plan Your Market
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Plan Your Market | Atlanta Apparel
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "6accc318-5fdc-4ab2-8702-7593e6f7ec93"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Build and organize your Atlanta Apparel Market Plan online or in the app.
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Plan Your Market
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260903T231643Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Plan Your Market
+    - ID: "f79467fb-89e8-478b-8ac7-5b37b53c1c0c"
+      Hint: Detail
+      Value: |
+        <p>Build a Market Plan online or on the ANDMORE Markets App. Filter searches to discover brands, save and organize your Market activity, and review saved plans after Market.</p><p><a href="https://www.atlanta-apparel.com/Attend/Plan-Your-Market">Plan your market</a></p>

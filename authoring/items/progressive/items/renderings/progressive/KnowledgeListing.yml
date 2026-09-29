@@ -1,0 +1,69 @@
+﻿---
+ID: "2f812b0f-3942-4b33-9e90-34418ac72798"
+Parent: "04d318b2-b62f-4ce1-84a0-0e76ffe702fe"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Project/progressive/KnowledgeListing
+SharedFields:
+- ID: "037fe404-dd19-4bf7-8e30-4dadf68b27b0"
+  Hint: componentName
+  Value: KnowledgeListing
+- ID: "17bb046a-a32a-41b3-8315-81217947611b"
+  Hint: ComponentQuery
+  Value: |
+    query KnowledgeListing($datasource: String!, $language: String!) {
+      datasource: item(path: $datasource, language: $language) {
+        title: field(name: "Title") { jsonValue }
+        description: field(name: "Description") { jsonValue }
+        maxItems: field(name: "MaxItems") { jsonValue }
+        listingMode: field(name: "ListingMode") { jsonValue }
+      }
+    }
+    
+- ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
+  Hint: Datasource Template
+  Value: /sitecore/templates/Project/progressive/components/KnowledgeListing
+- ID: "a77e8568-1ab3-44f1-a664-b7c37ec7810d"
+  Hint: Parameters Template
+  Value: "{2A3C7826-8533-40FC-8A33-B0C9EBF62411}"
+- ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
+  Hint: Datasource Location
+  Value: "query:$site/*[@@name='Data']/*[@@templatename='KnowledgeListing Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='KnowledgeListing Folder']"
+- ID: "c7b72114-3f04-45a0-ba43-3856a9c9feb3"
+  Hint: FieldEditorFields
+  Value: Title|Description|MaxItems|ListingMode
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "58a081f4-fbe8-4574-a439-fce694a86e1b"
+Languages:
+- Language: en
+  Fields:
+  - ID: "30e85e5d-e00a-4864-b358-7624d511deb4"
+    Hint: __Unversioned revision
+    Value: "8951d4a3-8305-4aa0-8249-fa8bfa89b61d"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260802T165319Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "56e4618a-f3f2-4cb5-b69a-8a45de578902"
+      Hint: Description
+      Value: "Dynamically lists Knowledge Articles from Home/Knowledge Articles. Listing Mode: Recently Updated (by update date), Recently Viewed (visitor history), Favorites (highest AverageRating / PositiveCount). MaxItems caps results."
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ff429ef0-b1f1-4787-8032-990e4905d0bb"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260802T174809Z

@@ -1,0 +1,72 @@
+﻿---
+ID: "dc88e099-abbc-42e1-ae00-e8ae9029b4b4"
+Parent: "654a5ea6-7924-4869-a127-74df9392ecdc"
+Template: "3d0988cb-43ed-4892-96a4-f9f44fc399cb"
+Path: /sitecore/content/pillsbury/blg/Home/Insights/Blogs/Data/BlogListing
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{6C59AE29-D0A1-4B77-9305-0ABAB21D5FE5}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "84200c4a-7235-43d6-a9dc-e767181651b8"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "2301c73f-11b3-47fb-adec-5a9d401b149a"
+      Hint: Title
+      Value: Latest New
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260805T105316Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{C55B483C-EA7F-4E76-A066-985F7D9396CA}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "53d7b3d2-1c90-472e-a61d-fb59cdcc9c23"
+    - ID: "92626bfa-add4-40c0-adf3-c9487083b135"
+      Hint: Intro
+      Value: <p>Pillsbury’s blogs bring together lawyers across our global platform to share practical insight on the legal, regulatory, and commercial issues shaping our clients’ industries.</p>
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260822T015204Z
+    - ID: "db3d4528-7fd1-4618-8be5-32ac3097a4e7"
+      Hint: BlogsRoot
+      Value: "{C8263FF3-EF46-4529-992B-C8EB5C57DBC8}"
+  - Version: 2
+    Fields:
+    - ID: "2301c73f-11b3-47fb-adec-5a9d401b149a"
+      Hint: Title
+      Value: Blogs
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260822T015700Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{C55B483C-EA7F-4E76-A066-985F7D9396CA}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a2b05be7-8ecf-4718-ad13-d09e5b2b26b0"
+    - ID: "92626bfa-add4-40c0-adf3-c9487083b135"
+      Hint: Intro
+      Value: <p>BLG blogs bring together lawyers across our Canadian offices to share practical insight on legal, regulatory, and commercial issues. Browse specialized commentary on energy, infrastructure, financial services, technology, and more.</p>
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260822T015700Z
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260822T015701Z
+    - ID: "db3d4528-7fd1-4618-8be5-32ac3097a4e7"
+      Hint: BlogsRoot
+      Value: "{C8263FF3-EF46-4529-992B-C8EB5C57DBC8}"

@@ -1,0 +1,63 @@
+﻿---
+ID: "8a8658fd-2520-4c4a-a938-08ed372cb3a7"
+Parent: "be4806a7-30c5-4e47-9167-41cd18a3f47d"
+Template: "705c014a-ced4-409a-89b7-09350cc98116"
+Path: "/sitecore/content/dycom-2/northsky/Home/Landing Page/Data/Article Listing"
+BranchID: "97509128-1b31-4a5b-9c07-d4c94b611d24"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "cc88cce3-dd57-403b-934a-3b7498dd03f8"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{6F7A96AB-F801-47B1-98F9-F1B96763FE19}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260525T183951Z
+    - ID: "341d70c8-1429-41de-99f7-015714658bf8"
+      Hint: linkOptional
+      Value: |
+        <link class="" id="{518C3B5E-D91D-49B4-A0D0-AE81C887C8E8}" querystring="" anchor="" target="" title="" linktype="internal" text="See All" url="" />
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "4d116c64-41a2-4c2b-857a-c268c13b8a72"
+      Hint: descriptionOptional
+      Value: Our team boasts top green energy experts, driving innovation in sustainability.
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "56689e04-c512-4625-9d9d-95f77b424d9c"
+      Hint: featuredContent
+      Value: |
+        {602EA611-23D0-487F-98D5-5A728FABC072}
+        {D288AD0D-6268-4A84-A9C5-512FB62F2A24}
+        {E84B2A60-FEC9-45E9-9AA3-5ECBB8DBAF3D}
+        {14237E62-DB10-41B8-86FD-5CC449243BBF}
+        {14237E62-DB10-41B8-86FD-5CC449243BBF}
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2f13f3d7-fd71-40fb-82ef-25bd8c7d6895"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260525T184112Z
+    - ID: "f173626a-12e7-4c9a-97ca-9866fd814c86"
+      Hint: titleOptional
+      Value: Latest brand news

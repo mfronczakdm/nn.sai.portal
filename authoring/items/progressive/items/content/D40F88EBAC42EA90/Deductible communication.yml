@@ -1,0 +1,37 @@
+﻿---
+ID: "9fbddb04-6c95-4a01-afff-4b5034e54a7f"
+Parent: "69a960bb-9b31-41ae-92ed-da2d4ea0eec0"
+Template: "73e57eaa-b54a-41e1-b689-bf7dae9155ad"
+Path: /sitecore/content/progressive/pkm/Home/Questions and Answers/Coverage Eligibility/Deductible communication/StateSpecific/FL/Deductible communication
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{65A1339C-DD8E-4E66-BBF0-3B08428B632F}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260731T012534Z
+    - ID: "2d71e32d-e990-46b3-8ca1-58cd89743d5e"
+      Hint: Question
+      Value: "How should Progressive claims advisors explain deductibles to customers?"
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Deductible communication
+    - ID: "4f8dc72e-1548-471c-9f3e-a13e944e4321"
+      Hint: Answer
+      Value: State the Progressive deductible amount from the policy for the applicable coverage, explain it is the customer's responsibility before Progressive payment, and avoid promising net payment amounts before estimate completion. Document that the deductible discussion occurred. For Florida hurricane or CAT losses, clarify any separate wind or hurricane deductible and note FL DFS timing expectations when discussing next steps. For multiple deductibles, confirm which Progressive coverage applies.
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d9e004b3-a864-4b6c-ae26-c0449aa16a78"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260731T012535Z

@@ -1,0 +1,27 @@
+﻿---
+ID: "bcdac03c-f707-4431-8d86-b0ce1159a478"
+Parent: "fc928466-98e1-46e8-9842-5fe7dd44271d"
+Template: "5ad5125e-1146-4ce5-9b1b-34041a9be8b1"
+Path: /sitecore/content/dfs/dfs/Data/HeroCarousels/Taco Bell Portal Hero
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260819T184713Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "8da81f7a-e561-423a-aa27-72134ad9c629"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "be8c83e4-0018-4d1f-9e14-40022911fca1"
+      Hint: ContactLink
+      Value: |
+        <link linktype="external" url="mailto:portal-support@dfsupply.com" text="Contact DFS Support" />
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260819T184713Z

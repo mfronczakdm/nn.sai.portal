@@ -1,0 +1,53 @@
+﻿---
+ID: "9e142bb9-556a-4f14-84ae-9ae6a22fe1de"
+Parent: "0957f09f-0d4f-4399-a769-bbc9aaee94c5"
+Template: "3ea981cb-74ab-4139-acca-0637c0bbd4cc"
+Path: /sitecore/content/progressive/pkm/Data/Authentication/Portal Login
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0a0dbb61-8b8f-4efc-b106-7149643525eb"
+      Hint: logoutButtonText
+      Value: Sign Out
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260824T124833Z
+    - ID: "2c622232-4750-44b5-891e-7313deeeb4c3"
+      Hint: resetPasswordPath
+      Value: "/reset-password"
+    - ID: "69553349-8683-4b08-a855-2c7487431c7b"
+      Hint: forgotPasswordLinkText
+      Value: Reset password
+    - ID: "76e1d086-5fd8-47b5-9689-578eb1c53f1d"
+      Hint: passwordLabel
+      Value: Password
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d613a8ae-2ccb-4252-8e1a-f0cbabbef042"
+    - ID: "ab9ed535-272f-4fe4-97f5-5effd47a0aac"
+      Hint: userNameLabel
+      Value: Email
+    - ID: "b2bf5ec1-7057-45d8-bdcb-bd3fe6474b39"
+      Hint: loginButtonText
+      Value: Sign In
+    - ID: "b3c4262b-08fd-4dc3-8bdc-9ce5ac65e824"
+      Hint: subtitle
+      Value: Access your Progressive Knowledge Management portal
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c52a01e1-03f0-4d5b-8a25-39232e0af26a"
+      Hint: title
+      Value: Sign In
+    - ID: "c564a87b-26f8-4019-860d-d30a819f7109"
+      Hint: loginFailedMessage
+      Value: Invalid email or password. Please try again.
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260824T124833Z
+    - ID: "fe20394c-a0e9-4410-a42d-dafdd9c27dd6"
+      Hint: forgotPasswordLabel
+      Value: "Forgot your password?"

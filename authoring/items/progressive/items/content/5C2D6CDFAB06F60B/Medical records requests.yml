@@ -1,0 +1,37 @@
+﻿---
+ID: "d4578f8a-4881-4519-918b-4b43b36f2dd5"
+Parent: "3c31d0bf-380c-4866-806a-1f52592ad8e3"
+Template: "73e57eaa-b54a-41e1-b689-bf7dae9155ad"
+Path: /sitecore/content/progressive/pkm/Home/Questions and Answers/Documentation/Medical records requests/StateSpecific/FL/Medical records requests
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{D2B493E1-DFE7-4341-8CBF-3F180160C61F}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260731T012527Z
+    - ID: "2d71e32d-e990-46b3-8ca1-58cd89743d5e"
+      Hint: Question
+      Value: "How do Progressive Florida claims advisors request medical or repair records?"
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Medical records requests
+    - ID: "4f8dc72e-1548-471c-9f3e-a13e944e4321"
+      Hint: Answer
+      Value: "Request medical or repair records using Progressive-approved authorizations and forms when the claim type requires them, including Florida PIP/no-fault medical documentation where applicable. Track outstanding requests as pending information and follow Florida DFS privacy expectations. Never store or share medical data outside Progressive privacy rules."
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "150e9878-293b-4e56-9d8c-0a70e53716a8"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260731T012528Z

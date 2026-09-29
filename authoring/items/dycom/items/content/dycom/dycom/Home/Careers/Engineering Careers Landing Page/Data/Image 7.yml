@@ -1,0 +1,51 @@
+﻿---
+ID: "63ccd745-ee1f-4034-8f0c-bd85ff0bad9e"
+Parent: "21083968-b118-4555-a20f-206abac397c9"
+Template: "3720c1c9-5ef8-4ba1-828b-a4672503a1ae"
+Path: /sitecore/content/dycom/dycom/Home/Careers/Engineering Careers Landing Page/Data/Image 7
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "9d1857e0-1d1a-48d2-ac7a-fd1448204368"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "14920a91-7250-436e-bf61-750d46eb7f3f"
+      Hint: image
+      Value: |
+        <Image src="https://mrfbasech.sitecoresandbox.cloud/api/public/content/86302-HomepagePromoCTAs-1100x740?v=b43a9d6a" dam-id="cDMuVn1JSGa1fcO1Z2OcvQ" width="1100" height="740" alt="imgi_15_iStock-1282722001.jpg" dam-content-type="Image" thumbnailsrc="https://mrfbasech.sitecoresandbox.cloud/api/gateway/86302/thumbnail" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260512T211629Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "eaaa6ff3-287a-4cb5-bc12-75a32744d20d"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "d4a48cb4-1f43-433b-8a45-b781349746db"
+      Hint: caption
+      Value: Benefits
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260715T125036Z

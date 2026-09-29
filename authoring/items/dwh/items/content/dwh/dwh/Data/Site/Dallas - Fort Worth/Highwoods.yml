@@ -1,0 +1,42 @@
+﻿---
+ID: "d1d6f19d-7fd8-4996-b5d1-3aea7edc30d8"
+Parent: "9f34023a-f2fe-45cd-8bed-fb743f305263"
+Template: "2ef3a54a-4d06-482e-931e-3a1b127287b3"
+Path: "/sitecore/content/dwh/dwh/Data/Site/Dallas - Fort Worth/Highwoods"
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{C332F9B3-8825-4ECF-AF34-89E205B4B45B}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260623T200237Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "3856729e-41f9-42aa-a16e-49d0ef577c8e"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260623T200802Z
+    - ID: "fd867eec-51d2-474d-aa9d-c4e85efa88e4"
+      Hint: amenities
+      Value: |
+        {25BBDF3C-5D30-46C2-80D8-427C8F67F761}
+        {90845C7F-AB40-4FAF-A9ED-5880E16E9169}
+        {1376466B-919E-4469-A39E-20E0A3CCA6A6}

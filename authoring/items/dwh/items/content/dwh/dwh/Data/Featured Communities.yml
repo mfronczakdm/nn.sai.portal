@@ -1,0 +1,40 @@
+﻿---
+ID: "2091be16-8a56-46fd-a46d-8ffafdef990c"
+Parent: "27883c06-d4c5-4201-89ab-1e2f271c6d26"
+Template: "2fa1e2b0-a083-4eb6-9463-416bd9ba8f02"
+Path: /sitecore/content/dwh/dwh/Data/Featured Communities
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {2FA1E2B0-A083-4EB6-9463-416BD9BA8F02}
+    {061F6300-9CDE-4FD7-AAA9-1BE7EB9EBD31}
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "87f025dd-6b88-457f-8414-871219f76c9c"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260624T202856Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "7bc46613-bd21-4246-9661-10adf40b57df"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260624T202926Z

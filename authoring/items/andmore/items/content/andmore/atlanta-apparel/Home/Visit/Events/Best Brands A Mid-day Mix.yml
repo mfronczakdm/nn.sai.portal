@@ -1,0 +1,182 @@
+﻿---
+ID: "21480263-a6c0-4bae-ac58-48ce1cd53f1b"
+Parent: "47cea21c-aec1-4775-93bc-7f5d5b92dfaf"
+Template: "6ccf3409-0a26-4069-92ec-2099dae63088"
+Path: "/sitecore/content/andmore/atlanta-apparel/Home/Visit/Events/Best Brands A Mid-day Mix"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{03EA1B61-C965-4CA1-BA25-647ADBB6FDDB}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "98527f18-6479-42b7-bbeb-9b78f2398938"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0c53e23d-511c-4d88-8e5f-91d9694c5a1e"
+      Hint: EventStart
+      Value: 20260918T110000Z
+    - ID: "18ab03d1-c9ae-4f00-815d-220fcb2d80e5"
+      Hint: image
+      Value: |
+        <image src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Apparel showroom merchandising" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260901T205038Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: "Best Brands: A Mid-day Mix"
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: "Best Brands: A Mid-day Mix"
+    - ID: "61328b9e-a72a-4a8f-a830-29ed998f3fd5"
+      Hint: EventType
+      Value: Networking
+    - ID: "81207b62-0e77-4615-a847-81b17fecc08d"
+      Hint: EventEnd
+      Value: 20260918T123000Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "32f4a749-43db-4eaf-a7c8-2d72bd4af61d"
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: "Best Brands: A Mid-day Mix"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260903T232926Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: "Best Brands A Mid-day Mix"
+    - ID: "f79467fb-89e8-478b-8ac7-5b37b53c1c0c"
+      Hint: Detail
+      Value: "<p>A mid-day mixer highlighting standout brands across contemporary apparel, accessories, and lifestyle collections.</p>"
+    - ID: "f8a54ae2-6934-4632-8cf1-a261b2efbdeb"
+      Hint: EventLocation
+      Value: Building 2, Floor 6, Trend Forum
+  - Version: 2
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0c53e23d-511c-4d88-8e5f-91d9694c5a1e"
+      Hint: EventStart
+      Value: 20261007T110000Z
+    - ID: "18ab03d1-c9ae-4f00-815d-220fcb2d80e5"
+      Hint: image
+      Value: |
+        <image src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Apparel showroom merchandising" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260904T103947Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: "Best Brands: A Mid-day Mix"
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: "Best Brands: A Mid-day Mix"
+    - ID: "61328b9e-a72a-4a8f-a830-29ed998f3fd5"
+      Hint: EventType
+      Value: Networking
+    - ID: "81207b62-0e77-4615-a847-81b17fecc08d"
+      Hint: EventEnd
+      Value: 20261007T123000Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "fb624999-f947-4da9-95f1-131f96dbc810"
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: "Best Brands: A Mid-day Mix"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260904T103947Z
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260904T104400Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: "Best Brands A Mid-day Mix"
+    - ID: "f79467fb-89e8-478b-8ac7-5b37b53c1c0c"
+      Hint: Detail
+      Value: "<p>A mid-day mixer highlighting standout brands across contemporary apparel, accessories, and lifestyle collections.</p>"
+    - ID: "f8a54ae2-6934-4632-8cf1-a261b2efbdeb"
+      Hint: EventLocation
+      Value: Building 2, Floor 6, Trend Forum
+  - Version: 3
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0c53e23d-511c-4d88-8e5f-91d9694c5a1e"
+      Hint: EventStart
+      Value: 20261009T133000Z
+    - ID: "18ab03d1-c9ae-4f00-815d-220fcb2d80e5"
+      Hint: image
+      Value: |
+        <image src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Apparel showroom merchandising" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260904T132808Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: "Best Brands: A Mid-day Mix"
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: "Best Brands: A mid-day Mix"
+    - ID: "61328b9e-a72a-4a8f-a830-29ed998f3fd5"
+      Hint: EventType
+      Value: Networking
+    - ID: "81207b62-0e77-4615-a847-81b17fecc08d"
+      Hint: EventEnd
+      Value: 20261009T143000Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "136384d3-bc91-451d-bf6f-ef755b1c323d"
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: "Best Brands: A Mid-day Mix"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20260904T132808Z
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260904T182423Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: "Best Brands A Mid-day Mix"
+    - ID: "f79467fb-89e8-478b-8ac7-5b37b53c1c0c"
+      Hint: Detail
+      Value: |
+        <div class="ck-content"><p>A mid-day mixer spotlighting a curated selection of standout brands in contemporary apparel, accessories, and lifestyle collections, offering attendees a closer look at distinctive design, product highlights, and the creative point of view behind each collection.</p></div>
+    - ID: "f8a54ae2-6934-4632-8cf1-a261b2efbdeb"
+      Hint: EventLocation
+      Value: Building 2, Floor 6, Trend Forum

@@ -1,0 +1,37 @@
+﻿---
+ID: "edca2396-ba32-4c69-9037-a0d229050de6"
+Parent: "5356e9f1-9fef-4602-b653-0b075a884b2b"
+Template: "73e57eaa-b54a-41e1-b689-bf7dae9155ad"
+Path: /sitecore/content/progressive/pkm/Home/Questions and Answers/Coverage Eligibility/Deductible communication/StateSpecific/NC/Deductible communication
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{19965C1B-E3C7-430B-AFA0-04879472C07F}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260731T012536Z
+    - ID: "2d71e32d-e990-46b3-8ca1-58cd89743d5e"
+      Hint: Question
+      Value: "How should Progressive claims advisors explain deductibles to customers?"
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Deductible communication
+    - ID: "4f8dc72e-1548-471c-9f3e-a13e944e4321"
+      Hint: Answer
+      Value: "State the Progressive deductible amount from the policy for the applicable coverage, explain it is the customer's responsibility before Progressive payment, and avoid promising net payment amounts before estimate completion. Document that the deductible discussion occurred. For North Carolina coastal wind risks, confirm whether a wind or named-storm deductible applies under NC DOI and rate bureau forms. For multiple deductibles, confirm which Progressive coverage applies."
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a2a9fb7c-0718-44cf-a944-145cd91235d5"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260731T012536Z

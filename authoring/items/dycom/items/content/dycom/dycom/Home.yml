@@ -1,0 +1,372 @@
+﻿---
+ID: "e1bdc7b3-67bf-407d-8bfd-dedc863ddeea"
+Parent: "c6939692-afa1-405c-b673-fca630dc12c4"
+Template: "bb001d38-015b-48d9-bc5e-069a6d81e09a"
+Path: /sitecore/content/dycom/dycom/Home
+BranchID: "45cf9f42-b3ac-4412-aab9-f8441c7e448e"
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{ED6EC369-7273-4AA6-AF46-E879096A1C8D}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "138ebce2-9ad8-4162-a1a4-3045b4bc7fc7"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{F558BEC9-C602-4D7A-B9A1-D0411C946EA4}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{46ADA543-E800-49A7-B39C-79DF054E26B7}"
+              p:before="*"
+              s:ds="local:/Data/HeroST/Wireless Construction HeroST"
+              s:id="{7943A20A-669D-4921-81EE-F4EC7F2E78A3}"
+              s:par="DynamicPlaceholderId=1&amp;FieldNames=%7BFC56217C-743F-40FE-9A5F-89A6162D0E60%7D&amp;Dark Image=1"
+              s:ph="headless-main">
+              <rls>
+                <ruleset
+                  s:pet="true">
+                  <rule
+                    uid="{3A84C1DC-0DEC-4EA5-8CFF-4CC133D05D9B}"
+                    s:name="5f3eed19360749adbc8743a6f11b630a">
+                    <conditions>
+                      <condition
+                        uid="617B8623F9EB472EA7D363B1B2C1DC56"
+                        s:id="{8E7426A4-12ED-4C44-8625-E7191860E726}"
+                        s:VariantName="5f3eed19360749adbc8743a6f11b630a" />
+                    </conditions>
+                    <actions>
+                      <action
+                        uid="{4323B2A0-DCD8-4CC6-8CA8-8DE0DBE429B5}"
+                        s:id="{0F3C6BEC-E56B-4875-93D7-2846A75881D2}"
+                        s:DataSource="local:/Campaigns/Fiber Worker Landing Page/Data/Field Engineer Hero" />
+                    </actions>
+                  </rule>
+                  <rule
+                    uid="{B455B1A1-3573-4736-B47A-B22ACBE82754}"
+                    s:name="2e1ca28e47924492a2bf37cfe63d9e44">
+                    <conditions>
+                      <condition
+                        uid="F845241153A3412EAFCAFD31695504B1"
+                        s:id="{8E7426A4-12ED-4C44-8625-E7191860E726}"
+                        s:VariantName="2e1ca28e47924492a2bf37cfe63d9e44" />
+                    </conditions>
+                    <actions>
+                      <action
+                        uid="{14ADC1BE-5A97-4F8D-8B88-6DB3CA9C1D1A}"
+                        s:id="{0F3C6BEC-E56B-4875-93D7-2846A75881D2}"
+                        s:DataSource="local:/Data/HeroST/Field Engineer HeroST" />
+                      <action
+                        uid="{BC6D044C-84A9-4A47-ABD2-A5ECAEEF9EE6}"
+                        s:id="{525C7B5A-8FD2-4B99-89F6-4F3F6D23BB02}"
+                        s:Parameters="DynamicPlaceholderId=1&amp;FieldNames=%7BA1BB6BA5-46B9-4A29-967B-15945C8F08D4%7D&amp;Dark Image=1&amp;Dark Imge=1" />
+                    </actions>
+                  </rule>
+                  <rule
+                    uid="{00000000-0000-0000-0000-000000000000}"
+                    s:name="Default">
+                    <conditions>
+                      <condition
+                        uid="8BD5A05DE0EE47E08E7F89BDA6CB20C6"
+                        s:id="{4888ABBB-F17D-4485-B14B-842413F88732}" />
+                    </conditions>
+                  </rule>
+                </ruleset>
+              </rls>
+            </r>
+            <r
+              uid="{75BA721C-0B68-46FA-9EB5-52C751F7CFBF}"
+              p:after="r[@uid='{46ADA543-E800-49A7-B39C-79DF054E26B7}']"
+              s:id="{3F9CCCB1-7BD7-4245-A3E9-91ED43575D98}"
+              s:par="excludeTopMargin&amp;CSSStyles&amp;DynamicPlaceholderId=18"
+              s:ph="headless-main" />
+            <r
+              uid="{6CCA2FCB-9B01-44EC-A5BD-A0ECA2A72ECD}"
+              p:after="r[@uid='{75BA721C-0B68-46FA-9EB5-52C751F7CFBF}']"
+              s:id="{7A1D9A21-B8D7-42F9-9B0B-92ABF8D1974F}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;BackgroundImage&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=7"
+              s:ph="headless-main" />
+            <r
+              uid="{B9670E42-84BC-4AAA-BFC7-88B678AD15D3}"
+              p:after="r[@uid='{6CCA2FCB-9B01-44EC-A5BD-A0ECA2A72ECD}']"
+              s:ds="local:/Data/SignupBanner 1"
+              s:id="{EF8925C3-D106-4187-9BC4-3C19A213AE75}"
+              s:par="DynamicPlaceholderId=5&amp;FieldNames=%7BFB24A783-2E59-4D80-8034-824CEEE2D2C1%7D"
+              s:ph="headless-main" />
+            <r
+              uid="{7EE723F6-CAC2-439F-83CC-F0E29B4E72C5}"
+              p:after="r[@uid='{B9670E42-84BC-4AAA-BFC7-88B678AD15D3}']"
+              s:ds="7c0908f3-8d4c-4ab8-bc37-0ca1014c8fd5"
+              s:id="{241A1B8E-E69A-4E07-B5E4-53975371AD3C}"
+              s:par="colorScheme=tertiary&amp;FieldNames=%7BC607F078-C933-4DE5-877A-89B34C285DF6%7D&amp;CSSStyles&amp;DynamicPlaceholderId=21"
+              s:ph="/headless-main/container-7" />
+            <r
+              uid="{5AE19BE4-4E1D-4B60-B585-49AEBFA94065}"
+              p:after="r[@uid='{7EE723F6-CAC2-439F-83CC-F0E29B4E72C5}']"
+              s:ds="a9dce677-2499-4299-a7b6-34d7e3f9dcbc"
+              s:id="{D806DDF7-39A7-4A6D-8E0A-D138BC53845D}"
+              s:par="FieldNames=%7BC7E6624F-3797-4DCB-A176-1E34A543809B%7D&amp;numColumns&amp;CSSStyles&amp;DynamicPlaceholderId=20"
+              s:ph="/headless-main/container-7">
+              <rls>
+                <ruleset
+                  s:pet="true">
+                  <rule
+                    uid="{E4BA036B-9253-43B2-BB27-DE84908D9352}"
+                    s:name="2e1ca28e47924492a2bf37cfe63d9e44">
+                    <conditions>
+                      <condition
+                        uid="B23E5402723A42989A3342788D0BBA98"
+                        s:id="{8E7426A4-12ED-4C44-8625-E7191860E726}"
+                        s:VariantName="2e1ca28e47924492a2bf37cfe63d9e44" />
+                    </conditions>
+                  </rule>
+                  <rule
+                    uid="{00000000-0000-0000-0000-000000000000}"
+                    s:name="Default">
+                    <conditions>
+                      <condition
+                        uid="B66B5D11FC6540DD8E50BD2539A9BD88"
+                        s:id="{4888ABBB-F17D-4485-B14B-842413F88732}" />
+                    </conditions>
+                    <actions>
+                      <action
+                        uid="{535FFA1C-765F-4CB3-9E42-E7A095E6A5E7}"
+                        s:id="{25F351A1-712D-45F8-857D-8AD95BB2ACE9}" />
+                    </actions>
+                  </rule>
+                </ruleset>
+              </rls>
+            </r>
+            <r
+              uid="{98EBA8AD-D97F-42B9-B310-342C03EA7229}"
+              p:after="r[@uid='{5AE19BE4-4E1D-4B60-B585-49AEBFA94065}']"
+              s:ds="270e0be9-c066-4a9f-994d-f76f197de19a"
+              s:id="{241A1B8E-E69A-4E07-B5E4-53975371AD3C}"
+              s:par="colorScheme=tertiary&amp;FieldNames=%7BAFB06FCE-0443-4345-906B-A783E4D4896B%7D&amp;CSSStyles&amp;DynamicPlaceholderId=8"
+              s:ph="/headless-main/container-7">
+              <rls>
+                <ruleset
+                  s:pet="true">
+                  <rule
+                    uid="{66D31C60-535D-493C-937C-91207AAF7977}"
+                    s:name="2e1ca28e47924492a2bf37cfe63d9e44">
+                    <conditions>
+                      <condition
+                        uid="9FE41EDC9C2441B1A95AD2BC44619394"
+                        s:id="{8E7426A4-12ED-4C44-8625-E7191860E726}"
+                        s:VariantName="2e1ca28e47924492a2bf37cfe63d9e44" />
+                    </conditions>
+                    <actions>
+                      <action
+                        uid="{A810588B-9BEE-42C6-B548-CAECC629F41F}"
+                        s:id="{0F3C6BEC-E56B-4875-93D7-2846A75881D2}"
+                        s:DataSource="1140f2d0-69cb-4dcc-ba72-a6bf8935e04c" />
+                      <action
+                        uid="{07E6F807-49E8-4A9D-8841-45800E26126B}"
+                        s:id="{25F351A1-712D-45F8-857D-8AD95BB2ACE9}" />
+                    </actions>
+                  </rule>
+                  <rule
+                    uid="{00000000-0000-0000-0000-000000000000}"
+                    s:name="Default">
+                    <conditions>
+                      <condition
+                        uid="AF82043DA57D4C1785BE637B7EB3D667"
+                        s:id="{4888ABBB-F17D-4485-B14B-842413F88732}" />
+                    </conditions>
+                  </rule>
+                </ruleset>
+              </rls>
+            </r>
+            <r
+              uid="{CF2EE022-8210-4097-82B4-9FA938E3976D}"
+              p:after="r[@uid='{98EBA8AD-D97F-42B9-B310-342C03EA7229}']"
+              s:id="{E164E3B5-0FF9-438A-A947-63F1CDD95B78}"
+              s:par="excludeTopMargin&amp;CSSStyles&amp;DynamicPlaceholderId=11"
+              s:ph="/headless-main/container-7" />
+            <r
+              uid="{4CE47EDD-494A-4B85-9898-33AA0A238DF1}"
+              p:after="r[@uid='{CF2EE022-8210-4097-82B4-9FA938E3976D}']"
+              s:ds="d911a4d5-0562-4d7f-937b-2c4120ec7b4c"
+              s:id="{D806DDF7-39A7-4A6D-8E0A-D138BC53845D}"
+              s:par="FieldNames=%7BC7E6624F-3797-4DCB-A176-1E34A543809B%7D&amp;numColumns&amp;CSSStyles&amp;DynamicPlaceholderId=9&amp;Styles"
+              s:ph="/headless-main/container-7" />
+            <r
+              uid="{47C147D6-B629-40B0-A9A0-42FE68FBFF7F}"
+              p:after="r[@uid='{4CE47EDD-494A-4B85-9898-33AA0A238DF1}']"
+              s:ds="local:/Data/Text 1"
+              s:id="{50B36874-8C4E-4958-9DD6-8B95C6AFD09A}"
+              s:par="CSSStyles&amp;DynamicPlaceholderId=12"
+              s:ph="/headless-main/container-7/container-thirty-left-11" />
+            <r
+              uid="{D241F066-20C9-4D96-8E1A-944DD4D34A36}"
+              p:after="r[@uid='{47C147D6-B629-40B0-A9A0-42FE68FBFF7F}']"
+              s:ds="local:/Data/Text 2"
+              s:id="{50B36874-8C4E-4958-9DD6-8B95C6AFD09A}"
+              s:par="CSSStyles&amp;DynamicPlaceholderId=13"
+              s:ph="/headless-main/container-7/container-thirty-center-11" />
+            <r
+              uid="{FB4423FB-E7C4-49D9-BCDF-E55C2FDB1FC1}"
+              p:after="r[@uid='{D241F066-20C9-4D96-8E1A-944DD4D34A36}']"
+              s:ds="local:/Data/Text 3"
+              s:id="{50B36874-8C4E-4958-9DD6-8B95C6AFD09A}"
+              s:par="CSSStyles&amp;DynamicPlaceholderId=14"
+              s:ph="/headless-main/container-7/container-thirty-right-11" />
+            <r
+              uid="{1EA5E406-90B2-4D28-8615-97101556762D}"
+              p:after="r[@uid='{FB4423FB-E7C4-49D9-BCDF-E55C2FDB1FC1}']"
+              s:ds="local:/Data/Text 4"
+              s:id="{9C6D53E3-FE57-4638-AF7B-6D68304C7A94}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B7D5E2405-F6F3-4CC8-A0ED-C059D4CC77F8%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=16"
+              s:ph="/headless-main/container-seventy-18">
+              <rls>
+                <ruleset
+                  s:pet="true">
+                  <rule
+                    uid="{EB5B8679-5463-44BD-8C61-F4B9D038A54A}"
+                    s:name="2e1ca28e47924492a2bf37cfe63d9e44">
+                    <conditions>
+                      <condition
+                        uid="004180418D334F5DABE1371A746067CF"
+                        s:id="{8E7426A4-12ED-4C44-8625-E7191860E726}"
+                        s:VariantName="2e1ca28e47924492a2bf37cfe63d9e44" />
+                    </conditions>
+                    <actions>
+                      <action
+                        uid="{B2F205F6-D362-4330-96E4-50C8C863748A}"
+                        s:id="{25F351A1-712D-45F8-857D-8AD95BB2ACE9}" />
+                    </actions>
+                  </rule>
+                  <rule
+                    uid="{00000000-0000-0000-0000-000000000000}"
+                    s:name="Default">
+                    <conditions>
+                      <condition
+                        uid="D6D8394746D240C6A763566986D1DF13"
+                        s:id="{4888ABBB-F17D-4485-B14B-842413F88732}" />
+                    </conditions>
+                  </rule>
+                </ruleset>
+              </rls>
+            </r>
+            <r
+              uid="{16CE731B-9F2C-4378-ABD9-22497B71F014}"
+              p:after="*[1=2]"
+              s:ds="369d7f2e-9695-41aa-85fe-284f99572626"
+              s:id="{241A1B8E-E69A-4E07-B5E4-53975371AD3C}"
+              s:par="colorScheme&amp;FieldNames=%7BC607F078-C933-4DE5-877A-89B34C285DF6%7D&amp;CSSStyles&amp;DynamicPlaceholderId=19"
+              s:ph="/headless-main/container-seventy-18">
+              <rls>
+                <ruleset
+                  s:pet="true">
+                  <rule
+                    uid="{E47126BB-5232-41A6-A926-67AD88DF74A1}"
+                    s:name="2e1ca28e47924492a2bf37cfe63d9e44">
+                    <conditions>
+                      <condition
+                        uid="A3BC5140EE0B49F7B212E3CDC8C43A1B"
+                        s:id="{8E7426A4-12ED-4C44-8625-E7191860E726}"
+                        s:VariantName="2e1ca28e47924492a2bf37cfe63d9e44" />
+                    </conditions>
+                    <actions>
+                      <action
+                        uid="{61572A26-4687-4CCF-A48F-CC43C130D733}"
+                        s:id="{0F3C6BEC-E56B-4875-93D7-2846A75881D2}"
+                        s:DataSource="369d7f2e-9695-41aa-85fe-284f99572626" />
+                      <action
+                        uid="{7D55F3C8-6290-4737-B9B7-C0E6CBF9482F}"
+                        s:id="{525C7B5A-8FD2-4B99-89F6-4F3F6D23BB02}"
+                        s:Parameters="colorScheme=tertiary&amp;FieldNames=%7BC607F078-C933-4DE5-877A-89B34C285DF6%7D&amp;CSSStyles&amp;DynamicPlaceholderId=19" />
+                    </actions>
+                  </rule>
+                  <rule
+                    uid="{00000000-0000-0000-0000-000000000000}"
+                    s:name="Default">
+                    <conditions>
+                      <condition
+                        uid="1F23C85FA45B45C3B9139225306D53A0"
+                        s:id="{4888ABBB-F17D-4485-B14B-842413F88732}" />
+                    </conditions>
+                    <actions>
+                      <action
+                        uid="{5D4F1FCF-C842-46A7-B4E7-2CC29BAE7265}"
+                        s:id="{25F351A1-712D-45F8-857D-8AD95BB2ACE9}" />
+                    </actions>
+                  </rule>
+                </ruleset>
+              </rls>
+            </r>
+          </d>
+        </r>
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Premium audio equipment and speakers designed for audiophiles. Experience exceptional sound quality with SYNCs heritage collection.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260509T145531Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: SYNC
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Premium audio equipment and speakers designed for audiophiles. Experience exceptional sound quality with SYNCs heritage collection.
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: SYNC
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "65408499-25bc-49d0-a2ff-b2fdd798aafc"
+      Hint: ogImage
+      Value: |
+        <image mediaid="{5977A6A5-D5D4-45BD-ADD5-0E7E629162FD}" />
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: SYNC
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "7b4be6f7-16ae-43ec-b402-7ae3a54e80d7"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Premium audio equipment and speakers designed for audiophiles. Experience exceptional sound quality with SYNCs heritage collection.
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: SYNC
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260824T040527Z
+    - ID: "e7f8a9b0-c1d2-4e3f-8a9b-0c1d2e3f4a5b"
+      Hint: metadataAuthor
+      Value: Sitecore
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: SYNC
+    - ID: "f6fcc0b6-31b2-49cd-8a66-4ba282a8ad24"
+      Hint: metadataKeywords
+      Value: SYNC, audio equipment, speakers, headphones, premium sound, audiophile

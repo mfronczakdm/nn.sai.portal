@@ -1,0 +1,52 @@
+﻿---
+ID: "87b16fc1-4930-44e1-b3a3-6b251233801d"
+Parent: "00718dba-11ee-4006-bd17-5211d18b8335"
+Template: "0906b950-0047-4b98-93e1-cca545685259"
+Path: /sitecore/content/solterra/solterra/Home/Article Page/Data/Article Header
+BranchID: "97509128-1b31-4a5b-9c07-d4c94b611d24"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "ca4dd285-a0f5-4a6f-aba1-767f8f66d187"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{87495009-0854-4989-B862-17D13052C991}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260430T182349Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "74450b29-7ed3-4288-aa64-47fced8e06f2"
+      Hint: imageRequired
+      Value: |
+        <image mediaid="ddd4a2d5-a723-4a19-96bb-d783921e6757" alt="Woman in Sand" />
+    - ID: "75aa702f-5fe3-47ab-8d77-78eb2c37cc7a"
+      Hint: eyebrowOptional
+      Value: Solar Power
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4b2ab75d-09ae-4e4d-a1b5-d318b1d5b79a"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260430T182456Z

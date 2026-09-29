@@ -1,0 +1,37 @@
+﻿---
+ID: "4a4925c7-32cd-46d1-ac61-fd52141a032f"
+Parent: "3b150833-3f30-40f8-bf7b-ee3ef2f5f5dd"
+Template: "73e57eaa-b54a-41e1-b689-bf7dae9155ad"
+Path: /sitecore/content/progressive/pkm/Home/Questions and Answers/Claim Intake/Severity assignment at intake/StateSpecific/NC/Severity assignment at intake
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{2D2DB3E1-8976-4A7C-8073-1A585CC8349F}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260731T012529Z
+    - ID: "2d71e32d-e990-46b3-8ca1-58cd89743d5e"
+      Hint: Question
+      Value: "How do Progressive claims advisors assign claim severity at intake?"
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Severity assignment at intake
+    - ID: "4f8dc72e-1548-471c-9f3e-a13e944e4321"
+      Hint: Answer
+      Value: "Apply Progressive severity guidelines based on injuries, total loss indicators, litigation potential, commercial exposure, and catastrophic events. Assign the severity tier during intake so the claim routes to the correct queue. In North Carolina, elevate coastal wind and beach-area catastrophe indicators in line with NC DOI and rate bureau exposure considerations. Escalate uncertain high-severity indicators to a supervisor or SME rather than under-classifying the file."
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d50f1b12-2382-47d2-bf9d-1fdc7603c92b"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260731T012530Z

@@ -1,0 +1,62 @@
+﻿---
+ID: "b0e44009-1388-43c5-8f16-ace4fb07ef1a"
+Parent: "b29172d6-c337-41c3-817c-8eb3f004612d"
+Template: "e64d342f-e5aa-4233-88c4-58ccd451a7d3"
+Path: /sitecore/content/solterra/solterra/Home/Landing Page/Data/Vertical Image Accordion/Vertical Accordion Item 1
+BranchID: "97509128-1b31-4a5b-9c07-d4c94b611d24"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 0
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "199f2115-36d7-4251-af7a-e0d63531d61b"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{49F135A7-FEE7-4571-A94D-146D0E91B3E7}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "024a119b-09d8-480b-b179-872c47dce1b5"
+      Hint: linkOptional
+      Value: |
+        <link class="" id="{3E89E8B6-C698-4D5D-A26A-79F62B500224}" querystring="" anchor="" target="" title="" linktype="internal" text="Explore" url="" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260430T182348Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "57b7cdd6-1dbb-4e0f-9df0-6cccb20444c6"
+      Hint: descriptionOptional
+      Value: "Driven by innovation and performance, our Move division is dedicated to redefining athletic excellence with cutting-edge gear designed for strength, speed, and endurance."
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "6ef0efde-7773-4786-af78-860ff2f4eeac"
+      Hint: titleRequired
+      Value: Solterra Fragrance
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "48542f4f-5be1-40b4-8f8a-d965f25a5393"
+    - ID: "ab7c812f-8768-4203-8ee2-40d0ebb2107a"
+      Hint: imageRequired
+      Value: |
+        <image mediaid="050b55b3-4a2c-4288-8d32-282d10a77ec9" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260430T182459Z

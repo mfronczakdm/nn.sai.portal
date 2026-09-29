@@ -1,0 +1,62 @@
+﻿---
+ID: "06ce0471-f49e-4531-bb77-c47eb30f814c"
+Parent: "3a9db45d-1751-4405-8ce0-291193cdc341"
+Template: "13033574-ef4a-44a2-875f-cf4e7ca3592f"
+Path: "/sitecore/content/dycom/power-solutions/Data/Data/Videos/Grow With Us Video"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "acf10702-d5fd-45d3-9fc1-42e6e9f788d1"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260513T012920Z
+    - ID: "29b4bb6a-658f-4cda-90ea-07fb9d237194"
+      Hint: title
+      Value: Come Grow with Us
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "4177ceed-4920-49a5-9310-e5c33ad96c18"
+      Hint: caption
+      Value: Strong Minds. Strong Tools. Pride.
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "7c168d4a-6e92-46cb-a89e-da9040d9df1d"
+      Hint: image
+      Value: |
+        <Image src="https://mrfbasech.sitecoresandbox.cloud/api/public/content/85642-HomePageHero-2000x800?v=edeb4b52" dam-id="TsP_7ilcQv2Lvjcv9IKolw" width="2000" height="800" alt="vid image 2.png" dam-content-type="Image" thumbnailsrc="https://mrfbasech.sitecoresandbox.cloud/api/gateway/85642/thumbnail" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "0c8827fa-908c-46ac-b702-7c5ecef28254"
+    - ID: "9f1d613b-d092-4382-bb87-006d8bbb8a8c"
+      Hint: image2
+      Value: |
+        <Image src="https://mrfbasech.sitecoresandbox.cloud/api/public/content/85340-LandingPageHero-2000x600?v=1a8851f2" dam-id="MtRjMp2jT7mx1FbGRulJZg" width="2000" height="600" alt="imgi_21_BLDR_Culture_Community_Sustainability_RAW.webp" dam-content-type="Image" thumbnailsrc="https://mrfbasech.sitecoresandbox.cloud/api/gateway/85340/thumbnail" />
+    - ID: "adfd7171-7c7d-4f1e-b881-637830556379"
+      Hint: video
+      Value: |
+        <link linktype="external" url="https://vimeo.com/807611139?autoplay=1&amp;muted=1&amp;stream_id=Y2xpcHN8MTc1NDk4MTI2fGlkOmRlc2N8W10%3D" target="" text="" title="" class=""/>
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Akv1r1Hmcm16AN61y5QanpMca0RChHPy
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260901T125439Z

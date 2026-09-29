@@ -1,0 +1,42 @@
+﻿---
+ID: "40e7ce06-ff1f-463e-a2a3-7a273e691c3e"
+Parent: "d551b567-59dc-46d5-8c30-dfba79701541"
+Template: "4efc4068-14a6-4b66-81de-2dfaf1559137"
+Path: /sitecore/content/pillsbury/blg/Data/Career Listings/Open Roles
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{6C59AE29-D0A1-4B77-9305-0ABAB21D5FE5}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "fe6319b6-feed-4592-b538-dfaa427b22ae"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "03d8f0db-0a51-40f0-a21a-f2a3d1c86e91"
+      Hint: Intro
+      Value: <p>Search open roles by keyword, track, or location. Find associate, summer, lateral, and business professional opportunities across our offices.</p>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260806T165246Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{C55B483C-EA7F-4E76-A066-985F7D9396CA}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "fb975415-851a-4ee9-9569-e09360b8fe0b"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d80c4398-4e0d-4693-bb24-ce24ed194199"
+      Hint: CareersRoot
+      Value: "{4C243B26-7226-4BDE-B4B5-DD3FCE658616}"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260822T014835Z
+    - ID: "fbd93418-91d8-4eb1-91f3-aeb90c27bced"
+      Hint: Title
+      Value: Open Roles

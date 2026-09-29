@@ -1,0 +1,37 @@
+﻿---
+ID: "7a9113f1-05cc-4e65-b2a5-ff84b2c81146"
+Parent: "86683480-fccb-485b-bcdc-85e474d1cd6c"
+Template: "73e57eaa-b54a-41e1-b689-bf7dae9155ad"
+Path: /sitecore/content/progressive/pkm/Home/Questions and Answers/Claim Intake/Required fields for FNOL/StateSpecific/TX/Required fields for FNOL
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{C2295BF1-0FE1-4D0D-BB37-6C738C53B1D8}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260731T012526Z
+    - ID: "2d71e32d-e990-46b3-8ca1-58cd89743d5e"
+      Hint: Question
+      Value: "Which fields are required when Progressive claims advisors complete FNOL?"
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Required fields for FNOL
+    - ID: "4f8dc72e-1548-471c-9f3e-a13e944e4321"
+      Hint: Answer
+      Value: "Required FNOL fields typically include policy number or searchable insured identifiers, loss date and approximate time, loss location, loss type, caller relationship to the insured, and a brief description of what happened. Add vehicle, driver, or property details when the loss type requires them. In Texas, document hail or storm volume indicators when applicable and complete required fields promptly consistent with TX DOI prompt-payment and unfair claims practices expectations. Do not submit FNOL until required fields are complete or documented as unavailable with a reason."
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f1f5311c-41b1-4e56-b79e-08977c50c25e"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260731T012526Z

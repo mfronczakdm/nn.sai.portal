@@ -1,0 +1,31 @@
+﻿---
+ID: "2760a34f-a0c0-401d-bd49-29a3b40f4d80"
+Parent: "0b5c79ab-4b50-4a33-9bce-b1306eebf1be"
+Template: "84dbe64b-0fed-4125-a971-725c0155c321"
+Path: "/sitecore/content/progressive/pkm/Home/Shared Content/07-ClaimsTimelines/StateSpecific/TX"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260731T011211Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ee15fe19-6bc7-4d05-9297-2879c7402f7b"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260731T011211Z

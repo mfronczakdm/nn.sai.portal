@@ -1,0 +1,62 @@
+﻿---
+ID: "d7438682-0cbb-4ea5-b03b-9d313dc0248c"
+Parent: "28f5596c-9b5d-4078-b685-26a7cdf2ae41"
+Template: "bd372d9d-6e4f-4ae9-a54c-dbc2acdebe2a"
+Path: /sitecore/content/dycom/dycom/Data/Animated Promos/Careers Animated Promo
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "b0b7ac34-54a7-46a0-b725-5f241e2f802f"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260512T194821Z
+    - ID: "3a2a1142-68ca-4f5b-afb0-c17d2c0ef8ea"
+      Hint: secondaryLink
+      Value: |
+        <link linktype="external" url="https://www.sitecore.com" text="People" anchor=""/>
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\david.stremic@sitecore.com
+    - ID: "84a2a397-786e-43bd-85a0-bfbcc51fc3f3"
+      Hint: image
+      Value: |
+        <Image src="https://mrfbasech.sitecoresandbox.cloud/api/public/content/86303-HomepagePromoCTAs-1100x740?v=e76ffa77" dam-id="IV0AWKM1QbKuiJIfFpU1xg" width="1100" height="740" alt="imgi_16_LP-SKU-CARDS-IMG-BG-2-1703165886813.jpg" dam-content-type="Image" thumbnailsrc="https://mrfbasech.sitecoresandbox.cloud/api/gateway/86303/thumbnail" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "26b74d06-01dd-48f1-b72e-e8b5e1aee099"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Akv1r1Hmcm16AN61y5QanpMca0RChHPy
+    - ID: "c00d4bd2-a452-4067-a861-e8c6d47201a7"
+      Hint: description
+      Value: "We prioritize your safety, well-being, and growth with ample support, rewards, and learning opportunities. Our supportive network spans the country, ensuring stable careers for our team while delivering excellent work that connects teams, families and communities. "
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260901T125458Z
+    - ID: "da7db0f2-08eb-47c5-af07-ed12a1e998db"
+      Hint: title
+      Value: Health & Safety
+    - ID: "e9e9c847-e0f0-497d-8e41-5211a087029a"
+      Hint: primaryLink
+      Value: |
+        <link linktype="external" url="https://sitecore.ai" text="Safety" anchor=""/>

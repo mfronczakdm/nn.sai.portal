@@ -1,0 +1,35 @@
+﻿---
+ID: "0d5c944b-2bd0-4026-9112-25d04be90126"
+Parent: "5907a752-46e9-4f37-9f74-42cebe52864a"
+Template: "6f108e3c-5d57-42f8-a910-c22920269b0a"
+Path: /sitecore/content/Cooley/cooley/Presentation/Partial Designs/Global/Header/Data/Insights Links/Life Sciences IPO Outlook
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260818T195607Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "68c2a603-f98e-42a3-be2d-dd70598c2a63"
+      Hint: Link
+      Value: |
+        <link text="Life Sciences IPO Outlook" linktype="internal" class="" title="Life Sciences IPO Outlook" target="" querystring="" id="{CE9E7CA2-47DC-450D-B64A-D0B2295881E0}" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c407a1bf-49a2-4753-b7a9-d1b3f56ee7e3"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260818T195607Z

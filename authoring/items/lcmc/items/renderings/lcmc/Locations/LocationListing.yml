@@ -1,0 +1,84 @@
+﻿---
+ID: "3cd4cf10-ad03-43e0-bb82-4f3fae827af8"
+Parent: "6f1f9d14-bcbf-462f-95ee-3517cf187aef"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Project/lcmc/Locations/LocationListing
+SharedFields:
+- ID: "037fe404-dd19-4bf7-8e30-4dadf68b27b0"
+  Hint: componentName
+  Value: LocationListing
+- ID: "17bb046a-a32a-41b3-8315-81217947611b"
+  Hint: ComponentQuery
+  Value: |
+    query LocationListing($datasource: String!, $language: String!) {
+      datasource: item(path: $datasource, language: $language) {
+        id
+        name
+        children(first: 20) {
+          results {
+            id
+            name
+            url { path }
+            locationTitle: field(name: "LocationTitle") { jsonValue }
+            locationShortName: field(name: "LocationShortName") { jsonValue }
+            locationType: field(name: "LocationType") { jsonValue }
+            streetAddress: field(name: "StreetAddress") { jsonValue }
+            city: field(name: "City") { jsonValue }
+            state: field(name: "State") { jsonValue }
+            postalCode: field(name: "PostalCode") { jsonValue }
+            phoneNumber: field(name: "PhoneNumber") { jsonValue }
+            latitude: field(name: "Latitude") { jsonValue }
+            longitude: field(name: "Longitude") { jsonValue }
+            landingPage: field(name: "LandingPage") { jsonValue }
+          }
+        }
+      }
+    }
+- ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
+  Hint: Datasource Template
+  Value: /sitecore/templates/Project/lcmc/Folders/LCMC Hospital Location Folder
+- ID: "a3411ff6-c978-40aa-b059-a49b9ca2209b"
+  Hint: Can select Page as a data source
+  Value: 1
+- ID: "a77e8568-1ab3-44f1-a664-b7c37ec7810d"
+  Hint: Parameters Template
+  Value: "{6277500C-BADB-472B-8B3C-EB6DA631CBDB}"
+- ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
+  Hint: Datasource Location
+  Value: "query:$site/*[@@name='Data']/*[@@templatename='LCMC Hospital Location Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='LCMC Hospital Location Folder']|/sitecore/content/lcmc/lcmc/Data/Locations|/sitecore/content/lcmc/lcmc/Home/Our Locations"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "f4185d44-127f-428d-907d-88ac465bd6f0"
+- ID: "f6677a49-0a1d-4bad-b8ba-4f0f22bdee64"
+  Hint: Additional compatible templates
+  Value: "{D77937AC-BAE4-4EB0-8D7E-69EC09D5BBFC}"
+Languages:
+- Language: en
+  Fields:
+  - ID: "30e85e5d-e00a-4864-b358-7624d511deb4"
+    Hint: __Unversioned revision
+    Value: "4bbd5d43-aa3f-4555-ba06-fe5ab9ea208e"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T203436Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "1dbbccbd-b95a-45ea-8ec4-3dd5de87c612"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260908T211421Z

@@ -1,0 +1,30 @@
+﻿---
+ID: "dc2d8267-372a-4ea6-8a54-abfce2cb02f4"
+Parent: "011d81ac-f13e-4dc1-a142-88119d17a7b5"
+Template: "9f8ad610-0bf4-4801-a9ac-7e242edd1b6a"
+Path: "/sitecore/content/andmore/atlanta-apparel/Home/Discover"
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 100
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "6b63d4a9-4bf1-4a14-804e-c887f53d868b"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260825T013513Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "03f44a2e-a4eb-49a8-ad64-59fb0f87868c"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260903T231613Z

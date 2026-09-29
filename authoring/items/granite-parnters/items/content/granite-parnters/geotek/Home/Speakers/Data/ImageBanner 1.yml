@@ -1,0 +1,63 @@
+﻿---
+ID: "b1ec00fa-62b1-4565-b61e-f9f9c459c0a6"
+Parent: "3c98a1b8-ae4f-4f0e-8a58-7094d8ae1b51"
+Template: "b754cb40-d82d-46e5-b001-e7f4434fd399"
+Path: "/sitecore/content/granite-parnters/geotek/Home/Speakers/Data/ImageBanner 1"
+BranchID: "9660ff60-8e47-4efc-b22d-bac3fd04c8d7"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "46ba9063-51b6-479a-b73b-9fd55a920cd8"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{1DCD7425-7B3A-426B-86A4-4C9F59EF1AD8}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260617T114715Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "87ac64e1-6130-4c85-b8ae-6f6a46a48ddb"
+      Hint: Body
+      Value: When Sync first started shaping the sound of music, our amps were proudly built in Georgia. Decades later, some of our most iconic amps are still crafted in the same factory.
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "72185770-c961-4bc4-8248-f213bb6d7832"
+    - ID: "8ecf2383-cc5b-4117-a28e-beaaa49f70e7"
+      Hint: Title
+      Value: Iconic design that stands apart
+    - ID: "9e31f586-d332-43a1-a3b6-794a0ce6f95d"
+      Hint: Image2
+      Value: |
+        <image mediaid="{F66FB7CE-5D21-402C-B51F-069CCD7CDCCD}" />
+    - ID: "a2f1b23d-31df-4913-a4ca-d1e2948f968a"
+      Hint: Image1
+      Value: |
+        <image mediaid="{E9A3ECD5-43E6-49DE-BA26-62875615879B}" />
+    - ID: "b8cc9165-bb12-446b-b4b2-3d40756ca79c"
+      Hint: Image3
+      Value: |
+        <image mediaid="{5DBB555A-F1B7-421C-8883-580F0DF163B3}" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260617T114943Z

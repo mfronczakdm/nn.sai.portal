@@ -1,0 +1,26 @@
+﻿---
+ID: "9dea8ca4-0cf8-44f4-ace6-e993d632581a"
+Parent: "18bbadbb-f7fd-4848-8f74-206a5b462f8d"
+Template: "6dcc219e-2a14-4427-80a0-2621a9f6b6dd"
+Path: /sitecore/content/quanex/quanex/Data/HeroCarousels
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260813T130821Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{FCA998C5-0CC3-4F91-94D8-0A4E6CAECE88}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "eb2132b2-084e-440b-9a84-ba2ace405b55"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260829T204825Z

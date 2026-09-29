@@ -1,0 +1,45 @@
+﻿---
+ID: "eaf79109-3655-468b-8c36-e841d64c0d61"
+Parent: "203d97fd-8874-45be-849b-ef9818f66193"
+Template: "2dfe3445-9c97-4648-ac44-c1a53e9e8422"
+Path: /sitecore/content/quanex/amesburytruth/Presentation/Page Designs
+BranchID: "45cf9f42-b3ac-4412-aab9-f8441c7e448e"
+SharedFields:
+- ID: "ba1f60d6-3deb-40cc-bb61-eec772279ee1"
+  Hint: TemplatesMapping
+  Value: "%7bD8715F80-7CA6-460F-BFC6-60C70451D736%7d%3d%257B11C5CAE9-3A3E-49CA-9B79-32788F3DEDE8%257D%26%7bECAC2D85-2510-4188-B7BF-5B26A096FD80%7d%3d%257B11C5CAE9-3A3E-49CA-9B79-32788F3DEDE8%257D%26%7bC7630162-7A5A-47A3-BBA2-77D1CEBBBBC3%7d%3d%257BBC002A2A-0201-4418-901F-7DE3B6B28EAD%257D%26%7b70B7A694-2CAA-4BA7-9D70-BEF2DDEF8C1D%7d%3d%257B11C5CAE9-3A3E-49CA-9B79-32788F3DEDE8%257D%26%7bE205C77B-5A65-47B4-8234-C9671FA57B00%7d%3d%257B11C5CAE9-3A3E-49CA-9B79-32788F3DEDE8%257D%26%7b4659E1F1-4313-4155-8736-1200FE27AE8E%7d%3d%257B11C5CAE9-3A3E-49CA-9B79-32788F3DEDE8%257D%26%7b2083F738-CC4F-4ADC-AE30-3F32C85E4763%7d%3d%257B11C5CAE9-3A3E-49CA-9B79-32788F3DEDE8%257D"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "d9bc0326-4e6a-4a79-99a8-5f0f1b789afe"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{2EA756FA-AED6-4599-83B7-36FEFE229B31}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260811T153052Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "713c0b61-e0e3-4857-91f1-4ca731c40150"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260811T153459Z

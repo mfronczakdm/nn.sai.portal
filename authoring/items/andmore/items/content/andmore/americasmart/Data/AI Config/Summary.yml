@@ -1,0 +1,125 @@
+﻿---
+ID: "2b604449-e9d8-4542-8075-a22cccf68455"
+Parent: "a1e9d828-3342-4b0b-9067-528adadd044f"
+Template: "b2c3d4e5-f6a7-4b5c-9d0e-1f2a3b4c5d6e"
+Path: /sitecore/content/andmore/americasmart/Data/AI Config/Summary
+BranchID: "f8a9b0c1-d2e3-4f4a-5b6c-7d8e9f0a1b2c"
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 100
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "c4cfd85e-5388-4aa3-ae58-3eb710c9f8bf"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{B0C1D2E3-F4A5-4B6C-7D8E-9F0A1B2C3D4E}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260824T120457Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f6977e58-a53d-48a6-81ba-3984f873afc1"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d4e5f6a7-b8c9-4d5e-1f2a-3b4c5d6e7f8a"
+      Hint: title
+      Value: SYNC
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260824T120509Z
+    - ID: "e5f6a7b8-c9d0-4e5f-2a3b-4c5d6e7f8a9b"
+      Hint: description
+      Value: "SYNC is a product-focused site for audio gear companies. It showcases product listings, categories, and commerce-oriented experiences built with Sitecore XM Cloud and Next.js. The template delivers performance, personalization, and AI-ready content for product discovery and e-commerce."
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260824T120457Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "348e89ef-3a4f-4d9b-bd75-cbd1eac872ca"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d4e5f6a7-b8c9-4d5e-1f2a-3b4c5d6e7f8a"
+      Hint: title
+      Value: SYNC
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260904T105207Z
+    - ID: "e5f6a7b8-c9d0-4e5f-2a3b-4c5d6e7f8a9b"
+      Hint: description
+      Value: SYNC es un sitio enfocado en productos para empresas de equipos de audio. Presenta listados de productos, categorías y experiencias orientadas al comercio creadas con Sitecore XM Cloud y Next.js. La plantilla ofrece rendimiento, personalización y contenido preparado para IA para el descubrimiento de productos y el comercio electrónico.
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260824T120457Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a67407ac-7d74-415b-b585-96049610408f"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d4e5f6a7-b8c9-4d5e-1f2a-3b4c5d6e7f8a"
+      Hint: title
+      Value: SYNC
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260904T105235Z
+    - ID: "e5f6a7b8-c9d0-4e5f-2a3b-4c5d6e7f8a9b"
+      Hint: description
+      Value: SYNCは、オーディオ機器企業向けの製品重視サイトです。製品一覧、カテゴリ、そしてSitecore XM CloudとNext.jsで構築されたコマース指向の体験を紹介します。このテンプレートは、製品発見とeコマースのために、パフォーマンス、パーソナライゼーション、そしてAI対応コンテンツを提供します。

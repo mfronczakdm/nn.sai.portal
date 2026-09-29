@@ -1,0 +1,67 @@
+﻿---
+ID: "a1b847f6-5588-499d-ac48-822b7d1228e8"
+Parent: "e94fc8b8-faf1-47ef-8985-b2b39bd102d1"
+Template: "75ba19ed-046a-48f7-a214-1ccb30341785"
+Path: "/sitecore/content/Cooley/cooley/Home/People/Michael-Yu"
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{35AB2923-3AD3-43D0-B36C-DBF238B0B950}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "027aaf74-a23d-4f1d-a338-378dd796eb7b"
+      Hint: Summary
+      Value: Hong Kong | Capital Markets, Mergers and Acquisitions
+    - ID: "2302c70d-5f7e-4c92-ba54-52ac669e295a"
+      Hint: Phone
+      Value: +852 3758 1212
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260814T211933Z
+    - ID: "2fbe8cff-9382-4f34-a13d-a3eae26add65"
+      Hint: PreferredName
+      Value: Michael
+    - ID: "6cf9e6dc-c127-4b03-854f-a074e892d5bd"
+      Hint: FullName
+      Value: Michael Yu
+    - ID: "6f5de62a-0295-4a9c-8cbe-90c1a59f483d"
+      Hint: SeoTitle
+      Value: "Michael Yu | Partner in Charge - Hong Kong | Cooley"
+    - ID: "78843463-efe2-448f-a30d-b6e7e2aab380"
+      Hint: Office
+      Value: "{6B27B0DC-D651-4C59-AD76-01EDCCD3DEBA}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d471cc9c-56cb-4a1d-b410-16c219c5303e"
+    - ID: "9fe86ca5-05e1-4a44-a119-fcf675e32f02"
+      Hint: Biography
+      Value: "<p>Michael Yu is a corporate partner at Cooley and partner in charge of Cooley's Hong Kong office. His practice focuses on initial public offerings and other equity capital markets transactions on the Hong Kong Stock Exchange, pre-IPO investments, public takeovers and listing rules and securities regulations compliance.</p>"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "bbd10213-83c1-468c-8788-5c2a67cf85a0"
+      Hint: Email
+      Value: michael.yu@cooley.com
+    - ID: "c54be241-aff8-4630-b46c-01aae94f8b9e"
+      Hint: SeoDescription
+      Value: Michael Yu is Partner in Charge of Cooley's Hong Kong office, focusing on capital markets.
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260817T025704Z
+    - ID: "f3c9bb15-bb46-4ec0-9d31-0300245e6acd"
+      Hint: JobTitle
+      Value: "Partner in Charge - Hong Kong"
+    - ID: "f632d418-ab07-4f1d-a0fb-15d4fb9fd92c"
+      Hint: Headshot
+      Value: |
+        <Image src="https://www.cooley.com/-/media/cooley/bio-images/headshots/yu-michael-24938-bw.jpg" alt="Michael Yu" />
+    - ID: "f968ea1a-5e81-4417-822e-e5217ae61323"
+      Hint: PracticeAreas
+      Value: |
+        {2545FF1B-DD2D-4F66-856C-6AE97575FC52}
+        {EB8E4D57-879B-47DE-B166-823119AD9B08}

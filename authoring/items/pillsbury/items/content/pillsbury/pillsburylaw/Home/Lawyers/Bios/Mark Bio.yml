@@ -1,0 +1,31 @@
+﻿---
+ID: "1fdfc82a-2772-4bb4-a5b0-837a1752c27b"
+Parent: "5dad4c5c-84cd-471a-80ef-c805570be79a"
+Template: "d9ed4a26-1b44-4f52-9eae-61e1eb193671"
+Path: /sitecore/content/pillsbury/pillsburylaw/Home/Lawyers/Bios/Mark Bio
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{94166E60-1413-4DF2-ADDE-990F1219F907}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "19b27df3-a169-420a-a648-7d766ff1ce33"
+      Hint: FullName
+      Value: Mark Bio
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260821T153745Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "bff7401c-cc4c-46d8-ba46-1890957f4482"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260821T153745Z

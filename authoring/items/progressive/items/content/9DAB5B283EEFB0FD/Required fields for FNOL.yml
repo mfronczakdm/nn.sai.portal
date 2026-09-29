@@ -1,0 +1,37 @@
+﻿---
+ID: "bd687b09-5dec-47d5-ad71-38184932b9cf"
+Parent: "dbd11f9f-6de6-4c59-9030-f0717afaf1d1"
+Template: "73e57eaa-b54a-41e1-b689-bf7dae9155ad"
+Path: /sitecore/content/progressive/pkm/Home/Questions and Answers/Claim Intake/Required fields for FNOL/StateSpecific/FL/Required fields for FNOL
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{0A7A3BB3-EFFC-45F4-A61B-0B781C6BE353}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260731T012523Z
+    - ID: "2d71e32d-e990-46b3-8ca1-58cd89743d5e"
+      Hint: Question
+      Value: "Which fields are required when Progressive claims advisors complete FNOL?"
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Required fields for FNOL
+    - ID: "4f8dc72e-1548-471c-9f3e-a13e944e4321"
+      Hint: Answer
+      Value: "Required FNOL fields typically include policy number or searchable insured identifiers, loss date and approximate time, loss location, loss type, caller relationship to the insured, and a brief description of what happened. Add vehicle, driver, or property details when the loss type requires them. In Florida, also capture PIP/no-fault injury indicators and any hurricane or CAT-related loss context when applicable, keeping FL DFS reporting timelines in mind. Do not submit FNOL until required fields are complete or documented as unavailable with a reason."
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "39b0fa4e-90b5-44d2-8e89-a95b9cc076fb"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260731T012523Z

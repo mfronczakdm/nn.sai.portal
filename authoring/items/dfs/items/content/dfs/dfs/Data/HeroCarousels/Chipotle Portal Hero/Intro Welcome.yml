@@ -1,0 +1,50 @@
+﻿---
+ID: "06a429e2-a31f-40ed-af05-aac53f54401d"
+Parent: "61979ed4-3bad-49c2-af3d-0d725df1884a"
+Template: "9c063cfd-1d09-42b5-9fc4-560a6d7e859f"
+Path: /sitecore/content/dfs/dfs/Data/HeroCarousels/Chipotle Portal Hero/Intro Welcome
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 100
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "a4ea31f8-d628-4370-94af-1693cf2961e2"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0da51f00-cb5f-45ef-9c9e-4a387ca41a53"
+      Hint: Description
+      Value: Your dedicated DFS partnership portal for ordering foodservice supplies, tracking deliveries, and managing restaurant operations across your Chipotle locations.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260819T184718Z
+    - ID: "3ce233be-84f2-4003-a560-6c0e347d1a09"
+      Hint: Summary
+      Value: Powered by Diversified Foodservice Supply
+    - ID: "6488d3e6-7485-4e1a-b83f-c88d6b0db7a5"
+      Hint: Image
+      Value: |
+        <Image src="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/2e5a2afb39474721b4762439c90e86a1?v=7ea5aac1" dam-id="zXbwX9lqTgWa0v8BNakfiQ" width="1440" height="865" dam-content-type="Image" thumbnailsrc="https://mrfbasech2.sitecoresandbox.cloud/api/gateway/84370/thumbnail" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "31168440-c9fd-4bfe-bb2a-cc4687882177"
+    - ID: "979e79f0-d6d5-4abb-a3bf-d971f54f5990"
+      Hint: IsIntroSlide
+      Value: 1
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "cd3300c5-39a0-4b1a-9d0d-37a89b7517f9"
+      Hint: SlideName
+      Value: Welcome to your Chipotle supply portal
+    - ID: "d7652d2b-7405-4763-afd9-8d541a2f1f13"
+      Hint: Link
+      Value: |
+        <link linktype="external" url="/portal" text="Enter portal" />
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260819T221942Z

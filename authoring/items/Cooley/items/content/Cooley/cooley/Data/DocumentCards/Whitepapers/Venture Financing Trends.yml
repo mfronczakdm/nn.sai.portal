@@ -1,0 +1,49 @@
+﻿---
+ID: "d3674b46-7664-4441-8544-1329fdbb3262"
+Parent: "2ebc2d45-6499-4503-a905-2156229e092c"
+Template: "209d7904-335f-426b-9724-87e8a1e1ac0b"
+Path: /sitecore/content/Cooley/cooley/Data/DocumentCards/Whitepapers/Venture Financing Trends
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "09014979-cb35-4efc-be86-16bd8f04910e"
+      Hint: PracticeArea
+      Value: Venture Capital
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260818T194456Z
+    - ID: "7538013d-0700-4673-9531-9e1ffbc1b0fa"
+      Hint: PublishedDate
+      Value: 20260312T000000Z
+    - ID: "804d28ab-59dd-422b-8355-1ac8878fcfc9"
+      Hint: FileSize
+      Value: 1.8 MB
+    - ID: "8c0c6dfd-a0ad-4503-9f49-37081b086641"
+      Hint: CardSummary
+      Value: "A practical briefing on term-sheet trends, valuation mechanics, and board-level issues for emerging-company financings."
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f43dba11-44ab-4cab-b41f-ad1a23246db4"
+    - ID: "ad868a5c-8b8d-40ce-a78a-1721c54e9778"
+      Hint: DocumentLink
+      Value: |
+        <link linktype="external" url="https://mrfbasech2.sitecoresandbox.cloud/api/public/content/99c4e4ba60af428297eeba9fc22c68e5?v=59199cc0" target="_blank" text="Venture Financing Trends" title="Venture Financing Trends"/>
+    - ID: "b712fab2-3d16-4eb7-a268-a18d9691ba54"
+      Hint: PreviewImage
+      Value: |
+        <Image src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=80" width="1200" height="800" alt="Venture financing briefing preview" dam-content-type="Image" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260819T104418Z
+    - ID: "f79134a4-1574-463b-8adb-42317ae3f520"
+      Hint: CardTitle
+      Value: Venture Financing Trends

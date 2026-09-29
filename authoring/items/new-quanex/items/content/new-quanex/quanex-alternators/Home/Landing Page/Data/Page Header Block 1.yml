@@ -1,0 +1,52 @@
+﻿---
+ID: "b57ec077-eb70-4bba-985d-c85be05212cc"
+Parent: "de56c786-55ea-495e-b84a-65d60178768b"
+Template: "754d4fd3-aa54-46d0-84bd-0bb43f8aeba0"
+Path: "/sitecore/content/new-quanex/quanex-alternators/Home/Landing Page/Data/Page Header Block 1"
+BranchID: "97509128-1b31-4a5b-9c07-d4c94b611d24"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "bf200572-d3f0-4c3d-8067-36e4a4a1ea8c"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{06AB4B40-4141-468D-91F6-25AB7298F242}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260818T142713Z
+    - ID: "31ada09a-aeeb-4807-9ad2-eccd3ad7e40a"
+      Hint: imageRequired
+      Value: |
+        <image mediaid="f8a68a36-ad81-4420-86d0-c2fdfe5ae094" />
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b1893073-d3aa-4e21-b599-3d265e96555f"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "c0071773-2149-46d9-9fab-4b92cdcfab5f"
+      Hint: logoText
+      Value: New to the Solterra & Co. brand portfolio
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260818T142830Z

@@ -1,0 +1,226 @@
+﻿---
+ID: "67471114-7cd2-4099-9331-cccf8e61d20f"
+Parent: "2983c8c6-f536-4d40-af6f-9e00aaa443f0"
+Template: "6728add1-806c-4295-894d-8f1a9d044e07"
+Path: /sitecore/content/lcmc/lcmc/Data/LcmcAppointmentSchedulers/Patient Appointments
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0dad3c7f-e417-430d-9437-08b5fbec547b"
+      Hint: LoginHeading
+      Value: Continue through My LCMC Health
+    - ID: "0f49c27d-0827-477d-bd19-d9a4a693f4ba"
+      Hint: LoginBody
+      Value: Save time by using your My LCMC Health account to schedule this visit for yourself or someone else.
+    - ID: "22f1f9d1-b4d1-47c3-b8bc-1a59e0966641"
+      Hint: FinishTitle
+      Value: Finish Scheduling
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260902T182026Z
+    - ID: "3eece1e5-5efa-4dab-a067-2214863cde9a"
+      Hint: DetailsHeading
+      Value: Appointment details (not yet scheduled)
+    - ID: "547f928e-a38d-4c3b-93ff-605871416a45"
+      Hint: EmergencyText
+      Value: For emergencies, please call 911 or go directly to the nearest emergency room.
+    - ID: "551d42c4-3bda-4779-88a6-042f4ae57fd1"
+      Hint: LoginCta
+      Value: Log in and schedule
+    - ID: "604a66d4-f6e5-4577-b62f-58a05ed84aa1"
+      Hint: ShowMoreLabel
+      Value: Show more appointment times
+    - ID: "728f4bfc-8094-49b3-b541-8443a0ed3452"
+      Hint: UrgentCareBody
+      Value: |
+        <p>For urgent needs, consider <a href="/Our-Locations/Urgent-Care-Locations">urgent care</a> or the <a href="/Our-Services/Emergency-Care">emergency department</a>. Use our symptom checker for help on where to take your child.</p>
+    - ID: "83b59736-0372-46ef-8728-a608798c7f92"
+      Hint: VisitQuestion
+      Value: "What type of visit would you like to schedule for your child?"
+    - ID: "8946cd41-34bc-4e69-bfd2-41de19639eb9"
+      Hint: FiltersLabel
+      Value: Filters
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d2d5f7cd-fa39-4d18-90fc-275ac3b7ce81"
+    - ID: "937efdf5-e2c3-4925-9264-5807f3031847"
+      Hint: ConfirmationBody
+      Value: This is a demo confirmation. No appointment was sent to a clinic or EHR.
+    - ID: "9d0907bc-6bac-4439-b33c-04327bc07df1"
+      Hint: AppointmentTitle
+      Value: Patient Appointments
+    - ID: "ab84062c-5e45-43b1-aeba-f4b97d3a8b0a"
+      Hint: ConfirmationTitle
+      Value: Your visit is scheduled
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "bcbcb50d-f017-42cb-a73e-292fcbc39b59"
+      Hint: FluNote
+      Value: "Note: Flu vaccine scheduling is now open."
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260902T182027Z
+    - ID: "deadb9fd-8a18-4958-a4bd-3fb9fca9f91f"
+      Hint: GuestHeading
+      Value: Continue as guest
+    - ID: "fc2158e4-98b1-4fa3-b42a-751abe2603e7"
+      Hint: GuestCta
+      Value: Schedule as guest
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0dad3c7f-e417-430d-9437-08b5fbec547b"
+      Hint: LoginHeading
+      Value: Continuar a través de My LCMC Health
+    - ID: "0f49c27d-0827-477d-bd19-d9a4a693f4ba"
+      Hint: LoginBody
+      Value: Ahorre tiempo usando su cuenta de My LCMC Health para programar esta visita para usted o para otra persona.
+    - ID: "22f1f9d1-b4d1-47c3-b8bc-1a59e0966641"
+      Hint: FinishTitle
+      Value: Finalizar programación
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260902T182026Z
+    - ID: "3eece1e5-5efa-4dab-a067-2214863cde9a"
+      Hint: DetailsHeading
+      Value: Detalles de la cita (aún no programada)
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "547f928e-a38d-4c3b-93ff-605871416a45"
+      Hint: EmergencyText
+      Value: En caso de emergencia, llame al 911 o vaya directamente a la sala de emergencias más cercana.
+    - ID: "551d42c4-3bda-4779-88a6-042f4ae57fd1"
+      Hint: LoginCta
+      Value: Iniciar sesión y programar
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "604a66d4-f6e5-4577-b62f-58a05ed84aa1"
+      Hint: ShowMoreLabel
+      Value: Mostrar más horarios de cita
+    - ID: "728f4bfc-8094-49b3-b541-8443a0ed3452"
+      Hint: UrgentCareBody
+      Value: |
+        <p>Para necesidades urgentes, considere la <a href="/Our-Locations/Urgent-Care-Locations">atención de urgencias</a> o el <a href="/Our-Services/Emergency-Care">departamento de emergencias</a>. Use nuestro verificador de síntomas para obtener ayuda sobre a dónde llevar a su hijo.</p>
+    - ID: "83b59736-0372-46ef-8728-a608798c7f92"
+      Hint: VisitQuestion
+      Value: "¿Qué tipo de visita le gustaría programar para su hijo?"
+    - ID: "8946cd41-34bc-4e69-bfd2-41de19639eb9"
+      Hint: FiltersLabel
+      Value: Filtros
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "bead216d-5e12-4669-83e1-9a172d1c6312"
+    - ID: "937efdf5-e2c3-4925-9264-5807f3031847"
+      Hint: ConfirmationBody
+      Value: Esta es una confirmación de demostración. No se envió ninguna cita a una clínica ni al EHR.
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9d0907bc-6bac-4439-b33c-04327bc07df1"
+      Hint: AppointmentTitle
+      Value: Citas para pacientes
+    - ID: "ab84062c-5e45-43b1-aeba-f4b97d3a8b0a"
+      Hint: ConfirmationTitle
+      Value: Su visita está programada
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "bcbcb50d-f017-42cb-a73e-292fcbc39b59"
+      Hint: FluNote
+      Value: "Nota: la programación de la vacuna contra la gripe ya está abierta."
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T162654Z
+    - ID: "deadb9fd-8a18-4958-a4bd-3fb9fca9f91f"
+      Hint: GuestHeading
+      Value: Continuar como invitado
+    - ID: "fc2158e4-98b1-4fa3-b42a-751abe2603e7"
+      Hint: GuestCta
+      Value: Programar como invitado
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0dad3c7f-e417-430d-9437-08b5fbec547b"
+      Hint: LoginHeading
+      Value: Continuer dans Mon LCMC Health
+    - ID: "0f49c27d-0827-477d-bd19-d9a4a693f4ba"
+      Hint: LoginBody
+      Value: "Gagnez du temps en utilisant votre compte Mon LCMC Health pour planifier cette visite pour vous-même ou pour quelqu’un d’autre."
+    - ID: "22f1f9d1-b4d1-47c3-b8bc-1a59e0966641"
+      Hint: FinishTitle
+      Value: "Terminer la prise de rendez-vous"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260902T182026Z
+    - ID: "3eece1e5-5efa-4dab-a067-2214863cde9a"
+      Hint: DetailsHeading
+      Value: "Détails du rendez-vous (pas encore planifié)"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "547f928e-a38d-4c3b-93ff-605871416a45"
+      Hint: EmergencyText
+      Value: En cas d’urgence, veuillez composer le 911 ou vous rendre directement à la salle d’urgence la plus proche.
+    - ID: "551d42c4-3bda-4779-88a6-042f4ae57fd1"
+      Hint: LoginCta
+      Value: Ouvrir une session et planifier
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "604a66d4-f6e5-4577-b62f-58a05ed84aa1"
+      Hint: ShowMoreLabel
+      Value: "Afficher plus de plages de rendez-vous"
+    - ID: "728f4bfc-8094-49b3-b541-8443a0ed3452"
+      Hint: UrgentCareBody
+      Value: |
+        <p>Pour les besoins urgents, envisagez les <a href="/Our-Locations/Urgent-Care-Locations">soins urgents</a> ou le <a href="/Our-Services/Emergency-Care">service d’urgence</a>. Utilisez notre vérificateur de symptômes pour savoir où emmener votre enfant.</p>
+    - ID: "83b59736-0372-46ef-8728-a608798c7f92"
+      Hint: VisitQuestion
+      Value: "Quel type de visite souhaitez-vous planifier pour votre enfant?"
+    - ID: "8946cd41-34bc-4e69-bfd2-41de19639eb9"
+      Hint: FiltersLabel
+      Value: Filtres
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ef543a36-8e52-4500-9b8f-69232d1c1771"
+    - ID: "937efdf5-e2c3-4925-9264-5807f3031847"
+      Hint: ConfirmationBody
+      Value: "Il s’agit d’une confirmation de démonstration. Aucun rendez-vous n’a été envoyé à une clinique ni au DSE."
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9d0907bc-6bac-4439-b33c-04327bc07df1"
+      Hint: AppointmentTitle
+      Value: "Prise de rendez-vous pour les patients"
+    - ID: "ab84062c-5e45-43b1-aeba-f4b97d3a8b0a"
+      Hint: ConfirmationTitle
+      Value: "Votre rendez-vous est planifié"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "bcbcb50d-f017-42cb-a73e-292fcbc39b59"
+      Hint: FluNote
+      Value: "Remarque : La prise de rendez-vous pour le vaccin contre la grippe est maintenant ouverte."
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201314Z
+    - ID: "deadb9fd-8a18-4958-a4bd-3fb9fca9f91f"
+      Hint: GuestHeading
+      Value: Continuer comme invité
+    - ID: "fc2158e4-98b1-4fa3-b42a-751abe2603e7"
+      Hint: GuestCta
+      Value: Planifier comme invité

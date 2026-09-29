@@ -1,0 +1,267 @@
+﻿---
+ID: "896ab100-e5da-448c-bb0c-06ca99284231"
+Parent: "66b44e6a-6d2f-4b01-bb8a-a26e4e3ec29c"
+Template: "d77937ac-bae4-4eb0-8d7e-69ec09d5bbfc"
+Path: /sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/Our Services/Ears Nose and Throat Care/Hearing and Ear Health
+BranchID: "23a2fde2-886d-4ee1-a56f-824953722267"
+SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{5944F724-0620-4D9F-9317-AB0B80D9D094}"
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{57F19B73-3C3A-4C45-8737-01B9E1654712}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "fd07f3e8-140a-4ff0-b3f6-7e3f32cb1472"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{B6A3A9B9-0DFA-4CC4-99A8-EEA40C9844C7}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{EA6EAADA-5250-4F75-A41D-11A82FC46786}"
+              p:before="*"
+              s:ds="40033320-2e3a-40c1-89b3-fd98f165e677"
+              s:id="{7943A20A-669D-4921-81EE-F4EC7F2E78A3}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;ImageLayout&amp;FieldNames=%7B47A07212-D874-4077-BC67-C82B71B23AB7%7D&amp;Dark Imge&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=2"
+              s:ph="headless-main" />
+            <r
+              uid="{599DDA4D-3502-48F8-9AEE-24D3CC97C241}"
+              p:after="r[@uid='{EA6EAADA-5250-4F75-A41D-11A82FC46786}']"
+              s:id="{B1136CF1-94BE-468C-B78D-9BE212AF5428}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Dark Imge&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+              s:ph="headless-main" />
+            <r
+              uid="{5E0425B0-B87A-47BE-A309-E21CE4FCAACF}"
+              p:after="r[@uid='{599DDA4D-3502-48F8-9AEE-24D3CC97C241}']"
+              s:ds="9f750d63-f9fe-463d-b16d-9ba31a397e3b"
+              s:id="{D806DDF7-39A7-4A6D-8E0A-D138BC53845D}"
+              s:par="ImagePosition&amp;ShowBackgroundImage&amp;FieldNames=%7BACB48A62-F32F-43C4-82F6-BEA206DFEEC2%7D&amp;numColumns&amp;CSSStyles&amp;DynamicPlaceholderId=4"
+              s:ph="headless-main" />
+            <r
+              uid="{EFD659C8-1E2A-427D-8F28-88185F5D521B}"
+              p:after="*[1=2]"
+              s:ds="0284e480-e14c-4a3e-ae47-caf505c93347"
+              s:id="{B644D425-E162-45A9-A59E-FCFE3F14B90D}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BBE564551-7FEC-417D-B9F0-4DE8F676B5B1%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=3"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Your ears play an important role in how you communicate, connect with others and experience the world around you. Hearing changes can happen gradually or suddenly and may be caused by aging, repeated exposure to loud sounds, infections, injury or other medical conditions.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260910T195619Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Hearing and Ear Health
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{57CC7DCE-E6B1-4564-9581-0E5850B8BDF2}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\testuser2@sitecore.info
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Protecting Your Hearing Starts With Understanding Your Ears
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\testuser2@sitecore.info
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "549432dd-ee1e-4c5d-9622-25cc79509b0b"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\testuser2@sitecore.info
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T200038Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Hearing and Ear Health
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{EA6EAADA-5250-4F75-A41D-11A82FC46786}"
+              p:before="*"
+              s:ds="40033320-2e3a-40c1-89b3-fd98f165e677"
+              s:id="{7943A20A-669D-4921-81EE-F4EC7F2E78A3}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;ImageLayout&amp;FieldNames=%7B47A07212-D874-4077-BC67-C82B71B23AB7%7D&amp;Dark Imge&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=2"
+              s:ph="headless-main" />
+            <r
+              uid="{599DDA4D-3502-48F8-9AEE-24D3CC97C241}"
+              p:after="r[@uid='{EA6EAADA-5250-4F75-A41D-11A82FC46786}']"
+              s:id="{B1136CF1-94BE-468C-B78D-9BE212AF5428}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Dark Imge&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+              s:ph="headless-main" />
+            <r
+              uid="{5E0425B0-B87A-47BE-A309-E21CE4FCAACF}"
+              p:after="r[@uid='{599DDA4D-3502-48F8-9AEE-24D3CC97C241}']"
+              s:ds="9f750d63-f9fe-463d-b16d-9ba31a397e3b"
+              s:id="{D806DDF7-39A7-4A6D-8E0A-D138BC53845D}"
+              s:par="ImagePosition&amp;ShowBackgroundImage&amp;FieldNames=%7BACB48A62-F32F-43C4-82F6-BEA206DFEEC2%7D&amp;numColumns&amp;CSSStyles&amp;DynamicPlaceholderId=4"
+              s:ph="headless-main" />
+            <r
+              uid="{EFD659C8-1E2A-427D-8F28-88185F5D521B}"
+              p:after="*[1=2]"
+              s:ds="0284e480-e14c-4a3e-ae47-caf505c93347"
+              s:id="{B644D425-E162-45A9-A59E-FCFE3F14B90D}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BBE564551-7FEC-417D-B9F0-4DE8F676B5B1%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=3"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Sus oídos cumplen una función importante en la forma en que usted se comunica, se conecta con los demás y vive el mundo que lo rodea. Los cambios en la audición pueden aparecer de manera gradual o repentina, y pueden deberse al envejecimiento, a la exposición repetida a sonidos fuertes, a infecciones, lesiones u otras afecciones médicas.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260910T195619Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Audición y salud del oído
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{57CC7DCE-E6B1-4564-9581-0E5850B8BDF2}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\testuser2@sitecore.info
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Proteger su audición comienza por entender sus oídos
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\testuser2@sitecore.info
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ceb96871-de85-4e42-9e1a-ffc49366ea57"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T200830Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Audición y salud del oído
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{EA6EAADA-5250-4F75-A41D-11A82FC46786}"
+              p:before="*"
+              s:ds="40033320-2e3a-40c1-89b3-fd98f165e677"
+              s:id="{7943A20A-669D-4921-81EE-F4EC7F2E78A3}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;ImageLayout&amp;FieldNames=%7B47A07212-D874-4077-BC67-C82B71B23AB7%7D&amp;Dark Imge&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=2"
+              s:ph="headless-main" />
+            <r
+              uid="{599DDA4D-3502-48F8-9AEE-24D3CC97C241}"
+              p:after="r[@uid='{EA6EAADA-5250-4F75-A41D-11A82FC46786}']"
+              s:id="{B1136CF1-94BE-468C-B78D-9BE212AF5428}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Dark Imge&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+              s:ph="headless-main" />
+            <r
+              uid="{5E0425B0-B87A-47BE-A309-E21CE4FCAACF}"
+              p:after="r[@uid='{599DDA4D-3502-48F8-9AEE-24D3CC97C241}']"
+              s:ds="9f750d63-f9fe-463d-b16d-9ba31a397e3b"
+              s:id="{D806DDF7-39A7-4A6D-8E0A-D138BC53845D}"
+              s:par="ImagePosition&amp;ShowBackgroundImage&amp;FieldNames=%7BACB48A62-F32F-43C4-82F6-BEA206DFEEC2%7D&amp;numColumns&amp;CSSStyles&amp;DynamicPlaceholderId=4"
+              s:ph="headless-main" />
+            <r
+              uid="{EFD659C8-1E2A-427D-8F28-88185F5D521B}"
+              p:after="*[1=2]"
+              s:ds="0284e480-e14c-4a3e-ae47-caf505c93347"
+              s:id="{B644D425-E162-45A9-A59E-FCFE3F14B90D}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BBE564551-7FEC-417D-B9F0-4DE8F676B5B1%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=3"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Vos oreilles jouent un rôle important dans votre façon de communiquer, de tisser des liens avec les autres et de vivre le monde qui vous entoure. Des changements de l’audition peuvent survenir graduellement ou soudainement et être causés par le vieillissement, une exposition répétée à des sons forts, des infections, une blessure ou d’autres problèmes de santé.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260910T195619Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Audition et santé des oreilles
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{57CC7DCE-E6B1-4564-9581-0E5850B8BDF2}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\testuser2@sitecore.info
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Protéger votre audition commence par mieux comprendre vos oreilles
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\testuser2@sitecore.info
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4214a498-bef7-4b2e-a482-87b9e12fa808"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201826Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Audition et santé des oreilles

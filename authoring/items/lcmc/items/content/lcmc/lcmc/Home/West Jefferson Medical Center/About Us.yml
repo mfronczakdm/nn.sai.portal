@@ -1,0 +1,258 @@
+﻿---
+ID: "3c6d2ff3-5e8f-483d-9ffd-a24afcf83a58"
+Parent: "244d564f-91dc-4cce-8ae7-b074bfb26ea3"
+Template: "d77937ac-bae4-4eb0-8d7e-69ec09d5bbfc"
+Path: /sitecore/content/lcmc/lcmc/Home/West Jefferson Medical Center/About Us
+SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{5944F724-0620-4D9F-9317-AB0B80D9D094}"
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B4F49B23-4BBA-4C79-BA22-F89F5F0D4E4F}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{817E0160-8AA6-4F82-9DCF-027E5FE144E8}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "46e6756a-e67f-423b-b9d0-aa785c88cd73"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{2A39F895-6DD7-433D-8AEB-CB140006D8A5}"
+              s:ds=""
+              s:id="{B1136CF1-94BE-468C-B78D-9BE212AF5428}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Dark Imge&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: "West Jefferson Medical Center is a 324-bed not-for-profit LCMC Health hospital in Marrero serving the Westbank of Jefferson Parish."
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T211254Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: About Us
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Community hospital care on the Westbank of Jefferson Parish.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: More than 60 years of Westbank hospital care
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: About West Jefferson Medical Center
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: About Us | West Jefferson Medical Center
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "fd0062c2-058a-4386-ab39-9c57f44e2d0d"
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: "Learn about West Jefferson Medical Center, a 324-bed LCMC Health hospital serving the Westbank since 1960."
+    - ID: "9d32260e-215d-4eff-80de-6d469daadbc4"
+      Hint: image
+      Value: |
+        <image src="https://www.lcmchealth.org/assets/LCMC-Social-Share.jpg" alt="About West Jefferson Medical Center" />
+    - ID: "a8a1dfcb-7dd5-4413-8789-db24a95e439f"
+      Hint: Detail
+      Value: "<h2>A community hospital for the Westbank</h2><p>West Jefferson Medical Center opened in April 1960 after Westbank families and physicians organized one of the first hospitals on this side of the river. Today it is a 324-bed not-for-profit hospital on a campus of more than 20 acres in Marrero, minutes from downtown New Orleans.</p><p>The hospital is a regional leader in acute, preventive, and rehabilitative care for Jefferson, Orleans, Plaquemines, and St. Charles Parish communities. On campus, patients find emergency services paired with heart and vascular care, a Joint Commission Comprehensive Stroke Center, bone and joint care, diagnostic imaging, a Commission on Cancer-accredited cancer program, comprehensive women’s services, and a CARF-certified rehabilitation program.</p><h3>Mission, vision, and values</h3><ul><li><strong>Mission:</strong> Health, care, and education beyond extraordinary.</li><li><strong>Vision:</strong> Creating a culture of wellness.</li><li><strong>Values:</strong> We bring heart and soul. We’re in it together. We give a little extra.</li></ul><h3>Part of LCMC Health</h3><p>West Jefferson joined LCMC Health in 2015. As a member of the New Orleans-based nonprofit system, the hospital continues to serve Westbank industry, maritime corridors, and neighborhood families with the same local commitment that opened its doors more than 60 years ago.</p>"
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: About West Jefferson Medical Center
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T164253Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: About West Jefferson Medical Center
+- Language: "es-CO"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{2A39F895-6DD7-433D-8AEB-CB140006D8A5}"
+              s:ds=""
+              s:id="{B1136CF1-94BE-468C-B78D-9BE212AF5428}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Dark Imge&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: West Jefferson Medical Center es un hospital sin ánimo de lucro de 324 camas de LCMC Health en Marrero que presta servicios a la Ribera Oeste de la parroquia de Jefferson.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T211254Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Acerca de nosotros
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: Atención hospitalaria comunitaria en la Ribera Oeste de la parroquia de Jefferson.
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Más de 60 años de atención hospitalaria en la Ribera Oeste
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Acerca de West Jefferson Medical Center
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Acerca de nosotros | West Jefferson Medical Center
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "9aa89212-95b4-49bd-8493-e83a729b14ea"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: Conozca West Jefferson Medical Center, un hospital de 324 camas de LCMC Health que presta servicios a la Ribera Oeste desde 1960.
+    - ID: "9d32260e-215d-4eff-80de-6d469daadbc4"
+      Hint: image
+      Value: |
+        <image alt="Acerca de West Jefferson Medical Center" src="https://www.lcmchealth.org/assets/LCMC-Social-Share.jpg" />
+    - ID: "a8a1dfcb-7dd5-4413-8789-db24a95e439f"
+      Hint: Detail
+      Value: "<h2>Un hospital comunitario para la Ribera Oeste</h2><p>West Jefferson Medical Center abrió en abril de 1960 después de que familias y médicos de la Ribera Oeste organizaran uno de los primeros hospitales de este lado del río. Hoy es un hospital sin ánimo de lucro de 324 camas en un campus de más de 20 acres en Marrero, a minutos del centro de Nueva Orleans.</p><p>El hospital es un líder regional en atención aguda, preventiva y de rehabilitación para las comunidades de las parroquias de Jefferson, Orleans, Plaquemines y St. Charles. En el campus, los pacientes encuentran servicios de emergencia junto con atención cardíaca y vascular, un Centro Integral de Accidentes Cerebrovasculares de la Joint Commission, atención ósea y articular, diagnóstico por imágenes, un programa oncológico acreditado por la Commission on Cancer, servicios integrales para la mujer y un programa de rehabilitación certificado por CARF.</p><h3>Misión, visión y valores</h3><ul><li><strong>Misión:</strong> Salud, atención y educación más allá de lo extraordinario.</li><li><strong>Visión:</strong> Crear una cultura de bienestar.</li><li><strong>Valores:</strong> Ponemos corazón y alma. Estamos juntos en esto. Damos un poco más.</li></ul><h3>Parte de LCMC Health</h3><p>West Jefferson se unió a LCMC Health en 2015. Como miembro del sistema sin ánimo de lucro con sede en Nueva Orleans, el hospital continúa sirviendo a la industria de la Ribera Oeste, los corredores marítimos y las familias de los vecindarios con el mismo compromiso local con el que abrió sus puertas hace más de 60 años.</p>"
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Acerca de West Jefferson Medical Center
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260909T162643Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Acerca de West Jefferson Medical Center
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{2A39F895-6DD7-433D-8AEB-CB140006D8A5}"
+              s:ds=""
+              s:id="{B1136CF1-94BE-468C-B78D-9BE212AF5428}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Dark Imge&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: "West Jefferson Medical Center est un hôpital sans but lucratif de 324 lits de LCMC Health, situé à Marrero et au service de la Rive-Ouest de la paroisse de Jefferson."
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260908T211254Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: À propos de nous
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+    - ID: "4dd4e18f-b1a3-4225-967f-b4ec9f68928c"
+      Hint: ogDescription
+      Value: "Des soins hospitaliers communautaires sur la Rive-Ouest de la paroisse de Jefferson."
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: "Plus de 60 ans de soins hospitaliers sur la Rive-Ouest"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: À propos de West Jefferson Medical Center
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: À propos de nous | West Jefferson Medical Center
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "7f073f39-d547-4ecd-80d5-e5760179d85e"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "9b600e71-cf7a-4874-9032-f394a9bd2e48"
+      Hint: metadataDescription
+      Value: "Découvrez West Jefferson Medical Center, un hôpital de 324 lits de LCMC Health au service de la Rive-Ouest depuis 1960."
+    - ID: "9d32260e-215d-4eff-80de-6d469daadbc4"
+      Hint: image
+      Value: |
+        <image alt="À propos de West Jefferson Medical Center" src="https://www.lcmchealth.org/assets/LCMC-Social-Share.jpg" />
+    - ID: "a8a1dfcb-7dd5-4413-8789-db24a95e439f"
+      Hint: Detail
+      Value: "<h2>Un hôpital communautaire pour la Rive-Ouest</h2><p>Le West Jefferson Medical Center a ouvert ses portes en avril 1960, après que des familles et des médecins de la Rive-Ouest eurent organisé l’un des premiers hôpitaux de ce côté-ci du fleuve. Aujourd’hui, c’est un hôpital sans but lucratif de 324 lits, situé sur un campus de plus de 20 acres à Marrero, à quelques minutes du centre-ville de La Nouvelle-Orléans.</p><p>L’hôpital est un chef de file régional en soins aigus, préventifs et de réadaptation pour les communautés des paroisses de Jefferson, d’Orleans, de Plaquemines et de St. Charles. Sur le campus, les patients ont accès à des services d’urgence, ainsi qu’à des soins cardiaques et vasculaires, à un centre d’AVC complet accrédité par la Joint Commission, à des soins des os et des articulations, à l’imagerie diagnostique, à un programme de cancérologie agréé par la Commission on Cancer, à des services complets pour les femmes et à un programme de réadaptation certifié par la CARF.</p><h3>Mission, vision et valeurs</h3><ul><li><strong>Mission :</strong> La santé, les soins et l’éducation au-delà de l’extraordinaire.</li><li><strong>Vision :</strong> Créer une culture du mieux-être.</li><li><strong>Valeurs :</strong> Nous y mettons tout notre cœur et toute notre âme. Nous avançons ensemble. Nous en faisons un peu plus.</li></ul><h3>Fier membre de LCMC Health</h3><p>West Jefferson s’est joint à LCMC Health en 2015. En tant que membre de ce système sans but lucratif basé à La Nouvelle-Orléans, l’hôpital continue de servir les industries de la Rive-Ouest, les corridors maritimes et les familles du voisinage avec le même engagement local qui a guidé son ouverture il y a plus de 60 ans.</p>"
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: À propos de West Jefferson Medical Center
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260910T201256Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: À propos de West Jefferson Medical Center

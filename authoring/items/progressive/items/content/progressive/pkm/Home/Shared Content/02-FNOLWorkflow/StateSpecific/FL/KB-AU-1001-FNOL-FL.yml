@@ -1,0 +1,48 @@
+﻿---
+ID: "f1783b30-4465-4f47-9932-84692ecbc806"
+Parent: "f7adcb90-bbf8-469c-ac8d-495bf170805f"
+Template: "bdf6c974-e68c-46a2-a0a9-d382fd0927eb"
+Path: "/sitecore/content/progressive/pkm/Home/Shared Content/02-FNOLWorkflow/StateSpecific/FL/KB-AU-1001-FNOL-FL"
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{07BD3779-4C46-433E-AF70-D8DAB5DB61A7}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "21b8d6f1-4294-46a5-98fd-38df0ce8aae0"
+      Hint: SourceDocumentLOB
+      Value: "{0944EAEA-5558-443F-A68D-482773EA2153}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260803T214814Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\uDLr1K5wd1M8y82dfXcCgcafj64coB7N
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\uDLr1K5wd1M8y82dfXcCgcafj64coB7N
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "8cfd3571-11ab-4d45-b1ce-a37ade1d60a4"
+    - ID: "94ce9d2b-aa0c-488f-943a-d2e582eb50bc"
+      Hint: SourceDocumentPerils
+      Value: |
+        {152FCA3B-0726-49A3-8D73-447F35E1F334}
+        {C26A71E6-098D-4B9C-A36C-AF820F40F91B}
+    - ID: "a8f6d033-4e9e-4598-be5e-da2456c41b9f"
+      Hint: sourceDocumentLink
+      Value: |
+        <link text="Personal Auto FNOL — First Notice of Loss Intake" linktype="internal" class="" title="" target="" querystring="" id="{8134326F-FF16-4B77-8D34-9EDB10353DA1}" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\uDLr1K5wd1M8y82dfXcCgcafj64coB7N
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260803T214815Z

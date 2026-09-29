@@ -1,0 +1,41 @@
+﻿---
+ID: "a15204fb-3bea-4b87-8e6e-44013ebf3ddc"
+Parent: "5345ae16-3482-4da3-a106-16bb3ca1c21d"
+Template: "0bb540d0-731b-4f71-8c0e-d99e26562cd2"
+Path: /sitecore/content/dfs/dfs/Home/Portal/account/Data/Account_Information_Detail
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260819T214918Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "5c0b7bce-7da1-4cec-a7aa-3d28179fe94b"
+      Hint: title
+      Value: Account Information
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "fe2c1820-9149-49c9-9917-83028333b94a"
+    - ID: "b0125af5-1538-4b18-9a93-2e8f5781bc2c"
+      Hint: body
+      Value: |
+        <div class="mx-auto w-full max-w-6xl space-y-8"><div class="grid gap-4 sm:grid-cols-3"><div class="rounded-2xl border border-border bg-card p-5 shadow-sm"><p class="text-xs font-medium uppercase tracking-wide text-muted-foreground">Active locations</p><p class="mt-1 text-3xl font-semibold text-foreground">12</p><p class="mt-1 text-sm text-muted-foreground">Across 3 markets</p></div><div class="rounded-2xl border border-border bg-card p-5 shadow-sm"><p class="text-xs font-medium uppercase tracking-wide text-muted-foreground">Account status</p><p class="mt-1 text-3xl font-semibold text-foreground">Good standing</p><p class="mt-1 text-sm text-muted-foreground">Updated today</p></div><div class="rounded-2xl border border-border bg-card p-5 shadow-sm"><p class="text-xs font-medium uppercase tracking-wide text-muted-foreground">Next invoice</p><p class="mt-1 text-3xl font-semibold text-foreground">Sep 1</p><p class="mt-1 text-sm text-muted-foreground">Consolidated billing</p></div></div><div class="rounded-2xl border border-primary/20 bg-primary/5 p-4 text-sm text-foreground"><strong class="font-semibold">Reminder:</strong> Update billing contacts before the next equipment renewal cycle to avoid delivery delays.</div><div class="grid gap-6 lg:grid-cols-2"><section class="rounded-2xl border border-border bg-card p-6 shadow-sm"><h2 class="text-lg font-semibold text-foreground">Primary account contacts</h2><ul class="mt-4 space-y-3 text-sm"><li class="flex items-start justify-between gap-4 border-b border-border pb-3"><div><p class="font-medium text-foreground">Maria Chen</p><p class="text-muted-foreground">Regional Operations Manager</p></div><span class="rounded-full bg-muted px-2.5 py-0.5 text-xs font-medium text-muted-foreground">Primary</span></li><li class="flex items-start justify-between gap-4 border-b border-border pb-3"><div><p class="font-medium text-foreground">James Ortiz</p><p class="text-muted-foreground">Accounts Payable</p></div><span class="rounded-full bg-muted px-2.5 py-0.5 text-xs font-medium text-muted-foreground">Billing</span></li><li class="flex items-start justify-between gap-4"><div><p class="font-medium text-foreground">DF Supply Account Team</p><p class="text-muted-foreground">Dedicated support for your group</p></div><span class="rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary">DF Supply</span></li></ul></section><section class="rounded-2xl border border-border bg-card p-6 shadow-sm"><h2 class="text-lg font-semibold text-foreground">Contract &amp; billing summary</h2><dl class="mt-4 space-y-3 text-sm"><div class="flex justify-between gap-4 border-b border-border pb-3"><dt class="text-muted-foreground">Contract type</dt><dd class="font-medium text-foreground">Multi-location supply agreement</dd></div><div class="flex justify-between gap-4 border-b border-border pb-3"><dt class="text-muted-foreground">Payment terms</dt><dd class="font-medium text-foreground">Net 30</dd></div><div class="flex justify-between gap-4 border-b border-border pb-3"><dt class="text-muted-foreground">Preferred delivery window</dt><dd class="font-medium text-foreground">Tue–Thu, 6–10 AM</dd></div><div class="flex justify-between gap-4"><dt class="text-muted-foreground">Tax-exempt certificate</dt><dd class="font-medium text-foreground">On file — expires Dec 2026</dd></div></dl></section></div><div class="flex flex-wrap gap-3"><a href="#" class="inline-flex items-center rounded-xl bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm">Download account statement</a><a href="#" class="inline-flex items-center rounded-xl border border-border bg-background px-5 py-2.5 text-sm font-semibold text-foreground">Request billing update</a></div></div>
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\mark.fronczak@sitecore.com
+    - ID: "cc7d3a62-3796-41d8-af32-b4408a0749f9"
+      Hint: subtitle
+      Value: Manage billing contacts, contract terms, and location assignments for your restaurant group.
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260819T214918Z
