@@ -1,0 +1,66 @@
+siteCollection: "Cooley"
+siteName: "cooley"
+category: "Cards"
+
+component:
+  namePascal: "DocumentCards"
+  nameKebab: "document-cards"
+  kind: "list"
+  filePath: "src/components/uiim/cards/DocumentCards.tsx"
+  componentMapKey: "DocumentCards"
+
+design:
+  extractedLayout:
+    summary: "Authorable grid of Content Hub PDF document cards with preview, metadata, and download."
+    repeatedItems: true
+    likelyVariantNames:
+      - "Default"
+      - "Spotlight"
+      - "CompactRows"
+  assumptions:
+    - "Parent datasource lives under /sitecore/content/Cooley/cooley/Data/DocumentCards"
+    - "Each child is one Content Hub document via a public General Link URL"
+    - "Preview uses PreviewImage when set, otherwise an inline PDF frame for PDF links"
+    - "Live Cooley project paths used (not project.yaml pkm)"
+
+templates:
+  parent:
+    name: "DocumentCards"
+    path: "/sitecore/templates/Project/Cooley/Components/Cards/DocumentCards"
+    fields:
+      - { name: "SectionTitle", type: "Single-Line Text" }
+      - { name: "SectionIntro", type: "Multi-Line Text" }
+  child:
+    name: "DocumentCard"
+    path: "/sitecore/templates/Project/Cooley/Components/Cards/DocumentCard"
+    fields:
+      - { name: "CardTitle", type: "Single-Line Text" }
+      - { name: "CardSummary", type: "Multi-Line Text" }
+      - { name: "PreviewImage", type: "Image" }
+      - { name: "DocumentLink", type: "General Link" }
+      - { name: "FileType", type: "Single-Line Text" }
+      - { name: "FileSize", type: "Single-Line Text" }
+      - { name: "PublishedDate", type: "Date" }
+      - { name: "PracticeArea", type: "Single-Line Text" }
+      - { name: "DownloadLabel", type: "Single-Line Text" }
+
+folderTemplate:
+  name: "DocumentCards Folder"
+  path: "/sitecore/templates/Project/Cooley/Folders/DocumentCards Folder"
+
+datasourceFolder:
+  name: "DocumentCards"
+  path: "/sitecore/content/Cooley/cooley/Data/DocumentCards"
+
+headlessVariants:
+  variants:
+    - "Default"
+    - "Spotlight"
+    - "CompactRows"
+
+react:
+  propsShape: "graphql-datasource"
+  variants:
+    - "Default"
+    - "Spotlight"
+    - "CompactRows"

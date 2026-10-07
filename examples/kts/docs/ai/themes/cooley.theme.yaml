@@ -1,0 +1,108 @@
+# Client Brand Theme
+# Generated from https://www.cooley.com (Playwright + homepage screenshot).
+
+client:
+  name: "Cooley"
+  sourceUrl: "https://www.cooley.com"
+  extractedAt: "2026-08-14"
+  extractedBy: "sitecore-extract-theme + create-new-theme"
+
+colors:
+  primary: "#FD1434"
+  primaryForeground: "#ffffff"
+  secondary: "#F7F4F4"
+  secondaryForeground: "#33040E"
+  accent: "#33040E"
+  accentForeground: "#ffffff"
+  background: "#ffffff"
+  foreground: "#33040E"
+  muted: "#F4F1F1"
+  mutedForeground: "#6B5558"
+  headerBackground: "#ffffff"
+  headerForeground: "#FD1434"
+  footerBackground: "#FD1434"
+  footerForeground: "#33040E"
+  border: "#E8DFE1"
+  ring: "#FD1434"
+  extra:
+    - name: "brand-ink"
+      value: "#33040E"
+    - name: "primary-hover"
+      value: "#D4112C"
+
+typography:
+  headingFamily: "Source Serif 4"
+  headingWeight: "400"
+  bodyFamily: "Open Sans"
+  bodyWeight: "400"
+  monoFamily: ""
+  googleFontsUrl: ""
+  scale:
+    hero: "122.4px"
+    h1: "122.4px"
+    h2: "79.2px"
+    h3: "36px"
+    body: "16px"
+    small: "14px"
+  headingTransform: "none"
+  letterSpacing: "-0.01em"
+  lineHeight: "1.15"
+
+spacing:
+  density: "spacious"
+  sectionGap: "4rem"
+  containerMaxWidth: "100%"
+  containerPadding: "1.5rem"
+
+shape:
+  borderRadius: "0px"
+  buttonRadius: "0px"
+  cardRadius: "0px"
+  imageRadius: "0px"
+  shadowStyle: "none"
+  borderStyle: "hairline"
+
+tone:
+  overall: "minimal, airy, editorial"
+  colorMode: "light"
+  contrast: "high"
+  imagery: "photography tiles"
+  heroStyle: "centered-overlay"
+  cardStyle: "flat"
+  navStyle: "minimal"
+
+tailwind:
+  colors:
+    brand:
+      primary: "#FD1434"
+      secondary: "#33040E"
+      accent: "#FD1434"
+  fontFamily:
+    heading: ["Source Serif 4", "Garamond", "serif"]
+    body: ["Open Sans", "Arial", "sans-serif"]
+  borderRadius:
+    DEFAULT: "0px"
+    button: "0px"
+    card: "0px"
+
+cssVariables: |
+  :root {
+    --brand-primary: #FD1434;
+    --brand-primary-foreground: #ffffff;
+    --brand-secondary: #33040E;
+    --brand-accent: #FD1434;
+    --brand-bg: #ffffff;
+    --brand-fg: #33040E;
+    --brand-heading-font: 'Source Serif 4', Garamond, serif;
+    --brand-body-font: 'Open Sans', Arial, sans-serif;
+  }
+
+extraction:
+  confidence: "high"
+  method: "playwright-full"
+  notes:
+    - "Computed primary/CTA/footer red is rgb(253, 20, 52) = #FD1434 (not #E10600)."
+    - "Body/theme-color ink is rgb(51, 4, 14) = #33040E."
+    - "Headings use proprietary GT Sectra Book/Regular; substituted Source Serif 4."
+    - "Body uses proprietary ArialNova; reused existing Open Sans load."
+    - "Primary CTA fill uses white type for portal contrast; live site uses #33040E on red."

@@ -1,0 +1,106 @@
+project:
+  reactComponentRoot: "src/components/uiim"
+  shadcnImportBase: "@/components/ui"
+  componentMapPath: ".sitecore/component-map.ts"
+  sitecoreJssPackage: "@sitecore-content-sdk/nextjs"
+  usesTailwind: true
+  usesShadcn: true
+
+tools:
+  marketerMcp:
+    preferred: true
+
+siteCollection: "Cooley"
+siteName: "cooley"
+category: "Media"
+
+component:
+  namePascal: "MediaCanvas"
+  nameKebab: "media-canvas"
+  kind: "list"
+  filePath: "src/components/uiim/media/MediaCanvas.tsx"
+  componentMapKey: "MediaCanvas"
+  componentMapImportAlias: "MediaCanvas"
+
+design:
+  references:
+    - "cooley.com homepage hero collage"
+  extractedLayout:
+    summary: "Centered serif title with scattered square media tiles (image or video) and pause/play control."
+    visibleElements:
+      - "Title"
+      - "optional Subtitle"
+      - "optional CTA"
+      - "scattered media tiles"
+      - "Pause video control"
+    inferredFields:
+      - "Title"
+      - "Subtitle"
+      - "Cta"
+      - "PauseVideoLabel"
+      - "PlayVideoLabel"
+      - "child Image"
+      - "child Video"
+      - "child Tagline"
+    repeatedItems: true
+    likelyVariantNames: ["Default"]
+    responsiveViews: ["mobile stacked", "desktop scattered collage"]
+  assumptions:
+    - "project.yaml still says pkm; live Cooley paths used instead"
+    - "Video is a General Link to an mp4; Image is used when Video is empty"
+    - "Positioning is deterministic from item id (SSR-safe), not Math.random"
+    - "Experience Editor uses a stacked/grid layout so tiles remain editable"
+
+templates:
+  parent:
+    create: true
+    path: "/sitecore/templates/Project/Cooley/Components/Media/MediaCanvas"
+    name: "MediaCanvas"
+    sectionName: "Data"
+    fields:
+      - { name: "Title", type: "Single-Line Text" }
+      - { name: "Subtitle", type: "Single-Line Text" }
+      - { name: "Cta", type: "General Link" }
+      - { name: "PauseVideoLabel", type: "Single-Line Text" }
+      - { name: "PlayVideoLabel", type: "Single-Line Text" }
+    standardValues:
+      create: true
+      defaults:
+        PauseVideoLabel: "Pause video"
+        PlayVideoLabel: "Play video"
+      addHorizonDatasourceGrouping: true
+
+  child:
+    create: true
+    path: "/sitecore/templates/Project/Cooley/Components/Media/MediaCanvasItem"
+    name: "MediaCanvasItem"
+    sectionName: "Data"
+    fields:
+      - { name: "Image", type: "Image" }
+      - { name: "Video", type: "General Link" }
+      - { name: "Tagline", type: "Single-Line Text" }
+    standardValues:
+      create: true
+
+folderTemplate:
+  create: true
+  path: "/sitecore/templates/Project/Cooley/Folders/MediaCanvas Folder"
+  name: "MediaCanvas Folder"
+
+datasourceFolder:
+  create: true
+  path: "/sitecore/content/Cooley/cooley/Data/MediaCanvas"
+  name: "MediaCanvas"
+
+rendering:
+  create: true
+  path: "/sitecore/layout/Renderings/Project/Cooley/Media/MediaCanvas"
+  name: "MediaCanvas"
+  componentName: "MediaCanvas"
+  datasourceRequired: true
+  useComponentQuery: true
+
+react:
+  propsShape: "graphql-datasource"
+  variants:
+    - Default

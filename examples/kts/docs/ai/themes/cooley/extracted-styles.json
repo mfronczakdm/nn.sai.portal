@@ -1,0 +1,48 @@
+{
+  "colors": {
+    "bodyBackground": "rgb(255, 255, 255)",
+    "bodyColor": "rgb(51, 4, 14)",
+    "headerBackground": "rgba(0, 0, 0, 0)",
+    "headerColor": "rgb(51, 4, 14)",
+    "footerBackground": "rgb(253, 20, 52)",
+    "footerColor": "rgb(51, 4, 14)",
+    "heroBackground": "rgb(255, 255, 255)",
+    "primaryButtonBackground": "rgb(253, 20, 52)",
+    "primaryButtonColor": "rgb(51, 4, 14)",
+    "primaryButtonBorderRadius": "0px",
+    "linkColor": "rgb(255, 255, 255)"
+  },
+  "typography": {
+    "bodyFontFamily": "ArialNova, Arial, Helvetica, sans-serif",
+    "bodyFontSize": "16px",
+    "bodyFontWeight": "400",
+    "bodyLineHeight": "18.4px",
+    "h1FontFamily": "GT-Sectra-Book, Garamond, \"Times New Roman\", serif",
+    "h1FontSize": "122.4px",
+    "h1FontWeight": "300",
+    "h1LetterSpacing": "-1.224px",
+    "h1TextTransform": "none",
+    "h2FontFamily": "GT-Sectra-Book, Garamond, \"Times New Roman\", serif",
+    "h2FontSize": "79.2px",
+    "h2FontWeight": "300",
+    "h3FontFamily": "GT-Sectra-Regular, Garamond, \"Times New Roman\", serif",
+    "h3FontSize": "36px",
+    "h3FontWeight": "400",
+    "pFontSize": "20px",
+    "pLineHeight": "26px"
+  },
+  "shape": {
+    "cardBorderRadius": "0px",
+    "cardBoxShadow": "none",
+    "cardBorder": "0px none rgb(253, 20, 52)",
+    "imgBorderRadius": "0px"
+  },
+  "spacing": {
+    "heroMinHeight": "792px",
+    "heroPadding": "0px",
+    "containerMaxWidth": "100%"
+  },
+  "cssVariables": {
+    "--font-body": "\"ArialNova\",Arial,Helvetica,sans-serif"
+  }
+}

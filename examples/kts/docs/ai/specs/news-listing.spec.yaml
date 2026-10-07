@@ -1,0 +1,26 @@
+# NewsListing — Cooley Firm News carousel
+project:
+  siteCollection: "Cooley"
+  siteName: "cooley"
+  sdk: "@sitecore-content-sdk/nextjs"
+
+category: "News"
+component:
+  namePascal: "NewsListing"
+  kind: "simple" # Treelist of Media and Insight pages (not child datasources)
+  filePath: "src/components/uiim/news/NewsListing.tsx"
+  componentMapKey: "NewsListing"
+
+design:
+  summary: "Firm News / What Matters horizontal carousel — red brand text on white, serif headlines, content type + date meta, prev/next arrows."
+  assumptions:
+    - "Authors select Media and Insight pages via FeaturedItems Treelist"
+    - "Content type inferred from parent folder (Press Releases, Coverage, Insights, etc.)"
+    - "Date shown from pageSubtitle on the selected page"
+
+templates:
+  parent:
+    fields:
+      - { name: "Eyebrow", type: "Single-Line Text" }
+      - { name: "Title", type: "Single-Line Text" }
+      - { name: "FeaturedItems", type: "Treelist", source: "/sitecore/content/Cooley/cooley/Home/Media and Insight" }
