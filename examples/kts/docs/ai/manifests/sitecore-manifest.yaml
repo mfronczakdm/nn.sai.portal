@@ -5924,7 +5924,7 @@ contentPages:
     category: "Insights"
     status: "complete"
     createdAt: "2026-10-07T20:50:00Z"
-    updatedAt: "2026-10-07T21:00:00Z"
+    updatedAt: "2026-10-07T21:30:00Z"
     siteName: "kts"
     siteCollection: "Cooley"
     notes: >
@@ -5932,6 +5932,11 @@ contentPages:
       (not pillsbury templates). Sample Latest Insights tiles link to existing kts Media and Insight pages.
       Accent CSS tokens remapped to the Kilpatrick palette. Local empty Home/Data/InsightsMosaic leftover
       from add_component_on_page was replaced with Data/Insights Mosaics/Latest Insights.
+      2026-10-07: Pages chrome for child TileImage. Editing now always mounts Sitecore Image
+      (empty src included), uses overflow-visible + pointer-events-auto, and data-item-id on
+      the tile article so Pages can select the child instead of the parent mosaic. Tiles stay
+      unwrapped from Link while isEditing. Live site still uses NextImage when src exists.
+      Number watermark remains pointer-events-none. No Sitecore template/rendering change.
     react:
       filePath: "src/components/uiim/insights/InsightsMosaic.tsx"
       componentMapKey: "InsightsMosaic"
@@ -6031,7 +6036,7 @@ contentPages:
       itemId: "{273163B3-608D-4FC6-8572-6BE3A88F619F}"
       lastKnownValue: "{C5F905F8-FD1F-444E-A9E5-AC6B774FF0DE}|{2492BAC4-DA07-4C86-87F0-9873D40E2276}|{9C6D53E3-FE57-4638-AF7B-6D68304C7A94}|{3836D951-BB14-43AC-9231-649B7F245DC5}|{B1136CF1-94BE-468C-B78D-9BE212AF5428}|{7691AC50-2BAE-4FBD-9BA9-05480FD844E4}|{791A1860-DCCE-495C-B778-78F6B19AAB51}|{903BEE64-4E35-4956-BBE2-29F492AB247F}|{C67E942A-2EBC-43D5-88FC-DD95EDC9A77D}|{560AB1F6-8C48-4449-9E72-F29C39BA750D}|{8278F36C-8492-4641-A401-9C19AA69D08A}|{6103C820-2EE1-460B-A394-C69A4BCE8682}|{6799167A-16CC-44C7-BBC8-33D88DD252C1}"
     verification:
-      checkedAt: "2026-10-07T21:00:00Z"
+      checkedAt: "2026-10-07T21:30:00Z"
       passed:
         - "Parent + child templates with Standard + Grid Parameters bases"
         - "Fields created with explicit Type"
@@ -6041,6 +6046,7 @@ contentPages:
         - "Appended to kts Available Renderings (MCP read-back confirmed)"
         - "Placed on kts Home after NewsListing; datasource Latest Insights"
         - "React InsightsMosaic.tsx copied from BLG"
+        - "Pages TileImage chrome: Sitecore Image in editing (empty src), overflow-visible, pointer-events-auto, data-item-id, no Link wrap"
       failed: []
       pendingManual:
         - "Publish rendering, templates, variants, Data/Insights Mosaics, Home, and Available Renderings for Edge"

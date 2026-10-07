@@ -107,7 +107,41 @@ describe('InsightsMosaic', () => {
 
     mockUseSitecore.mockReturnValue({ page: mockPageEditing });
     rerender(<InsightsMosaic params={{}} fields={fields} />);
-    expect(screen.getByTestId('sitecore-image')).toHaveAttribute('src', '/media/ai.jpg');
+    const editorImage = screen.getByTestId('sitecore-image');
+    expect(editorImage).toHaveAttribute('src', '/media/ai.jpg');
+    expect(editorImage.className).toMatch(/pointer-events-auto/);
+    expect(editorImage.closest('article')).toHaveAttribute('data-item-id', 'tile-1');
+  });
+
+  it('still renders Sitecore Image when tile src is empty in editing', () => {
+    mockUseSitecore.mockReturnValue({ page: mockPageEditing });
+    const emptyImageFields = {
+      data: {
+        datasource: {
+          ...fields.data.datasource,
+          children: {
+            results: [
+              tile({
+                tileImage: { jsonValue: { value: {} } },
+              }),
+            ],
+          },
+        },
+      },
+    };
+
+    render(<InsightsMosaic params={{}} fields={emptyImageFields} />);
+    expect(screen.getByTestId('sitecore-image')).toBeInTheDocument();
+    expect(screen.queryByTestId('next-image')).not.toBeInTheDocument();
+  });
+
+  it('does not wrap tiles in links while editing', () => {
+    mockUseSitecore.mockReturnValue({ page: mockPageEditing });
+    render(<InsightsMosaic params={{}} fields={fields} />);
+
+    expect(screen.queryByRole('link', { name: /AI Governance for Boards/i })).not.toBeInTheDocument();
+    expect(screen.getByTestId('sitecore-image').closest('a')).toBeNull();
+    expect(screen.getByRole('link', { name: 'View All Insights' })).toBeInTheDocument();
   });
 
   it('exposes LatestInsights as an alias of Default', () => {

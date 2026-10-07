@@ -112,6 +112,12 @@ const InsightsMosaicEmpty: React.FC = () => (
   <NoDataFallback componentName="InsightsMosaic" />
 );
 
+const EMPTY_IMAGE_FIELD: ImageField = { value: {} };
+
+function tileImageField(item: InsightsMosaicItem): ImageField {
+  return withResolvedImageSrc(item.tileImage) ?? item.tileImage?.jsonValue ?? EMPTY_IMAGE_FIELD;
+}
+
 function InsightsMosaicTile({
   item,
   index,
@@ -129,7 +135,7 @@ function InsightsMosaicTile({
   const placement = resolvePlacement(fieldString(item.imagePlacement));
   const span = resolveSpan(fieldString(item.tileSpan));
   const href = linkHref(item.tileLink);
-  const imageField = withResolvedImageSrc(item.tileImage) ?? item.tileImage?.jsonValue;
+  const imageField = tileImageField(item);
   const hasImage = Boolean(imageField?.value?.src);
   const showImage = hasImage || isEditing;
   const showTitle = Boolean(title) || isEditing;
@@ -152,13 +158,15 @@ function InsightsMosaicTile({
     <article
       data-item-id={isEditing ? item.id : undefined}
       className={cn(
-        'insights-mosaic-tile group relative flex h-full min-h-0 w-full overflow-hidden',
+        'insights-mosaic-tile group relative flex h-full min-h-0 w-full',
+        isEditing ? 'overflow-visible' : 'overflow-hidden',
         isVertical ? 'flex-col' : placement === 'right' ? 'flex-row-reverse' : 'flex-row'
       )}
     >
       <div
         className={cn(
-          'relative min-h-0 overflow-hidden bg-[var(--insights-mosaic-navy,#0a2048)]',
+          'relative min-h-0 bg-[var(--insights-mosaic-navy,#0a2048)]',
+          isEditing ? 'pointer-events-auto overflow-visible' : 'overflow-hidden',
           isVertical ? 'h-1/2 w-full' : 'h-full w-1/2'
         )}
       >
@@ -166,7 +174,7 @@ function InsightsMosaicTile({
           (isEditing ? (
             <SitecoreImage
               field={imageField}
-              className="absolute inset-0 h-full w-full object-cover"
+              className="pointer-events-auto relative z-10 h-full w-full object-cover"
             />
           ) : (
             <ContentSdkImage
