@@ -1,10 +1,28 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import { Default as MediaCanvas, uniqueCollageSlot } from '@/components/uiim/media/MediaCanvas';
+import { Carousel, Default as MediaCanvas, uniqueCollageSlot } from '@/components/uiim/media/MediaCanvas';
 import { mockPage, mockPageEditing } from '../../test-utils/mockPage';
 
 const mockUseSitecore = jest.fn();
+
+jest.mock('lucide-react', () => ({
+  Search: () => <svg data-testid="search-icon" />,
+}));
+
+Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: (query: string) => ({
+    matches: false,
+    media: query,
+    onchange: null,
+    addListener: jest.fn(),
+    removeListener: jest.fn(),
+    addEventListener: jest.fn(),
+    removeEventListener: jest.fn(),
+    dispatchEvent: jest.fn(),
+  }),
+});
 
 jest.mock('@sitecore-content-sdk/nextjs', () => ({
   Text: ({ field, tag: Tag = 'span', className }: any) => (
@@ -195,3 +213,65 @@ describe('MediaCanvas', () => {
     expect(screen.getAllByTestId('next-image')).toHaveLength(10);
   });
 });
+
+describe('MediaCanvas Carousel', () => {
+  beforeEach(() => {
+    mockUseSitecore.mockReturnValue({ page: mockPage });
+  });
+
+  it('falls back when datasource is missing', () => {
+    render(<Carousel params={{}} fields={{ data: {} }} />);
+    expect(screen.getByTestId('no-data-fallback')).toHaveTextContent('MediaCanvas');
+  });
+
+  it('renders a full-bleed carousel with search overlay and live NextImage', () => {
+    const { container } = render(<Carousel params={{}} fields={fields} />);
+
+    expect(container.querySelector('[aria-roledescription="carousel"]')).toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 1, name: 'Cooley' })).toBeInTheDocument();
+    expect(screen.getByRole('search')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Search' })).toBeInTheDocument();
+    expect(screen.getByTestId('next-image')).toHaveAttribute('src', '/media/tile.jpg');
+    expect(screen.queryByTestId('sitecore-image')).not.toBeInTheDocument();
+  });
+
+  it('renders Sitecore Image chrome and stacked tiles in Pages', () => {
+    mockUseSitecore.mockReturnValue({ page: mockPageEditing });
+    render(<Carousel params={{}} fields={fields} isPageEditing />);
+
+    const editorImages = screen.getAllByTestId('sitecore-image');
+    expect(editorImages.length).toBeGreaterThan(0);
+    expect(editorImages[0]).toHaveAttribute('src', '/media/tile.jpg');
+    expect(screen.queryByTestId('next-image')).not.toBeInTheDocument();
+    expect(screen.getByRole('search')).toBeInTheDocument();
+    expect(screen.getByText('About')).toBeInTheDocument();
+    expect(containerHasItemId('tile-1')).toBe(true);
+  });
+
+  it('shows poster image instead of video in Pages so image chrome is selectable', () => {
+    mockUseSitecore.mockReturnValue({ page: mockPageEditing });
+    const videoTileFields = {
+      data: {
+        datasource: {
+          ...fields.data.datasource,
+          children: {
+            results: [
+              {
+                ...tile,
+                video: { jsonValue: { value: { href: 'https://example.com/loop.mp4', text: 'Sample loop' } } },
+              },
+            ],
+          },
+        },
+      },
+    };
+
+    const { container } = render(<Carousel params={{}} fields={videoTileFields} isPageEditing />);
+    expect(screen.getAllByTestId('sitecore-image').length).toBeGreaterThan(0);
+    expect(container.querySelector('video')).not.toBeInTheDocument();
+  });
+});
+
+function containerHasItemId(itemId: string): boolean {
+  return Boolean(document.querySelector(`[data-item-id="${itemId}"]`));
+}

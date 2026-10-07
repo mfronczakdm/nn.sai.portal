@@ -295,6 +295,11 @@ html[data-theme='kts'] .hover\:bg-primary-hover:hover {
   color: #FFFFFF;
 }
 
+html[data-theme='kts'] .insights-mosaic-tile-copy h3,
+html[data-theme='kts'] .insights-mosaic-band h2 {
+  font-weight: 300;
+}
+
 /* BUTTONS END */
 
 main {

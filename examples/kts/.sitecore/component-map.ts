@@ -17,6 +17,7 @@ import * as careerlistingprops from 'src/components/uiim/lawyers/career-listing.
 import * as BioListing from 'src/components/uiim/lawyers/BioListing';
 import * as BioDetail from 'src/components/uiim/lawyers/BioDetail';
 import * as biorelatedcontent from 'src/components/uiim/lawyers/bio-related-content';
+import * as InsightsMosaic from 'src/components/uiim/insights/InsightsMosaic';
 import * as BlogListing from 'src/components/uiim/insights/BlogListing';
 import * as DocumentCards from 'src/components/uiim/cards/DocumentCards';
 import * as TopicListing from 'src/components/topic-listing/TopicListing';
@@ -307,6 +308,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['BioListing', { ...BioListing, componentType: 'client' }],
   ['BioDetail', { ...BioDetail, componentType: 'client' }],
   ['bio-related-content', { ...biorelatedcontent }],
+  ['InsightsMosaic', { ...InsightsMosaic, componentType: 'client' }],
   ['BlogListing', { ...BlogListing, componentType: 'client' }],
   ['DocumentCards', { ...DocumentCards, componentType: 'client' }],
   ['TopicListing', { ...TopicListing }],

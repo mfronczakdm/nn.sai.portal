@@ -1,5 +1,5 @@
 generatedAt: "2026-03-20T09:00:00Z"
-lastUpdatedAt: "2026-10-07T20:30:00Z"
+lastUpdatedAt: "2026-10-07T21:10:00Z"
 lastUpdatedBy: "cursor-agent"
 
 contentUpdates:
@@ -3101,6 +3101,29 @@ lookups:
   - path: "/sitecore/content/manufacturing/dwyeromega/Home/Resources/Featured Articles"
     itemId: "{86583073-892F-4839-90EF-8660776225E3}"
     lastReadAt: "2026-07-15T16:50:00Z"
+  - path: "/sitecore/templates/Project/Cooley/Components/Insights"
+    itemId: "{BF6405A6-0D3B-4471-BCA4-6A3230078F72}"
+    lastReadAt: "2026-10-07T21:00:00Z"
+  - path: "/sitecore/templates/Project/Cooley/Rendering Parameters/Insights"
+    itemId: "{D17F13CF-6CEB-49F2-A239-1C04A330F1B9}"
+    lastReadAt: "2026-10-07T21:00:00Z"
+  - path: "/sitecore/layout/Renderings/Project/Cooley/Insights"
+    itemId: "{3986CD53-B260-415E-B48B-D8E606780FA1}"
+    lastReadAt: "2026-10-07T21:00:00Z"
+  - path: "/sitecore/content/Cooley/kts/Data"
+    itemId: "{EB578730-46C5-4203-B4E8-B1D258D1C7B1}"
+    lastReadAt: "2026-10-07T21:00:00Z"
+  - path: "/sitecore/content/Cooley/kts/Presentation/Headless Variants"
+    itemId: "{2BE8176C-8D07-4E93-83E1-8E101BFD5754}"
+    lastReadAt: "2026-10-07T21:10:00Z"
+  - path: "/sitecore/content/Cooley/kts/Presentation/Headless Variants/MediaCanvas"
+    itemId: "{F7883EF6-58D4-4136-95CE-39087358E62A}"
+    lastReadAt: "2026-10-07T21:10:00Z"
+    note: "MediaCanvas Headless Variants container (Default + Carousel)"
+  - path: "/sitecore/content/Cooley/kts/Presentation/Available Renderings/Page Content"
+    itemId: "{273163B3-608D-4FC6-8572-6BE3A88F619F}"
+    lastReadAt: "2026-10-07T21:00:00Z"
+    note: "kts Available Renderings — NEVER replace, always concatenate"
 
 # Demo datasource items (AI-created content, not new component definitions)
 demoContent: []
@@ -5056,8 +5079,8 @@ ia:
     category: "Media"
     status: "complete"
     createdAt: "2026-08-14T21:10:00Z"
-    updatedAt: "2026-08-16T12:10:00Z"
-    siteName: "cooley"
+    updatedAt: "2026-10-07T21:10:00Z"
+    siteName: "kts"
     siteCollection: "Cooley"
     notes: >
       Homepage scattered media collage. Live Cooley project paths used (not project.yaml pkm / not Pillsbury).
@@ -5066,11 +5089,13 @@ ia:
       2026-08-16: Pages editor now renders each child as a stacked card with Image/Video/Tagline field helpers so authors can click chrome and set child content. Live collage unchanged.
       2026-08-16: Child Image chrome — editor tiles now use Sitecore Image (not NextImage) with overflow-visible and pointer-events-auto so Pages can select child images. Live collage still uses NextImage.
       2026-08-16: Editor tiles include data-clickable and data-item-id so Pages can switch chrome to the child datasource.
+      2026-10-07: Added Carousel Headless Variant on live kts (ported from BLG). Home instance left on Default. Variants container verified at /sitecore/content/Cooley/kts/Presentation/Headless Variants/MediaCanvas (older /Cooley/cooley/ paths superseded).
     react:
       filePath: "src/components/uiim/media/MediaCanvas.tsx"
       componentMapKey: "MediaCanvas"
       variants:
         - "Default"
+        - "Carousel"
     templates:
       parent:
         name: "MediaCanvas"
@@ -5128,16 +5153,19 @@ ia:
       useComponentQuery: true
       registeredInAvailableRenderings: false
     variants:
-      containerPath: "/sitecore/content/Cooley/cooley/Presentation/Headless Variants/MediaCanvas"
-      containerId: "{D1B76B64-40F2-49D7-B005-96120805B899}"
+      containerPath: "/sitecore/content/Cooley/kts/Presentation/Headless Variants/MediaCanvas"
+      containerId: "{F7883EF6-58D4-4136-95CE-39087358E62A}"
       definitions:
-        - { name: "Default", itemId: "{CC16BD23-EEBC-4847-9F42-407FF68FE275}" }
+        - { name: "Default", itemId: "{2A668544-313A-4C76-9B58-0168F16CA992}" }
+        - { name: "Carousel", itemId: "{4BA8EC8B-CA7B-46A0-BF93-6BC98E766A0F}" }
     pagePlacement:
-      pagePath: "/sitecore/content/Cooley/cooley/Home"
-      pageId: "{E17C24E2-6BC8-4415-8745-484D0DBBF8D0}"
+      pagePath: "/sitecore/content/Cooley/kts/Home"
+      pageId: "{359D4DEE-F550-4847-995D-E0593BC95FDF}"
       placeholder: "headless-main"
       instanceId: "{C51B4680-28EE-48BB-9F04-26C3DDE955A7}"
-      localDatasource: "{415E1109-92A4-4F99-9816-EAD3075C4E28}"
+      localDatasource: "{1FA56379-364D-4A73-A246-BB6F7B5C105E}"
+      fieldNames: "{2A668544-313A-4C76-9B58-0168F16CA992}"
+      note: "Home remains on Default; Carousel is available as an author option"
     lookupsAdded:
       - { path: "/sitecore/content/Cooley/cooley/Data", itemId: "{51224EB9-4E9B-486A-9A40-4FC0689E1FD0}" }
       - { path: "/sitecore/templates/Project/Cooley/Components", itemId: "{5A4BC589-73DB-499F-B501-B0ABB5EDF529}" }
@@ -5146,7 +5174,7 @@ ia:
       - { path: "/sitecore/content/Cooley/cooley/Presentation/Headless Variants", itemId: "{C2E79017-E902-4B54-9BF6-EC597393D47F}" }
       - { path: "/sitecore/content/Cooley/cooley/Presentation/Available Renderings/Page Content", itemId: "{82D8DEC3-8F75-4002-B68A-4A2286D6BC61}" }
     verification:
-      checkedAt: "2026-08-14T21:15:00Z"
+      checkedAt: "2026-10-07T21:10:00Z"
       passed:
         - "Parent/child templates with Standard + Grid Parameters"
         - "Fields created with correct Type"
@@ -5158,13 +5186,17 @@ ia:
         - "Default Headless Variant created"
         - "React MediaCanvas.tsx created"
         - "Placed on Home headless-main"
+        - "kts MediaCanvas Headless Variants container verified"
+        - "Carousel Variant Definition created and verified via MCP"
+        - "Named export Carousel matches Variant Definition name"
+        - "Home MediaCanvas FieldNames still Default"
       failed: []
       pendingManual:
         - "Append {53E21CA2-BA94-4A60-ADA4-7D3F09289DA2} to Available Renderings/Page Content (silent-read; do not replace)"
         - "Verify Datasource Template/Location in CE (silent-write)"
         - "Verify __Masters on folder SV and Data folder instance (silent-write)"
         - "Verify __Standard values links on templates (silent-write)"
-        - "Publish rendering, templates, Home, and Data items for Edge"
+        - "Publish MediaCanvas Headless Variants (Carousel) so Pages authors can pick it on Edge"
         - "_HorizonDatasourceGrouping not found on this instance — optional follow-up"
 
   - name: "BioDetail"
@@ -5886,3 +5918,131 @@ contentPages:
       pendingManual:
         - "Publish rendering, variants, and Available Renderings for Edge"
         - "Place SitecoreSearchResults on a search results page and link header search to ?q="
+
+  - name: "InsightsMosaic"
+    kind: "list"
+    category: "Insights"
+    status: "complete"
+    createdAt: "2026-10-07T20:50:00Z"
+    updatedAt: "2026-10-07T21:00:00Z"
+    siteName: "kts"
+    siteCollection: "Cooley"
+    notes: >
+      Ported BLG InsightsMosaic numbered masonry grid into kts. Cooley/kts Sitecore items
+      (not pillsbury templates). Sample Latest Insights tiles link to existing kts Media and Insight pages.
+      Accent CSS tokens remapped to the Kilpatrick palette. Local empty Home/Data/InsightsMosaic leftover
+      from add_component_on_page was replaced with Data/Insights Mosaics/Latest Insights.
+    react:
+      filePath: "src/components/uiim/insights/InsightsMosaic.tsx"
+      componentMapKey: "InsightsMosaic"
+      variants:
+        - "Default"
+        - "LatestInsights"
+    templates:
+      parent:
+        name: "InsightsMosaic"
+        path: "/sitecore/templates/Project/Cooley/Components/Insights/InsightsMosaic"
+        itemId: "{4958751F-EFE3-465F-9E93-C3E684989E40}"
+        sectionName: "Data"
+        sectionId: "{DF4F1BB0-5C61-4C9E-A256-C3E9368C61E7}"
+        fields:
+          - { name: "SectionTitle", type: "Single-Line Text", itemId: "{27DF99FA-ADE4-4D6B-AF74-2777302CD95B}" }
+          - { name: "ViewAllLink", type: "General Link", itemId: "{86C13E99-89DF-4FA7-9925-D7FB9D31EABA}" }
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{A8FCCDDF-8491-476D-BCBA-53E263C5BBB1}"
+          linked: true
+          masters: ["InsightsMosaicItem"]
+      child:
+        name: "InsightsMosaicItem"
+        path: "/sitecore/templates/Project/Cooley/Components/Insights/InsightsMosaicItem"
+        itemId: "{2D6541E9-8D97-445F-A755-F0A9D3C0351F}"
+        sectionName: "Data"
+        sectionId: "{C1B8917A-BDB6-4819-8B77-6DDADB2BE944}"
+        fields:
+          - { name: "TileTitle", type: "Single-Line Text", itemId: "{37B374CC-D479-4B7C-B61B-AFFEC7CF8D3F}" }
+          - { name: "TileImage", type: "Image", itemId: "{77AF0185-3E2A-45F7-87ED-6BEAC77E6CC9}" }
+          - { name: "TileLink", type: "General Link", itemId: "{247CEBA5-0AA0-4417-92BD-52A1994558CA}" }
+          - { name: "TileTag", type: "Single-Line Text", itemId: "{906E24B7-7FF4-4BF7-AF1E-D9D1D08305EA}" }
+          - { name: "TileNumber", type: "Single-Line Text", itemId: "{FCD22935-4DA8-4A5A-A254-D53EE5F74101}" }
+          - { name: "AccentColor", type: "Single-Line Text", itemId: "{798CA0DB-DA25-4C7E-90CC-C202644A2CC6}" }
+          - { name: "ImagePlacement", type: "Single-Line Text", itemId: "{0417A437-640E-49D5-B1CD-7B588469CF2F}" }
+          - { name: "TileSpan", type: "Single-Line Text", itemId: "{416CC70B-3345-43B0-8C3D-DBBC59C7E59B}" }
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{BBD26D07-966D-4655-9B7E-D809770C26DE}"
+          linked: true
+      folder:
+        name: "Insights Mosaic Folder"
+        path: "/sitecore/templates/Project/Cooley/Folders/Insights Mosaic Folder"
+        itemId: "{F3ED5537-10AB-41F4-9CF7-9E772446F360}"
+        standardValues:
+          itemId: "{618B0A6C-B1BF-497B-B006-225A3C544EBC}"
+          linked: true
+          masters: ["InsightsMosaic"]
+      renderingParams:
+        name: "InsightsMosaic"
+        path: "/sitecore/templates/Project/Cooley/Rendering Parameters/Insights/InsightsMosaic"
+        itemId: "{CF82A1E8-4285-4659-9CB0-7A4ACC0A8D0D}"
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{ED424D09-B7B7-4952-A8CD-03B32739EA97}"
+          linked: true
+    datasourceFolder:
+      name: "Insights Mosaics"
+      path: "/sitecore/content/Cooley/kts/Data/Insights Mosaics"
+      itemId: "{693219BD-53E3-4DD0-ADC8-D15E03127290}"
+      insertOptionsSet: true
+      exampleItem:
+        name: "Latest Insights"
+        itemId: "{5EFAFAA6-51EC-40C7-B664-2CB43885C297}"
+        children:
+          - { name: "01 Q1 Venture Report", itemId: "{9AFF7054-5375-43E8-9AB7-989CEA6C99FB}" }
+          - { name: "02 AI Governance", itemId: "{DDC34574-1194-472F-AE6F-08545AF3A837}" }
+          - { name: "03 Life Sciences IPO", itemId: "{8A29BE80-266C-4423-9271-02C1ECF33333}" }
+          - { name: "04 Venture Financing Trends", itemId: "{51D16EE6-5086-4475-AFBA-31EA001FE1C5}" }
+          - { name: "05 LA28 Press", itemId: "{3D7E7C71-0AA1-4883-AAD4-DEE42ED7A750}" }
+          - { name: "06 Energy Dealmaking", itemId: "{D3E65DDB-E6F8-4D75-A177-B55E36F7ECA1}" }
+    rendering:
+      name: "InsightsMosaic"
+      path: "/sitecore/layout/Renderings/Project/Cooley/Insights/InsightsMosaic"
+      itemId: "{6799167A-16CC-44C7-BBC8-33D88DD252C1}"
+      componentName: "InsightsMosaic"
+      datasourceTemplatePath: "/sitecore/templates/Project/Cooley/Components/Insights/InsightsMosaic"
+      datasourceLocationQuery: "query:$site/*[@@name='Data']/*[@@templatename='Insights Mosaic Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='Insights Mosaic Folder']"
+      parametersTemplateId: "{CF82A1E8-4285-4659-9CB0-7A4ACC0A8D0D}"
+      useComponentQuery: true
+      addFieldEditorButton: "1"
+      registeredInAvailableRenderings: true
+    headlessVariants:
+      containerPath: "/sitecore/content/Cooley/kts/Presentation/Headless Variants/InsightsMosaic"
+      containerId: "{4ED8554D-F8CB-4285-95A1-2C392FC3DEFE}"
+      variants:
+        - { name: "Default", itemId: "{86FF38B8-6259-472A-A315-54CE4A7B22D0}" }
+        - { name: "LatestInsights", itemId: "{1AD95430-4BEF-40F5-8405-4B56C4C7CE39}" }
+    pagePlacement:
+      pagePath: "/sitecore/content/Cooley/kts/Home"
+      pageId: "{359D4DEE-F550-4847-995D-E0593BC95FDF}"
+      placeholder: "headless-main"
+      instanceId: "{CDB4F6E0-CDE7-4124-B4A7-D512DE814FE8}"
+      datasourceId: "{5EFAFAA6-51EC-40C7-B664-2CB43885C297}"
+    availableRenderings:
+      path: "/sitecore/content/Cooley/kts/Presentation/Available Renderings/Page Content"
+      itemId: "{273163B3-608D-4FC6-8572-6BE3A88F619F}"
+      lastKnownValue: "{C5F905F8-FD1F-444E-A9E5-AC6B774FF0DE}|{2492BAC4-DA07-4C86-87F0-9873D40E2276}|{9C6D53E3-FE57-4638-AF7B-6D68304C7A94}|{3836D951-BB14-43AC-9231-649B7F245DC5}|{B1136CF1-94BE-468C-B78D-9BE212AF5428}|{7691AC50-2BAE-4FBD-9BA9-05480FD844E4}|{791A1860-DCCE-495C-B778-78F6B19AAB51}|{903BEE64-4E35-4956-BBE2-29F492AB247F}|{C67E942A-2EBC-43D5-88FC-DD95EDC9A77D}|{560AB1F6-8C48-4449-9E72-F29C39BA750D}|{8278F36C-8492-4641-A401-9C19AA69D08A}|{6103C820-2EE1-460B-A394-C69A4BCE8682}|{6799167A-16CC-44C7-BBC8-33D88DD252C1}"
+    verification:
+      checkedAt: "2026-10-07T21:00:00Z"
+      passed:
+        - "Parent + child templates with Standard + Grid Parameters bases"
+        - "Fields created with explicit Type"
+        - "Folder template + Data/Insights Mosaics + Latest Insights + 6 tiles"
+        - "JSON Rendering componentName + Parameters Template + ComponentQuery + Datasource Template/Location"
+        - "Default + LatestInsights Headless Variants"
+        - "Appended to kts Available Renderings (MCP read-back confirmed)"
+        - "Placed on kts Home after NewsListing; datasource Latest Insights"
+        - "React InsightsMosaic.tsx copied from BLG"
+      failed: []
+      pendingManual:
+        - "Publish rendering, templates, variants, Data/Insights Mosaics, Home, and Available Renderings for Edge"
+        - "_HorizonDatasourceGrouping not found on this instance — same as MediaCanvas"
+        - "Empty local Home/Data/InsightsMosaic leftover from add_component can be deleted"

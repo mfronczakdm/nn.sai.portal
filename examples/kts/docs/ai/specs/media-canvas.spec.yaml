@@ -43,13 +43,14 @@ design:
       - "child Video"
       - "child Tagline"
     repeatedItems: true
-    likelyVariantNames: ["Default"]
+    likelyVariantNames: ["Default", "Carousel"]
     responsiveViews: ["mobile stacked", "desktop scattered collage"]
   assumptions:
     - "project.yaml still says pkm; live Cooley paths used instead"
     - "Video is a General Link to an mp4; Image is used when Video is empty"
     - "Positioning is deterministic from item id (SSR-safe), not Math.random"
     - "Experience Editor uses a stacked/grid layout so tiles remain editable"
+    - "Carousel is full-bleed morphing media with Title + Cta search overlay; Default stays collage"
 
 templates:
   parent:
@@ -104,3 +105,4 @@ react:
   propsShape: "graphql-datasource"
   variants:
     - Default
+    - Carousel

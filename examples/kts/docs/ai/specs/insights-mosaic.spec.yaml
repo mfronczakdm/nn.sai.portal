@@ -1,0 +1,106 @@
+project:
+  reactComponentRoot: "src/components/uiim"
+  shadcnImportBase: "@/components/ui"
+  componentMapPath: ".sitecore/component-map.ts"
+  sitecoreJssPackage: "@sitecore-content-sdk/nextjs"
+  usesTailwind: true
+  usesShadcn: true
+
+tools:
+  marketerMcp:
+    preferred: true
+
+siteCollection: "Cooley"
+siteName: "kts"
+category: "Insights"
+
+component:
+  namePascal: "InsightsMosaic"
+  nameKebab: "insights-mosaic"
+  kind: "list"
+  filePath: "src/components/uiim/insights/InsightsMosaic.tsx"
+  componentMapKey: "InsightsMosaic"
+  componentMapImportAlias: "InsightsMosaic"
+
+design:
+  references:
+    - "examples/blg InsightsMosaic numbered masonry / bento grid"
+  extractedLayout:
+    summary: "Dark band with section title, numbered masonry tiles (image + accent copy), and a View All link."
+    visibleElements:
+      - "Section title"
+      - "Numbered insight tiles"
+      - "Tile tag"
+      - "View all insights"
+    inferredFields:
+      - "SectionTitle"
+      - "ViewAllLink"
+      - "child TileTitle"
+      - "child TileImage"
+      - "child TileLink"
+      - "child TileTag"
+      - "child TileNumber"
+      - "child AccentColor"
+      - "child ImagePlacement"
+      - "child TileSpan"
+    repeatedItems: true
+    likelyVariantNames: ["Default", "LatestInsights"]
+    responsiveViews: ["mobile 2-col stack", "desktop 4-col masonry"]
+  assumptions:
+    - "Ported from examples/blg; Cooley/kts Sitecore items, not pillsbury templates"
+    - "Sample tiles link to existing kts Media and Insight pages"
+    - "Accent tokens remapped to Kilpatrick palette on data-theme='kts'"
+
+templates:
+  parent:
+    create: true
+    path: "/sitecore/templates/Project/Cooley/Components/Insights/InsightsMosaic"
+    name: "InsightsMosaic"
+    sectionName: "Data"
+    fields:
+      - { name: "SectionTitle", type: "Single-Line Text" }
+      - { name: "ViewAllLink", type: "General Link" }
+    standardValues:
+      create: true
+      addHorizonDatasourceGrouping: false
+
+  child:
+    create: true
+    path: "/sitecore/templates/Project/Cooley/Components/Insights/InsightsMosaicItem"
+    name: "InsightsMosaicItem"
+    sectionName: "Data"
+    fields:
+      - { name: "TileTitle", type: "Single-Line Text" }
+      - { name: "TileImage", type: "Image" }
+      - { name: "TileLink", type: "General Link" }
+      - { name: "TileTag", type: "Single-Line Text" }
+      - { name: "TileNumber", type: "Single-Line Text" }
+      - { name: "AccentColor", type: "Single-Line Text" }
+      - { name: "ImagePlacement", type: "Single-Line Text" }
+      - { name: "TileSpan", type: "Single-Line Text" }
+    standardValues:
+      create: true
+
+folderTemplate:
+  create: true
+  path: "/sitecore/templates/Project/Cooley/Folders/Insights Mosaic Folder"
+  name: "Insights Mosaic Folder"
+
+datasourceFolder:
+  create: true
+  path: "/sitecore/content/Cooley/kts/Data/Insights Mosaics"
+  name: "Insights Mosaics"
+
+rendering:
+  create: true
+  path: "/sitecore/layout/Renderings/Project/Cooley/Insights/InsightsMosaic"
+  name: "InsightsMosaic"
+  componentName: "InsightsMosaic"
+  datasourceRequired: true
+  useComponentQuery: true
+
+react:
+  propsShape: "graphql-datasource"
+  variants:
+    - Default
+    - LatestInsights

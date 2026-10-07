@@ -589,6 +589,19 @@
   --color-light-hover: #F5F5F5;
   --color-light-foreground: #101820;
   --color-overlay: rgb(244 54 76 / 0.45);
+  --insights-mosaic-band: #101820;
+  --insights-mosaic-band-foreground: #ffffff;
+  --insights-mosaic-foreground: #ffffff;
+  --insights-mosaic-teal: #4A4A4A;
+  --insights-mosaic-navy: #101820;
+  --insights-mosaic-maroon: #F4364C;
+  --insights-mosaic-green: #4A4A4A;
+  --insights-mosaic-purple: #9B4A6E;
+  --insights-mosaic-teal-foreground: #ffffff;
+  --insights-mosaic-navy-foreground: #ffffff;
+  --insights-mosaic-maroon-foreground: #ffffff;
+  --insights-mosaic-green-foreground: #ffffff;
+  --insights-mosaic-purple-foreground: #ffffff;
 }
 
 [data-theme='kts'] .bg-primary {
