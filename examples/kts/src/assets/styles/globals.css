@@ -589,7 +589,8 @@
   --color-light-hover: #F5F5F5;
   --color-light-foreground: #101820;
   --color-overlay: rgb(244 54 76 / 0.45);
-  --insights-mosaic-band: #101820;
+  /* People hero “Connect with Guidance” — live ktslaw.com .maincontainer .singleBgimage */
+  --insights-mosaic-band: #612141;
   --insights-mosaic-band-foreground: #ffffff;
   --insights-mosaic-foreground: #ffffff;
   --insights-mosaic-teal: #4A4A4A;
