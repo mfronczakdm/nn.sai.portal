@@ -1,6 +1,32 @@
 generatedAt: "2026-03-20T09:00:00Z"
-lastUpdatedAt: "2026-09-14T07:10:00Z"
+lastUpdatedAt: "2026-10-07T20:30:00Z"
 lastUpdatedBy: "cursor-agent"
+
+contentUpdates:
+  - name: "kts Cooley to Kilpatrick content rename"
+    status: "complete"
+    siteName: "kts"
+    siteCollection: "Cooley"
+    createdAt: "2026-10-07T20:00:00Z"
+    updatedAt: "2026-10-07T20:30:00Z"
+    notes:
+      - "2026-10-07: Replaced visible Cooley / Cooley LLP / CooleyREG copy with Kilpatrick / Kilpatrick LLP / KilpatrickREG on Home, L1–L3 pages, People bios, MultiPromos, and kts taxonomy titles."
+      - "Item names and URL slugs were not renamed (CooleyREG, press-release item names, /sitecore/content/Cooley path)."
+      - "Approved items received new Draft versions; not published."
+    verification:
+      checkedAt: "2026-10-07T20:30:00Z"
+      passed:
+        - "Home metadataTitle/ogTitle now Kilpatrick"
+        - "About, Careers, Industries, Media and Insight, People, Practices page fields updated"
+        - "73 practice pages updated"
+        - "About/Careers/People subtree updated"
+        - "Industries and Media pages with Cooley copy updated"
+        - "MultiPromo datasources updated"
+        - "Taxonomy publication/speaking titles updated"
+      pendingManual:
+        - "Publish Draft versions so changes are live"
+        - "Rename item names/URL slugs if desired (CooleyREG, Cooley-Named-..., Cooley Legal Talent Contacts)"
+        - "Headshot URLs still point at www.cooley.com (changing them would break images)"
 
 project:
   siteCollection: "main"

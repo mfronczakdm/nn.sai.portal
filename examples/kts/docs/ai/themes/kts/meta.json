@@ -1,0 +1,212 @@
+{
+  "title": "Home",
+  "themeColor": null,
+  "msColor": null,
+  "ogTitle": null,
+  "ogDescription": null,
+  "ogImage": "/images/KTBackground.png",
+  "ogSiteName": null,
+  "favicon": "https://ktslaw.com/images/fav.ico",
+  "googleFontsLinks": [],
+  "fontFaces": [
+    {
+      "family": "FontAwesome",
+      "src": "url(\"../../fonts/fontawesome-webfont.woff2?v=4.7.0\") format(\"woff2\"), url(\"../../fonts/fontawesome-webfont.woff?v=4.7.0\") format(\"woff\"), url(\"../../fonts/fontawesome-webfont.ttf?v=4.7.0\") format(\"truetype\")",
+      "weight": "normal"
+    },
+    {
+      "family": "Glyphicons Halflings",
+      "src": "url(\"../../fonts/glyphicons-halflings-regular.woff2\") format(\"woff2\"), url(\"../../fonts/glyphicons-halflings-regular.woff\") format(\"woff\"), url(\"../../fonts/glyphicons-halflings-regular.ttf\") format(\"truetype\")",
+      "weight": ""
+    },
+    {
+      "family": "Diagramm",
+      "src": "url(\"../../fonts/Diagramm-Thin.otf\") format(\"opentype\")",
+      "weight": "100"
+    },
+    {
+      "family": "Diagramm",
+      "src": "url(\"../../fonts/Diagramm-ThinItalic.otf\") format(\"opentype\")",
+      "weight": "100"
+    },
+    {
+      "family": "Diagramm",
+      "src": "url(\"../../fonts/Diagramm-ExtraLight.otf\") format(\"opentype\")",
+      "weight": "200"
+    },
+    {
+      "family": "Diagramm",
+      "src": "url(\"../../fonts/Diagramm-ExtraLightItalic.otf\") format(\"opentype\")",
+      "weight": "200"
+    },
+    {
+      "family": "Diagramm",
+      "src": "url(\"../../fonts/Diagramm-Light.otf\") format(\"opentype\")",
+      "weight": "300"
+    },
+    {
+      "family": "Diagramm",
+      "src": "url(\"../../fonts/Diagramm-LightItalic.otf\") format(\"opentype\")",
+      "weight": "300"
+    },
+    {
+      "family": "Diagramm",
+      "src": "url(\"../../fonts/Diagramm-Regular.otf\") format(\"opentype\")",
+      "weight": "400"
+    },
+    {
+      "family": "Diagramm",
+      "src": "url(\"../../fonts/Diagramm-RegularItalic.otf\") format(\"opentype\")",
+      "weight": "400"
+    },
+    {
+      "family": "Diagramm",
+      "src": "url(\"../../fonts/Diagramm-Medium.otf\") format(\"opentype\")",
+      "weight": "500"
+    },
+    {
+      "family": "Diagramm",
+      "src": "url(\"../../fonts/Diagramm-MediumItalic.otf\") format(\"opentype\")",
+      "weight": "500"
+    },
+    {
+      "family": "Diagramm",
+      "src": "url(\"../../fonts/Diagramm-SemiBold.otf\") format(\"opentype\")",
+      "weight": "600"
+    },
+    {
+      "family": "Diagramm",
+      "src": "url(\"../../fonts/Diagramm-SemiBoldItalic.otf\") format(\"opentype\")",
+      "weight": "600"
+    },
+    {
+      "family": "Diagramm",
+      "src": "url(\"../../fonts/Diagramm-Bold.otf\") format(\"opentype\")",
+      "weight": "700"
+    },
+    {
+      "family": "Diagramm",
+      "src": "url(\"../../fonts/Diagramm-BoldItalic.otf\") format(\"opentype\")",
+      "weight": "700"
+    },
+    {
+      "family": "Diagramm",
+      "src": "url(\"../../fonts/Diagramm-UltraBold.otf\") format(\"opentype\")",
+      "weight": "800"
+    },
+    {
+      "family": "Diagramm",
+      "src": "url(\"../../fonts/Diagramm-UltraBoldItalic.otf\") format(\"opentype\")",
+      "weight": "800"
+    },
+    {
+      "family": "Diagramm",
+      "src": "url(\"../../fonts/Diagramm-Black.otf\") format(\"opentype\")",
+      "weight": "900"
+    },
+    {
+      "family": "Diagramm",
+      "src": "url(\"../../fonts/Diagramm-BlackItalic.otf\") format(\"opentype\")",
+      "weight": "900"
+    },
+    {
+      "family": "FontAwesome",
+      "src": "url(\"../../fonts/fontawesome-webfont.woff\") format(\"woff\"), url(\"../../fonts/fontawesome-webfont.ttf\") format(\"truetype\")",
+      "weight": ""
+    },
+    {
+      "family": "Diagramm",
+      "src": "url(\"/fonts/Diagramm-Thin.otf\") format(\"opentype\")",
+      "weight": "100"
+    },
+    {
+      "family": "Diagramm",
+      "src": "url(\"/fonts/Diagramm-ThinItalic.otf\") format(\"opentype\")",
+      "weight": "100"
+    },
+    {
+      "family": "Diagramm",
+      "src": "url(\"/fonts/Diagramm-ExtraLight.otf\") format(\"opentype\")",
+      "weight": "200"
+    },
+    {
+      "family": "Diagramm",
+      "src": "url(\"/fonts/Diagramm-ExtraLightItalic.otf\") format(\"opentype\")",
+      "weight": "200"
+    },
+    {
+      "family": "Diagramm",
+      "src": "url(\"/fonts/Diagramm-Light.otf\") format(\"opentype\")",
+      "weight": "300"
+    },
+    {
+      "family": "Diagramm",
+      "src": "url(\"/fonts/Diagramm-LightItalic.otf\") format(\"opentype\")",
+      "weight": "300"
+    },
+    {
+      "family": "Diagramm",
+      "src": "url(\"/fonts/Diagramm-Regular.otf\") format(\"opentype\")",
+      "weight": "400"
+    },
+    {
+      "family": "Diagramm",
+      "src": "url(\"/fonts/Diagramm-RegularItalic.otf\") format(\"opentype\")",
+      "weight": "400"
+    },
+    {
+      "family": "Diagramm",
+      "src": "url(\"/fonts/Diagramm-Medium.otf\") format(\"opentype\")",
+      "weight": "500"
+    },
+    {
+      "family": "Diagramm",
+      "src": "url(\"/fonts/Diagramm-MediumItalic.otf\") format(\"opentype\")",
+      "weight": "500"
+    },
+    {
+      "family": "Diagramm",
+      "src": "url(\"/fonts/Diagramm-SemiBold.otf\") format(\"opentype\")",
+      "weight": "600"
+    },
+    {
+      "family": "Diagramm",
+      "src": "url(\"/fonts/Diagramm-SemiBoldItalic.otf\") format(\"opentype\")",
+      "weight": "600"
+    },
+    {
+      "family": "Diagramm",
+      "src": "url(\"/fonts/Diagramm-Bold.otf\") format(\"opentype\")",
+      "weight": "700"
+    },
+    {
+      "family": "Diagramm",
+      "src": "url(\"/fonts/Diagramm-BoldItalic.otf\") format(\"opentype\")",
+      "weight": "700"
+    },
+    {
+      "family": "Diagramm",
+      "src": "url(\"/fonts/Diagramm-UltraBold.otf\") format(\"opentype\")",
+      "weight": "800"
+    },
+    {
+      "family": "Diagramm",
+      "src": "url(\"/fonts/Diagramm-UltraBoldItalic.otf\") format(\"opentype\")",
+      "weight": "800"
+    },
+    {
+      "family": "Diagramm",
+      "src": "url(\"/fonts/Diagramm-Black.otf\") format(\"opentype\")",
+      "weight": "900"
+    },
+    {
+      "family": "Diagramm",
+      "src": "url(\"/fonts/Diagramm-BlackItalic.otf\") format(\"opentype\")",
+      "weight": "900"
+    }
+  ],
+  "logoCandidates": [
+    "https://ktslaw.com/-/media/feature/identity/kts_lockup_rgb_v3.png?la=en&h=56&w=212&hash=D363AC98A7B715770153C57820C2F860"
+  ],
+  "heroBgImage": null
+}

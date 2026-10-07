@@ -303,6 +303,7 @@
  *   (Progressive Blue #0077B3 primary, Steel Blue #0A3360 header, Blue 500 accent).
  * pillsburylaw: navy surfaces + luminous blue (legacy copy; do not use for Cooley).
  * cooley: white airy surfaces, signature red #FD1434 (cooley.com computed), ink #33040E.
+ * kts (Kilpatrick): white surfaces, signature red #F4364C, ink #101820, pink accent #E782A9.
  * Font stacks and heading weights are set on <html data-theme="…"> in src/app/globals.css (next/font on <html class>).
  */
 [data-theme='dwyeromega'] {
@@ -545,5 +546,60 @@
 }
 
 [data-theme='cooley'] .bg-dark {
+  color: var(--color-dark-foreground);
+}
+
+/*
+ * Kilpatrick (kts) — white surfaces, signature red CTAs/hero, charcoal ink, pink accent.
+ * Same token hooks as cooley; brand hex from the supplied Kilpatrick palette
+ * (Playwright on https://www.ktslaw.com confirmed red #F4364C and ink #101820).
+ */
+[data-theme='kts'] {
+  --background-image-gradient: linear-gradient(180deg, #F4364C 0%, #101820 100%);
+  --background-image-gradient-secondary: linear-gradient(90deg, #FFFFFF 0%, #F4364C 50%, #E782A9 100%);
+  --color-background: #FFFFFF;
+  --color-foreground: #101820;
+  --color-card: #FFFFFF;
+  --color-card-foreground: #101820;
+  --color-popover: #FFFFFF;
+  --color-popover-foreground: #101820;
+  --color-primary: #F4364C;
+  --color-primary-foreground: #FFFFFF;
+  --color-primary-hover: #CF2E41;
+  --color-secondary: #F5F5F5;
+  --color-secondary-foreground: #101820;
+  --color-secondary-hover: #E8E8E8;
+  --color-muted: #F5F5F5;
+  --color-muted-foreground: #4A4A4A;
+  --color-accent: #E782A9;
+  --color-accent-foreground: #101820;
+  --color-destructive: #dc2626;
+  --color-destructive-hover: #b91c1c;
+  --color-destructive-foreground: #ffffff;
+  --color-border: #E0E0E0;
+  --color-input: #E0E0E0;
+  --color-ring: #F4364C;
+  --color-tertiary-foreground: #101820;
+  --color-tertiary-hover: #E8E8E8;
+  --color-tertiary: #F5F5F5;
+  --color-dark-foreground: #FFFFFF;
+  --color-dark-hover: #0A1016;
+  --color-dark: #101820;
+  --color-light: #FFFFFF;
+  --color-light-hover: #F5F5F5;
+  --color-light-foreground: #101820;
+  --color-overlay: rgb(244 54 76 / 0.45);
+}
+
+[data-theme='kts'] .bg-primary {
+  background-color: #F4364C;
+  color: #FFFFFF;
+}
+
+[data-theme='kts'] .bg-secondary {
+  color: var(--color-secondary-foreground);
+}
+
+[data-theme='kts'] .bg-dark {
   color: var(--color-dark-foreground);
 }

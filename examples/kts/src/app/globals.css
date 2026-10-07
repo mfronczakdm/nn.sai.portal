@@ -258,6 +258,43 @@ html[data-theme='cooley'] .hover\:bg-primary-hover:hover {
   color: #ffffff;
 }
 
+/* Kilpatrick — Diagramm → Outfit (geometric sans) for headings and body. Same CSS hooks as cooley. */
+html[data-theme='kts'] {
+  --font-body: var(--font-outfit), 'Outfit', Arial, Helvetica, ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-outfit), 'Outfit', Arial, Helvetica, ui-sans-serif, system-ui, sans-serif;
+  --font-accent: var(--font-outfit), 'Outfit', Arial, Helvetica, ui-sans-serif, system-ui, sans-serif;
+  --font-weight-heading: 300;
+  color: var(--color-foreground);
+  background-color: var(--color-background);
+}
+
+html[data-theme='kts'] body {
+  color: var(--color-foreground);
+  background-color: var(--color-background);
+}
+
+html[data-theme='kts'] .btn.btn-primary {
+  background-color: #F4364C;
+  color: #FFFFFF;
+  border-radius: 30px;
+}
+
+html[data-theme='kts'] .btn.btn-primary:hover {
+  background-color: #CF2E41;
+  color: #FFFFFF;
+}
+
+html[data-theme='kts'] .bg-primary {
+  background-color: #F4364C;
+  color: #FFFFFF;
+}
+
+html[data-theme='kts'] .bg-primary:hover,
+html[data-theme='kts'] .hover\:bg-primary-hover:hover {
+  background-color: #CF2E41;
+  color: #FFFFFF;
+}
+
 /* BUTTONS END */
 
 main {

@@ -5,6 +5,7 @@ import {
   Inter,
   Montserrat,
   Open_Sans,
+  Outfit,
   Roboto_Condensed,
   Source_Sans_3,
   Source_Serif_4,
@@ -64,6 +65,14 @@ const sourceSerif4 = Source_Serif_4({
   display: 'swap',
 });
 
+/** Kilpatrick — Outfit substitutes proprietary Diagramm (geometric sans, light display) */
+const outfit = Outfit({
+  subsets: ['latin', 'latin-ext'],
+  variable: '--font-outfit',
+  weight: ['300', '400', '500', '600', '700'],
+  display: 'swap',
+});
+
 const fontVariables = [
   inter.variable,
   sourceSans3.variable,
@@ -72,6 +81,7 @@ const fontVariables = [
   robotoCondensed.variable,
   montserrat.variable,
   sourceSerif4.variable,
+  outfit.variable,
 ].join(' ');
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

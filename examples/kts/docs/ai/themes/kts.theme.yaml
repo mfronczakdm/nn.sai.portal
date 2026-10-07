@@ -1,0 +1,120 @@
+# Client Brand Theme
+# Generated from https://www.ktslaw.com (Playwright + homepage screenshot).
+# User-supplied Kilpatrick hex values are the source of truth for colors.
+
+client:
+  name: "Kilpatrick"
+  sourceUrl: "https://www.ktslaw.com"
+  extractedAt: "2026-10-07"
+  extractedBy: "sitecore-extract-theme + create-new-theme"
+
+colors:
+  primary: "#F4364C"
+  primaryForeground: "#FFFFFF"
+  secondary: "#F5F5F5"
+  secondaryForeground: "#101820"
+  accent: "#E782A9"
+  accentForeground: "#101820"
+  background: "#FFFFFF"
+  foreground: "#101820"
+  muted: "#F5F5F5"
+  mutedForeground: "#4A4A4A"
+  headerBackground: "#FFFFFF"
+  headerForeground: "#101820"
+  footerBackground: "#F4364C"
+  footerForeground: "#101820"
+  border: "#E0E0E0"
+  ring: "#F4364C"
+  extra:
+    - name: "kilpatrick-red"
+      value: "#F4364C"
+    - name: "kilpatrick-dark"
+      value: "#101820"
+    - name: "kilpatrick-pink"
+      value: "#E782A9"
+    - name: "light-gray"
+      value: "#F5F5F5"
+    - name: "text-gray"
+      value: "#4A4A4A"
+    - name: "primary-hover"
+      value: "#CF2E41"
+    - name: "computed-cta-footer"
+      value: "#BA0C2F"
+
+typography:
+  headingFamily: "Outfit"
+  headingWeight: "300"
+  bodyFamily: "Outfit"
+  bodyWeight: "400"
+  monoFamily: ""
+  googleFontsUrl: ""
+  scale:
+    hero: "211.97px"
+    h1: "211.97px"
+    h2: "54px"
+    h3: "28px"
+    body: "16px"
+    small: "14px"
+  headingTransform: "none"
+  letterSpacing: "normal"
+  lineHeight: "1.15"
+
+spacing:
+  density: "spacious"
+  sectionGap: "4rem"
+  containerMaxWidth: "100%"
+  containerPadding: "1.5rem"
+
+shape:
+  borderRadius: "0px"
+  buttonRadius: "30px"
+  cardRadius: "0px"
+  imageRadius: "0px"
+  shadowStyle: "none"
+  borderStyle: "hairline"
+
+tone:
+  overall: "bold, modern, geometric"
+  colorMode: "light"
+  contrast: "high"
+  imagery: "photography tiles"
+  heroStyle: "centered-overlay"
+  cardStyle: "flat"
+  navStyle: "minimal"
+
+tailwind:
+  colors:
+    brand:
+      primary: "#F4364C"
+      secondary: "#101820"
+      accent: "#E782A9"
+  fontFamily:
+    heading: ["Outfit", "Arial", "sans-serif"]
+    body: ["Outfit", "Arial", "sans-serif"]
+  borderRadius:
+    DEFAULT: "0px"
+    button: "30px"
+    card: "0px"
+
+cssVariables: |
+  :root {
+    --brand-primary: #F4364C;
+    --brand-primary-foreground: #FFFFFF;
+    --brand-secondary: #101820;
+    --brand-accent: #E782A9;
+    --brand-bg: #FFFFFF;
+    --brand-fg: #101820;
+    --brand-heading-font: 'Outfit', Arial, sans-serif;
+    --brand-body-font: 'Outfit', Arial, sans-serif;
+  }
+
+extraction:
+  confidence: "high"
+  method: "playwright-full"
+  notes:
+    - "User-supplied palette is the source of truth: red #F4364C, dark #101820, pink #E782A9, white #FFFFFF, light-gray #F5F5F5, text-gray #4A4A4A."
+    - "Playwright computed body ink rgb(16, 24, 32) = #101820 and hero/link rgb(244, 54, 76) = #F4364C, matching the supplied tokens."
+    - "Computed primary-button/footer fill is rgb(186, 12, 47) = #BA0C2F; kept as extra computed-cta-footer, not primary."
+    - "Headings and body use proprietary Diagramm; substituted Outfit (geometric sans, light display)."
+    - "Primary CTAs use pill radius 30px from computed button styles."
+    - "Hero is a solid #F4364C field with white display type; photography sits in later homepage bands."
