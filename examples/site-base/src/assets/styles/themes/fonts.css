@@ -326,3 +326,37 @@ html[data-theme='lcmc'] .btn.btn-secondary:hover {
   background-color: var(--color-muted);
   color: var(--color-primary);
 }
+
+/* mcw.edu: Uni Neue display → Nunito Sans; Open Sans body; pill CTAs. */
+html[data-theme='mcw'] {
+  --font-body: var(--font-open-sans), 'Open Sans', Arial, Helvetica, ui-sans-serif, system-ui,
+    sans-serif;
+  --font-heading: var(--font-nunito-sans), 'Nunito Sans', 'Open Sans', ui-sans-serif, system-ui,
+    sans-serif;
+  --font-accent: var(--font-open-sans), 'Open Sans', Arial, Helvetica, ui-sans-serif, system-ui,
+    sans-serif;
+  --font-weight-heading: 700;
+}
+
+html[data-theme='mcw'] .btn.btn-primary {
+  border-radius: 9999px;
+  background-color: var(--color-primary);
+  color: var(--color-primary-foreground);
+}
+
+html[data-theme='mcw'] .btn.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  color: var(--color-primary-foreground);
+}
+
+html[data-theme='mcw'] .btn.btn-secondary {
+  border-radius: 9999px;
+  background-color: #ffffff;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+
+html[data-theme='mcw'] .btn.btn-secondary:hover {
+  background-color: var(--color-muted);
+  color: var(--color-primary);
+}

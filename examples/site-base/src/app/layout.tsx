@@ -7,6 +7,7 @@ import {
   Barlow_Condensed,
   Inter,
   Montserrat,
+  Nunito_Sans,
   Open_Sans,
   Roboto,
   Roboto_Condensed,
@@ -75,6 +76,14 @@ const zillaSlab = Zilla_Slab({
   display: 'swap',
 });
 
+/** Medical College of Wisconsin — Nunito Sans substitutes proprietary Uni Neue headings */
+const nunitoSans = Nunito_Sans({
+  subsets: ['latin', 'latin-ext'],
+  variable: '--font-nunito-sans',
+  weight: ['400', '600', '700'],
+  display: 'swap',
+});
+
 const fontVariables = [
   inter.variable,
   sourceSans3.variable,
@@ -84,6 +93,7 @@ const fontVariables = [
   roboto.variable,
   montserrat.variable,
   zillaSlab.variable,
+  nunitoSans.variable,
 ].join(' ');
 
 /**

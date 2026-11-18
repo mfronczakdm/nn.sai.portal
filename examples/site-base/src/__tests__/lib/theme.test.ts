@@ -29,6 +29,7 @@ describe('resolveTheme', () => {
     expect(resolveTheme({ site: 'amesburytruth' })).toBe('amesburytruth');
     expect(resolveTheme({ site: 'era' })).toBe('era');
     expect(resolveTheme({ site: 'lcmc' })).toBe('lcmc');
+    expect(resolveTheme({ site: 'mcw' })).toBe('mcw');
     expect(resolveTheme({ site: 'dfs' })).toBe('dfsupply');
   });
 
@@ -67,8 +68,10 @@ describe('theme registry', () => {
     expect(APP_THEMES).toContain('amesburytruth');
     expect(APP_THEMES).toContain('era');
     expect(APP_THEMES).toContain('lcmc');
+    expect(APP_THEMES).toContain('mcw');
     expect(isAppTheme('rockland')).toBe(true);
     expect(isAppTheme('lcmc')).toBe(true);
+    expect(isAppTheme('mcw')).toBe(true);
     expect(isAppTheme('quanex')).toBe(true);
     expect(isAppTheme('amesburytruth')).toBe(true);
     expect(isAppTheme('era')).toBe(true);

@@ -1,0 +1,76 @@
+/**
+ * Theme: mcw
+ * Skin key / data-theme: mcw
+ * Source: https://www.mcw.edu/ (screenshot primary + Playwright extraction)
+ * Activate via Sitecore Site definition Skin field (mirrored in src/lib/theme/site-skins.ts).
+ *
+ * MCW green #007066 (logo, headings, footer, chevrons, primary CTAs).
+ * Navy #003B6F (utility header bar).
+ * Link / event blue #065590.
+ * Mint events surface #E6F4EA.
+ */
+
+[data-theme='mcw'] {
+  --background-image-gradient: linear-gradient(180deg, #065590 0%, #007066 100%);
+  --background-image-gradient-secondary: linear-gradient(90deg, #003b6f 0%, #007066 50%, #065590 100%);
+
+  --color-background: #ffffff;
+  --color-foreground: #222222;
+  --color-card: #ffffff;
+  --color-card-foreground: #222222;
+  --color-popover: #ffffff;
+  --color-popover-foreground: #222222;
+
+  --color-primary: #007066;
+  --color-primary-foreground: #ffffff;
+  --color-primary-hover: #005a53;
+
+  --color-secondary: #e6f4ea;
+  --color-secondary-foreground: #007066;
+  --color-secondary-hover: #d4eadb;
+
+  --color-muted: #f4f7f6;
+  --color-muted-foreground: #5c6563;
+
+  --color-accent: #065590;
+  --color-accent-foreground: #ffffff;
+
+  --color-destructive: #dc2626;
+  --color-destructive-hover: #b91c1c;
+  --color-destructive-foreground: #ffffff;
+
+  --color-border: #d5ddd9;
+  --color-input: #d5ddd9;
+  --color-ring: #007066;
+
+  --color-tertiary: #f4f7f6;
+  --color-tertiary-foreground: #222222;
+  --color-tertiary-hover: #e6ece9;
+
+  --color-dark: #050505;
+  --color-dark-foreground: #ffffff;
+  --color-dark-hover: #111111;
+
+  --color-light: #fafcfb;
+  --color-light-hover: #f4f7f6;
+  --color-light-foreground: #222222;
+
+  --color-overlay: rgb(0 112 102 / 0.45);
+
+  --color-header-background: #003b6f;
+  --color-header-foreground: #ffffff;
+  --color-footer-background: #007066;
+  --color-footer-foreground: #ffffff;
+  --color-footer-bottom: #005a53;
+  --color-accent-hover: #054877;
+  --color-cta-alt: #6b3fa0;
+}
+
+[data-theme='mcw'] .bg-primary {
+  color: var(--color-primary-foreground);
+}
+
+[data-theme='mcw'] .bg-accent,
+[data-theme='mcw'] .bg-dark {
+  color: var(--color-primary-foreground);
+}
