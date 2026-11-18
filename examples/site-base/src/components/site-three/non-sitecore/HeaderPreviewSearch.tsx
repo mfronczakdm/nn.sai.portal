@@ -8,8 +8,8 @@ import { cn } from '@/lib/utils';
 
 type HeaderPreviewSearchProps = {
   searchLink?: LinkField;
-  /** `bar` = inverted VersionN slot. `contained` = muted rounded field (Version3). */
-  appearance?: 'trigger' | 'bar' | 'contained';
+  /** `bar` = inverted VersionN slot. `contained` = muted rounded field (Version3). `pill` = white field on a dark bar (Version4). */
+  appearance?: 'trigger' | 'bar' | 'contained' | 'pill';
   className?: string;
 };
 
@@ -27,20 +27,29 @@ export function HeaderPreviewSearch({
 
   if (!configured) {
     return (
-      <SearchBox searchLink={searchLink as LinkField} appearance={appearance} className={className} />
+      <SearchBox
+        searchLink={searchLink as LinkField}
+        appearance={appearance}
+        className={className}
+      />
     );
   }
 
   return (
     <div
       className={
-        appearance === 'contained'
+        appearance === 'pill'
           ? cn(
-              'flex min-w-[10rem] items-center rounded-full bg-muted px-4 py-2.5 xl:min-w-[16rem]',
+              'flex min-w-[12rem] items-center rounded-full bg-background px-4 py-2 xl:min-w-[16rem]',
               className
             )
-          : (className ??
-            'flex min-w-[14rem] flex-1 items-center px-2 py-2 lg:min-w-[20rem] lg:max-w-xl')
+          : appearance === 'contained'
+            ? cn(
+                'flex min-w-[10rem] items-center rounded-full bg-muted px-4 py-2.5 xl:min-w-[16rem]',
+                className
+              )
+            : (className ??
+              'flex min-w-[14rem] flex-1 items-center px-2 py-2 lg:min-w-[20rem] lg:max-w-xl')
       }
     >
       <PreviewSearch rfkId={PREVIEW_WIDGET_ID} resultsPath={resultsPath} />

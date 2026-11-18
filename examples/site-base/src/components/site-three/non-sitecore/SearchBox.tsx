@@ -36,7 +36,7 @@ export const SearchBox = ({
   className,
 }: {
   searchLink: LinkField;
-  appearance?: 'trigger' | 'bar' | 'contained';
+  appearance?: 'trigger' | 'bar' | 'contained' | 'pill';
   className?: string;
 }) => {
   const t = useTranslations();
@@ -76,6 +76,7 @@ export const SearchBox = ({
 
   const isBar = appearance === 'bar';
   const isContained = appearance === 'contained';
+  const isPill = appearance === 'pill';
   const barTriggerClassName = cn(
     'w-full bg-transparent px-1 py-3 text-left text-sm font-normal uppercase tracking-[0.28em]',
     'text-background/50 hover:text-background/80',
@@ -91,12 +92,26 @@ export const SearchBox = ({
       <span>{searchLabel}</span>
     </>
   );
-  const resolvedTriggerClassName = isContained
-    ? containedTriggerClassName
-    : isBar
-      ? barTriggerClassName
-      : cn(triggerClassName, className);
-  const resolvedTriggerContent = isContained ? (
+  const pillTriggerClassName = cn(
+    'flex w-full min-w-[12rem] items-center justify-between gap-3 rounded-full bg-background px-4 py-2 text-left text-sm font-normal text-muted-foreground shadow-sm xl:min-w-[16rem]',
+    className
+  );
+  const pillTriggerContent = (
+    <>
+      <span>{searchLabel}</span>
+      <Search className="h-4 w-4 shrink-0 text-primary" strokeWidth={2.5} aria-hidden />
+    </>
+  );
+  const resolvedTriggerClassName = isPill
+    ? pillTriggerClassName
+    : isContained
+      ? containedTriggerClassName
+      : isBar
+        ? barTriggerClassName
+        : cn(triggerClassName, className);
+  const resolvedTriggerContent = isPill ? (
+    pillTriggerContent
+  ) : isContained ? (
     containedTriggerContent
   ) : isBar ? (
     <span>{`${searchLabel}...`}</span>
@@ -107,7 +122,7 @@ export const SearchBox = ({
   return (
     // Do not add `relative` here — the panel uses lg:absolute and must size to the
     // sticky header (full width), not this narrow trigger wrapper.
-    <div ref={ref} className={isBar || isContained ? 'w-full min-w-0' : undefined}>
+    <div ref={ref} className={isBar || isContained || isPill ? 'w-full min-w-0' : undefined}>
       {hasValidSearchLink ? (
         <ContentSdkLink
           field={searchLink}

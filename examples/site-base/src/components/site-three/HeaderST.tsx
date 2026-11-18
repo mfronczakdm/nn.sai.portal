@@ -330,7 +330,10 @@ const version2LocationMenus: readonly Version2LocationMenu[] = [
     label: 'LAS VEGAS',
     items: [
       { text: 'Las Vegas Market', href: 'https://www.lasvegasmarket.com/' },
-      { text: 'Las Vegas Apparel', href: 'https://www.atlanta-apparel.com/Markets/Las-Vegas-Apparel' },
+      {
+        text: 'Las Vegas Apparel',
+        href: 'https://www.atlanta-apparel.com/Markets/Las-Vegas-Apparel',
+      },
     ],
   },
   {
@@ -488,8 +491,7 @@ const Version2LanguageDropdown = ({
   const rootRef = useRef<HTMLLIElement>(null);
   const menuId = useId();
   const { activeLocale, buildLanguageSwitchHref } = useLanguageSwitcher();
-  const current =
-    languages.find((language) => language.locale === activeLocale) ?? languages[0];
+  const current = languages.find((language) => language.locale === activeLocale) ?? languages[0];
 
   useEffect(() => {
     if (!open) {
@@ -835,7 +837,9 @@ const HeaderSTVersion2View = (props: HeaderSTViewProps) => {
                   )}
                 </li>
               ) : null}
-              {showLanguageSelector ? <Version2LanguageDropdown languages={languageOptions} /> : null}
+              {showLanguageSelector ? (
+                <Version2LanguageDropdown languages={languageOptions} />
+              ) : null}
             </ul>
           </div>
         </div>
@@ -1204,4 +1208,229 @@ const HeaderSTVersion3View = (props: HeaderSTViewProps) => {
 
 export const Version3 = (props: HeaderSTProps) => (
   <HeaderSTVersion3View {...props} requireAuthForNav={resolveRequireAuthForNav(props, false)} />
+);
+
+const version4UtilityLinkClass =
+  'block whitespace-nowrap px-3 py-1 text-sm font-medium text-[color:var(--color-header-foreground,var(--color-primary-foreground))] hover:underline';
+
+const version4PrimaryLinkClass =
+  'block whitespace-nowrap px-3 py-2 text-sm font-semibold text-primary hover:underline';
+
+/* MCW's utility and primary labels are not fields on the shared HeaderST datasource. */
+const version4UtilityLinks = [
+  { text: 'Departments & Centers', href: 'https://www.mcw.edu/departments' },
+  { text: 'Stories', href: 'https://www.mcw.edu/news' },
+  { text: 'Giving', href: 'https://www.mcw.edu/giving' },
+  { text: 'Careers', href: 'https://www.mcw.edu/careers' },
+] as const;
+
+const version4PrimaryLinks = [
+  { text: 'Patient Care', href: '/for-patients' },
+  { text: 'Education', href: 'https://www.mcw.edu/education' },
+  { text: 'Research', href: 'https://www.mcw.edu/research' },
+  { text: 'Community', href: 'https://www.mcw.edu/community' },
+  { text: 'About MCW', href: '/about-us' },
+] as const;
+
+const version4FindADoctor = { text: 'Find A Doctor', href: '/find-a-provider' } as const;
+
+const version4UtilityLabels = new Set([
+  ...version4UtilityLinks.map((link) => link.text.toLowerCase()),
+  ...version4PrimaryLinks.map((link) => link.text.toLowerCase()),
+  version4FindADoctor.text.toLowerCase(),
+]);
+
+const version4FindADoctorClass =
+  'inline-flex shrink-0 items-center rounded-full bg-[var(--color-cta-alt,var(--color-accent))] px-5 py-2.5 text-sm font-semibold text-primary-foreground hover:opacity-90';
+
+/* Version4 — green accent stripe; navy utility row; white primary row with logo and pill CTA. */
+const HeaderSTVersion4View = (props: HeaderSTViewProps) => {
+  const { fields, params, requireAuthForNav } = props;
+  const showNavigation = useHeaderSTNavigationVisibility(requireAuthForNav);
+  const componentMap = getComponentMap();
+  const hideCart = isTruthyParam(params?.HideCart);
+  const supportLinkText = String(fields?.SupportLink?.value?.text ?? '').trim();
+  const showSupportLink =
+    supportLinkText.length > 0 && !version4UtilityLabels.has(supportLinkText.toLowerCase());
+
+  const searchControl = params.showSearchBox ? (
+    <HeaderPreviewSearch searchLink={fields?.SearchLink} appearance="pill" className="min-w-0" />
+  ) : (
+    <ContentSdkLink
+      field={fields?.SearchLink}
+      prefetch={false}
+      className="flex items-center gap-2 px-2 py-2 text-sm text-[color:var(--color-header-foreground,var(--color-primary-foreground))] hover:underline"
+    >
+      <Search className="h-4 w-4 shrink-0" strokeWidth={2} aria-hidden />
+      <span>{fields?.SearchLink?.value?.text || 'Search'}</span>
+    </ContentSdkLink>
+  );
+
+  const renderPrimaryLinks = () =>
+    version4PrimaryLinks.map((link) => (
+      <li key={link.text}>
+        <Version3UtilityLink
+          text={link.text}
+          href={link.href}
+          className={version4PrimaryLinkClass}
+        />
+      </li>
+    ));
+
+  return (
+    <section
+      className={cn(
+        'relative sticky top-0 z-30 w-full min-w-0 bg-background shadow-sm',
+        params?.styles
+      )}
+      data-class-change
+      data-header-st-layout="version4"
+    >
+      <div className="flex w-full min-w-0 flex-col" role="navigation" aria-label="Site header">
+        <div data-header-st-row="accent" className="h-2 w-full bg-primary" aria-hidden />
+
+        <div
+          data-header-st-row="utility"
+          className="w-full min-w-0 bg-[var(--color-header-background,var(--color-foreground))] text-[color:var(--color-header-foreground,var(--color-primary-foreground))]"
+        >
+          <div className="mx-auto flex w-full max-w-[100rem] items-center justify-end px-4 py-2.5 sm:px-6 lg:px-8">
+            <ul className="m-0 flex list-none flex-row items-center justify-end gap-3 p-0 lg:gap-6">
+              <li className="hidden lg:block">
+                <ul className="m-0 flex list-none flex-row flex-wrap items-center justify-end gap-x-1 p-0">
+                  {version4UtilityLinks.map((link) => (
+                    <li key={link.text}>
+                      <Version3UtilityLink
+                        text={link.text}
+                        href={link.href}
+                        className={version4UtilityLinkClass}
+                      />
+                    </li>
+                  ))}
+                </ul>
+              </li>
+              <li className="w-[min(100%,18rem)] shrink-0">{searchControl}</li>
+              {!hideCart ? (
+                <li>
+                  {params.showMiniCart ? (
+                    <MiniCart cartLink={fields?.CartLink} />
+                  ) : (
+                    <ContentSdkLink
+                      field={fields?.CartLink}
+                      prefetch={false}
+                      className="block p-2 text-[color:var(--color-header-foreground,var(--color-primary-foreground))] hover:opacity-80"
+                    >
+                      <FontAwesomeIcon icon={faShoppingCart} width={20} height={20} />
+                    </ContentSdkLink>
+                  )}
+                </li>
+              ) : null}
+              <HeaderSTAuthControls
+                loginLink={fields?.LoginLink}
+                postLogoutRedirect={params?.postLogoutRedirect}
+                linkAppearance="text"
+                linkClassName="p-0 text-sm font-medium text-[color:var(--color-header-foreground,var(--color-primary-foreground))] hover:underline hover:opacity-100"
+              />
+              {showNavigation ? (
+                <MobileMenuWrapper panelClassName="top-[7.5rem] h-[calc(100vh-7.5rem)]">
+                  <div className="flex h-full w-full flex-col">
+                    <ul className="flex w-full flex-col bg-background text-center text-foreground">
+                      <AppPlaceholder
+                        name={`header-navigation-${params?.DynamicPlaceholderId}`}
+                        rendering={props.rendering}
+                        page={props.page}
+                        componentMap={componentMap}
+                      />
+                      {renderPrimaryLinks()}
+                    </ul>
+                    <div className="w-full">
+                      <hr className="w-full border-border" />
+                      <ul className="text-center">
+                        {version4UtilityLinks.map((link) => (
+                          <li key={link.text}>
+                            <Version3UtilityLink
+                              text={link.text}
+                              href={link.href}
+                              className={version3NavLinkClass}
+                            />
+                          </li>
+                        ))}
+                        {showSupportLink ? (
+                          <li>
+                            <ContentSdkLink
+                              field={fields?.SupportLink}
+                              prefetch={false}
+                              className={version3NavLinkClass}
+                            />
+                          </li>
+                        ) : null}
+                        <li className="px-4 py-3">
+                          <Link
+                            href={version4FindADoctor.href}
+                            prefetch={false}
+                            className={version4FindADoctorClass}
+                          >
+                            {version4FindADoctor.text}
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </MobileMenuWrapper>
+              ) : null}
+            </ul>
+          </div>
+        </div>
+
+        <div
+          data-header-st-row="primary"
+          className="w-full min-w-0 border-b border-border/40 bg-background"
+        >
+          <div className="mx-auto flex w-full max-w-[100rem] items-center gap-4 px-4 py-3 sm:px-6 lg:px-8">
+            <Link href="/" className="relative z-10 flex shrink-0 items-center" prefetch={false}>
+              <ContentSdkImage
+                field={props.fields?.Logo}
+                className="h-12 w-auto max-w-[min(100%,200px)] object-contain object-left lg:h-14"
+              />
+            </Link>
+            {showNavigation ? (
+              <ul
+                data-header-st-nav="primary"
+                className={cn(
+                  'm-0 hidden min-w-0 flex-1 list-none flex-row flex-nowrap items-center justify-center gap-1 overflow-visible p-0 lg:flex',
+                  '[&>li]:w-auto [&>li]:max-w-none [&>li]:shrink-0 [&>li]:grow-0 [&>li]:basis-auto'
+                )}
+              >
+                {renderPrimaryLinks()}
+              </ul>
+            ) : (
+              <div className="flex-1" />
+            )}
+            <Link
+              href={version4FindADoctor.href}
+              prefetch={false}
+              className={cn(version4FindADoctorClass, 'hidden lg:inline-flex')}
+            >
+              {version4FindADoctor.text}
+            </Link>
+          </div>
+          {showNavigation ? (
+            <div className="hidden [.partial-editing-mode_&]:block">
+              <ul className="mx-auto flex w-full max-w-[100rem] list-none flex-row flex-wrap items-center gap-1 px-4 py-2 sm:px-6 lg:px-8">
+                <AppPlaceholder
+                  name={`header-navigation-${params?.DynamicPlaceholderId}`}
+                  rendering={props.rendering}
+                  page={props.page}
+                  componentMap={componentMap}
+                />
+              </ul>
+            </div>
+          ) : null}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export const Version4 = (props: HeaderSTProps) => (
+  <HeaderSTVersion4View {...props} requireAuthForNav={resolveRequireAuthForNav(props, false)} />
 );

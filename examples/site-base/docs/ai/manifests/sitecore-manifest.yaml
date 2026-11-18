@@ -1,5 +1,5 @@
 ﻿generatedAt: "2026-03-20T09:00:00Z"
-lastUpdatedAt: "2026-09-10T19:50:00Z"
+lastUpdatedAt: "2026-11-18T12:10:00Z"
 lastUpdatedBy: "cursor-agent"
 
 project:
@@ -9080,7 +9080,7 @@ ia:
     category: "Global Elements"
     status: "complete"
     createdAt: "2026-08-19T18:30:00Z"
-    updatedAt: "2026-09-09T19:30:00Z"
+    updatedAt: "2026-11-18T20:00:00Z"
 
     react:
       filePath: "src/components/site-three/HeaderST.tsx"
@@ -9091,6 +9091,7 @@ ia:
         - "Version1"
         - "Version2"
         - "Version3"
+        - "Version4"
 
     sitecoreEnvironment:
       siteName: "dfs"
@@ -9185,6 +9186,17 @@ ia:
         - { name: "Version2", itemId: "{7289C108-E76F-439A-8E0C-96CBF1DBA1B0}" }
         - { name: "Version3", itemId: "{75F2C76E-BD06-4664-B0ED-0C8782B39ECA}" }
 
+    headlessVariantsMcw:
+      containerPath: "/sitecore/content/lcmc/mcw/Presentation/Headless Variants/HeaderST"
+      containerId: "{AA69291B-EB38-414A-A48E-7F0DA73086A3}"
+      variants:
+        - { name: "Default", itemId: "{7220178F-E379-49DE-8A63-95D9BB0A1AE2}" }
+        - { name: "LoginRequired", itemId: "{9F070F87-9273-4729-861A-411B5E89898D}" }
+        - { name: "Version1", itemId: "{E17014B3-1EEC-4117-AF8D-B992F370A50D}" }
+        - { name: "Version2", itemId: "{D170D861-DB3B-47F0-83EC-E44F8917A232}" }
+        - { name: "Version3", itemId: "{567311AE-CD69-4B49-9293-A42AFD3807F9}" }
+        - { name: "Version4", itemId: "{EE122EFF-E43E-4A5A-81E9-DC52E1102D2D}" }
+
     datasourceExample:
       name: "Header"
       path: "/sitecore/content/dfs/dfs/Presentation/Partial Designs/Global/Header/Data/Header"
@@ -9198,7 +9210,7 @@ ia:
       note: "2026-09-03: LoginLink set to Sign In → https://www.atlanta-apparel.com/login. SupportLink remains Register → Visit/Registration {EBD89713-040D-4B8F-810D-23E44B93F2A6}. City menus are Version2-hardcoded, not datasource fields."
 
     verification:
-      checkedAt: "2026-09-09T19:30:00Z"
+      checkedAt: "2026-11-18T20:00:00Z"
       passed:
         - "LoginLink field created on HeaderST datasource template"
         - "Headless Variants container + Default + LoginRequired verified via MCP"
@@ -9223,8 +9235,12 @@ ia:
         - "2026-09-04: Version2 Atlanta-only language dropdown (en / ja-JP / es-ES) — no new Sitecore variants or RP fields"
         - "2026-09-09: Version3 EN/ES flag switcher (US → /en, Spain → /es-CO) left of search; Default unchanged; no new Sitecore items"
         - "2026-09-09: LCMC Version3 Spanish locale is es-CO (Colombia); es-ES remains Atlanta Apparel Version2"
+        - "2026-11-18: MCW HeaderST Version4 variant definition {EE122EFF-E43E-4A5A-81E9-DC52E1102D2D} verified via get_content_item_by_path"
       failed: []
       pendingManual:
+        - "Select Version4 on the mcw Header partial design HeaderST rendering in Pages"
+        - "On MCW Version4: check Show Search Box; check Hide Cart; leave ReverseTheme off"
+        - "Publish the mcw Header partial"
         - "Select Version3 on lcmc Header partial design HeaderST rendering in Pages"
         - "On Version3: check Show Search Box; check Hide Cart; leave ReverseTheme off"
         - "Publish the lcmc Header partial"
@@ -9242,6 +9258,7 @@ ia:
         - "Optional: add postLogoutRedirect to HeaderST rendering parameters template"
 
     notes:
+      - "2026-11-18: Version4 MCW header chrome. Green bg-primary stripe, navy utility row (theme --color-header-background) with white labels Departments & Centers / Stories / Giving / Careers and a white search pill, white second row with logo, Patient Care / Education / Research / Community / About MCW, and a Find A Doctor pill (--color-cta-alt). Labels are hardcoded in HeaderSTVersion4View because the shared datasource has one SupportLink. Variant Definition created only under /sitecore/content/lcmc/mcw/Presentation/Headless Variants/HeaderST/Version4 {EE122EFF-E43E-4A5A-81E9-DC52E1102D2D}. No new rendering params or datasource fields. Default/LoginRequired/Version1/Version2/Version3 layouts unchanged. Pages must select Version4; MCP cannot set FieldNames."
       - "2026-09-09: Version3 Spanish flag hrefs use Sitecore Colombia language es-CO (/es-CO/{path}), not es-ES. Added COLOMBIAN_SPANISH_LOCALE to src/lib/locale.ts SUPPORTED_LOCALES so next-intl / LocaleProxy / app-locale cookie treat /es-CO like other non-default locales. Atlanta Apparel Version2 keeps SPANISH_LOCALE es-ES. Default/LoginRequired/Version1/Version2 UI unchanged; no new Sitecore items."
       - "2026-09-09: Version3 EN/ES flag language switcher for the LCMC demo. US flag → English, Spain flag → Español. Placement: right cluster immediately left of search (does not wrap primary nav). Reuses existing useLanguageSwitcher + buildLanguageSwitchPathname; Sitecore Spanish language name is es-CO (Colombia), so hrefs are /en/… and /es-CO/…. No new Sitecore items, variants, or rendering params. Default/LoginRequired/Version1/Version2 unchanged."
       - "2026-09-04: Atlanta Apparel HeaderST Version2 language dropdown (top-right of the dark utility row). Confirmed on Header partial {506BF874-2F4C-4415-8A7B-A17014A1E65C} FieldNames={F0F3B5E5-DA94-4B53-A6BD-143F3F9B5538} (Version2). Dropdown is gated to atlanta-apparel via page.siteName / context.site.name / ?site= so americasmart Version2 is unchanged. Languages: English (en), Japanese (ja-JP), Spanish (es-ES) — Sitecore tenant language names; prefers layout context.languages when that list includes en+ja+es, else this fallback. Href pattern matches Version1: /{locale}{path}?{query} via buildLanguageSwitchPathname. Added SPANISH_LOCALE to src/lib/locale.ts SUPPORTED_LOCALES so next-intl / LocaleProxy / app-locale cookie treat /es-ES the same as /ja-JP. No new Sitecore items, variants, or rendering params. Default/LoginRequired/Version1/Version3 unchanged."
@@ -12651,3 +12668,69 @@ externalImageOptimizerAudit:
     - "Redeploy the Default editing host so Sitecore Pages picks up the loader fix - the deployed host still runs an older build"
     - "Optional cleanup: next.config.ts images.remotePatterns is dead config while loader is custom; consider removing or documenting it"
     - "Optional: fix the pre-existing ArticleContent kmpage test, which still asserts the ImageWrapper branch for sitecoresandbox URLs"
+
+mcwHomeLcmcToMcwCopy:
+  checkedAt: "2026-11-18T11:00:00Z"
+  siteName: "mcw"
+  contentRoot: "/sitecore/content/lcmc/mcw/Home"
+  status: "complete"
+  notes:
+    - "2026-11-18: Replaced LCMC/LCMC Health field copy under Home with Medical College of Wisconsin / MCW. Item names and image src URLs were left as-is except West Jefferson item 88244bb5 was found renamed to Froedtert and MCW Drexel Town Square Health Center (unexpected; item name not reverted via MCP)."
+    - "Approved items received a new Draft version; publish required."
+  pendingManual:
+    - "Publish mcw Home tree (and Home-used Data datasources) so Edge/preview shows MCW copy"
+    - "Confirm whether West Jefferson Medical Center item should keep the Froedtert display name or be renamed back"
+
+mcwDataLocationsCleanup:
+  checkedAt: "2026-11-18T11:30:00Z"
+  siteName: "mcw"
+  folderPath: "/sitecore/content/lcmc/mcw/Data/Locations"
+  folderItemId: "{1DA85524-C329-4D68-9377-429ED4404A90}"
+  status: "complete"
+  notes:
+    - "Folder now contains only 16 Froedtert & MCW Community Physicians clinic data items (LCMC Hospital Location template). 8 LCMC hospitals and 8 LCMC urgent-care data items were deleted to recycle bin."
+    - "Each clinic has WI address, phone 414-777-7700, LocationType Clinic, and LandingPage pointing at the matching Home/Our Locations page."
+    - "OfferedServices and LocationPhysicians left empty."
+  pendingManual:
+    - "Publish /sitecore/content/lcmc/mcw/Data/Locations so Edge/preview lists only MCW clinics"
+    - "Optionally map OfferedServices and LocationPhysicians on the new clinic items"
+
+mcwPhysicianServingLocations:
+  checkedAt: "2026-11-18T11:40:00Z"
+  siteName: "mcw"
+  folderPath: "/sitecore/content/lcmc/mcw/Data/Physicians"
+  folderItemId: "{6CD3FB43-02D7-4194-8A37-8AC2CD147A28}"
+  status: "complete"
+  notes:
+    - "All 26 physician data items now have ServingLocations Treelist values pointing only at /sitecore/content/lcmc/mcw/Data/Locations clinic items. Deleted LCMC hospital/UC GUIDs were replaced."
+    - "Most physicians have two clinics; Allemand (Kewaskum), Tran (Forest Home), and Morales (Lincoln) have one. All 16 MCW clinics are referenced by at least one physician."
+    - "PhysicianBio copy still describes LCMC sites; ServingLocations only was requested."
+  pendingManual:
+    - "Publish /sitecore/content/lcmc/mcw/Data/Physicians so Find a Provider filters resolve the new clinic names"
+    - "Optionally rewrite PhysicianBio text to MCW clinics and fill LocationPhysicians reverse treelists"
+
+mcwHomeDataMcwCopy:
+  checkedAt: "2026-11-18T12:00:00Z"
+  siteName: "mcw"
+  folderPath: "/sitecore/content/lcmc/mcw/Home/Data"
+  folderItemId: "{7FD979F6-6E6F-4999-9A66-3456EB539E6}"
+  status: "complete"
+  notes:
+    - "Rewrote all local Home/Data items away from Sync leftover copy and New Orleans/LCMC location names. Clinic links point at Home/Our Locations pages (Calhoun, Sargeant, Mequon, Westbrook, Shorewood)."
+    - "Homepage still uses shared /sitecore/content/lcmc/mcw/Data datasources for HeroQuickLinks, IconLinkBar, and SplitFeature. Link Columns Bands shared datasources were rewritten 2026-11-18."
+  pendingManual:
+    - "Publish /sitecore/content/lcmc/mcw/Home/Data"
+    - "Optionally retarget Home layout from /mcw/Data LCMC hospital datasources to these local Home/Data items, or rewrite the shared datasources"
+
+mcwLinkColumnsBands:
+  checkedAt: "2026-11-18T12:10:00Z"
+  siteName: "mcw"
+  folderPath: "/sitecore/content/lcmc/mcw/Data/Link Columns Bands"
+  folderItemId: "{7483310E-5B99-4DDB-B1B8-7BC2D9B0EF8B}"
+  status: "complete"
+  notes:
+    - "LCMC Hospital Network (Home datasource) children now Calhoun, Sargeant, Mequon, Westbrook clinic pages. Parent title Community Physicians clinics; CTA View all locations."
+    - "West Jefferson Hospital children now Pediatrics, Women's Health, Heart and Vascular, ENT. Parent title Academic medicine and neighborhood care; CTA Explore our services."
+    - "Item names left unchanged (Childrens Hospital, East Jefferson, etc.). Images unchanged."
+  pendingManual:
+    - "Publish /sitecore/content/lcmc/mcw/Data/Link Columns Bands so Home shows MCW clinic columns"

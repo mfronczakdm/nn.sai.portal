@@ -7,6 +7,7 @@ import {
   Version1 as HeaderSTVersion1,
   Version2 as HeaderSTVersion2,
   Version3 as HeaderSTVersion3,
+  Version4 as HeaderSTVersion4,
 } from '../../components/site-three/HeaderST';
 import {
   defaultHeaderSTProps,
@@ -23,6 +24,7 @@ import {
   headerSTPropsVersion1,
   headerSTPropsVersion2,
   headerSTPropsVersion3,
+  headerSTPropsVersion4,
 } from './HeaderST.mockProps';
 
 // Mock FontAwesome icon
@@ -218,7 +220,12 @@ describe('HeaderST Component', () => {
       render(
         <HeaderSTDefault
           {...defaultHeaderSTProps}
-          page={{ ...defaultHeaderSTProps.page, siteName: 'atlanta-apparel' } as typeof defaultHeaderSTProps.page}
+          page={
+            {
+              ...defaultHeaderSTProps.page,
+              siteName: 'atlanta-apparel',
+            } as typeof defaultHeaderSTProps.page
+          }
         />
       );
 
@@ -940,7 +947,10 @@ describe('HeaderST Component', () => {
         'href',
         'https://www.atlantamarket.com/'
       );
-      expect(screen.getByRole('menuitem', { name: 'Atlanta Apparel' })).toHaveAttribute('href', '/');
+      expect(screen.getByRole('menuitem', { name: 'Atlanta Apparel' })).toHaveAttribute(
+        'href',
+        '/'
+      );
       expect(screen.getByRole('menuitem', { name: 'Casual Market Atlanta' })).toHaveAttribute(
         'href',
         'https://www.casualmarketatlanta.com/'
@@ -954,7 +964,9 @@ describe('HeaderST Component', () => {
     it('opens a city menu on hover', () => {
       render(<HeaderSTVersion2 {...headerSTPropsVersion2} />);
 
-      fireEvent.mouseEnter(screen.getByRole('button', { name: 'LAS VEGAS' }).closest('li') as HTMLElement);
+      fireEvent.mouseEnter(
+        screen.getByRole('button', { name: 'LAS VEGAS' }).closest('li') as HTMLElement
+      );
 
       expect(screen.getByRole('menu', { name: 'LAS VEGAS' })).toBeInTheDocument();
       expect(screen.getByRole('menuitem', { name: 'Las Vegas Market' })).toHaveAttribute(
@@ -979,7 +991,12 @@ describe('HeaderST Component', () => {
       render(
         <HeaderSTVersion2
           {...headerSTPropsVersion2}
-          page={{ ...headerSTPropsVersion2.page, siteName: 'americasmart' } as typeof headerSTPropsVersion2.page}
+          page={
+            {
+              ...headerSTPropsVersion2.page,
+              siteName: 'americasmart',
+            } as typeof headerSTPropsVersion2.page
+          }
         />
       );
 
@@ -991,7 +1008,12 @@ describe('HeaderST Component', () => {
       render(
         <HeaderSTVersion2
           {...headerSTPropsVersion2}
-          page={{ ...headerSTPropsVersion2.page, siteName: 'atlanta-apparel' } as typeof headerSTPropsVersion2.page}
+          page={
+            {
+              ...headerSTPropsVersion2.page,
+              siteName: 'atlanta-apparel',
+            } as typeof headerSTPropsVersion2.page
+          }
         />
       );
 
@@ -1008,7 +1030,12 @@ describe('HeaderST Component', () => {
       render(
         <HeaderSTVersion2
           {...headerSTPropsVersion2}
-          page={{ ...headerSTPropsVersion2.page, siteName: 'atlanta-apparel' } as typeof headerSTPropsVersion2.page}
+          page={
+            {
+              ...headerSTPropsVersion2.page,
+              siteName: 'atlanta-apparel',
+            } as typeof headerSTPropsVersion2.page
+          }
         />
       );
 
@@ -1026,7 +1053,12 @@ describe('HeaderST Component', () => {
       render(
         <HeaderSTVersion2
           {...headerSTPropsVersion2}
-          page={{ ...headerSTPropsVersion2.page, siteName: 'atlanta-apparel' } as typeof headerSTPropsVersion2.page}
+          page={
+            {
+              ...headerSTPropsVersion2.page,
+              siteName: 'atlanta-apparel',
+            } as typeof headerSTPropsVersion2.page
+          }
         />
       );
 
@@ -1070,19 +1102,21 @@ describe('HeaderST Component', () => {
       render(
         <HeaderSTVersion2
           {...headerSTPropsVersion2}
-          page={{
-            ...headerSTPropsVersion2.page,
-            siteName: 'atlanta-apparel',
-            layout: {
-              sitecore: {
-                context: {
-                  languages: ['en', 'ja-JP', 'es-ES', 'ko-KR'],
-                  site: { name: 'atlanta-apparel' },
+          page={
+            {
+              ...headerSTPropsVersion2.page,
+              siteName: 'atlanta-apparel',
+              layout: {
+                sitecore: {
+                  context: {
+                    languages: ['en', 'ja-JP', 'es-ES', 'ko-KR'],
+                    site: { name: 'atlanta-apparel' },
+                  },
+                  route: null,
                 },
-                route: null,
               },
-            },
-          } as typeof headerSTPropsVersion2.page}
+            } as typeof headerSTPropsVersion2.page
+          }
         />
       );
 
@@ -1305,6 +1339,125 @@ describe('HeaderST Component', () => {
         'href',
         '/en/our-locations?site=lcmc'
       );
+    });
+  });
+
+  describe('Version4 variant', () => {
+    it('renders without throwing and sets layout version4', () => {
+      expect(() => {
+        render(<HeaderSTVersion4 {...headerSTPropsVersion4} />);
+      }).not.toThrow();
+
+      expect(document.querySelector('[data-header-st-layout="version4"]')).toBeInTheDocument();
+      expect(document.querySelector('[data-header-st-layout="version3"]')).not.toBeInTheDocument();
+      expect(screen.getByTestId('sitecore-image')).toHaveAttribute(
+        'alt',
+        'Medical College of Wisconsin'
+      );
+    });
+
+    it('renders the green accent stripe and navy utility row', () => {
+      render(<HeaderSTVersion4 {...headerSTPropsVersion4} />);
+
+      expect(document.querySelector('[data-header-st-row="accent"]')).toHaveClass('bg-primary');
+      expect(document.querySelector('[data-header-st-row="utility"]')).toHaveClass(
+        'bg-[var(--color-header-background,var(--color-foreground))]'
+      );
+      expect(document.querySelector('[data-header-st-row="primary"]')).toHaveClass('bg-background');
+    });
+
+    it('renders MCW utility labels, primary labels, and Find A Doctor', () => {
+      render(<HeaderSTVersion4 {...headerSTPropsVersion4} />);
+
+      expect(screen.getAllByRole('link', { name: 'Departments & Centers' })[0]).toHaveAttribute(
+        'href',
+        'https://www.mcw.edu/departments'
+      );
+      expect(screen.getAllByRole('link', { name: 'Stories' })[0]).toHaveAttribute(
+        'href',
+        'https://www.mcw.edu/news'
+      );
+      expect(screen.getAllByRole('link', { name: 'Giving' })[0]).toHaveAttribute(
+        'href',
+        'https://www.mcw.edu/giving'
+      );
+      expect(screen.getAllByRole('link', { name: 'Careers' })[0]).toHaveAttribute(
+        'href',
+        'https://www.mcw.edu/careers'
+      );
+      expect(screen.getAllByRole('link', { name: 'Patient Care' })[0]).toHaveAttribute(
+        'href',
+        '/for-patients'
+      );
+      expect(screen.getAllByRole('link', { name: 'About MCW' })[0]).toHaveAttribute(
+        'href',
+        '/about-us'
+      );
+      expect(screen.getAllByRole('link', { name: 'Find A Doctor' })[0]).toHaveAttribute(
+        'href',
+        '/find-a-provider'
+      );
+    });
+
+    it('opens external utility links in a new tab', () => {
+      render(<HeaderSTVersion4 {...headerSTPropsVersion4} />);
+
+      const careers = screen.getAllByRole('link', { name: 'Careers' })[0];
+      expect(careers).toHaveAttribute('target', '_blank');
+      expect(careers).toHaveAttribute('rel', 'noopener noreferrer');
+    });
+
+    it('shows a white search pill when showSearchBox is true', () => {
+      render(<HeaderSTVersion4 {...headerSTPropsVersion4} />);
+
+      const searchBox = screen.getByTestId('search-box');
+      expect(searchBox).toHaveAttribute('data-appearance', 'pill');
+      expect(searchBox).toHaveAttribute('data-search-link', '/search-results');
+    });
+
+    it('uses SearchLink when showSearchBox is unset', () => {
+      render(
+        <HeaderSTVersion4
+          {...headerSTPropsVersion4}
+          params={{
+            ...headerSTPropsVersion4.params,
+            showSearchBox: '',
+          }}
+        />
+      );
+
+      expect(screen.queryByTestId('search-box')).not.toBeInTheDocument();
+      expect(screen.getByRole('link', { name: 'Search' })).toHaveAttribute(
+        'href',
+        '/search-results'
+      );
+    });
+
+    it('hides the cart when HideCart is set and shows it when unset', () => {
+      const { unmount } = render(<HeaderSTVersion4 {...headerSTPropsVersion4} />);
+      expect(screen.queryByTestId('mini-cart')).not.toBeInTheDocument();
+      expect(screen.queryByTestId('fontawesome-icon')).not.toBeInTheDocument();
+      unmount();
+
+      render(
+        <HeaderSTVersion4
+          {...headerSTPropsVersion4}
+          params={{
+            ...headerSTPropsVersion4.params,
+            HideCart: '',
+            showMiniCart: 'true',
+          }}
+        />
+      );
+      expect(screen.getByTestId('mini-cart')).toBeInTheDocument();
+    });
+
+    it('keeps the header navigation placeholder available', () => {
+      render(<HeaderSTVersion4 {...headerSTPropsVersion4} />);
+
+      const placeholders = screen.getAllByTestId('app-placeholder');
+      expect(placeholders.length).toBeGreaterThan(0);
+      expect(placeholders[0]).toHaveAttribute('data-name', 'header-navigation-main-nav');
     });
   });
 });

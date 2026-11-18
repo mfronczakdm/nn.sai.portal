@@ -228,6 +228,24 @@ export const headerSTPropsVersion3 = {
   },
 };
 
+export const headerSTPropsVersion4 = {
+  rendering: { componentName: 'HeaderST' },
+  params: {
+    showSearchBox: 'true',
+    showMiniCart: 'false',
+    HideCart: '1',
+    DynamicPlaceholderId: 'main-nav',
+  },
+  page: mockPage,
+  fields: {
+    Logo: createMockImageField('/images/mcw-logo.svg', 'Medical College of Wisconsin'),
+    SupportLink: createMockLinkField('/for-providers', 'For Providers'),
+    SearchLink: createMockLinkField('/search-results', 'Search'),
+    CartLink: createMockLinkField('/cart', 'Cart'),
+    LoginLink: createMockLinkField('/login', 'Patient Portal'),
+  },
+};
+
 export const headerSTPropsVersion2 = {
   rendering: { componentName: 'HeaderST' },
   params: {
