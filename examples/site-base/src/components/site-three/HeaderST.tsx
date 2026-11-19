@@ -1245,37 +1245,63 @@ const version4FindADoctorClass =
 
 const MCW_HEADER_LOGO_SRC = '/images/mcw-header-logo.svg';
 
+function pageScrollOffset(event: Event): number | null {
+  const target = event.target;
+  if (
+    target === window ||
+    target === document ||
+    target === document.documentElement ||
+    target === document.body
+  ) {
+    return window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
+  }
+  if (!(target instanceof Element)) return null;
+  // Ignore small panes (search facets, menus). Only a near-viewport scroller moves the header.
+  if (target.clientHeight < window.innerHeight * 0.6) return null;
+  return target.scrollTop;
+}
+
 /** Hide the bar after the reader scrolls down; bring it back when they scroll up. */
-function useHeaderHidesOnScrollDown(): boolean {
+function useHeaderHidesOnScrollDown(enabled: boolean): boolean {
   const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
-    let lastY = window.scrollY;
+    if (!enabled) return undefined;
 
-    const onScroll = () => {
-      const y = window.scrollY;
+    let lastY = window.scrollY || document.documentElement.scrollTop || 0;
+
+    const onScroll = (event: Event) => {
+      const y = pageScrollOffset(event);
+      if (y == null) return;
       const delta = y - lastY;
-      if (y < 64) {
+      if (y < 48) {
         setHidden(false);
-      } else if (delta > 6) {
+      } else if (delta > 8) {
         setHidden(true);
-      } else if (delta < -6) {
+      } else if (delta < -8) {
         setHidden(false);
       }
       lastY = y;
     };
 
     window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
+    document.addEventListener('scroll', onScroll, { capture: true, passive: true });
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      document.removeEventListener('scroll', onScroll, { capture: true });
+    };
+  }, [enabled]);
 
-  return hidden;
+  return enabled && hidden;
 }
 
 /* Version4 — green accent stripe; navy utility row; white primary row with logo and pill CTA. */
 const HeaderSTVersion4View = (props: HeaderSTViewProps) => {
   const { fields, params, requireAuthForNav } = props;
-  const headerHidden = useHeaderHidesOnScrollDown();
+  const isEditing = Boolean(props.page?.mode?.isEditing);
+  const headerRef = useRef<HTMLElement>(null);
+  const [headerHeight, setHeaderHeight] = useState(0);
+  const headerHidden = useHeaderHidesOnScrollDown(!isEditing);
   const showNavigation = useHeaderSTNavigationVisibility(requireAuthForNav);
   const componentMap = getComponentMap();
   const hideCart = isTruthyParam(params?.HideCart);
@@ -1296,6 +1322,17 @@ const HeaderSTVersion4View = (props: HeaderSTViewProps) => {
     </ContentSdkLink>
   );
 
+  useEffect(() => {
+    const header = headerRef.current;
+    if (!header || isEditing) return undefined;
+    const measure = () => setHeaderHeight(header.offsetHeight);
+    measure();
+    if (typeof ResizeObserver === 'undefined') return undefined;
+    const observer = new ResizeObserver(measure);
+    observer.observe(header);
+    return () => observer.disconnect();
+  }, [isEditing]);
+
   const renderPrimaryLinks = () =>
     version4PrimaryLinks.map((link) => (
       <li key={link.text}>
@@ -1308,9 +1345,19 @@ const HeaderSTVersion4View = (props: HeaderSTViewProps) => {
     ));
 
   return (
+    <>
+      {isEditing ? null : (
+        <div
+          aria-hidden="true"
+          className="w-full min-h-28 lg:min-h-32"
+          style={headerHeight > 0 ? { height: headerHeight } : undefined}
+        />
+      )}
     <section
+      ref={headerRef}
       className={cn(
-        'relative sticky top-0 z-30 w-full min-w-0 bg-background shadow-sm transition-transform duration-300 motion-reduce:transition-none',
+        'z-40 w-full min-w-0 overflow-hidden bg-background shadow-sm transition-transform duration-300 motion-reduce:transition-none',
+        isEditing ? 'relative' : 'fixed inset-x-0 top-0',
         headerHidden && '-translate-y-full',
         params?.styles
       )}
@@ -1318,7 +1365,25 @@ const HeaderSTVersion4View = (props: HeaderSTViewProps) => {
       data-header-st-layout="version4"
       data-header-st-scroll={headerHidden ? 'hidden' : 'visible'}
     >
-      <div className="flex w-full min-w-0 flex-col" role="navigation" aria-label="Site header">
+      <div
+        className="grid w-full min-w-0 grid-cols-[auto_minmax(0,1fr)]"
+        role="navigation"
+        aria-label="Site header"
+      >
+        <Link
+          href="/"
+          prefetch={false}
+          data-header-st-logo
+          className="row-span-3 flex items-center self-stretch bg-background px-3 py-1.5 sm:px-4 lg:px-5"
+        >
+          {/* Static MCW lockup; the shared Logo field is only the small mark. */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={MCW_HEADER_LOGO_SRC}
+            alt="Medical College of Wisconsin"
+            className="h-14 w-auto sm:h-16 lg:h-[6.75rem]"
+          />
+        </Link>
         <div data-header-st-row="accent" className="h-2 w-full bg-primary" aria-hidden />
 
         <div
@@ -1417,21 +1482,7 @@ const HeaderSTVersion4View = (props: HeaderSTViewProps) => {
           data-header-st-row="primary"
           className="w-full min-w-0 border-b border-border/40 bg-background"
         >
-          <div className="mx-auto flex w-full max-w-[100rem] items-center gap-4 px-4 py-3 sm:px-6 lg:py-4 lg:pl-[17.5rem] lg:pr-8">
-            <Link
-              href="/"
-              prefetch={false}
-              data-header-st-logo
-              className="relative z-20 w-[6.25rem] shrink-0 lg:absolute lg:top-2 lg:left-6 lg:w-[236px]"
-            >
-              {/* Static MCW lockup; the shared Logo field is only the small mark. */}
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={MCW_HEADER_LOGO_SRC}
-                alt="Medical College of Wisconsin"
-                className="h-auto w-full"
-              />
-            </Link>
+          <div className="mx-auto flex w-full max-w-[100rem] items-center gap-4 px-4 py-3 sm:px-6 lg:px-8">
             {showNavigation ? (
               <ul
                 data-header-st-nav="primary"
@@ -1468,6 +1519,7 @@ const HeaderSTVersion4View = (props: HeaderSTViewProps) => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 
