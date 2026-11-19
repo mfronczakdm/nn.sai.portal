@@ -11,8 +11,8 @@ const geistSans = localFont({
 });
 
 export const metadata: Metadata = {
-  title: 'LCMC Health Hospital Kiosk',
-  description: 'Touch-screen directory and wayfinding for LCMC Health lobbies.',
+  title: 'Medical College of Wisconsin Kiosk',
+  description: 'Touch-screen directory and wayfinding for Medical College of Wisconsin lobbies.',
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

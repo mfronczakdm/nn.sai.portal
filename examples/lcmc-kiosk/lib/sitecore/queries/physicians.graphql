@@ -22,6 +22,9 @@ query GetPhysicians($path: String!, $language: String!, $first: Int!) {
         physicianPhone: field(name: "PhysicianPhone") {
           ...FieldValue
         }
+        languagesSpoken: field(name: "LanguagesSpoken") {
+          ...FieldValue
+        }
         servingLocations: field(name: "ServingLocations") {
           value
           ... on MultilistField {

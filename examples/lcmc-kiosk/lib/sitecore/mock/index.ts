@@ -42,6 +42,7 @@ const PHYSICIAN_ALIASES = {
   Credentials: 'credentials',
   Specialty: 'specialty',
   PhysicianBio: 'physicianBio',
+  LanguagesSpoken: 'languagesSpoken',
 };
 
 const LOCATION_ALIASES = {

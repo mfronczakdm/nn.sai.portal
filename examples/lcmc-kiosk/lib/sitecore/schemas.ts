@@ -29,6 +29,7 @@ export const physicianItemSchema = z.object({
   specialty: fieldValueSchema,
   physicianBio: fieldValueSchema,
   physicianPhone: fieldValueSchema,
+  languagesSpoken: fieldValueSchema,
   servingLocations: multilistFieldSchema,
 });
 

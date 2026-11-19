@@ -69,8 +69,24 @@ export function mapPhysician(
     departmentSlug: departmentSlugForSpecialty(specialty),
     departmentName: null,
     acceptingNewPatients: null,
-    languagesSpoken: [],
+    languagesSpoken: fieldString(item.languagesSpoken)
+      .split(',')
+      .map((part) => part.trim())
+      .filter(Boolean),
   };
+}
+
+export function uniqueLocationsFromPhysicians(physicians: Physician[]): LocationSummary[] {
+  const seen = new Set<string>();
+  const locations: LocationSummary[] = [];
+  for (const physician of physicians) {
+    for (const location of physician.locations) {
+      if (seen.has(location.id)) continue;
+      seen.add(location.id);
+      locations.push(location);
+    }
+  }
+  return locations;
 }
 
 export function mapDepartment(

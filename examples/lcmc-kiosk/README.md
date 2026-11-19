@@ -1,8 +1,8 @@
-# LCMC Health Hospital Kiosk
+# Medical College of Wisconsin Kiosk
 
-Touch-screen lobby kiosk for **LCMC Health**. Next.js App Router app that reads physicians, locations, and services from **Sitecore Experience Edge GraphQL** — not the Sitecore Content SDK / layout service / placeholders.
+Touch-screen lobby kiosk for the **Medical College of Wisconsin** ([mcw.edu](https://www.mcw.edu/)). Next.js App Router app that reads physicians, locations, and services from **Sitecore Experience Edge GraphQL** — not the Sitecore Content SDK / layout service / placeholders.
 
-The kiosk uses the official LCMC Health logo in `public/branding/lcmc-health-logo.png`. Tailwind navy/teal values are still a placeholder palette until Brandfolder tokens are confirmed.
+Content comes from `/sitecore/content/lcmc/mcw/Data`. Tailwind navy/teal values are a placeholder palette until brand tokens are confirmed.
 
 ## Run locally
 
@@ -33,7 +33,7 @@ Copy `.env.local.example` to `.env.local` (never commit `.env.local`).
 | --- | --- | --- |
 | `SITECORE_GRAPHQL_ENDPOINT` | yes | Experience Edge GraphQL URL, e.g. `https://edge.sitecorecloud.io/api/graphql/v1` |
 | `SITECORE_API_KEY` | yes | Edge API key sent as the `sc_apikey` header. Never use a `NEXT_PUBLIC_` prefix. |
-| `SITECORE_SITE_NAME` | yes | XM Cloud site name (`lcmc`) |
+| `SITECORE_SITE_NAME` | yes | XM Cloud site name (`mcw`) |
 | `USE_MOCK_DATA` | yes | `true` (default) uses JSON fixtures. `false` calls live GraphQL. |
 
 ## Swap mock data for live Sitecore
@@ -51,13 +51,15 @@ All kiosk queries are rooted at these paths — not a site-wide search:
 
 | Constant | Path | Template folder |
 | --- | --- | --- |
-| `PHYSICIANS_ROOT_PATH` | `/sitecore/content/lcmc/lcmc/Data/Physicians` | LCMC Physician Folder |
-| `LOCATIONS_ROOT_PATH` | `/sitecore/content/lcmc/lcmc/Data/Locations` | LCMC Hospital Location Folder |
-| `DEPARTMENTS_ROOT_PATH` | `/sitecore/content/lcmc/lcmc/Data/Services` | LCMC Service Folder |
+| `PHYSICIANS_ROOT_PATH` | `/sitecore/content/lcmc/mcw/Data/Physicians` | LCMC Physician Folder |
+| `LOCATIONS_ROOT_PATH` | `/sitecore/content/lcmc/mcw/Data/Locations` | LCMC Hospital Location Folder |
+| `DEPARTMENTS_ROOT_PATH` | `/sitecore/content/lcmc/mcw/Data/Services` | LCMC Service Folder |
+
+English physician `ServingLocations` already point at the new MCW clinics. Some `es-CO` physician versions still store older location GUIDs; the kiosk falls back to the English location list so Spanish UI still shows Wisconsin clinics. Service `OfferedAtLocations` values may still point at retired IDs — department screens then show clinics from the physicians in that service.
 
 ### Departments folder does not exist
 
-There is **no** `/sitecore/content/lcmc/lcmc/Data/Departments`. Kiosk routes `/departments` and `/departments/[slug]` query **LCMC Service** items. Physician-to-department grouping uses:
+There is **no** `/sitecore/content/lcmc/mcw/Data/Departments`. Kiosk routes `/departments` and `/departments/[slug]` query **LCMC Service** items. Physician-to-department grouping uses:
 
 1. `Physician.Specialty` mapped to a service slug in `lib/sitecore/specialty-map.ts`
 2. Overlap between `ServingLocations` and the service's `OfferedAtLocations`
@@ -66,7 +68,7 @@ That mapping is a kiosk convenience, not a Sitecore reference field. If you late
 
 ## Sitecore field names (current vs. original brief)
 
-Queries use the **live** LCMC template fields (confirmed 2026-09-09). Comments at the top of `lib/sitecore/queries/fragments.graphql` list them.
+Queries use the **live** MCW template fields (confirmed 2026-11-19; same LCMC Physician / Location / Service templates). Comments at the top of `lib/sitecore/queries/fragments.graphql` list them.
 
 | Brief assumption | Actual field |
 | --- | --- |
@@ -97,14 +99,14 @@ Reconcile any new fields against the templates before go-live. Do not add guesse
 
 ## Language
 
-The kiosk does not use Next.js locale routes. Language is a kiosk-session cookie so URLs stay the same as the public LCMC site.
+The kiosk does not use Next.js locale routes. Language is a kiosk-session cookie so URLs stay the same as the public MCW site.
 
 | Locale | UI chrome | Sitecore GraphQL `language` |
 | --- | --- | --- |
 | `en` (default) | English | `en` |
 | `es-CO` | Español | `es-CO` |
 
-Live Edge returns the existing `es-CO` item versions. Mock data uses `lib/sitecore/mock/overlays-es-co.ts` keyed by item ID. Do not add folders, templates, or fields in Sitecore for this kiosk.
+Live Edge returns the existing `es-CO` item versions (physicians and services are translated; new MCW location items currently fall back to English). Mock data uses `lib/sitecore/mock/overlays-es-co.ts` keyed by item ID. Do not add folders, templates, or fields in Sitecore for this kiosk.
 
 ## Routes
 

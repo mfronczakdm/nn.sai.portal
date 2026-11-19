@@ -28,7 +28,9 @@ import {
   mapLocation,
   mapPhysician,
   physiciansForDepartment,
+  uniqueLocationsFromPhysicians,
 } from '../mappers';
+import type { PhysicianItem } from '../schemas';
 import {
   getMockDepartmentsResponse,
   getMockLocationsResponse,
@@ -88,16 +90,29 @@ export async function getLocations(): Promise<LocationSummary[]> {
   }
 }
 
-async function getPhysicianItems() {
-  const language = activeLanguage();
+async function getPhysicianItems(language = activeLanguage()) {
   const raw = isMockDataEnabled()
-    ? getMockPhysiciansResponse(getKioskLocale())
+    ? getMockPhysiciansResponse(language === 'es-CO' ? 'es-CO' : 'en')
     : await requestLive(physiciansDocument(), 'GetPhysicians', {
         path: PHYSICIANS_ROOT_PATH,
         language,
         first: DEFAULT_CHILD_PAGE_SIZE,
       });
   return physiciansQuerySchema.parse(raw).item?.children?.results ?? [];
+}
+
+function withEnglishLocationFallbacks(
+  items: PhysicianItem[],
+  englishItems: PhysicianItem[],
+  byId: Map<string, LocationSummary>
+): PhysicianItem[] {
+  const englishByName = new Map(englishItems.map((item) => [item.name, item]));
+  return items.map((item) => {
+    if (mapPhysician(item, byId).locations.length) return item;
+    const english = englishByName.get(item.name);
+    if (!english?.servingLocations) return item;
+    return { ...item, servingLocations: english.servingLocations };
+  });
 }
 
 async function getDepartmentItems() {
@@ -114,15 +129,21 @@ async function getDepartmentItems() {
 
 export async function getPhysicians(): Promise<Physician[]> {
   try {
+    const locale = getKioskLocale();
     const [items, locations, departmentItems] = await Promise.all([
       getPhysicianItems(),
       getLocations(),
       getDepartmentItems(),
     ]);
     const byId = locationMap(locations);
+    let physicianItems = items;
+    if (locale !== 'en' && !isMockDataEnabled()) {
+      const englishItems = await getPhysicianItems('en');
+      physicianItems = withEnglishLocationFallbacks(items, englishItems, byId);
+    }
     const departments = departmentItems.map((item) => mapDepartment(item, byId));
     return attachDepartmentNames(
-      items.map((item) => mapPhysician(item, byId)),
+      physicianItems.map((item) => mapPhysician(item, byId)),
       departments
     );
   } catch (error) {
@@ -165,9 +186,13 @@ export async function getDepartments(): Promise<Department[]> {
     const byId = locationMap(locations);
     return items.map((item) => {
       const department = mapDepartment(item, byId);
+      const linkedPhysicians = physiciansForDepartment(department, physicians);
       return {
         ...department,
-        physicians: physiciansForDepartment(department, physicians),
+        physicians: linkedPhysicians,
+        locations: department.locations.length
+          ? department.locations
+          : uniqueLocationsFromPhysicians(linkedPhysicians),
       };
     });
   } catch (error) {
@@ -192,10 +217,13 @@ export async function getDepartmentBySlug(slug: string): Promise<Department | nu
     if (!parsed.item) return null;
     const locations = locationMap(await getLocations());
     const department = mapDepartment(parsed.item, locations);
-    const physicians = await getPhysicians();
+    const linkedPhysicians = physiciansForDepartment(department, await getPhysicians());
     return {
       ...department,
-      physicians: physiciansForDepartment(department, physicians),
+      physicians: linkedPhysicians,
+      locations: department.locations.length
+        ? department.locations
+        : uniqueLocationsFromPhysicians(linkedPhysicians),
     };
   } catch (error) {
     wrapError('getDepartmentBySlug', error);

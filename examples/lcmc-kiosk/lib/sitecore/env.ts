@@ -9,7 +9,7 @@ export function isMockDataEnabled(): boolean {
 }
 
 export function getSitecoreSiteName(): string {
-  return process.env.SITECORE_SITE_NAME?.trim() || 'lcmc';
+  return process.env.SITECORE_SITE_NAME?.trim() || 'mcw';
 }
 
 export function getSitecoreEndpoint(): string {

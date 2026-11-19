@@ -1,12 +1,12 @@
 # =============================================================================
 # FIELD NAME STATUS — reconcile before go-live
 # =============================================================================
-# These queries use the REAL LCMC Sitecore field names confirmed from
-# /sitecore/content/lcmc/lcmc/Data on 2026-09-09.
+# These queries use the REAL Sitecore field names confirmed from
+# /sitecore/content/lcmc/mcw/Data on 2026-11-19 (same templates as LCMC).
 #
 # LCMC Physician (template: LCMC Physician)
 #   PhysicianFullName, Credentials, Specialty, PhysicianBio,
-#   PhysicianPhone, ServingLocations, PhysicianDetailPage
+#   PhysicianPhone, ServingLocations, PhysicianDetailPage, LanguagesSpoken
 #
 # LCMC Hospital Location
 #   LocationTitle, LocationShortName, LocationDescription, StreetAddress,
@@ -18,7 +18,7 @@
 #   ServiceTitle, ServiceShortDescription, ServiceDetail, OfferedAtLocations
 #
 # Assumed in the original kiosk brief but NOT present on current templates:
-#   Physician.photo / PhysicianPhoto, acceptingNewPatients, languagesSpoken,
+#   Physician.photo / PhysicianPhoto, acceptingNewPatients,
 #   departmentRef, Department.floor, Department.wing, Department.icon,
 #   Location.building, Location.floor (as dedicated fields)
 #

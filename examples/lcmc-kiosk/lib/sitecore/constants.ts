@@ -1,14 +1,15 @@
 /**
- * LCMC kiosk content roots in Sitecore.
+ * MCW kiosk content roots in Sitecore.
  *
- * Verified against the live XM Cloud tree on 2026-09-09:
- *   /sitecore/content/lcmc/lcmc/Data/Physicians  (LCMC Physician Folder)
- *   /sitecore/content/lcmc/lcmc/Data/Locations    (LCMC Hospital Location Folder)
- *   /sitecore/content/lcmc/lcmc/Data/Services     (LCMC Service Folder)
+ * Verified against the live XM Cloud tree on 2026-11-19:
+ *   /sitecore/content/lcmc/mcw/Data/Physicians  (LCMC Physician Folder)
+ *   /sitecore/content/lcmc/mcw/Data/Locations    (LCMC Hospital Location Folder)
+ *   /sitecore/content/lcmc/mcw/Data/Services     (LCMC Service Folder)
  *
  * There is NO /Data/Departments folder. Kiosk "department" screens query Services.
+ * Do not invent folders or change the MCW content tree — this app only reads it.
  */
-export const SITE_ROOT_PATH = '/sitecore/content/lcmc/lcmc';
+export const SITE_ROOT_PATH = '/sitecore/content/lcmc/mcw';
 export const DATA_ROOT_PATH = `${SITE_ROOT_PATH}/Data`;
 
 export const PHYSICIANS_ROOT_PATH = `${DATA_ROOT_PATH}/Physicians`;

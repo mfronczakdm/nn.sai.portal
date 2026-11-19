@@ -1,866 +1,1121 @@
 {
   "item": {
-    "id": "76041887-6E16-4844-AD13-366BC2E32265",
+    "id": "1DA85524-C329-4D68-9377-429ED4404A90",
     "name": "Locations",
     "children": {
       "results": [
         {
-          "id": "EFEAC293-2BF4-4516-873D-4EAC1F998474",
-          "name": "East Jefferson General Hospital",
-          "displayName": "East Jefferson General Hospital",
-          "path": "/sitecore/content/lcmc/lcmc/Data/Locations/East Jefferson General Hospital",
+          "id": "1FB5EA21-6526-4E68-9AAD-1B0C2943886A",
+          "name": "Calhoun Health Center",
+          "displayName": "Calhoun Health Center",
+          "path": "/sitecore/content/lcmc/mcw/Data/Locations/Calhoun Health Center",
           "locationTitle": {
-            "value": "East Jefferson General Hospital"
+            "value": "Calhoun Health Center"
           },
           "locationShortName": {
-            "value": "East Jefferson"
+            "value": "Calhoun"
           },
           "locationDescription": {
-            "value": "<p>East Jefferson General Hospital is an academic hospital in Metairie serving Jefferson Parish with emergency, specialty, and inpatient care.</p>"
+            "value": "<p>Calhoun Health Center is a Froedtert &amp; MCW Community Physicians clinic in Brookfield, Wisconsin.</p>"
           },
           "streetAddress": {
-            "value": "4200 Houma Blvd."
+            "value": "1905 N. Calhoun Rd."
           },
           "city": {
-            "value": "Metairie"
+            "value": "Brookfield"
           },
           "state": {
-            "value": "LA"
+            "value": "WI"
           },
           "postalCode": {
-            "value": "70006"
+            "value": "53005"
           },
           "phoneNumber": {
-            "value": "504-503-4000"
+            "value": "414-777-7700"
           },
           "hoursText": {
-            "value": "Hospital open 24 hours. Emergency department open 24/7."
-          },
-          "parkingInfo": {
-            "value": "On-site visitor parking is available around the main campus. Valet and garage options are offered during weekday hours."
-          },
-          "visitorInfo": {
-            "value": "<p>Check in at the main lobby information desk. Visiting hours vary by unit; ask staff for current guidelines.</p>"
-          },
-          "locationType": {
-            "value": "Hospital"
-          },
-          "hasEmergencyDepartment": {
-            "value": "1"
-          },
-          "offeredServices": {
-            "value": "{21FB8DB6-1732-4A44-8BEC-E39C52C1961A}|{872D3FA1-DBC7-4ABF-9544-5A668C0D08B1}|{72C9C518-0BB1-4BB0-9319-A38875217CD3}|{D2B7F3AD-6DF9-4B0D-AB3B-58AD3669DB5B}|{168532F3-37CE-4045-A84C-F0672164EEBE}|{2C7094F3-7E17-4A5F-8E1F-68830FDC81B6}|{EF79ADEF-3A78-4992-B297-04B3447C9CF4}|{DB0C3D51-6686-4387-89A4-97B0AB5E440E}|{DBD2AAB8-F409-4288-9EE0-5CFD676A1C66}|{B491C6F0-3A49-4E3A-B94E-815639B35B92}",
-            "targetItems": []
-          },
-          "locationPhysicians": {
-            "value": "{12B533A6-8DF8-4D80-B466-111A5B26B8E4}|{C176B05D-10A5-49C8-A980-9380046CE24F}",
-            "targetItems": [
-              {
-                "id": "12B533A6-8DF8-4D80-B466-111A5B26B8E4",
-                "name": "Camille Landry MD",
-                "displayName": "Camille Landry MD"
-              },
-              {
-                "id": "C176B05D-10A5-49C8-A980-9380046CE24F",
-                "name": "Anita Chauvin MD",
-                "displayName": "Anita Chauvin MD"
-              }
-            ]
-          }
-        },
-        {
-          "id": "C6A3CDB7-8708-4C60-861B-009B7FB9E786",
-          "name": "Lakeside Hospital",
-          "displayName": "Lakeside Hospital",
-          "path": "/sitecore/content/lcmc/lcmc/Data/Locations/Lakeside Hospital",
-          "locationTitle": {
-            "value": "Lakeside Hospital"
-          },
-          "locationShortName": {
-            "value": "Lakeside"
-          },
-          "locationDescription": {
-            "value": "<p>Lakeside Hospital provides hospital care in Metairie as part of the LCMC Health nonprofit system.</p>"
-          },
-          "streetAddress": {
-            "value": "4700 S. I-10 Service Rd. W"
-          },
-          "city": {
-            "value": "Metairie"
-          },
-          "state": {
-            "value": "LA"
-          },
-          "postalCode": {
-            "value": "70001"
-          },
-          "phoneNumber": {
-            "value": "504-780-8282"
-          },
-          "hoursText": {
-            "value": "Hospital open 24 hours. Emergency department open 24/7."
-          },
-          "parkingInfo": {
-            "value": "Free surface parking is available on the Lakeside campus near the main entrance."
-          },
-          "visitorInfo": {
-            "value": "<p>Visitors should enter through the main lobby. Confirm current visiting hours with the nursing unit.</p>"
-          },
-          "locationType": {
-            "value": "Hospital"
-          },
-          "hasEmergencyDepartment": {
-            "value": "1"
-          },
-          "offeredServices": {
-            "value": "{21FB8DB6-1732-4A44-8BEC-E39C52C1961A}|{D2B7F3AD-6DF9-4B0D-AB3B-58AD3669DB5B}|{2C7094F3-7E17-4A5F-8E1F-68830FDC81B6}|{EF79ADEF-3A78-4992-B297-04B3447C9CF4}",
-            "targetItems": []
-          },
-          "locationPhysicians": {
-            "value": "{B257CB21-E4C2-44BA-8C70-28D893D45C97}|{EED3B2C7-4DEF-4F96-B129-46E86DF0559D}",
-            "targetItems": []
-          }
-        },
-        {
-          "id": "C5D069A3-C8BB-40FE-89BE-D7F9D5C9614F",
-          "name": "Lakeview Hospital",
-          "displayName": "Lakeview Hospital",
-          "path": "/sitecore/content/lcmc/lcmc/Data/Locations/Lakeview Hospital",
-          "locationTitle": {
-            "value": "Lakeview Hospital"
-          },
-          "locationShortName": {
-            "value": "Lakeview"
-          },
-          "locationDescription": {
-            "value": "<p>Lakeview Hospital has served St. Tammany Parish since 1977 with emergency, heart, stroke, and hospital care.</p>"
-          },
-          "streetAddress": {
-            "value": "95 Judge Tanner Blvd."
-          },
-          "city": {
-            "value": "Covington"
-          },
-          "state": {
-            "value": "LA"
-          },
-          "postalCode": {
-            "value": "70433"
-          },
-          "phoneNumber": {
-            "value": "985-867-3800"
-          },
-          "hoursText": {
-            "value": "Hospital open 24 hours. Emergency department open 24/7."
-          },
-          "parkingInfo": {
-            "value": "Visitor parking is available adjacent to the main entrance and emergency drive."
-          },
-          "visitorInfo": {
-            "value": "<p>Northshore families can check in at the main lobby. Ask the information desk for unit-specific visiting hours.</p>"
-          },
-          "locationType": {
-            "value": "Hospital"
-          },
-          "hasEmergencyDepartment": {
-            "value": "1"
-          },
-          "offeredServices": {
-            "value": "{21FB8DB6-1732-4A44-8BEC-E39C52C1961A}|{872D3FA1-DBC7-4ABF-9544-5A668C0D08B1}|{168532F3-37CE-4045-A84C-F0672164EEBE}|{2C7094F3-7E17-4A5F-8E1F-68830FDC81B6}|{EF79ADEF-3A78-4992-B297-04B3447C9CF4}|{DBD2AAB8-F409-4288-9EE0-5CFD676A1C66}",
-            "targetItems": []
-          },
-          "locationPhysicians": {
-            "value": "{3649DA30-9C2F-445B-9B40-AD91F25276DC}|{4A1FED30-0480-4CF5-9DCC-4149B3164046}",
-            "targetItems": []
-          }
-        },
-        {
-          "id": "764E7C6F-75BB-49EE-B304-4E5A0E6F3DAC",
-          "name": "LCMC Health Chalmette Urgent Care",
-          "displayName": "LCMC Health Chalmette Urgent Care",
-          "path": "/sitecore/content/lcmc/lcmc/Data/Locations/LCMC Health Chalmette Urgent Care",
-          "locationTitle": {
-            "value": "LCMC Health Chalmette Urgent Care"
-          },
-          "locationShortName": {
-            "value": "Chalmette Urgent Care"
-          },
-          "locationDescription": {
-            "value": "<p>Walk-in urgent care for non-life-threatening illnesses and injuries in St. Bernard Parish.</p>"
-          },
-          "streetAddress": {
-            "value": "8100 Judge Perez Drive, Suite 4"
-          },
-          "city": {
-            "value": "Chalmette"
-          },
-          "state": {
-            "value": "LA"
-          },
-          "postalCode": {
-            "value": "70043"
-          },
-          "phoneNumber": {
-            "value": "504-345-1330"
-          },
-          "hoursText": {
-            "value": "Walk-in hours typically 8 a.m. to 8 p.m. daily. Confirm current hours before you visit."
-          },
-          "parkingInfo": {
-            "value": "Free surface parking is available in front of the clinic."
-          },
-          "visitorInfo": {
-            "value": "<p>No appointment is required. Patients should bring a photo ID and insurance card when possible.</p>"
-          },
-          "locationType": {
-            "value": "Urgent Care"
-          },
-          "hasEmergencyDepartment": {
-            "value": ""
-          },
-          "offeredServices": {
-            "value": "{B69F3F30-2DFD-4668-ACED-3CEE2B15273D}|{2C7094F3-7E17-4A5F-8E1F-68830FDC81B6}",
-            "targetItems": []
-          },
-          "locationPhysicians": {
-            "value": "{24F0A42F-B1A5-43C2-9E26-E63E63E07162}",
-            "targetItems": []
-          }
-        },
-        {
-          "id": "A2D66593-0A5D-4EE4-82D3-FA88A59C71FA",
-          "name": "LCMC Health Clearview Urgent Care",
-          "displayName": "LCMC Health Clearview Urgent Care",
-          "path": "/sitecore/content/lcmc/lcmc/Data/Locations/LCMC Health Clearview Urgent Care",
-          "locationTitle": {
-            "value": "LCMC Health Clearview Urgent Care"
-          },
-          "locationShortName": {
-            "value": "Clearview Urgent Care"
-          },
-          "locationDescription": {
-            "value": "<p>Convenient walk-in urgent care near Clearview Parkway for everyday illnesses and minor injuries.</p>"
-          },
-          "streetAddress": {
-            "value": "1105 S. Clearview Parkway"
-          },
-          "city": {
-            "value": "New Orleans"
-          },
-          "state": {
-            "value": "LA"
-          },
-          "postalCode": {
-            "value": "70121"
-          },
-          "phoneNumber": {
-            "value": "504-676-5550"
-          },
-          "hoursText": {
-            "value": "Walk-in hours typically 8 a.m. to 8 p.m. daily. Confirm current hours before you visit."
-          },
-          "parkingInfo": {
-            "value": "Free parking is available in the shopping center lot."
-          },
-          "visitorInfo": {
-            "value": "<p>Walk-ins are welcome. For chest pain, severe bleeding, or stroke symptoms, go to the nearest emergency department.</p>"
-          },
-          "locationType": {
-            "value": "Urgent Care"
-          },
-          "hasEmergencyDepartment": {
-            "value": ""
-          },
-          "offeredServices": {
-            "value": "{B69F3F30-2DFD-4668-ACED-3CEE2B15273D}|{2C7094F3-7E17-4A5F-8E1F-68830FDC81B6}",
-            "targetItems": []
-          },
-          "locationPhysicians": {
-            "value": "{47043241-18E6-4A37-8F69-4108CDBD78A2}",
-            "targetItems": []
-          }
-        },
-        {
-          "id": "F1E5353C-A2B7-47F0-9570-85B8FD6D9FED",
-          "name": "LCMC Health Gretna Urgent Care",
-          "displayName": "LCMC Health Gretna Urgent Care",
-          "path": "/sitecore/content/lcmc/lcmc/Data/Locations/LCMC Health Gretna Urgent Care",
-          "locationTitle": {
-            "value": "LCMC Health Gretna Urgent Care"
-          },
-          "locationShortName": {
-            "value": "Gretna Urgent Care"
-          },
-          "locationDescription": {
-            "value": "<p>Westbank walk-in urgent care for illnesses and injuries that need prompt attention but are not emergencies.</p>"
-          },
-          "streetAddress": {
-            "value": "2600 Belle Chasse Hwy., Suite B-2"
-          },
-          "city": {
-            "value": "Gretna"
-          },
-          "state": {
-            "value": "LA"
-          },
-          "postalCode": {
-            "value": "70056"
-          },
-          "phoneNumber": {
-            "value": "504-349-6747"
-          },
-          "hoursText": {
-            "value": "Walk-in hours typically 8 a.m. to 8 p.m. daily. Confirm current hours before you visit."
-          },
-          "parkingInfo": {
-            "value": "Free parking is available in the Belle Chasse Highway lot."
-          },
-          "visitorInfo": {
-            "value": "<p>No appointment required. Bring a photo ID and insurance card when possible.</p>"
-          },
-          "locationType": {
-            "value": "Urgent Care"
-          },
-          "hasEmergencyDepartment": {
-            "value": ""
-          },
-          "offeredServices": {
-            "value": "{B69F3F30-2DFD-4668-ACED-3CEE2B15273D}|{2C7094F3-7E17-4A5F-8E1F-68830FDC81B6}",
-            "targetItems": []
-          },
-          "locationPhysicians": {
-            "value": "{3248558F-44BA-478E-97FE-80E84A000603}",
-            "targetItems": []
-          }
-        },
-        {
-          "id": "57D504EA-804B-4166-84EB-CE298A6853F0",
-          "name": "LCMC Health Kenner Urgent Care",
-          "displayName": "LCMC Health Kenner Urgent Care",
-          "path": "/sitecore/content/lcmc/lcmc/Data/Locations/LCMC Health Kenner Urgent Care",
-          "locationTitle": {
-            "value": "LCMC Health Kenner Urgent Care"
-          },
-          "locationShortName": {
-            "value": "Kenner Urgent Care"
-          },
-          "locationDescription": {
-            "value": "<p>Walk-in urgent care in Kenner for common illnesses and minor injuries that need timely attention.</p>"
-          },
-          "streetAddress": {
-            "value": "708 W. Esplanade Ave."
-          },
-          "city": {
-            "value": "Kenner"
-          },
-          "state": {
-            "value": "LA"
-          },
-          "postalCode": {
-            "value": "70065"
-          },
-          "phoneNumber": {
-            "value": "504-389-6600"
-          },
-          "hoursText": {
-            "value": "Walk-in hours typically 8 a.m. to 8 p.m. daily. Confirm current hours before you visit."
-          },
-          "parkingInfo": {
-            "value": "Free parking is available in front of the clinic on West Esplanade."
-          },
-          "visitorInfo": {
-            "value": "<p>Walk-ins are welcome. Use the nearest emergency department for life-threatening symptoms.</p>"
-          },
-          "locationType": {
-            "value": "Urgent Care"
-          },
-          "hasEmergencyDepartment": {
-            "value": ""
-          },
-          "offeredServices": {
-            "value": "{B69F3F30-2DFD-4668-ACED-3CEE2B15273D}|{2C7094F3-7E17-4A5F-8E1F-68830FDC81B6}",
-            "targetItems": []
-          },
-          "locationPhysicians": {
-            "value": "{6877B226-0CC6-408C-9E51-E2C5D2351A61}",
-            "targetItems": []
-          }
-        },
-        {
-          "id": "53907833-68C9-4A0D-A500-FAD77D27FBD0",
-          "name": "LCMC Health Lakeview Urgent Care",
-          "displayName": "LCMC Health Lakeview Urgent Care",
-          "path": "/sitecore/content/lcmc/lcmc/Data/Locations/LCMC Health Lakeview Urgent Care",
-          "locationTitle": {
-            "value": "LCMC Health Lakeview Urgent Care"
-          },
-          "locationShortName": {
-            "value": "Lakeview Urgent Care"
-          },
-          "locationDescription": {
-            "value": "<p>Neighborhood walk-in urgent care on Harrison Avenue in Lakeview for non-life-threatening needs.</p>"
-          },
-          "streetAddress": {
-            "value": "826 Harrison Ave., Suite A"
-          },
-          "city": {
-            "value": "New Orleans"
-          },
-          "state": {
-            "value": "LA"
-          },
-          "postalCode": {
-            "value": "70124"
-          },
-          "phoneNumber": {
-            "value": "504-309-7108"
-          },
-          "hoursText": {
-            "value": "Walk-in hours typically 8 a.m. to 8 p.m. daily. Confirm current hours before you visit."
-          },
-          "parkingInfo": {
-            "value": "Street and lot parking are available along Harrison Avenue."
-          },
-          "visitorInfo": {
-            "value": "<p>No appointment required. Bring a photo ID and insurance card when possible.</p>"
-          },
-          "locationType": {
-            "value": "Urgent Care"
-          },
-          "hasEmergencyDepartment": {
-            "value": ""
-          },
-          "offeredServices": {
-            "value": "{B69F3F30-2DFD-4668-ACED-3CEE2B15273D}|{2C7094F3-7E17-4A5F-8E1F-68830FDC81B6}",
-            "targetItems": []
-          },
-          "locationPhysicians": {
-            "value": "{1B865C3A-A093-4A6D-8DB8-554028EB662F}",
-            "targetItems": []
-          }
-        },
-        {
-          "id": "4C15C596-29EB-46C8-BD93-53E7DEBA82E0",
-          "name": "LCMC Health Luling Urgent Care",
-          "displayName": "LCMC Health Luling Urgent Care",
-          "path": "/sitecore/content/lcmc/lcmc/Data/Locations/LCMC Health Luling Urgent Care",
-          "locationTitle": {
-            "value": "LCMC Health Luling Urgent Care"
-          },
-          "locationShortName": {
-            "value": "Luling Urgent Care"
-          },
-          "locationDescription": {
-            "value": "<p>Walk-in urgent care serving St. Charles Parish and the Luling community.</p>"
-          },
-          "streetAddress": {
-            "value": "13855 River Road"
-          },
-          "city": {
-            "value": "Luling"
-          },
-          "state": {
-            "value": "LA"
-          },
-          "postalCode": {
-            "value": "70070"
-          },
-          "phoneNumber": {
-            "value": "504-702-4862"
-          },
-          "hoursText": {
-            "value": "Walk-in hours typically 8 a.m. to 8 p.m. daily. Confirm current hours on lcmchealth.org before you visit."
+            "value": "Monday–Friday, 8 a.m. to 5 p.m. Confirm current hours before you visit."
           },
           "parkingInfo": {
             "value": "Free surface parking is available at the clinic."
           },
           "visitorInfo": {
-            "value": "<p>Confirm the current Luling clinic address and hours on lcmchealth.org. Use an emergency department for life-threatening symptoms.</p>"
+            "value": "<p>Check in at the front desk. Bring a photo ID and insurance card when possible.</p>"
           },
           "locationType": {
-            "value": "Urgent Care"
+            "value": "Clinic"
           },
           "hasEmergencyDepartment": {
             "value": ""
           },
           "offeredServices": {
-            "value": "{B69F3F30-2DFD-4668-ACED-3CEE2B15273D}|{2C7094F3-7E17-4A5F-8E1F-68830FDC81B6}",
+            "value": "",
             "targetItems": []
           },
           "locationPhysicians": {
-            "value": "{65C2FDCF-7791-43DA-8354-7030BB6CD025}",
-            "targetItems": []
+            "value": "{DC33E86F-1EB9-4D8D-BCB8-9D3D668D9A71}|{1AEA0D8F-CE54-4E18-81D2-08CD40E03DE7}|{17670664-7606-4200-9077-19D04EDB1CC8}|{84E0EEF6-ABC0-470D-B37B-92020BD85F1C}",
+            "targetItems": [
+              {
+                "id": "DC33E86F-1EB9-4D8D-BCB8-9D3D668D9A71",
+                "name": "Camille Landry MD",
+                "displayName": "Camille Landry MD"
+              },
+              {
+                "id": "1AEA0D8F-CE54-4E18-81D2-08CD40E03DE7",
+                "name": "Dominic Lirette MD",
+                "displayName": "Dominic Lirette MD"
+              },
+              {
+                "id": "17670664-7606-4200-9077-19D04EDB1CC8",
+                "name": "Kevin Romero MD",
+                "displayName": "Kevin Romero MD"
+              },
+              {
+                "id": "84E0EEF6-ABC0-470D-B37B-92020BD85F1C",
+                "name": "Thomas Nguyen MD",
+                "displayName": "Thomas Nguyen MD"
+              }
+            ]
           }
         },
         {
-          "id": "EBC36A98-6CF2-477A-827A-7BEFEB2FE5A8",
-          "name": "LCMC Health Marrero Urgent Care",
-          "displayName": "LCMC Health Marrero Urgent Care",
-          "path": "/sitecore/content/lcmc/lcmc/Data/Locations/LCMC Health Marrero Urgent Care",
+          "id": "FD72DBCE-1125-4A4D-88A0-6DA467974E47",
+          "name": "Forest Home Health Center",
+          "displayName": "Forest Home Health Center",
+          "path": "/sitecore/content/lcmc/mcw/Data/Locations/Forest Home Health Center",
           "locationTitle": {
-            "value": "LCMC Health Marrero Urgent Care"
+            "value": "Forest Home Health Center"
           },
           "locationShortName": {
-            "value": "Marrero Urgent Care"
+            "value": "Forest Home"
           },
           "locationDescription": {
-            "value": "<p>Westbank walk-in urgent care on Lapalco Boulevard for everyday illnesses and minor injuries.</p>"
+            "value": "<p>Forest Home Health Center is a Froedtert &amp; MCW Community Physicians clinic in Milwaukee, Wisconsin.</p>"
           },
           "streetAddress": {
-            "value": "4925 Lapalco Blvd., Suite 200"
+            "value": "1316 W. Forest Home Ave."
           },
           "city": {
-            "value": "Marrero"
+            "value": "Milwaukee"
           },
           "state": {
-            "value": "LA"
+            "value": "WI"
           },
           "postalCode": {
-            "value": "70072"
+            "value": "53204"
           },
           "phoneNumber": {
-            "value": "504-301-2825"
+            "value": "414-777-7700"
           },
           "hoursText": {
-            "value": "Walk-in hours typically 8 a.m. to 8 p.m. daily. Confirm current hours before you visit."
+            "value": "Monday–Friday, 8 a.m. to 5 p.m. Confirm current hours before you visit."
           },
           "parkingInfo": {
-            "value": "Free parking is available in the Lapalco Boulevard shopping center lot."
+            "value": "Free surface parking is available at the clinic."
           },
           "visitorInfo": {
-            "value": "<p>Walk-ins are welcome. West Jefferson Medical Center emergency is nearby for more serious conditions.</p>"
+            "value": "<p>Check in at the front desk. Bring a photo ID and insurance card when possible.</p>"
           },
           "locationType": {
-            "value": "Urgent Care"
+            "value": "Clinic"
           },
           "hasEmergencyDepartment": {
             "value": ""
           },
           "offeredServices": {
-            "value": "{B69F3F30-2DFD-4668-ACED-3CEE2B15273D}|{2C7094F3-7E17-4A5F-8E1F-68830FDC81B6}",
+            "value": "",
             "targetItems": []
           },
           "locationPhysicians": {
-            "value": "{74789E69-47D3-463D-AEAC-CEA3F20A5647}",
-            "targetItems": []
+            "value": "{6EE2EB49-0629-4328-AADF-ECAA24DD69E9}|{EAE7EFBC-70F0-4A36-97F0-12E328007151}|{EA2A312E-7576-4812-B337-75434C428AC9}",
+            "targetItems": [
+              {
+                "id": "6EE2EB49-0629-4328-AADF-ECAA24DD69E9",
+                "name": "Elise Boudreaux MD",
+                "displayName": "Elise Boudreaux MD"
+              },
+              {
+                "id": "EAE7EFBC-70F0-4A36-97F0-12E328007151",
+                "name": "Keisha Williams MD",
+                "displayName": "Keisha Williams MD"
+              },
+              {
+                "id": "EA2A312E-7576-4812-B337-75434C428AC9",
+                "name": "Michael Tran MD",
+                "displayName": "Michael Tran MD"
+              }
+            ]
           }
         },
         {
-          "id": "9E0B2413-44E2-488E-9346-39243F87E342",
-          "name": "LCMC Health Uptown Urgent Care",
-          "displayName": "LCMC Health Uptown Urgent Care",
-          "path": "/sitecore/content/lcmc/lcmc/Data/Locations/LCMC Health Uptown Urgent Care",
+          "id": "CCA5350B-2E2B-40D2-BDCB-E1A4BD54867C",
+          "name": "Germantown Health Center",
+          "displayName": "Germantown Health Center",
+          "path": "/sitecore/content/lcmc/mcw/Data/Locations/Germantown Health Center",
           "locationTitle": {
-            "value": "LCMC Health Uptown Urgent Care"
+            "value": "Germantown Health Center"
           },
           "locationShortName": {
-            "value": "Uptown Urgent Care"
+            "value": "Germantown"
           },
           "locationDescription": {
-            "value": "<p>Walk-in urgent care on Magazine Street for non-life-threatening illnesses and injuries in Uptown New Orleans.</p>"
+            "value": "<p>Germantown Health Center is a Froedtert &amp; MCW Community Physicians clinic in Germantown, Wisconsin.</p>"
           },
           "streetAddress": {
-            "value": "5800 Magazine St."
+            "value": "W168 N11237 Western Ave."
           },
           "city": {
-            "value": "New Orleans"
+            "value": "Germantown"
           },
           "state": {
-            "value": "LA"
+            "value": "WI"
           },
           "postalCode": {
-            "value": "70115"
+            "value": "53022"
           },
           "phoneNumber": {
-            "value": "504-900-3160"
+            "value": "414-777-7700"
           },
           "hoursText": {
-            "value": "Walk-in hours typically 8 a.m. to 8 p.m. daily. Confirm current hours before you visit."
+            "value": "Monday–Friday, 8 a.m. to 5 p.m. Confirm current hours before you visit."
           },
           "parkingInfo": {
-            "value": "Limited street parking and nearby lot parking are available on Magazine Street."
+            "value": "Free surface parking is available at the clinic."
           },
           "visitorInfo": {
-            "value": "<p>No appointment required. Touro and Manning Family Children's are nearby if a higher level of care is needed.</p>"
+            "value": "<p>Check in at the front desk. Bring a photo ID and insurance card when possible.</p>"
           },
           "locationType": {
-            "value": "Urgent Care"
+            "value": "Clinic"
           },
           "hasEmergencyDepartment": {
             "value": ""
           },
           "offeredServices": {
-            "value": "{B69F3F30-2DFD-4668-ACED-3CEE2B15273D}|{2C7094F3-7E17-4A5F-8E1F-68830FDC81B6}",
+            "value": "",
             "targetItems": []
           },
           "locationPhysicians": {
-            "value": "{3188F21C-974C-43D5-8722-C676D09A8293}",
-            "targetItems": []
+            "value": "{E2D8BE5C-28C9-4D8D-8A54-7E8AD0EE9F9D}|{7CA19BFB-5E15-4792-8C42-CDC00553EF45}|{B2602191-89E2-4052-BAAC-599F68A7D61C}|{137F73FD-BFE6-41C9-99E0-0DC8BCF633F2}",
+            "targetItems": [
+              {
+                "id": "E2D8BE5C-28C9-4D8D-8A54-7E8AD0EE9F9D",
+                "name": "Alicia Broussard MD",
+                "displayName": "Alicia Broussard MD"
+              },
+              {
+                "id": "7CA19BFB-5E15-4792-8C42-CDC00553EF45",
+                "name": "Daniel Hebert MD",
+                "displayName": "Daniel Hebert MD"
+              },
+              {
+                "id": "B2602191-89E2-4052-BAAC-599F68A7D61C",
+                "name": "Hannah Scott MD",
+                "displayName": "Hannah Scott MD"
+              },
+              {
+                "id": "137F73FD-BFE6-41C9-99E0-0DC8BCF633F2",
+                "name": "Renee Guidry MD",
+                "displayName": "Renee Guidry MD"
+              }
+            ]
           }
         },
         {
-          "id": "6B468248-C9D1-4DD0-9E8D-44B477FDB96C",
-          "name": "Manning Family Childrens",
-          "displayName": "Manning Family Children's",
-          "path": "/sitecore/content/lcmc/lcmc/Data/Locations/Manning Family Childrens",
+          "id": "6D0D724C-883C-4234-AC88-948A82A1F66E",
+          "name": "Good Hope Health Center",
+          "displayName": "Good Hope Health Center",
+          "path": "/sitecore/content/lcmc/mcw/Data/Locations/Good Hope Health Center",
           "locationTitle": {
-            "value": "Manning Family Children's"
+            "value": "Good Hope Health Center"
           },
           "locationShortName": {
-            "value": "Manning Children's"
+            "value": "Good Hope"
           },
           "locationDescription": {
-            "value": "<p>Manning Family Children's is the LCMC Health pediatric hospital in Uptown New Orleans, caring for infants through adolescents.</p>"
+            "value": "<p>Good Hope Health Center is a Froedtert &amp; MCW Community Physicians clinic in Milwaukee, Wisconsin.</p>"
           },
           "streetAddress": {
-            "value": "200 Henry Clay Ave."
+            "value": "7208 N. 76th St."
           },
           "city": {
-            "value": "New Orleans"
+            "value": "Milwaukee"
           },
           "state": {
-            "value": "LA"
+            "value": "WI"
           },
           "postalCode": {
-            "value": "70118"
+            "value": "53223"
           },
           "phoneNumber": {
-            "value": "504-899-9511"
+            "value": "414-777-7700"
           },
           "hoursText": {
-            "value": "Hospital open 24 hours. Pediatric emergency department open 24/7."
+            "value": "Monday–Friday, 8 a.m. to 5 p.m. Confirm current hours before you visit."
           },
           "parkingInfo": {
-            "value": "Garage and street parking are available near the Henry Clay campus. Family valet is offered during posted hours."
+            "value": "Free surface parking is available at the clinic."
           },
           "visitorInfo": {
-            "value": "<p>One or two caregivers may stay with a child. Check with the unit for sibling and visitor guidelines.</p>"
+            "value": "<p>Check in at the front desk. Bring a photo ID and insurance card when possible.</p>"
           },
           "locationType": {
-            "value": "Hospital"
+            "value": "Clinic"
           },
           "hasEmergencyDepartment": {
-            "value": "1"
+            "value": ""
           },
           "offeredServices": {
-            "value": "{BEEA85BD-08B1-40E3-AAD6-7600A802F71F}|{21FB8DB6-1732-4A44-8BEC-E39C52C1961A}|{2C7094F3-7E17-4A5F-8E1F-68830FDC81B6}|{EF79ADEF-3A78-4992-B297-04B3447C9CF4}|{D2B7F3AD-6DF9-4B0D-AB3B-58AD3669DB5B}",
+            "value": "",
             "targetItems": []
           },
           "locationPhysicians": {
-            "value": "{BC61F2D9-4655-42D8-867B-41407505B6DC}|{49B7EB4F-7C96-4D02-BA27-99FF3F2C75E2}",
-            "targetItems": []
+            "value": "{18C8E53B-FC1D-42A7-AED8-9606093821BD}|{EAE7EFBC-70F0-4A36-97F0-12E328007151}",
+            "targetItems": [
+              {
+                "id": "18C8E53B-FC1D-42A7-AED8-9606093821BD",
+                "name": "Andre Baptiste MD",
+                "displayName": "Andre Baptiste MD"
+              },
+              {
+                "id": "EAE7EFBC-70F0-4A36-97F0-12E328007151",
+                "name": "Keisha Williams MD",
+                "displayName": "Keisha Williams MD"
+              }
+            ]
           }
         },
         {
-          "id": "6766AE91-0553-4034-B328-2327CB54AB85",
-          "name": "New Orleans East Hospital",
-          "displayName": "New Orleans East Hospital",
-          "path": "/sitecore/content/lcmc/lcmc/Data/Locations/New Orleans East Hospital",
+          "id": "E9CE4A1B-E608-4175-A08A-93EC4E79D888",
+          "name": "Greendale Health Center",
+          "displayName": "Greendale Health Center",
+          "path": "/sitecore/content/lcmc/mcw/Data/Locations/Greendale Health Center",
           "locationTitle": {
-            "value": "New Orleans East Hospital"
+            "value": "Greendale Health Center"
           },
           "locationShortName": {
-            "value": "NOEH"
+            "value": "Greendale"
           },
           "locationDescription": {
-            "value": "<p>New Orleans East Hospital provides community-based hospital and emergency care for patients and families in New Orleans East.</p>"
+            "value": "<p>Greendale Health Center is a Froedtert &amp; MCW Community Physicians clinic in Greendale, Wisconsin.</p>"
           },
           "streetAddress": {
-            "value": "5620 Read Blvd."
+            "value": "6220 W. Loomis Rd."
           },
           "city": {
-            "value": "New Orleans"
+            "value": "Greendale"
           },
           "state": {
-            "value": "LA"
+            "value": "WI"
           },
           "postalCode": {
-            "value": "70127"
+            "value": "53129"
           },
           "phoneNumber": {
-            "value": "504-592-6600"
+            "value": "414-777-7700"
           },
           "hoursText": {
-            "value": "Hospital open 24 hours. Emergency department open 24/7."
+            "value": "Monday–Friday, 8 a.m. to 5 p.m. Confirm current hours before you visit."
           },
           "parkingInfo": {
-            "value": "Free visitor parking is available on the Read Boulevard campus near the main entrance."
+            "value": "Free surface parking is available at the clinic."
           },
           "visitorInfo": {
-            "value": "<p>Stop at the information desk in the main lobby for a visitor badge and current unit hours.</p>"
+            "value": "<p>Check in at the front desk. Bring a photo ID and insurance card when possible.</p>"
           },
           "locationType": {
-            "value": "Hospital"
+            "value": "Clinic"
           },
           "hasEmergencyDepartment": {
-            "value": "1"
+            "value": ""
           },
           "offeredServices": {
-            "value": "{21FB8DB6-1732-4A44-8BEC-E39C52C1961A}|{168532F3-37CE-4045-A84C-F0672164EEBE}|{2C7094F3-7E17-4A5F-8E1F-68830FDC81B6}|{EF79ADEF-3A78-4992-B297-04B3447C9CF4}|{DBD2AAB8-F409-4288-9EE0-5CFD676A1C66}",
+            "value": "",
             "targetItems": []
           },
           "locationPhysicians": {
-            "value": "{9BC27AE8-3D1C-468A-8A1D-336EDB3F11D9}|{B58527CE-BA45-4C9E-B506-D0A3D75AC996}",
-            "targetItems": []
+            "value": "{E2D8BE5C-28C9-4D8D-8A54-7E8AD0EE9F9D}|{4629B22B-5BDF-4632-860D-32AC1922C311}|{7E2D326D-0B6D-45FC-BF39-363262811AB4}",
+            "targetItems": [
+              {
+                "id": "E2D8BE5C-28C9-4D8D-8A54-7E8AD0EE9F9D",
+                "name": "Alicia Broussard MD",
+                "displayName": "Alicia Broussard MD"
+              },
+              {
+                "id": "4629B22B-5BDF-4632-860D-32AC1922C311",
+                "name": "Marcus Fontenot MD",
+                "displayName": "Marcus Fontenot MD"
+              },
+              {
+                "id": "7E2D326D-0B6D-45FC-BF39-363262811AB4",
+                "name": "Tanya Ricard MD",
+                "displayName": "Tanya Ricard MD"
+              }
+            ]
           }
         },
         {
-          "id": "063FFD1D-6681-4DFC-8A7A-504EA903090F",
-          "name": "Touro",
-          "displayName": "Touro",
-          "path": "/sitecore/content/lcmc/lcmc/Data/Locations/Touro",
+          "id": "4780B6B5-A6FC-4CC1-AB78-D203DFB0142A",
+          "name": "Kewaskum Health Center",
+          "displayName": "Kewaskum Health Center",
+          "path": "/sitecore/content/lcmc/mcw/Data/Locations/Kewaskum Health Center",
           "locationTitle": {
-            "value": "Touro"
+            "value": "Kewaskum Health Center"
           },
           "locationShortName": {
-            "value": "Touro"
+            "value": "Kewaskum"
           },
           "locationDescription": {
-            "value": "<p>Touro is a community-based nonprofit hospital with generations of service to Uptown and New Orleans families.</p>"
+            "value": "<p>Kewaskum Health Center is a Froedtert &amp; MCW Community Physicians clinic in Kewaskum, Wisconsin.</p>"
           },
           "streetAddress": {
-            "value": "1401 Foucher St."
+            "value": "1701 Fond du Lac Ave."
           },
           "city": {
-            "value": "New Orleans"
+            "value": "Kewaskum"
           },
           "state": {
-            "value": "LA"
+            "value": "WI"
           },
           "postalCode": {
-            "value": "70115"
+            "value": "53040"
           },
           "phoneNumber": {
-            "value": "504-897-7011"
+            "value": "414-777-7700"
           },
           "hoursText": {
-            "value": "Hospital open 24 hours. Emergency department open 24/7."
+            "value": "Monday–Friday, 8 a.m. to 5 p.m. Confirm current hours before you visit."
           },
           "parkingInfo": {
-            "value": "Garage parking is available on the Foucher Street campus. Valet is offered during weekday hours."
+            "value": "Free surface parking is available at the clinic."
           },
           "visitorInfo": {
-            "value": "<p>Enter through the main lobby on Foucher Street. Visiting hours vary by unit; please confirm with staff.</p>"
+            "value": "<p>Check in at the front desk. Bring a photo ID and insurance card when possible.</p>"
           },
           "locationType": {
-            "value": "Hospital"
+            "value": "Clinic"
           },
           "hasEmergencyDepartment": {
-            "value": "1"
+            "value": ""
           },
           "offeredServices": {
-            "value": "{21FB8DB6-1732-4A44-8BEC-E39C52C1961A}|{872D3FA1-DBC7-4ABF-9544-5A668C0D08B1}|{72C9C518-0BB1-4BB0-9319-A38875217CD3}|{D2B7F3AD-6DF9-4B0D-AB3B-58AD3669DB5B}|{168532F3-37CE-4045-A84C-F0672164EEBE}|{2C7094F3-7E17-4A5F-8E1F-68830FDC81B6}|{EF79ADEF-3A78-4992-B297-04B3447C9CF4}|{DBD2AAB8-F409-4288-9EE0-5CFD676A1C66}|{B491C6F0-3A49-4E3A-B94E-815639B35B92}",
+            "value": "",
             "targetItems": []
           },
           "locationPhysicians": {
-            "value": "{F42ECEC4-C3D2-43BA-8FF1-2BA640F66251}|{F74FE325-06CA-4905-88E7-462F02FD74EA}",
-            "targetItems": []
+            "value": "{7CA19BFB-5E15-4792-8C42-CDC00553EF45}|{45BB232F-C5C3-47E7-A733-54D35437E56C}",
+            "targetItems": [
+              {
+                "id": "7CA19BFB-5E15-4792-8C42-CDC00553EF45",
+                "name": "Daniel Hebert MD",
+                "displayName": "Daniel Hebert MD"
+              },
+              {
+                "id": "45BB232F-C5C3-47E7-A733-54D35437E56C",
+                "name": "Joseph Allemand MD",
+                "displayName": "Joseph Allemand MD"
+              }
+            ]
           }
         },
         {
-          "id": "E8F05084-0214-424F-B1D4-B5B562499F5C",
-          "name": "University Medical Center New Orleans",
-          "displayName": "University Medical Center New Orleans",
-          "path": "/sitecore/content/lcmc/lcmc/Data/Locations/University Medical Center New Orleans",
+          "id": "F8BB49F9-FB70-4431-8E6B-565D48EDD209",
+          "name": "Lafayette Clinic",
+          "displayName": "Lafayette Clinic",
+          "path": "/sitecore/content/lcmc/mcw/Data/Locations/Lafayette Clinic",
           "locationTitle": {
-            "value": "University Medical Center New Orleans"
+            "value": "Lafayette Clinic"
           },
           "locationShortName": {
-            "value": "UMCNO"
+            "value": "Lafayette"
           },
           "locationDescription": {
-            "value": "<p>University Medical Center New Orleans is the academic medical center of LCMC Health and the region's Level I Trauma Center.</p>"
+            "value": "<p>Lafayette Clinic is a Froedtert &amp; MCW Community Physicians clinic in Milwaukee, Wisconsin.</p>"
           },
           "streetAddress": {
-            "value": "2000 Canal St."
+            "value": "2071 N. Summit Ave."
           },
           "city": {
-            "value": "New Orleans"
+            "value": "Milwaukee"
           },
           "state": {
-            "value": "LA"
+            "value": "WI"
           },
           "postalCode": {
-            "value": "70112"
+            "value": "53202"
           },
           "phoneNumber": {
-            "value": "504-702-3000"
+            "value": "414-777-7700"
           },
           "hoursText": {
-            "value": "Hospital open 24 hours. Emergency and trauma services open 24/7."
+            "value": "Monday–Friday, 8 a.m. to 5 p.m. Confirm current hours before you visit."
           },
           "parkingInfo": {
-            "value": "Patient and visitor parking is available in the Canal Street garage. Follow signs for Emergency and Main Entrance."
+            "value": "Street and lot parking are available near the clinic."
           },
           "visitorInfo": {
-            "value": "<p>All visitors check in at the main lobby. Trauma and ICU units have additional screening and hour limits.</p>"
+            "value": "<p>Check in at the front desk. Bring a photo ID and insurance card when possible.</p>"
           },
           "locationType": {
-            "value": "Hospital"
+            "value": "Clinic"
           },
           "hasEmergencyDepartment": {
-            "value": "1"
+            "value": ""
           },
           "offeredServices": {
-            "value": "{21FB8DB6-1732-4A44-8BEC-E39C52C1961A}|{872D3FA1-DBC7-4ABF-9544-5A668C0D08B1}|{72C9C518-0BB1-4BB0-9319-A38875217CD3}|{2C7094F3-7E17-4A5F-8E1F-68830FDC81B6}|{EF79ADEF-3A78-4992-B297-04B3447C9CF4}|{DB0C3D51-6686-4387-89A4-97B0AB5E440E}|{DBD2AAB8-F409-4288-9EE0-5CFD676A1C66}|{B491C6F0-3A49-4E3A-B94E-815639B35B92}",
+            "value": "",
             "targetItems": []
           },
           "locationPhysicians": {
-            "value": "{79C12EE1-19F2-48EB-89CF-3473364D2488}|{B7224F06-A404-40C9-8F72-8A1FDD04C472}",
-            "targetItems": []
+            "value": "{8321651D-52FD-4065-B987-9ACB012E1EC9}|{F6A834BF-656F-4244-A77C-588CED053597}|{A1E83676-D629-464A-B490-5D7E62A116C1}",
+            "targetItems": [
+              {
+                "id": "8321651D-52FD-4065-B987-9ACB012E1EC9",
+                "name": "Claire Fontenot MD",
+                "displayName": "Claire Fontenot MD"
+              },
+              {
+                "id": "F6A834BF-656F-4244-A77C-588CED053597",
+                "name": "Leah Castillo MD",
+                "displayName": "Leah Castillo MD"
+              },
+              {
+                "id": "A1E83676-D629-464A-B490-5D7E62A116C1",
+                "name": "Priya Raman MD",
+                "displayName": "Priya Raman MD"
+              }
+            ]
           }
         },
         {
-          "id": "35C77454-5FB8-460D-BC12-299F7B31DE5A",
-          "name": "West Jefferson Medical Center",
-          "displayName": "West Jefferson Medical Center",
-          "path": "/sitecore/content/lcmc/lcmc/Data/Locations/West Jefferson Medical Center",
+          "id": "DAA94ED7-1200-4D82-9810-3E356FE0146D",
+          "name": "Lincoln Avenue Health Center",
+          "displayName": "Lincoln Avenue Health Center",
+          "path": "/sitecore/content/lcmc/mcw/Data/Locations/Lincoln Avenue Health Center",
           "locationTitle": {
-            "value": "West Jefferson Medical Center"
+            "value": "Lincoln Avenue Health Center"
           },
           "locationShortName": {
-            "value": "West Jefferson"
+            "value": "Lincoln Avenue"
           },
           "locationDescription": {
-            "value": "<p>West Jefferson Medical Center is the Westbank's full-service hospital in Marrero, offering emergency, specialty, and inpatient care.</p>"
+            "value": "<p>Lincoln Avenue Health Center is a Froedtert &amp; MCW Community Physicians clinic in West Allis, Wisconsin.</p>"
           },
           "streetAddress": {
-            "value": "1101 Medical Center Blvd."
+            "value": "11211 W. Lincoln Ave."
           },
           "city": {
-            "value": "Marrero"
+            "value": "West Allis"
           },
           "state": {
-            "value": "LA"
+            "value": "WI"
           },
           "postalCode": {
-            "value": "70072"
+            "value": "53227"
           },
           "phoneNumber": {
-            "value": "504-347-5511"
+            "value": "414-777-7700"
           },
           "hoursText": {
-            "value": "Hospital open 24 hours. Emergency department open 24/7."
+            "value": "Monday–Friday, 8 a.m. to 5 p.m. Confirm current hours before you visit."
           },
           "parkingInfo": {
-            "value": "Surface lots and garage parking surround the Medical Center Boulevard campus."
+            "value": "Free surface parking is available at the clinic."
           },
           "visitorInfo": {
-            "value": "<p>Check in at the main lobby. Maternity and ICU units have additional visitor policies.</p>"
+            "value": "<p>Check in at the front desk. Bring a photo ID and insurance card when possible.</p>"
           },
           "locationType": {
-            "value": "Hospital"
+            "value": "Clinic"
           },
           "hasEmergencyDepartment": {
-            "value": "1"
+            "value": ""
           },
           "offeredServices": {
-            "value": "{21FB8DB6-1732-4A44-8BEC-E39C52C1961A}|{872D3FA1-DBC7-4ABF-9544-5A668C0D08B1}|{72C9C518-0BB1-4BB0-9319-A38875217CD3}|{D2B7F3AD-6DF9-4B0D-AB3B-58AD3669DB5B}|{168532F3-37CE-4045-A84C-F0672164EEBE}|{2C7094F3-7E17-4A5F-8E1F-68830FDC81B6}|{EF79ADEF-3A78-4992-B297-04B3447C9CF4}|{DB0C3D51-6686-4387-89A4-97B0AB5E440E}|{DBD2AAB8-F409-4288-9EE0-5CFD676A1C66}|{B491C6F0-3A49-4E3A-B94E-815639B35B92}",
+            "value": "",
             "targetItems": []
           },
           "locationPhysicians": {
-            "value": "{048E9D17-4B8B-4FBF-90EA-8E66D97E4F89}|{31A4B5A2-10FB-4CF1-B1E5-8FC21C802D06}|{24EB9BF3-BFD6-4D01-87A7-BAF6D3DA421C}|{010E3311-06A7-4904-AFD0-202FD565A796}",
+            "value": "{E2D8BE5C-28C9-4D8D-8A54-7E8AD0EE9F9D}|{2ED27C52-728D-48EA-B525-9243D1A1474D}|{081E7167-327B-44A2-A195-1525566BF9BD}",
+            "targetItems": [
+              {
+                "id": "E2D8BE5C-28C9-4D8D-8A54-7E8AD0EE9F9D",
+                "name": "Alicia Broussard MD",
+                "displayName": "Alicia Broussard MD"
+              },
+              {
+                "id": "2ED27C52-728D-48EA-B525-9243D1A1474D",
+                "name": "Brian LeBlanc MD",
+                "displayName": "Brian LeBlanc MD"
+              },
+              {
+                "id": "081E7167-327B-44A2-A195-1525566BF9BD",
+                "name": "Patrice Morales MD",
+                "displayName": "Patrice Morales MD"
+              }
+            ]
+          }
+        },
+        {
+          "id": "D5037FE8-2384-496A-944D-6FB92E69D214",
+          "name": "McKinley Health Center",
+          "displayName": "McKinley Health Center",
+          "path": "/sitecore/content/lcmc/mcw/Data/Locations/McKinley Health Center",
+          "locationTitle": {
+            "value": "McKinley Health Center"
+          },
+          "locationShortName": {
+            "value": "McKinley"
+          },
+          "locationDescription": {
+            "value": "<p>McKinley Health Center is a Froedtert &amp; MCW Community Physicians clinic in Milwaukee, Wisconsin.</p>"
+          },
+          "streetAddress": {
+            "value": "1271 N. 6th St."
+          },
+          "city": {
+            "value": "Milwaukee"
+          },
+          "state": {
+            "value": "WI"
+          },
+          "postalCode": {
+            "value": "53212"
+          },
+          "phoneNumber": {
+            "value": "414-777-7700"
+          },
+          "hoursText": {
+            "value": "Monday–Friday, 8 a.m. to 5 p.m. Confirm current hours before you visit."
+          },
+          "parkingInfo": {
+            "value": "Free surface parking is available at the clinic."
+          },
+          "visitorInfo": {
+            "value": "<p>Check in at the front desk. Bring a photo ID and insurance card when possible.</p>"
+          },
+          "locationType": {
+            "value": "Clinic"
+          },
+          "hasEmergencyDepartment": {
+            "value": ""
+          },
+          "offeredServices": {
+            "value": "",
             "targetItems": []
+          },
+          "locationPhysicians": {
+            "value": "{18C8E53B-FC1D-42A7-AED8-9606093821BD}|{6EE2EB49-0629-4328-AADF-ECAA24DD69E9}|{D3BB7FD1-6EB6-404F-88AD-2BD0E2A95DBF}",
+            "targetItems": [
+              {
+                "id": "18C8E53B-FC1D-42A7-AED8-9606093821BD",
+                "name": "Andre Baptiste MD",
+                "displayName": "Andre Baptiste MD"
+              },
+              {
+                "id": "6EE2EB49-0629-4328-AADF-ECAA24DD69E9",
+                "name": "Elise Boudreaux MD",
+                "displayName": "Elise Boudreaux MD"
+              },
+              {
+                "id": "D3BB7FD1-6EB6-404F-88AD-2BD0E2A95DBF",
+                "name": "Omar Hassan MD",
+                "displayName": "Omar Hassan MD"
+              }
+            ]
+          }
+        },
+        {
+          "id": "EC73FC38-29CB-48A9-B92E-E3E2ADF5870B",
+          "name": "Mequon Health Center",
+          "displayName": "Mequon Health Center",
+          "path": "/sitecore/content/lcmc/mcw/Data/Locations/Mequon Health Center",
+          "locationTitle": {
+            "value": "Mequon Health Center"
+          },
+          "locationShortName": {
+            "value": "Mequon"
+          },
+          "locationDescription": {
+            "value": "<p>Mequon Health Center is a Froedtert &amp; MCW Community Physicians clinic in Mequon, Wisconsin.</p>"
+          },
+          "streetAddress": {
+            "value": "11430 N. Port Washington Rd."
+          },
+          "city": {
+            "value": "Mequon"
+          },
+          "state": {
+            "value": "WI"
+          },
+          "postalCode": {
+            "value": "53092"
+          },
+          "phoneNumber": {
+            "value": "414-777-7700"
+          },
+          "hoursText": {
+            "value": "Monday–Friday, 8 a.m. to 5 p.m. Confirm current hours before you visit."
+          },
+          "parkingInfo": {
+            "value": "Free surface parking is available at the clinic."
+          },
+          "visitorInfo": {
+            "value": "<p>Check in at the front desk. Bring a photo ID and insurance card when possible.</p>"
+          },
+          "locationType": {
+            "value": "Clinic"
+          },
+          "hasEmergencyDepartment": {
+            "value": ""
+          },
+          "offeredServices": {
+            "value": "",
+            "targetItems": []
+          },
+          "locationPhysicians": {
+            "value": "{B2602191-89E2-4052-BAAC-599F68A7D61C}|{0FB08437-2A65-48A7-B4E8-C77A7FDF9929}|{137F73FD-BFE6-41C9-99E0-0DC8BCF633F2}",
+            "targetItems": [
+              {
+                "id": "B2602191-89E2-4052-BAAC-599F68A7D61C",
+                "name": "Hannah Scott MD",
+                "displayName": "Hannah Scott MD"
+              },
+              {
+                "id": "0FB08437-2A65-48A7-B4E8-C77A7FDF9929",
+                "name": "James Thibodeaux MD",
+                "displayName": "James Thibodeaux MD"
+              },
+              {
+                "id": "137F73FD-BFE6-41C9-99E0-0DC8BCF633F2",
+                "name": "Renee Guidry MD",
+                "displayName": "Renee Guidry MD"
+              }
+            ]
+          }
+        },
+        {
+          "id": "8EFD2996-31AC-4A76-A0B3-36B6CD50F715",
+          "name": "Moorland Reserve Health Center",
+          "displayName": "Moorland Reserve Health Center",
+          "path": "/sitecore/content/lcmc/mcw/Data/Locations/Moorland Reserve Health Center",
+          "locationTitle": {
+            "value": "Moorland Reserve Health Center"
+          },
+          "locationShortName": {
+            "value": "Moorland Reserve"
+          },
+          "locationDescription": {
+            "value": "<p>Moorland Reserve Health Center is a Froedtert &amp; MCW Community Physicians clinic in New Berlin, Wisconsin.</p>"
+          },
+          "streetAddress": {
+            "value": "4805 S. Moorland Rd."
+          },
+          "city": {
+            "value": "New Berlin"
+          },
+          "state": {
+            "value": "WI"
+          },
+          "postalCode": {
+            "value": "53151"
+          },
+          "phoneNumber": {
+            "value": "414-777-7700"
+          },
+          "hoursText": {
+            "value": "Monday–Friday, 8 a.m. to 5 p.m. Confirm current hours before you visit."
+          },
+          "parkingInfo": {
+            "value": "Free surface parking is available at the clinic."
+          },
+          "visitorInfo": {
+            "value": "<p>Check in at the front desk. Bring a photo ID and insurance card when possible.</p>"
+          },
+          "locationType": {
+            "value": "Clinic"
+          },
+          "hasEmergencyDepartment": {
+            "value": ""
+          },
+          "offeredServices": {
+            "value": "",
+            "targetItems": []
+          },
+          "locationPhysicians": {
+            "value": "{6937D8FE-5DB0-42B0-A6E3-101164D23381}|{3BDECB7B-C26A-47BD-993D-6A1D06735C07}|{4629B22B-5BDF-4632-860D-32AC1922C311}",
+            "targetItems": [
+              {
+                "id": "6937D8FE-5DB0-42B0-A6E3-101164D23381",
+                "name": "Anita Chauvin MD",
+                "displayName": "Anita Chauvin MD"
+              },
+              {
+                "id": "3BDECB7B-C26A-47BD-993D-6A1D06735C07",
+                "name": "Gabrielle Moreau MD",
+                "displayName": "Gabrielle Moreau MD"
+              },
+              {
+                "id": "4629B22B-5BDF-4632-860D-32AC1922C311",
+                "name": "Marcus Fontenot MD",
+                "displayName": "Marcus Fontenot MD"
+              }
+            ]
+          }
+        },
+        {
+          "id": "9B592896-5898-43A5-BCFA-982D61AE8B85",
+          "name": "Sargeant Health Center",
+          "displayName": "Sargeant Health Center",
+          "path": "/sitecore/content/lcmc/mcw/Data/Locations/Sargeant Health Center",
+          "locationTitle": {
+            "value": "Sargeant Health Center"
+          },
+          "locationShortName": {
+            "value": "Sargeant"
+          },
+          "locationDescription": {
+            "value": "<p>Sargeant Health Center is a Froedtert &amp; MCW Community Physicians clinic in Milwaukee, Wisconsin.</p>"
+          },
+          "streetAddress": {
+            "value": "840 N. 87th St."
+          },
+          "city": {
+            "value": "Milwaukee"
+          },
+          "state": {
+            "value": "WI"
+          },
+          "postalCode": {
+            "value": "53226"
+          },
+          "phoneNumber": {
+            "value": "414-777-7700"
+          },
+          "hoursText": {
+            "value": "Monday–Friday, 8 a.m. to 5 p.m. Confirm current hours before you visit."
+          },
+          "parkingInfo": {
+            "value": "Free surface parking is available at the clinic."
+          },
+          "visitorInfo": {
+            "value": "<p>Check in at the front desk. Bring a photo ID and insurance card when possible.</p>"
+          },
+          "locationType": {
+            "value": "Clinic"
+          },
+          "hasEmergencyDepartment": {
+            "value": ""
+          },
+          "offeredServices": {
+            "value": "",
+            "targetItems": []
+          },
+          "locationPhysicians": {
+            "value": "{6937D8FE-5DB0-42B0-A6E3-101164D23381}|{F6A834BF-656F-4244-A77C-588CED053597}|{123966CA-21BE-4B75-B331-BDBB876B0BA1}|{D3BB7FD1-6EB6-404F-88AD-2BD0E2A95DBF}|{84E0EEF6-ABC0-470D-B37B-92020BD85F1C}",
+            "targetItems": [
+              {
+                "id": "6937D8FE-5DB0-42B0-A6E3-101164D23381",
+                "name": "Anita Chauvin MD",
+                "displayName": "Anita Chauvin MD"
+              },
+              {
+                "id": "F6A834BF-656F-4244-A77C-588CED053597",
+                "name": "Leah Castillo MD",
+                "displayName": "Leah Castillo MD"
+              },
+              {
+                "id": "123966CA-21BE-4B75-B331-BDBB876B0BA1",
+                "name": "Nicole Doucet MD",
+                "displayName": "Nicole Doucet MD"
+              },
+              {
+                "id": "D3BB7FD1-6EB6-404F-88AD-2BD0E2A95DBF",
+                "name": "Omar Hassan MD",
+                "displayName": "Omar Hassan MD"
+              },
+              {
+                "id": "84E0EEF6-ABC0-470D-B37B-92020BD85F1C",
+                "name": "Thomas Nguyen MD",
+                "displayName": "Thomas Nguyen MD"
+              }
+            ]
+          }
+        },
+        {
+          "id": "5CFFA936-4BC9-4C40-970A-0CFDC2B69CC6",
+          "name": "Shorewood Clinic",
+          "displayName": "Shorewood Clinic",
+          "path": "/sitecore/content/lcmc/mcw/Data/Locations/Shorewood Clinic",
+          "locationTitle": {
+            "value": "Shorewood Clinic"
+          },
+          "locationShortName": {
+            "value": "Shorewood"
+          },
+          "locationDescription": {
+            "value": "<p>Shorewood Clinic is a Froedtert &amp; MCW Community Physicians clinic in Shorewood, Wisconsin.</p>"
+          },
+          "streetAddress": {
+            "value": "1901 E. Capitol Dr."
+          },
+          "city": {
+            "value": "Shorewood"
+          },
+          "state": {
+            "value": "WI"
+          },
+          "postalCode": {
+            "value": "53211"
+          },
+          "phoneNumber": {
+            "value": "414-777-7700"
+          },
+          "hoursText": {
+            "value": "Monday–Friday, 8 a.m. to 5 p.m. Confirm current hours before you visit."
+          },
+          "parkingInfo": {
+            "value": "Street and lot parking are available near the clinic."
+          },
+          "visitorInfo": {
+            "value": "<p>Check in at the front desk. Bring a photo ID and insurance card when possible.</p>"
+          },
+          "locationType": {
+            "value": "Clinic"
+          },
+          "hasEmergencyDepartment": {
+            "value": ""
+          },
+          "offeredServices": {
+            "value": "",
+            "targetItems": []
+          },
+          "locationPhysicians": {
+            "value": "{8321651D-52FD-4065-B987-9ACB012E1EC9}|{A1E83676-D629-464A-B490-5D7E62A116C1}|{FFAD9DD3-780F-46F8-A075-3003E3215D23}",
+            "targetItems": [
+              {
+                "id": "8321651D-52FD-4065-B987-9ACB012E1EC9",
+                "name": "Claire Fontenot MD",
+                "displayName": "Claire Fontenot MD"
+              },
+              {
+                "id": "A1E83676-D629-464A-B490-5D7E62A116C1",
+                "name": "Priya Raman MD",
+                "displayName": "Priya Raman MD"
+              },
+              {
+                "id": "FFAD9DD3-780F-46F8-A075-3003E3215D23",
+                "name": "Sarah Melancon MD",
+                "displayName": "Sarah Melancon MD"
+              }
+            ]
+          }
+        },
+        {
+          "id": "231694AE-748F-4782-A086-1287FD4C6B50",
+          "name": "Springdale Health Center",
+          "displayName": "Springdale Health Center",
+          "path": "/sitecore/content/lcmc/mcw/Data/Locations/Springdale Health Center",
+          "locationTitle": {
+            "value": "Springdale Health Center"
+          },
+          "locationShortName": {
+            "value": "Springdale"
+          },
+          "locationDescription": {
+            "value": "<p>Springdale Health Center is a Froedtert &amp; MCW Community Physicians clinic in Brookfield, Wisconsin.</p>"
+          },
+          "streetAddress": {
+            "value": "21700 Intertech Dr."
+          },
+          "city": {
+            "value": "Brookfield"
+          },
+          "state": {
+            "value": "WI"
+          },
+          "postalCode": {
+            "value": "53045"
+          },
+          "phoneNumber": {
+            "value": "414-777-7700"
+          },
+          "hoursText": {
+            "value": "Monday–Friday, 8 a.m. to 5 p.m. Confirm current hours before you visit."
+          },
+          "parkingInfo": {
+            "value": "Free surface parking is available at the clinic."
+          },
+          "visitorInfo": {
+            "value": "<p>Check in at the front desk. Bring a photo ID and insurance card when possible.</p>"
+          },
+          "locationType": {
+            "value": "Clinic"
+          },
+          "hasEmergencyDepartment": {
+            "value": ""
+          },
+          "offeredServices": {
+            "value": "",
+            "targetItems": []
+          },
+          "locationPhysicians": {
+            "value": "{DC33E86F-1EB9-4D8D-BCB8-9D3D668D9A71}|{3BDECB7B-C26A-47BD-993D-6A1D06735C07}|{123966CA-21BE-4B75-B331-BDBB876B0BA1}",
+            "targetItems": [
+              {
+                "id": "DC33E86F-1EB9-4D8D-BCB8-9D3D668D9A71",
+                "name": "Camille Landry MD",
+                "displayName": "Camille Landry MD"
+              },
+              {
+                "id": "3BDECB7B-C26A-47BD-993D-6A1D06735C07",
+                "name": "Gabrielle Moreau MD",
+                "displayName": "Gabrielle Moreau MD"
+              },
+              {
+                "id": "123966CA-21BE-4B75-B331-BDBB876B0BA1",
+                "name": "Nicole Doucet MD",
+                "displayName": "Nicole Doucet MD"
+              }
+            ]
+          }
+        },
+        {
+          "id": "00383DA9-AEC7-4841-97B3-2B7E6D7832E9",
+          "name": "Sunnyslope Health Center",
+          "displayName": "Sunnyslope Health Center",
+          "path": "/sitecore/content/lcmc/mcw/Data/Locations/Sunnyslope Health Center",
+          "locationTitle": {
+            "value": "Sunnyslope Health Center"
+          },
+          "locationShortName": {
+            "value": "Sunnyslope"
+          },
+          "locationDescription": {
+            "value": "<p>Sunnyslope Health Center is a Froedtert &amp; MCW Community Physicians clinic in Brookfield, Wisconsin.</p>"
+          },
+          "streetAddress": {
+            "value": "1350 Sunny Slope Rd."
+          },
+          "city": {
+            "value": "Brookfield"
+          },
+          "state": {
+            "value": "WI"
+          },
+          "postalCode": {
+            "value": "53005"
+          },
+          "phoneNumber": {
+            "value": "414-777-7700"
+          },
+          "hoursText": {
+            "value": "Monday–Friday, 8 a.m. to 5 p.m. Confirm current hours before you visit."
+          },
+          "parkingInfo": {
+            "value": "Free surface parking is available at the clinic."
+          },
+          "visitorInfo": {
+            "value": "<p>Check in at the front desk. Bring a photo ID and insurance card when possible.</p>"
+          },
+          "locationType": {
+            "value": "Clinic"
+          },
+          "hasEmergencyDepartment": {
+            "value": ""
+          },
+          "offeredServices": {
+            "value": "",
+            "targetItems": []
+          },
+          "locationPhysicians": {
+            "value": "{1AEA0D8F-CE54-4E18-81D2-08CD40E03DE7}|{17670664-7606-4200-9077-19D04EDB1CC8}",
+            "targetItems": [
+              {
+                "id": "1AEA0D8F-CE54-4E18-81D2-08CD40E03DE7",
+                "name": "Dominic Lirette MD",
+                "displayName": "Dominic Lirette MD"
+              },
+              {
+                "id": "17670664-7606-4200-9077-19D04EDB1CC8",
+                "name": "Kevin Romero MD",
+                "displayName": "Kevin Romero MD"
+              }
+            ]
+          }
+        },
+        {
+          "id": "C405E02E-1CD6-4439-B5A4-AA06769FC1CF",
+          "name": "Westbrook Health Center",
+          "displayName": "Westbrook Health Center",
+          "path": "/sitecore/content/lcmc/mcw/Data/Locations/Westbrook Health Center",
+          "locationTitle": {
+            "value": "Westbrook Health Center"
+          },
+          "locationShortName": {
+            "value": "Westbrook"
+          },
+          "locationDescription": {
+            "value": "<p>Westbrook Health Center is a Froedtert &amp; MCW Community Physicians clinic in Waukesha, Wisconsin.</p>"
+          },
+          "streetAddress": {
+            "value": "2315 E. Moreland Blvd."
+          },
+          "city": {
+            "value": "Waukesha"
+          },
+          "state": {
+            "value": "WI"
+          },
+          "postalCode": {
+            "value": "53186"
+          },
+          "phoneNumber": {
+            "value": "414-777-7700"
+          },
+          "hoursText": {
+            "value": "Monday–Friday, 8 a.m. to 5 p.m. Confirm current hours before you visit."
+          },
+          "parkingInfo": {
+            "value": "Free surface parking is available at the clinic."
+          },
+          "visitorInfo": {
+            "value": "<p>Check in at the front desk. Bring a photo ID and insurance card when possible.</p>"
+          },
+          "locationType": {
+            "value": "Clinic"
+          },
+          "hasEmergencyDepartment": {
+            "value": ""
+          },
+          "offeredServices": {
+            "value": "",
+            "targetItems": []
+          },
+          "locationPhysicians": {
+            "value": "{2ED27C52-728D-48EA-B525-9243D1A1474D}|{0FB08437-2A65-48A7-B4E8-C77A7FDF9929}|{FFAD9DD3-780F-46F8-A075-3003E3215D23}|{7E2D326D-0B6D-45FC-BF39-363262811AB4}",
+            "targetItems": [
+              {
+                "id": "2ED27C52-728D-48EA-B525-9243D1A1474D",
+                "name": "Brian LeBlanc MD",
+                "displayName": "Brian LeBlanc MD"
+              },
+              {
+                "id": "0FB08437-2A65-48A7-B4E8-C77A7FDF9929",
+                "name": "James Thibodeaux MD",
+                "displayName": "James Thibodeaux MD"
+              },
+              {
+                "id": "FFAD9DD3-780F-46F8-A075-3003E3215D23",
+                "name": "Sarah Melancon MD",
+                "displayName": "Sarah Melancon MD"
+              },
+              {
+                "id": "7E2D326D-0B6D-45FC-BF39-363262811AB4",
+                "name": "Tanya Ricard MD",
+                "displayName": "Tanya Ricard MD"
+              }
+            ]
           }
         }
       ]
