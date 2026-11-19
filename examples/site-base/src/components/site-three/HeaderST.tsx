@@ -1243,9 +1243,39 @@ const version4UtilityLabels = new Set([
 const version4FindADoctorClass =
   'inline-flex shrink-0 items-center rounded-full bg-[var(--color-cta-alt,var(--color-accent))] px-5 py-2.5 text-sm font-semibold text-primary-foreground hover:opacity-90';
 
+const MCW_HEADER_LOGO_SRC = '/images/mcw-header-logo.svg';
+
+/** Hide the bar after the reader scrolls down; bring it back when they scroll up. */
+function useHeaderHidesOnScrollDown(): boolean {
+  const [hidden, setHidden] = useState(false);
+
+  useEffect(() => {
+    let lastY = window.scrollY;
+
+    const onScroll = () => {
+      const y = window.scrollY;
+      const delta = y - lastY;
+      if (y < 64) {
+        setHidden(false);
+      } else if (delta > 6) {
+        setHidden(true);
+      } else if (delta < -6) {
+        setHidden(false);
+      }
+      lastY = y;
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  return hidden;
+}
+
 /* Version4 — green accent stripe; navy utility row; white primary row with logo and pill CTA. */
 const HeaderSTVersion4View = (props: HeaderSTViewProps) => {
   const { fields, params, requireAuthForNav } = props;
+  const headerHidden = useHeaderHidesOnScrollDown();
   const showNavigation = useHeaderSTNavigationVisibility(requireAuthForNav);
   const componentMap = getComponentMap();
   const hideCart = isTruthyParam(params?.HideCart);
@@ -1280,11 +1310,13 @@ const HeaderSTVersion4View = (props: HeaderSTViewProps) => {
   return (
     <section
       className={cn(
-        'relative sticky top-0 z-30 w-full min-w-0 bg-background shadow-sm',
+        'relative sticky top-0 z-30 w-full min-w-0 bg-background shadow-sm transition-transform duration-300 motion-reduce:transition-none',
+        headerHidden && '-translate-y-full',
         params?.styles
       )}
       data-class-change
       data-header-st-layout="version4"
+      data-header-st-scroll={headerHidden ? 'hidden' : 'visible'}
     >
       <div className="flex w-full min-w-0 flex-col" role="navigation" aria-label="Site header">
         <div data-header-st-row="accent" className="h-2 w-full bg-primary" aria-hidden />
@@ -1385,11 +1417,19 @@ const HeaderSTVersion4View = (props: HeaderSTViewProps) => {
           data-header-st-row="primary"
           className="w-full min-w-0 border-b border-border/40 bg-background"
         >
-          <div className="mx-auto flex w-full max-w-[100rem] items-center gap-4 px-4 py-3 sm:px-6 lg:px-8">
-            <Link href="/" className="relative z-10 flex shrink-0 items-center" prefetch={false}>
-              <ContentSdkImage
-                field={props.fields?.Logo}
-                className="h-12 w-auto max-w-[min(100%,200px)] object-contain object-left lg:h-14"
+          <div className="mx-auto flex w-full max-w-[100rem] items-center gap-4 px-4 py-3 sm:px-6 lg:py-4 lg:pl-[17.5rem] lg:pr-8">
+            <Link
+              href="/"
+              prefetch={false}
+              data-header-st-logo
+              className="relative z-20 w-[6.25rem] shrink-0 lg:absolute lg:top-2 lg:left-6 lg:w-[236px]"
+            >
+              {/* Static MCW lockup; the shared Logo field is only the small mark. */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={MCW_HEADER_LOGO_SRC}
+                alt="Medical College of Wisconsin"
+                className="h-auto w-full"
               />
             </Link>
             {showNavigation ? (

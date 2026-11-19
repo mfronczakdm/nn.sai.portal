@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { act, render, screen, fireEvent } from '@testing-library/react';
 import {
   Default as HeaderSTDefault,
   LoginRequired as HeaderSTLoginRequired,
@@ -1350,10 +1350,30 @@ describe('HeaderST Component', () => {
 
       expect(document.querySelector('[data-header-st-layout="version4"]')).toBeInTheDocument();
       expect(document.querySelector('[data-header-st-layout="version3"]')).not.toBeInTheDocument();
-      expect(screen.getByTestId('sitecore-image')).toHaveAttribute(
-        'alt',
-        'Medical College of Wisconsin'
+      const logo = screen.getByRole('img', { name: 'Medical College of Wisconsin' });
+      expect(logo).toHaveAttribute('src', '/images/mcw-header-logo.svg');
+      expect(document.querySelector('[data-header-st-scroll]')).toHaveAttribute(
+        'data-header-st-scroll',
+        'visible'
       );
+    });
+
+    it('hides the sticky header while scrolling down and shows it when scrolling up', () => {
+      render(<HeaderSTVersion4 {...headerSTPropsVersion4} />);
+      const header = document.querySelector('[data-header-st-layout="version4"]');
+
+      act(() => {
+        Object.defineProperty(window, 'scrollY', { value: 240, configurable: true });
+        window.dispatchEvent(new Event('scroll'));
+      });
+      expect(header).toHaveAttribute('data-header-st-scroll', 'hidden');
+      expect(header).toHaveClass('-translate-y-full');
+
+      act(() => {
+        Object.defineProperty(window, 'scrollY', { value: 80, configurable: true });
+        window.dispatchEvent(new Event('scroll'));
+      });
+      expect(header).toHaveAttribute('data-header-st-scroll', 'visible');
     });
 
     it('renders the green accent stripe and navy utility row', () => {

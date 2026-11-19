@@ -81,6 +81,14 @@ describe('SearchResults site packs', () => {
     ).not.toBeInTheDocument();
   });
 
+  it('shows MCW ENT results, not Quanex products', () => {
+    render(<SearchResults siteName="mcw" disableUrlSync initialQuery="Help me find an ENT" />);
+
+    expect(screen.getByText('MCW search')).toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 3, name: /Gabrielle Moreau/i })).toBeInTheDocument();
+    expect(screen.queryByRole('heading', { name: 'Super Spacer' })).not.toBeInTheDocument();
+  });
+
   it('shows LCMC ENT and West Jefferson results, not Quanex products', () => {
     render(<SearchResults siteName="lcmc" disableUrlSync initialQuery="ENT West Jefferson" />);
 

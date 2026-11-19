@@ -3,6 +3,7 @@ import { amkorSearchPack } from './amkor';
 import { atlantaApparelSearchPack } from './atlanta-apparel';
 import { eraSearchPack } from './era';
 import { lcmcSearchPack } from './lcmc';
+import { mcwSearchPack } from './mcw';
 import { pillsburylawSearchPack } from './pillsburylaw';
 import { quanexSearchPack } from './quanex';
 import type { SearchSitePack } from './types';
@@ -41,6 +42,7 @@ export const SEARCH_SITE_PACKS: Readonly<Record<string, SearchSitePack>> = {
   amkor: amkorSearchPack,
   'atlanta-apparel': atlantaApparelSearchPack,
   lcmc: lcmcSearchPack,
+  mcw: mcwSearchPack,
 };
 
 export function normalizeSearchSiteName(siteName?: string | null): string {

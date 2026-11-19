@@ -20,9 +20,9 @@ jest.mock('lucide-react', () => {
 const KNOWN = listSearchPackSiteNames();
 
 describe('search pack registry', () => {
-  it('registers quanex, era, amesburytruth, pillsburylaw, amkor, atlanta-apparel, and lcmc', () => {
+  it('registers quanex, era, amesburytruth, pillsburylaw, amkor, atlanta-apparel, lcmc, and mcw', () => {
     expect(KNOWN.sort()).toEqual(
-      ['amesburytruth', 'amkor', 'atlanta-apparel', 'era', 'lcmc', 'pillsburylaw', 'quanex'].sort()
+      ['amesburytruth', 'amkor', 'atlanta-apparel', 'era', 'lcmc', 'mcw', 'pillsburylaw', 'quanex'].sort()
     );
   });
 
@@ -251,6 +251,36 @@ describe('Atlanta Apparel catalog matching', () => {
     const srcs = ober?.matchingProducts?.map((p) => p.imageSrc) ?? [];
     expect(srcs.length).toBeGreaterThan(0);
     expect(srcs.every((src) => src?.startsWith('https://images.unsplash.com/'))).toBe(true);
+  });
+});
+
+describe('MCW catalog', () => {
+  const pack = getSearchPack('mcw');
+
+  it('resolves the mcw pack instead of Quanex', () => {
+    expect(pack.siteName).toBe('mcw');
+    expect(pack.brandName).toBe('Medical College of Wisconsin');
+  });
+
+  it('answers an ENT lookup with Moreau and Lirette', () => {
+    const hits = pack.catalog.filter((entry) =>
+      itemMatchesQuery(entry, 'Help me find an ENT', pack.bucketSynonyms)
+    );
+    expect(hits.some((entry) => entry.id === 'mcw-moreau')).toBe(true);
+    expect(hits.some((entry) => entry.id === 'mcw-lirette')).toBe(true);
+    expect(hits.some((entry) => /super spacer/i.test(entry.title))).toBe(false);
+    expect(selectAiSearchInsight('Help me find an ENT', pack.insightRules)?.id).toBe('ai-mcw-ent');
+  });
+
+  it('answers a child sore-throat question with pediatrics before ENT-only guidance', () => {
+    const query = 'what do I do if my son has a sore throat';
+    const hits = pack.catalog.filter((entry) =>
+      itemMatchesQuery(entry, query, pack.bucketSynonyms)
+    );
+    expect(hits.some((entry) => entry.id === 'mcw-pediatrics')).toBe(true);
+    expect(hits.some((entry) => entry.id === 'mcw-raman')).toBe(true);
+    expect(hits.some((entry) => entry.id === 'mcw-nurse')).toBe(true);
+    expect(selectAiSearchInsight(query, pack.insightRules)?.id).toBe('ai-mcw-child-throat');
   });
 });
 
