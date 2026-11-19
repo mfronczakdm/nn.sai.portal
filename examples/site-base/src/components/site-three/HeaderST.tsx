@@ -1258,10 +1258,8 @@ function findPageScroller(start: Element | null): Element | Window {
 }
 
 function readScrollTop(scroller: Element | Window): number {
-  if (scroller === window) {
-    return window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
-  }
-  return scroller.scrollTop;
+  if (scroller instanceof Element) return scroller.scrollTop;
+  return window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
 }
 
 /** Hide the bar after the reader scrolls down; bring it back when they scroll up. */
