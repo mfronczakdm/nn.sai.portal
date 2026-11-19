@@ -137,7 +137,11 @@ describe('event-listing-model', () => {
   });
 
   it('preserves editable chrome on jsonValue when narrowing Text fields', () => {
-    expect(listingFieldJson({ jsonValue: { value: 'All Events', editable: '<span>All Events</span>' } })).toEqual({
+    expect(
+      listingFieldJson({
+        jsonValue: { value: 'All Events', editable: '<span>All Events</span>' },
+      } as Parameters<typeof listingFieldJson>[0])
+    ).toEqual({
       value: 'All Events',
       editable: '<span>All Events</span>',
     });

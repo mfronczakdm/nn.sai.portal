@@ -26,7 +26,7 @@ const relatedProps: DownloadListProps = {
   params: {},
   page: mockPage,
   fields: {
-    Title: { value: 'View related downloads' },
+    title: { value: 'View related downloads' },
     featuredContent: {
       results: [
         { field: { link: link('https://amkor.com/sip.pdf', 'System in Package (SiP) Data Sheet') } },

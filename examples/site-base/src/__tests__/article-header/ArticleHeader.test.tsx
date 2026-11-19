@@ -3,6 +3,7 @@ import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 // We'll dynamically import ArticleHeader after mocks are set up so mocks apply reliably
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 let ArticleHeader: React.ComponentType<any>;
+import type { ArticleHeaderFields } from '../../components/article-header/article-header.props';
 import { fullProps, minimalProps, noFieldsProps } from './ArticleHeader.mockProps';
 
 // Mock lucide-react icons (ESM) to avoid transform issues in Jest
@@ -185,7 +186,7 @@ describe('ArticleHeader', () => {
       fields: {
         data: {
           datasource: {
-            imageRequired: fullProps.fields.imageRequired,
+            imageRequired: (fullProps.fields as ArticleHeaderFields).imageRequired,
           },
           externalFields: {},
         },
@@ -413,7 +414,7 @@ describe('ArticleHeader', () => {
     const propsWithoutEyebrow = {
       ...fullProps,
       fields: {
-        imageRequired: fullProps.fields.imageRequired,
+        imageRequired: (fullProps.fields as ArticleHeaderFields).imageRequired,
       },
     };
 

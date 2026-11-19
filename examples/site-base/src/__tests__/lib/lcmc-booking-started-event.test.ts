@@ -18,12 +18,12 @@ describe('trackLcmcBookingStartedEvent', () => {
   });
 
   afterEach(() => {
-    process.env.NODE_ENV = originalNodeEnv;
+    (process.env as { NODE_ENV?: string }).NODE_ENV = originalNodeEnv;
     process.env.NEXT_PUBLIC_ENABLE_DEMO_ANALYTICS = originalEnableFlag;
   });
 
   it('sends Booking-Started on WEB with a Booking Started label', async () => {
-    process.env.NODE_ENV = 'production';
+    (process.env as { NODE_ENV?: string }).NODE_ENV = 'production';
 
     await trackLcmcBookingStartedEvent({ visitKey: 'sick-visit', visitTitle: 'Sick visit' });
 
@@ -41,7 +41,7 @@ describe('trackLcmcBookingStartedEvent', () => {
   });
 
   it('does not send events in development unless explicitly enabled', async () => {
-    process.env.NODE_ENV = 'development';
+    (process.env as { NODE_ENV?: string }).NODE_ENV = 'development';
     process.env.NEXT_PUBLIC_ENABLE_DEMO_ANALYTICS = undefined;
 
     await trackLcmcBookingStartedEvent({ visitKey: 'sick-visit' });
@@ -50,7 +50,7 @@ describe('trackLcmcBookingStartedEvent', () => {
   });
 
   it('sends Appointment-Booked on WEB when a guest confirms', async () => {
-    process.env.NODE_ENV = 'production';
+    (process.env as { NODE_ENV?: string }).NODE_ENV = 'production';
 
     await trackLcmcAppointmentBookedEvent({
       bookedAs: 'guest',

@@ -30,7 +30,7 @@ jest.mock('@sitecore-content-sdk/nextjs', () => ({
     id,
   }: {
     field?: { value?: string };
-    tag?: keyof JSX.IntrinsicElements;
+    tag?: React.ElementType;
     className?: string;
     id?: string;
   }) => {

@@ -80,7 +80,7 @@ describe('mergeArticleContentFields', () => {
         ...base(),
         fields: {
           Title: { value: 'Legacy title' } as Field<string>,
-        },
+        } as ArticleContentProps['fields'],
       },
       false,
     );
@@ -98,6 +98,8 @@ describe('mergeArticleContentFields', () => {
             sitecore: {
               context: {},
               route: {
+                name: 'Article',
+                placeholders: {},
                 fields: {
                   pageTitle: { value: 'From route' } as Field<string>,
                 },

@@ -79,16 +79,16 @@ describe('demo-analytics-identity', () => {
         },
         version: '2.0.2',
       },
-    };
+    } as unknown as typeof window.scContentSDK;
   });
 
   afterEach(() => {
-    process.env.NODE_ENV = originalNodeEnv;
+    (process.env as { NODE_ENV?: string }).NODE_ENV = originalNodeEnv;
     process.env.NEXT_PUBLIC_ENABLE_DEMO_ANALYTICS = originalEnableFlag;
   });
 
   it('is disabled in development unless explicitly enabled', () => {
-    process.env.NODE_ENV = 'development';
+    (process.env as { NODE_ENV?: string }).NODE_ENV = 'development';
     process.env.NEXT_PUBLIC_ENABLE_DEMO_ANALYTICS = undefined;
 
     expect(isCdpAnalyticsEnabled()).toBe(false);
@@ -106,7 +106,7 @@ describe('demo-analytics-identity', () => {
   });
 
   it('resets the analytics session on logout', async () => {
-    process.env.NODE_ENV = 'production';
+    (process.env as { NODE_ENV?: string }).NODE_ENV = 'production';
     mockGetClientId.mockReturnValueOnce('').mockReturnValue('new-client-id');
 
     await resetDemoPersonaAnalyticsSession();
@@ -117,7 +117,7 @@ describe('demo-analytics-identity', () => {
   });
 
   it('requests a new profile and sends identity on persona login', async () => {
-    process.env.NODE_ENV = 'production';
+    (process.env as { NODE_ENV?: string }).NODE_ENV = 'production';
     mockGetClientId.mockReturnValueOnce('').mockReturnValue('new-client-id');
 
     await identifyDemoPersona('Internal Agent licensed in FL');
@@ -140,7 +140,7 @@ describe('demo-analytics-identity', () => {
   });
 
   it('can identify without resetting the session on page reload', async () => {
-    process.env.NODE_ENV = 'production';
+    (process.env as { NODE_ENV?: string }).NODE_ENV = 'production';
 
     await identifyDemoPersona('Claims Specialist licensed in NC', { resetSession: false });
 

@@ -1,4 +1,5 @@
 import '@testing-library/jest-dom';
+import { createElement } from 'react';
 import { render, screen } from '@testing-library/react';
 
 import {
@@ -6,7 +7,17 @@ import {
   EventCards,
   NewsCards,
   PressReleaseList,
+  type NewsListingProps,
 } from '@/components/uiim/news/NewsListing';
+
+function newsProps(fields: NewsListingProps['fields']): NewsListingProps {
+  return {
+    rendering: { componentName: 'NewsListing' },
+    params: {},
+    page: { mode: { isEditing: false } },
+    fields,
+  } as NewsListingProps;
+}
 
 jest.mock('next/image', () => ({
   __esModule: true,
@@ -28,9 +39,13 @@ jest.mock('@/utils/NoDataFallback', () => ({
 }));
 
 jest.mock('@sitecore-content-sdk/nextjs', () => ({
-  Text: ({ field, tag: Tag = 'span' }: { field?: { value?: string }; tag?: string }) => (
-    <Tag>{field?.value}</Tag>
-  ),
+  Text: ({
+    field,
+    tag: Tag = 'span',
+  }: {
+    field?: { value?: string };
+    tag?: React.ElementType;
+  }) => createElement(Tag, null, field?.value),
   useSitecore: () => ({ page: { mode: { isEditing: false } } }),
 }));
 
@@ -38,8 +53,7 @@ describe('NewsListing', () => {
   it('renders featured blog items from datasource treelist', () => {
     render(
       <NewsListing
-        params={{}}
-        fields={{
+        {...newsProps({
           data: {
             datasource: {
               eyebrow: { jsonValue: { value: 'Company News' } },
@@ -58,7 +72,7 @@ describe('NewsListing', () => {
               },
             },
           },
-        }}
+        })}
       />
     );
 
@@ -71,7 +85,7 @@ describe('NewsListing', () => {
   });
 
   it('shows fallback when datasource is missing', () => {
-    render(<NewsListing params={{}} fields={{ data: { datasource: null } }} />);
+    render(<NewsListing {...newsProps({ data: { datasource: null } })} />);
     expect(screen.getByText(/NewsListing requires a datasource/i)).toBeInTheDocument();
   });
 });
@@ -99,7 +113,7 @@ const cardDatasource = {
 describe('NewsListing card variants', () => {
   it('renders NewsCards with the item image, date and news accent', () => {
     const { container } = render(
-      <NewsCards params={{}} fields={{ data: { datasource: cardDatasource } }} />
+      <NewsCards {...newsProps({ data: { datasource: cardDatasource } })} />
     );
 
     expect(screen.getByRole('heading', { name: 'Latest Blog Posts' })).toBeInTheDocument();
@@ -112,7 +126,7 @@ describe('NewsListing card variants', () => {
   });
 
   it('renders the CTA button from the datasource link', () => {
-    render(<NewsCards params={{}} fields={{ data: { datasource: cardDatasource } }} />);
+    render(<NewsCards {...newsProps({ data: { datasource: cardDatasource } })} />);
 
     expect(screen.getByRole('link', { name: 'View All Posts' })).toHaveAttribute('href', '/blog');
   });
@@ -120,12 +134,11 @@ describe('NewsListing card variants', () => {
   it('prefers CtaText over the link text', () => {
     render(
       <NewsCards
-        params={{}}
-        fields={{
+        {...newsProps({
           data: {
             datasource: { ...cardDatasource, ctaText: { jsonValue: { value: 'See every post' } } },
           },
-        }}
+        })}
       />
     );
 
@@ -134,7 +147,7 @@ describe('NewsListing card variants', () => {
 
   it('renders EventCards with the events accent', () => {
     const { container } = render(
-      <EventCards params={{}} fields={{ data: { datasource: cardDatasource } }} />
+      <EventCards {...newsProps({ data: { datasource: cardDatasource } })} />
     );
 
     expect(container.querySelector('[data-news-accent="events"]')).toBeInTheDocument();
@@ -143,19 +156,19 @@ describe('NewsListing card variants', () => {
 
   it('shows the category on blog cards but not on event cards', () => {
     const { unmount } = render(
-      <NewsCards params={{}} fields={{ data: { datasource: cardDatasource } }} />
+      <NewsCards {...newsProps({ data: { datasource: cardDatasource } })} />
     );
     expect(screen.getByText('Blog')).toBeInTheDocument();
     unmount();
 
-    render(<EventCards params={{}} fields={{ data: { datasource: cardDatasource } }} />);
+    render(<EventCards {...newsProps({ data: { datasource: cardDatasource } })} />);
     expect(screen.queryByText('Blog')).not.toBeInTheDocument();
     expect(screen.getByText('August 13, 2026')).toBeInTheDocument();
   });
 
   it('renders PressReleaseList as linked rows without card images', () => {
     const { container } = render(
-      <PressReleaseList params={{}} fields={{ data: { datasource: cardDatasource } }} />
+      <PressReleaseList {...newsProps({ data: { datasource: cardDatasource } })} />
     );
 
     expect(
@@ -167,7 +180,7 @@ describe('NewsListing card variants', () => {
 
   it('shows the fallback for every variant when the datasource is missing', () => {
     for (const Variant of [NewsCards, EventCards, PressReleaseList]) {
-      const { unmount } = render(<Variant params={{}} fields={{ data: { datasource: null } }} />);
+      const { unmount } = render(<Variant {...newsProps({ data: { datasource: null } })} />);
       expect(screen.getByText(/NewsListing requires a datasource/i)).toBeInTheDocument();
       unmount();
     }

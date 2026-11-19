@@ -211,8 +211,8 @@ describe('MainNav', () => {
             data: {
               datasource: {
                 logo: { jsonValue: {} },
-                logoLink: { jsonValue: {} },
-                searchPage: { jsonValue: {} },
+                logoLink: { jsonValue: { value: { href: '' } } },
+                searchPage: { jsonValue: { value: { href: '' } } },
               },
             },
           },

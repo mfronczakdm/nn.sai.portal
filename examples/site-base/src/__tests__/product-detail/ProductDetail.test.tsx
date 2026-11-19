@@ -25,7 +25,12 @@ const mockUseSitecore = jest.fn(() => ({
       designLibrary: { isVariantGeneration: false },
       isDesignLibrary: false,
     },
-    layout: { sitecore: { context: {}, route: null } },
+    layout: {
+      sitecore: {
+        context: {},
+        route: null as { fields?: Record<string, { value?: string }> } | null,
+      },
+    },
     locale: 'en',
   },
 }));

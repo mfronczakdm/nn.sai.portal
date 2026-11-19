@@ -19,7 +19,7 @@ describe('cdp-link-click-event', () => {
   });
 
   afterEach(() => {
-    process.env.NODE_ENV = originalNodeEnv;
+    (process.env as { NODE_ENV?: string }).NODE_ENV = originalNodeEnv;
     process.env.NEXT_PUBLIC_ENABLE_DEMO_ANALYTICS = originalEnableFlag;
   });
 
@@ -35,7 +35,7 @@ describe('cdp-link-click-event', () => {
   });
 
   it('sends a WEB channel event with a valid type and readable label', async () => {
-    process.env.NODE_ENV = 'production';
+    (process.env as { NODE_ENV?: string }).NODE_ENV = 'production';
 
     await trackCdpLinkClickEvent('Open A Free Checking Account');
 
@@ -50,7 +50,7 @@ describe('cdp-link-click-event', () => {
   });
 
   it('does not send events in development unless explicitly enabled', async () => {
-    process.env.NODE_ENV = 'development';
+    (process.env as { NODE_ENV?: string }).NODE_ENV = 'development';
     process.env.NEXT_PUBLIC_ENABLE_DEMO_ANALYTICS = undefined;
 
     await trackCdpLinkClickEvent('Opening a free checking account');
