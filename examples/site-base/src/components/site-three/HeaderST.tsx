@@ -1245,52 +1245,54 @@ const version4FindADoctorClass =
 
 const MCW_HEADER_LOGO_SRC = '/images/mcw-header-logo.svg';
 
-function pageScrollOffset(event: Event): number | null {
-  const target = event.target;
-  if (
-    target === window ||
-    target === document ||
-    target === document.documentElement ||
-    target === document.body
-  ) {
+function findPageScroller(start: Element | null): Element | Window {
+  let node = start?.parentElement ?? null;
+  while (node && node !== document.body && node !== document.documentElement) {
+    const overflowY = getComputedStyle(node).overflowY;
+    const scrolls =
+      overflowY === 'auto' || overflowY === 'scroll' || overflowY === 'overlay';
+    if (scrolls && node.scrollHeight > node.clientHeight + 8) return node;
+    node = node.parentElement;
+  }
+  return window;
+}
+
+function readScrollTop(scroller: Element | Window): number {
+  if (scroller === window) {
     return window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
   }
-  if (!(target instanceof Element)) return null;
-  // Ignore small panes (search facets, menus). Only a near-viewport scroller moves the header.
-  if (target.clientHeight < window.innerHeight * 0.6) return null;
-  return target.scrollTop;
+  return scroller.scrollTop;
 }
 
 /** Hide the bar after the reader scrolls down; bring it back when they scroll up. */
-function useHeaderHidesOnScrollDown(enabled: boolean): boolean {
+function useHeaderHidesOnScrollDown(
+  enabled: boolean,
+  anchor: { current: HTMLElement | null }
+): boolean {
   const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
     if (!enabled) return undefined;
 
-    let lastY = window.scrollY || document.documentElement.scrollTop || 0;
+    const scroller = findPageScroller(anchor.current);
+    let lastY = readScrollTop(scroller);
 
-    const onScroll = (event: Event) => {
-      const y = pageScrollOffset(event);
-      if (y == null) return;
+    const onScroll = () => {
+      const y = readScrollTop(scroller);
       const delta = y - lastY;
-      if (y < 48) {
+      if (y < 64) {
         setHidden(false);
-      } else if (delta > 8) {
+      } else if (delta > 10) {
         setHidden(true);
-      } else if (delta < -8) {
+      } else if (delta < -10) {
         setHidden(false);
       }
       lastY = y;
     };
 
-    window.addEventListener('scroll', onScroll, { passive: true });
-    document.addEventListener('scroll', onScroll, { capture: true, passive: true });
-    return () => {
-      window.removeEventListener('scroll', onScroll);
-      document.removeEventListener('scroll', onScroll, { capture: true });
-    };
-  }, [enabled]);
+    scroller.addEventListener('scroll', onScroll, { passive: true });
+    return () => scroller.removeEventListener('scroll', onScroll);
+  }, [enabled, anchor]);
 
   return enabled && hidden;
 }
@@ -1300,8 +1302,7 @@ const HeaderSTVersion4View = (props: HeaderSTViewProps) => {
   const { fields, params, requireAuthForNav } = props;
   const isEditing = Boolean(props.page?.mode?.isEditing);
   const headerRef = useRef<HTMLElement>(null);
-  const [headerHeight, setHeaderHeight] = useState(0);
-  const headerHidden = useHeaderHidesOnScrollDown(!isEditing);
+  const headerHidden = useHeaderHidesOnScrollDown(!isEditing, headerRef);
   const showNavigation = useHeaderSTNavigationVisibility(requireAuthForNav);
   const componentMap = getComponentMap();
   const hideCart = isTruthyParam(params?.HideCart);
@@ -1323,15 +1324,17 @@ const HeaderSTVersion4View = (props: HeaderSTViewProps) => {
   );
 
   useEffect(() => {
-    const header = headerRef.current;
-    if (!header || isEditing) return undefined;
-    const measure = () => setHeaderHeight(header.offsetHeight);
-    measure();
-    if (typeof ResizeObserver === 'undefined') return undefined;
-    const observer = new ResizeObserver(measure);
-    observer.observe(header);
-    return () => observer.disconnect();
-  }, [isEditing]);
+    const section = headerRef.current;
+    if (!section || isEditing) return undefined;
+    const shell = section.closest('header');
+    const target = shell && shell !== section ? shell : section;
+    target.classList.add('transition-transform', 'duration-300');
+    target.classList.toggle('-translate-y-full', headerHidden);
+    if (target !== section) section.classList.remove('-translate-y-full');
+    return () => {
+      target.classList.remove('-translate-y-full', 'transition-transform', 'duration-300');
+    };
+  }, [headerHidden, isEditing]);
 
   const renderPrimaryLinks = () =>
     version4PrimaryLinks.map((link) => (
@@ -1345,20 +1348,10 @@ const HeaderSTVersion4View = (props: HeaderSTViewProps) => {
     ));
 
   return (
-    <>
-      {isEditing ? null : (
-        <div
-          aria-hidden="true"
-          className="w-full min-h-28 lg:min-h-32"
-          style={headerHeight > 0 ? { height: headerHeight } : undefined}
-        />
-      )}
     <section
       ref={headerRef}
       className={cn(
-        'z-40 w-full min-w-0 overflow-hidden bg-background shadow-sm transition-transform duration-300 motion-reduce:transition-none',
-        isEditing ? 'relative' : 'fixed inset-x-0 top-0',
-        headerHidden && '-translate-y-full',
+        'relative z-40 w-full min-w-0 bg-background shadow-sm',
         params?.styles
       )}
       data-class-change
@@ -1519,7 +1512,6 @@ const HeaderSTVersion4View = (props: HeaderSTViewProps) => {
         </div>
       </div>
     </section>
-    </>
   );
 };
 
