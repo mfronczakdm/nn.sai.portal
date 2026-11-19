@@ -79,7 +79,7 @@ Queries use the **live** MCW template fields (confirmed 2026-11-19; same LCMC Ph
 | photo | **missing** — kiosk shows initials |
 | bio | `PhysicianBio` |
 | acceptingNewPatients | **missing** — UI hides the badge |
-| languagesSpoken | **missing** — UI hides the row |
+| languagesSpoken | `LanguagesSpoken` |
 | phone | `PhysicianPhone` |
 | Department.name / description | `ServiceTitle`, `ServiceShortDescription`, `ServiceDetail` |
 | Department.floor / wing / icon | **missing** |

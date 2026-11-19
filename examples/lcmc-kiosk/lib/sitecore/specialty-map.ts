@@ -1,5 +1,5 @@
 /**
- * Maps Physician.Specialty strings onto LCMC Service slugs.
+ * Maps Physician.Specialty strings onto MCW Service slugs.
  * Services are the kiosk "department" records; specialty is a plain text field
  * on Physician, not a reference. Includes English and es-CO labels from Sitecore.
  */

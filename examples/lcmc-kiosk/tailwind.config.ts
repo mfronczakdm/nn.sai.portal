@@ -1,9 +1,9 @@
 import type { Config } from 'tailwindcss';
 
 /**
- * PLACEHOLDER LCMC Health palette — not official brand tokens.
+ * PLACEHOLDER MCW palette — not official brand tokens.
  * Confirm navy/teal/green with brand before go-live. Do not treat these hex
- * values as approved Brandfolder colors.
+ * values as approved brand colors.
  */
 const config: Config = {
   content: [

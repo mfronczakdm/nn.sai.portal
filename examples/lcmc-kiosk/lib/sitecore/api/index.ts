@@ -30,7 +30,6 @@ import {
   physiciansForDepartment,
   uniqueLocationsFromPhysicians,
 } from '../mappers';
-import type { PhysicianItem } from '../schemas';
 import {
   getMockDepartmentsResponse,
   getMockLocationsResponse,
@@ -42,8 +41,11 @@ import {
   locationsQuerySchema,
   physicianByPathQuerySchema,
   physiciansQuerySchema,
+  type LocationItem,
+  type PhysicianItem,
 } from '../schemas';
 import type { Department, LocationSummary, Physician } from '../types';
+import { fieldString, normalizeId } from '@/lib/utils';
 
 function wrapError(action: string, error: unknown): never {
   if (error instanceof SitecoreFetchError) {
@@ -73,6 +75,14 @@ function activeLanguage() {
   return sitecoreLanguage(getKioskLocale());
 }
 
+function withEnglishLocationContent(items: LocationItem[], englishItems: LocationItem[]): LocationItem[] {
+  const englishById = new Map(englishItems.map((item) => [normalizeId(item.id), item]));
+  return items.map((item) => {
+    if (fieldString(item.locationTitle) || fieldString(item.streetAddress)) return item;
+    return englishById.get(normalizeId(item.id)) ?? item;
+  });
+}
+
 export async function getLocations(): Promise<LocationSummary[]> {
   try {
     const language = activeLanguage();
@@ -84,7 +94,17 @@ export async function getLocations(): Promise<LocationSummary[]> {
           first: DEFAULT_CHILD_PAGE_SIZE,
         });
     const parsed = locationsQuerySchema.parse(raw);
-    return (parsed.item?.children?.results ?? []).map(mapLocation);
+    let items = parsed.item?.children?.results ?? [];
+    if (language !== 'en' && !isMockDataEnabled()) {
+      const englishRaw = await requestLive(locationsDocument(), 'GetLocations', {
+        path: LOCATIONS_ROOT_PATH,
+        language: 'en',
+        first: DEFAULT_CHILD_PAGE_SIZE,
+      });
+      const englishItems = locationsQuerySchema.parse(englishRaw).item?.children?.results ?? [];
+      items = withEnglishLocationContent(items, englishItems);
+    }
+    return items.map(mapLocation);
   } catch (error) {
     wrapError('getLocations', error);
   }
@@ -108,10 +128,15 @@ function withEnglishLocationFallbacks(
 ): PhysicianItem[] {
   const englishByName = new Map(englishItems.map((item) => [item.name, item]));
   return items.map((item) => {
-    if (mapPhysician(item, byId).locations.length) return item;
     const english = englishByName.get(item.name);
-    if (!english?.servingLocations) return item;
-    return { ...item, servingLocations: english.servingLocations };
+    let next = item;
+    if (!mapPhysician(item, byId).locations.length && english?.servingLocations) {
+      next = { ...next, servingLocations: english.servingLocations };
+    }
+    if (!fieldString(item.languagesSpoken) && english?.languagesSpoken) {
+      next = { ...next, languagesSpoken: english.languagesSpoken };
+    }
+    return next;
   });
 }
 

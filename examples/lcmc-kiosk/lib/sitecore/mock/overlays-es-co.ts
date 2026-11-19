@@ -4,149 +4,159 @@ export const PHYSICIAN_ES_OVERLAY: Record<string, FieldOverlay> = {
   "E2D8BE5C-28C9-4D8D-8A54-7E8AD0EE9F9D": {
     "Credentials": "Médica",
     "Specialty": "Atención de urgencias",
-    "PhysicianBio": "<p>La Dra. Broussard brinda atención sin cita previa en la Costa Oeste en Gretna Urgent Care y remite a los pacientes a West Jefferson cuando es necesario.</p>",
+    "PhysicianBio": "<p>La Dra. Broussard brinda atención de urgencias sin cita previa en Greendale Health Center, Lincoln Avenue Health Center, y Germantown Health Center para enfermedades y lesiones que no ponen en riesgo la vida.</p>",
     "LanguagesSpoken": "Inglés, Español"
   },
   "18C8E53B-FC1D-42A7-AED8-9606093821BD": {
-    "PhysicianFullName": "André Baptiste",
     "Credentials": "Médico",
     "Specialty": "Medicina familiar",
-    "PhysicianBio": "<p>El Dr. Baptiste brinda atención primaria y medicina hospitalaria para familias en New Orleans East Hospital.</p>",
-    "LanguagesSpoken": "Inglés, Español"
+    "PhysicianBio": "<p>El Dr. Baptiste brinda atención primaria para familias en Good Hope Health Center y McKinley Health Center.</p>",
+    "LanguagesSpoken": "Inglés, Español",
+    "PhysicianFullName": "André Baptiste"
   },
   "6937D8FE-5DB0-42B0-A6E3-101164D23381": {
     "Credentials": "Médica",
     "Specialty": "Oncología médica",
-    "PhysicianBio": "<p>La Dra. Chauvin trata tumores sólidos y coordina la atención oncológica en East Jefferson, incluido el acceso a los recursos del Centro Oncológico de LSU LCMC Health.</p>",
+    "PhysicianBio": "<p>La Dra. Chauvin trata tumores sólidos y coordina la atención oncológica en Sargeant Health Center y Moorland Reserve Health Center.</p>",
     "LanguagesSpoken": "Inglés, Español"
   },
   "2ED27C52-728D-48EA-B525-9243D1A1474D": {
     "Credentials": "Médico",
     "Specialty": "Cirugía ortopédica",
-    "PhysicianBio": "<p>El Dr. LeBlanc es un cirujano ortopédico en West Jefferson Medical Center, donde trata fracturas, articulaciones y lesiones deportivas en la Westbank.</p>",
+    "PhysicianBio": "<p>El Dr. LeBlanc es cirujano ortopédico en Westbrook Health Center y Lincoln Avenue Health Center, donde trata fracturas, articulaciones y lesiones deportivas.</p>",
     "LanguagesSpoken": "Inglés, Español"
   },
   "DC33E86F-1EB9-4D8D-BCB8-9D3D668D9A71": {
     "Credentials": "Médica, FACC",
     "Specialty": "Cardiología",
-    "PhysicianBio": "<p>La Dra. Landry es una cardióloga certificada por la junta en East Jefferson General Hospital, con enfoque en insuficiencia cardíaca y cardiología preventiva para pacientes de Jefferson Parish.</p>",
+    "PhysicianBio": "<p>La Dra. Landry es una cardióloga certificada por la junta en Springdale Health Center y Calhoun Health Center, con enfoque en insuficiencia cardíaca y cardiología preventiva.</p>",
     "LanguagesSpoken": "Inglés, Español"
   },
   "8321651D-52FD-4065-B987-9ACB012E1EC9": {
+    "Credentials": "Médica",
     "Specialty": "Atención de urgencias",
-    "PhysicianBio": "<p>La Dra. Fontenot ofrece atención de urgencias sin cita previa en Magazine Street y remite a los pacientes a Touro o Manning Family Children's cuando se necesita un nivel de atención más alto.</p>",
+    "PhysicianBio": "<p>La Dra. Fontenot brinda atención de urgencias sin cita previa en Lafayette Clinic y Shorewood Clinic para enfermedades y lesiones que no ponen en riesgo la vida.</p>",
     "LanguagesSpoken": "Inglés, Español"
   },
   "7CA19BFB-5E15-4792-8C42-CDC00553EF45": {
     "Credentials": "Médico",
     "Specialty": "Medicina de Emergencias Pediátricas",
-    "PhysicianBio": "<p>El Dr. Hebert atiende en el departamento de emergencias pediátricas de Manning Family Children's, tratando afecciones urgentes y emergentes en niños.</p>",
+    "PhysicianBio": "<p>El Dr. Hebert brinda atención pediátrica urgente y de emergencia en Kewaskum Health Center y Germantown Health Center.</p>",
     "LanguagesSpoken": "Inglés, Español"
   },
   "1AEA0D8F-CE54-4E18-81D2-08CD40E03DE7": {
     "Credentials": "Médico",
     "Specialty": "Otorrinolaringología",
-    "PhysicianBio": "<p>El Dr. Lirette es un cirujano otorrinolaringólogo certificado por la junta en West Jefferson Medical Center, enfocado en la atención de senos paranasales, audición y garganta para las familias de Marrero y Westbank.</p>",
+    "PhysicianBio": "<p>El Dr. Lirette es un otorrinolaringólogo certificado por la junta en Calhoun Health Center y Sunnyslope Health Center, y atiende a adultos y niños con afecciones del oído, la nariz y la garganta.</p>",
     "LanguagesSpoken": "Inglés, Español, Francés"
   },
   "6EE2EB49-0629-4328-AADF-ECAA24DD69E9": {
+    "Credentials": "Médica",
     "Specialty": "Medicina de Emergencias",
-    "PhysicianBio": "<p>La Dra. Boudreaux es médica de emergencias en Lakeside Hospital, donde atiende afecciones urgentes y emergentes las 24 horas del día.</p>",
+    "PhysicianBio": "<p>La Dra. Boudreaux es médica de emergencias en McKinley Health Center y Forest Home Health Center y atiende afecciones urgentes y emergentes.</p>",
     "LanguagesSpoken": "Inglés, Español"
   },
   "3BDECB7B-C26A-47BD-993D-6A1D06735C07": {
     "Credentials": "Médica",
     "Specialty": "Otorrinolaringología",
-    "PhysicianBio": "<p>La Dra. Moreau es una otorrinolaringóloga certificada por la junta en West Jefferson Medical Center, donde atiende a adultos y niños con afecciones del oído, la nariz y la garganta en la Ribera Oeste.</p>",
+    "PhysicianBio": "<p>La Dra. Moreau es una otorrinolaringóloga certificada por la junta en Springdale Health Center y Moorland Reserve Health Center, y atiende a adultos y niños con afecciones del oído, la nariz y la garganta.</p>",
     "LanguagesSpoken": "Inglés, Español"
   },
   "B2602191-89E2-4052-BAAC-599F68A7D61C": {
+    "Credentials": "Médica",
     "Specialty": "Atención de urgencias",
-    "PhysicianBio": "<p>La Dra. Scott brinda atención médica sin cita en el vecindario en Lakeview Urgent Care, en Harrison Avenue.</p>",
+    "PhysicianBio": "<p>La Dra. Scott brinda atención de urgencias sin cita previa en Mequon Health Center y Germantown Health Center para enfermedades y lesiones que no ponen en riesgo la vida.</p>",
     "LanguagesSpoken": "Inglés"
   },
   "0FB08437-2A65-48A7-B4E8-C77A7FDF9929": {
+    "Credentials": "Médico, FACC",
     "Specialty": "Cardiología",
-    "PhysicianBio": "<p>El Dr. Thibodeaux brinda atención cardíaca y vascular en Lakeview Hospital y en la clínica del corazón y vascular de LCMC Health en Covington.</p>",
+    "PhysicianBio": "<p>El Dr. Thibodeaux es un cardiólogo certificado por la junta en Mequon Health Center y Westbrook Health Center, con enfoque en insuficiencia cardíaca y cardiología preventiva.</p>",
     "LanguagesSpoken": "Inglés, Español"
   },
   "45BB232F-C5C3-47E7-A733-54D35437E56C": {
+    "Credentials": "Médico",
     "Specialty": "Atención de urgencias",
-    "PhysicianBio": "<p>El Dr. Allemand brinda atención de urgencias sin cita previa para los pacientes de St. Charles Parish en la clínica de Luling.</p>",
+    "PhysicianBio": "<p>El Dr. Allemand brinda atención de urgencias sin cita previa en Kewaskum Health Center para enfermedades y lesiones que no ponen en riesgo la vida.</p>",
     "LanguagesSpoken": "Inglés, Español"
   },
   "EAE7EFBC-70F0-4A36-97F0-12E328007151": {
     "Credentials": "Médica",
     "Specialty": "Medicina de Emergencias",
-    "PhysicianBio": "<p>La Dra. Williams es médica de emergencias en New Orleans East Hospital y atiende a pacientes de toda la comunidad de East Bank.</p>",
+    "PhysicianBio": "<p>La Dra. Williams es médica de emergencias en Good Hope Health Center y Forest Home Health Center y atiende afecciones urgentes y emergentes.</p>",
     "LanguagesSpoken": "Inglés"
   },
   "17670664-7606-4200-9077-19D04EDB1CC8": {
     "Credentials": "Médico",
-    "Specialty": "Medicina Familiar",
-    "PhysicianBio": "<p>El Dr. Romero atiende pacientes sin cita previa en Clearview Urgent Care por enfermedades cotidianas y lesiones menores.</p>",
+    "Specialty": "Medicina familiar",
+    "PhysicianBio": "<p>El Dr. Romero brinda atención primaria para familias en Sunnyslope Health Center y Calhoun Health Center.</p>",
     "LanguagesSpoken": "Inglés, Español"
   },
   "F6A834BF-656F-4244-A77C-588CED053597": {
+    "Credentials": "Médica",
     "Specialty": "Psiquiatría",
-    "PhysicianBio": "<p>La Dra. Castillo brinda atención de salud conductual para pacientes hospitalizados y en emergencias en University Medical Center New Orleans.</p>",
+    "PhysicianBio": "<p>La Dra. Castillo brinda atención de salud conductual en Sargeant Health Center y Lafayette Clinic.</p>",
     "LanguagesSpoken": "Inglés, Español"
   },
   "4629B22B-5BDF-4632-860D-32AC1922C311": {
     "Credentials": "Médico",
     "Specialty": "Cirugía ortopédica",
-    "PhysicianBio": "<p>El Dr. Fontenot ejerce la cirugía ortopédica en Lakeside Hospital, donde trata articulaciones, lesiones deportivas y fracturas para pacientes de Metairie.</p>",
+    "PhysicianBio": "<p>El Dr. Fontenot es cirujano ortopédico en Greendale Health Center y Moorland Reserve Health Center, donde trata fracturas, articulaciones y lesiones deportivas.</p>",
     "LanguagesSpoken": "Inglés, Español"
   },
   "EA2A312E-7576-4812-B337-75434C428AC9": {
+    "Credentials": "Médico",
     "Specialty": "Atención de urgencias",
-    "PhysicianBio": "<p>El Dr. Tran trata enfermedades comunes y lesiones menores en LCMC Health Kenner Urgent Care.</p>",
+    "PhysicianBio": "<p>El Dr. Tran brinda atención de urgencias sin cita previa en Forest Home Health Center para enfermedades y lesiones que no ponen en riesgo la vida.</p>",
     "LanguagesSpoken": "Inglés"
   },
   "123966CA-21BE-4B75-B331-BDBB876B0BA1": {
     "Credentials": "Médica",
     "Specialty": "Oncología médica",
-    "PhysicianBio": "<p>La Dra. Doucet trata a pacientes con cáncer en West Jefferson Medical Center y coordina la atención con los programas de oncología del sistema.</p>",
+    "PhysicianBio": "<p>La Dra. Doucet trata tumores sólidos y coordina la atención oncológica en Springdale Health Center y Sargeant Health Center.</p>",
     "LanguagesSpoken": "Inglés, Español"
   },
   "D3BB7FD1-6EB6-404F-88AD-2BD0E2A95DBF": {
+    "Credentials": "Médico, FACS",
     "Specialty": "Cirugía de Trauma",
-    "PhysicianBio": "<p>El Dr. Hassan es cirujano de trauma en University Medical Center New Orleans, el Centro de Trauma de Nivel I de la región.</p>",
+    "PhysicianBio": "<p>El Dr. Hassan es cirujano de trauma y atención aguda en McKinley Health Center y Sargeant Health Center.</p>",
     "LanguagesSpoken": "Inglés"
   },
   "081E7167-327B-44A2-A195-1525566BF9BD": {
-    "Credentials": "Médico",
+    "Credentials": "Médica",
     "Specialty": "Atención de urgencias",
-    "PhysicianBio": "<p>La Dra. Morales brinda atención de urgencias sin cita previa en la clínica de Chalmette para enfermedades y lesiones que no ponen en riesgo la vida.</p>",
+    "PhysicianBio": "<p>La Dra. Morales brinda atención de urgencias sin cita previa en Lincoln Avenue Health Center para enfermedades y lesiones que no ponen en riesgo la vida.</p>",
     "LanguagesSpoken": "Inglés, Español"
   },
   "A1E83676-D629-464A-B490-5D7E62A116C1": {
+    "Credentials": "Médica, FAAP",
     "Specialty": "Pediatría",
-    "PhysicianBio": "<p>La Dra. Raman es pediatra en Manning Family Children's y brinda atención a bebés, niños y adolescentes, tanto para controles de bienestar como para necesidades médicas complejas.</p>",
+    "PhysicianBio": "<p>La Dra. Raman es pediatra en Shorewood Clinic y Lafayette Clinic y brinda atención a bebés, niños y adolescentes.</p>",
     "LanguagesSpoken": "Inglés"
   },
   "137F73FD-BFE6-41C9-99E0-0DC8BCF633F2": {
     "Credentials": "Médica",
     "Specialty": "Neurología",
-    "PhysicianBio": "<p>La Dra. Guidry es neuróloga en el Instituto de Neurociencias de Lakeview Hospital, donde trata accidentes cerebrovasculares, dolores de cabeza y trastornos del movimiento.</p>",
+    "PhysicianBio": "<p>La Dra. Guidry es neuróloga en Germantown Health Center y Mequon Health Center, donde trata accidentes cerebrovasculares, dolores de cabeza y trastornos del movimiento.</p>",
     "LanguagesSpoken": "Inglés, Español"
   },
   "FFAD9DD3-780F-46F8-A075-3003E3215D23": {
-    "PhysicianFullName": "Sara Melancon",
     "Credentials": "Médica, FACOG",
     "Specialty": "Obstetricia y ginecología",
-    "PhysicianBio": "<p>La Dra. Melancon ejerce obstetricia y ginecología en Touro, lo que incluye atención prenatal, trabajo de parto y parto.</p>",
-    "LanguagesSpoken": "Inglés, Español"
+    "PhysicianBio": "<p>La Dra. Melancon ejerce obstetricia y ginecología en Shorewood Clinic y Westbrook Health Center, lo que incluye atención prenatal.</p>",
+    "LanguagesSpoken": "Inglés, Español",
+    "PhysicianFullName": "Sara Melancon"
   },
   "7E2D326D-0B6D-45FC-BF39-363262811AB4": {
+    "Credentials": "Médica",
     "Specialty": "Atención de urgencias",
-    "PhysicianBio": "<p>La Dra. Ricard atiende pacientes sin cita previa en Marrero Urgent Care y conecta a las familias de Westbank con West Jefferson cuando se necesita seguimiento.</p>",
+    "PhysicianBio": "<p>La Dra. Ricard brinda atención de urgencias sin cita previa en Westbrook Health Center y Greendale Health Center para enfermedades y lesiones que no ponen en riesgo la vida.</p>",
     "LanguagesSpoken": "Inglés, Español"
   },
   "84E0EEF6-ABC0-470D-B37B-92020BD85F1C": {
     "Credentials": "Médico",
     "Specialty": "Gastroenterología",
-    "PhysicianBio": "<p>El Dr. Nguyen brinda atención digestiva y endoscopia en Touro para pacientes de Uptown y áreas cercanas de Nueva Orleans.</p>",
+    "PhysicianBio": "<p>El Dr. Nguyen brinda atención digestiva y endoscopia en Calhoun Health Center y Sargeant Health Center.</p>",
     "LanguagesSpoken": "Inglés"
   }
 };
@@ -209,7 +219,7 @@ export const LOCATION_ES_OVERLAY: Record<string, FieldOverlay> = {
   "F8BB49F9-FB70-4431-8E6B-565D48EDD209": {
     "LocationType": "Clínica",
     "HoursText": "Lunes a viernes, 8 a.m. a 5 p.m. Confirme el horario actual antes de su visita.",
-    "ParkingInfo": "Hay estacionamiento gratuito en el lugar.",
+    "ParkingInfo": "Hay estacionamiento en la calle y en el lote cerca de la clínica.",
     "VisitorInfo": "<p>Regístrese en la recepción. Traiga una identificación con foto y, si es posible, su tarjeta de seguro.</p>",
     "LocationDescription": "<p>Lafayette Clinic es una clínica de Froedtert &amp; MCW Community Physicians en Milwaukee, Wisconsin.</p>",
     "City": "Milwaukee",
@@ -263,7 +273,7 @@ export const LOCATION_ES_OVERLAY: Record<string, FieldOverlay> = {
   "5CFFA936-4BC9-4C40-970A-0CFDC2B69CC6": {
     "LocationType": "Clínica",
     "HoursText": "Lunes a viernes, 8 a.m. a 5 p.m. Confirme el horario actual antes de su visita.",
-    "ParkingInfo": "Hay estacionamiento gratuito en el lugar.",
+    "ParkingInfo": "Hay estacionamiento en la calle y en el lote cerca de la clínica.",
     "VisitorInfo": "<p>Regístrese en la recepción. Traiga una identificación con foto y, si es posible, su tarjeta de seguro.</p>",
     "LocationDescription": "<p>Shorewood Clinic es una clínica de Froedtert &amp; MCW Community Physicians en Shorewood, Wisconsin.</p>",
     "City": "Shorewood",
