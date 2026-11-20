@@ -1,5 +1,5 @@
 ﻿generatedAt: "2026-03-20T09:00:00Z"
-lastUpdatedAt: "2026-11-18T12:10:00Z"
+lastUpdatedAt: "2026-11-20T12:40:00Z"
 lastUpdatedBy: "cursor-agent"
 
 project:
@@ -12734,3 +12734,39 @@ mcwLinkColumnsBands:
     - "Item names left unchanged (Childrens Hospital, East Jefferson, etc.). Images unchanged."
   pendingManual:
     - "Publish /sitecore/content/lcmc/mcw/Data/Link Columns Bands so Home shows MCW clinic columns"
+
+mcwPediatricsHealthTopics:
+  checkedAt: "2026-11-20T12:40:00Z"
+  siteName: "mcw"
+  parentPath: "/sitecore/content/lcmc/mcw/Home/Our Services/Pediatrics and Child Health"
+  parentItemId: "{6F0D7136-81AD-4D53-A794-C1BEB3057542}"
+  branchId: "{5BD129D5-9426-42D2-93CB-778E7ED9E373}"
+  branchName: "Health Topic"
+  pageTemplateId: "{D77937AC-BAE4-4EB0-8D7E-69EC09D5BBFC}"
+  pageDesignId: "{A84AD640-D014-4969-B22F-1D7FD8D236AD}"
+  status: "complete"
+  notes:
+    - "2026-11-20: Created nine Services Page articles from the Health Topic branch. The requested template id {8F36DF2D-4831-4BE8-B9FC-B574D161E9AC} is the branch $name item, not a template. Create used the branch id."
+    - "Each article has pageTitle, pageShortTitle, pageHeaderTitle, pageSubtitle, pageSummary, Detail, metadata, and Open Graph text. Page Design matches the branch. image, pageThumbnail, and ogImage were left empty."
+    - "Items are in workflow Draft and are not published."
+  items:
+    - name: "Fever When to Call the Doctor"
+      itemId: "{945CA802-D76A-4267-9B62-DB9BC1EE831F}"
+    - name: "Urgent Care the ER or Your Pediatrician"
+      itemId: "{76C2027B-4A81-4615-951A-FFA06BB0088A}"
+    - name: "Repeated Ear Infections Stomachaches and Headaches"
+      itemId: "{B351A194-FA9C-44A4-99D5-204A58674F6E}"
+    - name: "Milestones and Speech Concerns"
+      itemId: "{16D025E0-7281-4CE1-9DA3-DBBDE0C0ECF7}"
+    - name: "When Your Teen Seems Anxious or Overwhelmed"
+      itemId: "{55A4E8B0-9419-4CE2-9AD6-4B6515883B35}"
+    - name: "After a Specialist Referral"
+      itemId: "{18720BEA-0B30-4CF6-B597-8B0E3738A6C3}"
+    - name: "Questions After a New Diagnosis"
+      itemId: "{AE3C6D4B-1F30-4988-B3AD-117F8CD86AE2}"
+    - name: "Preparing for a Visit Test or Procedure"
+      itemId: "{9EA86E4E-FF6C-43D0-936F-29C21B868B15}"
+    - name: "When You Are Worried but Unsure"
+      itemId: "{E95C266B-E2D1-4A68-A1E9-2EBEFEDD7E09}"
+  pendingManual:
+    - "Publish the nine Health Topic pages under Pediatrics and Child Health so they appear on Edge and preview"

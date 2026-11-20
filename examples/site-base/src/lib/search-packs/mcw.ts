@@ -17,6 +17,17 @@ const NURSE_HOTLINE = '/For-Patients/Free-Ask-a-Nurse-Hotline';
 const WHERE_TO_SEEK_CARE = '/Our-Services/Emergency-Care/Where-to-Seek-Care';
 const APPOINTMENTS = '/For-Patients/Patient-Appointments';
 const FIND_A_PROVIDER = '/Find-a-Provider';
+const HEALTH_TOPICS = '/our-services/pediatrics-and-child-health';
+const TOPIC_FEVER = `${HEALTH_TOPICS}/fever-when-to-call-the-doctor`;
+const TOPIC_WHERE = `${HEALTH_TOPICS}/urgent-care-the-er-or-your-pediatrician`;
+const TOPIC_RECURRING = `${HEALTH_TOPICS}/repeated-ear-infections-stomachaches-and-headaches`;
+const TOPIC_MILESTONES = `${HEALTH_TOPICS}/milestones-and-speech-concerns`;
+const TOPIC_TEEN = `${HEALTH_TOPICS}/when-your-teen-seems-anxious-or-overwhelmed`;
+const TOPIC_REFERRAL = `${HEALTH_TOPICS}/after-a-specialist-referral`;
+const TOPIC_DIAGNOSIS = `${HEALTH_TOPICS}/questions-after-a-new-diagnosis`;
+const TOPIC_PREPARE = `${HEALTH_TOPICS}/preparing-for-a-visit-test-or-procedure`;
+const TOPIC_UNSURE = `${HEALTH_TOPICS}/when-you-are-worried-but-unsure`;
+const HEALTH_TOPIC_CRUMB = ['Our Services', 'Pediatrics and Child Health'];
 
 const ENT_PHYSICIAN_CITATIONS: AiCitation[] = [
   {
@@ -216,6 +227,233 @@ const catalog: SearchResultItem[] = [
       'sore throat',
       'fever',
       'earache',
+    ],
+    isNew: true,
+  }),
+  item({
+    id: 'mcw-topic-fever',
+    kbId: 'TOPIC',
+    title: 'My child has a fever. When should I call the doctor?',
+    subtitle: 'Pediatrics and Child Health',
+    description:
+      'What to have ready when a child is fighting a fever, and when to call the pediatrician, go to urgent care, or seek emergency care.',
+    href: TOPIC_FEVER,
+    lob: 'pediatrics',
+    perils: ['pediatrics'],
+    topics: ['fever', 'child'],
+    searchBuckets: ['pediatrics', 'health-topics', 'fever'],
+    breadcrumb: [...HEALTH_TOPIC_CRUMB, 'Fever'],
+    matchTerms: [
+      'fever',
+      'fighting a fever',
+      'temperature',
+      'when to call',
+      'infant fever',
+      'child',
+      'son',
+      'daughter',
+      'pediatrician',
+    ],
+    isNew: true,
+  }),
+  item({
+    id: 'mcw-topic-where',
+    kbId: 'TOPIC',
+    title: 'Should we go to urgent care, the ER, or call our pediatrician?',
+    subtitle: 'Pediatrics and Child Health',
+    description:
+      'A scannable guide for breathing trouble, a minor cut, or a cough that will not quit — clinic, urgent care, or the emergency department.',
+    href: TOPIC_WHERE,
+    lob: 'pediatrics',
+    perils: ['pediatrics'],
+    topics: ['where-to-go', 'child'],
+    searchBuckets: ['pediatrics', 'health-topics', 'urgent', 'where-to-go'],
+    breadcrumb: [...HEALTH_TOPIC_CRUMB, 'Where to go'],
+    matchTerms: [
+      'urgent care',
+      'emergency room',
+      'er',
+      'pediatrician',
+      'where should we go',
+      'breathing trouble',
+      'minor cut',
+      'persistent cough',
+      'child',
+    ],
+    isNew: true,
+  }),
+  item({
+    id: 'mcw-topic-recurring',
+    kbId: 'TOPIC',
+    title: 'My child keeps getting ear infections, stomachaches, or headaches',
+    subtitle: 'Pediatrics and Child Health',
+    description:
+      'What to write down when ear infections, stomachaches, or headaches keep coming back, and when to ask for an evaluation.',
+    href: TOPIC_RECURRING,
+    lob: 'pediatrics',
+    perils: ['pediatrics'],
+    topics: ['recurring', 'child'],
+    searchBuckets: ['pediatrics', 'health-topics', 'recurring'],
+    breadcrumb: [...HEALTH_TOPIC_CRUMB, 'Symptoms that keep returning'],
+    matchTerms: [
+      'ear infection',
+      'ear infections',
+      'earache',
+      'stomachache',
+      'stomachaches',
+      'headache',
+      'headaches',
+      'keeps getting',
+      'child',
+    ],
+    isNew: true,
+  }),
+  item({
+    id: 'mcw-topic-milestones',
+    kbId: 'TOPIC',
+    title: 'My child isn’t meeting a milestone or is hard to understand',
+    subtitle: 'Pediatrics and Child Health',
+    description:
+      'How a development evaluation works, what to bring, and where to start when speech is hard to understand or a milestone is late.',
+    href: TOPIC_MILESTONES,
+    lob: 'pediatrics',
+    perils: ['pediatrics'],
+    topics: ['development', 'child'],
+    searchBuckets: ['pediatrics', 'health-topics', 'development'],
+    breadcrumb: [...HEALTH_TOPIC_CRUMB, 'Milestones and speech'],
+    matchTerms: [
+      'milestone',
+      'milestones',
+      'development',
+      'speech',
+      'hard to understand',
+      'not talking',
+      'language delay',
+      'child',
+    ],
+    isNew: true,
+  }),
+  item({
+    id: 'mcw-topic-teen',
+    kbId: 'TOPIC',
+    title: 'My teen seems anxious, withdrawn, or overwhelmed',
+    subtitle: 'Pediatrics and Child Health',
+    description:
+      'Signs of anxiety or withdrawal in teenagers, ways to open a conversation, and how to find support.',
+    href: TOPIC_TEEN,
+    lob: 'pediatrics',
+    perils: ['pediatrics'],
+    topics: ['teen', 'child'],
+    searchBuckets: ['pediatrics', 'health-topics', 'teen'],
+    breadcrumb: [...HEALTH_TOPIC_CRUMB, 'Teen anxiety'],
+    matchTerms: [
+      'teen',
+      'teenager',
+      'anxious',
+      'anxiety',
+      'withdrawn',
+      'overwhelmed',
+      'depression',
+      'mood',
+    ],
+    isNew: true,
+  }),
+  item({
+    id: 'mcw-topic-referral',
+    kbId: 'TOPIC',
+    title: 'We’ve been referred to a specialist. What happens next?',
+    subtitle: 'Pediatrics and Child Health',
+    description:
+      'How a pediatric referral works: scheduling, records, the first specialist visit, and questions to ask.',
+    href: TOPIC_REFERRAL,
+    lob: 'pediatrics',
+    perils: ['pediatrics'],
+    topics: ['referral', 'child'],
+    searchBuckets: ['pediatrics', 'health-topics', 'referral'],
+    breadcrumb: [...HEALTH_TOPIC_CRUMB, 'After a referral'],
+    matchTerms: [
+      'referred',
+      'referral',
+      'specialist',
+      'what happens next',
+      'first visit',
+      'records',
+      'child',
+    ],
+    isNew: true,
+  }),
+  item({
+    id: 'mcw-topic-diagnosis',
+    kbId: 'TOPIC',
+    title: 'My child has a new diagnosis. What should I ask?',
+    subtitle: 'Pediatrics and Child Health',
+    description:
+      'An appointment checklist after a new diagnosis, and how the care team helps a family coordinate the next steps.',
+    href: TOPIC_DIAGNOSIS,
+    lob: 'pediatrics',
+    perils: ['pediatrics'],
+    topics: ['diagnosis', 'child'],
+    searchBuckets: ['pediatrics', 'health-topics', 'diagnosis'],
+    breadcrumb: [...HEALTH_TOPIC_CRUMB, 'A new diagnosis'],
+    matchTerms: [
+      'new diagnosis',
+      'diagnosis',
+      'what should I ask',
+      'care team',
+      'checklist',
+      'next steps',
+      'child',
+    ],
+    isNew: true,
+  }),
+  item({
+    id: 'mcw-topic-prepare',
+    kbId: 'TOPIC',
+    title: 'How do I prepare my child for a visit, test, or procedure?',
+    subtitle: 'Pediatrics and Child Health',
+    description:
+      'Age-appropriate ways to explain a clinic visit, test, or procedure so a child knows what will happen and feels more comfortable.',
+    href: TOPIC_PREPARE,
+    lob: 'pediatrics',
+    perils: ['pediatrics'],
+    topics: ['preparation', 'child'],
+    searchBuckets: ['pediatrics', 'health-topics', 'preparation'],
+    breadcrumb: [...HEALTH_TOPIC_CRUMB, 'Preparing for a visit'],
+    matchTerms: [
+      'prepare',
+      'preparation',
+      'procedure',
+      'blood test',
+      'lab test',
+      'before a visit',
+      'child life',
+      'child',
+    ],
+    isNew: true,
+  }),
+  item({
+    id: 'mcw-topic-unsure',
+    kbId: 'TOPIC',
+    title: 'What if I’m worried but don’t know whether it’s serious?',
+    subtitle: 'Pediatrics and Child Health',
+    description:
+      'Call the care team when you are unsure. This guide lists the warning signs that should not wait for a callback.',
+    href: TOPIC_UNSURE,
+    lob: 'pediatrics',
+    perils: ['pediatrics'],
+    topics: ['unsure', 'child'],
+    searchBuckets: ['pediatrics', 'health-topics', 'unsure', 'urgent'],
+    breadcrumb: [...HEALTH_TOPIC_CRUMB, 'When you are unsure'],
+    matchTerms: [
+      'worried',
+      'unsure',
+      'not sure',
+      'is it serious',
+      'warning signs',
+      'what if',
+      'child',
+      'son',
+      'daughter',
     ],
     isNew: true,
   }),
@@ -455,6 +693,15 @@ export const mcwSearchPack: SearchSitePack = {
       primary: 'Primary care',
       directory: 'Directory',
       booking: 'Booking',
+      fever: 'Fever',
+      'where-to-go': 'Where to go',
+      recurring: 'Symptoms that return',
+      development: 'Development',
+      teen: 'Teens',
+      referral: 'Referral',
+      diagnosis: 'Diagnosis',
+      preparation: 'Preparing for a visit',
+      unsure: 'When you are unsure',
     },
   },
   bucketSynonyms: {
@@ -472,6 +719,16 @@ export const mcwSearchPack: SearchSitePack = {
     ],
     'sore-throat': ['sore throat', 'strep', 'tonsillitis'],
     pediatrics: ['pediatric', 'pediatrics', 'pediatrician', 'child', 'children', 'son', 'daughter', 'kid'],
+    'health-topics': ['health topic', 'pediatrics and child health'],
+    fever: ['fever', 'temperature', 'fighting a fever'],
+    'where-to-go': ['urgent care', 'emergency room', 'where should we go', 'breathing trouble'],
+    recurring: ['ear infection', 'ear infections', 'stomachache', 'stomachaches', 'headache', 'headaches'],
+    development: ['milestone', 'milestones', 'hard to understand', 'speech', 'developmental'],
+    teen: ['teen', 'teenager', 'anxious', 'withdrawn', 'overwhelmed'],
+    referral: ['referred', 'referral', 'what happens next'],
+    diagnosis: ['diagnosis', 'new diagnosis'],
+    preparation: ['prepare my child', 'procedure', 'blood test'],
+    unsure: ['worried', 'not sure', 'unsure', 'is it serious'],
     urgent: ['urgent', 'walk-in', 'walk in', 'nurse', 'hotline', 'what do i do'],
     providers: ['doctor', 'physician', 'provider', 'specialist'],
     locations: ['location', 'clinic', 'milwaukee', 'brookfield', 'drexel', 'health center'],
@@ -481,11 +738,12 @@ export const mcwSearchPack: SearchSitePack = {
     cardiology: ['heart', 'cardiac', 'cardiology'],
   },
   popularSearches: [
+    'My child is fighting a fever',
+    'Should we go to urgent care or the ER',
+    'My child keeps getting ear infections',
+    'My teen seems anxious',
+    'We were referred to a specialist',
     'Help me find an ENT',
-    'What do I do if my son has a sore throat',
-    'Pediatrics',
-    'Drexel Town Square',
-    'Book an appointment',
   ],
   insightRules: [
     {
@@ -508,7 +766,21 @@ export const mcwSearchPack: SearchSitePack = {
           'Same-day appointments, urgent care, or the nurse hotline.',
           'ENT if symptoms persist: Gabrielle Moreau, MD and Dominic Lirette, MD.',
         ],
+        learnMoreHref: TOPIC_WHERE,
+        learnMoreLabel: 'Where should we go?',
         citations: [
+          {
+            title: 'Should we go to urgent care, the ER, or call our pediatrician?',
+            href: TOPIC_WHERE,
+            kbId: 'TOPIC',
+            excerpt: 'Breathing trouble, a minor cut, or a cough — which door to use.',
+          },
+          {
+            title: 'What if I’m worried but don’t know whether it’s serious?',
+            href: TOPIC_UNSURE,
+            kbId: 'TOPIC',
+            excerpt: 'Call when you are unsure, and know the signs that should not wait.',
+          },
           {
             title: 'Pediatrics',
             href: PEDIATRICS,
@@ -535,8 +807,282 @@ export const mcwSearchPack: SearchSitePack = {
           },
           ...ENT_PHYSICIAN_CITATIONS,
         ],
-        learnMoreHref: PEDIATRICS,
-        learnMoreLabel: 'Open pediatrics',
+      },
+    },
+    {
+      id: 'child-fever',
+      matchAny: [
+        ['child', 'fever'],
+        ['son', 'fever'],
+        ['daughter', 'fever'],
+        ['baby', 'fever'],
+        ['fighting', 'fever'],
+        ['infant', 'fever'],
+      ],
+      insight: {
+        id: 'ai-mcw-child-fever',
+        headline: 'A fever guide for parents',
+        answer:
+          'When a child is fighting a fever, start with the pediatrics health topic on when to call the doctor. Have the age, the temperature, how you measured it, and other symptoms ready. Call the pediatrician for most fevers. Use urgent care if the office is closed and your child is still drinking and easy to wake. Go to the emergency department for an infant under 3 months with a fever of 100.4°F, trouble breathing, a seizure, or a child who is very hard to wake.',
+        bullets: [
+          'Write down age, temperature, and other symptoms before you call.',
+          'Infants under 3 months with a fever need same-day medical advice.',
+          'Trouble breathing, a seizure, or a child who will not wake is emergency care.',
+        ],
+        citations: [
+          {
+            title: 'My child has a fever. When should I call the doctor?',
+            href: TOPIC_FEVER,
+            kbId: 'TOPIC',
+            excerpt: 'What to have ready, and when a fever needs urgent or emergency care.',
+          },
+          {
+            title: 'Should we go to urgent care, the ER, or call our pediatrician?',
+            href: TOPIC_WHERE,
+            kbId: 'TOPIC',
+            excerpt: 'How to choose a clinic, urgent care, or the emergency department.',
+          },
+          {
+            title: 'Priya Raman, MD',
+            href: '/Find-a-Provider/Priya-Raman-MD',
+            kbId: 'MD',
+            excerpt: 'Pediatrician in the Froedtert & MCW directory.',
+          },
+        ],
+        learnMoreHref: TOPIC_FEVER,
+        learnMoreLabel: 'Read the fever guide',
+      },
+    },
+    {
+      id: 'where-to-go',
+      matchAny: [
+        ['urgent care', 'er'],
+        ['urgent care', 'pediatrician'],
+        ['emergency room'],
+        ['breathing trouble'],
+        ['minor cut'],
+        ['where should we go'],
+      ],
+      insight: {
+        id: 'ai-mcw-where-to-go',
+        headline: 'Clinic, urgent care, or the emergency department',
+        answer:
+          'Call the pediatrician when your child is uncomfortable but still drinking and easy to wake. Urgent care fits a same-day problem — a minor cut, a lasting cough, an earache — when the office is closed and breathing is comfortable. The emergency department is for breathing trouble, bleeding that will not stop, a seizure, or a child who is hard to wake.',
+        bullets: [
+          'Pediatrician for a stable child who can be seen in clinic.',
+          'Urgent care for a same-day problem without emergency warning signs.',
+          'Emergency care for breathing trouble or a child who will not wake.',
+        ],
+        citations: [
+          {
+            title: 'Should we go to urgent care, the ER, or call our pediatrician?',
+            href: TOPIC_WHERE,
+            kbId: 'TOPIC',
+            excerpt: 'Everyday examples: breathing trouble, a minor cut, and a persistent cough.',
+          },
+          {
+            title: 'What if I’m worried but don’t know whether it’s serious?',
+            href: TOPIC_UNSURE,
+            kbId: 'TOPIC',
+            excerpt: 'Warning signs that should not wait for a callback.',
+          },
+        ],
+        learnMoreHref: TOPIC_WHERE,
+        learnMoreLabel: 'Choose where to go',
+      },
+    },
+    {
+      id: 'recurring-symptoms',
+      matchAny: [
+        ['ear infection'],
+        ['ear infections'],
+        ['stomachache'],
+        ['stomachaches'],
+        ['child', 'headache'],
+        ['child', 'headaches'],
+      ],
+      insight: {
+        id: 'ai-mcw-recurring',
+        headline: 'When the same symptom keeps coming back',
+        answer:
+          'One ear infection, stomachache, or headache is common. A pattern is a reason to call the pediatrician. Track the date, how long it lasted, what else was going on, and what helped. Ask for an evaluation if episodes are getting closer together, your child is missing school, or hearing, growth, or morning headaches have changed.',
+        bullets: [
+          'Write down dates, triggers, and what helped.',
+          'Hearing changes with repeated ear infections deserve a closer look.',
+          'Night pain, weight loss, or a sudden severe headache should be seen promptly.',
+        ],
+        citations: [
+          {
+            title: 'My child keeps getting ear infections, stomachaches, or headaches',
+            href: TOPIC_RECURRING,
+            kbId: 'TOPIC',
+            excerpt: 'What to track, and when to ask for an evaluation.',
+          },
+        ],
+        learnMoreHref: TOPIC_RECURRING,
+        learnMoreLabel: 'See what to track',
+      },
+    },
+    {
+      id: 'milestones',
+      matchAny: [['milestone'], ['milestones'], ['hard to understand'], ['speech'], ['developmental']],
+      insight: {
+        id: 'ai-mcw-milestones',
+        headline: 'Start with your pediatrician',
+        answer:
+          'If your child is not meeting a milestone or is hard to understand, start with the pediatrician. A developmental evaluation looks at how your child moves, communicates, and plays. Bring examples, notes from child care, hearing results, and a short video from home. Ask for a hearing check before a speech visit, and call sooner if a skill your child already had has stopped.',
+        bullets: [
+          'Describe what you see in plain language.',
+          'Bring notes, prior records, and a home video.',
+          'A hearing check often comes before a speech evaluation.',
+        ],
+        citations: [
+          {
+            title: 'My child isn’t meeting a milestone or is hard to understand',
+            href: TOPIC_MILESTONES,
+            kbId: 'TOPIC',
+            excerpt: 'How a developmental evaluation works and what to bring.',
+          },
+        ],
+        learnMoreHref: TOPIC_MILESTONES,
+        learnMoreLabel: 'How evaluation works',
+      },
+    },
+    {
+      id: 'teen-anxiety',
+      matchAny: [
+        ['teen', 'anxious'],
+        ['teen', 'anxiety'],
+        ['teen', 'withdrawn'],
+        ['teen', 'overwhelmed'],
+        ['teenager'],
+      ],
+      insight: {
+        id: 'ai-mcw-teen',
+        headline: 'How to start the conversation',
+        answer:
+          'Anxiety and low mood in teenagers often look like irritability, isolation, or a drop in grades. Name what you have noticed and ask what has been hardest. Your pediatrician can screen for anxiety and depression and help you find counseling. If your teen has hurt themselves, has a plan to die, or you cannot keep them safe tonight, call 911 or 988.',
+        bullets: [
+          'Notice sleep, school, friendships, and talk of hopelessness.',
+          'Ask in a low-pressure moment, and listen longer than you speak.',
+          'Call 911 or 988 if you cannot keep your teen safe tonight.',
+        ],
+        citations: [
+          {
+            title: 'My teen seems anxious, withdrawn, or overwhelmed',
+            href: TOPIC_TEEN,
+            kbId: 'TOPIC',
+            excerpt: 'Signs, ways to open a conversation, and where to find support.',
+          },
+        ],
+        learnMoreHref: TOPIC_TEEN,
+        learnMoreLabel: 'Read the teen guide',
+      },
+    },
+    {
+      id: 'specialist-referral',
+      matchAny: [['referred'], ['referral'], ['specialist', 'what happens']],
+      insight: {
+        id: 'ai-mcw-referral',
+        headline: 'What happens after a referral',
+        answer:
+          'A referral means your pediatrician wants another clinician’s expertise. Confirm the reason, how urgent it is, and who places the call. Ask which records will be sent, then bring a medication list and any outside notes. At the first visit, ask what is most likely, what to do if symptoms worsen, and who sends the plan back to your pediatrician.',
+        bullets: [
+          'Know the reason for the referral in one sentence.',
+          'Send records before the visit so tests are not repeated.',
+          'Leave knowing who to call and when results will come.',
+        ],
+        citations: [
+          {
+            title: 'We’ve been referred to a specialist. What happens next?',
+            href: TOPIC_REFERRAL,
+            kbId: 'TOPIC',
+            excerpt: 'Scheduling, records, the first visit, and questions to ask.',
+          },
+        ],
+        learnMoreHref: TOPIC_REFERRAL,
+        learnMoreLabel: 'After a referral',
+      },
+    },
+    {
+      id: 'new-diagnosis',
+      matchAny: [['new diagnosis'], ['diagnosis', 'ask'], ['child', 'diagnosis']],
+      insight: {
+        id: 'ai-mcw-diagnosis',
+        headline: 'Questions for the next appointment',
+        answer:
+          'After a new diagnosis, leave with the name of the condition, the next two steps, and the warning signs that should make you call the same day. Ask who owns the plan when more than one specialist is involved. The care team can help with referrals, authorizations, and a written after-visit summary.',
+        bullets: [
+          'Ask what the next two steps are, and which one happens first.',
+          'Ask which symptoms should not wait until the next visit.',
+          'Ask the pediatrician to reconcile instructions if two clinicians disagree.',
+        ],
+        citations: [
+          {
+            title: 'My child has a new diagnosis. What should I ask?',
+            href: TOPIC_DIAGNOSIS,
+            kbId: 'TOPIC',
+            excerpt: 'An appointment checklist and how care teams coordinate next steps.',
+          },
+        ],
+        learnMoreHref: TOPIC_DIAGNOSIS,
+        learnMoreLabel: 'Questions to ask',
+      },
+    },
+    {
+      id: 'prepare-visit',
+      matchAny: [['prepare'], ['procedure'], ['blood test'], ['before a visit']],
+      insight: {
+        id: 'ai-mcw-prepare',
+        headline: 'Tell your child what will happen',
+        answer:
+          'Children cope better when they know the sequence, what they will feel, and what they still control. Explain a visit the same day for a toddler, and a day or two ahead for a school-age child. Use real words, then describe the feeling. Do not promise there will be no poke unless the clinic has confirmed that. Tell the nurse if a past visit was hard.',
+        bullets: [
+          'Toddlers need a short explanation the same day.',
+          'School-age children do well with a simple sequence and a job to do.',
+          'Include teenagers in the plan and offer them privacy for questions.',
+        ],
+        citations: [
+          {
+            title: 'How do I prepare my child for a visit, test, or procedure?',
+            href: TOPIC_PREPARE,
+            kbId: 'TOPIC',
+            excerpt: 'Age-appropriate tips for reducing uncertainty.',
+          },
+        ],
+        learnMoreHref: TOPIC_PREPARE,
+        learnMoreLabel: 'Prepare for the visit',
+      },
+    },
+    {
+      id: 'worried-unsure',
+      matchAny: [['worried'], ['not sure'], ['unsure'], ['whether', 'serious']],
+      insight: {
+        id: 'ai-mcw-unsure',
+        headline: 'Call when you are unsure',
+        answer:
+          'You do not need a diagnosis to call. Tell the care team your child’s age, the symptom, when it started, and why you are worried. Ask what to watch for overnight. Skip the callback and seek emergency care for trouble breathing, blue lips, a seizure, a child who is very hard to wake, uncontrolled bleeding, or a teen you cannot keep safe.',
+        bullets: [
+          'A call that ends in reassurance is still the right call.',
+          'Lead with age, symptom, and “I am worried because…”.',
+          'Call again or go in if your child looks worse after you spoke with someone.',
+        ],
+        citations: [
+          {
+            title: 'What if I’m worried but don’t know whether it’s serious?',
+            href: TOPIC_UNSURE,
+            kbId: 'TOPIC',
+            excerpt: 'When to contact the care team, and warning signs that should not wait.',
+          },
+          {
+            title: 'Should we go to urgent care, the ER, or call our pediatrician?',
+            href: TOPIC_WHERE,
+            kbId: 'TOPIC',
+            excerpt: 'How to choose the right level of care.',
+          },
+        ],
+        learnMoreHref: TOPIC_UNSURE,
+        learnMoreLabel: 'When you are unsure',
       },
     },
     {
@@ -671,10 +1217,10 @@ export const mcwSearchPack: SearchSitePack = {
     kicker: 'MCW search',
     headingEmpty: 'Find a provider, clinic, or service',
     intro:
-      'Search the way patients ask: find an ENT, decide what to do for a child with a sore throat, or open a Froedtert & MCW clinic.',
-    placeholder: 'Try “find an ENT” or “my son has a sore throat”…',
-    emptyHint: 'Try “Help me find an ENT” or “What do I do if my son has a sore throat.”',
-    resultsHint: ' — try ENT, pediatrics, or a clinic name',
+      'Search the way a parent asks: a child with a fever, where to go tonight, or what happens after a specialist referral.',
+    placeholder: 'Try “my child is fighting a fever” or “find an ENT”…',
+    emptyHint: 'Try “My child is fighting a fever” or “Help me find an ENT.”',
+    resultsHint: ' — try a symptom, a health topic, or a clinic name',
     aiHeading: 'Care guidance',
     citationsHeading: 'Recommended pages',
     facetLob: 'Content type',
@@ -687,7 +1233,7 @@ export const mcwSearchPack: SearchSitePack = {
       },
       {
         title: 'A child is sick',
-        body: 'Search a symptom such as sore throat to see pediatrics, urgent care, and the nurse hotline.',
+        body: 'Search “my child is fighting a fever” or “ear infections” to open a Pediatrics and Child Health topic.',
       },
       {
         title: 'Pick a clinic',

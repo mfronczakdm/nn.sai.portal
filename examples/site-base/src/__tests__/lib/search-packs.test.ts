@@ -2,6 +2,7 @@ import {
   getSearchPack,
   itemMatchesQuery,
   listSearchPackSiteNames,
+  relevanceScore,
   resolveSearchSiteName,
   selectAiSearchInsight,
   toSiteAwareHref,
@@ -281,6 +282,35 @@ describe('MCW catalog', () => {
     expect(hits.some((entry) => entry.id === 'mcw-raman')).toBe(true);
     expect(hits.some((entry) => entry.id === 'mcw-nurse')).toBe(true);
     expect(selectAiSearchInsight(query, pack.insightRules)?.id).toBe('ai-mcw-child-throat');
+    expect(selectAiSearchInsight(query, pack.insightRules)?.learnMoreHref).toBe(
+      '/our-services/pediatrics-and-child-health/urgent-care-the-er-or-your-pediatrician'
+    );
+  });
+
+  it.each([
+    ['My child is fighting a fever', 'mcw-topic-fever', 'ai-mcw-child-fever'],
+    ['Should we go to urgent care or the ER', 'mcw-topic-where', 'ai-mcw-where-to-go'],
+    ['My child keeps getting ear infections', 'mcw-topic-recurring', 'ai-mcw-recurring'],
+    ['My child keeps getting stomachaches', 'mcw-topic-recurring', 'ai-mcw-recurring'],
+    ['My child keeps getting headaches', 'mcw-topic-recurring', 'ai-mcw-recurring'],
+    ['My child is hard to understand', 'mcw-topic-milestones', 'ai-mcw-milestones'],
+    ['My teen seems anxious', 'mcw-topic-teen', 'ai-mcw-teen'],
+    ['We have been referred to a specialist', 'mcw-topic-referral', 'ai-mcw-referral'],
+    ['My child has a new diagnosis', 'mcw-topic-diagnosis', 'ai-mcw-diagnosis'],
+    ['How do I prepare my child for a blood test', 'mcw-topic-prepare', 'ai-mcw-prepare'],
+    ["What if I'm worried but don't know whether it's serious", 'mcw-topic-unsure', 'ai-mcw-unsure'],
+  ])('ranks the pediatrics health topic first for “%s”', (query, itemId, insightId) => {
+    const hits = pack.catalog
+      .filter((entry) => itemMatchesQuery(entry, query, pack.bucketSynonyms))
+      .sort(
+        (a, b) =>
+          relevanceScore(b, query, null, pack.bucketSynonyms, pack.featuredLob) -
+          relevanceScore(a, query, null, pack.bucketSynonyms, pack.featuredLob)
+      );
+    expect(hits[0]?.id).toBe(itemId);
+    expect(hits[0]?.href.startsWith('/our-services/pediatrics-and-child-health/')).toBe(true);
+    expect(selectAiSearchInsight(query, pack.insightRules)?.id).toBe(insightId);
+    expect(selectAiSearchInsight(query, pack.insightRules)?.learnMoreHref).toBe(hits[0]?.href);
   });
 });
 
