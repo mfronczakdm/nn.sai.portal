@@ -83,6 +83,7 @@ import * as StructuredData from 'src/components/structured-data/StructuredData';
 import * as SlideCarouseldev from 'src/components/slide-carousel/SlideCarousel.dev';
 import * as slidecarouselprops from 'src/components/slide-carousel/slide-carousel.props';
 import * as Video from 'src/components/site-three/Video';
+import * as version4megamenu from 'src/components/site-three/version4-mega-menu';
 import * as TextSlider from 'src/components/site-three/TextSlider';
 import * as SignupBanner from 'src/components/site-three/SignupBanner';
 import * as ProductPageHeader from 'src/components/site-three/ProductPageHeader';
@@ -409,6 +410,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['SlideCarousel', { ...SlideCarouseldev }],
   ['slide-carousel', { ...slidecarouselprops }],
   ['Video', { ...Video }],
+  ['version4-mega-menu', { ...version4megamenu, componentType: 'client' }],
   ['TextSlider', { ...TextSlider, componentType: 'client' }],
   ['SignupBanner', { ...SignupBanner }],
   ['ProductPageHeader', { ...ProductPageHeader, componentType: 'client' }],

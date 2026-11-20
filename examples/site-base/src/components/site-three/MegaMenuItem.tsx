@@ -14,6 +14,7 @@ import Link from 'next/link';
 import componentMap from '.sitecore/component-map';
 import { MegaMenuToggle, MegaMenuContent, MegaMenuBackButton } from './MegaMenuItemWrapper';
 import { MegaMenuCascadeL1Scope, useMegaMenuCascade } from './MegaMenuCascade';
+import { normalizeMegaMenuTitle, useVersion4MegaMenu } from './version4-mega-menu';
 
 interface Fields {
   Title: Field<string>;
@@ -46,6 +47,7 @@ export const Default = (props: MegaMenuItemProps) => {
   const { page } = props;
   const isPageEditing = page?.mode?.isEditing;
   const cascade = useMegaMenuCascade();
+  const version4Menu = useVersion4MegaMenu();
   const t = useTranslations();
   const featuredProduct = props.fields?.FeaturedProduct;
   const menuId = `mega-menu-${props.params?.DynamicPlaceholderId || 'default'}`;
@@ -81,6 +83,10 @@ export const Default = (props: MegaMenuItemProps) => {
   }
 
   if (props.params?.isSimpleLink) {
+    if (version4Menu) {
+      return null;
+    }
+
     return (
       <li
         className={`font-(family-name:--font-accent) font-medium ${props.params?.styles}`}
@@ -105,11 +111,25 @@ export const Default = (props: MegaMenuItemProps) => {
     );
   }
 
+  const menuTitle =
+    trimFieldValue(props.fields?.Title?.value) || trimFieldValue(props.fields?.Link?.value?.text);
+  const normalizedTitle = normalizeMegaMenuTitle(menuTitle);
+  const openedByVersion4Label =
+    version4Menu?.activeTitle != null &&
+    normalizeMegaMenuTitle(version4Menu.activeTitle) === normalizedTitle;
+
   return (
     <MegaMenuToggle
       menuId={menuId}
       className={`font-(family-name:--font-accent) font-medium ${props.params?.styles}`}
       trigger={<ContentSdkText field={props.fields?.Title} />}
+      expanded={openedByVersion4Label}
+      hideTrigger={Boolean(version4Menu)}
+      onHoverStart={() => {
+        if (version4Menu && !openedByVersion4Label) {
+          version4Menu.setActiveTitle(null);
+        }
+      }}
     >
       <MegaMenuContent menuId={menuId}>
         <div className="grid lg:grid-cols-[2fr_2fr_3fr] gap-8 items-start pt-18 pl-8 pb-8 lg:pt-8 lg:pb-0 text-left">

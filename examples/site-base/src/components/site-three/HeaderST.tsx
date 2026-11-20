@@ -17,6 +17,11 @@ import { HeaderPreviewSearch } from './non-sitecore/HeaderPreviewSearch';
 import { ComponentProps } from 'lib/component-props';
 import { MobileMenuWrapper } from './MobileMenuWrapper';
 import { MegaMenuCascadeProvider } from './MegaMenuCascade';
+import {
+  useVersion4MegaMenu,
+  version4MegaMenuAliases,
+  Version4MegaMenuProvider,
+} from './version4-mega-menu';
 import { HeaderSTAuthControls, useHeaderSTNavigationVisibility } from './HeaderSTAuthControls';
 import { cn } from '@/lib/utils';
 import { usePathname, useSearchParams } from 'next/navigation';
@@ -1469,21 +1474,19 @@ const HeaderSTVersion4View = (props: HeaderSTViewProps) => {
           </div>
         </div>
 
+        <Version4MegaMenuProvider>
         <div
           data-header-st-row="primary"
           className="w-full min-w-0 border-b border-border/40 bg-background"
         >
           <div className="mx-auto flex w-full max-w-[100rem] items-center gap-4 px-4 py-3 sm:px-6 lg:px-8">
             {showNavigation ? (
-              <ul
-                data-header-st-nav="primary"
-                className={cn(
-                  'm-0 hidden min-w-0 flex-1 list-none flex-row flex-nowrap items-center justify-center gap-1 overflow-visible p-0 lg:flex',
-                  '[&>li]:w-auto [&>li]:max-w-none [&>li]:shrink-0 [&>li]:grow-0 [&>li]:basis-auto'
-                )}
-              >
-                {renderPrimaryLinks()}
-              </ul>
+              <Version4PrimaryNavigation
+                rendering={props.rendering}
+                page={props.page}
+                componentMap={componentMap}
+                placeholderId={params?.DynamicPlaceholderId}
+              />
             ) : (
               <div className="flex-1" />
             )}
@@ -1495,21 +1498,56 @@ const HeaderSTVersion4View = (props: HeaderSTViewProps) => {
               {version4FindADoctor.text}
             </Link>
           </div>
-          {showNavigation ? (
-            <div className="hidden [.partial-editing-mode_&]:block">
-              <ul className="mx-auto flex w-full max-w-[100rem] list-none flex-row flex-wrap items-center gap-1 px-4 py-2 sm:px-6 lg:px-8">
-                <AppPlaceholder
-                  name={`header-navigation-${params?.DynamicPlaceholderId}`}
-                  rendering={props.rendering}
-                  page={props.page}
-                  componentMap={componentMap}
-                />
-              </ul>
-            </div>
-          ) : null}
         </div>
+        </Version4MegaMenuProvider>
       </div>
     </section>
+  );
+};
+
+const Version4PrimaryNavigation = ({
+  rendering,
+  page,
+  componentMap,
+  placeholderId,
+}: {
+  rendering: HeaderSTViewProps['rendering'];
+  page: HeaderSTViewProps['page'];
+  componentMap: ReturnType<typeof getComponentMap>;
+  placeholderId?: string;
+}) => {
+  const menu = useVersion4MegaMenu();
+
+  return (
+    <ul
+      data-header-st-nav="primary"
+      className={cn(
+        'm-0 hidden min-w-0 flex-1 list-none flex-row flex-nowrap items-center justify-center gap-1 overflow-visible p-0 lg:flex',
+        '[&>li]:w-auto [&>li]:max-w-none [&>li]:shrink-0 [&>li]:grow-0 [&>li]:basis-auto',
+        '[&>li>a]:whitespace-nowrap [&>li>span]:whitespace-nowrap',
+        '[&>li>a]:px-3 [&>li>a]:py-2 [&>li>a]:text-sm [&>li>a]:font-semibold [&>li>a]:text-primary',
+        '[&>li>span]:px-3 [&>li>span]:py-2 [&>li>span]:text-sm [&>li>span]:font-semibold [&>li>span]:text-primary',
+        '[&>li>a:hover]:underline [&>li>span:hover]:underline',
+        '[&>li[data-mega-trigger=hidden]]:!w-0 [&>li[data-mega-trigger=hidden]]:!max-w-0 [&>li[data-mega-trigger=hidden]]:!basis-0 [&>li[data-mega-trigger=hidden]]:!p-0',
+        '[.partial-editing-mode_&]:!flex [.partial-editing-mode_&]:!flex-col'
+      )}
+      onMouseLeave={() => menu?.setActiveTitle(null)}
+    >
+      {version4PrimaryLinks.map((link) => (
+        <li
+          key={link.text}
+          onMouseEnter={() => menu?.setActiveTitle(version4MegaMenuAliases[link.text] ?? null)}
+        >
+          <Version3UtilityLink text={link.text} href={link.href} className={version4PrimaryLinkClass} />
+        </li>
+      ))}
+      <AppPlaceholder
+        name={`header-navigation-${placeholderId}`}
+        rendering={rendering}
+        page={page}
+        componentMap={componentMap}
+      />
+    </ul>
   );
 };
 

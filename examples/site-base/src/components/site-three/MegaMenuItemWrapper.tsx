@@ -23,17 +23,52 @@ interface MegaMenuToggleProps {
   className?: string;
   trigger: ReactNode;
   children: ReactNode;
+  expanded?: boolean;
+  hideTrigger?: boolean;
+  onHoverStart?: () => void;
 }
 
-export const MegaMenuToggle = ({ className, trigger, children }: MegaMenuToggleProps) => {
+function supportsHoverOpen(): boolean {
+  return (
+    typeof window !== 'undefined' &&
+    typeof window.matchMedia === 'function' &&
+    window.matchMedia('(hover: hover) and (pointer: fine)').matches
+  );
+}
+
+export const MegaMenuToggle = ({
+  className,
+  trigger,
+  children,
+  expanded = false,
+  hideTrigger = false,
+  onHoverStart,
+}: MegaMenuToggleProps) => {
   const { isVisible, setIsVisible, ref: menuRef } = useToggleWithClickOutside<HTMLLIElement>(false);
+  const shown = expanded || isVisible;
 
   return (
-    <MegaMenuContext.Provider value={{ isVisible, setIsVisible }}>
-      <li ref={menuRef} className={className} data-class-change>
+    <MegaMenuContext.Provider value={{ isVisible: shown, setIsVisible }}>
+      <li
+        ref={menuRef}
+        className={className}
+        data-class-change
+        data-mega-trigger={hideTrigger ? 'hidden' : 'visible'}
+        onMouseEnter={() => {
+          onHoverStart?.();
+          if (supportsHoverOpen()) setIsVisible(true);
+        }}
+        onMouseLeave={() => {
+          if (supportsHoverOpen()) setIsVisible(false);
+        }}
+      >
         <span
-          className="inline-block p-4 font-[inherit] whitespace-nowrap cursor-pointer"
-          onClick={() => setIsVisible(!isVisible)}
+          className={`inline-block p-4 font-[inherit] whitespace-nowrap cursor-pointer ${
+            hideTrigger ? 'hidden' : ''
+          }`}
+          onClick={() => setIsVisible(!shown)}
+          aria-expanded={shown}
+          aria-hidden={hideTrigger || undefined}
         >
           {trigger}
         </span>
@@ -60,6 +95,7 @@ export const MegaMenuContent = ({ menuId, children }: MegaMenuContentProps) => {
             ? 'opacity-100 translate-x-0 lg:translate-y-0 pointer-events-auto'
             : 'opacity-0 translate-x-full lg:translate-x-0 lg:translate-y-2 pointer-events-none'
         }
+        lg:-mt-4
         bg-background text-foreground [&_a]:!text-foreground [&_button]:!text-foreground
         transition-all duration-300 ease-in-out
         [.partial-editing-mode_&]:!static [.partial-editing-mode_&]:!opacity-100 [.partial-editing-mode_&]:!translate-0 [.partial-editing-mode_&]:!pointer-events-auto`}

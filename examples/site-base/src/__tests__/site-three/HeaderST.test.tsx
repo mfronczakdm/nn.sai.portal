@@ -1472,12 +1472,12 @@ describe('HeaderST Component', () => {
       expect(screen.getByTestId('mini-cart')).toBeInTheDocument();
     });
 
-    it('keeps the header navigation placeholder available', () => {
+    it('renders mega menu navigation in the second-level row', () => {
       render(<HeaderSTVersion4 {...headerSTPropsVersion4} />);
 
-      const placeholders = screen.getAllByTestId('app-placeholder');
-      expect(placeholders.length).toBeGreaterThan(0);
-      expect(placeholders[0]).toHaveAttribute('data-name', 'header-navigation-main-nav');
+      const primaryNav = document.querySelector('[data-header-st-nav="primary"]');
+      const placeholder = primaryNav?.querySelector('[data-testid="app-placeholder"]');
+      expect(placeholder).toHaveAttribute('data-name', 'header-navigation-main-nav');
     });
   });
 });

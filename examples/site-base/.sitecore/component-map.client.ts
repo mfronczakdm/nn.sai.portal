@@ -38,6 +38,7 @@ import * as ContentBlock from 'src/components/sxa/ContentBlock';
 import * as ButtonNavigationclient from 'src/components/sxa/ButtonNavigation.client';
 import * as SubscriptionBanner from 'src/components/subscription-banner/SubscriptionBanner';
 import * as SlideCarouseldev from 'src/components/slide-carousel/SlideCarousel.dev';
+import * as version4megamenu from 'src/components/site-three/version4-mega-menu';
 import * as TextSlider from 'src/components/site-three/TextSlider';
 import * as ProductPageHeader from 'src/components/site-three/ProductPageHeader';
 import * as ProductComparison from 'src/components/site-three/ProductComparison';
@@ -182,6 +183,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['ButtonNavigation', { ...ButtonNavigationclient }],
   ['SubscriptionBanner', { ...SubscriptionBanner }],
   ['SlideCarousel', { ...SlideCarouseldev }],
+  ['version4-mega-menu', { ...version4megamenu }],
   ['TextSlider', { ...TextSlider }],
   ['ProductPageHeader', { ...ProductPageHeader }],
   ['ProductComparison', { ...ProductComparison }],
