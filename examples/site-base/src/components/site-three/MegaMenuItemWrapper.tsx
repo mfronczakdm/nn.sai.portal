@@ -51,7 +51,11 @@ export const MegaMenuToggle = ({
     <MegaMenuContext.Provider value={{ isVisible: shown, setIsVisible }}>
       <li
         ref={menuRef}
-        className={className}
+        className={
+          hideTrigger
+            ? `${className} pointer-events-none !m-0 !h-0 !w-0 !min-w-0 !max-w-0 !basis-0 !grow-0 !shrink !overflow-visible !p-0`
+            : className
+        }
         data-class-change
         data-mega-trigger={hideTrigger ? 'hidden' : 'visible'}
         onMouseEnter={() => {
@@ -62,16 +66,15 @@ export const MegaMenuToggle = ({
           if (supportsHoverOpen()) setIsVisible(false);
         }}
       >
-        <span
-          className={`inline-block p-4 font-[inherit] whitespace-nowrap cursor-pointer ${
-            hideTrigger ? 'hidden' : ''
-          }`}
-          onClick={() => setIsVisible(!shown)}
-          aria-expanded={shown}
-          aria-hidden={hideTrigger || undefined}
-        >
-          {trigger}
-        </span>
+        {hideTrigger ? null : (
+          <span
+            className="inline-block cursor-pointer whitespace-nowrap p-4 font-[inherit]"
+            onClick={() => setIsVisible(!shown)}
+            aria-expanded={shown}
+          >
+            {trigger}
+          </span>
+        )}
         {children}
       </li>
     </MegaMenuContext.Provider>
@@ -92,10 +95,9 @@ export const MegaMenuContent = ({ menuId, children }: MegaMenuContentProps) => {
         h-[calc(100vh-3.5rem)] lg:h-auto overflow-auto
         ${
           isVisible
-            ? 'opacity-100 translate-x-0 lg:translate-y-0 pointer-events-auto'
-            : 'opacity-0 translate-x-full lg:translate-x-0 lg:translate-y-2 pointer-events-none'
+            ? 'visible opacity-100 translate-x-0 lg:translate-y-0 pointer-events-auto'
+            : 'invisible opacity-0 translate-x-full lg:translate-x-0 lg:translate-y-2 pointer-events-none'
         }
-        lg:-mt-4
         bg-background text-foreground [&_a]:!text-foreground [&_button]:!text-foreground
         transition-all duration-300 ease-in-out
         [.partial-editing-mode_&]:!static [.partial-editing-mode_&]:!opacity-100 [.partial-editing-mode_&]:!translate-0 [.partial-editing-mode_&]:!pointer-events-auto`}
