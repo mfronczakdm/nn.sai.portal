@@ -1,5 +1,5 @@
 ﻿generatedAt: "2026-03-20T09:00:00Z"
-lastUpdatedAt: "2026-11-20T12:40:00Z"
+lastUpdatedAt: "2026-11-20T13:20:00Z"
 lastUpdatedBy: "cursor-agent"
 
 project:
@@ -3226,6 +3226,89 @@ pageTemplates:
       - "2026-09-09: visit=sick-visit or step=slots skips the visit-type grid and opens slots. ENT Pulse book links include visit=sick-visit and provider=Gabrielle Moreau. Delivery copy is adult (no child/well-baby). Demo URL: /For-Patients/Patient-Appointments?visit=sick-visit&specialty=ENT&location=West Jefferson Medical Center&provider=Gabrielle Moreau"
       - "2026-09-09: First scheduler interaction (visit type, or slot if visit types were skipped) sends SitecoreAI/CDP custom event type Booking-Started with label Booking Started. Once per page visit. Skipped in Pages editing. Same event() pipeline as TrackedCtaLink."
       - "2026-09-09: Guest Confirm appointment sends Appointment-Booked (type Appointment-Booked, label Appointment Booked). My LCMC login confirm does not send this event."
+
+  - name: "ServiceListing"
+    kind: "list"
+    category: "Services"
+    status: "complete"
+    createdAt: "2026-11-20T13:10:00Z"
+    updatedAt: "2026-11-20T13:20:00Z"
+    siteName: "mcw"
+    siteCollection: "lcmc"
+    notes: >
+      Service directory for the Our Services page. Datasource droptree ServicesRoot points at
+      Home/Our Services. Cards show pageTitle, pageShortTitle, and pageSummary. Type facets are the
+      service line (a page's own title, or its parent service for nested pages such as health
+      topics). Layout ComponentQuery stays slim because Edge rejects expanded LookupField children;
+      /api/service-listing loads the tree. React: src/components/uiim/services/ServiceListing.tsx.
+    react:
+      filePath: "src/components/uiim/services/ServiceListing.tsx"
+      componentName: "ServiceListing"
+      propsShape: "graphql-datasource"
+    templates:
+      parent:
+        path: "/sitecore/templates/Project/lcmc/Components/Services/ServiceListing"
+        itemId: "{334CD788-0B27-4404-90CC-24B6CF01E4B1}"
+        sectionId: "{742FAECC-C508-4456-B8B9-5688B6AA5055}"
+        standardValues: "{3614F024-AE63-4FE8-A7B0-08FED367A9D2}"
+        baseTemplatesSet: true
+        fields:
+          - { name: "Title", type: "Single-Line Text", itemId: "{21D81D6E-EB6E-40A1-A084-D3D7A2B18373}" }
+          - { name: "Intro", type: "Rich Text", itemId: "{1A8BD07D-0363-426A-A352-713E2BA6D025}" }
+          - { name: "ServicesRoot", type: "Droptree", itemId: "{1B4E77BE-453D-4B76-A1CA-B2ED0F8E15A2}", source: "query:$site/Home" }
+          - { name: "EmptyResultsText", type: "Single-Line Text", itemId: "{BCA7406D-A698-4A93-984F-F04C172EFB65}" }
+          - { name: "ShowFilters", type: "Checkbox", itemId: "{C3804A3F-0AF9-48D1-BBAA-6954DCA19EBB}" }
+          - { name: "SearchPlaceholder", type: "Single-Line Text", itemId: "{5FC0D689-A4F3-4806-82F8-C011721DA761}" }
+          - { name: "FilterFacetLabel", type: "Single-Line Text", itemId: "{F74E00A2-EC09-42D7-9BFA-7E152D8984C3}" }
+      folder:
+        path: "/sitecore/templates/Project/lcmc/Folders/ServiceListing Folder"
+        itemId: "{B3E56FEA-B1DF-41F1-BBBE-8C408A482CFB}"
+        standardValues: "{6E911ADF-A986-42FF-A4F8-B1B54058193B}"
+      renderingParams:
+        path: "/sitecore/templates/Project/lcmc/Rendering Parameters/Services/ServiceListing"
+        itemId: "{54680151-C50F-483D-B0CD-4F47F24C9E75}"
+        baseTemplatesSet: true
+    rendering:
+      path: "/sitecore/layout/Renderings/Project/lcmc/Services/ServiceListing"
+      itemId: "{E3C5A950-9AE5-440E-A340-1D08039E2D96}"
+      componentName: "ServiceListing"
+      datasourceTemplatePath: "/sitecore/templates/Project/lcmc/Components/Services/ServiceListing"
+      datasourceLocationQuery: "query:$site/*[@@name='Data']/*[@@templatename='ServiceListing Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='ServiceListing Folder']"
+      parametersTemplateId: "{54680151-C50F-483D-B0CD-4F47F24C9E75}"
+      useComponentQuery: true
+      registeredInAvailableRenderings: true
+    datasourceFolder:
+      path: "/sitecore/content/lcmc/mcw/Data/Service Listings"
+      itemId: "{201FB3D4-0115-40A3-8DDB-0A4C22923DD0}"
+      exampleItem:
+        name: "Our Services Listing"
+        itemId: "{D3145791-0E9C-4924-B108-DB6EED0884C1}"
+        servicesRoot: "{D2B6D0EF-1F6B-471C-851D-545F232F562D}"
+    pagePlacement:
+      pagePath: "/sitecore/content/lcmc/mcw/Home/Our Services"
+      pageId: "{D2B6D0EF-1F6B-471C-851D-545F232F562D}"
+      placeholder: "headless-main"
+      datasourceItemId: "{B887A663-44E7-4FAF-9F10-E08DF42CFF11}"
+    variants:
+      containerPath: "/sitecore/content/lcmc/mcw/Presentation/Headless Variants/ServiceListing"
+      containerId: "{AD649650-FA1C-47D6-8B1B-90A40B8D95BD}"
+      definitions:
+        - { name: "Default", itemId: "{77586693-63F9-42A7-BDCB-A0709EA81A5D}" }
+    verification:
+      checkedAt: "2026-11-20T13:20:00Z"
+      passed:
+        - "Datasource template fields and types verified (ServicesRoot Droptree, source query:$site/Home)"
+        - "Base templates include Standard, Grid, _HorizonDatasourceGrouping, and _PublishingGroupingTemplate"
+        - "JSON rendering componentName ServiceListing, Parameters Template GUID, ComponentQuery, Datasource Template, and Datasource Location read back"
+        - "Example datasource and page datasource ServicesRoot point at Our Services {D2B6D0EF-1F6B-471C-851D-545F232F562D}"
+        - "Rendering appended to mcw Available Renderings/Page Content; read-back included {E3C5A950-9AE5-440E-A340-1D08039E2D96}"
+        - "Default variant created; component map registers ServiceListing"
+        - "Jest src/__tests__/uiim/services — 5 passed"
+      failed: []
+      pendingManual:
+        - "__Standard values and __Masters are silent-write — confirm in Content Editor"
+        - "Publish ServiceListing rendering, templates, Data/Service Listings, Headless Variants, and Our Services so Edge returns the cards"
+        - "Redeploy the rendering host so Pages loads ServiceListing.tsx"
 
 lookups:
   - path: "/sitecore/content/progressive/pkm/Data"

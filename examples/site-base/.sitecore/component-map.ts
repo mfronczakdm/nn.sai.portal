@@ -10,6 +10,9 @@ import * as verticalimageaccordionprops from 'src/components/vertical-image-acco
 import * as VariantContent from 'src/components/variant-content/VariantContent';
 import * as variantcontentprops from 'src/components/variant-content/variant-content.props';
 import * as variantcontentfields from 'src/components/variant-content/variant-content.fields';
+import * as ServiceListing from 'src/components/uiim/services/ServiceListing';
+import * as servicelistingprops from 'src/components/uiim/services/service-listing.props';
+import * as servicelistingmodel from 'src/components/uiim/services/service-listing.model';
 import * as ProductDetail from 'src/components/uiim/products/ProductDetail';
 import * as ProductCarousel from 'src/components/uiim/products/ProductCarousel';
 import * as productdetailprops from 'src/components/uiim/products/product-detail.props';
@@ -334,6 +337,8 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['vertical-image-accordion', { ...verticalimageaccordionprops }],
   ['VariantContent', { ...VariantContent, componentType: 'client' }],
   ['variant-content', { ...variantcontentprops, ...variantcontentfields }],
+  ['ServiceListing', { ...ServiceListing, componentType: 'client' }],
+  ['service-listing', { ...servicelistingprops, ...servicelistingmodel }],
   ['ProductDetail', { ...ProductDetail, componentType: 'client' }],
   ['ProductCarousel', { ...ProductCarousel, componentType: 'client' }],
   ['product-detail', { ...productdetailprops }],
